@@ -157,14 +157,14 @@ def test_request_accepts_empty_state_and_structured_criteria():
                 "move": {
                     "type": "choice",
                     "instructions": "Best move?",
-                    "criteria": {"b8g8": {"uci": "b8g8", "san": "Qg8"}, "b8b7": "Qb7"},
+                    "criteria": {"b8g8": {"uci": "b8g8", "san": "Qg8"}, "b8b7": "Qb7", "a1a2": None},
                 }
             },
         }
     )
     rq = render_question(req.questions["move"])
     assert '"san": "Qg8"' in rq.text and "Qb7" in rq.text
-    assert rq.n_slots == 2
+    assert rq.n_slots == 3 and "3. a1a2\n" in rq.text
 
 
 def test_request_parses_documented_payload():

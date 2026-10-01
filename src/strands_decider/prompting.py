@@ -31,13 +31,15 @@ NOUL_DEFAULT_CRITERIA = {
 }
 
 
-def render_content(content: Content) -> str:
+def render_content(content: Content | None) -> str:
     """Flatten a state or instruction into text, stably.
 
     Dicts and lists are emitted as indented JSON rather than str() so that key
     order and unicode are deterministic -- the same state must always tokenise
     identically, otherwise the shared-prefix cache in infer.py would be unsound.
     """
+    if content is None:
+        return ""
     if isinstance(content, str):
         return content.strip()
     return json.dumps(content, indent=2, ensure_ascii=False, sort_keys=False)

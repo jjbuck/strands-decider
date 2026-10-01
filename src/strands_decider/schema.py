@@ -42,11 +42,11 @@ class NoulQuestion(BaseModel):
     type: Literal["noul"] = "noul"
     instructions: Content
     # Optional {"true": "...", "false": "..."} descriptions that sharpen the boundary.
-    criteria: dict[str, Content] | None = None
+    criteria: dict[str, Content | None] | None = None
 
     @field_validator("criteria")
     @classmethod
-    def _check_keys(cls, v: dict[str, Content] | None) -> dict[str, Content] | None:
+    def _check_keys(cls, v: dict[str, Content | None] | None) -> dict[str, Content | None] | None:
         if v is not None and not set(v).issubset({"true", "false"}):
             raise ValueError("noul criteria keys must be a subset of {'true', 'false'}")
         return v
@@ -55,16 +55,17 @@ class NoulQuestion(BaseModel):
 class ChoiceQuestion(BaseModel):
     """Pick one of N named options. `criteria` maps option name -> description.
 
-    A description may be structured data (a chess move, a palette), rendered like `state`.
+    A description may be structured data (a chess move, a palette), rendered like `state`,
+    or null for a bare label.
     """
 
     type: Literal["choice"] = "choice"
     instructions: Content
-    criteria: dict[str, Content]
+    criteria: dict[str, Content | None]
 
     @field_validator("criteria")
     @classmethod
-    def _check_size(cls, v: dict[str, Content]) -> dict[str, Content]:
+    def _check_size(cls, v: dict[str, Content | None]) -> dict[str, Content | None]:
         if len(v) < 2:
             raise ValueError("choice requires at least 2 options")
         if len(v) > MAX_CHOICE_OPTIONS:
