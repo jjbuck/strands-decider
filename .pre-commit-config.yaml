@@ -2,14 +2,14 @@
 #   pre-commit install -t pre-commit -t commit-msg
 #
 # The ruff hooks are scoped to the files you are committing (pre-commit's
-# default), matching the "run ruff on the files you changed" rule in
-# CONTRIBUTING.md; they do not lint the whole tree.
+# default); they do not lint the whole tree. CI runs `ruff check .` over the
+# whole tree (CONTRIBUTING.md, Development).
 #
 # The commit-msg hook mirrors the PR-title gate in
 # .github/workflows/pr-title.yml so local commits fail fast on the same rule.
 repos:
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.6.9
+    rev: v0.16.9
     hooks:
       - id: ruff
         args: [--fix]
