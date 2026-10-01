@@ -16,7 +16,7 @@ from collections.abc import Iterable, Iterator
 from dataclasses import asdict, dataclass, field
 from typing import IO, Any, cast
 
-from ..schema import ChoiceQuestion, NoulQuestion, Question, ScoreQuestion
+from ..schema import ChoiceQuestion, Content, NoulQuestion, Question, ScoreQuestion
 
 
 @dataclass
@@ -67,7 +67,7 @@ class Example:
         feeds a sampled variant through without mutating the stored example.
         """
         instr = self.instructions if instructions is None else instructions
-        crit = {name: desc for name, desc in self.options}
+        crit: dict[str, Content | None] = {name: desc for name, desc in self.options}
         if self.kind == "noul":
             return NoulQuestion(instructions=instr, criteria=crit)
         if self.kind == "choice":
