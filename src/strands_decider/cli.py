@@ -310,6 +310,9 @@ def serve_cmd(
         False, "--strict-window",
         help="Reject (HTTP 422) a prompt longer than the context window instead of truncating it.",
     ),
+    max_batch: int = typer.Option(
+        32, "--max-batch", help="Questions encoded per forward pass; lower it for very long states.",
+    ),
 ) -> None:
     """Serve POST /v1/systemone. JevBench's typesafe adapter runs against it unchanged."""
     from .server import serve
@@ -320,7 +323,7 @@ def serve_cmd(
     serve(
         checkpoint, host=host, port=port, device=selected_device,
         use_prefix_cache=not no_prefix_cache, model_name=model_name,
-        strict_window=strict_window,
+        strict_window=strict_window, max_batch=max_batch,
     )
 
 
