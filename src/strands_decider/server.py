@@ -13,7 +13,7 @@ import time
 from fastapi import FastAPI, HTTPException
 from fastapi.responses import JSONResponse
 
-from .infer import EngineConfig, SystemOneEngine
+from .infer import EngineConfig, SystemOneEngine, load_mlx
 from .modeling import StrandsDeciderModel
 from .schema import SystemOneRequest, SystemOneResponse
 
@@ -48,14 +48,17 @@ def create_app(
     # on the same host cannot be confused. HF repo ids ("org/name") collapse to `name`.
     resolved_name = model_name or os.path.basename(checkpoint.rstrip("/")) or checkpoint
 
-    model = StrandsDeciderModel.load(checkpoint, attn_implementation=attn_implementation)
-    _engine = SystemOneEngine(
-        model,
-        EngineConfig(
-            device=device, use_prefix_cache=use_prefix_cache, model_name=resolved_name,
-            strict_window=strict_window, max_batch=max_batch,
-        ),
-    )
+    if device == "mlx":
+        _engine = load_mlx(checkpoint, use_prefix_cache=use_prefix_cache, model_name=resolved_name)
+    else:
+        model = StrandsDeciderModel.load(checkpoint, attn_implementation=attn_implementation)
+        _engine = SystemOneEngine(
+            model,
+            EngineConfig(
+                device=device, use_prefix_cache=use_prefix_cache, model_name=resolved_name,
+                strict_window=strict_window, max_batch=max_batch,
+            ),
+        )
 
     @app.get("/health")
     def health() -> dict:

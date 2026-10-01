@@ -473,7 +473,37 @@ def load_engine(
     use_prefix_cache: bool = True,
     attn_implementation: str | None = None,
 ) -> SystemOneEngine:
+    """An engine on a torch device ("cuda", "mps", "cpu"), or on MLX with `device="mlx"`."""
+    if device == "mlx":
+        return load_mlx(checkpoint, use_prefix_cache=use_prefix_cache)
     model = StrandsDeciderModel.load(checkpoint, attn_implementation=attn_implementation)
     return SystemOneEngine(
         model, EngineConfig(device=device, use_prefix_cache=use_prefix_cache)
     )
+
+
+def mlx_available() -> bool:
+    """True on Apple silicon with the `mlx` extra installed."""
+    import importlib.util
+    import platform
+    import sys
+
+    return (
+        sys.platform == "darwin"
+        and platform.machine() == "arm64"
+        and importlib.util.find_spec("mlx") is not None
+        and importlib.util.find_spec("mlx_lm") is not None
+    )
+
+
+def load_mlx(
+    checkpoint: str, *, use_prefix_cache: bool = True, model_name: str | None = None
+) -> SystemOneEngine:
+    """An engine with the torso on MLX (see mlx_engine.py)."""
+    if not mlx_available():
+        raise RuntimeError(
+            "device 'mlx' needs Apple silicon and the mlx extra: pip install 'strands-decider[mlx]'"
+        )
+    from .mlx_engine import load_mlx_engine
+
+    return load_mlx_engine(checkpoint, use_prefix_cache=use_prefix_cache, model_name=model_name)
