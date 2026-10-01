@@ -1,0 +1,32 @@
+{
+ "batches": 267,
+ "pairs": 801,
+ "kept": 419,
+ "by_flip": {
+  "examples": [
+   137,
+   78
+  ],
+  "days": [
+   142,
+   81
+  ],
+  "conflict": [
+   123,
+   50
+  ],
+  "no_rule": [
+   127,
+   56
+  ],
+  "reference_date": [
+   139,
+   91
+  ],
+  "unproven": [
+   133,
+   63
+  ]
+ },
+ "dropped_at_write": {}
+}

@@ -1,0 +1,32 @@
+name: tests
+
+# Companion to tests.yml. Emits jobs with identical names when a PR touches
+# nothing under the paths filter, so required status checks still resolve.
+on:
+  pull_request:
+    branches: [main, staging]
+    paths-ignore:
+      - 'src/**'
+      - 'tests/**'
+      - 'pyproject.toml'
+      - '.github/workflows/tests.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  cpu:
+    name: cpu (py${{ matrix.python }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ["3.10", "3.12"]
+    steps:
+      - run: echo "No src/tests changes; skipping tests."
+
+  lint:
+    name: lint
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "No src/tests changes; skipping lint."

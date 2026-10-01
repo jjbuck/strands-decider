@@ -1,0 +1,64 @@
+{
+ "batches": 380,
+ "items": 2280,
+ "kept": 1852,
+ "by_kind": {
+  "adequate/plain": [
+   380,
+   277
+  ],
+  "inadequate/incomplete": [
+   150,
+   148
+  ],
+  "adequate/caveated": [
+   169,
+   107
+  ],
+  "adequate/informal": [
+   156,
+   114
+  ],
+  "inadequate/missed_constraint": [
+   145,
+   145
+  ],
+  "inadequate/accepts_false_premise": [
+   134,
+   99
+  ],
+  "adequate/corrects_premise": [
+   154,
+   95
+  ],
+  "inadequate/calculation_error": [
+   154,
+   151
+  ],
+  "inadequate/wrong_question": [
+   142,
+   135
+  ],
+  "inadequate/needless_refusal": [
+   131,
+   128
+  ],
+  "adequate/terse": [
+   146,
+   102
+  ],
+  "inadequate/ignores_context": [
+   153,
+   151
+  ],
+  "inadequate/factual_error": [
+   131,
+   124
+  ],
+  "adequate/states_assumption": [
+   135,
+   76
+  ]
+ },
+ "dropped_at_write": {}
+}

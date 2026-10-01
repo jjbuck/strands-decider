@@ -1,0 +1,26 @@
+# Blocks PRs that add or bump to a known-vulnerable dependency.
+#
+# Diffs the PR against its base and fails only on vulnerabilities the PR
+# introduces; pre-existing advisories are reported informationally by
+# security-audit.yml, not here.
+name: dependency-review
+
+on:
+  pull_request:
+    branches: [main, staging]
+
+permissions:
+  contents: read
+
+jobs:
+  review:
+    name: Dependency review
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/dependency-review-action@da24556b548a50705dd671f47852072ea4c105d9  # v4.7.1
+        with:
+          fail-on-severity: high

@@ -1,0 +1,178 @@
+# One real batch through each generator backend: OpenRouter, Amazon Bedrock (bedrock-runtime)
+# and Bedrock Mantle. It costs a few cents and needs credentials, so it runs only on pull
+# requests that touch the client, a generator or this file, and on demand.
+#
+# Repository setup this workflow needs before it can run (none of it is in the tree):
+#   * the GitHub environments `auto-approve` and `manual-approval` (the second with a
+#     required reviewer), as strands-agents/devtools/authorization-check expects;
+#   * the secret HOBSON_INTEG_TEST_ROLE: the ARN of an IAM role that trusts GitHub's OIDC
+#     provider for this repository and may call bedrock:InvokeModel (Qwen3 32B and Qwen3
+#     235B A22B 2507 in us-west-2), bedrock-mantle:CallWithBearerToken, and read the
+#     secret below. No AWS key is stored in GitHub.
+#   * the secret HOBSON_TEST_API_KEYS_SECRET_NAME: the name of one AWS Secrets Manager
+#     secret whose value is JSON, {"openrouter": "<OpenRouter API key>"}.
+#
+# Region: us-west-2 (Oregon). The Qwen3 235B A22B 2507 model card lists us-east-1, but
+# `aws bedrock list-foundation-models --by-provider qwen` on 2026-09-29 shows only Qwen3 32B
+# there. Both models are in us-west-2 (and in us-east-2, eu-central-1, eu-north-1,
+# ap-northeast-1, ap-south-1, ap-southeast-2), and bedrock-mantle.us-west-2.api.aws
+# resolves. The role and the secret live in us-west-2. Bedrock calls sign with the role's
+# temporary credentials (botocore, installed in this job only). Mantle takes only a Bedrock
+# API key, so the job mints a short-term key from the role session with the token
+# generator the AWS documentation describes.
+name: "Generators: live backend test"
+
+on:
+  pull_request_target:
+    branches: [staging, main]
+    paths:
+      - 'data/generators/llm_client.py'
+      - 'data/generators/gen_documents_openrouter.py'
+      - 'data/generators/gen_adequacy_openrouter.py'
+      - 'data/generators/gen_flips_openrouter.py'
+      - 'data/generators/gen_paraphrases_openrouter.py'
+      - '.github/scripts/check_generator_rows.py'
+      - '.github/workflows/generators-live-test.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: generators-live-test-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request_target' }}
+
+permissions:
+  contents: read
+
+jobs:
+  authorization-check:
+    name: Check access
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: read
+    outputs:
+      approval-env: ${{ steps.auth.outputs.approval-env }}
+    steps:
+      - name: Check authorization
+        id: auth
+        uses: strands-agents/devtools/authorization-check@main
+        with:
+          # workflow_dispatch already needs write access to the repository.
+          skip-check: ${{ github.event_name == 'workflow_dispatch' }}
+          username: ${{ github.event.pull_request.user.login || 'invalid' }}
+          allowed-roles: 'maintain,triage,write,admin'
+
+  live-test:
+    name: One batch on ${{ matrix.backend }}
+    needs: authorization-check
+    if: always() && needs.authorization-check.result == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        backend: [openrouter, bedrock, bedrock-mantle]
+    environment:
+      name: ${{ needs.authorization-check.outputs.approval-env }}
+      deployment: false
+    permissions:
+      id-token: write
+      pull-requests: read
+      contents: read
+    env:
+      AWS_REGION: us-west-2
+      AWS_DEFAULT_REGION: us-west-2
+      OUT: live/${{ matrix.backend }}
+    steps:
+      - name: Reject untrusted-shaped refs
+        env:
+          REF: ${{ github.event.pull_request.head.sha || github.sha }}
+        run: |
+          set -euo pipefail
+          case "$REF" in
+            refs/pull/*|*:*)
+              echo "::error::ref '$REF' looks like a fork PR or cross-repo ref."
+              exit 1
+              ;;
+          esac
+          echo "ref '$REF' passed shape check."
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v6
+        with:
+          role-to-assume: ${{ secrets.HOBSON_INTEG_TEST_ROLE }}
+          aws-region: us-west-2
+          mask-aws-account-id: true
+
+      - name: Checkout head commit
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+          allow-unsafe-pr-checkout: true  # opt back into fork-PR checkout, blocked by default in checkout@v7
+
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97  # v7.0.0
+        with:
+          python-version: "3.12"
+
+      # The generators need no package. botocore signs the bedrock-runtime calls with the
+      # role's temporary credentials; the token generator mints the Mantle key from them.
+      - name: Install botocore
+        if: matrix.backend != 'openrouter'
+        run: python -m pip install --no-cache-dir botocore aws-bedrock-token-generator
+
+      - name: Fetch the OpenRouter key from AWS Secrets Manager
+        if: matrix.backend == 'openrouter'
+        env:
+          SECRET_NAME: ${{ secrets.HOBSON_TEST_API_KEYS_SECRET_NAME }}
+        run: |
+          set -euo pipefail
+          if [ -z "$SECRET_NAME" ]; then
+            echo "::error::the secret HOBSON_TEST_API_KEYS_SECRET_NAME is not set"; exit 1
+          fi
+          # Into a variable, not a pipe: with `aws ... | python - <<'PY'` the heredoc is
+          # python's stdin and the secret never reaches it. Assign and export on separate
+          # lines, so that set -e stops the step when aws fails (export would return 0).
+          SECRET_JSON="$(aws secretsmanager get-secret-value --secret-id "$SECRET_NAME" \
+            --query SecretString --output text)"
+          export SECRET_JSON
+          python - <<'PY'
+          import json, os, sys
+          keys = json.loads(os.environ.pop("SECRET_JSON"))
+          for value in keys.values():
+              print(f"::add-mask::{value}")
+          if not keys.get("openrouter"):
+              print("::error::the secret has no 'openrouter' key"); sys.exit(1)
+          with open(os.environ["GITHUB_ENV"], "a") as fh:
+              fh.write(f"OPENROUTER_API_KEY={keys['openrouter']}\n")
+          PY
+
+      - name: Mint a short-term Bedrock API key for Mantle
+        if: matrix.backend == 'bedrock-mantle'
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import os
+          from aws_bedrock_token_generator import provide_token
+          token = provide_token()
+          print(f"::add-mask::{token}")
+          with open(os.environ["GITHUB_ENV"], "a") as fh:
+              fh.write(f"AWS_BEARER_TOKEN_BEDROCK={token}\n")
+          PY
+
+      - name: One batch of instruction flips
+        run: |
+          set -euo pipefail
+          mkdir -p "$(dirname "$OUT")"  # tee opens the log before the generator makes the directory
+          python data/generators/gen_flips_openrouter.py --backend "${{ matrix.backend }}" --region us-west-2 \
+            --out "$OUT" --batches 1 --workers 4 --max-cost 2 | tee "$OUT.log"
+
+      - name: Check the rows
+        run: python .github/scripts/check_generator_rows.py "$OUT" "${{ matrix.backend }}"
+
+      - name: Upload the rows
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a  # v7.0.1
+        with:
+          name: generator-rows-${{ matrix.backend }}
+          path: live/
+          if-no-files-found: ignore

@@ -1,0 +1,158 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="viz" width="980" height="556" viewBox="0 0 980 556" role="img">
+<style>
+.viz { --surface:#fcfcfb; --ink:#0b0b0b; --ink2:#52514e; --muted:#898781; --grid:#e1e0d9;
+  --axis:#c3c2b7; --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a;
+  --h0:#cde2fb; --h1:#9ec5f4; --h2:#6da7ec; --h3:#3987e5; --h4:#256abf; --h5:#184f95; --h6:#0d366b; }
+@media (prefers-color-scheme: dark) {
+  .viz { --surface:#1a1a19; --ink:#ffffff; --ink2:#c3c2b7; --grid:#2c2c2a; --axis:#383835;
+    --s1:#3987e5; --s2:#d95926; --s3:#199e70;
+    --h0:#0d366b; --h1:#104281; --h2:#184f95; --h3:#1c5cab; --h4:#256abf; --h5:#3987e5; --h6:#6da7ec; } }
+.viz text { font-family:system-ui, -apple-system, "Segoe UI", sans-serif; fill:var(--ink2); font-size:11px; }
+.viz .title { fill:var(--ink); font-size:15px; font-weight:600; }
+.viz .subtitle { fill:var(--ink2); font-size:12px; }
+.viz .panel { fill:var(--ink); font-size:12px; font-weight:600; }
+.viz .muted { fill:var(--muted); }
+.viz .value { fill:var(--ink); font-weight:600; }
+.viz .tick { font-variant-numeric:tabular-nums; fill:var(--muted); }
+.viz .grid { stroke:var(--grid); stroke-width:1; }
+.viz .axis { stroke:var(--axis); stroke-width:1; }
+.viz .ref { stroke:var(--muted); stroke-width:1; }
+.viz .line1 { stroke:var(--s1); stroke-width:2; fill:none; stroke-linejoin:round; stroke-linecap:round; }
+.viz .line0, .viz .line2, .viz .line3 { stroke-width:1.5; fill:none; stroke-linejoin:round; stroke-linecap:round; }
+.viz .line0 { stroke:var(--ink2); }
+.viz .line2 { stroke:var(--s2); }
+.viz .line3 { stroke:var(--s3); }
+.viz .strip { fill:transparent; }
+.viz .strip:hover { fill:var(--grid); fill-opacity:0.5; }
+.viz .dot1 { fill:var(--s1); stroke:var(--surface); stroke-width:2; }
+.viz .dot2 { fill:var(--s2); stroke:var(--surface); stroke-width:2; }
+.viz .dot3 { fill:var(--s3); stroke:var(--surface); stroke-width:2; }
+.viz .dot1s { fill:var(--s1); fill-opacity:0.55; }
+.viz .arrow { fill:var(--s1); }
+.viz .hit { fill:transparent; }
+</style>
+<rect width="980" height="556" fill="var(--surface)"/>
+<text class="title" x="24" y="30">Held-out classification: accuracy against calibration</text>
+<text class="subtitle" x="24" y="50">emotion, hate_severity, massive_intent, sarcasm: tasks no model trained on. Line: default recipe v4 -&gt; v7 -&gt; v13 -&gt; v14 -&gt; v16 -&gt; v17 -&gt; v18 -&gt; v19 (v6 and v8-v10 were not scored).</text>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="arrow" d="M0,1 L10,5 L0,9 z"/></marker></defs>
+<line class="line1" x1="24" x2="42" y1="74" y2="74"/><circle class="dot1" cx="33" cy="74" r="4"/><text x="48" y="78">adopted as the default recipe</text>
+<circle class="dot2" cx="259.64" cy="74" r="4"/><text x="272.64" y="78">experiment, not adopted</text>
+<rect class="dot3" x="442.3" y="69" width="10" height="10" rx="2"/><text x="458.3" y="78">scaling test: same corpus and steps, torso only</text>
+<line class="grid" x1="88.0" x2="478.0" y1="464.0" y2="464.0"/>
+<text class="tick" x="82.0" y="467.5" text-anchor="end">0.75</text>
+<line class="grid" x1="88.0" x2="478.0" y1="379.0" y2="379.0"/>
+<text class="tick" x="82.0" y="382.5" text-anchor="end">0.80</text>
+<line class="grid" x1="88.0" x2="478.0" y1="294.0" y2="294.0"/>
+<text class="tick" x="82.0" y="297.5" text-anchor="end">0.85</text>
+<line class="grid" x1="88.0" x2="478.0" y1="209.0" y2="209.0"/>
+<text class="tick" x="82.0" y="212.5" text-anchor="end">0.90</text>
+<line class="grid" x1="88.0" x2="478.0" y1="124.0" y2="124.0"/>
+<text class="tick" x="82.0" y="127.5" text-anchor="end">0.95</text>
+<line class="grid" x1="88.0" x2="88.0" y1="124" y2="464"/>
+<text class="tick" x="88.0" y="480" text-anchor="middle">0.60</text>
+<line class="grid" x1="166.0" x2="166.0" y1="124" y2="464"/>
+<text class="tick" x="166.0" y="480" text-anchor="middle">0.62</text>
+<line class="grid" x1="244.0" x2="244.0" y1="124" y2="464"/>
+<text class="tick" x="244.0" y="480" text-anchor="middle">0.64</text>
+<line class="grid" x1="322.0" x2="322.0" y1="124" y2="464"/>
+<text class="tick" x="322.0" y="480" text-anchor="middle">0.66</text>
+<line class="grid" x1="400.0" x2="400.0" y1="124" y2="464"/>
+<text class="tick" x="400.0" y="480" text-anchor="middle">0.68</text>
+<line class="grid" x1="478.0" x2="478.0" y1="124" y2="464"/>
+<text class="tick" x="478.0" y="480" text-anchor="middle">0.70</text>
+<line class="axis" x1="88.0" x2="478.0" y1="464" y2="464"/>
+<text class="panel" x="48.0" y="110">NLL (log loss, lower is better)</text>
+<text class="muted" x="478.0" y="498" text-anchor="end">held-out accuracy &#8594;</text>
+<text class="muted" x="474.0" y="456" text-anchor="end">better: right and down</text>
+<line class="line1" x1="282.2" y1="239.8" x2="295.9" y2="239.3" marker-end="url(#arr)"/>
+<line class="line1" x1="295.9" y1="239.3" x2="267.4" y2="238.4" marker-end="url(#arr)"/>
+<line class="line1" x1="267.4" y1="238.4" x2="232.3" y2="238.8" marker-end="url(#arr)"/>
+<line class="line1" x1="232.3" y1="238.8" x2="201.1" y2="206.6" marker-end="url(#arr)"/>
+<line class="line1" x1="201.1" y1="206.6" x2="245.9" y2="237.6" marker-end="url(#arr)"/>
+<line class="line1" x1="245.9" y1="237.6" x2="248.7" y2="254.0" marker-end="url(#arr)"/>
+<line class="line1" x1="248.7" y1="254.0" x2="272.5" y2="238.2" marker-end="url(#arr)"/>
+<g><title>v11a: held-out accuracy 0.646, NLL 0.900 (n=6000) - question transforms replace 30% of the corpus</title><circle class="hit" cx="267.4" cy="209.3" r="11"/><circle class="dot2" cx="267.4" cy="209.3" r="5"/></g>
+<g><title>v11b: held-out accuracy 0.649, NLL 0.879 (n=6000) - KL toward the frozen torso on changed questions</title><circle class="hit" cx="281.1" cy="244.7" r="11"/><circle class="dot2" cx="281.1" cy="244.7" r="5"/></g>
+<g><title>v12: held-out accuracy 0.674, NLL 0.834 (n=6000) - distilled from a frozen Qwen3.5-4B</title><circle class="hit" cx="375.4" cy="320.7" r="11"/><circle class="dot2" cx="375.4" cy="320.7" r="5"/></g>
+<g><title>v15: held-out accuracy 0.633, NLL 0.910 (n=6000) - +4,566 ShARC / ConditionalQA rows</title><circle class="hit" cx="217.9" cy="192.2" r="11"/><circle class="dot2" cx="217.9" cy="192.2" r="5"/></g>
+<g><title>Qwen3-1.7B, scaling test: held-out accuracy 0.620, NLL 0.919 (n=6000)</title><circle class="hit" cx="166.0" cy="176.4" r="11"/><rect class="dot3" x="161.0" y="171.4" width="10" height="10" rx="2"/></g>
+<text x="174.0" y="168.4" text-anchor="start">Qwen3-1.7B, scaling test</text>
+<g><title>Qwen3-4B, scaling test: held-out accuracy 0.681, NLL 0.797 (n=6000)</title><circle class="hit" cx="403.1" cy="383.9" r="11"/><rect class="dot3" x="398.1" y="378.9" width="10" height="10" rx="2"/></g>
+<text x="395.1" y="375.9" text-anchor="end">Qwen3-4B, scaling test</text>
+<g><title>v4: held-out accuracy 0.650, NLL 0.882 (n=6000) - instruction variants, noul 4 -&gt; 8 types</title><circle class="hit" cx="282.2" cy="239.8" r="11"/><circle class="dot1" cx="282.2" cy="239.8" r="5"/></g>
+<text x="282.2" y="257.8" text-anchor="middle">v4</text>
+<g><title>v7: held-out accuracy 0.653, NLL 0.882 (n=6000) - pointer readout</title><circle class="hit" cx="295.9" cy="239.3" r="11"/><circle class="dot1" cx="295.9" cy="239.3" r="5"/></g>
+<text x="299.9" y="229.3" text-anchor="start">v7</text>
+<g><title>v13: held-out accuracy 0.646, NLL 0.883 (n=6000) - Qwen3.5-2B-Base torso</title><circle class="hit" cx="267.4" cy="238.4" r="11"/><circle class="dot1" cx="267.4" cy="238.4" r="5"/></g>
+<text x="267.4" y="228.4" text-anchor="middle">v13</text>
+<g><title>v14: held-out accuracy 0.637, NLL 0.882 (n=6000) - +12,909 multi-step rows with a 4B teacher</title><circle class="hit" cx="232.3" cy="238.8" r="11"/><circle class="dot1" cx="232.3" cy="238.8" r="5"/></g>
+<text x="218.3" y="254.8" text-anchor="end">v14</text>
+<g><title>v16: held-out accuracy 0.629, NLL 0.901 (n=6000) - +2,148 generated document questions</title><circle class="hit" cx="201.1" cy="206.6" r="11"/><circle class="dot1" cx="201.1" cy="206.6" r="5"/></g>
+<text x="193.1" y="200.6" text-anchor="end">v16</text>
+<g><title>v17: held-out accuracy 0.640, NLL 0.883 (n=6000) - v16 with its multi-step rows replayed toward v14&#x27;s own answers</title><circle class="hit" cx="245.9" cy="237.6" r="11"/><circle class="dot1" cx="245.9" cy="237.6" r="5"/></g>
+<line class="ref" x1="245.9" y1="231.6" x2="235.9" y2="274.6"/>
+<text x="235.9" y="271.6" text-anchor="end">v17</text>
+<g><title>v18: held-out accuracy 0.641, NLL 0.874 (n=6000) - v17 + 1,667 generated questions on the weak skills</title><circle class="hit" cx="248.7" cy="254.0" r="11"/><circle class="dot1" cx="248.7" cy="254.0" r="5"/></g>
+<text x="252.7" y="272.0" text-anchor="start">v18</text>
+<g><title>v19: held-out accuracy 0.647, NLL 0.883 (n=6000) - v18 + 6,166 answer-adequacy rows (HelpSteer2 and generated)</title><circle class="hit" cx="272.5" cy="238.2" r="11"/><circle class="dot1" cx="272.5" cy="238.2" r="5"/></g>
+<text x="280.5" y="230.2" text-anchor="start">v19</text>
+<line class="grid" x1="566.0" x2="956.0" y1="464.0" y2="464.0"/>
+<text class="tick" x="560.0" y="467.5" text-anchor="end">0.04</text>
+<line class="grid" x1="566.0" x2="956.0" y1="379.0" y2="379.0"/>
+<text class="tick" x="560.0" y="382.5" text-anchor="end">0.05</text>
+<line class="grid" x1="566.0" x2="956.0" y1="294.0" y2="294.0"/>
+<text class="tick" x="560.0" y="297.5" text-anchor="end">0.06</text>
+<line class="grid" x1="566.0" x2="956.0" y1="209.0" y2="209.0"/>
+<text class="tick" x="560.0" y="212.5" text-anchor="end">0.07</text>
+<line class="grid" x1="566.0" x2="956.0" y1="124.0" y2="124.0"/>
+<text class="tick" x="560.0" y="127.5" text-anchor="end">0.08</text>
+<line class="grid" x1="566.0" x2="566.0" y1="124" y2="464"/>
+<text class="tick" x="566.0" y="480" text-anchor="middle">0.60</text>
+<line class="grid" x1="644.0" x2="644.0" y1="124" y2="464"/>
+<text class="tick" x="644.0" y="480" text-anchor="middle">0.62</text>
+<line class="grid" x1="722.0" x2="722.0" y1="124" y2="464"/>
+<text class="tick" x="722.0" y="480" text-anchor="middle">0.64</text>
+<line class="grid" x1="800.0" x2="800.0" y1="124" y2="464"/>
+<text class="tick" x="800.0" y="480" text-anchor="middle">0.66</text>
+<line class="grid" x1="878.0" x2="878.0" y1="124" y2="464"/>
+<text class="tick" x="878.0" y="480" text-anchor="middle">0.68</text>
+<line class="grid" x1="956.0" x2="956.0" y1="124" y2="464"/>
+<text class="tick" x="956.0" y="480" text-anchor="middle">0.70</text>
+<line class="axis" x1="566.0" x2="956.0" y1="464" y2="464"/>
+<text class="panel" x="526.0" y="110">ECE (lower is better)</text>
+<text class="muted" x="956.0" y="498" text-anchor="end">held-out accuracy &#8594;</text>
+<text class="muted" x="952.0" y="456" text-anchor="end">better: right and down</text>
+<line class="line1" x1="760.2" y1="322.1" x2="773.9" y2="147.0" marker-end="url(#arr)"/>
+<line class="line1" x1="773.9" y1="147.0" x2="745.4" y2="324.6" marker-end="url(#arr)"/>
+<line class="line1" x1="745.4" y1="324.6" x2="710.3" y2="372.2" marker-end="url(#arr)"/>
+<line class="line1" x1="710.3" y1="372.2" x2="679.1" y2="322.9" marker-end="url(#arr)"/>
+<line class="line1" x1="679.1" y1="322.9" x2="723.9" y2="373.1" marker-end="url(#arr)"/>
+<line class="line1" x1="723.9" y1="373.1" x2="726.7" y2="358.6" marker-end="url(#arr)"/>
+<line class="line1" x1="726.7" y1="358.6" x2="750.5" y2="342.4" marker-end="url(#arr)"/>
+<g><title>v11a: held-out accuracy 0.646, ECE 0.076 (n=6000) - question transforms replace 30% of the corpus</title><circle class="hit" cx="745.4" cy="160.5" r="11"/><circle class="dot2" cx="745.4" cy="160.5" r="5"/></g>
+<g><title>v11b: held-out accuracy 0.649, ECE 0.068 (n=6000) - KL toward the frozen torso on changed questions</title><circle class="hit" cx="759.0" cy="230.2" r="11"/><circle class="dot2" cx="759.0" cy="230.2" r="5"/></g>
+<g><title>v12: held-out accuracy 0.674, ECE 0.074 (n=6000) - distilled from a frozen Qwen3.5-4B</title><circle class="hit" cx="853.4" cy="175.0" r="11"/><circle class="dot2" cx="853.4" cy="175.0" r="5"/></g>
+<g><title>v15: held-out accuracy 0.633, ECE 0.061 (n=6000) - +4,566 ShARC / ConditionalQA rows</title><circle class="hit" cx="695.9" cy="282.1" r="11"/><circle class="dot2" cx="695.9" cy="282.1" r="5"/></g>
+<g><title>Qwen3-1.7B, scaling test: held-out accuracy 0.620, ECE 0.052 (n=6000)</title><circle class="hit" cx="644.0" cy="360.3" r="11"/><rect class="dot3" x="639.0" y="355.3" width="10" height="10" rx="2"/></g>
+<line class="ref" x1="644.0" y1="354.3" x2="654.0" y2="418.3"/>
+<text x="654.0" y="415.3" text-anchor="start">Qwen3-1.7B, scaling test</text>
+<g><title>Qwen3-4B, scaling test: held-out accuracy 0.681, ECE 0.048 (n=6000)</title><circle class="hit" cx="881.1" cy="397.7" r="11"/><rect class="dot3" x="876.1" y="392.7" width="10" height="10" rx="2"/></g>
+<text x="873.1" y="389.7" text-anchor="end">Qwen3-4B, scaling test</text>
+<g><title>v4: held-out accuracy 0.650, ECE 0.057 (n=6000) - instruction variants, noul 4 -&gt; 8 types</title><circle class="hit" cx="760.2" cy="322.1" r="11"/><circle class="dot1" cx="760.2" cy="322.1" r="5"/></g>
+<text x="768.2" y="326.1" text-anchor="start">v4</text>
+<g><title>v7: held-out accuracy 0.653, ECE 0.077 (n=6000) - pointer readout</title><circle class="hit" cx="773.9" cy="147.0" r="11"/><circle class="dot1" cx="773.9" cy="147.0" r="5"/></g>
+<text x="781.9" y="151.0" text-anchor="start">v7</text>
+<g><title>v13: held-out accuracy 0.646, ECE 0.056 (n=6000) - Qwen3.5-2B-Base torso</title><circle class="hit" cx="745.4" cy="324.6" r="11"/><circle class="dot1" cx="745.4" cy="324.6" r="5"/></g>
+<text x="737.4" y="318.6" text-anchor="end">v13</text>
+<g><title>v14: held-out accuracy 0.637, ECE 0.051 (n=6000) - +12,909 multi-step rows with a 4B teacher</title><circle class="hit" cx="710.3" cy="372.2" r="11"/><circle class="dot1" cx="710.3" cy="372.2" r="5"/></g>
+<text x="710.3" y="390.2" text-anchor="middle">v14</text>
+<g><title>v16: held-out accuracy 0.629, ECE 0.057 (n=6000) - +2,148 generated document questions</title><circle class="hit" cx="679.1" cy="322.9" r="11"/><circle class="dot1" cx="679.1" cy="322.9" r="5"/></g>
+<text x="671.1" y="316.9" text-anchor="end">v16</text>
+<g><title>v17: held-out accuracy 0.640, ECE 0.051 (n=6000) - v16 with its multi-step rows replayed toward v14&#x27;s own answers</title><circle class="hit" cx="723.9" cy="373.1" r="11"/><circle class="dot1" cx="723.9" cy="373.1" r="5"/></g>
+<text x="731.9" y="377.1" text-anchor="start">v17</text>
+<g><title>v18: held-out accuracy 0.641, ECE 0.052 (n=6000) - v17 + 1,667 generated questions on the weak skills</title><circle class="hit" cx="726.7" cy="358.6" r="11"/><circle class="dot1" cx="726.7" cy="358.6" r="5"/></g>
+<text x="734.7" y="350.6" text-anchor="start">v18</text>
+<g><title>v19: held-out accuracy 0.647, ECE 0.054 (n=6000) - v18 + 6,166 answer-adequacy rows (HelpSteer2 and generated)</title><circle class="hit" cx="750.5" cy="342.4" r="11"/><circle class="dot1" cx="750.5" cy="342.4" r="5"/></g>
+<text x="758.5" y="350.4" text-anchor="start">v19</text>
+<text class="muted" x="24" y="542">v5 left out: its temperatures were fitted on a held-out set that was two-fifths RuleTaker. Scaling runs: same four tasks, a different row sample.</text>
+</svg>

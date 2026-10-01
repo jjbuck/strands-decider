@@ -1,0 +1,134 @@
+name: Bug Report
+description: Report a bug in Strands decider
+title: "[BUG] "
+labels: ["triage"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+  - type: textarea
+    id: human-overview
+    attributes:
+      label: Human Overview
+      description: |
+        If an AI agent drafted this issue, a human must give a short overview here in their own words. An AI agent MUST NOT fill out this section. (50 words)
+      placeholder: In my own words, this bug...
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: "I have checked README.md and the docs and this is not expected behavior"
+          required: true
+        - label: "I have searched [./issues](./issues?q=) and there are no duplicates of my issue"
+          required: true
+  - type: input
+    id: version
+    attributes:
+      label: strands-decider version / commit
+      description: Which version of strands-decider or which commit are you on?
+      placeholder: e.g., 0.1.0 or commit abcdef1
+    validations:
+      required: true
+  - type: input
+    id: python-version
+    attributes:
+      label: Python version
+      description: Output of `python --version`.
+      placeholder: e.g., Python 3.10.14
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: Operating System
+      description: OS and version.
+      placeholder: e.g., macOS 14.5, Ubuntu 22.04
+    validations:
+      required: true
+  - type: dropdown
+    id: device
+    attributes:
+      label: Device
+      description: Which device were you running on?
+      options:
+        - cuda
+        - mps
+        - cpu
+    validations:
+      required: true
+  - type: input
+    id: torch-version
+    attributes:
+      label: torch / transformers versions
+      description: Output of `pip show torch transformers | grep -E "^(Name|Version)"`.
+      placeholder: e.g., torch 2.7.0, transformers 5.15.1
+    validations:
+      required: false
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      description: Which part of the project is affected?
+      options:
+        - inference (strands-decider ask / strands-decider serve)
+        - training
+        - data generation
+        - evaluation
+        - examples
+        - docs
+        - other
+    validations:
+      required: true
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: Steps to Reproduce
+      description: Detailed steps to reproduce the behavior. Put longer logs or traces in Additional Context. (200 words)
+      placeholder: |
+        1. Minimal reproducible example
+        2. Install with `pip install -e .`
+        3. Run `strands-decider ask ...`
+        4. See error...
+    validations:
+      required: true
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected Behavior
+      description: A clear description of what you expected to happen. (50 words)
+    validations:
+      required: true
+  - type: textarea
+    id: actual-behavior
+    attributes:
+      label: Actual Behavior
+      description: What actually happened. Put longer logs or traces in Additional Context. (100 words)
+    validations:
+      required: true
+  - type: textarea
+    id: possible-solution
+    attributes:
+      label: Possible Solution
+      description: Optional - If you have suggestions on how to fix the bug. (100 words)
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: |
+        Optional. Extended context that doesn't fit above: longer logs, screenshots, or supplementary background.
+        Wrap it in a <details> block so the issue stays scannable by default.
+      placeholder: |
+        <details>
+        <summary>Extended context (optional)</summary>
+
+        <!-- Extended content here -->
+
+        </details>
+  - type: input
+    id: related-issues
+    attributes:
+      label: Related Issues
+      description: Optional - Link to related issues if applicable

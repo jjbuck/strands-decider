@@ -1,0 +1,54 @@
+# v19: v18 (the default) plus answer-adequacy rows -- a request, a response, "is the response
+# adequate?" -- which nothing in the corpus asked before: HelpSteer2's human-rated
+# responses (python -m strands_decider.data.adequacy; nvidia/HelpSteer2, CC-BY-4.0) and generated
+# items (data/generators/gen_adequacy/, built by `python -m strands_decider.data.generated --src
+# data/generators/gen_adequacy --out data/adequacy_gen.jsonl --eval-out
+# data/adequacy_gen_eval.jsonl`). Gold labels only, no teacher on the new rows.
+# Everything else is v18's recipe. Pre-registered in research/preregistrations/PREREGISTRATION-v19.md.
+
+train_files: ["data/train_v5.jsonl", "data/multistep_v14.jsonl", "data/generated_v16.jsonl",
+              "data/generated_v18.jsonl", "data/adequacy_hs2.jsonl", "data/adequacy_gen.jsonl"]
+val_fraction: 0.03
+
+base_model: "Qwen/Qwen3.5-2B-Base"
+num_slots: 24           # must match `data build --max-options`; also the KL reference width
+head_type: "pointer"    # scores each option from its own hidden state; see modeling.PointerHead
+pointer_dim: 256
+head_init: "random"     # "lm_head" seeding applies to the slot head only
+kl_frozen_weight: 0.3   # KL(frozen || student) over the option-number readout
+# v14's own distributions for the multi-step rows only (indices offset past train_v5;
+# the generated and adequacy rows come last and carry no teacher).
+teacher_file: "data/replay_v14_multistep.jsonl"
+teacher_weight: 1.0
+head_dropout: 0.05
+max_length: 3072
+
+use_lora: true
+lora_r: 16
+lora_alpha: 32
+# Attention and MLP projections, plus the recurrent layers' own; without these LoRA
+# would reach only the 6 full-attention layers of 24.
+lora_targets: ["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj",
+               "in_proj_qkv", "in_proj_z", "in_proj_a", "in_proj_b", "out_proj"]
+freeze_torso: false     # true = head-only training (much weaker, but very cheap)
+
+epochs: 1
+micro_batch_size: 8
+grad_accum: 4           # effective batch 32
+lr: 0.0001              # LoRA
+head_lr: 0.001          # randomly-initialised head needs a bigger step
+weight_decay: 0.01
+warmup_ratio: 0.03
+max_grad_norm: 1.0
+gradient_checkpointing: true
+
+shuffle_options: true   # the whole point -- do not turn this off
+group_by_length: true   # on: ~2k-token documents among ~250-token rows would otherwise
+                        # pad most batches; it changes batch composition, not content
+ordinal_smoothing: 0.1
+reverse_score_prob: 0.5
+
+output_dir: "checkpoints/hobson-2b-v19"
+seed: 0
+log_every: 20
+eval_every: 500

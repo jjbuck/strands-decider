@@ -1,0 +1,641 @@
+run,family,tier,correct,n,accuracy
+v5,adequacy,standard,7,12,0.5833
+v5,adversarial,hard,3,6,0.5
+v5,ambiguous,hard,2,7,0.2857
+v5,extraction,easy,12,12,1.0
+v5,extraction,standard,10,12,0.8333
+v5,fact,easy,12,12,1.0
+v5,intent,easy,12,12,1.0
+v5,intent,standard,9,12,0.75
+v5,judge_hard,hard,7,17,0.4118
+v5,long_policy,hard,7,19,0.3684
+v5,multi_hop,hard,6,18,0.3333
+v5,ordinal,standard,10,12,0.8333
+v5,policy,standard,7,12,0.5833
+v5,probability,hard,3,10,0.3
+v5,routing,standard,12,12,1.0
+v5,routing_hard,hard,5,5,1.0
+v5,temporal_numeric,hard,4,15,0.2667
+v5,tool_selection,easy,12,12,1.0
+v5,tradeoff,hard,2,6,0.3333
+v5,trap,hard,5,8,0.625
+v6,adequacy,standard,8,12,0.6667
+v6,adversarial,hard,3,6,0.5
+v6,ambiguous,hard,3,7,0.4286
+v6,extraction,easy,12,12,1.0
+v6,extraction,standard,12,12,1.0
+v6,fact,easy,12,12,1.0
+v6,intent,easy,12,12,1.0
+v6,intent,standard,9,12,0.75
+v6,judge_hard,hard,7,17,0.4118
+v6,long_policy,hard,6,19,0.3158
+v6,multi_hop,hard,6,18,0.3333
+v6,ordinal,standard,10,12,0.8333
+v6,policy,standard,8,12,0.6667
+v6,probability,hard,2,10,0.2
+v6,routing,standard,11,12,0.9167
+v6,routing_hard,hard,5,5,1.0
+v6,temporal_numeric,hard,5,15,0.3333
+v6,tool_selection,easy,12,12,1.0
+v6,tradeoff,hard,2,6,0.3333
+v6,trap,hard,5,8,0.625
+v7,adequacy,standard,8,12,0.6667
+v7,adversarial,hard,4,6,0.6667
+v7,ambiguous,hard,1,7,0.1429
+v7,extraction,easy,12,12,1.0
+v7,extraction,standard,12,12,1.0
+v7,fact,easy,12,12,1.0
+v7,intent,easy,12,12,1.0
+v7,intent,standard,9,12,0.75
+v7,judge_hard,hard,7,17,0.4118
+v7,long_policy,hard,8,19,0.4211
+v7,multi_hop,hard,7,18,0.3889
+v7,ordinal,standard,10,12,0.8333
+v7,policy,standard,10,12,0.8333
+v7,probability,hard,3,10,0.3
+v7,routing,standard,11,12,0.9167
+v7,routing_hard,hard,5,5,1.0
+v7,temporal_numeric,hard,2,15,0.1333
+v7,tool_selection,easy,12,12,1.0
+v7,tradeoff,hard,4,6,0.6667
+v7,trap,hard,5,8,0.625
+v8,adequacy,standard,6,12,0.5
+v8,adversarial,hard,5,6,0.8333
+v8,ambiguous,hard,1,7,0.1429
+v8,extraction,easy,12,12,1.0
+v8,extraction,standard,10,12,0.8333
+v8,fact,easy,12,12,1.0
+v8,intent,easy,12,12,1.0
+v8,intent,standard,10,12,0.8333
+v8,judge_hard,hard,7,17,0.4118
+v8,long_policy,hard,10,19,0.5263
+v8,multi_hop,hard,7,18,0.3889
+v8,ordinal,standard,10,12,0.8333
+v8,policy,standard,9,12,0.75
+v8,probability,hard,3,10,0.3
+v8,routing,standard,11,12,0.9167
+v8,routing_hard,hard,3,5,0.6
+v8,temporal_numeric,hard,3,15,0.2
+v8,tool_selection,easy,12,12,1.0
+v8,tradeoff,hard,3,6,0.5
+v8,trap,hard,6,8,0.75
+v9,adequacy,standard,9,12,0.75
+v9,adversarial,hard,3,6,0.5
+v9,ambiguous,hard,0,7,0.0
+v9,extraction,easy,12,12,1.0
+v9,extraction,standard,12,12,1.0
+v9,fact,easy,12,12,1.0
+v9,intent,easy,12,12,1.0
+v9,intent,standard,9,12,0.75
+v9,judge_hard,hard,7,17,0.4118
+v9,long_policy,hard,6,19,0.3158
+v9,multi_hop,hard,7,18,0.3889
+v9,ordinal,standard,11,12,0.9167
+v9,policy,standard,10,12,0.8333
+v9,probability,hard,2,10,0.2
+v9,routing,standard,11,12,0.9167
+v9,routing_hard,hard,5,5,1.0
+v9,temporal_numeric,hard,2,15,0.1333
+v9,tool_selection,easy,12,12,1.0
+v9,tradeoff,hard,2,6,0.3333
+v9,trap,hard,8,8,1.0
+v10,adequacy,standard,8,12,0.6667
+v10,adversarial,hard,4,6,0.6667
+v10,ambiguous,hard,3,7,0.4286
+v10,extraction,easy,12,12,1.0
+v10,extraction,standard,11,12,0.9167
+v10,fact,easy,12,12,1.0
+v10,intent,easy,12,12,1.0
+v10,intent,standard,9,12,0.75
+v10,judge_hard,hard,7,17,0.4118
+v10,long_policy,hard,6,19,0.3158
+v10,multi_hop,hard,4,18,0.2222
+v10,ordinal,standard,11,12,0.9167
+v10,policy,standard,9,12,0.75
+v10,probability,hard,2,10,0.2
+v10,routing,standard,11,12,0.9167
+v10,routing_hard,hard,4,5,0.8
+v10,temporal_numeric,hard,1,15,0.0667
+v10,tool_selection,easy,12,12,1.0
+v10,tradeoff,hard,2,6,0.3333
+v10,trap,hard,5,8,0.625
+v11a,adequacy,standard,8,12,0.6667
+v11a,adversarial,hard,3,6,0.5
+v11a,ambiguous,hard,1,7,0.1429
+v11a,extraction,easy,12,12,1.0
+v11a,extraction,standard,10,12,0.8333
+v11a,fact,easy,12,12,1.0
+v11a,intent,easy,12,12,1.0
+v11a,intent,standard,9,12,0.75
+v11a,judge_hard,hard,7,17,0.4118
+v11a,long_policy,hard,6,19,0.3158
+v11a,multi_hop,hard,7,18,0.3889
+v11a,ordinal,standard,9,12,0.75
+v11a,policy,standard,7,12,0.5833
+v11a,probability,hard,2,10,0.2
+v11a,routing,standard,11,12,0.9167
+v11a,routing_hard,hard,5,5,1.0
+v11a,temporal_numeric,hard,2,15,0.1333
+v11a,tool_selection,easy,12,12,1.0
+v11a,tradeoff,hard,3,6,0.5
+v11a,trap,hard,5,8,0.625
+v11b,adequacy,standard,6,12,0.5
+v11b,adversarial,hard,3,6,0.5
+v11b,ambiguous,hard,0,7,0.0
+v11b,extraction,easy,12,12,1.0
+v11b,extraction,standard,11,12,0.9167
+v11b,fact,easy,12,12,1.0
+v11b,intent,easy,12,12,1.0
+v11b,intent,standard,9,12,0.75
+v11b,judge_hard,hard,7,17,0.4118
+v11b,long_policy,hard,7,19,0.3684
+v11b,multi_hop,hard,7,18,0.3889
+v11b,ordinal,standard,11,12,0.9167
+v11b,policy,standard,8,12,0.6667
+v11b,probability,hard,3,10,0.3
+v11b,routing,standard,11,12,0.9167
+v11b,routing_hard,hard,5,5,1.0
+v11b,temporal_numeric,hard,2,15,0.1333
+v11b,tool_selection,easy,12,12,1.0
+v11b,tradeoff,hard,2,6,0.3333
+v11b,trap,hard,4,8,0.5
+v12,adequacy,standard,8,12,0.6667
+v12,adversarial,hard,5,6,0.8333
+v12,ambiguous,hard,1,7,0.1429
+v12,extraction,easy,12,12,1.0
+v12,extraction,standard,12,12,1.0
+v12,fact,easy,12,12,1.0
+v12,intent,easy,12,12,1.0
+v12,intent,standard,9,12,0.75
+v12,judge_hard,hard,7,17,0.4118
+v12,long_policy,hard,7,19,0.3684
+v12,multi_hop,hard,6,18,0.3333
+v12,ordinal,standard,10,12,0.8333
+v12,policy,standard,7,12,0.5833
+v12,probability,hard,2,10,0.2
+v12,routing,standard,9,12,0.75
+v12,routing_hard,hard,5,5,1.0
+v12,temporal_numeric,hard,2,15,0.1333
+v12,tool_selection,easy,12,12,1.0
+v12,tradeoff,hard,2,6,0.3333
+v12,trap,hard,6,8,0.75
+v13,adequacy,standard,7,12,0.5833
+v13,adversarial,hard,5,6,0.8333
+v13,ambiguous,hard,4,7,0.5714
+v13,extraction,easy,12,12,1.0
+v13,extraction,standard,12,12,1.0
+v13,fact,easy,12,12,1.0
+v13,intent,easy,12,12,1.0
+v13,intent,standard,10,12,0.8333
+v13,judge_hard,hard,7,17,0.4118
+v13,long_policy,hard,6,19,0.3158
+v13,multi_hop,hard,6,18,0.3333
+v13,ordinal,standard,11,12,0.9167
+v13,policy,standard,9,12,0.75
+v13,probability,hard,6,10,0.6
+v13,routing,standard,11,12,0.9167
+v13,routing_hard,hard,5,5,1.0
+v13,temporal_numeric,hard,2,15,0.1333
+v13,tool_selection,easy,12,12,1.0
+v13,tradeoff,hard,1,6,0.1667
+v13,trap,hard,7,8,0.875
+v14,adequacy,standard,7,12,0.5833
+v14,adversarial,hard,5,6,0.8333
+v14,ambiguous,hard,2,7,0.2857
+v14,extraction,easy,12,12,1.0
+v14,extraction,standard,12,12,1.0
+v14,fact,easy,12,12,1.0
+v14,intent,easy,12,12,1.0
+v14,intent,standard,10,12,0.8333
+v14,judge_hard,hard,7,17,0.4118
+v14,long_policy,hard,7,19,0.3684
+v14,multi_hop,hard,9,18,0.5
+v14,ordinal,standard,12,12,1.0
+v14,policy,standard,9,12,0.75
+v14,probability,hard,5,10,0.5
+v14,routing,standard,11,12,0.9167
+v14,routing_hard,hard,5,5,1.0
+v14,temporal_numeric,hard,4,15,0.2667
+v14,tool_selection,easy,12,12,1.0
+v14,tradeoff,hard,2,6,0.3333
+v14,trap,hard,6,8,0.75
+v15,adequacy,standard,8,12,0.6667
+v15,adversarial,hard,5,6,0.8333
+v15,ambiguous,hard,4,7,0.5714
+v15,extraction,easy,12,12,1.0
+v15,extraction,standard,12,12,1.0
+v15,fact,easy,12,12,1.0
+v15,intent,easy,12,12,1.0
+v15,intent,standard,10,12,0.8333
+v15,judge_hard,hard,7,17,0.4118
+v15,long_policy,hard,7,19,0.3684
+v15,multi_hop,hard,9,18,0.5
+v15,ordinal,standard,12,12,1.0
+v15,policy,standard,9,12,0.75
+v15,probability,hard,4,10,0.4
+v15,routing,standard,11,12,0.9167
+v15,routing_hard,hard,5,5,1.0
+v15,temporal_numeric,hard,2,15,0.1333
+v15,tool_selection,easy,12,12,1.0
+v15,tradeoff,hard,1,6,0.1667
+v15,trap,hard,6,8,0.75
+v16,adequacy,standard,7,12,0.5833
+v16,adversarial,hard,5,6,0.8333
+v16,ambiguous,hard,3,7,0.4286
+v16,extraction,easy,12,12,1.0
+v16,extraction,standard,12,12,1.0
+v16,fact,easy,12,12,1.0
+v16,intent,easy,12,12,1.0
+v16,intent,standard,10,12,0.8333
+v16,judge_hard,hard,7,17,0.4118
+v16,long_policy,hard,8,19,0.4211
+v16,multi_hop,hard,9,18,0.5
+v16,ordinal,standard,11,12,0.9167
+v16,policy,standard,9,12,0.75
+v16,probability,hard,4,10,0.4
+v16,routing,standard,11,12,0.9167
+v16,routing_hard,hard,5,5,1.0
+v16,temporal_numeric,hard,2,15,0.1333
+v16,tool_selection,easy,12,12,1.0
+v16,tradeoff,hard,4,6,0.6667
+v16,trap,hard,8,8,1.0
+v17,adequacy,standard,7,12,0.5833
+v17,adversarial,hard,6,6,1.0
+v17,ambiguous,hard,4,7,0.5714
+v17,extraction,easy,12,12,1.0
+v17,extraction,standard,12,12,1.0
+v17,fact,easy,12,12,1.0
+v17,intent,easy,12,12,1.0
+v17,intent,standard,11,12,0.9167
+v17,judge_hard,hard,7,17,0.4118
+v17,long_policy,hard,7,19,0.3684
+v17,multi_hop,hard,9,18,0.5
+v17,ordinal,standard,11,12,0.9167
+v17,policy,standard,9,12,0.75
+v17,probability,hard,4,10,0.4
+v17,routing,standard,11,12,0.9167
+v17,routing_hard,hard,5,5,1.0
+v17,temporal_numeric,hard,3,15,0.2
+v17,tool_selection,easy,12,12,1.0
+v17,tradeoff,hard,3,6,0.5
+v17,trap,hard,7,8,0.875
+v18,adequacy,standard,7,12,0.5833
+v18,adversarial,hard,5,6,0.8333
+v18,ambiguous,hard,4,7,0.5714
+v18,extraction,easy,12,12,1.0
+v18,extraction,standard,11,12,0.9167
+v18,fact,easy,12,12,1.0
+v18,intent,easy,12,12,1.0
+v18,intent,standard,11,12,0.9167
+v18,judge_hard,hard,7,17,0.4118
+v18,long_policy,hard,10,19,0.5263
+v18,multi_hop,hard,10,18,0.5556
+v18,ordinal,standard,10,12,0.8333
+v18,policy,standard,10,12,0.8333
+v18,probability,hard,3,10,0.3
+v18,routing,standard,11,12,0.9167
+v18,routing_hard,hard,5,5,1.0
+v18,temporal_numeric,hard,2,15,0.1333
+v18,tool_selection,easy,12,12,1.0
+v18,tradeoff,hard,3,6,0.5
+v18,trap,hard,7,8,0.875
+v19,adequacy,standard,9,12,0.75
+v19,adversarial,hard,4,6,0.6667
+v19,ambiguous,hard,5,7,0.7143
+v19,extraction,easy,12,12,1.0
+v19,extraction,standard,12,12,1.0
+v19,fact,easy,12,12,1.0
+v19,intent,easy,12,12,1.0
+v19,intent,standard,10,12,0.8333
+v19,judge_hard,hard,10,17,0.5882
+v19,long_policy,hard,7,19,0.3684
+v19,multi_hop,hard,8,18,0.4444
+v19,ordinal,standard,12,12,1.0
+v19,policy,standard,9,12,0.75
+v19,probability,hard,3,10,0.3
+v19,routing,standard,11,12,0.9167
+v19,routing_hard,hard,5,5,1.0
+v19,temporal_numeric,hard,4,15,0.2667
+v19,tool_selection,easy,12,12,1.0
+v19,tradeoff,hard,3,6,0.5
+v19,trap,hard,7,8,0.875
+v5 @1024,adequacy,standard,7,12,0.5833
+v5 @1024,adversarial,hard,3,6,0.5
+v5 @1024,ambiguous,hard,2,7,0.2857
+v5 @1024,extraction,easy,12,12,1.0
+v5 @1024,extraction,standard,10,12,0.8333
+v5 @1024,fact,easy,12,12,1.0
+v5 @1024,intent,easy,12,12,1.0
+v5 @1024,intent,standard,9,12,0.75
+v5 @1024,judge_hard,hard,7,17,0.4118
+v5 @1024,long_policy,hard,6,19,0.3158
+v5 @1024,multi_hop,hard,6,18,0.3333
+v5 @1024,ordinal,standard,10,12,0.8333
+v5 @1024,policy,standard,7,12,0.5833
+v5 @1024,probability,hard,2,10,0.2
+v5 @1024,routing,standard,12,12,1.0
+v5 @1024,routing_hard,hard,5,5,1.0
+v5 @1024,temporal_numeric,hard,4,15,0.2667
+v5 @1024,tool_selection,easy,12,12,1.0
+v5 @1024,tradeoff,hard,2,6,0.3333
+v5 @1024,trap,hard,5,8,0.625
+v5 @1024 +fix,adequacy,standard,7,12,0.5833
+v5 @1024 +fix,adversarial,hard,3,6,0.5
+v5 @1024 +fix,ambiguous,hard,2,7,0.2857
+v5 @1024 +fix,extraction,easy,12,12,1.0
+v5 @1024 +fix,extraction,standard,10,12,0.8333
+v5 @1024 +fix,fact,easy,12,12,1.0
+v5 @1024 +fix,intent,easy,12,12,1.0
+v5 @1024 +fix,intent,standard,9,12,0.75
+v5 @1024 +fix,judge_hard,hard,7,17,0.4118
+v5 @1024 +fix,long_policy,hard,5,19,0.2632
+v5 @1024 +fix,multi_hop,hard,5,18,0.2778
+v5 @1024 +fix,ordinal,standard,10,12,0.8333
+v5 @1024 +fix,policy,standard,7,12,0.5833
+v5 @1024 +fix,probability,hard,4,10,0.4
+v5 @1024 +fix,routing,standard,12,12,1.0
+v5 @1024 +fix,routing_hard,hard,5,5,1.0
+v5 @1024 +fix,temporal_numeric,hard,5,15,0.3333
+v5 @1024 +fix,tool_selection,easy,12,12,1.0
+v5 @1024 +fix,tradeoff,hard,2,6,0.3333
+v5 @1024 +fix,trap,hard,5,8,0.625
+v5 @4096,adequacy,standard,7,12,0.5833
+v5 @4096,adversarial,hard,3,6,0.5
+v5 @4096,ambiguous,hard,2,7,0.2857
+v5 @4096,extraction,easy,12,12,1.0
+v5 @4096,extraction,standard,10,12,0.8333
+v5 @4096,fact,easy,12,12,1.0
+v5 @4096,intent,easy,12,12,1.0
+v5 @4096,intent,standard,9,12,0.75
+v5 @4096,judge_hard,hard,7,17,0.4118
+v5 @4096,long_policy,hard,7,19,0.3684
+v5 @4096,multi_hop,hard,6,18,0.3333
+v5 @4096,ordinal,standard,10,12,0.8333
+v5 @4096,policy,standard,7,12,0.5833
+v5 @4096,probability,hard,3,10,0.3
+v5 @4096,routing,standard,12,12,1.0
+v5 @4096,routing_hard,hard,5,5,1.0
+v5 @4096,temporal_numeric,hard,4,15,0.2667
+v5 @4096,tool_selection,easy,12,12,1.0
+v5 @4096,tradeoff,hard,2,6,0.3333
+v5 @4096,trap,hard,5,8,0.625
+v6 uncalibrated,adequacy,standard,8,12,0.6667
+v6 uncalibrated,adversarial,hard,3,6,0.5
+v6 uncalibrated,ambiguous,hard,3,7,0.4286
+v6 uncalibrated,extraction,easy,12,12,1.0
+v6 uncalibrated,extraction,standard,12,12,1.0
+v6 uncalibrated,fact,easy,12,12,1.0
+v6 uncalibrated,intent,easy,12,12,1.0
+v6 uncalibrated,intent,standard,9,12,0.75
+v6 uncalibrated,judge_hard,hard,7,17,0.4118
+v6 uncalibrated,long_policy,hard,6,19,0.3158
+v6 uncalibrated,multi_hop,hard,6,18,0.3333
+v6 uncalibrated,ordinal,standard,10,12,0.8333
+v6 uncalibrated,policy,standard,8,12,0.6667
+v6 uncalibrated,probability,hard,2,10,0.2
+v6 uncalibrated,routing,standard,11,12,0.9167
+v6 uncalibrated,routing_hard,hard,5,5,1.0
+v6 uncalibrated,temporal_numeric,hard,5,15,0.3333
+v6 uncalibrated,tool_selection,easy,12,12,1.0
+v6 uncalibrated,tradeoff,hard,2,6,0.3333
+v6 uncalibrated,trap,hard,5,8,0.625
+v6 arm: instruct,adequacy,standard,6,12,0.5
+v6 arm: instruct,adversarial,hard,2,6,0.3333
+v6 arm: instruct,ambiguous,hard,2,7,0.2857
+v6 arm: instruct,extraction,easy,12,12,1.0
+v6 arm: instruct,extraction,standard,12,12,1.0
+v6 arm: instruct,fact,easy,12,12,1.0
+v6 arm: instruct,intent,easy,12,12,1.0
+v6 arm: instruct,intent,standard,9,12,0.75
+v6 arm: instruct,judge_hard,hard,7,17,0.4118
+v6 arm: instruct,long_policy,hard,4,19,0.2105
+v6 arm: instruct,multi_hop,hard,6,18,0.3333
+v6 arm: instruct,ordinal,standard,10,12,0.8333
+v6 arm: instruct,policy,standard,6,12,0.5
+v6 arm: instruct,probability,hard,4,10,0.4
+v6 arm: instruct,routing,standard,12,12,1.0
+v6 arm: instruct,routing_hard,hard,3,5,0.6
+v6 arm: instruct,temporal_numeric,hard,4,15,0.2667
+v6 arm: instruct,tool_selection,easy,12,12,1.0
+v6 arm: instruct,tradeoff,hard,1,6,0.1667
+v6 arm: instruct,trap,hard,7,8,0.875
+v6 arm: lm_head,adequacy,standard,7,12,0.5833
+v6 arm: lm_head,adversarial,hard,2,6,0.3333
+v6 arm: lm_head,ambiguous,hard,3,7,0.4286
+v6 arm: lm_head,extraction,easy,12,12,1.0
+v6 arm: lm_head,extraction,standard,10,12,0.8333
+v6 arm: lm_head,fact,easy,12,12,1.0
+v6 arm: lm_head,intent,easy,12,12,1.0
+v6 arm: lm_head,intent,standard,10,12,0.8333
+v6 arm: lm_head,judge_hard,hard,7,17,0.4118
+v6 arm: lm_head,long_policy,hard,7,19,0.3684
+v6 arm: lm_head,multi_hop,hard,6,18,0.3333
+v6 arm: lm_head,ordinal,standard,11,12,0.9167
+v6 arm: lm_head,policy,standard,7,12,0.5833
+v6 arm: lm_head,probability,hard,2,10,0.2
+v6 arm: lm_head,routing,standard,12,12,1.0
+v6 arm: lm_head,routing_hard,hard,5,5,1.0
+v6 arm: lm_head,temporal_numeric,hard,4,15,0.2667
+v6 arm: lm_head,tool_selection,easy,12,12,1.0
+v6 arm: lm_head,tradeoff,hard,2,6,0.3333
+v6 arm: lm_head,trap,hard,5,8,0.625
+v6 arm: KL,adequacy,standard,9,12,0.75
+v6 arm: KL,adversarial,hard,2,6,0.3333
+v6 arm: KL,ambiguous,hard,2,7,0.2857
+v6 arm: KL,extraction,easy,12,12,1.0
+v6 arm: KL,extraction,standard,12,12,1.0
+v6 arm: KL,fact,easy,12,12,1.0
+v6 arm: KL,intent,easy,12,12,1.0
+v6 arm: KL,intent,standard,9,12,0.75
+v6 arm: KL,judge_hard,hard,7,17,0.4118
+v6 arm: KL,long_policy,hard,8,19,0.4211
+v6 arm: KL,multi_hop,hard,5,18,0.2778
+v6 arm: KL,ordinal,standard,10,12,0.8333
+v6 arm: KL,policy,standard,7,12,0.5833
+v6 arm: KL,probability,hard,3,10,0.3
+v6 arm: KL,routing,standard,12,12,1.0
+v6 arm: KL,routing_hard,hard,4,5,0.8
+v6 arm: KL,temporal_numeric,hard,3,15,0.2
+v6 arm: KL,tool_selection,easy,12,12,1.0
+v6 arm: KL,tradeoff,hard,2,6,0.3333
+v6 arm: KL,trap,hard,5,8,0.625
+scaling: 1.7B,adequacy,standard,8,12,0.6667
+scaling: 1.7B,adversarial,hard,3,6,0.5
+scaling: 1.7B,ambiguous,hard,2,7,0.2857
+scaling: 1.7B,extraction,easy,12,12,1.0
+scaling: 1.7B,extraction,standard,11,12,0.9167
+scaling: 1.7B,fact,easy,12,12,1.0
+scaling: 1.7B,intent,easy,12,12,1.0
+scaling: 1.7B,intent,standard,9,12,0.75
+scaling: 1.7B,judge_hard,hard,7,17,0.4118
+scaling: 1.7B,long_policy,hard,6,19,0.3158
+scaling: 1.7B,multi_hop,hard,5,18,0.2778
+scaling: 1.7B,ordinal,standard,10,12,0.8333
+scaling: 1.7B,policy,standard,7,12,0.5833
+scaling: 1.7B,probability,hard,5,10,0.5
+scaling: 1.7B,routing,standard,11,12,0.9167
+scaling: 1.7B,routing_hard,hard,5,5,1.0
+scaling: 1.7B,temporal_numeric,hard,5,15,0.3333
+scaling: 1.7B,tool_selection,easy,12,12,1.0
+scaling: 1.7B,tradeoff,hard,2,6,0.3333
+scaling: 1.7B,trap,hard,4,8,0.5
+scaling: 4B,adequacy,standard,8,12,0.6667
+scaling: 4B,adversarial,hard,5,6,0.8333
+scaling: 4B,ambiguous,hard,3,7,0.4286
+scaling: 4B,extraction,easy,12,12,1.0
+scaling: 4B,extraction,standard,11,12,0.9167
+scaling: 4B,fact,easy,12,12,1.0
+scaling: 4B,intent,easy,12,12,1.0
+scaling: 4B,intent,standard,11,12,0.9167
+scaling: 4B,judge_hard,hard,8,17,0.4706
+scaling: 4B,long_policy,hard,9,19,0.4737
+scaling: 4B,multi_hop,hard,5,18,0.2778
+scaling: 4B,ordinal,standard,9,12,0.75
+scaling: 4B,policy,standard,9,12,0.75
+scaling: 4B,probability,hard,6,10,0.6
+scaling: 4B,routing,standard,12,12,1.0
+scaling: 4B,routing_hard,hard,5,5,1.0
+scaling: 4B,temporal_numeric,hard,3,15,0.2
+scaling: 4B,tool_selection,easy,12,12,1.0
+scaling: 4B,tradeoff,hard,1,6,0.1667
+scaling: 4B,trap,hard,5,8,0.625
+v14 prefix cache,adequacy,standard,7,12,0.5833
+v14 prefix cache,adversarial,hard,5,6,0.8333
+v14 prefix cache,ambiguous,hard,2,7,0.2857
+v14 prefix cache,extraction,easy,12,12,1.0
+v14 prefix cache,extraction,standard,12,12,1.0
+v14 prefix cache,fact,easy,12,12,1.0
+v14 prefix cache,intent,easy,12,12,1.0
+v14 prefix cache,intent,standard,10,12,0.8333
+v14 prefix cache,judge_hard,hard,7,17,0.4118
+v14 prefix cache,long_policy,hard,7,19,0.3684
+v14 prefix cache,multi_hop,hard,9,18,0.5
+v14 prefix cache,ordinal,standard,11,12,0.9167
+v14 prefix cache,policy,standard,9,12,0.75
+v14 prefix cache,probability,hard,5,10,0.5
+v14 prefix cache,routing,standard,11,12,0.9167
+v14 prefix cache,routing_hard,hard,5,5,1.0
+v14 prefix cache,temporal_numeric,hard,4,15,0.2667
+v14 prefix cache,tool_selection,easy,12,12,1.0
+v14 prefix cache,tradeoff,hard,2,6,0.3333
+v14 prefix cache,trap,hard,6,8,0.75
+decider-2b v10,adequacy,standard,8,12,0.6667
+decider-2b v10,adversarial,hard,3,6,0.5
+decider-2b v10,ambiguous,hard,2,7,0.2857
+decider-2b v10,extraction,easy,12,12,1.0
+decider-2b v10,extraction,standard,11,12,0.9167
+decider-2b v10,fact,easy,12,12,1.0
+decider-2b v10,intent,easy,12,12,1.0
+decider-2b v10,intent,standard,12,12,1.0
+decider-2b v10,judge_hard,hard,9,17,0.5294
+decider-2b v10,long_policy,hard,5,19,0.2632
+decider-2b v10,multi_hop,hard,9,18,0.5
+decider-2b v10,ordinal,standard,12,12,1.0
+decider-2b v10,policy,standard,11,12,0.9167
+decider-2b v10,probability,hard,4,10,0.4
+decider-2b v10,routing,standard,9,12,0.75
+decider-2b v10,routing_hard,hard,5,5,1.0
+decider-2b v10,temporal_numeric,hard,5,15,0.3333
+decider-2b v10,tool_selection,easy,12,12,1.0
+decider-2b v10,tradeoff,hard,1,6,0.1667
+decider-2b v10,trap,hard,8,8,1.0
+decider-2b v11,adequacy,standard,8,12,0.6667
+decider-2b v11,adversarial,hard,6,6,1.0
+decider-2b v11,ambiguous,hard,3,7,0.4286
+decider-2b v11,extraction,easy,12,12,1.0
+decider-2b v11,extraction,standard,12,12,1.0
+decider-2b v11,fact,easy,12,12,1.0
+decider-2b v11,intent,easy,12,12,1.0
+decider-2b v11,intent,standard,12,12,1.0
+decider-2b v11,judge_hard,hard,10,17,0.5882
+decider-2b v11,long_policy,hard,8,19,0.4211
+decider-2b v11,multi_hop,hard,10,18,0.5556
+decider-2b v11,ordinal,standard,12,12,1.0
+decider-2b v11,policy,standard,10,12,0.8333
+decider-2b v11,probability,hard,7,10,0.7
+decider-2b v11,routing,standard,10,12,0.8333
+decider-2b v11,routing_hard,hard,5,5,1.0
+decider-2b v11,temporal_numeric,hard,3,15,0.2
+decider-2b v11,tool_selection,easy,12,12,1.0
+decider-2b v11,tradeoff,hard,3,6,0.5
+decider-2b v11,trap,hard,8,8,1.0
+"Qwen3.5-4B, frozen",adequacy,standard,12,12,1.0
+"Qwen3.5-4B, frozen",adversarial,hard,4,6,0.6667
+"Qwen3.5-4B, frozen",ambiguous,hard,5,7,0.7143
+"Qwen3.5-4B, frozen",extraction,easy,12,12,1.0
+"Qwen3.5-4B, frozen",extraction,standard,12,12,1.0
+"Qwen3.5-4B, frozen",fact,easy,11,12,0.9167
+"Qwen3.5-4B, frozen",intent,easy,12,12,1.0
+"Qwen3.5-4B, frozen",intent,standard,12,12,1.0
+"Qwen3.5-4B, frozen",judge_hard,hard,13,17,0.7647
+"Qwen3.5-4B, frozen",long_policy,hard,10,19,0.5263
+"Qwen3.5-4B, frozen",multi_hop,hard,12,18,0.6667
+"Qwen3.5-4B, frozen",ordinal,standard,12,12,1.0
+"Qwen3.5-4B, frozen",policy,standard,11,12,0.9167
+"Qwen3.5-4B, frozen",probability,hard,4,10,0.4
+"Qwen3.5-4B, frozen",routing,standard,12,12,1.0
+"Qwen3.5-4B, frozen",routing_hard,hard,5,5,1.0
+"Qwen3.5-4B, frozen",temporal_numeric,hard,3,15,0.2
+"Qwen3.5-4B, frozen",tool_selection,easy,12,12,1.0
+"Qwen3.5-4B, frozen",tradeoff,hard,4,6,0.6667
+"Qwen3.5-4B, frozen",trap,hard,8,8,1.0
+"Qwen3.5-2B, frozen",adequacy,standard,7,12,0.5833
+"Qwen3.5-2B, frozen",adversarial,hard,2,6,0.3333
+"Qwen3.5-2B, frozen",ambiguous,hard,5,7,0.7143
+"Qwen3.5-2B, frozen",extraction,easy,12,12,1.0
+"Qwen3.5-2B, frozen",extraction,standard,12,12,1.0
+"Qwen3.5-2B, frozen",fact,easy,12,12,1.0
+"Qwen3.5-2B, frozen",intent,easy,12,12,1.0
+"Qwen3.5-2B, frozen",intent,standard,6,12,0.5
+"Qwen3.5-2B, frozen",judge_hard,hard,9,17,0.5294
+"Qwen3.5-2B, frozen",long_policy,hard,6,19,0.3158
+"Qwen3.5-2B, frozen",multi_hop,hard,5,18,0.2778
+"Qwen3.5-2B, frozen",ordinal,standard,11,12,0.9167
+"Qwen3.5-2B, frozen",policy,standard,7,12,0.5833
+"Qwen3.5-2B, frozen",probability,hard,3,10,0.3
+"Qwen3.5-2B, frozen",routing,standard,11,12,0.9167
+"Qwen3.5-2B, frozen",routing_hard,hard,5,5,1.0
+"Qwen3.5-2B, frozen",temporal_numeric,hard,5,15,0.3333
+"Qwen3.5-2B, frozen",tool_selection,easy,12,12,1.0
+"Qwen3.5-2B, frozen",tradeoff,hard,3,6,0.5
+"Qwen3.5-2B, frozen",trap,hard,7,8,0.875
+"Qwen3-8B, frozen",adequacy,standard,8,12,0.6667
+"Qwen3-8B, frozen",adversarial,hard,1,6,0.1667
+"Qwen3-8B, frozen",ambiguous,hard,3,7,0.4286
+"Qwen3-8B, frozen",extraction,easy,12,12,1.0
+"Qwen3-8B, frozen",extraction,standard,12,12,1.0
+"Qwen3-8B, frozen",fact,easy,12,12,1.0
+"Qwen3-8B, frozen",intent,easy,12,12,1.0
+"Qwen3-8B, frozen",intent,standard,9,12,0.75
+"Qwen3-8B, frozen",judge_hard,hard,10,17,0.5882
+"Qwen3-8B, frozen",long_policy,hard,10,19,0.5263
+"Qwen3-8B, frozen",multi_hop,hard,8,18,0.4444
+"Qwen3-8B, frozen",ordinal,standard,12,12,1.0
+"Qwen3-8B, frozen",policy,standard,9,12,0.75
+"Qwen3-8B, frozen",probability,hard,4,10,0.4
+"Qwen3-8B, frozen",routing,standard,10,12,0.8333
+"Qwen3-8B, frozen",routing_hard,hard,5,5,1.0
+"Qwen3-8B, frozen",temporal_numeric,hard,1,15,0.0667
+"Qwen3-8B, frozen",tool_selection,easy,12,12,1.0
+"Qwen3-8B, frozen",tradeoff,hard,2,6,0.3333
+"Qwen3-8B, frozen",trap,hard,6,8,0.75
+"Qwen3-1.7B, frozen",adequacy,standard,4,12,0.3333
+"Qwen3-1.7B, frozen",adversarial,hard,3,6,0.5
+"Qwen3-1.7B, frozen",ambiguous,hard,3,7,0.4286
+"Qwen3-1.7B, frozen",extraction,easy,11,12,0.9167
+"Qwen3-1.7B, frozen",extraction,standard,4,12,0.3333
+"Qwen3-1.7B, frozen",fact,easy,9,12,0.75
+"Qwen3-1.7B, frozen",intent,easy,12,12,1.0
+"Qwen3-1.7B, frozen",intent,standard,9,12,0.75
+"Qwen3-1.7B, frozen",judge_hard,hard,9,17,0.5294
+"Qwen3-1.7B, frozen",long_policy,hard,5,19,0.2632
+"Qwen3-1.7B, frozen",multi_hop,hard,3,18,0.1667
+"Qwen3-1.7B, frozen",ordinal,standard,6,12,0.5
+"Qwen3-1.7B, frozen",policy,standard,10,12,0.8333
+"Qwen3-1.7B, frozen",probability,hard,5,10,0.5
+"Qwen3-1.7B, frozen",routing,standard,9,12,0.75
+"Qwen3-1.7B, frozen",routing_hard,hard,4,5,0.8
+"Qwen3-1.7B, frozen",temporal_numeric,hard,5,15,0.3333
+"Qwen3-1.7B, frozen",tool_selection,easy,11,12,0.9167
+"Qwen3-1.7B, frozen",tradeoff,hard,1,6,0.1667
+"Qwen3-1.7B, frozen",trap,hard,6,8,0.75

@@ -1,0 +1,71 @@
+# The v19 recipe -- the reference recipe.
+#
+#   v18's recipe -- the v5 classification corpus, 12,909 multi-step rows (ContractNLI
+#   balanced per claim, MuSiQue answerable/unanswerable pairs, BoardgameQA) trained toward
+#   a parent's own answer distributions (the parent is v14's recipe,
+#   configs/train-parent.yaml), 2,148 + 1,667 generated document questions
+#   (data/generators/gen_v16/; data/generators/gen_pilot_qwen/, gen_mixed_pilot/, gen_weak/) -- plus 6,166
+#   answer-adequacy rows: 4,866 from HelpSteer2's human ratings (strands_decider.data.adequacy) and
+#   1,300 generated (data/generators/gen_adequacy/). Qwen3.5-2B-Base torso, pointer readout.
+#   JevBench public 0.723 (167/231), Brier 0.342, ECE 0.052; answer adequacy 0.739 on
+#   HelpSteer2's held-out responses; MuSiQue 0.879; HotpotQA, never trained on, 0.726.
+#   See training/README.md and research/preregistrations/PREREGISTRATION-v19.md.
+#
+# Run the whole pipeline with training/recipe.sh under WSL2: corpus build, downloads, multi-step
+# conversion, the generated and adequacy rows (from committed exports and the HelpSteer2
+# download: no API calls), teacher labelling, the parent (~5 h), replay labels, this
+# training (~6 h), eval. This config is exactly what v19 trained with except the teacher
+# file, the output directory and max_length (4096, the serving default; v19 was
+# measured at 3072, and no training row is longer than that). The teacher file is the
+# recipe parent's replay (data/replay_parent_multistep.jsonl), not v14's
+# (data/replay_v14_multistep.jsonl): a retrained parent's distributions differ from
+# v14's, so this is a difference in content, not only in name.
+
+train_files: ["data/train_v5.jsonl", "data/multistep_v14.jsonl", "data/generated_v16.jsonl",
+              "data/generated_v18.jsonl", "data/adequacy_hs2.jsonl", "data/adequacy_gen.jsonl"]
+val_fraction: 0.03
+
+base_model: "Qwen/Qwen3.5-2B-Base"
+num_slots: 24           # must match `data build --max-options`; also the KL reference width
+head_type: "pointer"    # scores each option from its own hidden state; see modeling.PointerHead
+pointer_dim: 256
+head_init: "random"     # "lm_head" seeding applies to the slot head only
+kl_frozen_weight: 0.3   # KL(frozen || student) over the option-number readout
+# The parent's own distributions for the multi-step rows only (replay toward the parent;
+# indices offset past train_v5; the generated rows come last and carry none).
+teacher_file: "data/replay_parent_multistep.jsonl"  # from training/recipe.sh replay
+teacher_weight: 1.0
+head_dropout: 0.05
+max_length: 4096       # the serving window saved with the checkpoint; no training row
+                       # exceeds 3,072 tokens, so training is as at v19's 3072
+
+use_lora: true
+lora_r: 16
+lora_alpha: 32
+# Attention and MLP projections, plus the recurrent layers' own; without these LoRA
+# would reach only the 6 full-attention layers of 24.
+lora_targets: ["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj",
+               "in_proj_qkv", "in_proj_z", "in_proj_a", "in_proj_b", "out_proj"]
+freeze_torso: false     # true = head-only training (much weaker, but very cheap)
+
+epochs: 1
+micro_batch_size: 8
+grad_accum: 4           # effective batch 32
+lr: 0.0001              # LoRA
+head_lr: 0.001          # randomly-initialised head needs a bigger step
+weight_decay: 0.01
+warmup_ratio: 0.03
+max_grad_norm: 1.0
+gradient_checkpointing: true
+
+shuffle_options: true   # the whole point -- do not turn this off
+group_by_length: true   # on: ~2k-token documents among ~250-token rows would otherwise
+                        # pad most batches; it changes batch composition, not content
+ordinal_smoothing: 0.1
+reverse_score_prob: 0.5
+
+# Not "hobson-2b-v19": rerunning the recipe must not overwrite the checkpoint it reproduces.
+output_dir: "checkpoints/hobson-2b-recipe"
+seed: 0
+log_every: 20
+eval_every: 500

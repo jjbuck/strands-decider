@@ -1,0 +1,76 @@
+# End-to-end wheel install smoke test.
+#
+# `pip install -e ".[dev]"` in tests.yml passes even when
+# [tool.setuptools.packages.find] misses a package, because the editable install
+# still resolves imports from the source tree. This job reproduces a real user's
+# install: build the sdist and wheel with `python -m build`, install the wheel
+# in a venv OUTSIDE the repo tree (so pip cannot fall back to source), then
+# import strands_decider and run the CLI entry point.
+name: package-build
+
+on:
+  push:
+    branches: [main, staging]
+  pull_request:
+    branches: [main, staging]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+permissions:
+  contents: read
+
+jobs:
+  wheel-install:
+    name: Wheel install
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97  # v7.0.0
+        with:
+          python-version: "3.12"
+      - run: python -m pip install --no-cache-dir build
+
+      - name: Build sdist + wheel
+        run: python -m build
+
+      - name: Install the wheel in a clean venv outside the repo
+        # The venv MUST live outside the repo — otherwise pip could resolve
+        # `strands_decider` from the source tree and mask a broken wheel.
+        run: |
+          set -euo pipefail
+          WORK=$(mktemp -d)
+          echo "WORK=$WORK" >> "$GITHUB_ENV"
+
+          WHEEL=$(find "$GITHUB_WORKSPACE/dist" -maxdepth 1 -name '*.whl' -print -quit)
+          if [ -z "$WHEEL" ]; then
+            echo "::error::no wheel produced under dist/"
+            exit 1
+          fi
+          echo "Wheel: $WHEEL"
+
+          # Install the CPU torch wheel first — the default Linux wheel also drags in several GB of CUDA libraries.
+          python -m venv "$WORK/venv"
+          "$WORK/venv/bin/pip" install --upgrade pip
+          "$WORK/venv/bin/pip" install torch --index-url https://download.pytorch.org/whl/cpu
+          "$WORK/venv/bin/pip" install "$WHEEL"
+
+      - name: Import and run the CLI from outside the source tree
+        run: |
+          set -euo pipefail
+          cd "$WORK"
+          "$WORK/venv/bin/python" -c "import strands_decider; print('strands_decider OK')"
+          "$WORK/venv/bin/strands-decider" --help > /dev/null
+
+      - name: Upload build artifacts
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a  # v7.0.1
+        with:
+          name: dist
+          path: dist/*
+          if-no-files-found: error
+          retention-days: 7

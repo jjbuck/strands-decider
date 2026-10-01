@@ -1,0 +1,176 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="viz" width="980" height="556" viewBox="0 0 980 556" role="img">
+<style>
+.viz { --surface:#fcfcfb; --ink:#0b0b0b; --ink2:#52514e; --muted:#898781; --grid:#e1e0d9;
+  --axis:#c3c2b7; --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a;
+  --h0:#cde2fb; --h1:#9ec5f4; --h2:#6da7ec; --h3:#3987e5; --h4:#256abf; --h5:#184f95; --h6:#0d366b; }
+@media (prefers-color-scheme: dark) {
+  .viz { --surface:#1a1a19; --ink:#ffffff; --ink2:#c3c2b7; --grid:#2c2c2a; --axis:#383835;
+    --s1:#3987e5; --s2:#d95926; --s3:#199e70;
+    --h0:#0d366b; --h1:#104281; --h2:#184f95; --h3:#1c5cab; --h4:#256abf; --h5:#3987e5; --h6:#6da7ec; } }
+.viz text { font-family:system-ui, -apple-system, "Segoe UI", sans-serif; fill:var(--ink2); font-size:11px; }
+.viz .title { fill:var(--ink); font-size:15px; font-weight:600; }
+.viz .subtitle { fill:var(--ink2); font-size:12px; }
+.viz .panel { fill:var(--ink); font-size:12px; font-weight:600; }
+.viz .muted { fill:var(--muted); }
+.viz .value { fill:var(--ink); font-weight:600; }
+.viz .tick { font-variant-numeric:tabular-nums; fill:var(--muted); }
+.viz .grid { stroke:var(--grid); stroke-width:1; }
+.viz .axis { stroke:var(--axis); stroke-width:1; }
+.viz .ref { stroke:var(--muted); stroke-width:1; }
+.viz .line1 { stroke:var(--s1); stroke-width:2; fill:none; stroke-linejoin:round; stroke-linecap:round; }
+.viz .line0, .viz .line2, .viz .line3 { stroke-width:1.5; fill:none; stroke-linejoin:round; stroke-linecap:round; }
+.viz .line0 { stroke:var(--ink2); }
+.viz .line2 { stroke:var(--s2); }
+.viz .line3 { stroke:var(--s3); }
+.viz .strip { fill:transparent; }
+.viz .strip:hover { fill:var(--grid); fill-opacity:0.5; }
+.viz .dot1 { fill:var(--s1); stroke:var(--surface); stroke-width:2; }
+.viz .dot2 { fill:var(--s2); stroke:var(--surface); stroke-width:2; }
+.viz .dot3 { fill:var(--s3); stroke:var(--surface); stroke-width:2; }
+.viz .dot1s { fill:var(--s1); fill-opacity:0.55; }
+.viz .arrow { fill:var(--s1); }
+.viz .hit { fill:transparent; }
+</style>
+<rect width="980" height="556" fill="var(--surface)"/>
+<text class="title" x="24" y="30">Accuracy against calibration, generation by generation</text>
+<text class="subtitle" x="24" y="50">JevBench public set. The line follows the default recipe v5 -&gt; v6 -&gt; v7 -&gt; v13 -&gt; v14 -&gt; v16 -&gt; v17 -&gt; v18 -&gt; v19.</text>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="arrow" d="M0,1 L10,5 L0,9 z"/></marker></defs>
+<line class="line1" x1="24" x2="42" y1="74" y2="74"/><circle class="dot1" cx="33" cy="74" r="4"/><text x="48" y="78">adopted as the default recipe</text>
+<circle class="dot2" cx="259.64" cy="74" r="4"/><text x="272.64" y="78">experiment, not adopted</text>
+<rect class="dot3" x="442.3" y="69" width="10" height="10" rx="2"/><text x="458.3" y="78">other systems, same 231 tasks</text>
+<line class="grid" x1="88.0" x2="478.0" y1="464.0" y2="464.0"/>
+<text class="tick" x="82.0" y="467.5" text-anchor="end">0.2</text>
+<line class="grid" x1="88.0" x2="478.0" y1="350.7" y2="350.7"/>
+<text class="tick" x="82.0" y="354.2" text-anchor="end">0.3</text>
+<line class="grid" x1="88.0" x2="478.0" y1="237.3" y2="237.3"/>
+<text class="tick" x="82.0" y="240.8" text-anchor="end">0.4</text>
+<line class="grid" x1="88.0" x2="478.0" y1="124.0" y2="124.0"/>
+<text class="tick" x="82.0" y="127.5" text-anchor="end">0.5</text>
+<line class="grid" x1="88.0" x2="88.0" y1="124" y2="464"/>
+<text class="tick" x="88.0" y="480" text-anchor="middle">0.60</text>
+<line class="grid" x1="166.0" x2="166.0" y1="124" y2="464"/>
+<text class="tick" x="166.0" y="480" text-anchor="middle">0.65</text>
+<line class="grid" x1="244.0" x2="244.0" y1="124" y2="464"/>
+<text class="tick" x="244.0" y="480" text-anchor="middle">0.70</text>
+<line class="grid" x1="322.0" x2="322.0" y1="124" y2="464"/>
+<text class="tick" x="322.0" y="480" text-anchor="middle">0.75</text>
+<line class="grid" x1="400.0" x2="400.0" y1="124" y2="464"/>
+<text class="tick" x="400.0" y="480" text-anchor="middle">0.80</text>
+<line class="grid" x1="478.0" x2="478.0" y1="124" y2="464"/>
+<text class="tick" x="478.0" y="480" text-anchor="middle">0.85</text>
+<line class="axis" x1="88.0" x2="478.0" y1="464" y2="464"/>
+<text class="panel" x="48.0" y="110">Brier score (lower is better)</text>
+<text class="muted" x="478.0" y="498" text-anchor="end">JevBench accuracy &#8594;</text>
+<text class="muted" x="474.0" y="456" text-anchor="end">better: right and down</text>
+<line class="line1" x1="144.8" y1="166.7" x2="165.1" y2="166.7" marker-end="url(#arr)"/>
+<line class="line1" x1="165.1" y1="166.7" x2="192.1" y2="189.5" marker-end="url(#arr)"/>
+<line class="line1" x1="192.1" y1="189.5" x2="212.3" y2="164.2" marker-end="url(#arr)"/>
+<line class="line1" x1="212.3" y1="164.2" x2="239.3" y2="193.9" marker-end="url(#arr)"/>
+<line class="line1" x1="239.3" y1="193.9" x2="252.7" y2="241.8" marker-end="url(#arr)"/>
+<line class="line1" x1="252.7" y1="241.8" x2="259.6" y2="245.9" marker-end="url(#arr)"/>
+<line class="line1" x1="259.6" y1="245.9" x2="259.6" y2="250.7" marker-end="url(#arr)"/>
+<line class="line1" x1="259.6" y1="250.7" x2="279.7" y2="303.0" marker-end="url(#arr)"/>
+<g><title>v8: accuracy 0.658 (152/231), brier 0.455 - instruction-tuned torso</title><circle class="hit" cx="178.5" cy="174.5" r="11"/><circle class="dot2" cx="178.5" cy="174.5" r="5"/></g>
+<g><title>v9: accuracy 0.658 (152/231), brier 0.448 - +20k generated rule-execution documents</title><circle class="hit" cx="178.5" cy="182.8" r="11"/><circle class="dot2" cx="178.5" cy="182.8" r="5"/></g>
+<g><title>v10: accuracy 0.628 (145/231), brier 0.470 - +20k generated minimal pairs</title><circle class="hit" cx="131.2" cy="158.5" r="11"/><circle class="dot2" cx="131.2" cy="158.5" r="5"/></g>
+<g><title>v11a: accuracy 0.619 (143/231), brier 0.465 - question transforms replace 30% of the corpus</title><circle class="hit" cx="117.6" cy="163.2" r="11"/><circle class="dot2" cx="117.6" cy="163.2" r="5"/></g>
+<g><title>v11b: accuracy 0.623 (144/231), brier 0.471 - KL toward the frozen torso on changed questions</title><circle class="hit" cx="124.5" cy="156.5" r="11"/><circle class="dot2" cx="124.5" cy="156.5" r="5"/></g>
+<g><title>v12: accuracy 0.632 (146/231), brier 0.454 - distilled from a frozen Qwen3.5-4B</title><circle class="hit" cx="137.9" cy="175.9" r="11"/><circle class="dot2" cx="137.9" cy="175.9" r="5"/></g>
+<g><title>v15: accuracy 0.693 (160/231), brier 0.398 - +4,566 ShARC / ConditionalQA rows</title><circle class="hit" cx="232.5" cy="239.6" r="11"/><circle class="dot2" cx="232.5" cy="239.6" r="5"/></g>
+<g><title>decider-2b v10: accuracy 0.701 (162/231), brier 0.441 - Mapika decider-2b v10, same Qwen3.5-2B-Base torso</title><circle class="hit" cx="246.0" cy="191.4" r="11"/><rect class="dot3" x="241.0" y="186.4" width="10" height="10" rx="2"/></g>
+<text x="254.0" y="183.4" text-anchor="start">decider-2b v10</text>
+<g><title>decider-2b v11: accuracy 0.758 (175/231), brier 0.322 - Mapika decider-2b v11: v10 + document-question stage</title><circle class="hit" cx="333.9" cy="326.2" r="11"/><rect class="dot3" x="328.9" y="321.2" width="10" height="10" rx="2"/></g>
+<text x="341.9" y="318.2" text-anchor="start">decider-2b v11</text>
+<g><title>Qwen3.5-4B, frozen: accuracy 0.805 (186/231), brier 0.252 - frozen model read through the chat template (SemIf)</title><circle class="hit" cx="408.1" cy="404.6" r="11"/><rect class="dot3" x="403.1" y="399.6" width="10" height="10" rx="2"/></g>
+<text x="400.1" y="395.6" text-anchor="end">Qwen3.5-4B, frozen</text>
+<g><title>Qwen3.5-2B, frozen: accuracy 0.658 (152/231), brier 0.481 - frozen model read through the chat template (SemIf)</title><circle class="hit" cx="178.5" cy="145.6" r="11"/><rect class="dot3" x="173.5" y="140.6" width="10" height="10" rx="2"/></g>
+<text x="186.5" y="137.6" text-anchor="start">Qwen3.5-2B, frozen</text>
+<g><title>v5: accuracy 0.636 (147/231), brier 0.462 - RuleTaker compositional rows; 3,072-token window</title><circle class="hit" cx="144.8" cy="166.7" r="11"/><circle class="dot1" cx="144.8" cy="166.7" r="5"/></g>
+<line class="ref" x1="144.8" y1="160.7" x2="134.8" y2="139.7"/>
+<text x="134.8" y="136.7" text-anchor="end">v5</text>
+<g><title>v6: accuracy 0.649 (150/231), brier 0.462 - slot head seeded from the LM&#x27;s digit rows + KL anchor to the frozen torso</title><circle class="hit" cx="165.1" cy="166.7" r="11"/><circle class="dot1" cx="165.1" cy="166.7" r="5"/></g>
+<line class="ref" x1="165.1" y1="160.7" x2="163.1" y2="129.7"/>
+<text x="163.1" y="126.7" text-anchor="end">v6</text>
+<g><title>v7: accuracy 0.667 (154/231), brier 0.442 - pointer readout</title><circle class="hit" cx="192.1" cy="189.5" r="11"/><circle class="dot1" cx="192.1" cy="189.5" r="5"/></g>
+<text x="184.1" y="205.5" text-anchor="end">v7</text>
+<g><title>v13: accuracy 0.680 (157/231), brier 0.465 - Qwen3.5-2B-Base torso</title><circle class="hit" cx="212.3" cy="164.2" r="11"/><circle class="dot1" cx="212.3" cy="164.2" r="5"/></g>
+<text x="218.3" y="156.2" text-anchor="start">v13</text>
+<g><title>v14: accuracy 0.697 (161/231), brier 0.438 - +12,909 multi-step rows with a 4B teacher</title><circle class="hit" cx="239.3" cy="193.9" r="11"/><circle class="dot1" cx="239.3" cy="193.9" r="5"/></g>
+<text x="231.3" y="209.9" text-anchor="end">v14</text>
+<g><title>v16: accuracy 0.706 (163/231), brier 0.396 - +2,148 generated document questions</title><circle class="hit" cx="252.7" cy="241.8" r="11"/><circle class="dot1" cx="252.7" cy="241.8" r="5"/></g>
+<text x="250.7" y="261.8" text-anchor="end">v16</text>
+<g><title>v17: accuracy 0.710 (164/231), brier 0.392 - v16 with its multi-step rows replayed toward v14&#x27;s own answers</title><circle class="hit" cx="259.6" cy="245.9" r="11"/><circle class="dot1" cx="259.6" cy="245.9" r="5"/></g>
+<text x="267.6" y="239.9" text-anchor="start">v17</text>
+<g><title>v18: accuracy 0.710 (164/231), brier 0.388 - v17 + 1,667 generated questions on the weak skills</title><circle class="hit" cx="259.6" cy="250.7" r="11"/><circle class="dot1" cx="259.6" cy="250.7" r="5"/></g>
+<text x="267.6" y="268.7" text-anchor="start">v18</text>
+<g><title>v19: accuracy 0.723 (167/231), brier 0.342 - v18 + 6,166 answer-adequacy rows (HelpSteer2 and generated)</title><circle class="hit" cx="279.7" cy="303.0" r="11"/><circle class="dot1" cx="279.7" cy="303.0" r="5"/></g>
+<text x="287.7" y="295.0" text-anchor="start">v19</text>
+<line class="grid" x1="566.0" x2="956.0" y1="464.0" y2="464.0"/>
+<text class="tick" x="560.0" y="467.5" text-anchor="end">0.00</text>
+<line class="grid" x1="566.0" x2="956.0" y1="379.0" y2="379.0"/>
+<text class="tick" x="560.0" y="382.5" text-anchor="end">0.05</text>
+<line class="grid" x1="566.0" x2="956.0" y1="294.0" y2="294.0"/>
+<text class="tick" x="560.0" y="297.5" text-anchor="end">0.10</text>
+<line class="grid" x1="566.0" x2="956.0" y1="209.0" y2="209.0"/>
+<text class="tick" x="560.0" y="212.5" text-anchor="end">0.15</text>
+<line class="grid" x1="566.0" x2="956.0" y1="124.0" y2="124.0"/>
+<text class="tick" x="560.0" y="127.5" text-anchor="end">0.20</text>
+<line class="grid" x1="566.0" x2="566.0" y1="124" y2="464"/>
+<text class="tick" x="566.0" y="480" text-anchor="middle">0.60</text>
+<line class="grid" x1="644.0" x2="644.0" y1="124" y2="464"/>
+<text class="tick" x="644.0" y="480" text-anchor="middle">0.65</text>
+<line class="grid" x1="722.0" x2="722.0" y1="124" y2="464"/>
+<text class="tick" x="722.0" y="480" text-anchor="middle">0.70</text>
+<line class="grid" x1="800.0" x2="800.0" y1="124" y2="464"/>
+<text class="tick" x="800.0" y="480" text-anchor="middle">0.75</text>
+<line class="grid" x1="878.0" x2="878.0" y1="124" y2="464"/>
+<text class="tick" x="878.0" y="480" text-anchor="middle">0.80</text>
+<line class="grid" x1="956.0" x2="956.0" y1="124" y2="464"/>
+<text class="tick" x="956.0" y="480" text-anchor="middle">0.85</text>
+<line class="axis" x1="566.0" x2="956.0" y1="464" y2="464"/>
+<text class="panel" x="526.0" y="110">ECE (lower is better)</text>
+<text class="muted" x="956.0" y="498" text-anchor="end">JevBench accuracy &#8594;</text>
+<text class="muted" x="952.0" y="456" text-anchor="end">better: right and down</text>
+<line class="line1" x1="622.8" y1="306.9" x2="643.1" y2="311.7" marker-end="url(#arr)"/>
+<line class="line1" x1="643.1" y1="311.7" x2="670.1" y2="348.7" marker-end="url(#arr)"/>
+<line class="line1" x1="670.1" y1="348.7" x2="690.3" y2="319.0" marker-end="url(#arr)"/>
+<line class="line1" x1="690.3" y1="319.0" x2="717.3" y2="318.6" marker-end="url(#arr)"/>
+<line class="line1" x1="717.3" y1="318.6" x2="730.7" y2="346.0" marker-end="url(#arr)"/>
+<line class="line1" x1="730.7" y1="346.0" x2="737.6" y2="323.2" marker-end="url(#arr)"/>
+<line class="line1" x1="737.6" y1="323.2" x2="737.6" y2="329.9" marker-end="url(#arr)"/>
+<line class="line1" x1="737.6" y1="329.9" x2="757.7" y2="375.3" marker-end="url(#arr)"/>
+<g><title>v8: accuracy 0.658 (152/231), ece 0.053 - instruction-tuned torso</title><circle class="hit" cx="656.5" cy="373.7" r="11"/><circle class="dot2" cx="656.5" cy="373.7" r="5"/></g>
+<g><title>v9: accuracy 0.658 (152/231), ece 0.058 - +20k generated rule-execution documents</title><circle class="hit" cx="656.5" cy="365.4" r="11"/><circle class="dot2" cx="656.5" cy="365.4" r="5"/></g>
+<g><title>v10: accuracy 0.628 (145/231), ece 0.060 - +20k generated minimal pairs</title><circle class="hit" cx="609.2" cy="361.1" r="11"/><circle class="dot2" cx="609.2" cy="361.1" r="5"/></g>
+<g><title>v11a: accuracy 0.619 (143/231), ece 0.082 - question transforms replace 30% of the corpus</title><circle class="hit" cx="595.6" cy="324.3" r="11"/><circle class="dot2" cx="595.6" cy="324.3" r="5"/></g>
+<g><title>v11b: accuracy 0.623 (144/231), ece 0.095 - KL toward the frozen torso on changed questions</title><circle class="hit" cx="602.5" cy="302.0" r="11"/><circle class="dot2" cx="602.5" cy="302.0" r="5"/></g>
+<g><title>v12: accuracy 0.632 (146/231), ece 0.093 - distilled from a frozen Qwen3.5-4B</title><circle class="hit" cx="615.9" cy="305.2" r="11"/><circle class="dot2" cx="615.9" cy="305.2" r="5"/></g>
+<g><title>v15: accuracy 0.693 (160/231), ece 0.063 - +4,566 ShARC / ConditionalQA rows</title><circle class="hit" cx="710.5" cy="356.4" r="11"/><circle class="dot2" cx="710.5" cy="356.4" r="5"/></g>
+<g><title>decider-2b v10: accuracy 0.701 (162/231), ece 0.144 - Mapika decider-2b v10, same Qwen3.5-2B-Base torso</title><circle class="hit" cx="724.0" cy="218.4" r="11"/><rect class="dot3" x="719.0" y="213.4" width="10" height="10" rx="2"/></g>
+<text x="732.0" y="210.4" text-anchor="start">decider-2b v10</text>
+<g><title>decider-2b v11: accuracy 0.758 (175/231), ece 0.070 - Mapika decider-2b v11: v10 + document-question stage</title><circle class="hit" cx="811.9" cy="344.7" r="11"/><rect class="dot3" x="806.9" y="339.7" width="10" height="10" rx="2"/></g>
+<text x="819.9" y="336.7" text-anchor="start">decider-2b v11</text>
+<g><title>Qwen3.5-4B, frozen: accuracy 0.805 (186/231), ece 0.056 - frozen model read through the chat template (SemIf)</title><circle class="hit" cx="886.1" cy="369.3" r="11"/><rect class="dot3" x="881.1" y="364.3" width="10" height="10" rx="2"/></g>
+<text x="878.1" y="360.3" text-anchor="end">Qwen3.5-4B, frozen</text>
+<g><title>Qwen3.5-2B, frozen: accuracy 0.658 (152/231), ece 0.150 - frozen model read through the chat template (SemIf)</title><circle class="hit" cx="656.5" cy="208.8" r="11"/><rect class="dot3" x="651.5" y="203.8" width="10" height="10" rx="2"/></g>
+<text x="648.5" y="200.8" text-anchor="end">Qwen3.5-2B, frozen</text>
+<g><title>v5: accuracy 0.636 (147/231), ece 0.092 - RuleTaker compositional rows; 3,072-token window</title><circle class="hit" cx="622.8" cy="306.9" r="11"/><circle class="dot1" cx="622.8" cy="306.9" r="5"/></g>
+<text x="624.8" y="294.9" text-anchor="start">v5</text>
+<g><title>v6: accuracy 0.649 (150/231), ece 0.090 - slot head seeded from the LM&#x27;s digit rows + KL anchor to the frozen torso</title><circle class="hit" cx="643.1" cy="311.7" r="11"/><circle class="dot1" cx="643.1" cy="311.7" r="5"/></g>
+<text x="645.1" y="299.7" text-anchor="start">v6</text>
+<g><title>v7: accuracy 0.667 (154/231), ece 0.068 - pointer readout</title><circle class="hit" cx="670.1" cy="348.7" r="11"/><circle class="dot1" cx="670.1" cy="348.7" r="5"/></g>
+<text x="678.1" y="362.7" text-anchor="start">v7</text>
+<g><title>v13: accuracy 0.680 (157/231), ece 0.085 - Qwen3.5-2B-Base torso</title><circle class="hit" cx="690.3" cy="319.0" r="11"/><circle class="dot1" cx="690.3" cy="319.0" r="5"/></g>
+<text x="682.3" y="310.0" text-anchor="end">v13</text>
+<g><title>v14: accuracy 0.697 (161/231), ece 0.086 - +12,909 multi-step rows with a 4B teacher</title><circle class="hit" cx="717.3" cy="318.6" r="11"/><circle class="dot1" cx="717.3" cy="318.6" r="5"/></g>
+<text x="709.3" y="309.6" text-anchor="end">v14</text>
+<g><title>v16: accuracy 0.706 (163/231), ece 0.069 - +2,148 generated document questions</title><circle class="hit" cx="730.7" cy="346.0" r="11"/><circle class="dot1" cx="730.7" cy="346.0" r="5"/></g>
+<text x="730.7" y="362.0" text-anchor="middle">v16</text>
+<g><title>v17: accuracy 0.710 (164/231), ece 0.083 - v16 with its multi-step rows replayed toward v14&#x27;s own answers</title><circle class="hit" cx="737.6" cy="323.2" r="11"/><circle class="dot1" cx="737.6" cy="323.2" r="5"/></g>
+<text x="745.6" y="317.2" text-anchor="start">v17</text>
+<g><title>v18: accuracy 0.710 (164/231), ece 0.079 - v17 + 1,667 generated questions on the weak skills</title><circle class="hit" cx="737.6" cy="329.9" r="11"/><circle class="dot1" cx="737.6" cy="329.9" r="5"/></g>
+<text x="745.6" y="335.9" text-anchor="start">v18</text>
+<g><title>v19: accuracy 0.723 (167/231), ece 0.052 - v18 + 6,166 answer-adequacy rows (HelpSteer2 and generated)</title><circle class="hit" cx="757.7" cy="375.3" r="11"/><circle class="dot1" cx="757.7" cy="375.3" r="5"/></g>
+<text x="757.7" y="391.3" text-anchor="middle">v19</text>
+<text class="muted" x="24" y="542">Off the chart, frozen and badly calibrated: Qwen3-8B, frozen accuracy 0.684, Brier 0.613, ECE 0.305; Qwen3-1.7B, frozen accuracy 0.558, Brier 0.842, ECE 0.412.</text>
+</svg>

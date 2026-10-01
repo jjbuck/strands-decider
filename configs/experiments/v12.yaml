@@ -1,0 +1,46 @@
+# v12: v7's recipe with the KL reference replaced by a frozen Qwen3.5-4B teacher (read
+# SemIf's way; 0.805 on JevBench). Pre-registered in research/preregistrations/PREREGISTRATION-v12.md.
+# Labels: python -m strands_decider.data.teacher --model Qwen/Qwen3.5-4B \
+#   --revision 851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a \
+#   --src data/train_v5.jsonl --out data/teacher_v5_qwen35-4b.jsonl
+# The committed data/synthetic/teacher_v5_qwen35-4b.jsonl lacks the 21,000 score rows
+# (removed pending a rights check); this recipe needs the full file, so run the command above.
+
+train_files: ["data/train_v5.jsonl"]
+val_fraction: 0.03
+
+base_model: "Qwen/Qwen3-1.7B-Base"
+num_slots: 24           # must match `data build --max-options`; also the KL reference width
+head_type: "pointer"    # scores each option from its own hidden state; see modeling.PointerHead
+pointer_dim: 256
+head_init: "random"     # "lm_head" seeding applies to the slot head only
+kl_frozen_weight: 0.0   # replaced by the teacher
+teacher_file: "data/teacher_v5_qwen35-4b.jsonl"
+teacher_weight: 1.0     # KL(teacher || student), equal to the label loss
+head_dropout: 0.05
+max_length: 3072
+
+use_lora: true
+lora_r: 16
+lora_alpha: 32
+freeze_torso: false     # true = head-only training (much weaker, but very cheap)
+
+epochs: 1
+micro_batch_size: 8
+grad_accum: 4           # effective batch 32
+lr: 0.0001              # LoRA
+head_lr: 0.001          # randomly-initialised head needs a bigger step
+weight_decay: 0.01
+warmup_ratio: 0.03
+max_grad_norm: 1.0
+gradient_checkpointing: true
+
+shuffle_options: true   # the whole point -- do not turn this off
+group_by_length: false  # off: v7 trained without it, so v12 changes one thing
+ordinal_smoothing: 0.1
+reverse_score_prob: 0.5
+
+output_dir: "checkpoints/hobson-1.7b-v12"
+seed: 0
+log_every: 20
+eval_every: 500

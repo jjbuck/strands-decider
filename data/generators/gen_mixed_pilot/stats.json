@@ -1,0 +1,181 @@
+{
+ "documents": 100,
+ "questions": 338,
+ "kept": 276,
+ "by_skill": {
+  "nested_exception": [
+   29,
+   24
+  ],
+  "borderline_rubric": [
+   19,
+   17
+  ],
+  "definition_scope": [
+   19,
+   14
+  ],
+  "missing_fact": [
+   25,
+   18
+  ],
+  "tie_break": [
+   13,
+   12
+  ],
+  "version_in_force": [
+   31,
+   30
+  ],
+  "withdrawn_instruction": [
+   21,
+   16
+  ],
+  "cross_artefact": [
+   23,
+   17
+  ],
+  "running_total": [
+   20,
+   11
+  ],
+  "precedence": [
+   20,
+   20
+  ],
+  "exception": [
+   26,
+   21
+  ],
+  "dates": [
+   17,
+   14
+  ],
+  "judge_action": [
+   19,
+   16
+  ],
+  "lookup_chain": [
+   28,
+   23
+  ],
+  "all_conditions": [
+   28,
+   23
+  ]
+ },
+ "dropped_at_write": {
+  "option count or duplicate names": 4,
+  "fewer than two evidence sections": 6,
+  "letter-only or cross-referencing option name": 1,
+  "missing question": 1
+ },
+ "doc_words": [
+  739,
+  768,
+  770,
+  775,
+  793,
+  797,
+  842,
+  844,
+  866,
+  874,
+  887,
+  889,
+  890,
+  893,
+  898,
+  898,
+  907,
+  919,
+  920,
+  927,
+  930,
+  932,
+  936,
+  942,
+  956,
+  957,
+  958,
+  958,
+  959,
+  968,
+  969,
+  972,
+  983,
+  984,
+  993,
+  993,
+  1002,
+  1006,
+  1009,
+  1010,
+  1011,
+  1015,
+  1018,
+  1021,
+  1025,
+  1026,
+  1038,
+  1042,
+  1048,
+  1051,
+  1054,
+  1055,
+  1060,
+  1060,
+  1060,
+  1066,
+  1069,
+  1069,
+  1075,
+  1078,
+  1083,
+  1083,
+  1086,
+  1088,
+  1088,
+  1090,
+  1092,
+  1097,
+  1097,
+  1099,
+  1103,
+  1103,
+  1110,
+  1131,
+  1140,
+  1147,
+  1149,
+  1150,
+  1153,
+  1156,
+  1172,
+  1172,
+  1203,
+  1213,
+  1218,
+  1224,
+  1225,
+  1227,
+  1242,
+  1247,
+  1252,
+  1258,
+  1276,
+  1276,
+  1277,
+  1287,
+  1341,
+  1348,
+  1373,
+  1407
+ ],
+ "noul": {
+  "kept yes (target met)": 36,
+  "kept no (target met)": 40,
+  "dropped yes (target met)": 13,
+  "dropped no (target met)": 2
+ }
+}

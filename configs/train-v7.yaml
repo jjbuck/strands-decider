@@ -1,0 +1,60 @@
+# The v7 recipe -- the leader until v13, and the one that trains on Windows (v13's
+# Qwen3.5 torso needs WSL2; see configs/train.yaml).
+#
+#   Qwen3-1.7B-Base torso, rank-16 LoRA, pointer readout (dim 256), KL anchor to the
+#   frozen torso's own option readout (weight 0.3), 3072-token window, one epoch over
+#   the v5 corpus. JevBench public: 0.667, 33rd of 53, 4th of 20 at <=2B parameters.
+#
+# Build the corpus and run the whole pipeline with training/recipe_v7.sh. The corpus build is
+# deterministic: a fresh build gives the same files on a Mac and on AWS. Whether they are
+# byte-identical to the files v7 trained on is not verified (training/steps.md).
+#
+# One deliberate difference from how v7 itself was trained: group_by_length is on.
+# It changes which examples share a micro-batch, not which examples are seen. On this
+# corpus it cuts token padding from 42% to 18%, 1.4x fewer padded tokens per epoch
+# (wall clock not measured). v7 was trained without it, so for an exact reproduction
+# set it to false. See data/sampling.py.
+#
+# Measured peak: ~6 GiB of 24. max_length 3072 costs almost nothing in training: the
+# collator pads to the longest sequence in each batch, and this corpus is short (median
+# 204 tokens, p99 634, longest 1811). It matters at inference, where JevBench
+# long_policy states run to ~3700 tokens.
+
+train_files: ["data/train_v5.jsonl"]
+val_fraction: 0.03
+
+base_model: "Qwen/Qwen3-1.7B-Base"
+num_slots: 24           # must match `data build --max-options`; also the KL reference width
+head_type: "pointer"    # scores each option from its own hidden state; see modeling.PointerHead
+pointer_dim: 256
+head_init: "random"     # "lm_head" seeding applies to the slot head only
+kl_frozen_weight: 0.3   # KL(frozen || student) over the option-number readout
+head_dropout: 0.05
+max_length: 3072
+
+use_lora: true
+lora_r: 16
+lora_alpha: 32
+freeze_torso: false     # true = head-only training (much weaker, but very cheap)
+
+epochs: 1
+micro_batch_size: 8
+grad_accum: 4           # effective batch 32
+lr: 0.0001              # LoRA
+head_lr: 0.001          # randomly-initialised head needs a bigger step
+weight_decay: 0.01
+warmup_ratio: 0.03
+max_grad_norm: 1.0
+gradient_checkpointing: true
+
+shuffle_options: true   # the whole point -- do not turn this off
+group_by_length: true   # similar lengths share a batch; false reproduces v7 exactly
+ordinal_smoothing: 0.1
+reverse_score_prob: 0.5
+
+# Deliberately not "hobson-1.7b-v7": rerunning the recipe must not overwrite the
+# shipped checkpoint it is meant to reproduce.
+output_dir: "checkpoints/hobson-1.7b-recipe"
+seed: 0
+log_every: 20
+eval_every: 500

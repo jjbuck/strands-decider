@@ -1,0 +1,51 @@
+# Informational vulnerability audit of the installed dependency closure.
+#
+# The audit does not block a PR (continue-on-error). PR-introduced advisories
+# are blocked separately by the dependency-review job in dependency-review.yml.
+# Pre-existing advisories in the closure are driven down over time; the report
+# below lets a reviewer see them without failing every unrelated PR.
+name: security-audit
+
+on:
+  push:
+    branches: [main, staging]
+  pull_request:
+    branches: [main, staging]
+  schedule:
+    - cron: '0 9 * * 1'  # Every Monday at 09:00 UTC — catches new advisories against unchanged code.
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+permissions:
+  contents: read
+
+jobs:
+  pip-audit:
+    name: pip-audit
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97  # v7.0.0
+        with:
+          python-version: "3.12"
+
+      - run: python -m pip install --no-cache-dir pip-audit
+
+      - name: Audit the installed dependency closure (informational)
+        continue-on-error: true
+        run: |
+          set -euo pipefail
+          # Resolve the full dependency closure into a temporary venv, then audit.
+          # Auditing project metadata alone skips transitives; this mirrors a real install.
+          python -m venv /tmp/audit-env
+          /tmp/audit-env/bin/pip install --upgrade pip
+          # CPU torch, otherwise pip pulls in several GB of CUDA libraries.
+          /tmp/audit-env/bin/pip install torch --index-url https://download.pytorch.org/whl/cpu
+          /tmp/audit-env/bin/pip install .
+          pip-audit --path /tmp/audit-env/lib/python*/site-packages

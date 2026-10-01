@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="viz" width="760" height="380" viewBox="0 0 760 380" role="img">
+<style>
+.viz { --surface:#fcfcfb; --ink:#0b0b0b; --ink2:#52514e; --muted:#898781; --grid:#e1e0d9;
+  --axis:#c3c2b7; --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a;
+  --h0:#cde2fb; --h1:#9ec5f4; --h2:#6da7ec; --h3:#3987e5; --h4:#256abf; --h5:#184f95; --h6:#0d366b; }
+@media (prefers-color-scheme: dark) {
+  .viz { --surface:#1a1a19; --ink:#ffffff; --ink2:#c3c2b7; --grid:#2c2c2a; --axis:#383835;
+    --s1:#3987e5; --s2:#d95926; --s3:#199e70;
+    --h0:#0d366b; --h1:#104281; --h2:#184f95; --h3:#1c5cab; --h4:#256abf; --h5:#3987e5; --h6:#6da7ec; } }
+.viz text { font-family:system-ui, -apple-system, "Segoe UI", sans-serif; fill:var(--ink2); font-size:11px; }
+.viz .title { fill:var(--ink); font-size:15px; font-weight:600; }
+.viz .subtitle { fill:var(--ink2); font-size:12px; }
+.viz .panel { fill:var(--ink); font-size:12px; font-weight:600; }
+.viz .muted { fill:var(--muted); }
+.viz .value { fill:var(--ink); font-weight:600; }
+.viz .tick { font-variant-numeric:tabular-nums; fill:var(--muted); }
+.viz .grid { stroke:var(--grid); stroke-width:1; }
+.viz .axis { stroke:var(--axis); stroke-width:1; }
+.viz .ref { stroke:var(--muted); stroke-width:1; }
+.viz .line1 { stroke:var(--s1); stroke-width:2; fill:none; stroke-linejoin:round; stroke-linecap:round; }
+.viz .line0, .viz .line2, .viz .line3 { stroke-width:1.5; fill:none; stroke-linejoin:round; stroke-linecap:round; }
+.viz .line0 { stroke:var(--ink2); }
+.viz .line2 { stroke:var(--s2); }
+.viz .line3 { stroke:var(--s3); }
+.viz .strip { fill:transparent; }
+.viz .strip:hover { fill:var(--grid); fill-opacity:0.5; }
+.viz .dot1 { fill:var(--s1); stroke:var(--surface); stroke-width:2; }
+.viz .dot2 { fill:var(--s2); stroke:var(--surface); stroke-width:2; }
+.viz .dot3 { fill:var(--s3); stroke:var(--surface); stroke-width:2; }
+.viz .dot1s { fill:var(--s1); fill-opacity:0.55; }
+.viz .arrow { fill:var(--s1); }
+.viz .hit { fill:transparent; }
+</style>
+<rect width="760" height="380" fill="var(--surface)"/>
+<text class="title" x="24" y="30">Held-out classification tasks by generation</text>
+<text class="subtitle" x="24" y="50">emotion, hate_severity, massive_intent, sarcasm: tasks no model trained on. v5 on these four tasks only; v6 and v8-v10 not measured.</text>
+<line class="line1" x1="24" x2="42" y1="74" y2="74"/><circle class="dot1" cx="33" cy="74" r="4"/><text x="48" y="78">adopted as the default recipe</text>
+<circle class="dot2" cx="259.64" cy="74" r="4"/><text x="272.64" y="78">experiment, not adopted</text>
+<line class="grid" x1="72" x2="736" y1="336.0" y2="336.0"/>
+<text class="tick" x="66" y="339.5" text-anchor="end">0.60</text>
+<line class="grid" x1="72" x2="736" y1="292.4" y2="292.4"/>
+<text class="tick" x="66" y="295.9" text-anchor="end">0.62</text>
+<line class="grid" x1="72" x2="736" y1="248.8" y2="248.8"/>
+<text class="tick" x="66" y="252.3" text-anchor="end">0.64</text>
+<line class="grid" x1="72" x2="736" y1="205.2" y2="205.2"/>
+<text class="tick" x="66" y="208.7" text-anchor="end">0.66</text>
+<line class="grid" x1="72" x2="736" y1="161.6" y2="161.6"/>
+<text class="tick" x="66" y="165.1" text-anchor="end">0.68</text>
+<line class="grid" x1="72" x2="736" y1="118.0" y2="118.0"/>
+<text class="tick" x="66" y="121.5" text-anchor="end">0.70</text>
+<line class="axis" x1="72" x2="736" y1="336" y2="336"/>
+<text x="99.7" y="352" text-anchor="middle">v5</text>
+<text x="155.0" y="352" text-anchor="middle">v7</text>
+<text x="210.3" y="352" text-anchor="middle">v11a</text>
+<text x="265.7" y="352" text-anchor="middle">v11b</text>
+<text x="321.0" y="352" text-anchor="middle">v12</text>
+<text x="376.3" y="352" text-anchor="middle">v13</text>
+<text x="431.7" y="352" text-anchor="middle">v14</text>
+<text x="487.0" y="352" text-anchor="middle">v15</text>
+<text x="542.3" y="352" text-anchor="middle">v16</text>
+<text x="597.7" y="352" text-anchor="middle">v17</text>
+<text x="653.0" y="352" text-anchor="middle">v18</text>
+<text x="708.3" y="352" text-anchor="middle">v19</text>
+<text class="muted" x="32" y="108">accuracy</text>
+<path class="line1" d="M99.7,292.4 L155.0,219.8 L376.3,235.7 L431.7,255.3 L542.3,272.8 L597.7,247.7 L653.0,246.2 L708.3,232.9"/>
+<g><title>v5: 0.620 on 3792 rows</title><circle class="hit" cx="99.7" cy="292.4" r="11"/><circle class="dot1" cx="99.7" cy="292.4" r="5"/></g>
+<g><title>v7: 0.653 on 6000 rows</title><circle class="hit" cx="155.0" cy="219.8" r="11"/><circle class="dot1" cx="155.0" cy="219.8" r="5"/></g>
+<g><title>v11a: 0.646 on 6000 rows</title><circle class="hit" cx="210.3" cy="235.7" r="11"/><circle class="dot2" cx="210.3" cy="235.7" r="5"/></g>
+<g><title>v11b: 0.649 on 6000 rows</title><circle class="hit" cx="265.7" cy="228.1" r="11"/><circle class="dot2" cx="265.7" cy="228.1" r="5"/></g>
+<g><title>v12: 0.674 on 6000 rows</title><circle class="hit" cx="321.0" cy="175.3" r="11"/><circle class="dot2" cx="321.0" cy="175.3" r="5"/></g>
+<g><title>v13: 0.646 on 6000 rows</title><circle class="hit" cx="376.3" cy="235.7" r="11"/><circle class="dot1" cx="376.3" cy="235.7" r="5"/></g>
+<g><title>v14: 0.637 on 6000 rows</title><circle class="hit" cx="431.7" cy="255.3" r="11"/><circle class="dot1" cx="431.7" cy="255.3" r="5"/></g>
+<g><title>v15: 0.633 on 6000 rows</title><circle class="hit" cx="487.0" cy="263.4" r="11"/><circle class="dot2" cx="487.0" cy="263.4" r="5"/></g>
+<g><title>v16: 0.629 on 6000 rows</title><circle class="hit" cx="542.3" cy="272.8" r="11"/><circle class="dot1" cx="542.3" cy="272.8" r="5"/></g>
+<g><title>v17: 0.640 on 6000 rows</title><circle class="hit" cx="597.7" cy="247.7" r="11"/><circle class="dot1" cx="597.7" cy="247.7" r="5"/></g>
+<g><title>v18: 0.641 on 6000 rows</title><circle class="hit" cx="653.0" cy="246.2" r="11"/><circle class="dot1" cx="653.0" cy="246.2" r="5"/></g>
+<g><title>v19: 0.647 on 6000 rows</title><circle class="hit" cx="708.3" cy="232.9" r="11"/><circle class="dot1" cx="708.3" cy="232.9" r="5"/></g>
+<text class="value" x="708.3" y="222.9" text-anchor="middle">0.647</text>
+</svg>

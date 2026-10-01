@@ -1,0 +1,144 @@
+# Publish strands-decider to PyPI, on manual dispatch only.
+#
+# Run from the Actions tab (`Run workflow`); supply the version being released.
+# setuptools-scm stamps the wheel with SETUPTOOLS_SCM_PRETEND_VERSION set from
+# the input, so no pyproject.toml edit is needed.
+#
+# Publishing uses PyPI Trusted Publishing (OIDC). NO API token is stored in the
+# repository. The `pypi` GitHub environment protects the publish step
+# (require a reviewer there). Configure the trusted publisher once on PyPI:
+#
+#   PyPI  →  Manage  →  Publishing  →  Add a new pending publisher
+#     Project name:     strands-decider
+#     Owner:            <the GitHub org or user hosting this repo>
+#     Repository:       <the repo name>
+#     Workflow name:    release-pypi.yml
+#     Environment:      pypi
+#
+# Then create a `pypi` environment in the repo settings and add required
+# reviewers. No secrets to manage.
+name: release-pypi
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version to release (must match pyproject.toml, e.g. 0.1.0)'
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Build sdist + wheel
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    outputs:
+      version: ${{ steps.version.outputs.version }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97  # v7.0.0
+        with:
+          python-version: "3.12"
+
+      - name: Validate the release version
+        # PEP 440 admits a lot of exotic forms; here we require plain
+        # <int>.<int>.<int> with optional .devN / .rcN / .aN / .bN suffixes,
+        # since that is what we plan to ship. setuptools-scm would also reject
+        # garbage input later, but this step gives a clearer error message.
+        id: version
+        env:
+          DISPATCH_VERSION: ${{ inputs.version }}
+        run: |
+          set -euo pipefail
+          if ! [[ "$DISPATCH_VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+(\.(dev|rc|a|b)[0-9]+)?$ ]]; then
+            echo "::error::version '$DISPATCH_VERSION' is not <int>.<int>.<int>[.(dev|rc|a|b)N]"
+            exit 1
+          fi
+          echo "version=$DISPATCH_VERSION" >> "$GITHUB_OUTPUT"
+          echo "Releasing version $DISPATCH_VERSION"
+
+      - run: python -m pip install --no-cache-dir build
+
+      - name: Build sdist + wheel
+        # setuptools-scm reads SETUPTOOLS_SCM_PRETEND_VERSION and stamps the
+        # wheel and sdist with it, so the dispatch input is the source of truth
+        # for the release version — no pyproject.toml edit required.
+        env:
+          SETUPTOOLS_SCM_PRETEND_VERSION: ${{ inputs.version }}
+        run: python -m build
+
+      - name: Confirm the wheel is labelled with the requested version
+        # Defence in depth: if setuptools-scm somehow produced a different
+        # version (a stray tag, a plugin quirk), fail here rather than upload
+        # a wheel that PyPI would silently accept under the wrong name.
+        env:
+          WANTED: ${{ inputs.version }}
+        run: |
+          set -euo pipefail
+          WHEEL=$(find "$GITHUB_WORKSPACE/dist" -maxdepth 1 -name '*.whl' -print -quit)
+          case "$(basename "$WHEEL")" in
+            strands_decider-"$WANTED"-*.whl) echo "wheel version OK: $WHEEL" ;;
+            *) echo "::error::wheel $WHEEL is not labelled $WANTED"; exit 1 ;;
+          esac
+
+      - name: Smoke test the wheel in a clean venv
+        # Mirrors package-build.yml: install the wheel outside the source tree
+        # so pip cannot fall back to `src/` and mask a broken package. Also
+        # confirms the installed distribution's reported version matches the
+        # requested one.
+        env:
+          WANTED: ${{ inputs.version }}
+        run: |
+          set -euo pipefail
+          WORK=$(mktemp -d)
+          WHEEL=$(find "$GITHUB_WORKSPACE/dist" -maxdepth 1 -name '*.whl' -print -quit)
+          python -m venv "$WORK/venv"
+          "$WORK/venv/bin/pip" install --upgrade pip
+          "$WORK/venv/bin/pip" install torch --index-url https://download.pytorch.org/whl/cpu
+          "$WORK/venv/bin/pip" install "$WHEEL"
+          cd "$WORK"
+          "$WORK/venv/bin/python" -c "import strands_decider; print('strands_decider OK')"
+          "$WORK/venv/bin/strands-decider" --help > /dev/null
+          INSTALLED=$("$WORK/venv/bin/python" -c "from importlib.metadata import version; print(version('strands-decider'))")
+          if [ "$INSTALLED" != "$WANTED" ]; then
+            echo "::error::installed version $INSTALLED does not match requested $WANTED"
+            exit 1
+          fi
+
+      - name: Upload dist artifacts
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a  # v7.0.1
+        with:
+          name: dist
+          path: dist/*
+          if-no-files-found: error
+          retention-days: 7
+
+  publish:
+    name: Publish to PyPI
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    environment:
+      name: pypi
+      url: https://pypi.org/project/strands-decider/${{ needs.build.outputs.version }}/
+    permissions:
+      id-token: write  # Required for PyPI Trusted Publishing (OIDC).
+    steps:
+      - name: Download dist artifacts
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c  # v8.0.1
+        with:
+          name: dist
+          path: dist
+
+      - name: Publish to PyPI
+        uses: pypa/gh-action-pypi-publish@ed0c53931b1dc9bd32cbe73a98c7f6766f8a527e  # v1.13.0
+        with:
+          packages-dir: dist
+          # attestations: true is the default — signs the artefacts with the
+          # workflow's OIDC identity so consumers can verify provenance.

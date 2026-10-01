@@ -1,0 +1,6 @@
+# Shell scripts run under bash in WSL2 and on Linux hosts: keep them LF on every checkout.
+*.sh text eol=lf
+# The exact synthetic training files: stored and checked out byte for byte, no line-ending conversion.
+data/synthetic/*.jsonl -text
+# The data manifest: recipe.sh matches its paths exactly, so keep LF on every checkout.
+data/SHA256SUMS text eol=lf

@@ -1,0 +1,34 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+
+# Training artefacts
+checkpoints/
+# Recursive: generated corpora also land in subdirectories (data/para/, ...)
+data/**/*.jsonl
+data/**/*.jsonl.gz
+# ...except the synthetic data the recipes train on, committed exactly (recipe.sh, data/synthetic/)
+!data/synthetic/*.jsonl
+# ...and the generator exports, committed as written (data/generators/)
+!data/generators/**/*.jsonl
+# ...but never a run's API error log (data/generators/README.md)
+data/generators/**/failures*.jsonl
+*.log
+report*.json
+reports/
+
+# Upstream dataset releases (ContractNLI, MuSiQue), downloaded, never committed
+data/raw/
+
+# OS state
+.DS_Store
+# Local environments, secrets and build output
+.venv/
+.env
+.env.*
+build/
+dist/
+# Runner output written inside the checkout (training/run_recipe.sh RUN_DIR default)
+/runs/
