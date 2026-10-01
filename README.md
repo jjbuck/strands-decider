@@ -16,6 +16,7 @@
     <a href="https://github.com/strands-labs/strands-decider/graphs/commit-activity"><img src="https://img.shields.io/github/commit-activity/m/strands-labs/strands-decider" alt="Commit Activity"></a>
     <a href="https://github.com/strands-labs/strands-decider/issues"><img src="https://img.shields.io/github/issues/strands-labs/strands-decider" alt="Open Issues"></a>
     <a href="https://github.com/strands-labs/strands-decider/pulls"><img src="https://img.shields.io/github/issues-pr/strands-labs/strands-decider" alt="Open PRs"></a>
+    <a href="https://discord.gg/Wa4CQrxsP"><img src="https://img.shields.io/badge/Discord-Join-5865F2?logo=discord&logoColor=white" alt="Discord"></a>
   </div>
 
 </div>
@@ -273,6 +274,10 @@ and the record says so. Most runs missed their bar, v20 among them: 169 of 231 a
 failed. [research/README.md](research/README.md) lists each run and its outcome, and
 [research/history.md](research/history.md) tells what moved the benchmark and what did
 not. To propose an experiment, open an issue with a preregistration ([CONTRIBUTING.md](CONTRIBUTING.md)).
+
+## Community
+
+To ask questions and talk about Strands Decider, join the [Strands Decider channel on Discord](https://discord.gg/Wa4CQrxsP).
 
 ## License
 
