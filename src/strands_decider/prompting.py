@@ -99,11 +99,11 @@ def render_question(
 
     if isinstance(question, NoulQuestion):
         crit = {**NOUL_DEFAULT_CRITERIA, **(question.criteria or {})}
-        pairs = [(lbl, crit[lbl]) for lbl in NOUL_SLOT_LABELS]
+        pairs = [(lbl, render_content(crit[lbl])) for lbl in NOUL_SLOT_LABELS]
         kind = "noul"
         header = "Decide whether the statement is true of the state."
     elif isinstance(question, ChoiceQuestion):
-        pairs = list(question.criteria.items())
+        pairs = [(name, render_content(desc)) for name, desc in question.criteria.items()]
         kind = "choice"
         header = "Select exactly one option."
     elif isinstance(question, ScoreQuestion):

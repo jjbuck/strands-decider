@@ -148,9 +148,23 @@ def test_choice_needs_two_options():
         ChoiceQuestion(instructions="x", criteria={"only": "one"})
 
 
-def test_request_rejects_empty_state():
-    with pytest.raises(ValueError):
-        SystemOneRequest(state="   ", questions={"q": NoulQuestion(instructions="x")})
+def test_request_accepts_empty_state_and_structured_criteria():
+    """A quiz item carries the whole task in its question; an option may be structured data."""
+    req = SystemOneRequest.model_validate(
+        {
+            "state": "",
+            "questions": {
+                "move": {
+                    "type": "choice",
+                    "instructions": "Best move?",
+                    "criteria": {"b8g8": {"uci": "b8g8", "san": "Qg8"}, "b8b7": "Qb7"},
+                }
+            },
+        }
+    )
+    rq = render_question(req.questions["move"])
+    assert '"san": "Qg8"' in rq.text and "Qb7" in rq.text
+    assert rq.n_slots == 2
 
 
 def test_request_parses_documented_payload():

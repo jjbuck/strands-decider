@@ -21,7 +21,7 @@ from __future__ import annotations
 
 from typing import Any, Literal
 
-from pydantic import BaseModel, Field, field_validator, model_validator
+from pydantic import BaseModel, Field, field_validator
 
 # A `state` or `instructions` may be a bare string, or structured data that we
 # render deterministically (see strands_decider.prompting.render_content).
@@ -42,26 +42,29 @@ class NoulQuestion(BaseModel):
     type: Literal["noul"] = "noul"
     instructions: Content
     # Optional {"true": "...", "false": "..."} descriptions that sharpen the boundary.
-    criteria: dict[str, str] | None = None
+    criteria: dict[str, Content] | None = None
 
     @field_validator("criteria")
     @classmethod
-    def _check_keys(cls, v: dict[str, str] | None) -> dict[str, str] | None:
+    def _check_keys(cls, v: dict[str, Content] | None) -> dict[str, Content] | None:
         if v is not None and not set(v).issubset({"true", "false"}):
             raise ValueError("noul criteria keys must be a subset of {'true', 'false'}")
         return v
 
 
 class ChoiceQuestion(BaseModel):
-    """Pick one of N named options. `criteria` maps option name -> description."""
+    """Pick one of N named options. `criteria` maps option name -> description.
+
+    A description may be structured data (a chess move, a palette), rendered like `state`.
+    """
 
     type: Literal["choice"] = "choice"
     instructions: Content
-    criteria: dict[str, str]
+    criteria: dict[str, Content]
 
     @field_validator("criteria")
     @classmethod
-    def _check_size(cls, v: dict[str, str]) -> dict[str, str]:
+    def _check_size(cls, v: dict[str, Content]) -> dict[str, Content]:
         if len(v) < 2:
             raise ValueError("choice requires at least 2 options")
         if len(v) > MAX_CHOICE_OPTIONS:
@@ -90,15 +93,10 @@ Question = NoulQuestion | ChoiceQuestion | ScoreQuestion
 
 
 class SystemOneRequest(BaseModel):
+    # May be empty when the question carries the whole task (a quiz item, a pair to compare).
     state: Content
     questions: dict[str, Question] = Field(..., min_length=1)
     model: str = "strands-decider-latest"
-
-    @model_validator(mode="after")
-    def _non_empty_state(self) -> SystemOneRequest:
-        if isinstance(self.state, str) and not self.state.strip():
-            raise ValueError("state must not be empty")
-        return self
 
 
 class NoulAnswer(BaseModel):
