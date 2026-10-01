@@ -179,6 +179,16 @@ curl -s localhost:8000/v1/systemone -H 'content-type: application/json' -d '{
 A hybrid torso such as v14's shares the state across questions like any other; a single
 question is encoded in one pass ([Asking many questions is nearly free](#asking-many-questions-is-nearly-free)).
 
+The `state` may be empty when the question carries the whole task. An option description
+may be a string, structured data (rendered as JSON, like a structured `state`), or `null`
+for a bare label.
+
+By default a prompt longer than the checkpoint's window is shortened to fit: the state is
+cut, and the question keeps its options. `--strict-window` refuses such a prompt instead,
+with HTTP 422 and a message that names the context window, for an evaluation that forbids
+truncation. `--max-batch N` (default 32) sets how many questions one forward pass encodes;
+lower it when a very long state with many questions does not fit in GPU memory.
+
 ## Asking many questions is nearly free
 
 *The latency table below was measured on v7, a Qwen3 torso. The cache now also forks the
