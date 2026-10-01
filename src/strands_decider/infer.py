@@ -61,6 +61,9 @@ class EngineConfig:
     # Largest share of the context window the question may claim before the state
     # starts being squeezed. Questions are normally short, so this rarely binds.
     max_question_fraction: float = 0.75
+    # Refuse a prompt that does not fit the window instead of shortening it, for
+    # benchmarks that forbid truncation. The message names the "context window".
+    strict_window: bool = False
 
 
 class UnforkableCache(TypeError):
@@ -185,6 +188,15 @@ class SystemOneEngine:
         q = enc["input_ids"]
         offs = enc["offset_mapping"]
         longest = max(len(x) for x in q)
+        if self.cfg.strict_window:
+            s = self.tok(state_text, add_special_tokens=True)["input_ids"]
+            if len(s) + longest > max_len:
+                raise ValueError(
+                    f"prompt of {len(s) + longest} tokens exceeds the context window "
+                    f"of {max_len} tokens"
+                )
+            self._last_offsets = list(offs)
+            return s, q
         # Cap the reserve so a pathological question cannot starve the state entirely.
         reserve = min(longest, max(1, int(max_len * self.cfg.max_question_fraction)))
         # Front truncation shifts every token index, so the offsets move with the ids

@@ -306,6 +306,10 @@ def serve_cmd(
         None, "--model-name",
         help="Value returned as `model` in responses. Defaults to the checkpoint basename.",
     ),
+    strict_window: bool = typer.Option(
+        False, "--strict-window",
+        help="Reject (HTTP 422) a prompt longer than the context window instead of truncating it.",
+    ),
 ) -> None:
     """Serve POST /v1/systemone. JevBench's typesafe adapter runs against it unchanged."""
     from .server import serve
@@ -316,6 +320,7 @@ def serve_cmd(
     serve(
         checkpoint, host=host, port=port, device=selected_device,
         use_prefix_cache=not no_prefix_cache, model_name=model_name,
+        strict_window=strict_window,
     )
 
 

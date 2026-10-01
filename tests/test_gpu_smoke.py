@@ -389,6 +389,22 @@ def test_question_reserve_is_capped_so_state_survives(model):
     assert len(s) + len(kept[0]) <= model.config.max_length
 
 
+def test_strict_window_refuses_instead_of_truncating(model):
+    """--strict-window: a prompt over the window is refused, one that fits is kept whole."""
+    from strands_decider.infer import EngineConfig, SystemOneEngine
+    from strands_decider.prompting import render_state
+
+    eng = SystemOneEngine(model, EngineConfig(strict_window=True))
+    with pytest.raises(ValueError, match="context window"):
+        eng._fit(render_state(_long_state()), ["Is this permitted?"])
+
+    short = render_state("A short state.")
+    question = "Is this permitted under the policy? " * 10
+    s, kept = eng._fit(short, [question])
+    assert len(kept[0]) == len(eng.tok(question, add_special_tokens=False)["input_ids"])
+    assert s == eng.tok(short, add_special_tokens=True)["input_ids"]
+
+
 def test_long_state_answer_is_still_well_formed(model):
     """End to end: a long state must still yield a valid distribution over the options."""
     from strands_decider.infer import EngineConfig, SystemOneEngine
