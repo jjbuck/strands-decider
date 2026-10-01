@@ -1,6 +1,6 @@
 # Inference
 
-This folder describes how to run a checkpoint: install, get a checkpoint, ask it questions
+This document describes how to run a checkpoint: install, get a checkpoint, ask it questions
 from the command line, and serve it over HTTP. Strands decider answers typed questions about a
 state, the text to classify; it does not generate text. A question is a `noul` (yes or no,
 returned as P(true)), a `choice` (one of N options) or a `score` (a level on an ordered
@@ -15,8 +15,8 @@ checkpoint with `strands-decider calibrate` before you serve it.
 - [Serve](#serve): `POST /v1/systemone` and `/health`, on `127.0.0.1` with no authentication.
 - [Asking many questions is nearly free](#asking-many-questions-is-nearly-free): the shared-prefix cache.
 - [Serving on a Mac](#serving-on-a-mac): MPS, and the one kernel that had to be replaced.
-- [`../examples/client.py`](../examples/client.py) and [`../examples/strands/`](../examples/strands/):
-  a client for the server, and an agent built with the Strands Agents SDK that uses it.
+- [`../examples/strands/`](../examples/strands/README.md): an agent built with the Strands
+  Agents SDK that uses the server, with its client in `_client.py`.
 - [`../evaluation/results.md`](../evaluation/results.md): measured latency and accuracy on an
   RTX 3090 and on a Mac; [`../evaluation/jevbench.md`](../evaluation/jevbench.md): JevBench,
   the external benchmark.
@@ -68,7 +68,7 @@ writes them, `strands-decider calibrate` adds the temperatures, and `StrandsDeci
 
 | File | Contents |
 | --- | --- |
-| `hobson_config.json` | The model configuration: the base model name, the readout type and size, the window (`max_length`) and the fitted temperatures |
+| `strands_decider_config.json` | The model configuration: the base model name, the readout type and size, the window (`max_length`) and the fitted temperatures. A checkpoint saved before the rename, such as the published v19, holds `hobson_config.json` instead; `load` reads either |
 | `lora/` | The LoRA adapter (`adapter_config.json`, `adapter_model.safetensors`) |
 | `slot_head.pt` or `head.safetensors` | The readout weights. `save_pretrained` writes `slot_head.pt`. An export from `strands_decider.hf_export` holds `head.safetensors` instead. |
 | `tokenizer.json`, `tokenizer_config.json` | The tokenizer |

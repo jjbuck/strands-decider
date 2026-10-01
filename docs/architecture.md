@@ -251,7 +251,6 @@ src/strands_decider/
 configs/          train.yaml (the v19 recipe, WSL2), train-parent.yaml (its parent,
                   v14's recipe), train-v7.yaml (v7, Windows)
                   experiments/ -- v11a ... v20 (pre-registered runs)
-inference/        README.md -- serving a checkpoint: install, ask, serve, the HTTP API, a Mac
 training/         README.md -- setup, the recipe step by step, several GPUs, hardware notes
                   recipe.sh -- v19 end to end under WSL2: corpus, downloads, multi-step rows,
                   generated and adequacy rows, teacher labels, the parent, replay labels,
@@ -284,8 +283,7 @@ data/             README.md -- what is committed, what is downloaded, and the li
                   gen_flips/, gen_mixed_pilot/, gen_pilot_qwen/ (verifier answers included);
                   checks/ -- verify_synth_labels.py, verify_synth_pairs.py (re-derive the
                   v9/v10 corpora's labels from the rendered documents)
-examples/         client.py -- decompose a judgement, branch on the answers;
-                  strands/ -- a Strands Agents intervention that gates a tool call on two
+examples/         strands/ -- a Strands Agents intervention that gates a tool call on two
                   noul questions (tool_call_intervention.py, with _client.py)
 research/         README.md -- the preregistration practice and the version table;
                   preregistrations/ -- PREREGISTRATION-v9.md ... -v20.md (and -v19-seed1,
@@ -301,9 +299,10 @@ tests/            pytest only: test_core (no GPU), test_server (stubbed), test_g
                   test_prefix_cache, test_adequacy, test_mps_kernels, test_engine_dtype,
                   test_catchall, test_distill, test_hf_export, test_checkpoint_load,
                   test_cli_build, test_data_identity, test_configs, test_run_recipe,
-                  test_llm_client, test_doc_links,
+                  test_llm_client,
                   test_ddp (`-m distributed` for the multi-GPU runs)
-docs/             architecture.md -- this document
+docs/             architecture.md -- this document; inference.md -- serving a checkpoint:
+                  install, ask, serve, the HTTP API, a Mac
 .github/          workflows/tests.yml -- the CPU tests; workflows/generators-live-test.yml
                   and .github/scripts/check_generator_rows.py -- one live batch per generator backend
 ```

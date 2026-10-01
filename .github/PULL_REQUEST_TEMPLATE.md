@@ -23,7 +23,7 @@ Other (please describe):
 <!-- How have you tested the change? Verify that the changes do not break functionality or introduce new warnings. (100 words) -->
 
 - [ ] I ran `pytest -q` locally (GPU tests skip automatically without CUDA)
-- [ ] I ran `ruff check` on the files I changed and did not add new findings
+- [ ] I ran `ruff check .` and `mypy ./src` locally and both pass
 
 ## Additional Details
 

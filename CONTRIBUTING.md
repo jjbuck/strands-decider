@@ -68,12 +68,13 @@ pip install -e ".[dev]"
 pre-commit install -t pre-commit -t commit-msg   # once per clone; see below
 pytest -q                  # GPU tests skip automatically without CUDA
 pytest -q -m distributed   # multi-process training tests on CPU, several minutes
-ruff check path/to/changed.py   # on the files you changed; see below
+ruff check .               # the whole tree, as CI does
+mypy ./src                 # the published package only, as CI does
 ```
 
-On Linux without an NVIDIA GPU, install the CPU build of torch first: `pip install torch --index-url https://download.pytorch.org/whl/cpu`. The suite downloads nothing from Hugging Face. CI runs `pytest -q` with `HF_HUB_OFFLINE=1` on Python 3.10 and 3.12; it does not run the distributed tests, so run those yourself. CI does not run ruff either: the tree has existing ruff findings, so `ruff check .` fails today. Run ruff on the files you changed, and do not add new findings.
+On Linux without an NVIDIA GPU, install the CPU build of torch first: `pip install torch --index-url https://download.pytorch.org/whl/cpu`. The suite downloads nothing from Hugging Face. CI runs `pytest -q` with `HF_HUB_OFFLINE=1` on Python 3.10 and 3.12; it does not run the distributed tests, so run those yourself. A separate CI job runs `ruff check .` over the whole tree and `mypy ./src`, with the latest ruff that `pyproject.toml` admits; both must pass.
 
-Two of the tests check the documents: every relative link in the markdown files resolves, and every document path cited in a code comment names a file and a heading that exist. If you move a file or rename a heading, run the suite and fix every reference.
+No test checks the documents. If you move a file or rename a heading, search the markdown files and the code comments for the old path or heading and fix every reference.
 
 Keep mechanical changes (moves, renames, formatting) and functional changes in separate commits, with an imperative summary and a body that explains why. Do not change the model inputs, the calibration or the training behaviour in a pull request that says it does something else.
 
@@ -84,13 +85,13 @@ The wheel is built with setuptools; you do not need [hatch](https://hatch.pypa.i
 ```bash
 hatch run test               # pytest -q
 hatch run test-distributed   # pytest -q -m distributed
-hatch run lint               # ruff check
+hatch run lint:check         # ruff check . and mypy ./src, as CI runs them
 hatch run format             # ruff format
 ```
 
 ### pre-commit and commit messages
 
-Local hooks live in [`.pre-commit-config.yaml`](.pre-commit-config.yaml) and run on the files you commit — not the whole tree — so they never fail on existing ruff findings elsewhere. Install them once:
+Local hooks live in [`.pre-commit-config.yaml`](.pre-commit-config.yaml) and run on the files you commit, not the whole tree. Install them once:
 
 ```bash
 pre-commit install -t pre-commit -t commit-msg
