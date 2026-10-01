@@ -164,7 +164,7 @@ def install() -> bool:
     """Route MPS calls of the Qwen3.5 chunk rule through the version above.
 
     Idempotent. Returns True if the reference implementation was wrapped; False if the
-    model module is absent or flash-linear-attention is installed (its kernel is bound
+    model module is absent or flash-linear-attention can run (its kernel is bound
     instead, and it would be the faster path wherever it runs).
     """
     global _installed
@@ -172,7 +172,10 @@ def install() -> bool:
         return True
     import importlib.util
 
-    if importlib.util.find_spec("fla") is not None:
+    # fla's kernels are Triton, which has no macOS build. Without it, `fla` still imports,
+    # transformers binds its reference chunk rule, and this replacement is still needed.
+    find = importlib.util.find_spec
+    if find("fla") is not None and find("triton") is not None:
         return False
     try:
         from transformers.models.qwen3_5 import modeling_qwen3_5 as q

@@ -83,3 +83,26 @@ def test_install_routes_only_mps():
     out, _ = q35.torch_chunk_gated_delta_rule(**x, use_qk_l2norm_in_kernel=True)
     ref, _ = reference(**x, use_qk_l2norm_in_kernel=True)
     assert torch.equal(out, ref)
+
+
+@pytest.mark.parametrize(("triton", "wrapped"), [(False, True), (True, False)],
+                         ids=["fla-without-triton", "fla-with-triton"])
+def test_install_defers_to_fla_only_when_it_can_run(monkeypatch, triton, wrapped):
+    import importlib.util
+
+    from strands_decider import mps_kernels
+
+    monkeypatch.setattr(mps_kernels, "_installed", False)
+    monkeypatch.setattr(q35, "torch_chunk_gated_delta_rule", q35.torch_chunk_gated_delta_rule)
+    original = q35.torch_chunk_gated_delta_rule
+    real_find_spec = importlib.util.find_spec
+    present = {"fla"} | ({"triton"} if triton else set())
+
+    def find_spec(name, *args, **kwargs):
+        if name in {"fla", "triton"}:
+            return object() if name in present else None
+        return real_find_spec(name, *args, **kwargs)
+
+    monkeypatch.setattr(importlib.util, "find_spec", find_spec)
+    assert mps_kernels.install() is wrapped
+    assert (q35.torch_chunk_gated_delta_rule is not original) is wrapped
