@@ -46,13 +46,14 @@ pip install -e ".[dev]"
 strands-decider serve checkpoints/hobson-2b-recipe --device mps --port 8099
 ```
 
-transformers warns that `causal_conv1d_fn` falls back to its reference PyTorch path. On
-CPU it also warns about `chunk_gated_delta_rule`. On MPS, `mps_kernels.py` replaces that
-second function, so only the first warning matters there, and it costs 32 ms a forward.
+Transformers' `causal_conv1d_fn` falls back to its reference PyTorch path. On CPU,
+`chunk_gated_delta_rule` also falls back. On MPS, `mps_kernels.py` replaces that second
+function, so only the first fallback matters there, and it costs 32 ms a forward.
 
 **CPU only.** The same commands as on macOS, with `--device cpu`. On Linux without a GPU,
 `pip install torch==2.7.1 --index-url https://download.pytorch.org/whl/cpu` skips the CUDA
-wheels. Both warnings above apply, and inference is much slower than on a GPU.
+wheels. Both reference fallback paths above apply, and inference is much slower than on a
+GPU.
 
 ## Model artifact
 

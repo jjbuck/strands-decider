@@ -8,6 +8,7 @@ calls them through `python -m strands_decider.cli`.
 from __future__ import annotations
 
 import json
+import logging
 import os
 from collections import Counter
 from itertools import islice
@@ -283,6 +284,11 @@ def _fmt_temperature(t: float | dict[str, float]) -> str:
     return f"{t:.3f}"
 
 
+def _configure_inference_logging(device: str) -> None:
+    if str(device).split(":", 1)[0] in {"cpu", "mps"}:
+        logging.getLogger("transformers.integrations.hub_kernels").setLevel(logging.ERROR)
+
+
 # ---------------------------------------------------------------- serve / ask
 
 
@@ -304,9 +310,11 @@ def serve_cmd(
     """Serve POST /v1/systemone. JevBench's typesafe adapter runs against it unchanged."""
     from .server import serve
 
+    selected_device = device or _auto_device()
+    _configure_inference_logging(selected_device)
     console.print(f"[green]serving[/] {checkpoint} on http://{host}:{port}")
     serve(
-        checkpoint, host=host, port=port, device=device or _auto_device(),
+        checkpoint, host=host, port=port, device=selected_device,
         use_prefix_cache=not no_prefix_cache, model_name=model_name,
     )
 
@@ -351,7 +359,9 @@ def ask_cmd(
     if not questions:
         raise typer.BadParameter("ask at least one --noul / --choice / --score question")
 
-    engine = load_engine(checkpoint, device=device or _auto_device())
+    selected_device = device or _auto_device()
+    _configure_inference_logging(selected_device)
+    engine = load_engine(checkpoint, device=selected_device)
     response = engine.ask(state, questions)
 
     if as_json:
