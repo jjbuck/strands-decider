@@ -206,6 +206,7 @@ def test_an_adapter_the_merge_cannot_represent_is_refused(tmp_path, tensors, con
         merge_lora(object(), _adapter(tmp_path / "lora", tensors, **config), "model.")
 
 
+@pytest.mark.filterwarnings("ignore:Setting `save_embedding_layers`:UserWarning")  # PEFT, saving the fixture
 def test_a_checkpoint_with_an_embedding_lora_does_not_load_on_mlx(tmp_path, monkeypatch):
     monkeypatch.setattr(sys.modules[__name__], "LORA_TARGETS", [*LORA_TARGETS, "embed_tokens"])
     path = _checkpoint(tmp_path, "pointer")
