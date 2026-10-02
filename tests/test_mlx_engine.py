@@ -155,6 +155,24 @@ def test_the_prefix_path_matches_whole_prompts_and_leaves_no_state(engines):
         assert whole[name] == pytest.approx(shared[name], abs=1e-4), name
 
 
+def test_max_batch_and_strict_window_apply_on_mlx(engines):
+    _, mlx_engine, _ = engines
+    original = mlx_engine.cfg
+    try:
+        mlx_engine.cfg = dataclasses.replace(original, max_batch=2)  # three questions: two chunks
+        chunked = _probabilities(mlx_engine.evaluate(REQUESTS[1]))
+        mlx_engine.cfg = original
+        whole = _probabilities(mlx_engine.evaluate(REQUESTS[1]))
+        for name in whole:
+            assert chunked[name] == pytest.approx(whole[name], abs=1e-4), name
+        mlx_engine.cfg = dataclasses.replace(original, strict_window=True)
+        too_long = SystemOneRequest(state=POLICY * 100, questions={"team": QUESTIONS["team"]})
+        with pytest.raises(ValueError, match="context window"):
+            mlx_engine.evaluate(too_long)
+    finally:
+        mlx_engine.cfg = original
+
+
 def test_the_adapter_is_merged_into_the_mlx_weights(engines):
     from mlx.utils import tree_flatten
     from safetensors.torch import load_file

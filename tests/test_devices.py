@@ -77,8 +77,9 @@ def test_the_server_builds_the_mlx_engine_for_device_mlx(monkeypatch):
     calls = []
     monkeypatch.setattr(server, "load_mlx", lambda checkpoint, config: calls.append((checkpoint, config)) or _Engine())
     monkeypatch.setattr(server.StrandsDeciderModel, "load", lambda *a, **k: pytest.fail("torch load"))
-    health = TestClient(server.create_app("org/hobson", device="mlx")).get("/health").json()
-    assert health["device"] == "mlx"
+    app = server.create_app("org/hobson", device="mlx", strict_window=True, max_batch=7)
+    assert TestClient(app).get("/health").json()["device"] == "mlx"
     [(checkpoint, config)] = calls
     assert checkpoint == "org/hobson"
     assert (config.device, config.use_prefix_cache, config.model_name) == ("mlx", True, "hobson")
+    assert (config.strict_window, config.max_batch) == (True, 7)  # the shared config reaches MLX
