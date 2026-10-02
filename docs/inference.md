@@ -282,32 +282,17 @@ rendering, tokenisation, truncation, option positions, both evaluation paths, th
 temperatures and the fp32 head are the torch engine's own code. The head runs on the CPU, as
 torch.
 
-Measured with v19 on an M4 Pro (20-core GPU, 48 GB), torch 2.7.1 and transformers 5.18.0 for
-MPS, mlx 0.32.3 and mlx-lm 0.31.3 for MLX, with `evaluation/bench_local.py` (median of 5 to 7
-warm runs):
-
-| Request | MPS | MLX |
-|---|---:|---:|
-| 1 question, 222 input tokens | 161 ms | 113 ms |
-| 1 question, 1,118 tokens | 694 ms | 499 ms |
-| 1 question, 4,094 tokens | 2,713 ms | 1,823 ms |
-| 4 questions on a 256-token state | 454 ms | 307 ms |
-| 16 questions on a 1,024-token state | 1,634 ms | 1,089 ms |
-
-MLX also varies less: on the 4-question request, the 90th percentile is 307 ms against 889 ms on
-MPS.
-
-**The answers are the same.** `evaluation/device_parity.py` compares 54 answers (one and five
-questions per request, states of about 40 to 3,000 tokens) against v19 in fp32 on the CPU. No
-answer changes on MPS or on MLX. The largest probability difference is 0.0051 on MPS and
-0.0157 on MLX. Most of MLX's difference comes from one choice: the LoRA adapter is merged into
-the base weights at load, formed in fp32 and rounded once to bf16, where torch keeps it
-unmerged. MPS with the adapter merged the same way differs by 0.0105, and the MLX engine in fp32
-by 0.0039. The remainder is mlx-lm's L2 normalisation of q and k in the Gated DeltaNet layers,
-which adds its epsilon to the mean of squares where transformers adds it to the sum. The two
-differ only for a q or k near zero. With transformers given mlx-lm's placement,
-`tests/test_mlx_engine.py` finds the same answers to the response's four decimal places, on
-Metal and on MLX's CPU backend.
+Measured with v19 on an M4 Pro, one question takes 113 ms at 222 input tokens, 499 ms at 1,118
+and 1,823 ms at 4,094, against 161, 694 and 2,713 ms on MPS. Sixteen questions on a 1,024-token
+state take 1,089 ms against 1,634 ms. The answers are the same: on 54 answers compared with v19
+in fp32 on the CPU, none changes on either device, and the largest probability difference is
+0.0157 on MLX and 0.0051 on MPS. Most of MLX's difference comes from merging the LoRA adapter
+into the bf16 weights at load, where torch keeps it unmerged. The rest is mlx-lm's L2
+normalisation of q and k in the Gated DeltaNet layers, which adds its epsilon to the mean of
+squares where transformers adds it to the sum, and differs only for a q or k near zero.
+`tests/test_mlx_engine.py` controls for that placement and finds the same answers to four
+decimal places. The measurements, and the commands that reproduce them, are in
+[Serving on a Mac through MLX: accuracy and latency](../evaluation/results.md#serving-on-a-mac-through-mlx-accuracy-and-latency).
 
 Limits. mlx-lm is pinned to the minor version tested, because the engine uses its Qwen3.5
 module layout and prompt-cache classes. The adapter merge refuses DoRA, `modules_to_save`,

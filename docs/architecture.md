@@ -244,6 +244,7 @@ src/strands_decider/
   evaluate.py     accuracy, ECE, NLL, MAE; temperature fitting; calib/test split
   infer.py        serving engine; shared-state cache, including hybrid torsos
   mps_kernels.py  Gated DeltaNet chunk rule for Apple-silicon serving (no fla on macOS)
+  mlx_engine.py   serving with the torso on MLX (--device mlx); the engine otherwise infer.py's
   server.py       FastAPI, POST /v1/systemone
   cli.py          the strands-decider command
   hf_export.py    a checkpoint as a Hugging Face model folder (safetensors, card, manifest)
@@ -265,7 +266,8 @@ evaluation/       README.md -- how the model is measured, and the results;
                   evals), question_sensitivity.py (does the answer follow the question?),
                   calibrate_mix.py (the v19 recalibration experiment), pair_accuracy.py
                   (v10's minimal pairs), bench_local.py (latency by state length and
-                  question count, any device);
+                  question count, any device), device_parity.py (one checkpoint's answers
+                  on several devices, against the first);
                   jevbench/ -- jevbench.sh (the external benchmark on a served checkpoint),
                   paired.py (McNemar against a recorded run), jevbench_cold_warm.py (each
                   task twice: first request against repeat)

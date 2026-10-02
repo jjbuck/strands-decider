@@ -48,7 +48,7 @@ pip install strands-decider
 ```
 
 On an Apple-silicon Mac, `pip install "strands-decider[mlx]"` runs the model through MLX, 1.4 to
-1.5x faster than MPS; `cuda`, `mps` and `cpu` extras name the other devices
+1.6x faster than MPS; `cuda`, `mps` and `cpu` extras name the other devices
 ([docs/inference.md](docs/inference.md#environments-for-serving)).
 ### Choice question
 You can ask the model to choose based on some state and a question:

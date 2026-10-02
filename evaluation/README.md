@@ -26,6 +26,7 @@ script also runs on its own:
 | [`pair_accuracy.py`](pair_accuracy.py) | Item and pair accuracy on a minimal-pair file (v10) |
 | [`calibrate_mix.py`](calibrate_mix.py) | Refits the temperatures on every held-out set, into a copy of the checkpoint (v19-calmix) |
 | [`bench_local.py`](bench_local.py) | Inference latency against the engine, by state length and question count, on any device |
+| [`device_parity.py`](device_parity.py) | Whether two or more devices give one checkpoint the same answers: the largest probability difference and the answers that change, against the first device |
 | [`jevbench/jevbench.sh`](jevbench/jevbench.sh) | The JevBench public set against `strands-decider serve` on one GPU, at the JevBench commit the script pins |
 | [`jevbench/paired.py`](jevbench/paired.py) | A per-task comparison of two JevBench runs, with an exact McNemar test |
 | [`jevbench/jevbench_cold_warm.py`](jevbench/jevbench_cold_warm.py) | First-request against warm latency, one task asked twice (MPS) |
@@ -85,7 +86,9 @@ Rank on JevBench ([External benchmark](jevbench.md#external-benchmark-jevbench-v
   own traffic before trusting a threshold.
 - **Training the Qwen3.5 torso needs Linux or WSL2** for its fused kernels. Serving runs
   on an Apple-silicon Mac with the same answers (measured with v19 on an M3 Pro), at about a ninth of the 3090's
-  throughput on long prompts ([Serving on a Mac](../docs/inference.md#serving-on-a-mac)).
+  throughput on long prompts ([Serving on a Mac](../docs/inference.md#serving-on-a-mac)). Through MLX it is
+  1.4 to 1.6x faster than MPS, measured on an M4 Pro
+  ([Serving on a Mac with MLX](../docs/inference.md#serving-on-a-mac-with-mlx)).
 - **A `slot` checkpoint caps a choice question at `num_slots` options** (24 by
   default), where the reference API allows 255. The `pointer` readout used from v7 on
   has no such cap.
