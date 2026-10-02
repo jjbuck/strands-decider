@@ -490,9 +490,10 @@ def mlx_available() -> bool:
     """
     import importlib.util
     import platform
-    import sys
 
-    if sys.platform != "darwin" or platform.machine() != "arm64":
+    # platform.system(), not sys.platform: mypy narrows sys.platform to the checking
+    # host's, which on CI's Linux runners marks the rest of the function unreachable.
+    if platform.system() != "Darwin" or platform.machine() != "arm64":
         return False
     try:
         return (

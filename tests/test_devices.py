@@ -29,7 +29,7 @@ def test_auto_device_is_cuda_then_mps_then_cpu_and_never_mlx(monkeypatch, cuda, 
 
 
 def test_mlx_is_unavailable_off_apple_silicon(monkeypatch):
-    monkeypatch.setattr("sys.platform", "linux")
+    monkeypatch.setattr("platform.system", lambda: "Linux")
     assert not infer.mlx_available()
 
 
@@ -41,7 +41,7 @@ def test_mlx_is_unavailable_off_apple_silicon(monkeypatch):
 def test_mlx_is_available_only_with_mlx_core(monkeypatch, found, expected):
     import importlib.util
 
-    monkeypatch.setattr("sys.platform", "darwin")
+    monkeypatch.setattr("platform.system", lambda: "Darwin")
     monkeypatch.setattr("platform.machine", lambda: "arm64")
 
     def find_spec(name, *args, **kwargs):
