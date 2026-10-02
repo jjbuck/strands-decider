@@ -227,6 +227,9 @@ def _load_torso(base: Path, dtype: str) -> tuple[Any, Any, Any, str]:
             if mx.issubdtype(value.dtype, mx.floating) and value.dtype != target and keep(path)]
     if cast:
         lm.load_weights(cast, strict=False)
+    # Evaluate the casts now: a lazy array belongs to this thread's stream, and the server
+    # evaluates requests on its thread pool.
+    mx.eval(lm.parameters())
     return lm, owner.model, owner, prefix
 
 

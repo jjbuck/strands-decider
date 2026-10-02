@@ -12,6 +12,7 @@ from __future__ import annotations
 import dataclasses
 import json
 import sys
+from concurrent.futures import ThreadPoolExecutor
 
 import pytest
 import torch
@@ -66,7 +67,7 @@ def _tokenizer():
                                    unk_token="<unk>")
 
 
-def _checkpoint(tmp_path, head_type):
+def _checkpoint(tmp_path, head_type, torch_dtype="float32"):
     tok = _tokenizer()
     torch.manual_seed(0)
     base_cfg = transformers.Qwen3_5TextConfig(
@@ -78,7 +79,7 @@ def _checkpoint(tmp_path, head_type):
     base = tmp_path / "base"
     transformers.Qwen3_5ForCausalLM(base_cfg).save_pretrained(base)
     cfg = StrandsDeciderConfig(base_model=str(base), head_type=head_type, pointer_dim=16,
-                               max_length=512, torch_dtype="float32", lora_r=4, lora_alpha=8,
+                               max_length=512, torch_dtype=torch_dtype, lora_r=4, lora_alpha=8,
                                lora_targets=LORA_TARGETS)
     torso = transformers.Qwen3_5ForCausalLM.from_pretrained(base).model
     model = StrandsDeciderModel(cfg, torso, tok)
@@ -212,3 +213,12 @@ def test_a_checkpoint_with_an_embedding_lora_does_not_load_on_mlx(tmp_path, monk
     path = _checkpoint(tmp_path, "pointer")
     with pytest.raises(ValueError, match="lora_embedding"):
         load_engine(str(path), device="mlx")
+
+
+def test_a_bf16_checkpoint_answers_from_another_thread(tmp_path):
+    # The server evaluates on a thread pool. The base is fp32 here, so loading casts the torso
+    # to bf16, and a cast left lazy belongs to the loading thread's stream.
+    engine = load_engine(str(_checkpoint(tmp_path, "pointer", torch_dtype="bfloat16")), device="mlx")
+    with ThreadPoolExecutor(1) as pool:
+        response = pool.submit(engine.evaluate, REQUESTS[1]).result()
+    assert set(response.answers) == set(QUESTIONS)
