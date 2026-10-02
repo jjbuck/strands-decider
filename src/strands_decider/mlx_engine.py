@@ -131,8 +131,9 @@ class MLXEngine(SystemOneEngine):
         self.device = "cpu"
         self._decoder = decoder
         self._cache_owner = cache_owner
-        # One evaluation at a time: the server's handlers run in a thread pool, and MLX's
-        # default stream is shared by every thread.
+        # One evaluation at a time: `_fit` leaves the request's option offsets on the engine
+        # (`_last_offsets`) for `_option_idx` to read, so two requests in the server's thread
+        # pool would read each other's. The torch engine has the same race (#9).
         self._lock = threading.Lock()
 
     def evaluate(self, request: SystemOneRequest) -> SystemOneResponse:

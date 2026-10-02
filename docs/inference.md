@@ -299,4 +299,5 @@ module layout and prompt-cache classes. The adapter merge refuses DoRA, `modules
 trainable token embeddings, per-module ranks and quantised base weights. `--dtype` in
 `bench_local.py` applies to torch devices only. The engine caps MLX's buffer cache at 1 GiB
 (`mlx_engine.DEFAULT_CACHE_LIMIT`); MLX's own default is its memory limit, nearly all of RAM.
-Evaluations run one at a time: the server's handlers share MLX's default stream.
+Evaluations run one at a time, because `_fit` keeps a request's option offsets on the engine for
+`_option_idx` to read; the torch engine has the same race (#9).
