@@ -37,7 +37,9 @@ environment in [Setup](../training/README.md#setup).
 A server started inside WSL (`strands-decider serve ... --port 8099`) is reachable from Windows
 at `127.0.0.1:8099` for as long as its WSL session is alive.
 
-Each device has an install extra, so a deployment names its device the same way everywhere:
+Each device has an install extra, so a deployment names its device the same way everywhere. The
+extras ship with the next release (0.1.0 on PyPI has only `train` and `dev`); until then, install
+from a clone, for example `pip install -e ".[mlx]"`.
 
 | `--device` | Install | Adds |
 |---|---|---|
@@ -286,12 +288,10 @@ Measured with v19 on an M4 Pro, one question takes 113 ms at 222 input tokens, 4
 and 1,823 ms at 4,094, against 161, 694 and 2,713 ms on MPS. Sixteen questions on a 1,024-token
 state take 1,089 ms against 1,634 ms. The answers are the same: on 54 answers compared with v19
 in fp32 on the CPU, none changes on either device, and the largest probability difference is
-0.0157 on MLX and 0.0051 on MPS. Most of MLX's difference comes from merging the LoRA adapter
-into the bf16 weights at load, where torch keeps it unmerged. The rest is mlx-lm's L2
-normalisation of q and k in the Gated DeltaNet layers, which adds its epsilon to the mean of
-squares where transformers adds it to the sum, and differs only for a q or k near zero.
-`tests/test_mlx_engine.py` controls for that placement and finds the same answers to four
-decimal places. The measurements, and the commands that reproduce them, are in
+0.0138 on MLX and 0.0051 on MPS. Most of MLX's difference comes from merging the LoRA adapter
+into the bf16 weights at load, where torch keeps it unmerged; with the torso in fp32 it is
+0.0036. On a tiny random Qwen3.5, `tests/test_mlx_engine.py` finds the torch engine's answers to
+four decimal places, on Metal and on MLX's CPU backend. The measurements, and the commands that reproduce them, are in
 [Serving on a Mac through MLX: accuracy and latency](../evaluation/results.md#serving-on-a-mac-through-mlx-accuracy-and-latency).
 
 Limits. mlx-lm is pinned to the minor version tested, because the engine uses its Qwen3.5
