@@ -16,10 +16,9 @@ across the question suffixes.
 The LoRA adapter is folded into the base weights at load, W + (alpha / r) B A, formed in fp32
 on the CPU and rounded once to the torso dtype; the torch path keeps it unmerged. Against v19 in
 fp32 on the CPU, over `evaluation/device_parity.py`'s 54 answers, no answer changes and the
-largest probability difference is 0.0157 here and 0.0051 on MPS. Most of the gap is the merge's
+largest probability difference is 0.0138 here and 0.0051 on MPS. Most of the gap is the merge's
 rounding: MPS with the adapter merged the same way differs by 0.0105, and this engine in fp32 by
-0.0039. The rest is mlx-lm's q/k normalisation in Gated DeltaNet, which adds its epsilon to the
-mean of squares where transformers adds it to the sum.
+0.0036.
 """
 
 from __future__ import annotations

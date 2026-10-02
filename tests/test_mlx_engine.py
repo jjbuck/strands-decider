@@ -5,11 +5,6 @@ base checkpoint, and a decider checkpoint is built on it the way training saves 
 LoRA adapter over every projection v19's adapter targets. Both engines load it from disk, so
 the test covers the MLX loader, the adapter merge and both of `evaluate`'s paths. Apple silicon
 with the mlx extra only; nothing is downloaded.
-
-One difference is controlled for rather than tolerated: mlx-lm L2-normalises Gated DeltaNet's
-q and k with the epsilon on the mean of squares, transformers on the sum (`l2norm`). The two
-agree except for near-zero q or k, which a random tiny model has and a trained one rarely
-does; with transformers given mlx-lm's placement, the answers agree to the response's rounding.
 """
 
 from __future__ import annotations
@@ -107,11 +102,6 @@ def _probabilities(response):
     return out
 
 
-def _l2norm_eps_on_mean(x, dim=-1, eps=1e-6):
-    """transformers' `l2norm` with mlx-lm's epsilon placement: x / sqrt(D * (mean(x^2) + eps))."""
-    return x * torch.rsqrt((x * x).mean(dim=dim, keepdim=True) + eps) / x.shape[dim] ** 0.5
-
-
 @pytest.fixture(scope="module", params=["pointer", "slot"])
 def engines(request, tmp_path_factory):
     path = _checkpoint(tmp_path_factory.mktemp(request.param), request.param)
@@ -120,12 +110,9 @@ def engines(request, tmp_path_factory):
 
 @pytest.mark.parametrize("device", ["gpu", "cpu"])
 @pytest.mark.parametrize("request_index", range(len(REQUESTS)))
-def test_mlx_answers_as_torch_does(engines, request_index, device, monkeypatch):
-    from transformers.models.qwen3_5 import modeling_qwen3_5
-
+def test_mlx_answers_as_torch_does(engines, request_index, device):
     torch_engine, mlx_engine, _ = engines
     request = REQUESTS[request_index]
-    monkeypatch.setattr(modeling_qwen3_5, "l2norm", _l2norm_eps_on_mean)
     expected = torch_engine.evaluate(request)
     previous = mx.default_device()
     mx.set_default_device(getattr(mx, device))  # mlx-lm picks its Metal kernel by the default device
