@@ -48,17 +48,15 @@ def create_app(
     # on the same host cannot be confused. HF repo ids ("org/name") collapse to `name`.
     resolved_name = model_name or os.path.basename(checkpoint.rstrip("/")) or checkpoint
 
+    config = EngineConfig(
+        device=device, use_prefix_cache=use_prefix_cache, model_name=resolved_name,
+        strict_window=strict_window, max_batch=max_batch,
+    )
     if device == "mlx":
-        _engine = load_mlx(checkpoint, use_prefix_cache=use_prefix_cache, model_name=resolved_name)
+        _engine = load_mlx(checkpoint, config)
     else:
         model = StrandsDeciderModel.load(checkpoint, attn_implementation=attn_implementation)
-        _engine = SystemOneEngine(
-            model,
-            EngineConfig(
-                device=device, use_prefix_cache=use_prefix_cache, model_name=resolved_name,
-                strict_window=strict_window, max_batch=max_batch,
-            ),
-        )
+        _engine = SystemOneEngine(model, config)
 
     @app.get("/health")
     def health() -> dict:

@@ -27,6 +27,7 @@ from __future__ import annotations
 import json
 import os
 import threading
+from dataclasses import replace
 from pathlib import Path
 from typing import Any
 
@@ -224,16 +225,19 @@ def _load_torso(base: Path, dtype: str) -> tuple[Any, Any, Any, str]:
 
 def load_mlx_engine(
     checkpoint: str,
+    config: EngineConfig | None = None,
     *,
-    use_prefix_cache: bool = True,
-    model_name: str | None = None,
     cache_limit_bytes: int | None = DEFAULT_CACHE_LIMIT,
 ) -> MLXEngine:
-    """The MLX counterpart of `infer.load_engine`: a local checkpoint directory or a Hub repo id."""
+    """The MLX counterpart of `infer.load_engine`: a local checkpoint directory or a Hub repo id.
+
+    `config` is the torch engine's `EngineConfig`, with its device set to "mlx".
+    `cache_limit_bytes` sets MLX's process-wide buffer cache limit; None leaves it as it is.
+    """
     path = checkpoint_dir(checkpoint)
-    config = StrandsDeciderConfig.from_json(config_path(path))
+    decider_config = StrandsDeciderConfig.from_json(config_path(path))
     lora_dir = os.path.join(path, "lora")
-    if config.use_lora and not os.path.isdir(lora_dir):
+    if decider_config.use_lora and not os.path.isdir(lora_dir):
         raise FileNotFoundError(
             f"{lora_dir}: missing, but {os.path.basename(config_path(path))} sets use_lora"
         )
@@ -244,14 +248,14 @@ def load_mlx_engine(
 
     if cache_limit_bytes is not None:
         mx.set_cache_limit(cache_limit_bytes)
-    lm, decoder, owner, prefix = _load_torso(Path(checkpoint_dir(config.base_model)), config.torch_dtype)
-    if config.use_lora:
+    lm, decoder, owner, prefix = _load_torso(
+        Path(checkpoint_dir(decider_config.base_model)), decider_config.torch_dtype
+    )
+    if decider_config.use_lora:
         merge_lora(lm, lora_dir, prefix)
     mx.clear_cache()  # the merge's fp32 transients
-    head = build_head(config, int(decoder.embed_tokens.weight.shape[1]))
+    head = build_head(decider_config, int(decoder.embed_tokens.weight.shape[1]))
     head.load_state_dict(head_state)
     head.to(torch.float32).eval()
-    engine_config = EngineConfig(device="mlx", use_prefix_cache=use_prefix_cache)
-    if model_name:
-        engine_config.model_name = model_name
-    return MLXEngine(decoder, owner, _Readout(config, tokenizer, head), engine_config)
+    engine_config = replace(config or EngineConfig(), device="mlx")
+    return MLXEngine(decoder, owner, _Readout(decider_config, tokenizer, head), engine_config)

@@ -55,8 +55,10 @@ def test_the_server_builds_the_mlx_engine_for_device_mlx(monkeypatch):
             "base_model": "stub", "num_slots": 24, "temperature": 1.0, "max_length": 512})()})()
 
     calls = []
-    monkeypatch.setattr(server, "load_mlx", lambda checkpoint, **kw: calls.append((checkpoint, kw)) or _Engine())
+    monkeypatch.setattr(server, "load_mlx", lambda checkpoint, config: calls.append((checkpoint, config)) or _Engine())
     monkeypatch.setattr(server.StrandsDeciderModel, "load", lambda *a, **k: pytest.fail("torch load"))
     health = TestClient(server.create_app("org/hobson", device="mlx")).get("/health").json()
     assert health["device"] == "mlx"
-    assert calls == [("org/hobson", {"use_prefix_cache": True, "model_name": "hobson"})]
+    [(checkpoint, config)] = calls
+    assert checkpoint == "org/hobson"
+    assert (config.device, config.use_prefix_cache, config.model_name) == ("mlx", True, "hobson")
