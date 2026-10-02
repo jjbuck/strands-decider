@@ -75,40 +75,47 @@ def merge_lora(lm: Any, adapter_dir: str, prefix: str) -> int:
     """Fold a PEFT LoRA adapter into `lm`'s weights in place. Returns the number merged.
 
     PEFT names a target `base_model.model.<path>`, where <path> is relative to the torch
-    torso; mlx-lm names the same weight `<prefix><path>.weight`. One tensor at a time: a
-    single graph over every target would hold all the fp32 deltas at once.
+    torso; mlx-lm names the same weight `<prefix><path>.weight`. Only plain linear LoRA is
+    folded: any other adapter tensor (an embedding LoRA, DoRA magnitudes, a LoRA bias, saved
+    modules, trainable tokens) is refused rather than skipped, and so are the options that
+    change the arithmetic without adding tensors. Each weight is swapped in as soon as it is
+    formed, so the old and new copies of only one weight are alive at a time.
     """
     with open(os.path.join(adapter_dir, "adapter_config.json"), encoding="utf-8") as fh:
         cfg = json.load(fh)
-    unsupported = [key for key in ("use_dora", "fan_in_fan_out", "lora_bias", "modules_to_save",
-                                   "trainable_token_indices", "rank_pattern", "alpha_pattern")
-                   if cfg.get(key)]
+    unsupported = [key for key in ("fan_in_fan_out", "rank_pattern", "alpha_pattern") if cfg.get(key)]
     if unsupported:
         raise ValueError(f"{adapter_dir}: the MLX backend cannot merge an adapter with {unsupported}")
+    adapter = mx.load(os.path.join(adapter_dir, "adapter_model.safetensors"))
+    stems = {name.removesuffix(".lora_A.weight") for name in adapter if name.endswith(".lora_A.weight")}
+    expected = {stem + suffix for stem in stems for suffix in (".lora_A.weight", ".lora_B.weight")}
+    if set(adapter) != expected:
+        unknown = sorted(set(adapter) - expected) + sorted(expected - set(adapter))
+        raise ValueError(
+            f"{adapter_dir}: the MLX backend merges only lora_A/lora_B weight pairs; "
+            f"cannot merge {unknown[:3]}{' ...' if len(unknown) > 3 else ''}"
+        )
     rank = cfg["r"]
     scale = cfg["lora_alpha"] / (rank**0.5 if cfg.get("use_rslora") else rank)
-    adapter = mx.load(os.path.join(adapter_dir, "adapter_model.safetensors"))
     params = dict(tree_flatten(lm.parameters()))
-    merged: list[tuple[str, Any]] = []
+    merged = 0
     # Metal's fp32 matmul is a reduced-precision fast path; the merge runs once and on the CPU.
     with mx.stream(mx.cpu):
-        for name, lora_a in adapter.items():
-            if not name.endswith(".lora_A.weight"):
-                continue
-            stem = name[: -len(".lora_A.weight")]
+        for stem in sorted(stems):
             target = prefix + stem.removeprefix("base_model.model.") + ".weight"
-            base = params.get(target)
+            base = params.pop(target, None)
             if base is None:
                 raise ValueError(f"adapter tensor {stem} has no weight {target} in the MLX torso")
             if not mx.issubdtype(base.dtype, mx.floating):
                 raise ValueError(f"{target} is {base.dtype}; the MLX backend cannot merge into quantised weights")
-            delta = adapter[stem + ".lora_B.weight"].astype(mx.float32) @ lora_a.astype(mx.float32)
+            lora_a, lora_b = adapter.pop(stem + ".lora_A.weight"), adapter.pop(stem + ".lora_B.weight")
+            delta = lora_b.astype(mx.float32) @ lora_a.astype(mx.float32)
             weight = (base.astype(mx.float32) + scale * delta).astype(base.dtype)
             mx.eval(weight)
-            merged.append((target, weight))
-    lm.load_weights(merged, strict=False)
-    mx.eval(lm.parameters())
-    return len(merged)
+            lm.load_weights([(target, weight)], strict=False)
+            del base, lora_a, lora_b, delta, weight
+            merged += 1
+    return merged
 
 
 class MLXEngine(SystemOneEngine):

@@ -176,9 +176,33 @@ def test_the_adapter_is_merged_into_the_mlx_weights(engines):
     assert any(".linear_attn.in_proj_qkv." in k for k in adapter)  # DeltaNet projections are merged too
 
 
-def test_an_adapter_the_merge_cannot_represent_is_refused(tmp_path):
+def _adapter(path, tensors, **config):
+    path.mkdir(parents=True, exist_ok=True)
+    (path / "adapter_config.json").write_text(json.dumps({"r": 4, "lora_alpha": 8, **config}))
+    mx.save_safetensors(str(path / "adapter_model.safetensors"),
+                        {name: mx.zeros((4, 4)) for name in tensors})
+    return str(path)
+
+
+PAIR = ["base_model.model.layers.0.mlp.up_proj.lora_A.weight",
+        "base_model.model.layers.0.mlp.up_proj.lora_B.weight"]
+
+
+@pytest.mark.parametrize(("tensors", "config", "named"), [
+    ([*PAIR, "base_model.model.embed_tokens.lora_embedding_A"], {}, "lora_embedding_A"),
+    ([*PAIR, "base_model.model.layers.0.mlp.up_proj.lora_magnitude_vector"], {}, "lora_magnitude_vector"),
+    (PAIR[:1], {}, "lora_B"),
+    (PAIR, {"rank_pattern": {"up_proj": 8}}, "rank_pattern"),
+], ids=["embedding-lora", "dora", "unpaired", "rank-pattern"])
+def test_an_adapter_the_merge_cannot_represent_is_refused(tmp_path, tensors, config, named):
     from strands_decider.mlx_engine import merge_lora
 
-    (tmp_path / "adapter_config.json").write_text(json.dumps({"r": 4, "lora_alpha": 8, "use_dora": True}))
-    with pytest.raises(ValueError, match="use_dora"):
-        merge_lora(object(), str(tmp_path), "model.")
+    with pytest.raises(ValueError, match=named):
+        merge_lora(object(), _adapter(tmp_path / "lora", tensors, **config), "model.")
+
+
+def test_a_checkpoint_with_an_embedding_lora_does_not_load_on_mlx(tmp_path, monkeypatch):
+    monkeypatch.setattr(sys.modules[__name__], "LORA_TARGETS", [*LORA_TARGETS, "embed_tokens"])
+    path = _checkpoint(tmp_path, "pointer")
+    with pytest.raises(ValueError, match="lora_embedding"):
+        load_engine(str(path), device="mlx")
