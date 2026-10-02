@@ -284,9 +284,9 @@ rendering, tokenisation, truncation, option positions, both evaluation paths, th
 temperatures and the fp32 head are the torch engine's own code. The head runs on the CPU, as
 torch.
 
-Measured with v19 on an M4 Pro, one question takes 113 ms at 222 input tokens, 499 ms at 1,118
-and 1,823 ms at 4,094, against 161, 694 and 2,713 ms on MPS. Sixteen questions on a 1,024-token
-state take 1,089 ms against 1,634 ms. The answers are the same: on 54 answers compared with v19
+Measured with v19 on an M4 Pro, one question takes 113 ms at 222 input tokens, 486 ms at 1,118
+and 1,764 ms at 4,094, against 162, 682 and 2,685 ms on MPS. Sixteen questions on a 1,024-token
+state take 1,060 ms against 1,622 ms. The answers are the same: on 54 answers compared with v19
 in fp32 on the CPU, none changes on either device, and the largest probability difference is
 0.0138 on MLX and 0.0051 on MPS. Most of MLX's difference comes from merging the LoRA adapter
 into the bf16 weights at load, where torch keeps it unmerged; with the torso in fp32 it is

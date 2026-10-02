@@ -283,8 +283,7 @@ public task file, and `split` refuses a pair whose two requests differ in length
 ## Serving on a Mac through MLX: accuracy and latency
 
 Measured with v19 on an M4 Pro (20-core GPU, 48 GB), bf16 on both devices: torch 2.7.1 and
-transformers 5.18.0 for MPS, mlx 0.32.3 for MLX. The answers and memory are from mlx-lm 0.32.0,
-the version the extra requires; the latency is from mlx-lm 0.31.3, measured before the bump. The
+transformers 5.18.0 for MPS, mlx 0.32.3 for MLX. All MLX figures are from mlx-lm 0.32.0, the version the extra requires. The
 setup is in [Serving on a Mac with MLX](../docs/inference.md#serving-on-a-mac-with-mlx).
 JevBench was not run on MLX.
 
@@ -309,21 +308,21 @@ medians over 7 warm runs for one question and 5 for several:
 
 | state tokens | input tokens | questions | path | MPS | MLX |
 | --- | --- | --- | --- | --- | --- |
-| 128 | 222 | 1 | whole prompt | 161 ms | 113 ms |
-| 1,024 | 1,118 | 1 | whole prompt | 694 ms | 499 ms |
-| 4,000 | 4,094 | 1 | whole prompt | 2,713 ms | 1,823 ms |
-| 256 | 605 | 4 | shared prefix | 454 ms | 307 ms |
-| 256 | 1,639 | 16 | shared prefix | 1,172 ms | 741 ms |
-| 1,024 | 1,373 | 4 | shared prefix | 915 ms | 645 ms |
-| 1,024 | 2,407 | 16 | shared prefix | 1,634 ms | 1,089 ms |
-| 1,024 | 17,902 | 16 | batched | 11,528 ms | 7,918 ms |
+| 128 | 222 | 1 | whole prompt | 162 ms | 113 ms |
+| 1,024 | 1,118 | 1 | whole prompt | 682 ms | 486 ms |
+| 4,000 | 4,094 | 1 | whole prompt | 2,685 ms | 1,764 ms |
+| 256 | 605 | 4 | shared prefix | 474 ms | 299 ms |
+| 256 | 1,639 | 16 | shared prefix | 1,154 ms | 723 ms |
+| 1,024 | 1,373 | 4 | shared prefix | 907 ms | 627 ms |
+| 1,024 | 2,407 | 16 | shared prefix | 1,622 ms | 1,060 ms |
+| 1,024 | 17,902 | 16 | batched | 11,542 ms | 7,396 ms |
 
 The batched comparison stops at 1,024-token states to bound memory: at 2,048 tokens and 16
 questions it is one 34,000-token batch.
 
 **Memory per request is lower on MLX.** MLX's peak (`mx.get_peak_memory`, reset before each
 shape) runs from 3.8 GiB to 4.9 GiB over these requests; the MPS driver's allocation runs from
-4.2 GiB to 6.3 GiB, and to 10.5 GiB for 16 batched 1,024-token prompts, where MLX peaks at
+4.2 GiB to 6.3 GiB, and to 9.5 GiB for 16 batched 1,024-token prompts, where MLX peaks at
 4.9 GiB. Loading peaks at 3.7 GiB on MLX, while the adapter is merged.
 
 ```bash

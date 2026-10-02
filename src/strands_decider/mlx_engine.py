@@ -4,7 +4,7 @@ On MPS the Qwen3.5 torso has no fused Gated DeltaNet kernel (`flash-linear-atten
 Triton, `causal_conv1d` needs CUDA) and every op is a separate dispatch. mlx-lm runs the same
 architecture on Metal with fused kernels, including a recurrent Gated DeltaNet kernel. Measured
 with v19 on an M4 Pro (`evaluation/bench_local.py`, median): one question at 222 / 1,118 / 4,094
-input tokens takes 161 / 694 / 2,713 ms on MPS and 113 / 499 / 1,823 ms here.
+input tokens takes 162 / 682 / 2,685 ms on MPS and 113 / 486 / 1,764 ms here.
 
 Only the torso forward moves. `MLXEngine` subclasses `SystemOneEngine`, so rendering,
 tokenisation, the question-first truncation, option positions, batching, temperatures and the
