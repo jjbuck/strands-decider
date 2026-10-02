@@ -269,13 +269,9 @@ def eval_cmd(
 
 
 def _auto_device() -> str:
-    """Best available device: cuda > mlx (with the mlx extra) > mps > cpu."""
-    from .infer import mlx_available
-
+    """Best available torch device: cuda > mps > cpu. MLX is opt-in (`--device mlx`)."""
     if torch.cuda.is_available():
         return "cuda"
-    if mlx_available():
-        return "mlx"
     if getattr(torch.backends, "mps", None) is not None and torch.backends.mps.is_available():
         return "mps"
     return "cpu"
@@ -304,7 +300,7 @@ def serve_cmd(
     device: str | None = typer.Option(
         None, "--device",
         help="cuda, mps or cpu (torch), or mlx (Apple silicon, needs the mlx extra). "
-        "Auto-detected when omitted: cuda > mlx > mps > cpu.",
+        "Auto-detected when omitted: cuda > mps > cpu; mlx only when asked for.",
     ),
     no_prefix_cache: bool = typer.Option(False, "--no-prefix-cache"),
     model_name: str | None = typer.Option(
@@ -346,7 +342,7 @@ def ask_cmd(
     device: str | None = typer.Option(
         None, "--device",
         help="cuda, mps or cpu (torch), or mlx (Apple silicon, needs the mlx extra). "
-        "Auto-detected when omitted: cuda > mlx > mps > cpu.",
+        "Auto-detected when omitted: cuda > mps > cpu; mlx only when asked for.",
     ),
     as_json: bool = typer.Option(False, "--json", help="Print the raw API response."),
 ) -> None:

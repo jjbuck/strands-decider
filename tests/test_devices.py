@@ -16,12 +16,12 @@ from strands_decider import cli, infer
     ("cuda", "mlx", "mps", "expected"),
     [
         (True, True, True, "cuda"),
-        (False, True, True, "mlx"),
-        (False, False, True, "mps"),
+        (False, True, True, "mps"),  # mlx is opt-in: an installed extra does not change the default
+        (False, True, False, "cpu"),
         (False, False, False, "cpu"),
     ],
 )
-def test_auto_device_prefers_cuda_then_mlx_then_mps(monkeypatch, cuda, mlx, mps, expected):
+def test_auto_device_is_cuda_then_mps_then_cpu_and_never_mlx(monkeypatch, cuda, mlx, mps, expected):
     monkeypatch.setattr(torch.cuda, "is_available", lambda: cuda)
     monkeypatch.setattr(infer, "mlx_available", lambda: mlx)
     monkeypatch.setattr(torch.backends.mps, "is_available", lambda: mps)

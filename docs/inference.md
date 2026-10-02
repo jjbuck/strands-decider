@@ -6,7 +6,7 @@ state, the text to classify; it does not generate text. A question is a `noul` (
 returned as P(true)), a `choice` (one of N options) or a `score` (a level on an ordered
 scale). Install the package, point the commands at the published Hub id or at a checkpoint you
 trained, then `strands-decider ask` or `strands-decider serve`. Pass `--device cuda`, `mps`, `cpu` or `mlx`
-explicitly; without it the CLI picks cuda, then mlx (with the `mlx` extra), then mps, then cpu. A
+explicitly; without it the CLI picks cuda, then mps, then cpu, and mlx only when asked for. A
 checkpoint from `training/recipe.sh all` is already calibrated; calibrate any other
 checkpoint with `strands-decider calibrate` before you serve it.
 
@@ -67,7 +67,7 @@ function, so only the first fallback matters there, and it costs 32 ms a forward
 
 **macOS (Apple silicon) with MLX.** The `mlx` extra adds mlx and mlx-lm, and `--device mlx`
 runs the torso on Metal through mlx-lm ([Serving on a Mac with MLX](#serving-on-a-mac-with-mlx)).
-With the extra installed, a command without `--device` picks mlx.
+MLX is opt-in: with the extra installed, a command without `--device` still runs on MPS.
 
 ```bash
 pip install -e ".[dev,mlx]"
