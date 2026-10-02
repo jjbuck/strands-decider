@@ -33,6 +33,26 @@ def test_mlx_is_unavailable_off_apple_silicon(monkeypatch):
     assert not infer.mlx_available()
 
 
+@pytest.mark.parametrize(("found", "expected"), [
+    ({"mlx.core", "mlx_lm"}, True),
+    ({"mlx_lm"}, False),  # an `mlx` namespace directory left behind without mlx.core
+    (None, False),  # no `mlx` at all: finding `mlx.core` raises
+], ids=["installed", "namespace-leftover", "absent"])
+def test_mlx_is_available_only_with_mlx_core(monkeypatch, found, expected):
+    import importlib.util
+
+    monkeypatch.setattr("sys.platform", "darwin")
+    monkeypatch.setattr("platform.machine", lambda: "arm64")
+
+    def find_spec(name, *args, **kwargs):
+        if found is None:
+            raise ModuleNotFoundError(f"No module named {name.split('.')[0]!r}")
+        return object() if name in found else None
+
+    monkeypatch.setattr(importlib.util, "find_spec", find_spec)
+    assert infer.mlx_available() is expected
+
+
 def test_device_mlx_without_the_extra_names_it_before_loading_anything(monkeypatch):
     monkeypatch.setattr(infer, "mlx_available", lambda: False)
 

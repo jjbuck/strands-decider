@@ -483,17 +483,24 @@ def load_engine(
 
 
 def mlx_available() -> bool:
-    """True on Apple silicon with the `mlx` extra installed."""
+    """True on Apple silicon with the `mlx` extra installed.
+
+    `mlx` is a namespace package: `pip uninstall mlx` can leave an importable `mlx`
+    directory behind (mlx-metal's), so the check is for `mlx.core`.
+    """
     import importlib.util
     import platform
     import sys
 
-    return (
-        sys.platform == "darwin"
-        and platform.machine() == "arm64"
-        and importlib.util.find_spec("mlx") is not None
-        and importlib.util.find_spec("mlx_lm") is not None
-    )
+    if sys.platform != "darwin" or platform.machine() != "arm64":
+        return False
+    try:
+        return (
+            importlib.util.find_spec("mlx.core") is not None
+            and importlib.util.find_spec("mlx_lm") is not None
+        )
+    except ModuleNotFoundError:  # finding `mlx.core` imports `mlx`, which may be absent
+        return False
 
 
 def load_mlx(checkpoint: str, config: EngineConfig | None = None) -> SystemOneEngine:
