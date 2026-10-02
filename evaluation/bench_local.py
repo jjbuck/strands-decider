@@ -74,6 +74,14 @@ def make_questions(k: int) -> dict[str, ChoiceQuestion]:
     }
 
 
+def reset_peak_mem(device: str) -> None:
+    """Start MLX's peak counter at this request shape; it otherwise holds the load-time peak."""
+    if device == "mlx":
+        import mlx.core as mx
+
+        mx.reset_peak_memory()
+
+
 def peak_mem_gib(device: str) -> float:
     if device == "mlx":
         import mlx.core as mx
@@ -154,6 +162,7 @@ def main() -> int:
                 answers = {}
                 for path in paths:
                     engine.cfg = replace(base_cfg, use_prefix_cache=(path == "prefix"))
+                    reset_peak_mem(device)
                     times, resp = time_request(engine, req, args.reps)
                     if path == "prefix" and not engine.cfg.use_prefix_cache:
                         # The engine fell back to batched encoding: record it, don't
