@@ -1,0 +1,165 @@
+
+============================== preds/this-that-model-1.0_ship.jsonl items 2421
+
+== JB-hard  (n=130)
+                        coverage               acc   acc_hobson_same     acc_consensus             agree          agree_sd                tv                kl
+model                      1.000             0.469               -                 -               0.600             0.667             0.372             0.945
+hobson                     1.000             0.523               -                 -               1.000             1.000             0.000             0.000
+merged_full                1.000             0.531               -                 -               0.992             1.000             0.004             0.000
+nostate                    1.000             0.462               -                 -               0.469             0.000             0.273             0.265
+qattn10@7                  1.000             0.438               -                 -               0.692             0.580             0.174             0.137
+
+== JB-long  (n=77)
+                        coverage               acc   acc_hobson_same     acc_consensus             agree          agree_sd                tv                kl
+model                      1.000             0.325               -                 -               0.506             0.550             0.429             1.131
+hobson                     1.000             0.403               -                 -               1.000             1.000             0.000             0.000
+merged_full                1.000             0.416               -                 -               0.987             1.000             0.004             0.000
+nostate                    1.000             0.416               -                 -               0.481             0.000             0.298             0.305
+qattn10@7                  1.000             0.351               -                 -               0.766             0.700             0.161             0.115
+
+== REAL-agree  (n=1083)
+                        coverage               acc   acc_hobson_same     acc_consensus             agree          agree_sd                tv                kl
+model                      1.000               -                 -                 -               0.695             0.639             0.335             1.263
+hobson                     1.000               -                 -                 -               1.000             1.000             0.000             0.000
+merged_full                1.000               -                 -                 -               0.996             0.997             0.003             0.000
+nostate                    1.000               -                 -                 -               0.681             0.000             0.244             0.354
+qattn10@7                  1.000               -                 -                 -               0.935             0.853             0.057             0.020
+
+== LONG  (n=471)
+                        coverage               acc   acc_hobson_same     acc_consensus             agree          agree_sd                tv                kl
+model                      1.000               -                 -                 -               0.635             0.630             0.359             1.390
+hobson                     1.000               -                 -                 -               1.000             1.000             0.000             0.000
+merged_full                1.000               -                 -                 -               0.996             0.988             0.003             0.000
+nostate                    1.000               -                 -                 -               0.650             0.000             0.266             0.381
+qattn10@7                  1.000               -                 -                 -               0.932             0.848             0.061             0.024
+
+== CF  (n=406)
+                             acc              flip          flip_rel flip_given_hobson               dir             dmean         dmean_rel             agree
+model                      0.716             0.458             1.706             0.468             0.633             0.452             2.655             0.658
+hobson                     0.594             0.268             1.000             1.000             0.948             0.170             1.000             1.000
+merged_full                0.599             0.276             1.028             1.000             0.951             0.170             1.000             0.994
+nostate                    0.451             0.000             0.000             0.000             0.000             0.000             0.000             0.713
+qattn10@7                  0.628             0.345             1.284             0.881             0.894             0.185             1.090             0.897
+
+-- CF flip by kind
+                                      n      model     hobson    nostate     drop@7   rand10@7   rand25@7  qattn10@7
+amount_insert                        90      0.600      0.100      0.000      0.022      0.000      0.111      0.222
+human_insert                        156      0.596      0.346      0.000      0.000      0.019      0.077      0.462
+id_add_second                         5      0.000      0.000      0.000      0.200      0.000      0.000      0.000
+id_digit_existing                    26      0.077      0.000      0.000      0.000      0.038      0.000      0.000
+id_digit_inserted                    10      0.000      0.000      0.000      0.000      0.000      0.000      0.000
+id_remove_one                        10      0.000      0.000      0.000      0.000      0.000      0.000      0.000
+insists_3v4                          20      0.000      0.050      0.000      0.000      0.000      0.000      0.150
+procedure_intent                     40      0.500      0.000      0.000      0.000      0.000      0.000      0.000
+wrapup_replace                       49      0.347      0.918      0.000      0.673      0.571      0.755      0.918
+
+== CF-probe  (n=320)
+                             acc              flip          flip_rel flip_given_hobson               dir             dmean         dmean_rel             agree
+model                      0.703             0.406             1.238             0.590             0.922             0.403             2.647             0.750
+hobson                     0.653             0.328             1.000             1.000             0.884             0.152             1.000             1.000
+merged_full                0.652             0.328             1.000             0.971             0.878             0.152             1.000             0.989
+nostate                    0.500             0.000             0.000             0.000             0.000             0.000             0.000             0.688
+qattn10@7                  0.695             0.403             1.229             0.819             0.894             0.177             1.165             0.880
+
+-- CF-probe flip by kind
+                                      n      model     hobson    nostate     drop@7   rand10@7   rand25@7  qattn10@7
+probe_amount_vs_limit                43      0.070      0.326      0.000      0.093      0.116      0.116      0.279
+probe_amount_vs_limit_distract       38      0.105      0.237      0.000      0.132      0.184      0.079      0.158
+probe_date_order                     49      0.143      0.061      0.000      0.000      0.000      0.020      0.020
+probe_date_order_distract            32      0.219      0.031      0.000      0.000      0.000      0.000      0.000
+probe_id_match                       37      0.595      0.541      0.000      0.973      0.946      0.811      0.811
+probe_id_match_distract              42      0.500      0.381      0.000      0.310      0.357      0.310      0.548
+probe_status_equal                   35      0.914      0.886      0.000      0.886      0.800      0.657      0.943
+probe_status_equal_distract          44      0.773      0.250      0.000      0.568      0.386      0.341      0.545
+
+== SHUF  (n=387)
+                          change        both_right
+model                      0.550             0.478
+hobson                     0.339             0.245
+merged_full                0.351             0.256
+nostate                    0.000             0.000
+qattn10@7                  0.398             0.318
+
+== REAL-label  (n=400)
+                        coverage               acc   acc_hobson_same     acc_consensus             agree          agree_sd                tv                kl
+model                      1.000             0.627               -               0.660             0.700             0.697             0.325             1.206
+hobson                     1.000             0.785               -               0.818             1.000             1.000             0.000             0.000
+merged_full                1.000             0.785               -               0.821             0.995             0.991             0.003             0.000
+nostate                    1.000             0.635               -               0.658             0.728             0.000             0.210             0.230
+qattn10@7                  1.000             0.787               -               0.823             0.943             0.890             0.049             0.014
+
+JB-hard acc 0.469 vs hobson 0.523: diff -5.4 points  (pass if >= -1.5; SE ~4.4 points at n=130)  FAIL
+CF: flip 0.458, flip_rel 1.706 (brief: pass if >= 0.95) PASS; flip_given_hobson 0.468 (retention of hobson's own correct flips; stricter, use it too), dir 0.633, dmean_rel 2.655
+CF-probe: flip 0.406, flip_rel 1.238 (brief: pass if >= 0.95) PASS; flip_given_hobson 0.590 (retention of hobson's own correct flips; stricter, use it too), dir 0.922, dmean_rel 2.647  [CF-probe flip_rel is not monotone in reading: drop@7 scores 1.09]
+REAL-agree: agree 0.695 agree_sd 0.639 | nostate agree_sd 0.000
+LONG: agree 0.635 agree_sd 0.630 | nostate agree_sd 0.000
+
+JB-hard by family (n, this-that acc, hobson acc):
+  adequacy                       12 0.667 0.833
+  adversarial                     6 0.333 0.500
+  ambiguous                       7 0.143 0.714
+  judge_hard                     17 0.647 0.529
+  long_policy                    19 0.368 0.368
+  multi_hop                      18 0.278 0.444
+  policy                         12 1.000 0.750
+  probability                    10 0.400 0.300
+  temporal_numeric               15 0.267 0.200
+  tradeoff                        6 0.167 0.667
+  trap                            8 0.750 0.875
+JB-hard McNemar (tt right & hobson wrong, hobson right & tt wrong, p): (17, 24, 0.34888887944907765)
+
+-- CF flip by kind
+                                      n      model     hobson    nostate     drop@7   rand10@7   rand25@7  qattn10@7
+amount_insert                        90      0.600      0.100      0.000      0.022      0.000      0.111      0.222
+human_insert                        156      0.596      0.346      0.000      0.000      0.019      0.077      0.462
+id_add_second                         5      0.000      0.000      0.000      0.200      0.000      0.000      0.000
+id_digit_existing                    26      0.077      0.000      0.000      0.000      0.038      0.000      0.000
+id_digit_inserted                    10      0.000      0.000      0.000      0.000      0.000      0.000      0.000
+id_remove_one                        10      0.000      0.000      0.000      0.000      0.000      0.000      0.000
+insists_3v4                          20      0.000      0.050      0.000      0.000      0.000      0.000      0.150
+procedure_intent                     40      0.500      0.000      0.000      0.000      0.000      0.000      0.000
+wrapup_replace                       49      0.347      0.918      0.000      0.673      0.571      0.755      0.918
+
+-- CF flip by domain
+                                      n      model     hobson    nostate     drop@7   rand10@7   rand25@7  qattn10@7
+airline                             120      0.633      0.458      0.000      0.233      0.142      0.267      0.575
+banking_knowledge                   161      0.335      0.006      0.000      0.006      0.006      0.000      0.031
+retail                              125      0.448      0.424      0.000      0.056      0.112      0.216      0.528
+
+-- CF flip by pos
+                                      n      model     hobson    nostate     drop@7   rand10@7   rand25@7  qattn10@7
+pos<0.5                             172      0.535      0.169      0.000      0.000      0.012      0.041      0.262
+pos>=0.5                            234      0.402      0.342      0.000      0.154      0.128      0.222      0.406
+
+-- CF flip by len
+                                      n      model     hobson    nostate     drop@7   rand10@7   rand25@7  qattn10@7
+state 2-4k                          159      0.277      0.390      0.000      0.082      0.082      0.176      0.459
+state<2k                            171      0.655      0.269      0.000      0.135      0.111      0.181      0.368
+state>=4k                            76      0.395      0.013      0.000      0.000      0.000      0.000      0.053
+
+-- CF-probe flip by kind
+                                      n      model     hobson    nostate     drop@7   rand10@7   rand25@7  qattn10@7
+probe_amount_vs_limit                43      0.070      0.326      0.000      0.093      0.116      0.116      0.279
+probe_amount_vs_limit_distract       38      0.105      0.237      0.000      0.132      0.184      0.079      0.158
+probe_date_order                     49      0.143      0.061      0.000      0.000      0.000      0.020      0.020
+probe_date_order_distract            32      0.219      0.031      0.000      0.000      0.000      0.000      0.000
+probe_id_match                       37      0.595      0.541      0.000      0.973      0.946      0.811      0.811
+probe_id_match_distract              42      0.500      0.381      0.000      0.310      0.357      0.310      0.548
+probe_status_equal                   35      0.914      0.886      0.000      0.886      0.800      0.657      0.943
+probe_status_equal_distract          44      0.773      0.250      0.000      0.568      0.386      0.341      0.545
+
+-- CF-probe flip by domain
+                                      n      model     hobson    nostate     drop@7   rand10@7   rand25@7  qattn10@7
+airline                              80      0.375      0.438      0.000      0.412      0.362      0.388      0.463
+banking_knowledge                   130      0.462      0.277      0.000      0.300      0.300      0.246      0.400
+retail                              110      0.364      0.309      0.000      0.382      0.355      0.245      0.364
+
+-- CF-probe flip by pos
+                                      n      model     hobson    nostate     drop@7   rand10@7   rand25@7  qattn10@7
+pos<0.5                             305      0.413      0.328      0.000      0.361      0.344      0.282      0.410
+pos>=0.5                             15      0.267      0.333      0.000      0.267      0.133      0.267      0.267
+
+-- CF-probe flip by len
+                                      n      model     hobson    nostate     drop@7   rand10@7   rand25@7  qattn10@7
+state 2-4k                          225      0.418      0.284      0.000      0.324      0.302      0.253      0.364
+state<2k                             95      0.379      0.432      0.000      0.432      0.411      0.347      0.495

@@ -1,0 +1,10 @@
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 3849.21it/s]
+dev items 100
+/home/ubuntu/work/q1/q1fo.py:64: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /__w/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:820.)
+  m0 = float(lg[t1] - lg[t2]); wF = float(p[t1] * p[t2])
+w8a8 25/100 T=1954 35s flips 0 corr(pred,dm) 0.424 slope 0.417 mem 14.4G
+w8a8 50/100 T=1829 69s flips 0 corr(pred,dm) 0.208 slope 0.241 mem 15.4G
+w8a8 75/100 T=1808 102s flips 0 corr(pred,dm) 0.270 slope 0.314 mem 15.4G
+w8a8 100/100 T=1768 135s flips 0 corr(pred,dm) 0.294 slope 0.352 mem 15.4G
+done w8a8 135s

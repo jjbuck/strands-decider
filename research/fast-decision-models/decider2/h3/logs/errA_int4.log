@@ -1,0 +1,15 @@
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 4140.75it/s]
+samples 12
+A 1/12 T=2208 15s mem 10.3G
+A 2/12 T=909 25s mem 10.3G
+A 3/12 T=1997 32s mem 10.3G
+A 4/12 T=1918 38s mem 10.3G
+A 5/12 T=1554 44s mem 10.3G
+A 6/12 T=1915 51s mem 10.3G
+A 7/12 T=2716 60s mem 11.2G
+A 8/12 T=2147 67s mem 11.2G
+A 9/12 T=1540 73s mem 11.2G
+A 10/12 T=1388 78s mem 11.2G
+A 11/12 T=1799 84s mem 11.2G
+A 12/12 T=1976 91s mem 11.2G
+done 90.8091824054718

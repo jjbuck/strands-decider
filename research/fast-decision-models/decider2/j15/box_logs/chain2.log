@@ -1,0 +1,153 @@
+=== 22:02:03 preds/bf16t_dev.jsonl --prec bf16 --suites DEV --taps 8,12,14,16
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 4153.34it/s]
+built bf16 fold mem 8.87
+questions 1736 done 0 taps (8, 12, 14, 16)
+bf16 200 27s
+bf16 400 54s
+bf16 600 81s
+bf16 800 104s
+bf16 1000 130s
+bf16 1200 169s
+bf16 1400 233s
+bf16 1600 295s
+done bf16 1736 337s
+=== 22:07:53 preds/bf16t_eval.jsonl --prec bf16 --suites JB-all,REAL-agree,LONG,CF,CF-probe --taps 8,12,14,16
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 3996.32it/s]
+built bf16 fold mem 8.87
+questions 3227 done 0 taps (8, 12, 14, 16)
+bf16 200 10s
+bf16 400 31s
+bf16 600 55s
+bf16 800 81s
+bf16 1000 111s
+bf16 1200 136s
+bf16 1400 179s
+bf16 1600 239s
+bf16 1800 294s
+bf16 2000 344s
+bf16 2200 370s
+bf16 2400 389s
+bf16 2600 411s
+bf16 2800 444s
+bf16 3000 474s
+bf16 3200 499s
+done bf16 3227 502s
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 4212.47it/s]
+calib 62s
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 3588.88it/s]
+saved 117s
+=== 22:18:36 preds/b8s1_dev.jsonl --prec map:~/work/h1/precmap_w8a8_b8.json:w8a8 --codes /home/ubuntu/work/j15/codes_w8_s1.pt --suites DEV --taps 8,12,14,16
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 4203.17it/s]
+built map:~/work/h1/precmap_w8a8_b8.json:w8a8 rot mem 8.15
+questions 1736 done 0 taps (8, 12, 14, 16)
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 200 20s
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 400 39s
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 600 58s
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 800 73s
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 1000 91s
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 1200 119s
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 1400 167s
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 1600 213s
+done map:~/work/h1/precmap_w8a8_b8.json:w8a8 1736 245s
+=== 22:22:54 preds/b8s1_eval.jsonl --prec map:~/work/h1/precmap_w8a8_b8.json:w8a8 --codes /home/ubuntu/work/j15/codes_w8_s1.pt --suites JB-all,REAL-agree,LONG,CF,CF-probe --taps 8,12,14,16
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 4160.25it/s]
+built map:~/work/h1/precmap_w8a8_b8.json:w8a8 rot mem 8.15
+questions 3227 done 0 taps (8, 12, 14, 16)
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 200 8s
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 400 23s
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 600 39s
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 800 57s
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 1000 78s
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 1200 95s
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 1400 127s
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 1600 172s
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 1800 212s
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 2000 249s
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 2200 268s
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 2400 281s
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 2600 297s
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 2800 320s
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 3000 341s
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 3200 358s
+done map:~/work/h1/precmap_w8a8_b8.json:w8a8 3227 360s
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 3867.96it/s]
+calib 54s
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 3902.53it/s]
+saved 109s
+=== 22:31:08 preds/b8s2_dev.jsonl --prec map:~/work/h1/precmap_w8a8_b8.json:w8a8 --codes /home/ubuntu/work/j15/codes_w8_s2.pt --suites DEV --taps 8,12,14,16
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 3415.00it/s]
+built map:~/work/h1/precmap_w8a8_b8.json:w8a8 rot mem 8.15
+questions 1736 done 0 taps (8, 12, 14, 16)
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 200 19s
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 400 38s
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 600 57s
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 800 72s
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 1000 90s
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 1200 118s
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 1400 166s
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 1600 212s
+done map:~/work/h1/precmap_w8a8_b8.json:w8a8 1736 244s
+=== 22:35:25 preds/b8s2_eval.jsonl --prec map:~/work/h1/precmap_w8a8_b8.json:w8a8 --codes /home/ubuntu/work/j15/codes_w8_s2.pt --suites JB-all,REAL-agree,LONG,CF,CF-probe --taps 8,12,14,16
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 4096.89it/s]
+built map:~/work/h1/precmap_w8a8_b8.json:w8a8 rot mem 8.15
+questions 3227 done 0 taps (8, 12, 14, 16)
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 200 8s
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 400 22s
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 600 39s
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 800 56s
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 1000 78s
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 1200 95s
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 1400 127s
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 1600 172s
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 1800 212s
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 2000 249s
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 2200 268s
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 2400 281s
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 2600 296s
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 2800 320s
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 3000 341s
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 3200 358s
+done map:~/work/h1/precmap_w8a8_b8.json:w8a8 3227 360s
+=== 22:41:38 preds/w4pre12_eval.jsonl --prec map:~/work/j15/pm_w4pre12.json:w4a4 --codes w8=~/work/h2/codes_gptq_w8.pt,w4=~/work/h2/codes_gptq_w4.pt --suites JB-all,REAL-agree,LONG,CF,CF-probe
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 4021.76it/s]
+built map:~/work/j15/pm_w4pre12.json:w4a4 rot mem 7.79
+questions 3227 done 0 taps ()
+map:~/work/j15/pm_w4pre12.json:w4a4 200 7s
+map:~/work/j15/pm_w4pre12.json:w4a4 400 19s
+map:~/work/j15/pm_w4pre12.json:w4a4 600 33s
+map:~/work/j15/pm_w4pre12.json:w4a4 800 47s
+map:~/work/j15/pm_w4pre12.json:w4a4 1000 65s
+map:~/work/j15/pm_w4pre12.json:w4a4 1200 80s
+map:~/work/j15/pm_w4pre12.json:w4a4 1400 106s
+map:~/work/j15/pm_w4pre12.json:w4a4 1600 144s
+map:~/work/j15/pm_w4pre12.json:w4a4 1800 177s
+map:~/work/j15/pm_w4pre12.json:w4a4 2000 208s
+map:~/work/j15/pm_w4pre12.json:w4a4 2200 223s
+map:~/work/j15/pm_w4pre12.json:w4a4 2400 234s
+map:~/work/j15/pm_w4pre12.json:w4a4 2600 247s
+map:~/work/j15/pm_w4pre12.json:w4a4 2800 266s
+map:~/work/j15/pm_w4pre12.json:w4a4 3000 283s
+map:~/work/j15/pm_w4pre12.json:w4a4 3200 297s
+done map:~/work/j15/pm_w4pre12.json:w4a4 3227 299s
+=== 22:46:52 preds/w4pre18_eval.jsonl --prec map:~/work/j15/pm_w4pre18.json:w4a4 --codes w8=~/work/h2/codes_gptq_w8.pt,w4=~/work/h2/codes_gptq_w4.pt --suites JB-all,REAL-agree,LONG,CF,CF-probe
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 4290.90it/s]
+built map:~/work/j15/pm_w4pre18.json:w4a4 rot mem 7.61
+questions 3227 done 0 taps ()
+map:~/work/j15/pm_w4pre18.json:w4a4 200 7s
+map:~/work/j15/pm_w4pre18.json:w4a4 400 18s
+map:~/work/j15/pm_w4pre18.json:w4a4 600 30s
+map:~/work/j15/pm_w4pre18.json:w4a4 800 43s
+map:~/work/j15/pm_w4pre18.json:w4a4 1000 58s
+map:~/work/j15/pm_w4pre18.json:w4a4 1200 71s
+map:~/work/j15/pm_w4pre18.json:w4a4 1400 95s
+map:~/work/j15/pm_w4pre18.json:w4a4 1600 129s
+map:~/work/j15/pm_w4pre18.json:w4a4 1800 159s
+map:~/work/j15/pm_w4pre18.json:w4a4 2000 187s
+map:~/work/j15/pm_w4pre18.json:w4a4 2200 201s
+map:~/work/j15/pm_w4pre18.json:w4a4 2400 211s
+map:~/work/j15/pm_w4pre18.json:w4a4 2600 222s
+map:~/work/j15/pm_w4pre18.json:w4a4 2800 239s
+map:~/work/j15/pm_w4pre18.json:w4a4 3000 254s
+map:~/work/j15/pm_w4pre18.json:w4a4 3200 267s
+done map:~/work/j15/pm_w4pre18.json:w4a4 3227 269s
+CHAIN2_DONE 22:51:34

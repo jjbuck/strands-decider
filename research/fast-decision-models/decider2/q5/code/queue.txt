@@ -1,0 +1,12 @@
+python q5cal.py --dom bank --n 160 --layers 12-15 --neur --fn --frs
+python q5cal.py --dom ret --n 160 --layers 12-15 --neur --fn --frs
+python q5nstat.py
+python q5cal.py --dom bank --n 160 --layers 16-19 --fn --frs
+python q5cal.py --dom ret --n 160 --layers 16-19 --fn --frs
+python q5cal.py --dom bank --n 160 --layers 20-23 --fn --frs
+python q5cal.py --dom ret --n 160 --layers 20-23 --fn --frs
+python q5cal.py --dom bank --n 160 --layers 8-11 --fn --frs
+python q5cal.py --dom ret --n 160 --layers 8-11 --fn --frs
+python q5hcal.py --dom bank --n 64
+python q5hcal.py --dom ret --n 64
+touch ~/work/q5/CAL_DONE

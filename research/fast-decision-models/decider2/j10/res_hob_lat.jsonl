@@ -1,0 +1,12 @@
+{"model": "hobson-bf16-lean2", "T": 64, "nq": 1, "qtok": 91, "wall": {"median": 15.502, "p95": 15.529, "n": 30}}
+{"model": "hobson-bf16-lean2", "T": 64, "nq": 4, "qtok": 432, "wall": {"median": 32.854, "p95": 32.864, "n": 30}}
+{"model": "hobson-bf16-lean2", "T": 128, "nq": 1, "qtok": 91, "wall": {"median": 15.85, "p95": 15.86, "n": 30}}
+{"model": "hobson-bf16-lean2", "T": 128, "nq": 4, "qtok": 432, "wall": {"median": 37.068, "p95": 37.075, "n": 30}}
+{"model": "hobson-bf16-lean2", "T": 256, "nq": 1, "qtok": 91, "wall": {"median": 25.284, "p95": 25.302, "n": 30}}
+{"model": "hobson-bf16-lean2", "T": 256, "nq": 4, "qtok": 432, "wall": {"median": 43.748, "p95": 43.763, "n": 30}}
+{"model": "hobson-bf16-lean2", "T": 400, "nq": 1, "qtok": 91, "wall": {"median": 32.803, "p95": 32.813, "n": 30}}
+{"model": "hobson-bf16-lean2", "T": 400, "nq": 4, "qtok": 432, "wall": {"median": 48.431, "p95": 48.441, "n": 30}}
+{"model": "hobson-bf16-lean2", "T": 1000, "nq": 1, "qtok": 91, "wall": {"median": 57.058, "p95": 57.154, "n": 30}}
+{"model": "hobson-bf16-lean2", "T": 1000, "nq": 4, "qtok": 432, "wall": {"median": 83.593, "p95": 83.668, "n": 30}}
+{"model": "hobson-bf16-lean2", "T": 4000, "nq": 1, "qtok": 91, "wall": {"median": 201.597, "p95": 201.639, "n": 30}}
+{"model": "hobson-bf16-lean2", "T": 4000, "nq": 4, "qtok": 432, "wall": {"median": 215.797, "p95": 215.82, "n": 30}}

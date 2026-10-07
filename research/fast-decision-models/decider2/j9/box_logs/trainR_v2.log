@@ -1,0 +1,18 @@
+pool 12699 cf 4880 v5 12557
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 3648.38it/s]
+{"upd": 0, "probe_kl": 0.0128, "probe_agree": 1.0}
+/home/ubuntu/work/j9/train_j9.py:184: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /__w/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:820.)
+  lsum['hid'] += float(hl); lcnt['hid'] += 1
+{"upd": 1, "t": 6, "mem": 7.5, "lr": 5.5555469881955174e-06, "hid": 0.0399, "kl_real": 0.045, "agree_real": 1.0, "live_frac": 0.6541, "T": 1773.1667, "ce_v5": 0.5253, "acc_v5": 1.0, "kl_v5": 0.0066, "agree_v5": 1.0}
+{"upd": 10, "t": 73, "mem": 7.5, "lr": 3.055084377396947e-05, "hid": 0.0393, "kl_real": 0.098, "agree_real": 0.9024, "live_frac": 0.656, "T": 2513.7778, "ce_v5": 0.2376, "acc_v5": 1.0, "kl_v5": 0.0002, "agree_v5": 1.0}
+{"upd": 20, "t": 144, "mem": 7.5, "lr": 5.829735862064091e-05, "hid": 0.0316, "kl_real": 0.051, "agree_real": 0.9111, "live_frac": 0.704, "T": 2313.5167, "ce_v5": 0.3752, "acc_v5": 0.8, "kl_v5": 0.0064, "agree_v5": 1.0}
+{"upd": 30, "t": 215, "mem": 7.5, "lr": 8.599165779326983e-05, "hid": 0.0364, "kl_real": 0.0474, "agree_real": 0.9556, "live_frac": 0.6838, "T": 2276.75, "ce_v5": 0.132, "acc_v5": 1.0, "kl_v5": 0.0033, "agree_v5": 1.0}
+{"upd": 40, "t": 292, "mem": 7.5, "lr": 9.97534852915723e-05, "hid": 0.0338, "kl_real": 0.0702, "agree_real": 0.8478, "live_frac": 0.7129, "T": 2575.5667, "ce_v5": 0.422, "acc_v5": 0.9286, "kl_v5": 0.027, "agree_v5": 0.9286}
+{"upd": 50, "t": 349, "mem": 7.5, "lr": 9.961501876182148e-05, "hid": 0.0322, "kl_real": 0.0643, "agree_real": 0.8571, "live_frac": 0.7301, "T": 1755.7833, "ce_v5": 0.2081, "acc_v5": 0.8889, "kl_v5": 0.0106, "agree_v5": 0.9444}
+{"upd": 60, "t": 436, "mem": 7.5, "lr": 9.94459753267812e-05, "hid": 0.0356, "kl_real": 0.0799, "agree_real": 0.8913, "live_frac": 0.6806, "T": 2403.8, "ce_v5": 0.4038, "acc_v5": 0.7857, "kl_v5": 0.0092, "agree_v5": 0.9286}
+{"upd": 70, "t": 580, "mem": 7.5, "lr": 9.924647084037798e-05, "hid": 0.0391, "kl_real": 0.0807, "agree_real": 0.8636, "live_frac": 0.6755, "T": 2418.2833, "ce_v5": 0.7788, "acc_v5": 0.6875, "kl_v5": 0.0275, "agree_v5": 1.0}
+{"upd": 80, "t": 720, "mem": 7.5, "lr": 9.901664203302126e-05, "hid": 0.0369, "kl_real": 0.1085, "agree_real": 0.7955, "live_frac": 0.6902, "T": 2317.25, "ce_v5": 0.3249, "acc_v5": 0.875, "kl_v5": 0.013, "agree_v5": 0.9375}
+{"upd": 90, "t": 842, "mem": 7.5, "lr": 9.875664641789545e-05, "hid": 0.0391, "kl_real": 0.0732, "agree_real": 0.8824, "live_frac": 0.6499, "T": 2372.0167, "ce_v5": 0.1771, "acc_v5": 1.0, "kl_v5": 0.0264, "agree_v5": 1.0}
+{"upd": 100, "t": 1028, "mem": 7.5, "lr": 9.846666218300807e-05, "hid": 0.0299, "kl_real": 0.0588, "agree_real": 0.8913, "live_frac": 0.7079, "T": 2265.5333, "ce_v5": 0.3982, "acc_v5": 0.7857, "kl_v5": 0.0372, "agree_v5": 0.8571, "probe_kl": 0.0296, "probe_agree": 0.9792}
+{"upd": 110, "t": 1155, "mem": 7.5, "lr": 9.814688806906869e-05, "hid": 0.0403, "kl_real": 0.0551, "agree_real": 0.8913, "live_frac": 0.651, "T": 2349.8, "ce_v5": 0.3137, "acc_v5": 0.9286, "kl_v5": 0.0101, "agree_v5": 0.9286}

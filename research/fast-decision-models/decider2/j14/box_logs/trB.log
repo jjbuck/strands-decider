@@ -1,0 +1,44 @@
+pool 10116 dev 120 dev tasks 17 v5 12557
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 3636.10it/s]
+DEV {"n": 464, "n_sd": 117, "agree": 0.7521551724137931, "agree_sd": 0.02564102564102564, "tv": 0.20989578219676583, "sd_proc": 0.0, "n_proc": 52, "sd_other": 0.046153846153846156, "step": 0, "t": 137.1129424571991}
+/home/ubuntu/work/j14/j14train.py:133: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /__w/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:820.)
+  return w * (kl + a.w_hid * hid), float(kl), float(hid)
+step 10 kl 0.4983 hid 0.0859 lr 9.99e-06 114s mem 18.8GB
+step 20 kl 0.5303 hid 0.1912 lr 1.99e-05 179s mem 18.8GB
+step 30 kl 0.2447 hid 0.1537 lr 1.99e-05 259s mem 19.2GB
+step 40 kl 0.2708 hid 0.1441 lr 1.97e-05 332s mem 19.2GB
+step 50 kl 0.3005 hid 0.1359 lr 1.96e-05 411s mem 19.2GB drift 0.0082
+DEV {"n": 464, "n_sd": 117, "agree": 0.8469827586206896, "agree_sd": 0.49572649572649574, "tv": 0.14932732351509662, "sd_proc": 0.11538461538461539, "n_proc": 52, "sd_other": 0.8, "step": 50, "t": 68.21748208999634}
+new best 50
+step 60 kl 0.2327 hid 0.1198 lr 1.94e-05 589s mem 19.2GB
+step 70 kl 0.1904 hid 0.1096 lr 1.92e-05 665s mem 19.5GB
+step 80 kl 0.2122 hid 0.1079 lr 1.89e-05 734s mem 19.5GB
+step 90 kl 0.1993 hid 0.1036 lr 1.86e-05 801s mem 19.5GB
+step 100 kl 0.1302 hid 0.0888 lr 1.83e-05 882s mem 19.5GB drift 0.0087
+DEV {"n": 464, "n_sd": 117, "agree": 0.8469827586206896, "agree_sd": 0.7008547008547008, "tv": 0.1538392674450859, "sd_proc": 0.5961538461538461, "n_proc": 52, "sd_other": 0.7846153846153846, "step": 100, "t": 68.31045794487}
+new best 100
+step 110 kl 0.1216 hid 0.0772 lr 1.80e-05 1109s mem 19.5GB
+step 120 kl 0.2294 hid 0.0875 lr 1.76e-05 1189s mem 19.5GB
+step 130 kl 0.2073 hid 0.0824 lr 1.72e-05 1261s mem 19.5GB
+step 140 kl 0.1671 hid 0.0794 lr 1.68e-05 1341s mem 19.5GB
+step 150 kl 0.1537 hid 0.0775 lr 1.63e-05 1420s mem 19.5GB drift 0.0091
+DEV {"n": 464, "n_sd": 117, "agree": 0.8685344827586207, "agree_sd": 0.7435897435897436, "tv": 0.10813581851584002, "sd_proc": 0.7115384615384616, "n_proc": 52, "sd_other": 0.7692307692307693, "step": 150, "t": 68.07499170303345}
+new best 150
+step 160 kl 0.2744 hid 0.0827 lr 1.59e-05 1643s mem 19.5GB
+step 170 kl 0.1207 hid 0.0769 lr 1.54e-05 1729s mem 19.5GB
+step 180 kl 0.1388 hid 0.0729 lr 1.49e-05 1807s mem 19.5GB
+step 190 kl 0.1598 hid 0.0673 lr 1.44e-05 1885s mem 19.5GB
+step 200 kl 0.1450 hid 0.0688 lr 1.38e-05 1958s mem 19.5GB drift 0.0099
+DEV {"n": 464, "n_sd": 117, "agree": 0.8836206896551724, "agree_sd": 0.7264957264957265, "tv": 0.11050778706076331, "sd_proc": 0.6730769230769231, "n_proc": 52, "sd_other": 0.7692307692307693, "step": 200, "t": 68.57884669303894}
+step 210 kl 0.1132 hid 0.0648 lr 1.33e-05 2156s mem 19.5GB
+step 220 kl 0.1099 hid 0.0571 lr 1.27e-05 2242s mem 19.5GB
+step 230 kl 0.1929 hid 0.0767 lr 1.22e-05 2316s mem 19.5GB
+step 240 kl 0.0803 hid 0.0639 lr 1.16e-05 2393s mem 19.5GB
+step 250 kl 0.2318 hid 0.0715 lr 1.11e-05 2467s mem 19.5GB drift 0.0109
+DEV {"n": 464, "n_sd": 117, "agree": 0.8879310344827587, "agree_sd": 0.7008547008547008, "tv": 0.17640245676939859, "sd_proc": 0.6153846153846154, "n_proc": 52, "sd_other": 0.7692307692307693, "step": 250, "t": 68.1948938369751}
+step 260 kl 0.1308 hid 0.0737 lr 1.05e-05 2659s mem 19.5GB
+step 270 kl 0.1735 hid 0.0821 lr 9.93e-06 2724s mem 19.5GB
+step 280 kl 0.1402 hid 0.0686 lr 9.37e-06 2792s mem 19.5GB
+step 290 kl 0.0700 hid 0.0567 lr 8.82e-06 2873s mem 19.5GB
+step 300 kl 0.0688 hid 0.0502 lr 8.27e-06 2961s mem 19.5GB drift 0.0107

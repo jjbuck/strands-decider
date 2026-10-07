@@ -1,0 +1,15 @@
+pool 12422 v5 5023
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 3523.68it/s]
+quantized base in 53s, mem 5.1G
+/home/ubuntu/work/h1/h1qat.py:203: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /__w/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:820.)
+  lsum[k_] += float(kl); lcnt[k_] += 1; lsum['hid'] += float(hl); lcnt['hid'] += 1; lsum['flip'] += flip; lcnt['flip'] += 1
+{"step": 1, "t": 3, "mem": 7.5, "lr": 8.333333333333334e-06, "v5": 1.0237199603579938e-06, "hid": 0.0003453428507782519, "flip": 0.0}
+{"step": 50, "t": 193, "mem": 7.5, "lr": 9.977279576415853e-05, "kl": 0.0003191188984771998, "hid": 0.0003503543385352027, "flip": 0.02040816326530612, "v5": 1.6132454119441616e-05}
+{"step": 100, "t": 388, "mem": 7.5, "lr": 9.901664203302126e-05, "v5": 4.1842883395778095e-05, "hid": 0.0003518509544664994, "flip": 0.0, "kl": 0.00029874185991768794}
+{"step": 150, "t": 567, "mem": 7.5, "lr": 9.785541593259248e-05, "v5": 4.870258140845006e-05, "hid": 0.00039325598627328875, "flip": 0.0, "kl": 0.000496807464121564}
+{"step": 200, "t": 747, "mem": 7.5, "lr": 9.610954559391703e-05, "kl": 0.0011603390722066743, "hid": 0.0003897342283744365, "flip": 0.0, "v5": 3.5301995325489095e-05}
+{"step": 250, "t": 936, "mem": 7.5, "lr": 9.406504878167078e-05, "kl": 0.002114328069039498, "hid": 0.0004090870206709951, "flip": 0.02, "v5": 0.00015459358632193462}
+saved 250
+{"step": 300, "t": 1127, "mem": 7.5, "lr": 9.140576474687264e-05, "kl": 0.002322048100483555, "hid": 0.00041451192751992496, "flip": 0.06, "v5": 1.5813131116241646e-05}
+Terminated

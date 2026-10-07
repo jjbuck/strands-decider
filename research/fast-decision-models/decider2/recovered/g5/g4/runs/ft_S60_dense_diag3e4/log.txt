@@ -1,0 +1,14 @@
+== ft_S60_dense_diag3e4 init S60_dense cfg Cfg({'scale': 'S60', 'arm': 'dense', 'd': 768, 'L': 9, 'H': 12, 'Hkv': 2, 'hd': 64, 'ffn': 2304, 'mon_ffn': 8704, 'kind': 'dense', 'nb': 0})
+step 100 probe 0.7352 squad 1.5222 26s
+step 200 probe 0.7341 squad 1.4467 44s
+step 300 probe 0.7418 squad 1.4142 81s
+EVAL step 300: probe acc 0.500 flip 0.000 distract-flip 0.000 | squad acc 0.253 (n 300) | official CF-probe (fits 1k) acc 0.500 flip 0.000 n_pairs 21 | by kind {'amount_vs_limit': 0.0, 'amount_vs_limit_distract': 0.0, 'date_order': 0.0, 'date_order_distract': 0.0, 'id_match': 0.0, 'id_match_distract': 0.0, 'status_equal': 0.0, 'status_equal_distract': 0.0}
+step 400 probe 0.7351 squad 1.4163 128s
+step 500 probe 0.7032 squad 1.4156 165s
+step 600 probe 0.7123 squad 1.4030 203s
+EVAL step 600: probe acc 0.500 flip 0.000 distract-flip 0.000 | squad acc 0.233 (n 300) | official CF-probe (fits 1k) acc 0.500 flip 0.000 n_pairs 21 | by kind {'amount_vs_limit': 0.0, 'amount_vs_limit_distract': 0.0, 'date_order': 0.0, 'date_order_distract': 0.0, 'id_match': 0.0, 'id_match_distract': 0.0, 'status_equal': 0.0, 'status_equal_distract': 0.0}
+step 700 probe 0.6999 squad 1.3922 248s
+step 800 probe 0.6982 squad 1.3983 285s
+step 900 probe 0.6971 squad 1.3913 323s
+EVAL step 900: probe acc 0.500 flip 0.000 distract-flip 0.000 | squad acc 0.271 (n 1500) | official CF-probe (fits 1k) acc 0.500 flip 0.000 n_pairs 21 | by kind {'amount_vs_limit': 0.0, 'amount_vs_limit_distract': 0.0, 'date_order': 0.0, 'date_order_distract': 0.0, 'id_match': 0.0, 'id_match_distract': 0.0, 'status_equal': 0.0, 'status_equal_distract': 0.0}
+DONE ft_S60_dense_diag3e4 5.6 min

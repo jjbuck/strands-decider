@@ -1,0 +1,10 @@
+=== 22:51:52 dcasc {8,16}
+           ^^^^^^^^^^^^^^^^^
+RuntimeError: Expected all tensors to be on the same device, but got weight is on cpu, different from other tensors on cuda:0 (when checking argument in method wrapper_CUDA__native_layer_norm)
+=== 22:52:07 dcasc {16}
+           ^^^^^^^^^^^^^^^^^
+RuntimeError: Expected all tensors to be on the same device, but got weight is on cpu, different from other tensors on cuda:0 (when checking argument in method wrapper_CUDA__native_layer_norm)
+=== 22:52:22 precision casc W4A4->b8 tau .559
+{"suite": "JB-all", "id": "hard-opus-a-temporal_numeric-09", "q": "q", "T": 534, "margin": 0.4404, "deferred": true, "casc": 30.569, "draft": 12.049, "verifier": 18.523}
+{"suite": "JB-all", "id": "easy-extraction-11", "q": "q", "T": 95, "margin": 0.9289, "deferred": false, "casc": 5.027, "draft": 5.027, "verifier": 7.147}
+E2E_DONE 22:58:11

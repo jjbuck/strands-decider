@@ -1,0 +1,11 @@
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 4110.34it/s]
+items 2421 variants [('all', 'replay'), ('oa', 'replay'), ('oa+sfx', 'replay'), ('oa+sfx+ok4', 'replay'), ('ob', 'replay'), ('oa+sfx', 'skip'), ('ob+q16', 'replay')]
+0 2421 2s 28
+50 2421 74s 1428
+100 2421 146s 2828
+150 2421 234s 4228
+200 2421 291s 4767
+250 2421 329s 5117
+300 2421 365s 5719
+350 2421 389s 6111
+400 2421 412s 6461

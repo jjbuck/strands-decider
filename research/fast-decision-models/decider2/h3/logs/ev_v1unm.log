@@ -1,0 +1,8 @@
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 3473.01it/s]
+loaded ck/v1/final.pt {'norm_mode': 'rms', 'head': 'HypHead', 'lora_scale': 2.0} unmerged LoRA
+v1unm bf16 0/400 1s
+v1unm bf16 100/400 45s
+v1unm bf16 200/400 91s
+v1unm bf16 300/400 139s
+DONE v1unm bf16 400 rows (400 new) 184s
+all done 184.43119835853577

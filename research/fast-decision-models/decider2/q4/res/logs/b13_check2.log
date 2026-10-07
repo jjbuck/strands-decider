@@ -1,0 +1,67 @@
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 4058.57it/s]
+layer-0 table 4.085 GB
+{
+ "inv_vs_h2": {
+  "n": 300,
+  "hid_identical": 33,
+  "prob_identical": 33,
+  "maxdp": 0.0029963552951812744,
+  "flips": 0
+ },
+ "l0_vs_h2": {
+  "n": 312,
+  "hid_identical": 312,
+  "prob_identical": 312,
+  "maxdp": 0.0,
+  "flips": 0
+ },
+ "l0_inv_vs_inv": {
+  "n": 300,
+  "hid_identical": 300,
+  "prob_identical": 300,
+  "maxdp": 0.0,
+  "flips": 0
+ },
+ "kv_vs_h2": {
+  "n": 312,
+  "hid_identical": 8,
+  "prob_identical": 8,
+  "maxdp": 0.006241440773010254,
+  "flips": 0
+ },
+ "kv_inv_vs_inv": {
+  "n": 300,
+  "hid_identical": 300,
+  "prob_identical": 300,
+  "maxdp": 0.0,
+  "flips": 0
+ },
+ "read_vs_h2": {
+  "n": 312,
+  "hid_identical": 6,
+  "prob_identical": 6,
+  "maxdp": 0.005338609218597412,
+  "flips": 0
+ },
+ "read_inv_vs_inv": {
+  "n": 300,
+  "hid_identical": 300,
+  "prob_identical": 300,
+  "maxdp": 0.0,
+  "flips": 0
+ },
+ "l0+read_vs_h2": {
+  "n": 312,
+  "hid_identical": 6,
+  "prob_identical": 6,
+  "maxdp": 0.005338609218597412,
+  "flips": 0
+ },
+ "l0+read_inv_vs_inv": {
+  "n": 300,
+  "hid_identical": 300,
+  "prob_identical": 300,
+  "maxdp": 0.0,
+  "flips": 0
+ }
+}

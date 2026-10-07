@@ -1,0 +1,334 @@
++ cd /home/ubuntu/work/q3
++ source /home/ubuntu/venv/bin/activate
+++ deactivate nondestructive
+++ '[' -n '' ']'
+++ '[' -n '' ']'
+++ hash -r
+++ '[' -n '' ']'
+++ unset VIRTUAL_ENV
+++ unset VIRTUAL_ENV_PROMPT
+++ '[' '!' nondestructive = nondestructive ']'
+++ case "$(uname)" in
++++ uname
+++ export VIRTUAL_ENV=/home/ubuntu/venv
+++ VIRTUAL_ENV=/home/ubuntu/venv
+++ _OLD_VIRTUAL_PATH=/usr/local/cuda/bin:/usr/local/cuda/include:/opt/amazon/openmpi/bin:/opt/amazon/efa/bin:/usr/local/cuda/bin:/usr/local/cuda/include:/usr/local/cuda/bin:/usr/local/cuda/include:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+++ PATH=/home/ubuntu/venv/bin:/usr/local/cuda/bin:/usr/local/cuda/include:/opt/amazon/openmpi/bin:/opt/amazon/efa/bin:/usr/local/cuda/bin:/usr/local/cuda/include:/usr/local/cuda/bin:/usr/local/cuda/include:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+++ export PATH
+++ VIRTUAL_ENV_PROMPT='(venv) '
+++ export VIRTUAL_ENV_PROMPT
+++ '[' -n '' ']'
+++ '[' -z '' ']'
+++ _OLD_VIRTUAL_PS1=
+++ PS1='((venv) ) '
+++ export PS1
+++ hash -r
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ sleep 20
++ pgrep -f 'mode qa[d]'
++ python q3export.py ck_scale_w4q8/best.pt codes_w4q8_s.pt ck_qad_w4q8/best.pt codes_w4q8_qadbest.pt
+exported ck_scale_w4q8/best.pt -> codes_w4q8_s.pt
+exported ck_qad_w4q8/best.pt -> codes_w4q8_qadbest.pt
++ cd /home/ubuntu/work/q2
++ for c in w4q8_qadbest gptq w4q8_s
++ CODES='w8=~/work/q3/codes8.pt,w4=~/work/q3/codes_w4q8_qadbest.pt'
++ python q2eval.py q3_w4q8_w4q8_qadbest c:w4q8 all
++ for c in w4q8_qadbest gptq w4q8_s
++ CODES='w8=~/work/q3/codes8.pt,w4=~/work/q3/codes_gptq.pt'
++ python q2eval.py q3_w4q8_gptq c:w4q8 all
++ for c in w4q8_qadbest gptq w4q8_s
++ CODES='w8=~/work/q3/codes8.pt,w4=~/work/q3/codes_w4q8_s.pt'
++ python q2eval.py q3_w4q8_w4q8_s c:w4q8 all
++ ls -la /home/ubuntu/work/q2/preds/preds_q3_w4q8_gptq.jsonl /home/ubuntu/work/q2/preds/preds_q3_w4q8_w4q8_qadbest.jsonl /home/ubuntu/work/q2/preds/preds_q3_w4q8_w4q8_s.jsonl
+-rw-rw-r-- 1 ubuntu ubuntu 1208002 Oct  7 12:22 /home/ubuntu/work/q2/preds/preds_q3_w4q8_gptq.jsonl
+-rw-rw-r-- 1 ubuntu ubuntu 1207897 Oct  7 12:18 /home/ubuntu/work/q2/preds/preds_q3_w4q8_w4q8_qadbest.jsonl
+-rw-rw-r-- 1 ubuntu ubuntu 1208013 Oct  7 12:27 /home/ubuntu/work/q2/preds/preds_q3_w4q8_w4q8_s.jsonl
++ bash /home/ubuntu/work/q3/final_lat.sh
++ echo FINAL_W4Q8_DONE
+FINAL_W4Q8_DONE

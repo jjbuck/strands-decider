@@ -1,0 +1,10 @@
+all:replay:frozen      nq=2525 live/q=203.7/204 REAL-agree.agree=0.996 REAL-agree.agree_sd=0.997 REAL-agree.tv=0.003 CF.pair_acc=0.271 CF.fgh=1.000 CF-probe.pair_acc=0.328 CF-probe.fgh=0.981 REAL-label.acc=0.787 REAL-label.p=1.000
+     sd by q: {'REAL-agree': {'other': '0.996/239', 'proc': '1.000/107'}, 'LONG': {}}
+oa+sfx:replay:frozen   nq=2525 live/q=16.9/204 REAL-agree.agree=0.698 REAL-agree.agree_sd=0.055 REAL-agree.tv=0.227 CF.pair_acc=0.039 CF.fgh=0.000 CF-probe.pair_acc=0.006 CF-probe.fgh=0.010 REAL-label.acc=0.650 REAL-label.p=0.000
+     sd by q: {'REAL-agree': {'other': '0.079/239', 'proc': '0.000/107'}, 'LONG': {}}
+ob+q32:replay:frozen   nq=2525 live/q=179.5/204 REAL-agree.agree=0.910 REAL-agree.agree_sd=0.832 REAL-agree.tv=0.057 CF.pair_acc=0.337 CF.fgh=0.982 CF-probe.pair_acc=0.378 CF-probe.fgh=0.848 REAL-label.acc=0.790 REAL-label.p=0.851
+     sd by q: {'REAL-agree': {'other': '0.808/239', 'proc': '0.888/107'}, 'LONG': {}}
+ob+q64:replay:frozen   nq=2525 live/q=200.1/204 REAL-agree.agree=0.980 REAL-agree.agree_sd=0.974 REAL-agree.tv=0.012 CF.pair_acc=0.271 CF.fgh=1.000 CF-probe.pair_acc=0.328 CF-probe.fgh=0.981 REAL-label.acc=0.790 REAL-label.p=0.727
+     sd by q: {'REAL-agree': {'other': '0.967/239', 'proc': '0.991/107'}, 'LONG': {}}
+ob:replay:frozen       nq=2525 live/q=147.5/204 REAL-agree.agree=0.833 REAL-agree.agree_sd=0.555 REAL-agree.tv=0.121 CF.pair_acc=0.101 CF.fgh=0.349 CF-probe.pair_acc=0.062 CF-probe.fgh=0.105 REAL-label.acc=0.703 REAL-label.p=0.000
+     sd by q: {'REAL-agree': {'other': '0.448/239', 'proc': '0.794/107'}, 'LONG': {}}

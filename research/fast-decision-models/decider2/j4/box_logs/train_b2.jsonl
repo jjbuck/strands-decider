@@ -1,0 +1,13 @@
+{"upd": 1, "rows": 32, "mtok": 0.007, "t": 6, "tps": 1018, "mem": 7.6, "acc": 0.4375, "agree_gold": 0.4375, "ce": 1.5102, "kl_gold": 1.2962}
+{"upd": 10, "rows": 320, "mtok": 0.092, "t": 68, "tps": 1341, "mem": 7.6, "acc": 0.5803, "agree_gold": 0.5839, "agree_real": 0.4286, "ce": 1.1438, "kl_gold": 0.7257, "kl_real": 1.0343}
+{"upd": 20, "rows": 640, "mtok": 0.199, "t": 133, "tps": 1494, "mem": 7.6, "acc": 0.6645, "agree_gold": 0.6875, "agree_real": 0.75, "ce": 0.7786, "kl_gold": 0.3678, "kl_real": 0.3663}
+{"upd": 30, "rows": 960, "mtok": 0.281, "t": 196, "tps": 1438, "mem": 7.6, "acc": 0.6971, "agree_gold": 0.7231, "agree_real": 0.5385, "ce": 0.74, "kl_gold": 0.3073, "kl_real": 0.3161}
+{"upd": 40, "rows": 1280, "mtok": 0.392, "t": 278, "tps": 1409, "mem": 7.6, "acc": 0.7204, "agree_gold": 0.7467, "agree_real": 0.75, "ce": 0.6459, "kl_gold": 0.2679, "kl_real": 0.262}
+{"upd": 50, "rows": 1600, "mtok": 0.514, "t": 368, "tps": 1398, "mem": 7.6, "acc": 0.7617, "agree_gold": 0.7617, "agree_real": 0.7727, "ce": 0.5467, "kl_gold": 0.2018, "kl_real": 0.2434}
+{"upd": 60, "rows": 1920, "mtok": 0.609, "t": 441, "tps": 1381, "mem": 7.6, "acc": 0.7409, "agree_gold": 0.7708, "agree_real": 0.6842, "ce": 0.5883, "kl_gold": 0.2685, "kl_real": 0.164}
+{"upd": 70, "rows": 2240, "mtok": 0.702, "t": 512, "tps": 1373, "mem": 7.6, "acc": 0.7394, "agree_gold": 0.7785, "agree_real": 0.6154, "ce": 0.6064, "kl_gold": 0.197, "kl_real": 0.1734}
+{"upd": 80, "rows": 2560, "mtok": 0.837, "t": 611, "tps": 1370, "mem": 7.6, "acc": 0.7466, "agree_gold": 0.7872, "agree_real": 0.7083, "ce": 0.6057, "kl_gold": 0.2148, "kl_real": 0.206}
+{"upd": 90, "rows": 2880, "mtok": 0.957, "t": 700, "tps": 1366, "mem": 7.6, "acc": 0.7508, "agree_gold": 0.7708, "agree_real": 0.8421, "ce": 0.5879, "kl_gold": 0.2132, "kl_real": 0.169}
+{"upd": 100, "rows": 3200, "mtok": 1.084, "t": 794, "tps": 1366, "mem": 7.6, "acc": 0.7432, "agree_gold": 0.8074, "agree_real": 0.6667, "ce": 0.6194, "kl_gold": 0.2074, "kl_real": 0.2883}
+{"upd": 110, "rows": 3520, "mtok": 1.191, "t": 865, "tps": 1376, "mem": 7.6, "acc": 0.7599, "agree_gold": 0.7961, "agree_real": 0.875, "ce": 0.6079, "kl_gold": 0.2191, "kl_real": 0.1196}
+{"upd": 120, "rows": 3840, "mtok": 1.292, "t": 932, "tps": 1387, "mem": 7.6, "acc": 0.7632, "agree_gold": 0.8092, "agree_real": 0.6875, "ce": 0.6219, "kl_gold": 0.176, "kl_real": 0.2354}

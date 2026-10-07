@@ -1,0 +1,2 @@
+Q5_MEMFRAC=0.44 python q5kit.py --cfgs cfgs_q5.json --tags b8+stack.G0.6.mixint4p.L14 --out ~/work/q5/preds/b8_stack_G06_mixint4p_L14.json --start 12
+touch ~/work/q5/FIN_DONE

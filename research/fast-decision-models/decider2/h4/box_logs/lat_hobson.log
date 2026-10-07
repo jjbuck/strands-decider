@@ -1,0 +1,5 @@
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 3696.35it/s]
+hobson fwd 256 {'median': 15.74, 'p95': 15.74, 'min': 15.73, 'n': 20}
+hobson fwd 1000 {'median': 52.71, 'p95': 52.73, 'min': 52.6, 'n': 20}
+hobson fwd 4000 {'median': 200.64, 'p95': 200.67, 'min': 200.62, 'n': 20}
+done hobson

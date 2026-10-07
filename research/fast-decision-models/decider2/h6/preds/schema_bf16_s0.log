@@ -1,0 +1,18 @@
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 3660.92it/s]
+mem after build 8.87
+model built bf16 schema  fold
+questions 2756 groups 473
+204 20s
+448 137s
+607 176s
+842 205s
+1002 237s
+1252 297s
+1402 340s
+1676 391s
+1978 475s
+2116 504s
+2200 535s
+2400 602s
+2600 666s
+done 2756 685s

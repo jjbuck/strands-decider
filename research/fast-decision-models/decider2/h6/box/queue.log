@@ -1,0 +1,24 @@
+09:05:02 plainqb_k48_ba16 done 3227 341s
+09:11:27 plainqb_k48_ba16_c85 done 3227 352s
+09:11:39 qatp_d_s300 	While copying the parameter named "k.bias", whose dimensions in the model are torch.Size([256]) and whose dimensions in the checkpoint are torch.Size([256]), an exception occurred : ('Inplace update to inference tensor outside InferenceMode is not allowed.You can make a clone to get a normal tensor before doing inplace update.See https://github.com/pytorch/rfcs/pull/17 for more details.',).
+09:11:51 ctl_d_s300 	While copying the parameter named "k.bias", whose dimensions in the model are torch.Size([256]) and whose dimensions in the checkpoint are torch.Size([256]), an exception occurred : ('Inplace update to inference tensor outside InferenceMode is not allowed.You can make a clone to get a normal tensor before doing inplace update.See https://github.com/pytorch/rfcs/pull/17 for more details.',).
+PRIODONE
+09:23:17 sets_bf16_s0 done 2756 337s
+09:30:34 setsmix_k48ba_s0 done 2756 408s
+CHAIN2DONE
+09:40:04 qatp_d_s300 done 2756 529s
+09:54:09 ctl_d_s300 done 2756 813s
+CHAIN3DONE
+10:03:38 qatq_e_s600 done 2756 526s
+10:16:06 qatq_e_s1200 done 2756 527s
+10:29:28 plainqb_k64_ba16 done 3227 758s
+10:38:27 plainq8_k48_ba16 done 3227 489s
+CHAIN5DONE
+10:44:42 qatq_e_s2000 done 3227 336s
+CHAIN4DONE
+10:51:35 plainqbr_k64_ba16 done 3227 376s
+CHAIN6DONE
+10:57:29 plainq8_k48_ba16 done 2756 293s
+CHAIN7DONE
+11:12:15 plainq8_k64_ba16 done 3227 403s
+CHAIN8DONE

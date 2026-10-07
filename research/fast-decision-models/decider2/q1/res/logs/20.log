@@ -1,0 +1,37 @@
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 3946.52it/s]
+b8: flips 0/300 rms_dm 0.0303 TV 0.0039 pred_flips 1.0 | state rows int4 0.000 int8 0.969 bf16 0.031 extra 0.000 | 90s
+w4a4: flips 26/300 rms_dm 0.4785 TV 0.0739 pred_flips 24.9 | state rows int4 1.000 int8 0.000 bf16 0.000 extra 0.000 | 93s
+w4q8: flips 9/300 rms_dm 0.2003 TV 0.0267 pred_flips 10.3 | state rows int4 1.000 int8 0.000 bf16 0.000 extra 0.000 | 94s
+nsq8: flips 13/300 rms_dm 0.2756 TV 0.0373 pred_flips 14.5 | state rows int4 1.000 int8 0.000 bf16 0.000 extra 0.000 | 96s
+ns5q8: flips 11/300 rms_dm 0.2186 TV 0.0268 pred_flips 11.4 | state rows int4 1.000 int8 0.000 bf16 0.000 extra 0.000 | 96s
+w4q8d: flips 10/300 rms_dm 0.2025 TV 0.0265 pred_flips 10.5 | state rows int4 1.000 int8 0.000 bf16 0.000 extra 0.000 | 193s
+w4bq: flips 10/300 rms_dm 0.1999 TV 0.0265 pred_flips 10.3 | state rows int4 1.000 int8 0.000 bf16 0.000 extra 0.000 | 88s
+w4q8_wonly: flips 2/300 rms_dm 0.0846 TV 0.0112 pred_flips 3.5 | state rows int4 1.000 int8 0.000 bf16 0.000 extra 0.000 | 129s
+w4q8_aonly: flips 11/300 rms_dm 0.1956 TV 0.0257 pred_flips 10.1 | state rows int4 1.000 int8 0.000 bf16 0.000 extra 0.000 | 139s
+w4q8_r4l64: flips 10/300 rms_dm 0.1935 TV 0.0251 pred_flips 10.0 | state rows int4 1.000 int8 0.000 bf16 0.000 extra 0.000 | 104s
+w4q8_r4l256: flips 5/300 rms_dm 0.1698 TV 0.0213 pred_flips 8.6 | state rows int4 1.000 int8 0.000 bf16 0.000 extra 0.000 | 102s
+tc4rq8: flips 4/300 rms_dm 0.1100 TV 0.0141 pred_flips 5.0 | state rows int4 0.770 int8 0.115 bf16 0.000 extra 0.000 | 233s
+tc4irq8: flips 7/300 rms_dm 0.1602 TV 0.0215 pred_flips 8.0 | state rows int4 0.982 int8 0.009 bf16 0.000 extra 0.000 | 248s
+Traceback (most recent call last):
+  File "/home/ubuntu/work/q1/q1dm.py", line 35, in <module>
+    h, _ = g.fwd(ids, q0=pr['q0']); lq = g.logits(h, pr).cpu()
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/venv/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/work/h1/h1lib.py", line 313, in fwd
+    x = x + self.lin(i, 'Wo', o)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/work/q1/q1lib.py", line 114, in lin
+    y = f(self, i, k, x, xn) if f is not None else super().lin(i, k, x, xn)
+        ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/work/q1/q1fmt.py", line 160, in __call__
+    y[lo:hi, :Nq] = self.qgemm(i, k, src[lo:hi], bits, role).to(x.dtype)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/work/q1/q1fmt.py", line 176, in qgemm
+    if sp['split']: return self.qgemm_split(i, k, s_, role)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/work/q1/q1fmt.py", line 310, in qgemm_split
+    xhi = s_ @ e['U']                                                          # [M, r]
+          ~~~^~~~~~~~
+RuntimeError: expected mat1 and mat2 to have the same dtype, but got: c10::BFloat16 != float

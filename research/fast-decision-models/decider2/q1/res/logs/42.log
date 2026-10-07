@@ -1,0 +1,8 @@
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 4154.94it/s]
+resq128q8: flips 5/300 rms_dm 0.1536 TV 0.0190 pred_flips 7.6 | state rows int4 0.947 int8 0.053 bf16 0.000 extra 0.055 | 219s
+sens128q8: flips 11/300 rms_dm 0.2039 TV 0.0265 pred_flips 10.5 | state rows int4 0.947 int8 0.053 bf16 0.000 extra 0.055 | 182s
+g64q8: flips 11/300 rms_dm 0.1777 TV 0.0225 pred_flips 9.0 | state rows int4 1.000 int8 0.000 bf16 0.000 extra 0.000 | 1432s
+srq8: flips 20/300 rms_dm 0.3224 TV 0.0404 pred_flips 17.1 | state rows int4 1.000 int8 0.000 bf16 0.000 extra 0.000 | 218s
+corr128q8: flips 7/300 rms_dm 0.1769 TV 0.0225 pred_flips 9.0 | state rows int4 1.000 int8 0.000 bf16 0.000 extra 0.081 | 261s
+b9f75q8: flips 81/300 rms_dm 1.5039 TV 0.2275 pred_flips 69.5 | state rows int4 1.000 int8 0.000 bf16 0.000 extra 0.000 | 661s
+w4q8w4: flips 11/300 rms_dm 0.2457 TV 0.0344 pred_flips 12.9 | state rows int4 1.000 int8 0.000 bf16 0.000 extra 0.000 | 94s

@@ -1,0 +1,14 @@
+{
+ "name": "S60_slot",
+ "scale": "S60",
+ "arm": "slot",
+ "steps": 3587,
+ "tokens": 117538816,
+ "train_pflops": 82.9781764598661,
+ "val_loss": 3.850884199142456,
+ "val_last_block": 3.8183772563934326,
+ "params": 100499392,
+ "nonemb": 75346944,
+ "elapsed_min": 42.50672831137975,
+ "infer_gflop_1000": 49.903239168
+}

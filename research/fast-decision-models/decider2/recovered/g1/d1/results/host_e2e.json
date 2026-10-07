@@ -1,0 +1,64 @@
+{
+ "lean_base_1000": {
+  "e2e": {
+   "median": 76.858,
+   "p95": 77.005
+  },
+  "host_prep": {
+   "median": 1.735,
+   "p95": 1.848
+  },
+  "graph_gpu_ms": 74.82,
+  "buckets": [
+   1024
+  ],
+  "answer": "{'asked_human': NoulAnswer(type='noul', noul=0.1638)}"
+ },
+ "lean_base_4000": {
+  "e2e": {
+   "median": 305.518,
+   "p95": 305.849
+  },
+  "host_prep": {
+   "median": 6.316,
+   "p95": 6.774
+  },
+  "graph_gpu_ms": 298.71,
+  "buckets": [
+   1024,
+   4096
+  ],
+  "answer": "{'asked_human': NoulAnswer(type='noul', noul=0.2178)}"
+ },
+ "lean2+fasthost+64buckets_1000": {
+  "e2e": {
+   "median": 54.358,
+   "p95": 54.431
+  },
+  "host_prep": {
+   "median": 1.178,
+   "p95": 1.599
+  },
+  "graph_gpu_ms": 52.9,
+  "buckets": [
+   1024
+  ],
+  "answer": "{'asked_human': NoulAnswer(type='noul', noul=0.1655)}"
+ },
+ "lean2+fasthost+64buckets_4000": {
+  "e2e": {
+   "median": 203.477,
+   "p95": 203.934
+  },
+  "host_prep": {
+   "median": 2.416,
+   "p95": 2.764
+  },
+  "graph_gpu_ms": 200.56,
+  "buckets": [
+   1024,
+   4032
+  ],
+  "answer": "{'asked_human': NoulAnswer(type='noul', noul=0.2183)}"
+ }
+}

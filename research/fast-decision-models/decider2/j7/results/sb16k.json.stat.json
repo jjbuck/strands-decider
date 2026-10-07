@@ -1,0 +1,57 @@
+{
+ "JB-all": {
+  "n": 231,
+  "state_qwen": 128358,
+  "state_super": 124699,
+  "state_ratio": 1.029,
+  "state_ratio_median": 1.143,
+  "q_qwen": 24360,
+  "q_super": 23580,
+  "q_ratio": 1.033,
+  "total_ratio": 1.03
+ },
+ "REAL-agree": {
+  "n": 561,
+  "state_qwen": 1215413,
+  "state_super": 615937,
+  "state_ratio": 1.973,
+  "state_ratio_median": 1.945,
+  "q_qwen": 290160,
+  "q_super": 222320,
+  "q_ratio": 1.305,
+  "total_ratio": 1.796
+ },
+ "LONG": {
+  "n": 187,
+  "state_qwen": 976765,
+  "state_super": 474186,
+  "state_ratio": 2.06,
+  "state_ratio_median": 2.01,
+  "q_qwen": 124434,
+  "q_super": 95328,
+  "q_ratio": 1.305,
+  "total_ratio": 1.934
+ },
+ "CF": {
+  "n": 802,
+  "state_qwen": 2060036,
+  "state_super": 1110995,
+  "state_ratio": 1.854,
+  "state_ratio_median": 1.881,
+  "q_qwen": 152305,
+  "q_super": 118882,
+  "q_ratio": 1.281,
+  "total_ratio": 1.799
+ },
+ "CF-probe": {
+  "n": 640,
+  "state_qwen": 1659755,
+  "state_super": 970830,
+  "state_ratio": 1.71,
+  "state_ratio_median": 1.779,
+  "q_qwen": 71850,
+  "q_super": 68292,
+  "q_ratio": 1.052,
+  "total_ratio": 1.666
+ }
+}

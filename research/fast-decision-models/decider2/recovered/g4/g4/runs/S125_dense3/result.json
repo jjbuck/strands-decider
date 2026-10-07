@@ -1,0 +1,14 @@
+{
+ "name": "S125_dense3",
+ "scale": "S125",
+ "arm": "dense3",
+ "steps": 12699,
+ "tokens": 416120832,
+ "train_pflops": 179.9879059832832,
+ "val_loss": 3.7162461280822754,
+ "val_last_block": 3.671517848968506,
+ "params": 68951424,
+ "nonemb": 35401728,
+ "elapsed_min": 61.19515201250712,
+ "infer_gflop_1000": 87.656103936
+}

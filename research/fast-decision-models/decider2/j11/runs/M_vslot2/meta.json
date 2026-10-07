@@ -1,0 +1,22 @@
+{
+ "arm": "vslot",
+ "d": 768,
+ "L": 16,
+ "R": 3,
+ "budget_pf": 16.0,
+ "step_tok": 32768,
+ "micro_tok": 12288,
+ "lr": 0.0004,
+ "out": "runs/M_vslot2",
+ "eval_every": 300,
+ "shares": "0.7,0.15,0.15",
+ "max_steps": 40000,
+ "seed": 0,
+ "aux": 1.0,
+ "V": 84600,
+ "n_steps": 1013,
+ "params": 179704824,
+ "params_nonemb": 114732024,
+ "Ls": 5,
+ "Ld": 12
+}

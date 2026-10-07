@@ -1,0 +1,60 @@
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights:  41%|████▏     | 132/320 [00:00<00:00, 1276.47it/s]Loading weights:  82%|████████▏ | 263/320 [00:00<00:00, 1276.44it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 1428.28it/s]
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+USDT:2026-10-05 03:04:09 67262:67262 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 03:04:09 67262:67262 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 03:04:09 67262:67262 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 03:04:09 67262:67262 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 03:04:10 67262:67262 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 03:04:10 67262:67262 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 03:04:10 67262:67262 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 03:04:10 67262:67262 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 03:04:10 67262:67262 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 03:04:10 67262:67262 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 03:04:10 67262:67262 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 03:04:10 67262:67262 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 03:04:10 67262:67262 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 03:04:11 67262:67262 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 03:04:11 67262:67262 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 03:04:11 67262:67262 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 03:04:11 67262:67262 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 03:04:11 67262:67262 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 03:04:11 67262:67262 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 03:04:11 67262:67262 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 03:04:11 67262:67262 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 03:04:11 67262:67262 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 03:04:12 67262:67262 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 03:04:12 67262:67262 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 03:04:12 67262:67262 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 03:04:12 67262:67262 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 03:04:12 67262:67262 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 03:04:12 67262:67262 SyncActivityProfilerHandler.cpp:46] profiler_stop
+2b_hf tokens 64 {'kernels': 1795, 'busy_ms': 28.92, 'gaps_ms': 0.1, 'est_ms': 29.02, 'span_min_ms': 60.5, 'span_med_ms': 69.25}
+USDT:2026-10-05 03:04:16 67262:67262 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 03:04:16 67262:67262 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 03:04:17 67262:67262 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 03:04:17 67262:67262 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 03:04:17 67262:67262 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 03:04:18 67262:67262 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 03:04:18 67262:67262 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 03:04:18 67262:67262 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 03:04:19 67262:67262 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 03:04:19 67262:67262 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 03:04:20 67262:67262 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 03:04:20 67262:67262 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 03:04:20 67262:67262 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 03:04:21 67262:67262 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 03:04:21 67262:67262 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 03:04:21 67262:67262 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 03:04:22 67262:67262 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 03:04:22 67262:67262 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 03:04:22 67262:67262 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 03:04:23 67262:67262 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 03:04:23 67262:67262 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 03:04:23 67262:67262 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 03:04:24 67262:67262 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 03:04:24 67262:67262 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 03:04:24 67262:67262 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 03:04:25 67262:67262 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 03:04:25 67262:67262 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 03:04:25 67262:67262 SyncActivityProfilerHandler.cpp:46] profiler_stop
+2b_hf tokens 1000 {'kernels': 1741, 'busy_ms': 123.36, 'gaps_ms': 0.12, 'est_ms': 123.47, 'span_min_ms': 517.68, 'span_med_ms': 529.23}

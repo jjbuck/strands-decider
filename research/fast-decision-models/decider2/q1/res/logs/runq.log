@@ -1,0 +1,67 @@
+04:03:20 START 1: while [ ! -f ~/work/q1/spec/heldout.json ]; do sleep 20; done
+04:06:20 END 1 rc=0
+04:06:20 START 2: python q1cal.py --n 128
+04:08:04 END 2 rc=0
+04:08:04 START 3: python q1b5.py --budget 4 --role s --tag b4s
+04:12:13 END 3 rc=0
+04:12:13 START 4: python q1fo.py --cfg w4a4 --tag w4a4 --n 300
+04:12:32 END 4 rc=1
+04:12:32 START 5: python q1fo.py --cfg w4q8 --tag w4q8 --n 300
+04:12:52 END 5 rc=1
+04:12:52 START 6: python q1hd.py --n 160
+04:15:50 END 6 rc=0
+04:15:50 START 11: python q1fo.py --cfg w4a4 --tag w4a4 --n 300
+04:23:12 END 11 rc=0
+04:23:12 START 12: python q1fo.py --cfg w4q8 --tag w4q8 --n 300
+04:30:34 END 12 rc=0
+04:30:34 START 13: python q1b5.py --budget 4 --role s --tag b4sr --shrink 0.15
+04:35:05 END 13 rc=0
+04:35:05 START 14: python q1b5.py --budget 4 --role s --tag b4sir --cands ident --shrink 0.15
+04:37:19 END 14 rc=0
+04:37:19 START 17: python q1fo.py --cfg w8a8 --tag w8a8 --n 100 --b10 0
+04:39:52 END 17 rc=0
+04:39:52 START 20: python q1dm.py --tags b8,w4a4,w4q8,nsq8,ns5q8,w4q8d,w4bq,w4q8_wonly,w4q8_aonly,w4q8_r4l64,w4q8_r4l256,tc4rq8,tc4irq8,resq128q8,sens128q8,g64q8,srq8,corr128q8,b9f75q8,w4q8w4 --n 300
+05:09:16 END 20 rc=1
+05:09:16 START 22: python q1b5.py --budget 4.5 --role s --tag b45sr --shrink 0.15 --cands pca,joint,jointc,mix
+05:13:26 END 22 rc=0
+05:13:26 START 23: python q1dm.py --tags tc45rq8,tc4rq8_l0,tc45rq8_l0,w4q8_l0 --n 300
+05:25:24 END 23 rc=0
+05:25:24 START 25: python q1dm.py --tags resq128q8,sens128q8,g64q8,srq8,corr128q8,b9f75q8,w4q8w4 --n 300
+05:26:58 END 25 rc=1
+05:26:58 START 27: python q1b5.py --budget 4 --role s --tag b4shr --shrink 0.15 --cands shared --rot had64
+05:27:42 END 27 rc=0
+05:27:42 START 28: python q1b5.py --budget 4.5 --role s --tag b45shr --shrink 0.15 --cands shared --rot had64
+05:28:25 END 28 rc=0
+05:28:25 START 29: python q1dm.py --tags tc4shq8,tc45shq8 --n 300
+05:36:09 END 29 rc=0
+05:36:09 START 38: python q1b5.py --budget 4 --role s --tag b4shH --shrink 0.15 --cands shared --rot haar
+05:39:22 END 38 rc=0
+05:39:22 START 39: python q1b5.py --budget 4 --role s --tag b4sih --shrink 0.15 --cands ident --rot had64
+05:40:28 END 39 rc=0
+05:40:28 START 40: python q1dm.py --tags tc4shHq8,tc4ihq8 --n 300
+05:49:47 END 40 rc=0
+05:49:47 START 41: python q1router.py --base w4q8 --n 150
+06:06:26 END 41 rc=0
+06:06:26 START 42: python q1dm.py --tags resq128q8,sens128q8,g64q8,srq8,corr128q8,b9f75q8,w4q8w4 --n 300
+06:57:47 END 42 rc=0
+06:57:47 START 45: python q1b5.py --budget 4 --role s --tag b4shF --shrink 0.15 --cands shared --rot hadfull
+06:58:31 END 45 rc=0
+06:58:31 START 46: python q1b5.py --budget 4.5 --role s --tag b45shF --shrink 0.15 --cands shared --rot hadfull
+06:59:13 END 46 rc=0
+06:59:13 START 47: python q1dm.py --tags tc4shFq8,tc45shFq8 --n 300
+07:06:05 END 47 rc=0
+07:06:05 START 50: python q1b3.py
+07:06:43 END 50 rc=0
+07:06:43 START 51: mkdir -p preds; python q1eval.py --cfgs cfgs.json --tags tc45rq8,w4q8 --out preds/base.json
+08:21:50 END 51 rc=0
+08:21:50 START 56: python mkproto.py
+08:22:09 END 56 rc=0
+08:22:09 START 57: python q1dm.py --tags proto256q8,proto64q8 --n 300
+08:26:08 END 57 rc=0
+08:26:08 START 58: python q1eval.py --cfgs cfgs.json --tags tc4shFq8,resq128q8 --out preds/b2.json
+09:46:57 END 58 rc=0
+09:46:57 START 61: python q1dm.py --tags proto256fq8,proto64fq8 --n 300
+09:50:57 END 61 rc=0
+09:50:57 START 62: python q1router.py --base tc45rq8 --n 150 --fracs 0.1,0.2 --rules oracle,qattn7
+10:00:35 END 62 rc=0
+10:00:35 START 63: python q1eval.py --cfgs cfgs.json --tags w4a4,proto256fq8,tc4rq8 --out preds/b3.json

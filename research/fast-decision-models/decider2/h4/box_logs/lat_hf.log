@@ -1,0 +1,15 @@
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 4126.42it/s]
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+Q1 256 {'median': 48.52, 'p95': 48.72, 'min': 48.4, 'n': 12}
+Q1 1000 {'median': 98.05, 'p95': 98.15, 'min': 97.83, 'n': 12}
+Q1 4000 {'median': 363.23, 'p95': 363.64, 'min': 362.35, 'n': 12}
+Q4 256 {'median': 56.62, 'p95': 56.64, 'min': 56.56, 'n': 12}
+Q4 1000 {'median': 124.16, 'p95': 124.23, 'min': 124.03, 'n': 12}
+Q4 4000 {'median': 387.26, 'p95': 387.6, 'min': 386.24, 'n': 12}
+Q15 256 {'median': 170.77, 'p95': 170.82, 'min': 170.7, 'n': 12}
+Q15 1000 {'median': 245.51, 'p95': 245.56, 'min': 245.35, 'n': 12}
+Q15 4000 {'median': 501.05, 'p95': 501.37, 'min': 499.97, 'n': 12}
+Q1proc 256 {'median': 167.49, 'p95': 167.53, 'min': 167.42, 'n': 12}
+Q1proc 1000 {'median': 200.42, 'p95': 200.49, 'min': 200.19, 'n': 12}
+Q1proc 4000 {'median': 486.92, 'p95': 487.19, 'min': 486.17, 'n': 12}
+done hf

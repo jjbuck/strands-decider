@@ -1,0 +1,30 @@
+{
+ "packed4_T64": {
+  "cat_ms": {
+   "gemm": 20.06,
+   "elementwise/other": 6.6,
+   "fla_gdn": 2.02,
+   "conv": 0.27
+  },
+  "kernels": 1954,
+  "busy_ms": 28.95,
+  "gaps_ms": 0.15,
+  "est_ms": 29.1,
+  "span_min_ms": 52.91,
+  "span_med_ms": 104.94
+ },
+ "packed4_T1000": {
+  "cat_ms": {
+   "gemm": 78.79,
+   "elementwise/other": 29.41,
+   "fla_gdn": 5.21,
+   "conv": 1.11
+  },
+  "kernels": 1936,
+  "busy_ms": 114.52,
+  "gaps_ms": 0.22,
+  "est_ms": 114.74,
+  "span_min_ms": 245.84,
+  "span_med_ms": 403.15
+ }
+}

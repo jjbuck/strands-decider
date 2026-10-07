@@ -1,0 +1,14 @@
+{
+ "name": "S60_mudd",
+ "scale": "S60",
+ "arm": "mudd",
+ "steps": 4554,
+ "tokens": 149225472,
+ "train_pflops": 82.9957156503552,
+ "val_loss": 3.700136661529541,
+ "val_last_block": 3.6497931480407715,
+ "params": 85512030,
+ "nonemb": 60189696,
+ "elapsed_min": 41.763532102108,
+ "infer_gflop_1000": 153.970023744
+}

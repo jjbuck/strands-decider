@@ -1,0 +1,123 @@
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 3509.19it/s]
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+USDT:2026-10-05 02:52:22 56389:56389 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 02:52:23 56389:56389 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 02:52:24 56389:56389 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 02:52:24 56389:56389 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 02:52:26 56389:56389 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 02:52:26 56389:56389 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 02:52:27 56389:56389 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 02:52:28 56389:56389 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 02:52:30 56389:56389 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 02:52:30 56389:56389 SyncActivityProfilerHandler.cpp:46] profiler_stop
+stock(unmerged LoRA) tokens=64: {'gpu_busy_ms': 24.11, 'kernels': 3054, 'aten_ops': 11682}
+USDT:2026-10-05 02:52:33 56389:56389 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 02:52:34 56389:56389 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 02:52:36 56389:56389 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 02:52:37 56389:56389 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 02:52:39 56389:56389 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 02:52:39 56389:56389 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 02:52:40 56389:56389 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 02:52:41 56389:56389 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 02:52:43 56389:56389 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 02:52:43 56389:56389 SyncActivityProfilerHandler.cpp:46] profiler_stop
+stock(unmerged LoRA) tokens=1000: {'gpu_busy_ms': 459.77, 'kernels': 3006, 'aten_ops': 11670}
+USDT:2026-10-05 02:52:46 56389:56389 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 02:52:46 56389:56389 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 02:52:47 56389:56389 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 02:52:47 56389:56389 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 02:52:48 56389:56389 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 02:52:48 56389:56389 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 02:52:50 56389:56389 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 02:52:50 56389:56389 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 02:52:50 56389:56389 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 02:52:51 56389:56389 SyncActivityProfilerHandler.cpp:46] profiler_stop
+stock(merged LoRA) tokens=64: {'gpu_busy_ms': 17.41, 'kernels': 1752, 'aten_ops': 6288}
+USDT:2026-10-05 02:52:53 56389:56389 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 02:52:53 56389:56389 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 02:52:54 56389:56389 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 02:52:55 56389:56389 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 02:52:56 56389:56389 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 02:52:56 56389:56389 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 02:52:57 56389:56389 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 02:52:58 56389:56389 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 02:52:58 56389:56389 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 02:52:59 56389:56389 SyncActivityProfilerHandler.cpp:46] profiler_stop
+stock(merged LoRA) tokens=1000: {'gpu_busy_ms': 290.41, 'kernels': 1704, 'aten_ops': 6276}
+USDT:2026-10-05 02:53:00 56389:56389 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 02:53:00 56389:56389 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 02:53:00 56389:56389 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 02:53:00 56389:56389 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 02:53:01 56389:56389 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 02:53:01 56389:56389 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 02:53:02 56389:56389 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 02:53:02 56389:56389 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 02:53:02 56389:56389 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 02:53:02 56389:56389 SyncActivityProfilerHandler.cpp:46] profiler_stop
+lean fwd tokens=64: {'gpu_busy_ms': 11.81, 'kernels': 1511, 'aten_ops': 4710} top: [('ampere_bf16_s16816gemm_bf16_128x64_ldg8_f2f_stages', 7.23), ('void at::native::vectorized_elementwise_kernel<4, ', 0.96), ('void at::native::elementwise_kernel<128, 4, at::na', 0.86), ('void at::native::elementwise_kernel<128, 2, at::na', 0.44), ('void at::native::reduce_kernel<512, 1, at::native:', 0.42), ('chunk_gated_delta_rule_fwd_kkt_solve_kernel', 0.38)]
+USDT:2026-10-05 02:53:03 56389:56389 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 02:53:03 56389:56389 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 02:53:04 56389:56389 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 02:53:04 56389:56389 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 02:53:04 56389:56389 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 02:53:04 56389:56389 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 02:53:05 56389:56389 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 02:53:05 56389:56389 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 02:53:06 56389:56389 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 02:53:06 56389:56389 SyncActivityProfilerHandler.cpp:46] profiler_stop
+lean fwd tokens=256: {'gpu_busy_ms': 26.47, 'kernels': 1475, 'aten_ops': 4722} top: [('ampere_bf16_s1688gemm_bf16_128x128_ldg8_f2f_stages', 5.83), ('ampere_bf16_s16816gemm_bf16_128x64_ldg8_f2f_stages', 4.0), ('ampere_bf16_s16816gemm_bf16_256x128_ldg8_f2f_stage', 3.67), ('void at::native::elementwise_kernel<128, 4, at::na', 1.73), ('void at::native::vectorized_elementwise_kernel<4, ', 1.35), ('void at::native::unrolled_elementwise_kernel<at::n', 0.73)]
+USDT:2026-10-05 02:53:07 56389:56389 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 02:53:07 56389:56389 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 02:53:08 56389:56389 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 02:53:08 56389:56389 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 02:53:09 56389:56389 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 02:53:09 56389:56389 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 02:53:09 56389:56389 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 02:53:10 56389:56389 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 02:53:10 56389:56389 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 02:53:10 56389:56389 SyncActivityProfilerHandler.cpp:46] profiler_stop
+lean fwd tokens=1000: {'gpu_busy_ms': 215.2, 'kernels': 1487, 'aten_ops': 4710} top: [('void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16', 110.29), ('ampere_bf16_s1688gemm_bf16_128x128_ldg8_f2f_tn', 22.26), ('void at::native::vectorized_elementwise_kernel<4, ', 21.12), ('void at::native::elementwise_kernel<128, 2, at::na', 19.81), ('void at::native::elementwise_kernel<128, 4, at::na', 18.63), ('void at::native::unrolled_elementwise_kernel<at::n', 17.64)]
+USDT:2026-10-05 02:53:12 56389:56389 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 02:53:13 56389:56389 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 02:53:13 56389:56389 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 02:53:14 56389:56389 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 02:53:15 56389:56389 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 02:53:16 56389:56389 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 02:53:16 56389:56389 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 02:53:17 56389:56389 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 02:53:18 56389:56389 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 02:53:18 56389:56389 SyncActivityProfilerHandler.cpp:46] profiler_stop
+lean fwd tokens=2000: {'gpu_busy_ms': 461.97, 'kernels': 1463, 'aten_ops': 4710} top: [('ampere_bf16_s16816gemm_bf16_256x128_ldg8_f2f_stage', 200.76), ('void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16', 90.75), ('void at::native::elementwise_kernel<128, 2, at::na', 28.29), ('void at::native::elementwise_kernel<128, 4, at::na', 24.32), ('void at::native::vectorized_elementwise_kernel<4, ', 22.61), ('void at::native::unrolled_elementwise_kernel<at::n', 22.57)]
+USDT:2026-10-05 02:53:21 56389:56389 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 02:53:22 56389:56389 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 02:53:24 56389:56389 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 02:53:25 56389:56389 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 02:53:25 56389:56389 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 02:53:26 56389:56389 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 02:53:28 56389:56389 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 02:53:29 56389:56389 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 02:53:29 56389:56389 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 02:53:30 56389:56389 SyncActivityProfilerHandler.cpp:46] profiler_stop
+lean fwd tokens=4000: {'gpu_busy_ms': 875.15, 'kernels': 1463, 'aten_ops': 4710} top: [('void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16', 526.39), ('void at::native::vectorized_elementwise_kernel<4, ', 89.14), ('void at::native::elementwise_kernel<128, 4, at::na', 64.57), ('void at::native::elementwise_kernel<128, 2, at::na', 31.92), ('void at::native::unrolled_elementwise_kernel<at::n', 27.13), ('ampere_bf16_s16816gemm_bf16_256x128_ldg8_f2f_stage', 21.42)]
+USDT:2026-10-05 02:53:32 56389:56389 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 02:53:32 56389:56389 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 02:53:34 56389:56389 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 02:53:35 56389:56389 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 02:53:36 56389:56389 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 02:53:36 56389:56389 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 02:53:38 56389:56389 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 02:53:38 56389:56389 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 02:53:40 56389:56389 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 02:53:40 56389:56389 SyncActivityProfilerHandler.cpp:46] profiler_stop
+packed q=4 tokens=64: {'gpu_busy_ms': 58.55, 'kernels': 1977, 'aten_ops': 7510}
+USDT:2026-10-05 02:53:42 56389:56389 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 02:53:42 56389:56389 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 02:53:44 56389:56389 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 02:53:45 56389:56389 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 02:53:46 56389:56389 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 02:53:46 56389:56389 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 02:53:47 56389:56389 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 02:53:47 56389:56389 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 02:53:49 56389:56389 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 02:53:49 56389:56389 SyncActivityProfilerHandler.cpp:46] profiler_stop
+packed q=4 tokens=1000: {'gpu_busy_ms': 357.83, 'kernels': 1971, 'aten_ops': 7498}

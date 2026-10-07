@@ -1,0 +1,45 @@
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 4129.09it/s]
+0 421 REAL-agree 2052 3s 792 tok/s mem 6.7G
+10 421 REAL-agree 2944 27s 1101 tok/s mem 10.0G
+20 421 REAL-agree 1732 44s 1124 tok/s mem 11.7G
+30 421 REAL-agree 922 65s 1128 tok/s mem 11.7G
+40 421 REAL-agree 2374 88s 1130 tok/s mem 11.8G
+50 421 REAL-agree 2160 110s 1132 tok/s mem 11.8G
+60 421 REAL-agree 2024 127s 1133 tok/s mem 11.8G
+70 421 REAL-agree 3011 150s 1135 tok/s mem 11.8G
+80 421 REAL-agree 2318 169s 1132 tok/s mem 11.8G
+90 421 REAL-agree 1112 189s 1133 tok/s mem 11.8G
+100 421 CF 2953 208s 1135 tok/s mem 11.8G
+110 421 CF 721 224s 1135 tok/s mem 11.8G
+120 421 CF 2913 248s 1135 tok/s mem 11.8G
+130 421 CF 2088 260s 1131 tok/s mem 11.8G
+140 421 CF 2557 280s 1132 tok/s mem 11.8G
+150 421 CF 588 288s 1129 tok/s mem 11.8G
+160 421 CF 228 304s 1127 tok/s mem 11.8G
+170 421 CF 3060 325s 1125 tok/s mem 11.8G
+180 421 CF 525 339s 1124 tok/s mem 11.8G
+190 421 CF 457 358s 1124 tok/s mem 11.8G
+200 421 CF-probe 1442 365s 1119 tok/s mem 11.8G
+210 421 CF-probe 2814 387s 1120 tok/s mem 11.8G
+220 421 CF-probe 1098 406s 1122 tok/s mem 11.8G
+230 421 CF-probe 2894 423s 1123 tok/s mem 11.8G
+240 421 CF-probe 1119 442s 1124 tok/s mem 11.8G
+250 421 CF-probe 3021 462s 1125 tok/s mem 11.8G
+260 421 CF-probe 2917 481s 1126 tok/s mem 11.8G
+270 421 CF-probe 2684 503s 1126 tok/s mem 11.8G
+280 421 CF-probe 2716 523s 1127 tok/s mem 11.8G
+290 421 CF-probe 2526 541s 1128 tok/s mem 11.8G
+300 421 JB-all 118 546s 1119 tok/s mem 11.8G
+310 421 JB-all 108 551s 1111 tok/s mem 11.8G
+320 421 JB-all 2441 567s 1108 tok/s mem 11.8G
+330 421 JB-all 534 577s 1108 tok/s mem 11.8G
+340 421 JB-all 2352 587s 1107 tok/s mem 11.8G
+350 421 JB-all 763 599s 1107 tok/s mem 11.8G
+360 421 JB-all 3638 620s 1108 tok/s mem 11.8G
+370 421 JB-all 256 629s 1107 tok/s mem 11.8G
+380 421 JB-all 2642 646s 1106 tok/s mem 11.8G
+390 421 JB-all 323 655s 1103 tok/s mem 11.8G
+400 421 JB-all 2596 664s 1099 tok/s mem 11.8G
+410 421 JB-all 337 672s 1096 tok/s mem 11.8G
+420 421 JB-all 2602 685s 1095 tok/s mem 11.8G
+done

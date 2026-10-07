@@ -1,0 +1,17 @@
+0
+4000
+8000
+12000
+16000
+20000
+24000
+ALL|ALL                                  n=24399  tok mean   2143 med   1768 p90   4505 | live med    856 p90   2538 | const 0.465 (frame 0.011 blk 0.454) blk/req 4.0
+banking_knowledge|ALL                    n=20265  tok mean   2127 med   1702 p90   4902 | live med    735 p90   2377 | const 0.521 (frame 0.010 blk 0.511) blk/req 4.3
+banking_knowledge|None                   n=36     tok mean   1728 med   1786 p90   3226 | live med   1702 p90   3173 | const 0.059 (frame 0.021 blk 0.038) blk/req 0.5
+banking_knowledge|after_model_call       n=6964   tok mean   2554 med   1658 p90   6471 | live med    710 p90   3275 | const 0.523 (frame 0.009 blk 0.514) blk/req 5.0
+banking_knowledge|after_tool_call        n=5285   tok mean   2540 med   1889 p90   4656 | live med    719 p90   1634 | const 0.672 (frame 0.010 blk 0.662) blk/req 6.3
+banking_knowledge|before_invocation      n=4227   tok mean   2104 med   1887 p90   3606 | live med   1135 p90   2302 | const 0.412 (frame 0.012 blk 0.400) blk/req 4.2
+banking_knowledge|before_model_call      n=1035   tok mean    832 med    522 p90   2660 | live med    485 p90   1073 | const 0.340 (frame 0.010 blk 0.329) blk/req 1.1
+banking_knowledge|before_tool_call       n=2718   tok mean    761 med    552 p90   1558 | live med    552 p90   1443 | const 0.077 (frame 0.008 blk 0.069) blk/req 0.3
+retail|ALL                               n=4134   tok mean   2225 med   2600 p90   3093 | live med   2026 p90   2700 | const 0.202 (frame 0.016 blk 0.185) blk/req 2.1
+retail|None                              n=4134   tok mean   2225 med   2600 p90   3093 | live med   2026 p90   2700 | const 0.202 (frame 0.016 blk 0.185) blk/req 2.1

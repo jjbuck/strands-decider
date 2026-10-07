@@ -1,0 +1,231 @@
+{"id": "easy-intent-00", "q": {"q": {"billing_question": 0.1799505650997162, "cancel_order": 0.3139168918132782, "change_address": 0.10559727251529694, "report_damage": 0.2159208506345749, "track_order": 0.1846143752336502}}}
+{"id": "easy-intent-01", "q": {"q": {"billing_question": 0.21928198635578156, "cancel_order": 0.31035053730010986, "change_address": 0.09516429901123047, "report_damage": 0.1910092681646347, "track_order": 0.18419401347637177}}}
+{"id": "easy-intent-02", "q": {"q": {"billing_question": 0.17031709849834442, "cancel_order": 0.3038204312324524, "change_address": 0.14094722270965576, "report_damage": 0.17428554594516754, "track_order": 0.2106296718120575}}}
+{"id": "easy-intent-03", "q": {"q": {"billing_question": 0.24630089104175568, "cancel_order": 0.23273222148418427, "change_address": 0.12382283806800842, "report_damage": 0.17188596725463867, "track_order": 0.22525815665721893}}}
+{"id": "easy-intent-04", "q": {"q": {"billing_question": 0.18412227928638458, "cancel_order": 0.3047894835472107, "change_address": 0.12666954100131989, "report_damage": 0.17662936449050903, "track_order": 0.20778930187225342}}}
+{"id": "easy-intent-05", "q": {"q": {"billing_question": 0.13757410645484924, "cancel_order": 0.30687516927719116, "change_address": 0.18307606875896454, "report_damage": 0.1487131267786026, "track_order": 0.22376151382923126}}}
+{"id": "easy-intent-06", "q": {"q": {"play_music": 0.11918537318706512, "send_message": 0.12337791919708252, "set_alarm": 0.317789763212204, "turn_off_lights": 0.2811206877231598, "weather": 0.158526211977005}}}
+{"id": "easy-intent-07", "q": {"q": {"play_music": 0.18770456314086914, "send_message": 0.18843449652194977, "set_alarm": 0.23782695829868317, "turn_off_lights": 0.23814277350902557, "weather": 0.1478910744190216}}}
+{"id": "easy-intent-08", "q": {"q": {"play_music": 0.0789370983839035, "send_message": 0.11445533484220505, "set_alarm": 0.21732448041439056, "turn_off_lights": 0.3346864581108093, "weather": 0.25459668040275574}}}
+{"id": "easy-intent-09", "q": {"q": {"play_music": 0.13944010436534882, "send_message": 0.17236299812793732, "set_alarm": 0.2702588737010956, "turn_off_lights": 0.25966379046440125, "weather": 0.158274307847023}}}
+{"id": "easy-intent-10", "q": {"q": {"play_music": 0.09446564316749573, "send_message": 0.20436449348926544, "set_alarm": 0.25424787402153015, "turn_off_lights": 0.30544543266296387, "weather": 0.14147648215293884}}}
+{"id": "easy-intent-11", "q": {"q": {"play_music": 0.1279779076576233, "send_message": 0.19930781424045563, "set_alarm": 0.2652452886104584, "turn_off_lights": 0.22309675812721252, "weather": 0.1843721866607666}}}
+{"id": "easy-fact-00", "q": {"q": {"false": 0.5449155569076538, "true": 0.45508450269699097}}}
+{"id": "easy-fact-01", "q": {"q": {"false": 0.6275011301040649, "true": 0.37249892950057983}}}
+{"id": "easy-fact-02", "q": {"q": {"false": 0.5470401644706726, "true": 0.452959805727005}}}
+{"id": "easy-fact-03", "q": {"q": {"false": 0.4643198847770691, "true": 0.5356801152229309}}}
+{"id": "easy-fact-04", "q": {"q": {"false": 0.6149507164955139, "true": 0.38504931330680847}}}
+{"id": "easy-fact-05", "q": {"q": {"false": 0.4555380642414093, "true": 0.5444619059562683}}}
+{"id": "easy-fact-06", "q": {"q": {"false": 0.5865932703018188, "true": 0.4134066700935364}}}
+{"id": "easy-fact-07", "q": {"q": {"false": 0.5070398449897766, "true": 0.492960125207901}}}
+{"id": "easy-fact-08", "q": {"q": {"false": 0.45799991488456726, "true": 0.5420001745223999}}}
+{"id": "easy-fact-09", "q": {"q": {"false": 0.532746434211731, "true": 0.46725356578826904}}}
+{"id": "easy-fact-10", "q": {"q": {"false": 0.5223236083984375, "true": 0.4776764512062073}}}
+{"id": "easy-fact-11", "q": {"q": {"false": 0.5726398229598999, "true": 0.4273601174354553}}}
+{"id": "easy-extraction-00", "q": {"q": {"bank_transfer": 0.1463060826063156, "cash": 0.5335701107978821, "credit_card": 0.17699435353279114, "paypal": 0.1431293934583664}}}
+{"id": "easy-extraction-01", "q": {"q": {"bank_transfer": 0.20100784301757812, "cash": 0.40149059891700745, "credit_card": 0.19783617556095123, "paypal": 0.19966542720794678}}}
+{"id": "easy-extraction-02", "q": {"q": {"bank_transfer": 0.13871753215789795, "cash": 0.35375112295150757, "credit_card": 0.3101641535758972, "paypal": 0.19736717641353607}}}
+{"id": "easy-extraction-03", "q": {"q": {"high": 0.2343653291463852, "low": 0.21560673415660858, "medium": 0.27361905574798584, "urgent": 0.27640897035598755}}}
+{"id": "easy-extraction-04", "q": {"q": {"high": 0.16231350600719452, "low": 0.16376815736293793, "medium": 0.27576377987861633, "urgent": 0.3981545567512512}}}
+{"id": "easy-extraction-05", "q": {"q": {"high": 0.2061084806919098, "low": 0.17220266163349152, "medium": 0.21684706211090088, "urgent": 0.404841810464859}}}
+{"id": "easy-extraction-06", "q": {"q": {"L": 0.22574006021022797, "M": 0.2118564248085022, "S": 0.1623176783323288, "XL": 0.40008580684661865}}}
+{"id": "easy-extraction-07", "q": {"q": {"L": 0.24772831797599792, "M": 0.18909147381782532, "S": 0.394639253616333, "XL": 0.16854089498519897}}}
+{"id": "easy-extraction-08", "q": {"q": {"friday": 0.17233316600322723, "monday": 0.2046992927789688, "thursday": 0.2385532408952713, "tuesday": 0.2240452617406845, "wednesday": 0.1603689342737198}}}
+{"id": "easy-extraction-09", "q": {"q": {"friday": 0.13510030508041382, "monday": 0.1849183440208435, "thursday": 0.20695611834526062, "tuesday": 0.2727481424808502, "wednesday": 0.20027713477611542}}}
+{"id": "easy-extraction-10", "q": {"q": {"friday": 0.11574598401784897, "monday": 0.14178715646266937, "thursday": 0.25065913796424866, "tuesday": 0.35159555077552795, "wednesday": 0.140212282538414}}}
+{"id": "easy-extraction-11", "q": {"q": {"bank_transfer": 0.14710171520709991, "cash": 0.31367310881614685, "credit_card": 0.20053201913833618, "paypal": 0.33869314193725586}}}
+{"id": "easy-tool_selection-00", "q": {"q": {"convert_currency": 0.2560255527496338, "create_calendar_event": 0.09387204796075821, "get_weather": 0.1753285974264145, "send_email": 0.20842647552490234, "translate_text": 0.26634737849235535}}}
+{"id": "easy-tool_selection-01", "q": {"q": {"convert_currency": 0.14567680656909943, "create_calendar_event": 0.17554502189159393, "get_weather": 0.19997164607048035, "send_email": 0.18851839005947113, "translate_text": 0.29028812050819397}}}
+{"id": "easy-tool_selection-02", "q": {"q": {"convert_currency": 0.10850684344768524, "create_calendar_event": 0.12921404838562012, "get_weather": 0.1637667864561081, "send_email": 0.21317139267921448, "translate_text": 0.38534092903137207}}}
+{"id": "easy-tool_selection-03", "q": {"q": {"convert_currency": 0.17548806965351105, "create_calendar_event": 0.13442091643810272, "get_weather": 0.22948507964611053, "send_email": 0.23614980280399323, "translate_text": 0.22445616126060486}}}
+{"id": "easy-tool_selection-04", "q": {"q": {"convert_currency": 0.26622262597084045, "create_calendar_event": 0.11399196833372116, "get_weather": 0.22086027264595032, "send_email": 0.17709851264953613, "translate_text": 0.22182674705982208}}}
+{"id": "easy-tool_selection-05", "q": {"q": {"convert_currency": 0.2142716497182846, "create_calendar_event": 0.10385584831237793, "get_weather": 0.1872737854719162, "send_email": 0.16402271389961243, "translate_text": 0.33057600259780884}}}
+{"id": "easy-tool_selection-06", "q": {"q": {"book_restaurant": 0.35071703791618347, "call_taxi": 0.18809214234352112, "get_stock_price": 0.11091921478509903, "search_flights": 0.19365133345127106, "set_reminder": 0.15662029385566711}}}
+{"id": "easy-tool_selection-07", "q": {"q": {"book_restaurant": 0.22501014173030853, "call_taxi": 0.11974352598190308, "get_stock_price": 0.1832151859998703, "search_flights": 0.292615681886673, "set_reminder": 0.1794155091047287}}}
+{"id": "easy-tool_selection-08", "q": {"q": {"book_restaurant": 0.2784574031829834, "call_taxi": 0.1658870130777359, "get_stock_price": 0.14298070967197418, "search_flights": 0.2591975927352905, "set_reminder": 0.15347729623317719}}}
+{"id": "easy-tool_selection-09", "q": {"q": {"book_restaurant": 0.25220388174057007, "call_taxi": 0.10583798587322235, "get_stock_price": 0.12768635153770447, "search_flights": 0.3517307937145233, "set_reminder": 0.1625409722328186}}}
+{"id": "easy-tool_selection-10", "q": {"q": {"book_restaurant": 0.20182746648788452, "call_taxi": 0.13463479280471802, "get_stock_price": 0.14776360988616943, "search_flights": 0.32114076614379883, "set_reminder": 0.19463331997394562}}}
+{"id": "easy-tool_selection-11", "q": {"q": {"book_restaurant": 0.23924684524536133, "call_taxi": 0.15756137669086456, "get_stock_price": 0.15346448123455048, "search_flights": 0.2647962272167206, "set_reminder": 0.18493103981018066}}}
+{"id": "original-policy-01-0", "q": {"q": {"false": 0.459076851606369, "true": 0.5409231781959534}}}
+{"id": "original-policy-01-1", "q": {"q": {"false": 0.5429965853691101, "true": 0.4570034146308899}}}
+{"id": "original-policy-02-0", "q": {"q": {"false": 0.4669419825077057, "true": 0.5330579280853271}}}
+{"id": "original-policy-02-1", "q": {"q": {"false": 0.57085120677948, "true": 0.42914879322052}}}
+{"id": "original-policy-03-0", "q": {"q": {"false": 0.48643752932548523, "true": 0.5135624408721924}}}
+{"id": "original-policy-03-1", "q": {"q": {"false": 0.48142558336257935, "true": 0.5185744166374207}}}
+{"id": "original-policy-04-0", "q": {"q": {"false": 0.43717634677886963, "true": 0.5628236532211304}}}
+{"id": "original-policy-04-1", "q": {"q": {"false": 0.4446685016155243, "true": 0.5553314685821533}}}
+{"id": "original-policy-05-0", "q": {"q": {"false": 0.44961389899253845, "true": 0.5503860712051392}}}
+{"id": "original-policy-05-1", "q": {"q": {"false": 0.48292189836502075, "true": 0.5170780420303345}}}
+{"id": "original-policy-06-0", "q": {"q": {"false": 0.5111927390098572, "true": 0.4888072609901428}}}
+{"id": "original-policy-06-1", "q": {"q": {"false": 0.559604823589325, "true": 0.44039514660835266}}}
+{"id": "original-intent-01-0", "q": {"q": {"cancel": 0.2020496129989624, "change_address": 0.16447706520557404, "other": 0.24914167821407318, "refund": 0.2950049340724945, "status": 0.0893266350030899}}}
+{"id": "original-intent-01-1", "q": {"q": {"cancel": 0.17135676741600037, "change_address": 0.20575737953186035, "other": 0.1460193246603012, "refund": 0.32970359921455383, "status": 0.14716282486915588}}}
+{"id": "original-intent-02-0", "q": {"q": {"cancel": 0.1817525327205658, "change_address": 0.1769075244665146, "other": 0.15432101488113403, "refund": 0.3148404061794281, "status": 0.17217853665351868}}}
+{"id": "original-intent-02-1", "q": {"q": {"cancel": 0.16289690136909485, "change_address": 0.12155846506357193, "other": 0.19298388063907623, "refund": 0.33318936824798584, "status": 0.18937142193317413}}}
+{"id": "original-intent-03-0", "q": {"q": {"cancel": 0.141126349568367, "change_address": 0.15283164381980896, "other": 0.23102107644081116, "refund": 0.253875195980072, "status": 0.2211456149816513}}}
+{"id": "original-intent-03-1", "q": {"q": {"cancel": 0.24151630699634552, "change_address": 0.16446079313755035, "other": 0.1889173835515976, "refund": 0.25543519854545593, "status": 0.14967036247253418}}}
+{"id": "original-intent-04-0", "q": {"q": {"cancel": 0.18491144478321075, "change_address": 0.22891928255558014, "other": 0.183432474732399, "refund": 0.27849021553993225, "status": 0.12424661219120026}}}
+{"id": "original-intent-04-1", "q": {"q": {"cancel": 0.19498011469841003, "change_address": 0.15792641043663025, "other": 0.22518284618854523, "refund": 0.2383718490600586, "status": 0.1835387945175171}}}
+{"id": "original-intent-05-0", "q": {"q": {"cancel": 0.24618478119373322, "change_address": 0.1266147643327713, "other": 0.16393493115901947, "refund": 0.2576129138469696, "status": 0.20565268397331238}}}
+{"id": "original-intent-05-1", "q": {"q": {"cancel": 0.16788649559020996, "change_address": 0.2503080666065216, "other": 0.14199815690517426, "refund": 0.30402448773384094, "status": 0.13578277826309204}}}
+{"id": "original-intent-06-0", "q": {"q": {"cancel": 0.1461881846189499, "change_address": 0.16236789524555206, "other": 0.17567624151706696, "refund": 0.30309852957725525, "status": 0.21266914904117584}}}
+{"id": "original-intent-06-1", "q": {"q": {"cancel": 0.12241373211145401, "change_address": 0.10634343326091766, "other": 0.19995245337486267, "refund": 0.42495542764663696, "status": 0.1463349461555481}}}
+{"id": "original-ordinal-01-0", "q": {"q": {"0": 0.2699846923351288, "1": 0.2369856834411621, "2": 0.20441678166389465, "3": 0.2886127531528473}}}
+{"id": "original-ordinal-01-1", "q": {"q": {"0": 0.24337229132652283, "1": 0.237455353140831, "2": 0.23373837769031525, "3": 0.2854340374469757}}}
+{"id": "original-ordinal-02-0", "q": {"q": {"0": 0.24133093655109406, "1": 0.26374489068984985, "2": 0.18098761141300201, "3": 0.31393659114837646}}}
+{"id": "original-ordinal-02-1", "q": {"q": {"0": 0.28572338819503784, "1": 0.2712220549583435, "2": 0.18219976127147675, "3": 0.2608548402786255}}}
+{"id": "original-ordinal-03-0", "q": {"q": {"0": 0.21940673887729645, "1": 0.2848758101463318, "2": 0.23031452298164368, "3": 0.26540297269821167}}}
+{"id": "original-ordinal-03-1", "q": {"q": {"0": 0.24753090739250183, "1": 0.2520829737186432, "2": 0.163297638297081, "3": 0.3370884954929352}}}
+{"id": "original-ordinal-04-0", "q": {"q": {"0": 0.31671565771102905, "1": 0.2745473086833954, "2": 0.16241073608398438, "3": 0.24632638692855835}}}
+{"id": "original-ordinal-04-1", "q": {"q": {"0": 0.27514493465423584, "1": 0.26648327708244324, "2": 0.17861655354499817, "3": 0.27975520491600037}}}
+{"id": "original-ordinal-05-0", "q": {"q": {"0": 0.25904902815818787, "1": 0.2717422842979431, "2": 0.19517573714256287, "3": 0.2740328907966614}}}
+{"id": "original-ordinal-05-1", "q": {"q": {"0": 0.19299480319023132, "1": 0.26905620098114014, "2": 0.20355165004730225, "3": 0.3343973755836487}}}
+{"id": "original-ordinal-06-0", "q": {"q": {"0": 0.2611745595932007, "1": 0.2552289068698883, "2": 0.20363102853298187, "3": 0.27996551990509033}}}
+{"id": "original-ordinal-06-1", "q": {"q": {"0": 0.22232063114643097, "1": 0.2976320683956146, "2": 0.17459404468536377, "3": 0.30545327067375183}}}
+{"id": "original-extraction-01-0", "q": {"q": {"courier": 0.21913638710975647, "pickup": 0.2918252944946289, "post": 0.15640030801296234, "unknown": 0.3326379954814911}}}
+{"id": "original-extraction-01-1", "q": {"q": {"courier": 0.26626577973365784, "pickup": 0.2678595781326294, "post": 0.19511523842811584, "unknown": 0.27075934410095215}}}
+{"id": "original-extraction-02-0", "q": {"q": {"courier": 0.2331952303647995, "pickup": 0.28882578015327454, "post": 0.1850251406431198, "unknown": 0.29295384883880615}}}
+{"id": "original-extraction-02-1", "q": {"q": {"courier": 0.16643141210079193, "pickup": 0.38977617025375366, "post": 0.18282712996006012, "unknown": 0.26096534729003906}}}
+{"id": "original-extraction-03-0", "q": {"q": {"courier": 0.1678328514099121, "pickup": 0.2237863838672638, "post": 0.31350594758987427, "unknown": 0.29487475752830505}}}
+{"id": "original-extraction-03-1", "q": {"q": {"courier": 0.16854850947856903, "pickup": 0.3413087725639343, "post": 0.2402021586894989, "unknown": 0.24994055926799774}}}
+{"id": "original-extraction-04-0", "q": {"q": {"courier": 0.19930580258369446, "pickup": 0.34939244389533997, "post": 0.18436166644096375, "unknown": 0.2669401168823242}}}
+{"id": "original-extraction-04-1", "q": {"q": {"courier": 0.2398080974817276, "pickup": 0.3528308868408203, "post": 0.16348670423030853, "unknown": 0.24387437105178833}}}
+{"id": "original-extraction-05-0", "q": {"q": {"courier": 0.1359894871711731, "pickup": 0.22510769963264465, "post": 0.24331219494342804, "unknown": 0.3955906331539154}}}
+{"id": "original-extraction-05-1", "q": {"q": {"courier": 0.1961306780576706, "pickup": 0.203332781791687, "post": 0.28085842728614807, "unknown": 0.31967800855636597}}}
+{"id": "original-extraction-06-0", "q": {"q": {"courier": 0.24466244876384735, "pickup": 0.3251197040081024, "post": 0.14296363294124603, "unknown": 0.28725430369377136}}}
+{"id": "original-extraction-06-1", "q": {"q": {"courier": 0.1589737832546234, "pickup": 0.2695212960243225, "post": 0.1960618495941162, "unknown": 0.37544313073158264}}}
+{"id": "original-adequacy-01-0", "q": {"q": {"false": 0.5519189238548279, "true": 0.4480810761451721}}}
+{"id": "original-adequacy-01-1", "q": {"q": {"false": 0.7815338373184204, "true": 0.21846619248390198}}}
+{"id": "original-adequacy-02-0", "q": {"q": {"false": 0.6272124648094177, "true": 0.3727875351905823}}}
+{"id": "original-adequacy-02-1", "q": {"q": {"false": 0.714260995388031, "true": 0.2857389748096466}}}
+{"id": "original-adequacy-03-0", "q": {"q": {"false": 0.6066857576370239, "true": 0.3933142423629761}}}
+{"id": "original-adequacy-03-1", "q": {"q": {"false": 0.6711691617965698, "true": 0.3288308084011078}}}
+{"id": "original-adequacy-04-0", "q": {"q": {"false": 0.561612069606781, "true": 0.438387930393219}}}
+{"id": "original-adequacy-04-1", "q": {"q": {"false": 0.6997003555297852, "true": 0.30029961466789246}}}
+{"id": "original-adequacy-05-0", "q": {"q": {"false": 0.6990941762924194, "true": 0.30090582370758057}}}
+{"id": "original-adequacy-05-1", "q": {"q": {"false": 0.6238753199577332, "true": 0.37612468004226685}}}
+{"id": "original-adequacy-06-0", "q": {"q": {"false": 0.5069740414619446, "true": 0.4930259585380554}}}
+{"id": "original-adequacy-06-1", "q": {"q": {"false": 0.5931460857391357, "true": 0.40685394406318665}}}
+{"id": "original-routing-01-0", "q": {"q": {"coding": 0.17591629922389984, "coding_agent": 0.1466541439294815, "document": 0.11917892098426819, "general": 0.08383384346961975, "math": 0.3392680287361145, "tools": 0.13514868915081024}}}
+{"id": "original-routing-01-1", "q": {"q": {"coding": 0.21259525418281555, "coding_agent": 0.2602805495262146, "document": 0.06154786795377731, "general": 0.06863248348236084, "math": 0.26888102293014526, "tools": 0.128062903881073}}}
+{"id": "original-routing-02-0", "q": {"q": {"coding": 0.1799744963645935, "coding_agent": 0.23712985217571259, "document": 0.094023197889328, "general": 0.09391313046216965, "math": 0.3095700740814209, "tools": 0.08538929373025894}}}
+{"id": "original-routing-02-1", "q": {"q": {"coding": 0.19019463658332825, "coding_agent": 0.2109576314687729, "document": 0.14924848079681396, "general": 0.07851912081241608, "math": 0.2491426318883896, "tools": 0.1219375878572464}}}
+{"id": "original-routing-03-0", "q": {"q": {"coding": 0.24439488351345062, "coding_agent": 0.15483438968658447, "document": 0.0980907455086708, "general": 0.0813850611448288, "math": 0.26492413878440857, "tools": 0.15637081861495972}}}
+{"id": "original-routing-03-1", "q": {"q": {"coding": 0.16937293112277985, "coding_agent": 0.1646139770746231, "document": 0.1269703358411789, "general": 0.12867730855941772, "math": 0.25973543524742126, "tools": 0.15062996745109558}}}
+{"id": "original-routing-04-0", "q": {"q": {"coding": 0.2324851006269455, "coding_agent": 0.22732537984848022, "document": 0.11791079491376877, "general": 0.09612664580345154, "math": 0.23501522839069366, "tools": 0.09113691002130508}}}
+{"id": "original-routing-04-1", "q": {"q": {"coding": 0.1934891790151596, "coding_agent": 0.2045249342918396, "document": 0.11282673478126526, "general": 0.07914937287569046, "math": 0.30547547340393066, "tools": 0.1045343279838562}}}
+{"id": "original-routing-05-0", "q": {"q": {"coding": 0.20344363152980804, "coding_agent": 0.2432730495929718, "document": 0.1303776353597641, "general": 0.05699155479669571, "math": 0.2434733659029007, "tools": 0.12244079262018204}}}
+{"id": "original-routing-05-1", "q": {"q": {"coding": 0.22317756712436676, "coding_agent": 0.20801995694637299, "document": 0.11091974377632141, "general": 0.08072086423635483, "math": 0.2737324833869934, "tools": 0.10342934727668762}}}
+{"id": "original-routing-06-0", "q": {"q": {"coding": 0.16384044289588928, "coding_agent": 0.25154104828834534, "document": 0.09863550215959549, "general": 0.0680912658572197, "math": 0.29573407769203186, "tools": 0.12215765565633774}}}
+{"id": "original-routing-06-1", "q": {"q": {"coding": 0.2080804854631424, "coding_agent": 0.17735996842384338, "document": 0.10933462530374527, "general": 0.0924975797533989, "math": 0.28192415833473206, "tools": 0.1308031976222992}}}
+{"id": "hard-opus-a-long_policy-01", "q": {"q": {"deny_repeated_seepage": 0.1694168597459793, "deny_vacancy_exclusion": 0.15794825553894043, "pay_full_estimate_less_deductible": 0.2193388193845749, "pay_subject_to_10000_sublimit": 0.22996672987937927, "pay_subject_to_15000_sublimit": 0.2233293652534485}}}
+{"id": "hard-opus-a-long_policy-04", "q": {"q": {"budget_holder": 0.19942323863506317, "cfo": 0.207826167345047, "department_head": 0.23321039974689484, "executive_committee": 0.14113938808441162, "vp_and_finance_director": 0.21840082108974457}}}
+{"id": "hard-opus-a-long_policy-08", "q": {"q": {"full_repair_no_charge": 0.2657044231891632, "not_covered": 0.18490944802761078, "parts_covered_labour_charged": 0.2226393222808838, "pro_rata_replacement_credit": 0.3267468512058258}}}
+{"id": "hard-opus-a-long_policy-09", "q": {"q": {"license_exception_lvs": 0.19845150411128998, "license_required": 0.17230315506458282, "no_license_required": 0.37676605582237244, "shipment_prohibited": 0.25247928500175476}}}
+{"id": "hard-opus-a-long_policy-11", "q": {"q": {"false": 0.5307459831237793, "true": 0.46925410628318787}}}
+{"id": "hard-opus-a-long_policy-13", "q": {"q": {"false": 0.5051960349082947, "true": 0.4948039650917053}}}
+{"id": "hard-opus-a-long_policy-17", "q": {"q": {"database_oncall": 0.14101649820804596, "no_page_ticket_only": 0.25488772988319397, "platform_oncall": 0.16133274137973785, "security_incident_response": 0.2704619765281677, "vendor_support": 0.17230099439620972}}}
+{"id": "hard-opus-a-long_policy-19", "q": {"q": {"false": 0.46422138810157776, "true": 0.5357785820960999}}}
+{"id": "hard-opus-a-probability-03", "q": {"q": {"false": 0.43756911158561707, "true": 0.5624309182167053}}}
+{"id": "hard-opus-a-probability-04", "q": {"q": {"early": 0.3034471571445465, "late": 0.4039256274700165, "on_time": 0.2926271855831146}}}
+{"id": "hard-opus-a-probability-07", "q": {"q": {"escalated": 0.30321088433265686, "reopened": 0.29516687989234924, "resolved_first_contact": 0.4016222357749939}}}
+{"id": "hard-opus-a-probability-08", "q": {"q": {"false": 0.4515050947666168, "true": 0.548494815826416}}}
+{"id": "hard-opus-a-temporal_numeric-03", "q": {"q": {"false": 0.6588166952133179, "true": 0.34118330478668213}}}
+{"id": "hard-opus-a-temporal_numeric-06", "q": {"q": {"false": 0.5049575567245483, "true": 0.49504244327545166}}}
+{"id": "hard-opus-a-temporal_numeric-07", "q": {"q": {"sep_24": 0.19226612150669098, "sep_25": 0.2059861272573471, "sep_26": 0.18508610129356384, "sep_27": 0.1847771555185318, "sep_28": 0.23188458383083344}}}
+{"id": "hard-opus-a-temporal_numeric-09", "q": {"q": {"false": 0.4968276619911194, "true": 0.5031722784042358}}}
+{"id": "hard-opus-a-temporal_numeric-12", "q": {"q": {"0": 0.21625757217407227, "1": 0.21323907375335693, "2": 0.23097865283489227, "3": 0.3395247757434845}}}
+{"id": "hard-opus-b-ambiguous-02", "q": {"q": {"cannot_determine": 0.32995331287384033, "false_positive": 0.34106504917144775, "real_incident": 0.3289816379547119}}}
+{"id": "hard-opus-b-ambiguous-03", "q": {"q": {"insufficient_information": 0.3299216032028198, "time_barred": 0.28167256712913513, "within_limitation": 0.3884057402610779}}}
+{"id": "hard-opus-b-ambiguous-07", "q": {"q": {"insufficient_information": 0.4605974853038788, "over_limit": 0.24366474151611328, "within_policy": 0.2957378029823303}}}
+{"id": "hard-opus-b-ambiguous-09", "q": {"q": {"compromised": 0.2636992931365967, "inconclusive": 0.14014656841754913, "legitimate": 0.5961541533470154}}}
+{"id": "hard-opus-b-ambiguous-10", "q": {"q": {"ask_user_which_alex": 0.3247479200363159, "send_to_alex_moreno": 0.3421611189842224, "send_to_alexandra_lind": 0.33309102058410645}}}
+{"id": "hard-opus-b-ambiguous-11", "q": {"q": {"cannot_determine": 0.2005123645067215, "grade_correct": 0.31046468019485474, "grade_should_be_higher": 0.4890229403972626}}}
+{"id": "hard-opus-b-ambiguous-13", "q": {"q": {"cannot_determine": 0.18806955218315125, "charge_data_team": 0.32501599192619324, "charge_platform_team": 0.23148398101329803, "split_50_50": 0.2554304301738739}}}
+{"id": "hard-opus-b-multi_hop-03", "q": {"q": {"tier1_team_lead": 0.2665586471557617, "tier2_department_head": 0.18990206718444824, "tier3_cfo": 0.31492623686790466, "tier4_board": 0.22861307859420776}}}
+{"id": "hard-opus-b-multi_hop-04", "q": {"q": {"ana": 0.17967921495437622, "bjorn": 0.19456593692302704, "chen": 0.19472891092300415, "dmitri": 0.1631390005350113, "esra": 0.13535524904727936, "no_page_ticket_only": 0.1325318068265915}}}
+{"id": "hard-opus-b-multi_hop-05", "q": {"q": {"0": 0.1793866902589798, "1": 0.16222545504570007, "2": 0.19513721764087677, "3": 0.23307310044765472, "4": 0.23017750680446625}}}
+{"id": "hard-opus-b-multi_hop-07", "q": {"q": {"credit_10_percent": 0.17168943583965302, "credit_20_percent": 0.12756624817848206, "credit_25_percent": 0.15603728592395782, "credit_50_percent": 0.18210986256599426, "credit_full_month": 0.1875, "no_credit": 0.17509712278842926}}}
+{"id": "hard-opus-b-multi_hop-08", "q": {"q": {"false": 0.4920750558376312, "true": 0.5079249739646912}}}
+{"id": "hard-opus-b-probability-01", "q": {"q": {"customer_wins": 0.3738504648208618, "customer_withdraws": 0.3164393901824951, "merchant_wins": 0.30971014499664307}}}
+{"id": "hard-opus-b-probability-02", "q": {"q": {"bad_push": 0.3473881483078003, "database_hardware": 0.31778836250305176, "upstream_provider": 0.3348234295845032}}}
+{"id": "hard-opus-b-probability-03", "q": {"q": {"false": 0.5773248672485352, "true": 0.42267516255378723}}}
+{"id": "hard-opus-b-probability-04", "q": {"q": {"attended": 0.2940477132797241, "late_cancellation": 0.2817170023918152, "no_show": 0.42423519492149353}}}
+{"id": "hard-opus-b-probability-06", "q": {"q": {"modified": 0.24607042968273163, "overturned": 0.21941278874874115, "upheld": 0.5345168113708496}}}
+{"id": "hard-opus-b-tradeoff-01", "q": {"q": {"escalate_to_engineering": 0.2087162882089615, "escalate_to_security": 0.17200344800949097, "page_oncall": 0.33921608328819275, "process_refund": 0.12563349306583405, "send_kb_article": 0.15443061292171478}}}
+{"id": "hard-opus-b-tradeoff-03", "q": {"q": {"order_a": 0.22190538048744202, "order_b": 0.2225547730922699, "order_c": 0.26966431736946106, "order_d": 0.28587549924850464}}}
+{"id": "hard-opus-b-tradeoff-06", "q": {"q": {"false": 0.38504886627197266, "true": 0.6149511337280273}}}
+{"id": "hard-opus-b-tradeoff-07", "q": {"q": {"out_of_scope": 0.17578953504562378, "p0_fix_24h": 0.2844749689102173, "p1_fix_7d": 0.13718681037425995, "p2_fix_30d": 0.26449719071388245, "p3_backlog": 0.13805150985717773}}}
+{"id": "hard-opus-b-tradeoff-08", "q": {"q": {"false": 0.3234269320964813, "true": 0.6765730977058411}}}
+{"id": "hard-opus-b-tradeoff-12", "q": {"q": {"deny_refund": 0.17985908687114716, "escalate_to_fraud_team": 0.14854320883750916, "offer_store_credit": 0.12382060289382935, "refund_now": 0.30013307929039, "wait_for_inspection": 0.24764405190944672}}}
+{"id": "hard-opus-c-long_policy-02", "q": {"q": {"erase_all": 0.22011198103427887, "erase_but_retain_transaction_records": 0.2204785943031311, "erase_marketing_only": 0.17091727256774902, "reject_unverified_request": 0.12013225257396698, "restrict_all_pending_legal_hold": 0.2683599293231964}}}
+{"id": "hard-opus-c-long_policy-03", "q": {"q": {"eur_0": 0.09876764565706253, "eur_150": 0.22909533977508545, "eur_200": 0.1531442254781723, "eur_300": 0.1993543952703476, "eur_400": 0.16230839490890503, "eur_600": 0.15733006596565247}}}
+{"id": "hard-opus-c-long_policy-04", "q": {"q": {"false": 0.49341925978660583, "true": 0.5065807700157166}}}
+{"id": "hard-opus-c-long_policy-05", "q": {"q": {"0": 0.3294985592365265, "1": 0.22445546090602875, "2": 0.20642206072807312, "3": 0.23962388932704926}}}
+{"id": "hard-opus-c-long_policy-08", "q": {"q": {"0": 0.2794516682624817, "1": 0.24049758911132812, "2": 0.23130816221237183, "3": 0.24874253571033478}}}
+{"id": "hard-opus-c-long_policy-10", "q": {"q": {"credit_minus_restocking_fee": 0.3115290403366089, "full_credit": 0.2980528771877289, "reject_return": 0.21908362209796906, "repair_or_replace_only": 0.17133447527885437}}}
+{"id": "hard-opus-c-long_policy-11", "q": {"q": {"false": 0.38489222526550293, "true": 0.6151078343391418}}}
+{"id": "hard-opus-c-probability-03", "q": {"q": {"halvorsen_polymer": 0.21861815452575684, "kuznets_technik": 0.4927048981189728, "ortega_seal_works": 0.28867700695991516}}}
+{"id": "hard-opus-c-temporal_numeric-02", "q": {"q": {"false": 0.4237571656703949, "true": 0.5762428641319275}}}
+{"id": "hard-opus-c-temporal_numeric-03", "q": {"q": {"eur_617_00": 0.20057132840156555, "eur_688_00": 0.2953934073448181, "eur_692_00": 0.19013622403144836, "eur_693_90": 0.15432538092136383, "eur_812_00": 0.15957364439964294}}}
+{"id": "hard-opus-c-temporal_numeric-04", "q": {"q": {"usd_2222_50": 0.21750286221504211, "usd_2303_01": 0.18603667616844177, "usd_2303_33": 0.16556821763515472, "usd_2335_00": 0.23897220194339752, "usd_2340_00": 0.1919199824333191}}}
+{"id": "hard-opus-c-temporal_numeric-06", "q": {"q": {"none_declined": 0.14377932250499725, "sep_15_office_chair": 0.14808516204357147, "sep_16_taxi": 0.14671987295150757, "sep_17_parking": 0.18271955847740173, "sep_18_book_set": 0.1875099539756775, "sep_21_client_dinner": 0.19118617475032806}}}
+{"id": "hard-opus-c-temporal_numeric-08", "q": {"q": {"eur_497_40": 0.16358023881912231, "eur_498_81": 0.20875483751296997, "eur_506_06": 0.2116105556488037, "eur_513_69": 0.22603188455104828, "eur_532_01": 0.19002246856689453}}}
+{"id": "hard-opus-c-temporal_numeric-12", "q": {"q": {"covered": 0.19703011214733124, "expired_24_month_term": 0.3775281608104706, "expired_30_month_cap": 0.42544180154800415}}}
+{"id": "hard-sol-a-adversarial-01", "q": {"q": {"deny_inactive_user": 0.2993842363357544, "deny_missing_approval": 0.21839535236358643, "grant_access": 0.19665931165218353, "grant_owner_exception": 0.2855611741542816}}}
+{"id": "hard-sol-a-adversarial-06", "q": {"q": {"false": 0.5573126077651978, "true": 0.44268739223480225}}}
+{"id": "hard-sol-a-adversarial-07", "q": {"q": {"delete_now": 0.1896265745162964, "needs_signature_review": 0.32460105419158936, "retain_indefinitely": 0.32277676463127136, "retain_until_2031": 0.16299556195735931}}}
+{"id": "hard-sol-a-adversarial-08", "q": {"q": {"false": 0.4930433928966522, "true": 0.5069565773010254}}}
+{"id": "hard-sol-a-adversarial-09", "q": {"q": {"0": 0.22241492569446564, "1": 0.2331986427307129, "2": 0.2580268979072571, "3": 0.2863595485687256}}}
+{"id": "hard-sol-a-adversarial-11", "q": {"q": {"ethics_review": 0.25356921553611755, "major_grants": 0.26876193284988403, "manual_hold": 0.2573024034500122, "standard_research": 0.22036637365818024}}}
+{"id": "hard-sol-a-multi_hop-01", "q": {"q": {"accept_s2_dusk": 0.49016332626342773, "reject_cutoff": 0.1647714078426361, "reject_tier": 0.19329926371574402, "reroute_s3": 0.15176603198051453}}}
+{"id": "hard-sol-a-multi_hop-02", "q": {"q": {"executive_bridge": 0.19091013073921204, "heron_q2": 0.33046239614486694, "insufficient_information": 0.22645922005176544, "security_primary": 0.2521682381629944}}}
+{"id": "hard-sol-a-multi_hop-05", "q": {"q": {"pay_manager_approved": 0.28163275122642517, "reject_category": 0.31688711047172546, "require_director": 0.2233601063489914, "require_finance_board": 0.17812001705169678}}}
+{"id": "hard-sol-a-multi_hop-07", "q": {"q": {"admit": 0.23592372238636017, "deny_prerequisite": 0.2792331576347351, "deny_score": 0.2111106812953949, "manual_equivalency": 0.27373242378234863}}}
+{"id": "hard-sol-a-multi_hop-08", "q": {"q": {"central_engineering": 0.15854988992214203, "insufficient_log": 0.1520168036222458, "local_maintenance": 0.12012071162462234, "safety_shutdown": 0.569312572479248}}}
+{"id": "hard-sol-a-multi_hop-09", "q": {"q": {"confirm_l3": 0.26078882813453674, "reject_capacity": 0.27588576078414917, "require_steward": 0.23515361547470093, "switch_l4": 0.22817179560661316}}}
+{"id": "hard-sol-a-multi_hop-10", "q": {"q": {"approve_45_days": 0.14435401558876038, "deny_sensitive": 0.23093977570533752, "needs_field_review": 0.3029954731464386, "reduce_to_30_days": 0.3217107057571411}}}
+{"id": "hard-sol-a-multi_hop-12", "q": {"q": {"covered_recurrence": 0.2378440499305725, "expired": 0.246421679854393, "needs_authentication": 0.26880159974098206, "wrong_issue_class": 0.24693264067173004}}}
+{"id": "hard-sol-a-trap-02", "q": {"q": {"false": 0.5413597822189331, "true": 0.45864027738571167}}}
+{"id": "hard-sol-a-trap-04", "q": {"q": {"false": 0.5133213996887207, "true": 0.4866786003112793}}}
+{"id": "hard-sol-a-trap-05", "q": {"q": {"0": 0.2510996162891388, "1": 0.23202179372310638, "2": 0.2544301748275757, "3": 0.2624484598636627}}}
+{"id": "hard-sol-a-trap-06", "q": {"q": {"await_internal_metrics": 0.15134814381599426, "close_agent_verified": 0.3743823170661926, "close_confirmed": 0.23723536729812622, "keep_open_unresolved": 0.2370341569185257}}}
+{"id": "hard-sol-a-trap-08", "q": {"q": {"canceled": 0.309418261051178, "indeterminate": 0.17735762894153595, "late": 0.2668818235397339, "on_time": 0.24634233117103577}}}
+{"id": "hard-sol-a-trap-10", "q": {"q": {"blocked_failed_test": 0.24431659281253815, "blocked_second_review": 0.2926637828350067, "ready_one_review": 0.21008746325969696, "ready_two_reviews": 0.2529321014881134}}}
+{"id": "hard-sol-a-trap-13", "q": {"q": {"false": 0.4872645139694214, "true": 0.5127355456352234}}}
+{"id": "hard-sol-a-trap-15", "q": {"q": {"false": 0.5365898013114929, "true": 0.46341028809547424}}}
+{"id": "hard-sol-b-judge_hard-01", "q": {"q": {"false": 0.5584944486618042, "true": 0.4415055215358734}}}
+{"id": "hard-sol-b-judge_hard-02", "q": {"q": {"false": 0.5241684317588806, "true": 0.4758315980434418}}}
+{"id": "hard-sol-b-judge_hard-05", "q": {"q": {"false": 0.6918104290962219, "true": 0.3081895709037781}}}
+{"id": "hard-sol-b-judge_hard-08", "q": {"q": {"false": 0.6480738520622253, "true": 0.3519262373447418}}}
+{"id": "hard-sol-b-judge_hard-10", "q": {"q": {"false": 0.6132050156593323, "true": 0.3867950141429901}}}
+{"id": "hard-sol-b-judge_hard-14", "q": {"q": {"false": 0.46807193756103516, "true": 0.5319280624389648}}}
+{"id": "hard-sol-b-judge_hard-15", "q": {"q": {"false": 0.6002187728881836, "true": 0.3997812867164612}}}
+{"id": "hard-sol-b-judge_hard-18", "q": {"q": {"false": 0.5773000717163086, "true": 0.42269983887672424}}}
+{"id": "hard-sol-b-long_policy-01", "q": {"q": {"approve_all": 0.2619577944278717, "approve_lodging_only": 0.26110270619392395, "approve_meals_only": 0.20735327899456024, "reject_entire_claim": 0.2695862352848053}}}
+{"id": "hard-sol-b-long_policy-02", "q": {"q": {"analytics_owner_only": 0.19495859742164612, "deny_current_export": 0.2601095139980316, "privacy_and_security": 0.28238391876220703, "privacy_only": 0.26254791021347046}}}
+{"id": "hard-sol-b-long_policy-05", "q": {"q": {"delete_everything": 0.2600831091403961, "delete_nothing": 0.2396910935640335, "delete_only_profile": 0.25427424907684326, "delete_profile_omar_april_and_table": 0.2459515929222107}}}
+{"id": "hard-sol-b-long_policy-06", "q": {"q": {"east_ward": 0.3064950704574585, "harbor_neighbors": 0.2387780249118805, "no_award": 0.20768623054027557, "river_arts": 0.24704064428806305}}}
+{"id": "hard-sol-b-routing_hard-01", "q": {"q": {"data_pipeline": 0.1111898198723793, "desktop_support": 0.21832935512065887, "finance_review": 0.14880701899528503, "office_file_repair": 0.2653963267803192, "spreadsheet_formula": 0.25627750158309937}}}
+{"id": "hard-sol-b-routing_hard-02", "q": {"q": {"customer_support": 0.2018755078315735, "fraud_review": 0.14722420275211334, "ledger_reconciliation": 0.25224629044532776, "mobile_app": 0.12455275654792786, "payment_disputes": 0.274101197719574}}}
+{"id": "hard-sol-b-routing_hard-03", "q": {"q": {"api_platform": 0.3028264045715332, "authoritative_dns": 0.15657249093055725, "endpoint_devices": 0.21566197276115417, "network_dns": 0.12409725040197372, "tls_certificates": 0.20084190368652344}}}
+{"id": "hard-sol-b-routing_hard-07", "q": {"q": {"ci_infrastructure": 0.1998426765203476, "code_signing": 0.16001661121845245, "endpoint_security": 0.3037136197090149, "macos_runtime": 0.2095901221036911, "release_notarization": 0.12683695554733276}}}
+{"id": "hard-sol-b-routing_hard-09", "q": {"q": {"git_client": 0.23334580659866333, "identity_login": 0.17123796045780182, "repository_admin": 0.17725498974323273, "source_access": 0.2757255733013153, "vpn_network": 0.14243565499782562}}}
+{"id": "hard-sol-b-temporal_numeric-01", "q": {"q": {"before_open": 0.21056582033634186, "late_by_2h_or_more": 0.30656322836875916, "late_by_under_2h": 0.21009725332260132, "within_window": 0.27277371287345886}}}
+{"id": "hard-sol-b-temporal_numeric-02", "q": {"q": {"at_least_100gb_below": 0.3853294253349304, "exactly_equal": 0.1839468777179718, "over_limit": 0.20759183168411255, "under_100gb_below": 0.22313182055950165}}}
+{"id": "hard-sol-b-temporal_numeric-03", "q": {"q": {"12_credits": 0.19228260219097137, "15_credits": 0.17620399594306946, "6_credits": 0.26574212312698364, "9_credits": 0.36577126383781433}}}
+{"id": "hard-sol-b-temporal_numeric-04", "q": {"q": {"clear_fail": 0.4079442322254181, "narrow_fail": 0.2918112874031067, "pass": 0.3002444803714752}}}
+{"id": "hard-sol-c-judge_hard-03", "q": {"q": {"false": 0.5671394467353821, "true": 0.4328605532646179}}}
+{"id": "hard-sol-c-judge_hard-05", "q": {"q": {"false": 0.4951062500476837, "true": 0.5048937201499939}}}
+{"id": "hard-sol-c-judge_hard-07", "q": {"q": {"false": 0.5201914310455322, "true": 0.47980859875679016}}}
+{"id": "hard-sol-c-judge_hard-08", "q": {"q": {"false": 0.5281447768211365, "true": 0.47185519337654114}}}
+{"id": "hard-sol-c-judge_hard-09", "q": {"q": {"false": 0.4816444516181946, "true": 0.5183555483818054}}}
+{"id": "hard-sol-c-judge_hard-10", "q": {"q": {"false": 0.5359305143356323, "true": 0.46406957507133484}}}
+{"id": "hard-sol-c-judge_hard-11", "q": {"q": {"false": 0.4902269244194031, "true": 0.5097730755805969}}}
+{"id": "hard-sol-c-judge_hard-13", "q": {"q": {"false": 0.5187647938728333, "true": 0.48123523592948914}}}
+{"id": "hard-sol-c-judge_hard-15", "q": {"q": {"false": 0.5402052402496338, "true": 0.459794819355011}}}
+{"id": "hard-sol-c-multi_hop-07", "q": {"q": {"partial_release": 0.2680671811103821, "programme_review": 0.26238468289375305, "reject_draw": 0.21909330785274506, "release_draw": 0.25045478343963623}}}
+{"id": "hard-sol-c-multi_hop-09", "q": {"q": {"bus_substitution": 0.35185471177101135, "call_fen_cross": 0.2859085202217102, "pass_fen_cross": 0.24323761463165283, "terminate_oakmere": 0.1189991682767868}}}
+{"id": "hard-sol-c-multi_hop-11", "q": {"q": {"adjuster_referral": 0.2522525191307068, "coverage_confirmed": 0.21740081906318665, "coverage_excluded": 0.25183284282684326, "documentation_needed": 0.27851390838623047}}}
+{"id": "hard-sol-c-multi_hop-12", "q": {"q": {"conservation_hold": 0.18193590641021729, "deny_request": 0.1584126204252243, "digital_copy_only": 0.26818323135375977, "supervised_delivery": 0.39146825671195984}}}
+{"id": "hard-sol-c-multi_hop-13", "q": {"q": {"engineering_review": 0.3134773373603821, "normal_release": 0.25099092721939087, "rework": 0.262457013130188, "scrap_lot": 0.17307469248771667}}}

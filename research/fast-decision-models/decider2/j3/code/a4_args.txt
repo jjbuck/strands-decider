@@ -1,0 +1,1 @@
+--Ls 4 --bridge A --updates 260 --accum 16 --every 100 --max_hours 1.0

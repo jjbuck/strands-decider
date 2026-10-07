@@ -1,0 +1,5 @@
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 4162.46it/s]
+tc45rq8: flips 2/300 rms_dm 0.0882 TV 0.0117 pred_flips 3.7 | state rows int4 0.818 int8 0.152 bf16 0.000 extra 0.000 | 211s
+tc4rq8_l0: flips 4/300 rms_dm 0.0958 TV 0.0131 pred_flips 4.2 | state rows int4 0.740 int8 0.151 bf16 0.000 extra 0.000 | 194s
+tc45rq8_l0: flips 6/300 rms_dm 0.0906 TV 0.0116 pred_flips 3.9 | state rows int4 0.787 int8 0.186 bf16 0.000 extra 0.000 | 203s
+w4q8_l0: flips 6/300 rms_dm 0.1754 TV 0.0236 pred_flips 8.9 | state rows int4 0.957 int8 0.043 bf16 0.000 extra 0.000 | 94s

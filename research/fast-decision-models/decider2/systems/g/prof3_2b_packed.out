@@ -1,0 +1,59 @@
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 4562.45it/s]
+USDT:2026-10-05 03:14:58 76739:76739 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 03:14:58 76739:76739 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 03:14:58 76739:76739 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 03:14:58 76739:76739 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 03:14:58 76739:76739 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 03:14:58 76739:76739 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 03:14:59 76739:76739 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 03:14:59 76739:76739 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 03:14:59 76739:76739 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 03:14:59 76739:76739 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 03:14:59 76739:76739 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 03:14:59 76739:76739 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 03:15:00 76739:76739 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 03:15:00 76739:76739 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 03:15:00 76739:76739 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 03:15:00 76739:76739 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 03:15:00 76739:76739 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 03:15:01 76739:76739 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 03:15:01 76739:76739 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 03:15:01 76739:76739 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 03:15:02 76739:76739 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 03:15:02 76739:76739 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 03:15:02 76739:76739 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 03:15:02 76739:76739 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 03:15:02 76739:76739 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 03:15:02 76739:76739 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 03:15:03 76739:76739 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 03:15:03 76739:76739 SyncActivityProfilerHandler.cpp:46] profiler_stop
+packed q=4 state tokens 64 +4x64 {'cat_ms': {'gemm': 20.06, 'elementwise/other': 6.6, 'fla_gdn': 2.02, 'conv': 0.27}, 'kernels': 1954, 'busy_ms': 28.95, 'gaps_ms': 0.15, 'est_ms': 29.1, 'span_min_ms': 52.91, 'span_med_ms': 104.94}
+USDT:2026-10-05 03:15:06 76739:76739 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 03:15:06 76739:76739 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 03:15:06 76739:76739 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 03:15:07 76739:76739 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 03:15:07 76739:76739 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 03:15:07 76739:76739 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 03:15:07 76739:76739 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 03:15:08 76739:76739 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 03:15:09 76739:76739 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 03:15:09 76739:76739 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 03:15:09 76739:76739 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 03:15:09 76739:76739 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 03:15:10 76739:76739 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 03:15:10 76739:76739 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 03:15:10 76739:76739 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 03:15:11 76739:76739 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 03:15:11 76739:76739 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 03:15:11 76739:76739 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 03:15:11 76739:76739 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 03:15:12 76739:76739 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 03:15:12 76739:76739 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 03:15:12 76739:76739 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 03:15:13 76739:76739 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 03:15:13 76739:76739 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 03:15:14 76739:76739 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 03:15:14 76739:76739 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-10-05 03:15:14 76739:76739 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 03:15:14 76739:76739 SyncActivityProfilerHandler.cpp:46] profiler_stop
+packed q=4 state tokens 1000 +4x64 {'cat_ms': {'gemm': 78.79, 'elementwise/other': 29.41, 'fla_gdn': 5.21, 'conv': 1.11}, 'kernels': 1936, 'busy_ms': 114.52, 'gaps_ms': 0.22, 'est_ms': 114.74, 'span_min_ms': 245.84, 'span_med_ms': 403.15}

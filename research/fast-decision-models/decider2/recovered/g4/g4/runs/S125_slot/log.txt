@@ -1,0 +1,93 @@
+== S125_slot cfg Cfg({'scale': 'S125', 'arm': 'slot', 'd': 1024, 'L': 11, 'H': 16, 'Hkv': 2, 'hd': 64, 'ffn': 3072, 'mon_ffn': 11520, 'kind': 'slot', 'k': 2, 'S': 16, 'T': 128, 'nb': 0}) params 189.8M nonemb 156.3M train GFLOP/tok 1.328 steps 4136 tokens 135.5M budget 180.0 PFLOP lr 0.001
+step 1/4136 loss 10.5619 gn 9.11 lr 1.00e-05 tok/s 592 TFLOPS 0.8 elapsed 0.9m mem 12.5GB
+step 50/4136 loss 7.7364 gn 0.97 lr 2.55e-04 tok/s 33744 TFLOPS 44.8 elapsed 1.7m mem 14.0GB
+step 100/4136 loss 6.3129 gn 1.01 lr 5.05e-04 tok/s 33744 TFLOPS 44.8 elapsed 2.5m mem 14.0GB
+step 150/4136 loss 5.9688 gn 0.87 lr 7.55e-04 tok/s 33745 TFLOPS 44.8 elapsed 3.3m mem 14.0GB
+step 200/4136 loss 5.7265 gn 0.79 lr 1.00e-03 tok/s 33747 TFLOPS 44.8 elapsed 4.1m mem 14.0GB
+step 250/4136 loss 5.5220 gn 0.62 lr 1.00e-03 tok/s 33743 TFLOPS 44.8 elapsed 4.9m mem 14.0GB
+step 300/4136 loss 5.3418 gn 0.50 lr 9.99e-04 tok/s 33745 TFLOPS 44.8 elapsed 5.8m mem 14.0GB
+step 350/4136 loss 5.2056 gn 0.48 lr 9.97e-04 tok/s 33743 TFLOPS 44.8 elapsed 6.6m mem 14.0GB
+step 400/4136 loss 5.0795 gn 0.47 lr 9.94e-04 tok/s 33746 TFLOPS 44.8 elapsed 7.4m mem 14.0GB
+step 450/4136 loss 4.9947 gn 0.50 lr 9.91e-04 tok/s 33744 TFLOPS 44.8 elapsed 8.2m mem 14.0GB
+step 500/4136 loss 4.9058 gn 0.53 lr 9.87e-04 tok/s 33745 TFLOPS 44.8 elapsed 9.0m mem 14.0GB
+step 550/4136 loss 4.8471 gn 0.41 lr 9.83e-04 tok/s 33744 TFLOPS 44.8 elapsed 9.8m mem 14.0GB
+step 600/4136 loss 4.7679 gn 0.44 lr 9.77e-04 tok/s 33745 TFLOPS 44.8 elapsed 10.6m mem 14.0GB
+step 650/4136 loss 4.7220 gn 0.44 lr 9.71e-04 tok/s 33744 TFLOPS 44.8 elapsed 11.4m mem 14.0GB
+step 700/4136 loss 4.6375 gn 0.42 lr 9.65e-04 tok/s 33747 TFLOPS 44.8 elapsed 12.2m mem 14.0GB
+step 750/4136 loss 4.6091 gn 0.37 lr 9.57e-04 tok/s 33744 TFLOPS 44.8 elapsed 13.0m mem 14.0GB
+step 800/4136 loss 4.5347 gn 0.36 lr 9.49e-04 tok/s 33746 TFLOPS 44.8 elapsed 13.8m mem 14.0GB
+step 850/4136 loss 4.5207 gn 0.41 lr 9.41e-04 tok/s 33746 TFLOPS 44.8 elapsed 14.7m mem 14.0GB
+ckpt step 872
+step 900/4136 loss 4.4659 gn 0.35 lr 9.32e-04 tok/s 31810 TFLOPS 42.2 elapsed 15.5m mem 14.0GB
+step 950/4136 loss 4.4268 gn 0.35 lr 9.22e-04 tok/s 33745 TFLOPS 44.8 elapsed 16.3m mem 14.0GB
+step 1000/4136 loss 4.3982 gn 0.41 lr 9.11e-04 tok/s 33750 TFLOPS 44.8 elapsed 17.1m mem 14.0GB
+VAL step 1000 tokens 32.8M loss 4.5083 lastblock 4.4690
+step 1050/4136 loss 4.3607 gn 0.39 lr 9.00e-04 tok/s 21020 TFLOPS 27.9 elapsed 18.4m mem 14.0GB
+step 1100/4136 loss 4.3157 gn 0.36 lr 8.89e-04 tok/s 33744 TFLOPS 44.8 elapsed 19.2m mem 14.0GB
+step 1150/4136 loss 4.2967 gn 0.35 lr 8.77e-04 tok/s 33742 TFLOPS 44.8 elapsed 20.0m mem 14.0GB
+step 1200/4136 loss 4.2776 gn 0.35 lr 8.64e-04 tok/s 33742 TFLOPS 44.8 elapsed 20.9m mem 14.0GB
+step 1250/4136 loss 4.2448 gn 0.37 lr 8.51e-04 tok/s 33737 TFLOPS 44.8 elapsed 21.7m mem 14.0GB
+step 1300/4136 loss 4.2179 gn 0.33 lr 8.37e-04 tok/s 33734 TFLOPS 44.8 elapsed 22.5m mem 14.0GB
+step 1350/4136 loss 4.1888 gn 0.32 lr 8.23e-04 tok/s 33740 TFLOPS 44.8 elapsed 23.3m mem 14.0GB
+step 1400/4136 loss 4.1815 gn 0.34 lr 8.09e-04 tok/s 33739 TFLOPS 44.8 elapsed 24.1m mem 14.0GB
+step 1450/4136 loss 4.1515 gn 0.33 lr 7.94e-04 tok/s 33738 TFLOPS 44.8 elapsed 24.9m mem 14.0GB
+step 1500/4136 loss 4.1261 gn 0.33 lr 7.79e-04 tok/s 33737 TFLOPS 44.8 elapsed 25.7m mem 14.0GB
+step 1550/4136 loss 4.1111 gn 0.34 lr 7.63e-04 tok/s 33740 TFLOPS 44.8 elapsed 26.5m mem 14.0GB
+step 1600/4136 loss 4.0953 gn 0.33 lr 7.47e-04 tok/s 33734 TFLOPS 44.8 elapsed 27.3m mem 14.0GB
+step 1650/4136 loss 4.0733 gn 0.34 lr 7.31e-04 tok/s 33732 TFLOPS 44.8 elapsed 28.1m mem 14.0GB
+step 1700/4136 loss 4.0866 gn 0.32 lr 7.14e-04 tok/s 33735 TFLOPS 44.8 elapsed 29.0m mem 14.0GB
+step 1750/4136 loss 4.0514 gn 0.34 lr 6.97e-04 tok/s 33728 TFLOPS 44.8 elapsed 29.8m mem 14.0GB
+ckpt step 1769
+step 1800/4136 loss 4.0246 gn 0.33 lr 6.80e-04 tok/s 24016 TFLOPS 31.9 elapsed 30.9m mem 14.0GB
+step 1850/4136 loss 4.0266 gn 0.34 lr 6.63e-04 tok/s 33741 TFLOPS 44.8 elapsed 31.7m mem 14.0GB
+step 1900/4136 loss 3.9879 gn 0.33 lr 6.46e-04 tok/s 33740 TFLOPS 44.8 elapsed 32.5m mem 14.0GB
+step 1950/4136 loss 3.9643 gn 0.31 lr 6.28e-04 tok/s 33730 TFLOPS 44.8 elapsed 33.3m mem 14.0GB
+step 2000/4136 loss 3.9491 gn 0.32 lr 6.10e-04 tok/s 33731 TFLOPS 44.8 elapsed 34.1m mem 14.0GB
+VAL step 2000 tokens 65.5M loss 4.1160 lastblock 4.0937
+step 2050/4136 loss 3.9545 gn 0.32 lr 5.92e-04 tok/s 33314 TFLOPS 44.2 elapsed 35.0m mem 14.0GB
+step 2100/4136 loss 3.9406 gn 0.34 lr 5.74e-04 tok/s 33724 TFLOPS 44.8 elapsed 35.8m mem 14.0GB
+step 2150/4136 loss 3.9300 gn 0.31 lr 5.56e-04 tok/s 33720 TFLOPS 44.8 elapsed 36.6m mem 14.0GB
+step 2200/4136 loss 3.9080 gn 0.32 lr 5.39e-04 tok/s 33719 TFLOPS 44.8 elapsed 37.4m mem 14.0GB
+step 2250/4136 loss 3.8949 gn 0.31 lr 5.21e-04 tok/s 33719 TFLOPS 44.8 elapsed 38.2m mem 14.0GB
+step 2300/4136 loss 3.8564 gn 0.31 lr 5.03e-04 tok/s 33724 TFLOPS 44.8 elapsed 39.0m mem 14.0GB
+step 2350/4136 loss 3.8711 gn 0.33 lr 4.85e-04 tok/s 33722 TFLOPS 44.8 elapsed 39.8m mem 14.0GB
+step 2400/4136 loss 3.8555 gn 0.30 lr 4.67e-04 tok/s 33716 TFLOPS 44.8 elapsed 40.6m mem 14.0GB
+step 2450/4136 loss 3.8542 gn 0.31 lr 4.50e-04 tok/s 33722 TFLOPS 44.8 elapsed 41.4m mem 14.0GB
+step 2500/4136 loss 3.8282 gn 0.31 lr 4.32e-04 tok/s 33716 TFLOPS 44.8 elapsed 42.2m mem 14.0GB
+step 2550/4136 loss 3.8015 gn 0.31 lr 4.15e-04 tok/s 33719 TFLOPS 44.8 elapsed 43.1m mem 14.0GB
+step 2600/4136 loss 3.8061 gn 0.32 lr 3.98e-04 tok/s 33723 TFLOPS 44.8 elapsed 43.9m mem 14.0GB
+step 2650/4136 loss 3.7657 gn 0.35 lr 3.81e-04 tok/s 33728 TFLOPS 44.8 elapsed 44.7m mem 14.0GB
+ckpt step 2696
+step 2700/4136 loss 3.7844 gn 0.31 lr 3.65e-04 tok/s 24005 TFLOPS 31.9 elapsed 45.8m mem 14.0GB
+step 2750/4136 loss 3.7451 gn 0.32 lr 3.48e-04 tok/s 33742 TFLOPS 44.8 elapsed 46.6m mem 14.0GB
+step 2800/4136 loss 3.7413 gn 0.32 lr 3.33e-04 tok/s 33743 TFLOPS 44.8 elapsed 47.4m mem 14.0GB
+step 2850/4136 loss 3.7432 gn 0.31 lr 3.17e-04 tok/s 33733 TFLOPS 44.8 elapsed 48.2m mem 14.0GB
+step 2900/4136 loss 3.7398 gn 0.32 lr 3.02e-04 tok/s 33729 TFLOPS 44.8 elapsed 49.0m mem 14.0GB
+step 2950/4136 loss 3.7190 gn 0.31 lr 2.87e-04 tok/s 33740 TFLOPS 44.8 elapsed 49.9m mem 14.0GB
+step 3000/4136 loss 3.7158 gn 0.32 lr 2.73e-04 tok/s 33741 TFLOPS 44.8 elapsed 50.7m mem 14.0GB
+VAL step 3000 tokens 98.3M loss 3.8951 lastblock 3.8454
+step 3050/4136 loss 3.7017 gn 0.31 lr 2.59e-04 tok/s 33319 TFLOPS 44.2 elapsed 51.5m mem 14.0GB
+step 3100/4136 loss 3.7048 gn 0.39 lr 2.45e-04 tok/s 33727 TFLOPS 44.8 elapsed 52.3m mem 14.0GB
+step 3150/4136 loss 3.6863 gn 0.34 lr 2.32e-04 tok/s 33728 TFLOPS 44.8 elapsed 53.1m mem 14.0GB
+step 3200/4136 loss 3.6818 gn 0.32 lr 2.20e-04 tok/s 33723 TFLOPS 44.8 elapsed 53.9m mem 14.0GB
+step 3250/4136 loss 3.6888 gn 0.31 lr 2.08e-04 tok/s 33729 TFLOPS 44.8 elapsed 54.7m mem 14.0GB
+step 3300/4136 loss 3.6596 gn 0.31 lr 1.97e-04 tok/s 33722 TFLOPS 44.8 elapsed 55.5m mem 14.0GB
+step 3350/4136 loss 3.6538 gn 0.31 lr 1.86e-04 tok/s 33726 TFLOPS 44.8 elapsed 56.3m mem 14.0GB
+step 3400/4136 loss 3.6407 gn 0.34 lr 1.75e-04 tok/s 33726 TFLOPS 44.8 elapsed 57.2m mem 14.0GB
+step 3450/4136 loss 3.6355 gn 0.33 lr 1.66e-04 tok/s 33738 TFLOPS 44.8 elapsed 58.0m mem 14.0GB
+step 3500/4136 loss 3.6501 gn 0.32 lr 1.57e-04 tok/s 33732 TFLOPS 44.8 elapsed 58.8m mem 14.0GB
+step 3550/4136 loss 3.6488 gn 0.34 lr 1.48e-04 tok/s 33722 TFLOPS 44.8 elapsed 59.6m mem 14.0GB
+step 3600/4136 loss 3.6136 gn 0.31 lr 1.41e-04 tok/s 33725 TFLOPS 44.8 elapsed 60.4m mem 14.0GB
+ckpt step 3623
+step 3650/4136 loss 3.6288 gn 0.31 lr 1.33e-04 tok/s 24022 TFLOPS 31.9 elapsed 61.5m mem 14.0GB
+step 3700/4136 loss 3.6264 gn 0.32 lr 1.27e-04 tok/s 33742 TFLOPS 44.8 elapsed 62.3m mem 14.0GB
+step 3750/4136 loss 3.6241 gn 0.31 lr 1.21e-04 tok/s 33743 TFLOPS 44.8 elapsed 63.1m mem 14.0GB
+step 3800/4136 loss 3.6067 gn 0.30 lr 1.16e-04 tok/s 33726 TFLOPS 44.8 elapsed 64.0m mem 14.0GB
+step 3850/4136 loss 3.6046 gn 0.32 lr 1.12e-04 tok/s 33732 TFLOPS 44.8 elapsed 64.8m mem 14.0GB
+step 3900/4136 loss 3.6114 gn 0.32 lr 1.08e-04 tok/s 33735 TFLOPS 44.8 elapsed 65.6m mem 14.0GB
+step 3950/4136 loss 3.5976 gn 0.31 lr 1.05e-04 tok/s 33741 TFLOPS 44.8 elapsed 66.4m mem 14.0GB
+step 4000/4136 loss 3.5850 gn 0.33 lr 1.03e-04 tok/s 33744 TFLOPS 44.8 elapsed 67.2m mem 14.0GB
+VAL step 4000 tokens 131.1M loss 3.7907 lastblock 3.7448
+step 4050/4136 loss 3.5897 gn 0.33 lr 1.01e-04 tok/s 33325 TFLOPS 44.3 elapsed 68.0m mem 14.0GB
+step 4100/4136 loss 3.5935 gn 0.33 lr 1.00e-04 tok/s 33742 TFLOPS 44.8 elapsed 68.8m mem 14.0GB
+FINAL {"name": "S125_slot", "scale": "S125", "arm": "slot", "steps": 4136, "tokens": 135528448, "train_pflops": 179.9635986158715, "val_loss": 3.760089874267578, "val_last_block": 3.727964401245117, "params": 189839680, "nonemb": 156307456, "elapsed_min": 69.40690835714341, "infer_gflop_1000": 89.314820096}

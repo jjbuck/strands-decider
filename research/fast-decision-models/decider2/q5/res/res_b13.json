@@ -1,0 +1,133 @@
+{
+ "vocab": {
+  "train_bank_tokens": 31929774,
+  "train_bank_distinct": 13376,
+  "eval_bank_tokens": 6786796,
+  "eval_bank_distinct": 9238,
+  "eval_token_coverage": 0.9974678773312179,
+  "eval_distinct_covered": 0.9342931370426499,
+  "table_MB_bf16": 220.008448,
+  "table_MB_int8": 110.004224,
+  "vocab_size": 248320
+ },
+ "dense::skip23::all::0": {
+  "max_dlogit": 0.03110790252685547,
+  "flips": 1,
+  "n": 3227,
+  "nan_logits": 0,
+  "by_suite": {
+   "JB-all": {
+    "n": 231,
+    "flips": 0,
+    "max_dlogit": 0.023288726806640625,
+    "exact": 0
+   },
+   "REAL-agree": {
+    "n": 1083,
+    "flips": 1,
+    "max_dlogit": 0.03110790252685547,
+    "exact": 3
+   },
+   "LONG": {
+    "n": 471,
+    "flips": 0,
+    "max_dlogit": 0.026383161544799805,
+    "exact": 0
+   },
+   "CF": {
+    "n": 802,
+    "flips": 0,
+    "max_dlogit": 0.02595233917236328,
+    "exact": 0
+   },
+   "CF-probe": {
+    "n": 640,
+    "flips": 0,
+    "max_dlogit": 0.011462628841400146,
+    "exact": 0
+   }
+  },
+  "exact_share": 0.0009296560272699101,
+  "secs": 3081.2853009700775
+ },
+ "dense::table0::all::0": {
+  "max_dlogit": 0.07056379318237305,
+  "flips": 1,
+  "n": 3227,
+  "nan_logits": 0,
+  "by_suite": {
+   "JB-all": {
+    "n": 231,
+    "flips": 0,
+    "max_dlogit": 0.07056379318237305,
+    "exact": 195
+   },
+   "REAL-agree": {
+    "n": 1083,
+    "flips": 0,
+    "max_dlogit": 0.020146429538726807,
+    "exact": 1047
+   },
+   "LONG": {
+    "n": 471,
+    "flips": 0,
+    "max_dlogit": 0.0,
+    "exact": 471
+   },
+   "CF": {
+    "n": 802,
+    "flips": 1,
+    "max_dlogit": 0.03742249310016632,
+    "exact": 717
+   },
+   "CF-probe": {
+    "n": 640,
+    "flips": 0,
+    "max_dlogit": 0.03380084037780762,
+    "exact": 597
+   }
+  },
+  "exact_share": 0.9380229315153393,
+  "secs": 3081.285357236862
+ },
+ "b8::both::all::600": {
+  "max_dlogit": 0.06894779205322266,
+  "flips": 0,
+  "n": 600,
+  "nan_logits": 0,
+  "by_suite": {
+   "JB-all": {
+    "n": 47,
+    "flips": 0,
+    "max_dlogit": 0.06894779205322266,
+    "exact": 30
+   },
+   "REAL-agree": {
+    "n": 216,
+    "flips": 0,
+    "max_dlogit": 0.0,
+    "exact": 216
+   },
+   "LONG": {
+    "n": 94,
+    "flips": 0,
+    "max_dlogit": 0.0,
+    "exact": 94
+   },
+   "CF": {
+    "n": 161,
+    "flips": 0,
+    "max_dlogit": 0.0,
+    "exact": 161
+   },
+   "CF-probe": {
+    "n": 82,
+    "flips": 0,
+    "max_dlogit": 0.0,
+    "exact": 82
+   }
+  },
+  "exact_share": 0.9716666666666667,
+  "secs": 1268.898512840271
+ }
+}

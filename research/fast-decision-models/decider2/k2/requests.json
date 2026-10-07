@@ -1,0 +1,2589 @@
+{
+ "seed": 0,
+ "note": "random.Random(0); rng.sample per suite in order JB-all (80), REAL-agree (120), LONG (40); a request = one evalkit item with all its questions",
+ "requests": [
+  {
+   "rid": "hard-sol-b-temporal_numeric-04",
+   "suite": "JB-all",
+   "domain": null,
+   "hook": null,
+   "questions": [
+    "q"
+   ],
+   "n_state_tok": null
+  },
+  {
+   "rid": "original-adequacy-02-0",
+   "suite": "JB-all",
+   "domain": null,
+   "hook": null,
+   "questions": [
+    "q"
+   ],
+   "n_state_tok": null
+  },
+  {
+   "rid": "hard-sol-a-trap-13",
+   "suite": "JB-all",
+   "domain": null,
+   "hook": null,
+   "questions": [
+    "q"
+   ],
+   "n_state_tok": null
+  },
+  {
+   "rid": "hard-sol-c-multi_hop-09",
+   "suite": "JB-all",
+   "domain": null,
+   "hook": null,
+   "questions": [
+    "q"
+   ],
+   "n_state_tok": null
+  },
+  {
+   "rid": "original-adequacy-06-1",
+   "suite": "JB-all",
+   "domain": null,
+   "hook": null,
+   "questions": [
+    "q"
+   ],
+   "n_state_tok": null
+  },
+  {
+   "rid": "easy-intent-10",
+   "suite": "JB-all",
+   "domain": null,
+   "hook": null,
+   "questions": [
+    "q"
+   ],
+   "n_state_tok": null
+  },
+  {
+   "rid": "original-intent-04-0",
+   "suite": "JB-all",
+   "domain": null,
+   "hook": null,
+   "questions": [
+    "q"
+   ],
+   "n_state_tok": null
+  },
+  {
+   "rid": "hard-opus-a-probability-07",
+   "suite": "JB-all",
+   "domain": null,
+   "hook": null,
+   "questions": [
+    "q"
+   ],
+   "n_state_tok": null
+  },
+  {
+   "rid": "hard-opus-a-long_policy-11",
+   "suite": "JB-all",
+   "domain": null,
+   "hook": null,
+   "questions": [
+    "q"
+   ],
+   "n_state_tok": null
+  },
+  {
+   "rid": "original-adequacy-04-1",
+   "suite": "JB-all",
+   "domain": null,
+   "hook": null,
+   "questions": [
+    "q"
+   ],
+   "n_state_tok": null
+  },
+  {
+   "rid": "hard-sol-b-judge_hard-10",
+   "suite": "JB-all",
+   "domain": null,
+   "hook": null,
+   "questions": [
+    "q"
+   ],
+   "n_state_tok": null
+  },
+  {
+   "rid": "hard-sol-b-routing_hard-09",
+   "suite": "JB-all",
+   "domain": null,
+   "hook": null,
+   "questions": [
+    "q"
+   ],
+   "n_state_tok": null
+  },
+  {
+   "rid": "original-ordinal-03-1",
+   "suite": "JB-all",
+   "domain": null,
+   "hook": null,
+   "questions": [
+    "q"
+   ],
+   "n_state_tok": null
+  },
+  {
+   "rid": "hard-opus-a-long_policy-08",
+   "suite": "JB-all",
+   "domain": null,
+   "hook": null,
+   "questions": [
+    "q"
+   ],
+   "n_state_tok": null
+  },
+  {
+   "rid": "original-extraction-04-1",
+   "suite": "JB-all",
+   "domain": null,
+   "hook": null,
+   "questions": [
+    "q"
+   ],
+   "n_state_tok": null
+  },
+  {
+   "rid": "hard-opus-b-probability-01",
+   "suite": "JB-all",
+   "domain": null,
+   "hook": null,
+   "questions": [
+    "q"
+   ],
+   "n_state_tok": null
+  },
+  {
+   "rid": "original-policy-04-1",
+   "suite": "JB-all",
+   "domain": null,
+   "hook": null,
+   "questions": [
+    "q"
+   ],
+   "n_state_tok": null
+  },
+  {
+   "rid": "hard-opus-a-probability-04",
+   "suite": "JB-all",
+   "domain": null,
+   "hook": null,
+   "questions": [
+    "q"
+   ],
+   "n_state_tok": null
+  },
+  {
+   "rid": "easy-extraction-11",
+   "suite": "JB-all",
+   "domain": null,
+   "hook": null,
+   "questions": [
+    "q"
+   ],
+   "n_state_tok": null
+  },
+  {
+   "rid": "original-ordinal-01-0",
+   "suite": "JB-all",
+   "domain": null,
+   "hook": null,
+   "questions": [
+    "q"
+   ],
+   "n_state_tok": null
+  },
+  {
+   "rid": "hard-sol-c-judge_hard-07",
+   "suite": "JB-all",
+   "domain": null,
+   "hook": null,
+   "questions": [
+    "q"
+   ],
+   "n_state_tok": null
+  },
+  {
+   "rid": "hard-sol-a-trap-10",
+   "suite": "JB-all",
+   "domain": null,
+   "hook": null,
+   "questions": [
+    "q"
+   ],
+   "n_state_tok": null
+  },
+  {
+   "rid": "easy-extraction-00",
+   "suite": "JB-all",
+   "domain": null,
+   "hook": null,
+   "questions": [
+    "q"
+   ],
+   "n_state_tok": null
+  },
+  {
+   "rid": "hard-opus-b-tradeoff-08",
+   "suite": "JB-all",
+   "domain": null,
+   "hook": null,
+   "questions": [
+    "q"
+   ],
+   "n_state_tok": null
+  },
+  {
+   "rid": "hard-sol-b-long_policy-01",
+   "suite": "JB-all",
+   "domain": null,
+   "hook": null,
+   "questions": [
+    "q"
+   ],
+   "n_state_tok": null
+  },
+  {
+   "rid": "original-intent-03-0",
+   "suite": "JB-all",
+   "domain": null,
+   "hook": null,
+   "questions": [
+    "q"
+   ],
+   "n_state_tok": null
+  },
+  {
+   "rid": "hard-opus-a-temporal_numeric-12",
+   "suite": "JB-all",
+   "domain": null,
+   "hook": null,
+   "questions": [
+    "q"
+   ],
+   "n_state_tok": null
+  },
+  {
+   "rid": "hard-sol-a-multi_hop-01",
+   "suite": "JB-all",
+   "domain": null,
+   "hook": null,
+   "questions": [
+    "q"
+   ],
+   "n_state_tok": null
+  },
+  {
+   "rid": "hard-opus-b-tradeoff-01",
+   "suite": "JB-all",
+   "domain": null,
+   "hook": null,
+   "questions": [
+    "q"
+   ],
+   "n_state_tok": null
+  },
+  {
+   "rid": "easy-tool_selection-01",
+   "suite": "JB-all",
+   "domain": null,
+   "hook": null,
+   "questions": [
+    "q"
+   ],
+   "n_state_tok": null
+  },
+  {
+   "rid": "original-ordinal-04-1",
+   "suite": "JB-all",
+   "domain": null,
+   "hook": null,
+   "questions": [
+    "q"
+   ],
+   "n_state_tok": null
+  },
+  {
+   "rid": "easy-extraction-01",
+   "suite": "JB-all",
+   "domain": null,
+   "hook": null,
+   "questions": [
+    "q"
+   ],
+   "n_state_tok": null
+  },
+  {
+   "rid": "hard-sol-a-multi_hop-10",
+   "suite": "JB-all",
+   "domain": null,
+   "hook": null,
+   "questions": [
+    "q"
+   ],
+   "n_state_tok": null
+  },
+  {
+   "rid": "easy-fact-06",
+   "suite": "JB-all",
+   "domain": null,
+   "hook": null,
+   "questions": [
+    "q"
+   ],
+   "n_state_tok": null
+  },
+  {
+   "rid": "hard-sol-a-adversarial-06",
+   "suite": "JB-all",
+   "domain": null,
+   "hook": null,
+   "questions": [
+    "q"
+   ],
+   "n_state_tok": null
+  },
+  {
+   "rid": "original-extraction-01-0",
+   "suite": "JB-all",
+   "domain": null,
+   "hook": null,
+   "questions": [
+    "q"
+   ],
+   "n_state_tok": null
+  },
+  {
+   "rid": "hard-opus-a-long_policy-01",
+   "suite": "JB-all",
+   "domain": null,
+   "hook": null,
+   "questions": [
+    "q"
+   ],
+   "n_state_tok": null
+  },
+  {
+   "rid": "hard-opus-b-ambiguous-13",
+   "suite": "JB-all",
+   "domain": null,
+   "hook": null,
+   "questions": [
+    "q"
+   ],
+   "n_state_tok": null
+  },
+  {
+   "rid": "hard-sol-b-judge_hard-08",
+   "suite": "JB-all",
+   "domain": null,
+   "hook": null,
+   "questions": [
+    "q"
+   ],
+   "n_state_tok": null
+  },
+  {
+   "rid": "original-extraction-04-0",
+   "suite": "JB-all",
+   "domain": null,
+   "hook": null,
+   "questions": [
+    "q"
+   ],
+   "n_state_tok": null
+  },
+  {
+   "rid": "original-routing-02-1",
+   "suite": "JB-all",
+   "domain": null,
+   "hook": null,
+   "questions": [
+    "q"
+   ],
+   "n_state_tok": null
+  },
+  {
+   "rid": "original-ordinal-05-0",
+   "suite": "JB-all",
+   "domain": null,
+   "hook": null,
+   "questions": [
+    "q"
+   ],
+   "n_state_tok": null
+  },
+  {
+   "rid": "hard-opus-b-tradeoff-06",
+   "suite": "JB-all",
+   "domain": null,
+   "hook": null,
+   "questions": [
+    "q"
+   ],
+   "n_state_tok": null
+  },
+  {
+   "rid": "hard-opus-c-long_policy-05",
+   "suite": "JB-all",
+   "domain": null,
+   "hook": null,
+   "questions": [
+    "q"
+   ],
+   "n_state_tok": null
+  },
+  {
+   "rid": "original-policy-03-0",
+   "suite": "JB-all",
+   "domain": null,
+   "hook": null,
+   "questions": [
+    "q"
+   ],
+   "n_state_tok": null
+  },
+  {
+   "rid": "hard-opus-b-ambiguous-10",
+   "suite": "JB-all",
+   "domain": null,
+   "hook": null,
+   "questions": [
+    "q"
+   ],
+   "n_state_tok": null
+  },
+  {
+   "rid": "hard-sol-c-judge_hard-03",
+   "suite": "JB-all",
+   "domain": null,
+   "hook": null,
+   "questions": [
+    "q"
+   ],
+   "n_state_tok": null
+  },
+  {
+   "rid": "original-routing-03-1",
+   "suite": "JB-all",
+   "domain": null,
+   "hook": null,
+   "questions": [
+    "q"
+   ],
+   "n_state_tok": null
+  },
+  {
+   "rid": "hard-opus-a-temporal_numeric-06",
+   "suite": "JB-all",
+   "domain": null,
+   "hook": null,
+   "questions": [
+    "q"
+   ],
+   "n_state_tok": null
+  },
+  {
+   "rid": "hard-sol-c-judge_hard-13",
+   "suite": "JB-all",
+   "domain": null,
+   "hook": null,
+   "questions": [
+    "q"
+   ],
+   "n_state_tok": null
+  },
+  {
+   "rid": "easy-fact-03",
+   "suite": "JB-all",
+   "domain": null,
+   "hook": null,
+   "questions": [
+    "q"
+   ],
+   "n_state_tok": null
+  },
+  {
+   "rid": "hard-opus-b-ambiguous-09",
+   "suite": "JB-all",
+   "domain": null,
+   "hook": null,
+   "questions": [
+    "q"
+   ],
+   "n_state_tok": null
+  },
+  {
+   "rid": "easy-intent-03",
+   "suite": "JB-all",
+   "domain": null,
+   "hook": null,
+   "questions": [
+    "q"
+   ],
+   "n_state_tok": null
+  },
+  {
+   "rid": "easy-fact-11",
+   "suite": "JB-all",
+   "domain": null,
+   "hook": null,
+   "questions": [
+    "q"
+   ],
+   "n_state_tok": null
+  },
+  {
+   "rid": "original-adequacy-04-0",
+   "suite": "JB-all",
+   "domain": null,
+   "hook": null,
+   "questions": [
+    "q"
+   ],
+   "n_state_tok": null
+  },
+  {
+   "rid": "hard-opus-c-temporal_numeric-06",
+   "suite": "JB-all",
+   "domain": null,
+   "hook": null,
+   "questions": [
+    "q"
+   ],
+   "n_state_tok": null
+  },
+  {
+   "rid": "hard-opus-c-long_policy-02",
+   "suite": "JB-all",
+   "domain": null,
+   "hook": null,
+   "questions": [
+    "q"
+   ],
+   "n_state_tok": null
+  },
+  {
+   "rid": "easy-intent-00",
+   "suite": "JB-all",
+   "domain": null,
+   "hook": null,
+   "questions": [
+    "q"
+   ],
+   "n_state_tok": null
+  },
+  {
+   "rid": "hard-sol-a-trap-02",
+   "suite": "JB-all",
+   "domain": null,
+   "hook": null,
+   "questions": [
+    "q"
+   ],
+   "n_state_tok": null
+  },
+  {
+   "rid": "hard-opus-a-long_policy-17",
+   "suite": "JB-all",
+   "domain": null,
+   "hook": null,
+   "questions": [
+    "q"
+   ],
+   "n_state_tok": null
+  },
+  {
+   "rid": "original-extraction-01-1",
+   "suite": "JB-all",
+   "domain": null,
+   "hook": null,
+   "questions": [
+    "q"
+   ],
+   "n_state_tok": null
+  },
+  {
+   "rid": "original-intent-02-0",
+   "suite": "JB-all",
+   "domain": null,
+   "hook": null,
+   "questions": [
+    "q"
+   ],
+   "n_state_tok": null
+  },
+  {
+   "rid": "original-ordinal-06-1",
+   "suite": "JB-all",
+   "domain": null,
+   "hook": null,
+   "questions": [
+    "q"
+   ],
+   "n_state_tok": null
+  },
+  {
+   "rid": "easy-fact-04",
+   "suite": "JB-all",
+   "domain": null,
+   "hook": null,
+   "questions": [
+    "q"
+   ],
+   "n_state_tok": null
+  },
+  {
+   "rid": "original-policy-01-0",
+   "suite": "JB-all",
+   "domain": null,
+   "hook": null,
+   "questions": [
+    "q"
+   ],
+   "n_state_tok": null
+  },
+  {
+   "rid": "hard-opus-b-multi_hop-04",
+   "suite": "JB-all",
+   "domain": null,
+   "hook": null,
+   "questions": [
+    "q"
+   ],
+   "n_state_tok": null
+  },
+  {
+   "rid": "original-policy-05-0",
+   "suite": "JB-all",
+   "domain": null,
+   "hook": null,
+   "questions": [
+    "q"
+   ],
+   "n_state_tok": null
+  },
+  {
+   "rid": "original-intent-01-1",
+   "suite": "JB-all",
+   "domain": null,
+   "hook": null,
+   "questions": [
+    "q"
+   ],
+   "n_state_tok": null
+  },
+  {
+   "rid": "easy-tool_selection-00",
+   "suite": "JB-all",
+   "domain": null,
+   "hook": null,
+   "questions": [
+    "q"
+   ],
+   "n_state_tok": null
+  },
+  {
+   "rid": "hard-opus-b-ambiguous-07",
+   "suite": "JB-all",
+   "domain": null,
+   "hook": null,
+   "questions": [
+    "q"
+   ],
+   "n_state_tok": null
+  },
+  {
+   "rid": "original-routing-04-0",
+   "suite": "JB-all",
+   "domain": null,
+   "hook": null,
+   "questions": [
+    "q"
+   ],
+   "n_state_tok": null
+  },
+  {
+   "rid": "hard-sol-a-adversarial-08",
+   "suite": "JB-all",
+   "domain": null,
+   "hook": null,
+   "questions": [
+    "q"
+   ],
+   "n_state_tok": null
+  },
+  {
+   "rid": "easy-fact-08",
+   "suite": "JB-all",
+   "domain": null,
+   "hook": null,
+   "questions": [
+    "q"
+   ],
+   "n_state_tok": null
+  },
+  {
+   "rid": "original-ordinal-05-1",
+   "suite": "JB-all",
+   "domain": null,
+   "hook": null,
+   "questions": [
+    "q"
+   ],
+   "n_state_tok": null
+  },
+  {
+   "rid": "hard-sol-c-judge_hard-11",
+   "suite": "JB-all",
+   "domain": null,
+   "hook": null,
+   "questions": [
+    "q"
+   ],
+   "n_state_tok": null
+  },
+  {
+   "rid": "hard-opus-a-long_policy-13",
+   "suite": "JB-all",
+   "domain": null,
+   "hook": null,
+   "questions": [
+    "q"
+   ],
+   "n_state_tok": null
+  },
+  {
+   "rid": "easy-extraction-03",
+   "suite": "JB-all",
+   "domain": null,
+   "hook": null,
+   "questions": [
+    "q"
+   ],
+   "n_state_tok": null
+  },
+  {
+   "rid": "hard-sol-c-judge_hard-05",
+   "suite": "JB-all",
+   "domain": null,
+   "hook": null,
+   "questions": [
+    "q"
+   ],
+   "n_state_tok": null
+  },
+  {
+   "rid": "hard-sol-a-multi_hop-09",
+   "suite": "JB-all",
+   "domain": null,
+   "hook": null,
+   "questions": [
+    "q"
+   ],
+   "n_state_tok": null
+  },
+  {
+   "rid": "original-ordinal-02-0",
+   "suite": "JB-all",
+   "domain": null,
+   "hook": null,
+   "questions": [
+    "q"
+   ],
+   "n_state_tok": null
+  },
+  {
+   "rid": "824f50d42ee542e8",
+   "suite": "REAL-agree",
+   "domain": "banking_knowledge",
+   "hook": "after_tool_call",
+   "questions": [
+    "details_match",
+    "failure_cause",
+    "needed_procedure",
+    "rule_bound_values"
+   ],
+   "n_state_tok": 3487
+  },
+  {
+   "rid": "9b5ee9eba3830afc",
+   "suite": "REAL-agree",
+   "domain": "banking_knowledge",
+   "hook": "before_invocation",
+   "questions": [
+    "wants_change"
+   ],
+   "n_state_tok": 1780
+  },
+  {
+   "rid": "38af928dbe380c09",
+   "suite": "REAL-agree",
+   "domain": "retail",
+   "hook": "after_model_call",
+   "questions": [
+    "WrapsUp"
+   ],
+   "n_state_tok": 2469
+  },
+  {
+   "rid": "f6fe3ea52e332e46",
+   "suite": "REAL-agree",
+   "domain": "banking_knowledge",
+   "hook": "before_invocation",
+   "questions": [
+    "procedure"
+   ],
+   "n_state_tok": 1465
+  },
+  {
+   "rid": "7258f63d0f1f0809",
+   "suite": "REAL-agree",
+   "domain": "banking_knowledge",
+   "hook": "before_tool_call",
+   "questions": [
+    "code_kb_search_unsuccessful_customer_requests_transfer",
+    "code_legal_or_regulatory_matter",
+    "code_specialized_department_required",
+    "identity_verified"
+   ],
+   "n_state_tok": 3740
+  },
+  {
+   "rid": "9b82fe1ae4eb907f",
+   "suite": "REAL-agree",
+   "domain": "retail",
+   "hook": "before_tool_call",
+   "questions": [
+    "asked_for_human"
+   ],
+   "n_state_tok": 2372
+  },
+  {
+   "rid": "4a736761053e55e9",
+   "suite": "REAL-agree",
+   "domain": "banking_knowledge",
+   "hook": "after_tool_call",
+   "questions": [
+    "details_match",
+    "failure_cause",
+    "needed_procedure",
+    "rule_bound_values"
+   ],
+   "n_state_tok": 1718
+  },
+  {
+   "rid": "e3338a8248b20dd0",
+   "suite": "REAL-agree",
+   "domain": "retail",
+   "hook": "after_model_call",
+   "questions": [
+    "states_amount"
+   ],
+   "n_state_tok": 1234
+  },
+  {
+   "rid": "aa4aa72a8ded1fc5",
+   "suite": "REAL-agree",
+   "domain": "banking_knowledge",
+   "hook": "after_model_call",
+   "questions": [
+    "leaks_internal"
+   ],
+   "n_state_tok": 598
+  },
+  {
+   "rid": "bfebd956d9c90ef0",
+   "suite": "REAL-agree",
+   "domain": "banking_knowledge",
+   "hook": "before_invocation",
+   "questions": [
+    "procedure"
+   ],
+   "n_state_tok": 1915
+  },
+  {
+   "rid": "e71f8100fae39eb6",
+   "suite": "REAL-agree",
+   "domain": "banking_knowledge",
+   "hook": "before_tool_call",
+   "questions": [
+    "code_abusive_customer_behavior",
+    "code_complex_billing_dispute",
+    "code_third_party_inquiry",
+    "identity_verified"
+   ],
+   "n_state_tok": 1503
+  },
+  {
+   "rid": "063f9e39fbbe8349",
+   "suite": "REAL-agree",
+   "domain": "banking_knowledge",
+   "hook": "before_invocation",
+   "questions": [
+    "procedure"
+   ],
+   "n_state_tok": 125
+  },
+  {
+   "rid": "9e602f01f4a2c40e",
+   "suite": "REAL-agree",
+   "domain": "banking_knowledge",
+   "hook": "before_invocation",
+   "questions": [
+    "procedure"
+   ],
+   "n_state_tok": 1960
+  },
+  {
+   "rid": "9fc058f1d05a9f3d",
+   "suite": "REAL-agree",
+   "domain": "banking_knowledge",
+   "hook": "before_invocation",
+   "questions": [
+    "procedure"
+   ],
+   "n_state_tok": 2010
+  },
+  {
+   "rid": "29cbea87304ff961",
+   "suite": "REAL-agree",
+   "domain": "banking_knowledge",
+   "hook": "after_model_call",
+   "questions": [
+    "cc_can_still_help",
+    "cc_ends",
+    "cc_insists",
+    "cc_offers_transfer"
+   ],
+   "n_state_tok": 1549
+  },
+  {
+   "rid": "6e1c503dbc322e61",
+   "suite": "REAL-agree",
+   "domain": "banking_knowledge",
+   "hook": "before_model_call",
+   "questions": [
+    "identity_established"
+   ],
+   "n_state_tok": 3463
+  },
+  {
+   "rid": "3d584d5ff491948c",
+   "suite": "REAL-agree",
+   "domain": "retail",
+   "hook": "before_tool_call",
+   "questions": [
+    "asked_for_human"
+   ],
+   "n_state_tok": 2408
+  },
+  {
+   "rid": "3555fc2841fcf19f",
+   "suite": "REAL-agree",
+   "domain": "banking_knowledge",
+   "hook": "after_model_call",
+   "questions": [
+    "cc_asked_for_human",
+    "cc_can_still_help",
+    "cc_claims_done",
+    "cc_offers_transfer"
+   ],
+   "n_state_tok": 1739
+  },
+  {
+   "rid": "a7fc61f769a7b6e3",
+   "suite": "REAL-agree",
+   "domain": "banking_knowledge",
+   "hook": "after_tool_call",
+   "questions": [
+    "details_match",
+    "failure_cause",
+    "needed_procedure",
+    "rule_bound_values"
+   ],
+   "n_state_tok": 1990
+  },
+  {
+   "rid": "35a93a4f7af7a57f",
+   "suite": "REAL-agree",
+   "domain": "banking_knowledge",
+   "hook": "after_tool_call",
+   "questions": [
+    "details_match",
+    "failure_cause",
+    "needed_procedure",
+    "rule_bound_values"
+   ],
+   "n_state_tok": 1572
+  },
+  {
+   "rid": "445b6d7c10d259ca",
+   "suite": "REAL-agree",
+   "domain": "banking_knowledge",
+   "hook": "after_tool_call",
+   "questions": [
+    "details_match",
+    "failure_cause",
+    "needed_procedure",
+    "rule_bound_values"
+   ],
+   "n_state_tok": 3000
+  },
+  {
+   "rid": "f2826b275c857092",
+   "suite": "REAL-agree",
+   "domain": "banking_knowledge",
+   "hook": "after_model_call",
+   "questions": [
+    "cc_asked_for_human",
+    "cc_can_still_help",
+    "cc_claims_done",
+    "cc_insists"
+   ],
+   "n_state_tok": 1644
+  },
+  {
+   "rid": "0c43d834d0aa6e1a",
+   "suite": "REAL-agree",
+   "domain": "banking_knowledge",
+   "hook": "after_tool_call",
+   "questions": [
+    "details_match",
+    "failure_cause",
+    "needed_procedure",
+    "rule_bound_values"
+   ],
+   "n_state_tok": 1602
+  },
+  {
+   "rid": "9576aff67ed0929f",
+   "suite": "REAL-agree",
+   "domain": "retail",
+   "hook": "after_model_call",
+   "questions": [
+    "states_amount"
+   ],
+   "n_state_tok": 2561
+  },
+  {
+   "rid": "ea1a7c0627fcff67",
+   "suite": "REAL-agree",
+   "domain": "banking_knowledge",
+   "hook": "before_model_call",
+   "questions": [
+    "identity_established"
+   ],
+   "n_state_tok": 3503
+  },
+  {
+   "rid": "0f32dfe0eb7c608f",
+   "suite": "REAL-agree",
+   "domain": "retail",
+   "hook": "after_model_call",
+   "questions": [
+    "WrapsUp"
+   ],
+   "n_state_tok": 2072
+  },
+  {
+   "rid": "c7341508b69f4036",
+   "suite": "REAL-agree",
+   "domain": "banking_knowledge",
+   "hook": "before_invocation",
+   "questions": [
+    "procedure"
+   ],
+   "n_state_tok": 3720
+  },
+  {
+   "rid": "79f1c7449699701d",
+   "suite": "REAL-agree",
+   "domain": "banking_knowledge",
+   "hook": "before_invocation",
+   "questions": [
+    "procedure"
+   ],
+   "n_state_tok": 2164
+  },
+  {
+   "rid": "5ca66d87902d899a",
+   "suite": "REAL-agree",
+   "domain": "retail",
+   "hook": "after_model_call",
+   "questions": [
+    "states_amount"
+   ],
+   "n_state_tok": 2405
+  },
+  {
+   "rid": "1e5e7dce35f2a4f3",
+   "suite": "REAL-agree",
+   "domain": "banking_knowledge",
+   "hook": "before_model_call",
+   "questions": [
+    "identity_established"
+   ],
+   "n_state_tok": 2260
+  },
+  {
+   "rid": "dd21cfecf652ad17",
+   "suite": "REAL-agree",
+   "domain": "retail",
+   "hook": "before_tool_call",
+   "questions": [
+    "asked_for_human"
+   ],
+   "n_state_tok": 2537
+  },
+  {
+   "rid": "710c0fe4608ba7b3",
+   "suite": "REAL-agree",
+   "domain": "retail",
+   "hook": "before_tool_call",
+   "questions": [
+    "UserAskedForHuman"
+   ],
+   "n_state_tok": 2602
+  },
+  {
+   "rid": "409c066df28f6e25",
+   "suite": "REAL-agree",
+   "domain": "retail",
+   "hook": "after_model_call",
+   "questions": [
+    "states_amount"
+   ],
+   "n_state_tok": 2627
+  },
+  {
+   "rid": "2534126dca946036",
+   "suite": "REAL-agree",
+   "domain": "banking_knowledge",
+   "hook": "after_tool_call",
+   "questions": [
+    "details_match",
+    "failure_cause",
+    "needed_procedure",
+    "rule_bound_values"
+   ],
+   "n_state_tok": 1845
+  },
+  {
+   "rid": "2b39bd3e82705088",
+   "suite": "REAL-agree",
+   "domain": "banking_knowledge",
+   "hook": "after_tool_call",
+   "questions": [
+    "relevance"
+   ],
+   "n_state_tok": 3112
+  },
+  {
+   "rid": "3877e2b3e4b96a26",
+   "suite": "REAL-agree",
+   "domain": "banking_knowledge",
+   "hook": "after_tool_call",
+   "questions": [
+    "details_match",
+    "failure_cause",
+    "needed_procedure",
+    "rule_bound_values"
+   ],
+   "n_state_tok": 1308
+  },
+  {
+   "rid": "2918597b02ee19f2",
+   "suite": "REAL-agree",
+   "domain": "retail",
+   "hook": "before_tool_call",
+   "questions": [
+    "UserAskedForHuman"
+   ],
+   "n_state_tok": 2577
+  },
+  {
+   "rid": "dd58bd9c03fd6326",
+   "suite": "REAL-agree",
+   "domain": "banking_knowledge",
+   "hook": "before_invocation",
+   "questions": [
+    "wants_change"
+   ],
+   "n_state_tok": 638
+  },
+  {
+   "rid": "52a14fc747a8da4b",
+   "suite": "REAL-agree",
+   "domain": "banking_knowledge",
+   "hook": "before_invocation",
+   "questions": [
+    "procedure"
+   ],
+   "n_state_tok": 2303
+  },
+  {
+   "rid": "aec22b9743b93c11",
+   "suite": "REAL-agree",
+   "domain": "banking_knowledge",
+   "hook": "before_invocation",
+   "questions": [
+    "procedure"
+   ],
+   "n_state_tok": 1776
+  },
+  {
+   "rid": "7d97e5bc96ac609e",
+   "suite": "REAL-agree",
+   "domain": "banking_knowledge",
+   "hook": "after_model_call",
+   "questions": [
+    "cc_asked_for_human",
+    "cc_can_still_help",
+    "cc_insists",
+    "cc_offers_transfer"
+   ],
+   "n_state_tok": 1596
+  },
+  {
+   "rid": "9f5655a01248c965",
+   "suite": "REAL-agree",
+   "domain": "banking_knowledge",
+   "hook": "before_model_call",
+   "questions": [
+    "identity_established"
+   ],
+   "n_state_tok": 3654
+  },
+  {
+   "rid": "b0a44d80c8379043",
+   "suite": "REAL-agree",
+   "domain": "banking_knowledge",
+   "hook": "after_tool_call",
+   "questions": [
+    "details_match",
+    "failure_cause",
+    "needed_procedure",
+    "rule_bound_values"
+   ],
+   "n_state_tok": 1119
+  },
+  {
+   "rid": "01d2510c3654972c",
+   "suite": "REAL-agree",
+   "domain": "banking_knowledge",
+   "hook": "before_invocation",
+   "questions": [
+    "procedure"
+   ],
+   "n_state_tok": 3407
+  },
+  {
+   "rid": "9837d5a612563824",
+   "suite": "REAL-agree",
+   "domain": "retail",
+   "hook": "after_model_call",
+   "questions": [
+    "states_amount"
+   ],
+   "n_state_tok": 727
+  },
+  {
+   "rid": "697874921ccf96a6",
+   "suite": "REAL-agree",
+   "domain": "banking_knowledge",
+   "hook": "before_invocation",
+   "questions": [
+    "procedure"
+   ],
+   "n_state_tok": 1745
+  },
+  {
+   "rid": "ace9a63a058b114b",
+   "suite": "REAL-agree",
+   "domain": "retail",
+   "hook": "after_model_call",
+   "questions": [
+    "WrapsUp"
+   ],
+   "n_state_tok": 2471
+  },
+  {
+   "rid": "e9871feaa0e30a81",
+   "suite": "REAL-agree",
+   "domain": "retail",
+   "hook": "before_tool_call",
+   "questions": [
+    "asked_for_human"
+   ],
+   "n_state_tok": 1478
+  },
+  {
+   "rid": "9871b0d55feeb868",
+   "suite": "REAL-agree",
+   "domain": "banking_knowledge",
+   "hook": "after_model_call",
+   "questions": [
+    "cc_asked_for_human",
+    "cc_ends",
+    "cc_offers_transfer",
+    "cc_refuses"
+   ],
+   "n_state_tok": 1887
+  },
+  {
+   "rid": "1ccbb70e76daedef",
+   "suite": "REAL-agree",
+   "domain": "banking_knowledge",
+   "hook": "after_tool_call",
+   "questions": [
+    "details_match",
+    "failure_cause",
+    "needed_procedure",
+    "rule_bound_values"
+   ],
+   "n_state_tok": 1746
+  },
+  {
+   "rid": "0be4b38c9058c16b",
+   "suite": "REAL-agree",
+   "domain": "retail",
+   "hook": "after_model_call",
+   "questions": [
+    "WrapsUp"
+   ],
+   "n_state_tok": 2792
+  },
+  {
+   "rid": "a38e63aa7dd1ec19",
+   "suite": "REAL-agree",
+   "domain": "banking_knowledge",
+   "hook": "after_model_call",
+   "questions": [
+    "cc_claims_done",
+    "cc_insists",
+    "cc_offers_transfer",
+    "cc_refuses"
+   ],
+   "n_state_tok": 3687
+  },
+  {
+   "rid": "082ef87a8ed9fe77",
+   "suite": "REAL-agree",
+   "domain": "retail",
+   "hook": "before_tool_call",
+   "questions": [
+    "asked_for_human"
+   ],
+   "n_state_tok": 3069
+  },
+  {
+   "rid": "75b8cf964c9a4cf8",
+   "suite": "REAL-agree",
+   "domain": "banking_knowledge",
+   "hook": "before_invocation",
+   "questions": [
+    "wants_change"
+   ],
+   "n_state_tok": 1496
+  },
+  {
+   "rid": "bb385369dbfcdbdd",
+   "suite": "REAL-agree",
+   "domain": "banking_knowledge",
+   "hook": "after_tool_call",
+   "questions": [
+    "details_match",
+    "failure_cause",
+    "needed_procedure",
+    "rule_bound_values"
+   ],
+   "n_state_tok": 1697
+  },
+  {
+   "rid": "ab2820fdcf037724",
+   "suite": "REAL-agree",
+   "domain": "banking_knowledge",
+   "hook": "after_model_call",
+   "questions": [
+    "cc_insists",
+    "cc_offers_transfer",
+    "cc_procedure_found",
+    "cc_refuses"
+   ],
+   "n_state_tok": 1616
+  },
+  {
+   "rid": "d35c71fa4a7d18d8",
+   "suite": "REAL-agree",
+   "domain": "retail",
+   "hook": "after_model_call",
+   "questions": [
+    "states_amount"
+   ],
+   "n_state_tok": 2985
+  },
+  {
+   "rid": "57d47758b15be9e2",
+   "suite": "REAL-agree",
+   "domain": "banking_knowledge",
+   "hook": "before_tool_call",
+   "questions": [
+    "code_accessibility_or_special_needs",
+    "code_account_ownership_dispute",
+    "code_specialized_department_required",
+    "identity_verified"
+   ],
+   "n_state_tok": 3588
+  },
+  {
+   "rid": "34569936a347b494",
+   "suite": "REAL-agree",
+   "domain": "retail",
+   "hook": "after_model_call",
+   "questions": [
+    "WrapsUp"
+   ],
+   "n_state_tok": 2287
+  },
+  {
+   "rid": "162a40fa15b6a9d5",
+   "suite": "REAL-agree",
+   "domain": "retail",
+   "hook": "before_tool_call",
+   "questions": [
+    "asked_for_human"
+   ],
+   "n_state_tok": 2968
+  },
+  {
+   "rid": "dd555a544930dac8",
+   "suite": "REAL-agree",
+   "domain": "retail",
+   "hook": "before_tool_call",
+   "questions": [
+    "asked_for_human"
+   ],
+   "n_state_tok": 2177
+  },
+  {
+   "rid": "2ed9457e1467fb89",
+   "suite": "REAL-agree",
+   "domain": "banking_knowledge",
+   "hook": "before_model_call",
+   "questions": [
+    "identity_established"
+   ],
+   "n_state_tok": 2256
+  },
+  {
+   "rid": "02007e041b57bb3f",
+   "suite": "REAL-agree",
+   "domain": "banking_knowledge",
+   "hook": "after_model_call",
+   "questions": [
+    "leaks_internal"
+   ],
+   "n_state_tok": 2268
+  },
+  {
+   "rid": "c257adf9683d9dd8",
+   "suite": "REAL-agree",
+   "domain": "banking_knowledge",
+   "hook": "before_invocation",
+   "questions": [
+    "wants_change"
+   ],
+   "n_state_tok": 641
+  },
+  {
+   "rid": "41600c64f29c30ab",
+   "suite": "REAL-agree",
+   "domain": "banking_knowledge",
+   "hook": "after_model_call",
+   "questions": [
+    "cc_claims_done",
+    "cc_ends",
+    "cc_offers_transfer",
+    "cc_procedure_found"
+   ],
+   "n_state_tok": 1619
+  },
+  {
+   "rid": "b728def2432dbc09",
+   "suite": "REAL-agree",
+   "domain": "banking_knowledge",
+   "hook": "after_model_call",
+   "questions": [
+    "cc_asked_for_human",
+    "cc_insists",
+    "cc_offers_transfer",
+    "cc_procedure_found"
+   ],
+   "n_state_tok": 1538
+  },
+  {
+   "rid": "89bacb3efc4ed787",
+   "suite": "REAL-agree",
+   "domain": "retail",
+   "hook": "before_tool_call",
+   "questions": [
+    "UserAskedForHuman"
+   ],
+   "n_state_tok": 2814
+  },
+  {
+   "rid": "117489fbd3685294",
+   "suite": "REAL-agree",
+   "domain": "banking_knowledge",
+   "hook": "after_model_call",
+   "questions": [
+    "leaks_internal"
+   ],
+   "n_state_tok": 1821
+  },
+  {
+   "rid": "a4a4e0602988337b",
+   "suite": "REAL-agree",
+   "domain": "banking_knowledge",
+   "hook": "after_tool_call",
+   "questions": [
+    "details_match",
+    "failure_cause",
+    "needed_procedure",
+    "rule_bound_values"
+   ],
+   "n_state_tok": 1117
+  },
+  {
+   "rid": "381342054bcaaab7",
+   "suite": "REAL-agree",
+   "domain": "banking_knowledge",
+   "hook": "after_model_call",
+   "questions": [
+    "leaks_internal"
+   ],
+   "n_state_tok": 1646
+  },
+  {
+   "rid": "9c89103d91f04541",
+   "suite": "REAL-agree",
+   "domain": "retail",
+   "hook": "after_model_call",
+   "questions": [
+    "states_amount"
+   ],
+   "n_state_tok": 1729
+  },
+  {
+   "rid": "19eeb816c530e56b",
+   "suite": "REAL-agree",
+   "domain": "retail",
+   "hook": "after_model_call",
+   "questions": [
+    "WrapsUp"
+   ],
+   "n_state_tok": 2834
+  },
+  {
+   "rid": "8c8a7e2f68f1eff8",
+   "suite": "REAL-agree",
+   "domain": "banking_knowledge",
+   "hook": "after_model_call",
+   "questions": [
+    "cc_can_still_help",
+    "cc_ends",
+    "cc_insists",
+    "cc_offers_transfer"
+   ],
+   "n_state_tok": 1662
+  },
+  {
+   "rid": "deab2e3214335f23",
+   "suite": "REAL-agree",
+   "domain": "banking_knowledge",
+   "hook": "before_invocation",
+   "questions": [
+    "procedure"
+   ],
+   "n_state_tok": 3417
+  },
+  {
+   "rid": "00d9b1a8a08b3ce9",
+   "suite": "REAL-agree",
+   "domain": "banking_knowledge",
+   "hook": "after_model_call",
+   "questions": [
+    "cc_ends",
+    "cc_offers_transfer",
+    "cc_procedure_found",
+    "cc_refuses"
+   ],
+   "n_state_tok": 1884
+  },
+  {
+   "rid": "f1d49d1314d36b2d",
+   "suite": "REAL-agree",
+   "domain": "banking_knowledge",
+   "hook": "before_invocation",
+   "questions": [
+    "procedure"
+   ],
+   "n_state_tok": 1928
+  },
+  {
+   "rid": "05fbf3e77a096a89",
+   "suite": "REAL-agree",
+   "domain": "retail",
+   "hook": "after_model_call",
+   "questions": [
+    "states_amount"
+   ],
+   "n_state_tok": 1201
+  },
+  {
+   "rid": "44a64019653de543",
+   "suite": "REAL-agree",
+   "domain": "banking_knowledge",
+   "hook": "after_model_call",
+   "questions": [
+    "cc_asked_for_human",
+    "cc_claims_done",
+    "cc_ends",
+    "cc_procedure_found"
+   ],
+   "n_state_tok": 3780
+  },
+  {
+   "rid": "416890966ebf5548",
+   "suite": "REAL-agree",
+   "domain": "banking_knowledge",
+   "hook": "after_model_call",
+   "questions": [
+    "cc_can_still_help",
+    "cc_claims_done",
+    "cc_ends",
+    "cc_procedure_found"
+   ],
+   "n_state_tok": 3108
+  },
+  {
+   "rid": "c4f98cabbbc7591f",
+   "suite": "REAL-agree",
+   "domain": "retail",
+   "hook": "before_tool_call",
+   "questions": [
+    "UserAskedForHuman"
+   ],
+   "n_state_tok": 3111
+  },
+  {
+   "rid": "1b3ed74fbf1f1e38",
+   "suite": "REAL-agree",
+   "domain": "banking_knowledge",
+   "hook": "after_model_call",
+   "questions": [
+    "cc_asked_for_human",
+    "cc_ends",
+    "cc_offers_transfer",
+    "cc_procedure_found"
+   ],
+   "n_state_tok": 1540
+  },
+  {
+   "rid": "cd43ee9900fd7fdd",
+   "suite": "REAL-agree",
+   "domain": "banking_knowledge",
+   "hook": "after_tool_call",
+   "questions": [
+    "details_match",
+    "failure_cause",
+    "needed_procedure",
+    "rule_bound_values"
+   ],
+   "n_state_tok": 1839
+  },
+  {
+   "rid": "de1aab4dfbfccd5b",
+   "suite": "REAL-agree",
+   "domain": "banking_knowledge",
+   "hook": "after_tool_call",
+   "questions": [
+    "details_match",
+    "failure_cause",
+    "needed_procedure",
+    "rule_bound_values"
+   ],
+   "n_state_tok": 1589
+  },
+  {
+   "rid": "09729b807f1d4fa0",
+   "suite": "REAL-agree",
+   "domain": "retail",
+   "hook": "after_model_call",
+   "questions": [
+    "states_amount"
+   ],
+   "n_state_tok": 2064
+  },
+  {
+   "rid": "1b9ac27f3f154517",
+   "suite": "REAL-agree",
+   "domain": "retail",
+   "hook": "before_tool_call",
+   "questions": [
+    "UserAskedForHuman"
+   ],
+   "n_state_tok": 2753
+  },
+  {
+   "rid": "9d9e6a5661cb9a64",
+   "suite": "REAL-agree",
+   "domain": "banking_knowledge",
+   "hook": "before_invocation",
+   "questions": [
+    "procedure"
+   ],
+   "n_state_tok": 3018
+  },
+  {
+   "rid": "07cbb96a188ec7d3",
+   "suite": "REAL-agree",
+   "domain": "banking_knowledge",
+   "hook": "after_tool_call",
+   "questions": [
+    "details_match",
+    "failure_cause",
+    "needed_procedure",
+    "rule_bound_values"
+   ],
+   "n_state_tok": 3024
+  },
+  {
+   "rid": "da434e8e28cb98d9",
+   "suite": "REAL-agree",
+   "domain": "retail",
+   "hook": "after_model_call",
+   "questions": [
+    "states_amount"
+   ],
+   "n_state_tok": 1906
+  },
+  {
+   "rid": "97752a91b9e5eae3",
+   "suite": "REAL-agree",
+   "domain": "retail",
+   "hook": "after_model_call",
+   "questions": [
+    "states_amount"
+   ],
+   "n_state_tok": 3150
+  },
+  {
+   "rid": "20f1368911314326",
+   "suite": "REAL-agree",
+   "domain": "banking_knowledge",
+   "hook": "after_model_call",
+   "questions": [
+    "cc_asked_for_human",
+    "cc_ends",
+    "cc_insists",
+    "cc_refuses"
+   ],
+   "n_state_tok": 3535
+  },
+  {
+   "rid": "f723350036de47be",
+   "suite": "REAL-agree",
+   "domain": "banking_knowledge",
+   "hook": "before_invocation",
+   "questions": [
+    "wants_change"
+   ],
+   "n_state_tok": 608
+  },
+  {
+   "rid": "3b23ad750d42f8f8",
+   "suite": "REAL-agree",
+   "domain": "retail",
+   "hook": "before_tool_call",
+   "questions": [
+    "asked_for_human"
+   ],
+   "n_state_tok": 2432
+  },
+  {
+   "rid": "a5207202d881e22d",
+   "suite": "REAL-agree",
+   "domain": "banking_knowledge",
+   "hook": "before_model_call",
+   "questions": [
+    "identity_established"
+   ],
+   "n_state_tok": 2423
+  },
+  {
+   "rid": "da263084f4e2ad34",
+   "suite": "REAL-agree",
+   "domain": "banking_knowledge",
+   "hook": "before_invocation",
+   "questions": [
+    "procedure"
+   ],
+   "n_state_tok": 1680
+  },
+  {
+   "rid": "a1651f39f41a2ba8",
+   "suite": "REAL-agree",
+   "domain": "banking_knowledge",
+   "hook": "after_model_call",
+   "questions": [
+    "leaks_internal"
+   ],
+   "n_state_tok": 2146
+  },
+  {
+   "rid": "45afb7904bc5bd2a",
+   "suite": "REAL-agree",
+   "domain": "banking_knowledge",
+   "hook": "after_model_call",
+   "questions": [
+    "cc_can_still_help",
+    "cc_ends",
+    "cc_offers_transfer",
+    "cc_refuses"
+   ],
+   "n_state_tok": 324
+  },
+  {
+   "rid": "da85d50066721a3e",
+   "suite": "REAL-agree",
+   "domain": "retail",
+   "hook": "after_model_call",
+   "questions": [
+    "states_amount"
+   ],
+   "n_state_tok": 2955
+  },
+  {
+   "rid": "86e676e39f4d3b5f",
+   "suite": "REAL-agree",
+   "domain": "retail",
+   "hook": "after_model_call",
+   "questions": [
+    "WrapsUp"
+   ],
+   "n_state_tok": 2661
+  },
+  {
+   "rid": "aee9472b8922dcfb",
+   "suite": "REAL-agree",
+   "domain": "banking_knowledge",
+   "hook": "after_model_call",
+   "questions": [
+    "cc_can_still_help",
+    "cc_claims_done",
+    "cc_ends",
+    "cc_refuses"
+   ],
+   "n_state_tok": 3255
+  },
+  {
+   "rid": "c6d091fa47c18d18",
+   "suite": "REAL-agree",
+   "domain": "banking_knowledge",
+   "hook": "after_tool_call",
+   "questions": [
+    "details_match",
+    "failure_cause",
+    "needed_procedure",
+    "rule_bound_values"
+   ],
+   "n_state_tok": 1785
+  },
+  {
+   "rid": "20f72e5808d771d1",
+   "suite": "REAL-agree",
+   "domain": "banking_knowledge",
+   "hook": "after_model_call",
+   "questions": [
+    "cc_can_still_help",
+    "cc_claims_done",
+    "cc_ends",
+    "cc_refuses"
+   ],
+   "n_state_tok": 1637
+  },
+  {
+   "rid": "bc41212711ebeb0c",
+   "suite": "REAL-agree",
+   "domain": "banking_knowledge",
+   "hook": "after_tool_call",
+   "questions": [
+    "relevance"
+   ],
+   "n_state_tok": 1126
+  },
+  {
+   "rid": "456055eeba9f45a0",
+   "suite": "REAL-agree",
+   "domain": "banking_knowledge",
+   "hook": "after_tool_call",
+   "questions": [
+    "details_match",
+    "failure_cause",
+    "needed_procedure",
+    "rule_bound_values"
+   ],
+   "n_state_tok": 787
+  },
+  {
+   "rid": "0a85f7bfa0473000",
+   "suite": "REAL-agree",
+   "domain": "banking_knowledge",
+   "hook": "before_invocation",
+   "questions": [
+    "procedure"
+   ],
+   "n_state_tok": 1975
+  },
+  {
+   "rid": "a7cf4e2b71ed1f3a",
+   "suite": "REAL-agree",
+   "domain": "banking_knowledge",
+   "hook": "before_invocation",
+   "questions": [
+    "procedure"
+   ],
+   "n_state_tok": 3024
+  },
+  {
+   "rid": "e481c4f7bbf4741f",
+   "suite": "REAL-agree",
+   "domain": "banking_knowledge",
+   "hook": "after_tool_call",
+   "questions": [
+    "details_match",
+    "failure_cause",
+    "needed_procedure",
+    "rule_bound_values"
+   ],
+   "n_state_tok": 1889
+  },
+  {
+   "rid": "00d683eb0837f84c",
+   "suite": "REAL-agree",
+   "domain": "retail",
+   "hook": "before_tool_call",
+   "questions": [
+    "asked_for_human"
+   ],
+   "n_state_tok": 2980
+  },
+  {
+   "rid": "518291650c824ec0",
+   "suite": "REAL-agree",
+   "domain": "banking_knowledge",
+   "hook": "before_model_call",
+   "questions": [
+    "identity_established"
+   ],
+   "n_state_tok": 2783
+  },
+  {
+   "rid": "9032231cff8426ff",
+   "suite": "REAL-agree",
+   "domain": "banking_knowledge",
+   "hook": "before_invocation",
+   "questions": [
+    "procedure"
+   ],
+   "n_state_tok": 998
+  },
+  {
+   "rid": "88fdbef7c576f5cd",
+   "suite": "REAL-agree",
+   "domain": "banking_knowledge",
+   "hook": "after_model_call",
+   "questions": [
+    "cc_asked_for_human",
+    "cc_can_still_help",
+    "cc_offers_transfer",
+    "cc_refuses"
+   ],
+   "n_state_tok": 1643
+  },
+  {
+   "rid": "3e282114c14b491e",
+   "suite": "REAL-agree",
+   "domain": "banking_knowledge",
+   "hook": "after_model_call",
+   "questions": [
+    "leaks_internal"
+   ],
+   "n_state_tok": 902
+  },
+  {
+   "rid": "4012e2c5aea5e33b",
+   "suite": "REAL-agree",
+   "domain": "retail",
+   "hook": "before_tool_call",
+   "questions": [
+    "UserAskedForHuman"
+   ],
+   "n_state_tok": 2762
+  },
+  {
+   "rid": "050292b102b5639e",
+   "suite": "REAL-agree",
+   "domain": "banking_knowledge",
+   "hook": "before_invocation",
+   "questions": [
+    "wants_change"
+   ],
+   "n_state_tok": 2847
+  },
+  {
+   "rid": "9077eec23bbea7a6",
+   "suite": "REAL-agree",
+   "domain": "retail",
+   "hook": "after_model_call",
+   "questions": [
+    "WrapsUp"
+   ],
+   "n_state_tok": 2169
+  },
+  {
+   "rid": "ad73cfba50485dbb",
+   "suite": "REAL-agree",
+   "domain": "banking_knowledge",
+   "hook": "after_tool_call",
+   "questions": [
+    "details_match",
+    "failure_cause",
+    "needed_procedure",
+    "rule_bound_values"
+   ],
+   "n_state_tok": 1502
+  },
+  {
+   "rid": "1456dbd49ec69d3b",
+   "suite": "REAL-agree",
+   "domain": "retail",
+   "hook": "before_tool_call",
+   "questions": [
+    "asked_for_human"
+   ],
+   "n_state_tok": 3030
+  },
+  {
+   "rid": "00a0f98cd15cfe75",
+   "suite": "REAL-agree",
+   "domain": "banking_knowledge",
+   "hook": "before_invocation",
+   "questions": [
+    "procedure"
+   ],
+   "n_state_tok": 1784
+  },
+  {
+   "rid": "2fdbf39dac27c8e8",
+   "suite": "REAL-agree",
+   "domain": "retail",
+   "hook": "after_model_call",
+   "questions": [
+    "states_amount"
+   ],
+   "n_state_tok": 3054
+  },
+  {
+   "rid": "636e8f64084f4a56",
+   "suite": "REAL-agree",
+   "domain": "banking_knowledge",
+   "hook": "before_invocation",
+   "questions": [
+    "procedure"
+   ],
+   "n_state_tok": 723
+  },
+  {
+   "rid": "827b2b6e82364ca7",
+   "suite": "REAL-agree",
+   "domain": "retail",
+   "hook": "after_model_call",
+   "questions": [
+    "WrapsUp"
+   ],
+   "n_state_tok": 2610
+  },
+  {
+   "rid": "cd15f5c8f69beab8",
+   "suite": "LONG",
+   "domain": "banking_knowledge",
+   "hook": "before_invocation",
+   "questions": [
+    "procedure"
+   ],
+   "n_state_tok": 4086
+  },
+  {
+   "rid": "a454ee084e3e4939",
+   "suite": "LONG",
+   "domain": "banking_knowledge",
+   "hook": "after_model_call",
+   "questions": [
+    "cc_asked_for_human",
+    "cc_can_still_help",
+    "cc_refuses"
+   ],
+   "n_state_tok": 6422
+  },
+  {
+   "rid": "5fe9e678e6c7ef1e",
+   "suite": "LONG",
+   "domain": "banking_knowledge",
+   "hook": "before_tool_call",
+   "questions": [
+    "step_fit"
+   ],
+   "n_state_tok": 7135
+  },
+  {
+   "rid": "e61e600b17f04942",
+   "suite": "LONG",
+   "domain": "banking_knowledge",
+   "hook": "before_invocation",
+   "questions": [
+    "wants_change"
+   ],
+   "n_state_tok": 4253
+  },
+  {
+   "rid": "efb3ef40a8a236f3",
+   "suite": "LONG",
+   "domain": "banking_knowledge",
+   "hook": "after_model_call",
+   "questions": [
+    "cc_asked_for_human",
+    "cc_claims_done",
+    "cc_insists"
+   ],
+   "n_state_tok": 6442
+  },
+  {
+   "rid": "248a9462eccc17c2",
+   "suite": "LONG",
+   "domain": "banking_knowledge",
+   "hook": "after_model_call",
+   "questions": [
+    "cc_insists",
+    "cc_offers_transfer",
+    "cc_refuses"
+   ],
+   "n_state_tok": 6102
+  },
+  {
+   "rid": "e66446e8bf8c2d7e",
+   "suite": "LONG",
+   "domain": "banking_knowledge",
+   "hook": "before_invocation",
+   "questions": [
+    "wants_change"
+   ],
+   "n_state_tok": 4618
+  },
+  {
+   "rid": "e5ad3a5dba1b4470",
+   "suite": "LONG",
+   "domain": "banking_knowledge",
+   "hook": "after_model_call",
+   "questions": [
+    "cc_can_still_help",
+    "cc_offers_transfer",
+    "cc_procedure_found"
+   ],
+   "n_state_tok": 6167
+  },
+  {
+   "rid": "084177587d70e18f",
+   "suite": "LONG",
+   "domain": "banking_knowledge",
+   "hook": "after_model_call",
+   "questions": [
+    "cc_asked_for_human",
+    "cc_claims_done",
+    "cc_ends"
+   ],
+   "n_state_tok": 7387
+  },
+  {
+   "rid": "5663995d0829f1aa",
+   "suite": "LONG",
+   "domain": "banking_knowledge",
+   "hook": "after_tool_call",
+   "questions": [
+    "details_match",
+    "needed_procedure",
+    "rule_bound_values"
+   ],
+   "n_state_tok": 4650
+  },
+  {
+   "rid": "04275ce5d37bf167",
+   "suite": "LONG",
+   "domain": "banking_knowledge",
+   "hook": "after_tool_call",
+   "questions": [
+    "failure_cause",
+    "needed_procedure",
+    "rule_bound_values"
+   ],
+   "n_state_tok": 4505
+  },
+  {
+   "rid": "809ec98d95221acc",
+   "suite": "LONG",
+   "domain": "banking_knowledge",
+   "hook": "after_model_call",
+   "questions": [
+    "cc_can_still_help",
+    "cc_ends",
+    "cc_refuses"
+   ],
+   "n_state_tok": 6384
+  },
+  {
+   "rid": "8aacad8b69969dc7",
+   "suite": "LONG",
+   "domain": "banking_knowledge",
+   "hook": "after_model_call",
+   "questions": [
+    "cc_asked_for_human",
+    "cc_claims_done",
+    "cc_procedure_found"
+   ],
+   "n_state_tok": 6441
+  },
+  {
+   "rid": "447390977ee9beca",
+   "suite": "LONG",
+   "domain": "banking_knowledge",
+   "hook": "after_model_call",
+   "questions": [
+    "leaks_internal"
+   ],
+   "n_state_tok": 4062
+  },
+  {
+   "rid": "16bfe6de24b3b247",
+   "suite": "LONG",
+   "domain": "banking_knowledge",
+   "hook": "after_tool_call",
+   "questions": [
+    "failure_cause",
+    "needed_procedure",
+    "rule_bound_values"
+   ],
+   "n_state_tok": 4174
+  },
+  {
+   "rid": "4ee7b20207010126",
+   "suite": "LONG",
+   "domain": "banking_knowledge",
+   "hook": "before_invocation",
+   "questions": [
+    "wants_change"
+   ],
+   "n_state_tok": 4416
+  },
+  {
+   "rid": "efe097294f8cc3a5",
+   "suite": "LONG",
+   "domain": "banking_knowledge",
+   "hook": "after_model_call",
+   "questions": [
+    "cc_can_still_help",
+    "cc_procedure_found",
+    "cc_refuses"
+   ],
+   "n_state_tok": 6891
+  },
+  {
+   "rid": "2148a81cbbc09a28",
+   "suite": "LONG",
+   "domain": "banking_knowledge",
+   "hook": "after_model_call",
+   "questions": [
+    "cc_claims_done",
+    "cc_ends",
+    "cc_refuses"
+   ],
+   "n_state_tok": 6521
+  },
+  {
+   "rid": "4821d8378afcdb60",
+   "suite": "LONG",
+   "domain": "banking_knowledge",
+   "hook": "after_tool_call",
+   "questions": [
+    "failure_cause",
+    "needed_procedure",
+    "rule_bound_values"
+   ],
+   "n_state_tok": 4607
+  },
+  {
+   "rid": "a7f4a47b97708461",
+   "suite": "LONG",
+   "domain": "banking_knowledge",
+   "hook": "after_tool_call",
+   "questions": [
+    "details_match",
+    "failure_cause",
+    "needed_procedure"
+   ],
+   "n_state_tok": 4310
+  },
+  {
+   "rid": "c943397fb1aa6d03",
+   "suite": "LONG",
+   "domain": "banking_knowledge",
+   "hook": "before_tool_call",
+   "questions": [
+    "step_fit"
+   ],
+   "n_state_tok": 7191
+  },
+  {
+   "rid": "8e0d5f5a1a4c05fd",
+   "suite": "LONG",
+   "domain": "banking_knowledge",
+   "hook": "after_tool_call",
+   "questions": [
+    "failure_cause",
+    "needed_procedure",
+    "rule_bound_values"
+   ],
+   "n_state_tok": 4624
+  },
+  {
+   "rid": "41319e62b18bcbe0",
+   "suite": "LONG",
+   "domain": "banking_knowledge",
+   "hook": "after_tool_call",
+   "questions": [
+    "details_match",
+    "failure_cause",
+    "needed_procedure"
+   ],
+   "n_state_tok": 4791
+  },
+  {
+   "rid": "099ff0d6cf050939",
+   "suite": "LONG",
+   "domain": "banking_knowledge",
+   "hook": "after_tool_call",
+   "questions": [
+    "failure_cause",
+    "needed_procedure",
+    "rule_bound_values"
+   ],
+   "n_state_tok": 4323
+  },
+  {
+   "rid": "731ec5cf05c4b4b0",
+   "suite": "LONG",
+   "domain": "banking_knowledge",
+   "hook": "after_tool_call",
+   "questions": [
+    "details_match",
+    "needed_procedure",
+    "rule_bound_values"
+   ],
+   "n_state_tok": 4691
+  },
+  {
+   "rid": "2f3336a183cb03ed",
+   "suite": "LONG",
+   "domain": "banking_knowledge",
+   "hook": "before_invocation",
+   "questions": [
+    "wants_change"
+   ],
+   "n_state_tok": 4809
+  },
+  {
+   "rid": "d9d25e6cba9747f9",
+   "suite": "LONG",
+   "domain": "banking_knowledge",
+   "hook": "after_model_call",
+   "questions": [
+    "cc_asked_for_human",
+    "cc_can_still_help",
+    "cc_offers_transfer"
+   ],
+   "n_state_tok": 4006
+  },
+  {
+   "rid": "fab8f618d1ff56b0",
+   "suite": "LONG",
+   "domain": "banking_knowledge",
+   "hook": "before_invocation",
+   "questions": [
+    "procedure"
+   ],
+   "n_state_tok": 4233
+  },
+  {
+   "rid": "21c565c679229036",
+   "suite": "LONG",
+   "domain": "banking_knowledge",
+   "hook": "before_invocation",
+   "questions": [
+    "wants_change"
+   ],
+   "n_state_tok": 4432
+  },
+  {
+   "rid": "ac14c05cfa2d6bca",
+   "suite": "LONG",
+   "domain": "banking_knowledge",
+   "hook": "after_tool_call",
+   "questions": [
+    "details_match",
+    "needed_procedure",
+    "rule_bound_values"
+   ],
+   "n_state_tok": 4148
+  },
+  {
+   "rid": "bbbde0b61e4cd5b1",
+   "suite": "LONG",
+   "domain": "banking_knowledge",
+   "hook": "after_model_call",
+   "questions": [
+    "cc_asked_for_human",
+    "cc_ends",
+    "cc_refuses"
+   ],
+   "n_state_tok": 6657
+  },
+  {
+   "rid": "c21c158b2604ace5",
+   "suite": "LONG",
+   "domain": "banking_knowledge",
+   "hook": "after_tool_call",
+   "questions": [
+    "details_match",
+    "failure_cause",
+    "needed_procedure"
+   ],
+   "n_state_tok": 4420
+  },
+  {
+   "rid": "7c09cb489b7d1e3b",
+   "suite": "LONG",
+   "domain": "banking_knowledge",
+   "hook": "after_model_call",
+   "questions": [
+    "cc_asked_for_human",
+    "cc_can_still_help",
+    "cc_offers_transfer"
+   ],
+   "n_state_tok": 4463
+  },
+  {
+   "rid": "f401eaafcf9ac3f3",
+   "suite": "LONG",
+   "domain": "banking_knowledge",
+   "hook": "after_tool_call",
+   "questions": [
+    "failure_cause",
+    "needed_procedure",
+    "rule_bound_values"
+   ],
+   "n_state_tok": 5437
+  },
+  {
+   "rid": "c4e84affc40c40bf",
+   "suite": "LONG",
+   "domain": "banking_knowledge",
+   "hook": "after_tool_call",
+   "questions": [
+    "failure_cause",
+    "needed_procedure",
+    "rule_bound_values"
+   ],
+   "n_state_tok": 4957
+  },
+  {
+   "rid": "742fb70a5de480cf",
+   "suite": "LONG",
+   "domain": "banking_knowledge",
+   "hook": "after_model_call",
+   "questions": [
+    "cc_can_still_help",
+    "cc_offers_transfer",
+    "cc_procedure_found"
+   ],
+   "n_state_tok": 6615
+  },
+  {
+   "rid": "0072ea127998a49b",
+   "suite": "LONG",
+   "domain": "banking_knowledge",
+   "hook": "after_model_call",
+   "questions": [
+    "cc_can_still_help",
+    "cc_ends",
+    "cc_offers_transfer"
+   ],
+   "n_state_tok": 6039
+  },
+  {
+   "rid": "a5a33ca5edfd8e6a",
+   "suite": "LONG",
+   "domain": "banking_knowledge",
+   "hook": "after_tool_call",
+   "questions": [
+    "details_match",
+    "needed_procedure",
+    "rule_bound_values"
+   ],
+   "n_state_tok": 4108
+  },
+  {
+   "rid": "1abfd615d727c1f4",
+   "suite": "LONG",
+   "domain": "banking_knowledge",
+   "hook": "after_tool_call",
+   "questions": [
+    "details_match",
+    "needed_procedure",
+    "rule_bound_values"
+   ],
+   "n_state_tok": 5669
+  },
+  {
+   "rid": "e0277be8a78e1a7a",
+   "suite": "LONG",
+   "domain": "banking_knowledge",
+   "hook": "after_tool_call",
+   "questions": [
+    "details_match",
+    "failure_cause",
+    "needed_procedure"
+   ],
+   "n_state_tok": 4560
+  }
+ ]
+}

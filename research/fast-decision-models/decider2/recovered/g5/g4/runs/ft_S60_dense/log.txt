@@ -1,0 +1,29 @@
+== ft_S60_dense init S60_dense cfg Cfg({'scale': 'S60', 'arm': 'dense', 'd': 768, 'L': 9, 'H': 12, 'Hkv': 2, 'hd': 64, 'ffn': 2304, 'mon_ffn': 8704, 'kind': 'dense', 'nb': 0})
+step 100 probe 0.7422 squad 1.4939 19s
+step 200 probe 0.7580 squad 1.4599 36s
+step 300 probe 0.7559 squad 1.4403 52s
+step 400 probe 0.7360 squad 1.4868 69s
+step 500 probe 0.7284 squad 1.4289 86s
+step 600 probe 0.7216 squad 1.4194 102s
+step 700 probe 0.7219 squad 1.4152 119s
+step 800 probe 0.7086 squad 1.4259 136s
+EVAL step 800: probe acc 0.500 flip 0.000 distract-flip 0.000 | squad acc 0.235 (n 600) | official CF-probe (fits 1k) acc 0.500 flip 0.000 n_pairs 21 | by kind {'amount_vs_limit': 0.0, 'amount_vs_limit_distract': 0.0, 'date_order': 0.0, 'date_order_distract': 0.0, 'id_match': 0.0, 'id_match_distract': 0.0, 'status_equal': 0.0, 'status_equal_distract': 0.0}
+step 900 probe 0.7261 squad 1.4078 159s
+step 1000 probe 0.6989 squad 1.4051 175s
+step 1100 probe 0.7022 squad 1.4173 192s
+step 1200 probe 0.7089 squad 1.4123 209s
+step 1300 probe 0.6998 squad 1.4078 226s
+step 1400 probe 0.7004 squad 1.4024 242s
+step 1500 probe 0.7051 squad 1.3958 259s
+step 1600 probe 0.6996 squad 1.3959 276s
+EVAL step 1600: probe acc 0.500 flip 0.000 distract-flip 0.000 | squad acc 0.250 (n 600) | official CF-probe (fits 1k) acc 0.500 flip 0.000 n_pairs 21 | by kind {'amount_vs_limit': 0.0, 'amount_vs_limit_distract': 0.0, 'date_order': 0.0, 'date_order_distract': 0.0, 'id_match': 0.0, 'id_match_distract': 0.0, 'status_equal': 0.0, 'status_equal_distract': 0.0}
+step 1700 probe 0.7005 squad 1.3956 297s
+step 1800 probe 0.6987 squad 1.3890 314s
+step 1900 probe 0.6945 squad 1.3927 330s
+step 2000 probe 0.6963 squad 1.3910 347s
+step 2100 probe 0.6931 squad 1.3875 364s
+step 2200 probe 0.6969 squad 1.3897 381s
+step 2300 probe 0.6952 squad 1.3884 397s
+step 2400 probe 0.6951 squad 1.3870 414s
+EVAL step 2400: probe acc 0.500 flip 0.000 distract-flip 0.000 | squad acc 0.252 (n 1500) | official CF-probe (fits 1k) acc 0.500 flip 0.000 n_pairs 21 | by kind {'amount_vs_limit': 0.0, 'amount_vs_limit_distract': 0.0, 'date_order': 0.0, 'date_order_distract': 0.0, 'id_match': 0.0, 'id_match_distract': 0.0, 'status_equal': 0.0, 'status_equal_distract': 0.0}
+DONE ft_S60_dense 7.0 min

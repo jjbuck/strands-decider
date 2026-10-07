@@ -1,0 +1,19 @@
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 4094.80it/s]
+questions 3227 done 0
+q3_w4q8_w4q8_qadbest 200 15s
+q3_w4q8_w4q8_qadbest 400 26s
+q3_w4q8_w4q8_qadbest 600 39s
+q3_w4q8_w4q8_qadbest 800 52s
+q3_w4q8_w4q8_qadbest 1000 69s
+q3_w4q8_w4q8_qadbest 1200 82s
+q3_w4q8_w4q8_qadbest 1400 104s
+q3_w4q8_w4q8_qadbest 1600 137s
+q3_w4q8_w4q8_qadbest 1800 165s
+q3_w4q8_w4q8_qadbest 2000 192s
+q3_w4q8_w4q8_qadbest 2200 206s
+q3_w4q8_w4q8_qadbest 2400 216s
+q3_w4q8_w4q8_qadbest 2600 229s
+q3_w4q8_w4q8_qadbest 2800 245s
+q3_w4q8_w4q8_qadbest 3000 260s
+q3_w4q8_w4q8_qadbest 3200 273s
+done q3_w4q8_w4q8_qadbest 3227 275s int8 state-row share 0.0

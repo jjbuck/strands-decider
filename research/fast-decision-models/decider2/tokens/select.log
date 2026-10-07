@@ -1,0 +1,22 @@
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 8339.51it/s]
+long tasks 69
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+n 69 full acc 0.464
+B=128 bm25      acc 0.493  agree-with-full 0.551  mean kept 126
+B=128 attn7     acc 0.406  agree-with-full 0.580  mean kept 126
+B=128 tail      acc 0.275  agree-with-full 0.551  mean kept 125
+B=128 headtail  acc 0.507  agree-with-full 0.565  mean kept 126
+B=128 random    acc 0.406  agree-with-full 0.594  mean kept 125
+B=256 bm25      acc 0.464  agree-with-full 0.725  mean kept 250
+B=256 attn7     acc 0.406  agree-with-full 0.696  mean kept 251
+B=256 tail      acc 0.261  agree-with-full 0.623  mean kept 251
+B=256 headtail  acc 0.420  agree-with-full 0.580  mean kept 250
+B=256 random    acc 0.435  agree-with-full 0.551  mean kept 250
+B=512 bm25      acc 0.435  agree-with-full 0.841  mean kept 459
+B=512 attn7     acc 0.464  agree-with-full 0.884  mean kept 458
+B=512 tail      acc 0.362  agree-with-full 0.783  mean kept 458
+B=512 headtail  acc 0.420  agree-with-full 0.739  mean kept 456
+B=512 random    acc 0.420  agree-with-full 0.725  mean kept 458
+bm25 256 {'adversarial': (3, 0.33, 0.33, 1.0), 'ambiguous': (6, 0.67, 0.67, 1.0), 'long_policy': (19, 0.63, 0.47, 0.58), 'multi_hop': (10, 0.4, 0.6, 0.5), 'probability': (10, 0.3, 0.3, 0.8), 'temporal_numeric': (11, 0.18, 0.18, 0.73), 'tradeoff': (6, 0.5, 0.67, 0.83), 'trap': (4, 0.75, 0.75, 1.0)} (n, acc, fullacc, agree)
+attn7 256 {'adversarial': (3, 0.33, 0.33, 1.0), 'ambiguous': (6, 0.67, 0.67, 1.0), 'long_policy': (19, 0.47, 0.47, 0.47), 'multi_hop': (10, 0.4, 0.6, 0.7), 'probability': (10, 0.3, 0.3, 0.7), 'temporal_numeric': (11, 0.18, 0.18, 0.73), 'tradeoff': (6, 0.33, 0.67, 0.67), 'trap': (4, 0.75, 0.75, 1.0)} (n, acc, fullacc, agree)
+tail 256 {'adversarial': (3, 0.33, 0.33, 1.0), 'ambiguous': (6, 0.5, 0.67, 0.83), 'long_policy': (19, 0.32, 0.47, 0.53), 'multi_hop': (10, 0.2, 0.6, 0.3), 'probability': (10, 0.3, 0.3, 0.8), 'temporal_numeric': (11, 0.0, 0.18, 0.73), 'tradeoff': (6, 0.0, 0.67, 0.33), 'trap': (4, 0.75, 0.75, 1.0)} (n, acc, fullacc, agree)

@@ -1,0 +1,4 @@
+std {'bf16': 1.0653, 'crest': None, 'int4': 1.1586, 'int4rot': 1.0881, 'nvfp4': 1.0791, 'mxfp4': 1.0863, 'int8': 1.0656}
+  mean crest by GEMM: {'qkv': 3.2, '.o': 3.9, 'gu': 3.2, 'down': 11.0}
+ngpt {'bf16': 1.0786, 'crest': None, 'int4': 1.1564, 'int4rot': 1.0938, 'nvfp4': 1.0882, 'mxfp4': 1.0932, 'int8': 1.0787}
+  mean crest by GEMM: {'qkv': 3.2, '.o': 3.7, 'gu': 3.2, 'down': 15.3}

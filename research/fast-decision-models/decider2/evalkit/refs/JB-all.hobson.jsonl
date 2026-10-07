@@ -1,0 +1,231 @@
+{"id": "easy-intent-00", "hobson": {"q": {"billing_question": 0.002874223981052637, "cancel_order": 0.001678844797424972, "change_address": 0.0012096889549866319, "report_damage": 0.00168883940204978, "track_order": 0.9925483465194702}}, "ms": 1135.0}
+{"id": "easy-intent-01", "hobson": {"q": {"billing_question": 0.003709673648700118, "cancel_order": 0.9919121265411377, "change_address": 0.00205116905272007, "report_damage": 0.0015420879935845733, "track_order": 0.0007849497487768531}}, "ms": 87.9}
+{"id": "easy-intent-02", "hobson": {"q": {"billing_question": 0.003229292342439294, "cancel_order": 0.002549981465563178, "change_address": 0.9921254515647888, "report_damage": 0.0013376966817304492, "track_order": 0.0007575991912744939}}, "ms": 91.0}
+{"id": "easy-intent-03", "hobson": {"q": {"billing_question": 0.0033895650412887335, "cancel_order": 0.005963868461549282, "change_address": 0.0014074132777750492, "report_damage": 0.9872793555259705, "track_order": 0.0019598756916821003}}, "ms": 88.9}
+{"id": "easy-intent-04", "hobson": {"q": {"billing_question": 0.9524146318435669, "cancel_order": 0.02632581815123558, "change_address": 0.00509015005081892, "report_damage": 0.011151710525155067, "track_order": 0.005017607007175684}}, "ms": 72.1}
+{"id": "easy-intent-05", "hobson": {"q": {"billing_question": 0.006836630403995514, "cancel_order": 0.0033521302975714207, "change_address": 0.002450785133987665, "report_damage": 0.003648620331659913, "track_order": 0.9837118983268738}}, "ms": 78.0}
+{"id": "easy-intent-06", "hobson": {"q": {"play_music": 0.002985298866406083, "send_message": 0.003681543981656432, "set_alarm": 0.9908899664878845, "turn_off_lights": 0.0017685041530057788, "weather": 0.0006746427970938385}}, "ms": 88.0}
+{"id": "easy-intent-07", "hobson": {"q": {"play_music": 0.9915193915367126, "send_message": 0.004730064421892166, "set_alarm": 0.0014883041149005294, "turn_off_lights": 0.001551152439787984, "weather": 0.0007110923761501908}}, "ms": 85.2}
+{"id": "easy-intent-08", "hobson": {"q": {"play_music": 0.004027905873954296, "send_message": 0.0029094526544213295, "set_alarm": 0.002097002463415265, "turn_off_lights": 0.002431341912597418, "weather": 0.9885343909263611}}, "ms": 85.2}
+{"id": "easy-intent-09", "hobson": {"q": {"play_music": 0.00560159282758832, "send_message": 0.987275242805481, "set_alarm": 0.003545102896168828, "turn_off_lights": 0.0024128996301442385, "weather": 0.001165112480521202}}, "ms": 73.9}
+{"id": "easy-intent-10", "hobson": {"q": {"play_music": 0.004149804823100567, "send_message": 0.0022062580101191998, "set_alarm": 0.0023258135188370943, "turn_off_lights": 0.9900981187820435, "weather": 0.0012199425837025046}}, "ms": 83.1}
+{"id": "easy-intent-11", "hobson": {"q": {"play_music": 0.0025305512826889753, "send_message": 0.0010923779336735606, "set_alarm": 0.9942728877067566, "turn_off_lights": 0.0015996930887922645, "weather": 0.0005044362042099237}}, "ms": 82.8}
+{"id": "easy-fact-00", "hobson": {"q": {"false": 0.10802114009857178, "true": 0.8919788599014282}}, "ms": 95.0}
+{"id": "easy-fact-01", "hobson": {"q": {"false": 0.8512389063835144, "true": 0.1487610787153244}}, "ms": 75.9}
+{"id": "easy-fact-02", "hobson": {"q": {"false": 0.10543818026781082, "true": 0.8945618271827698}}, "ms": 85.5}
+{"id": "easy-fact-03", "hobson": {"q": {"false": 0.8661516308784485, "true": 0.1338484138250351}}, "ms": 88.1}
+{"id": "easy-fact-04", "hobson": {"q": {"false": 0.10908377915620804, "true": 0.8909162282943726}}, "ms": 86.8}
+{"id": "easy-fact-05", "hobson": {"q": {"false": 0.8547106385231018, "true": 0.1452893316745758}}, "ms": 86.8}
+{"id": "easy-fact-06", "hobson": {"q": {"false": 0.11557591706514359, "true": 0.8844241499900818}}, "ms": 79.8}
+{"id": "easy-fact-07", "hobson": {"q": {"false": 0.8411145210266113, "true": 0.15888553857803345}}, "ms": 88.0}
+{"id": "easy-fact-08", "hobson": {"q": {"false": 0.09129105508327484, "true": 0.9087089896202087}}, "ms": 85.5}
+{"id": "easy-fact-09", "hobson": {"q": {"false": 0.8639197945594788, "true": 0.13608013093471527}}, "ms": 84.4}
+{"id": "easy-fact-10", "hobson": {"q": {"false": 0.17088031768798828, "true": 0.8291197419166565}}, "ms": 72.6}
+{"id": "easy-fact-11", "hobson": {"q": {"false": 0.8408007621765137, "true": 0.15919923782348633}}, "ms": 75.6}
+{"id": "easy-extraction-00", "hobson": {"q": {"bank_transfer": 0.009539982303977013, "cash": 0.003491446375846863, "credit_card": 0.008162661455571651, "paypal": 0.9788058996200562}}, "ms": 87.9}
+{"id": "easy-extraction-01", "hobson": {"q": {"bank_transfer": 0.017121847718954086, "cash": 0.9632898569107056, "credit_card": 0.014164908789098263, "paypal": 0.005423433147370815}}, "ms": 84.7}
+{"id": "easy-extraction-02", "hobson": {"q": {"bank_transfer": 0.9703707695007324, "cash": 0.016620270907878876, "credit_card": 0.006787756457924843, "paypal": 0.006221282761543989}}, "ms": 73.7}
+{"id": "easy-extraction-03", "hobson": {"q": {"high": 0.876380980014801, "low": 0.01910886913537979, "medium": 0.023081034421920776, "urgent": 0.08142907917499542}}, "ms": 85.9}
+{"id": "easy-extraction-04", "hobson": {"q": {"high": 0.029517492279410362, "low": 0.9155125617980957, "medium": 0.04172709211707115, "urgent": 0.0132428128272295}}, "ms": 86.7}
+{"id": "easy-extraction-05", "hobson": {"q": {"high": 0.12099985033273697, "low": 0.011576607823371887, "medium": 0.01711251027882099, "urgent": 0.8503111004829407}}, "ms": 81.0}
+{"id": "easy-extraction-06", "hobson": {"q": {"L": 0.02983623743057251, "M": 0.9407004714012146, "S": 0.01970071718096733, "XL": 0.009762613102793694}}, "ms": 81.5}
+{"id": "easy-extraction-07", "hobson": {"q": {"L": 0.023121286183595657, "M": 0.006203328724950552, "S": 0.00452469615265727, "XL": 0.9661508202552795}}, "ms": 72.0}
+{"id": "easy-extraction-08", "hobson": {"q": {"friday": 0.0254806037992239, "monday": 0.010819359682500362, "thursday": 0.9309594631195068, "tuesday": 0.024619001895189285, "wednesday": 0.008121522143483162}}, "ms": 88.1}
+{"id": "easy-extraction-09", "hobson": {"q": {"friday": 0.04748869314789772, "monday": 0.8660367131233215, "thursday": 0.028878754004836082, "tuesday": 0.04623747989535332, "wednesday": 0.01135833840817213}}, "ms": 85.3}
+{"id": "easy-extraction-10", "hobson": {"q": {"friday": 0.9046476483345032, "monday": 0.03305020555853844, "thursday": 0.029497750103473663, "tuesday": 0.023140963166952133, "wednesday": 0.009663429111242294}}, "ms": 84.1}
+{"id": "easy-extraction-11", "hobson": {"q": {"bank_transfer": 0.015453549101948738, "cash": 0.00654600327834487, "credit_card": 0.969049870967865, "paypal": 0.00895057711750269}}, "ms": 72.4}
+{"id": "easy-tool_selection-00", "hobson": {"q": {"convert_currency": 0.005870261695235968, "create_calendar_event": 0.0025749504566192627, "get_weather": 0.9859691262245178, "send_email": 0.003556380979716778, "translate_text": 0.0020293178968131542}}, "ms": 77.7}
+{"id": "easy-tool_selection-01", "hobson": {"q": {"convert_currency": 0.005610446445643902, "create_calendar_event": 0.003201180836185813, "get_weather": 0.002282185712829232, "send_email": 0.987049400806427, "translate_text": 0.0018567926017567515}}, "ms": 88.2}
+{"id": "easy-tool_selection-02", "hobson": {"q": {"convert_currency": 0.004314799327403307, "create_calendar_event": 0.9902070164680481, "get_weather": 0.0023058229126036167, "send_email": 0.002343264874070883, "translate_text": 0.0008290773257613182}}, "ms": 88.0}
+{"id": "easy-tool_selection-03", "hobson": {"q": {"convert_currency": 0.99066162109375, "create_calendar_event": 0.003528794040903449, "get_weather": 0.0023755228612571955, "send_email": 0.0019000431057065725, "translate_text": 0.0015339774545282125}}, "ms": 81.5}
+{"id": "easy-tool_selection-04", "hobson": {"q": {"convert_currency": 0.007899338379502296, "create_calendar_event": 0.002635365119203925, "get_weather": 0.0032778948079794645, "send_email": 0.0030170553363859653, "translate_text": 0.983170211315155}}, "ms": 78.9}
+{"id": "easy-tool_selection-05", "hobson": {"q": {"convert_currency": 0.004593126010149717, "create_calendar_event": 0.9885134100914001, "get_weather": 0.00234745885245502, "send_email": 0.003647153964266181, "translate_text": 0.0008988355402834713}}, "ms": 83.8}
+{"id": "easy-tool_selection-06", "hobson": {"q": {"book_restaurant": 0.0022849885281175375, "call_taxi": 0.0015059203142300248, "get_stock_price": 0.0013246374437585473, "search_flights": 0.9938305616378784, "set_reminder": 0.001053818385116756}}, "ms": 89.5}
+{"id": "easy-tool_selection-07", "hobson": {"q": {"book_restaurant": 0.9917569756507874, "call_taxi": 0.004140820819884539, "get_stock_price": 0.001231146976351738, "search_flights": 0.0015395532827824354, "set_reminder": 0.0013316228287294507}}, "ms": 86.9}
+{"id": "easy-tool_selection-08", "hobson": {"q": {"book_restaurant": 0.002851542318239808, "call_taxi": 0.00158846250269562, "get_stock_price": 0.0012652110308408737, "search_flights": 0.0015387621242552996, "set_reminder": 0.9927560687065125}}, "ms": 85.1}
+{"id": "easy-tool_selection-09", "hobson": {"q": {"book_restaurant": 0.0034399658907204866, "call_taxi": 0.0022113006561994553, "get_stock_price": 0.989810049533844, "search_flights": 0.003127504140138626, "set_reminder": 0.0014112800126895308}}, "ms": 73.6}
+{"id": "easy-tool_selection-10", "hobson": {"q": {"book_restaurant": 0.00650881789624691, "call_taxi": 0.9845835566520691, "get_stock_price": 0.0028926273807883263, "search_flights": 0.004524976946413517, "set_reminder": 0.0014899023808538914}}, "ms": 86.2}
+{"id": "easy-tool_selection-11", "hobson": {"q": {"book_restaurant": 0.0023627651389688253, "call_taxi": 0.001511216047219932, "get_stock_price": 0.0011753429425880313, "search_flights": 0.0013916558818891644, "set_reminder": 0.9935590624809265}}, "ms": 91.5}
+{"id": "original-policy-01-0", "hobson": {"q": {"false": 0.8864606618881226, "true": 0.11353940516710281}}, "ms": 86.2}
+{"id": "original-policy-01-1", "hobson": {"q": {"false": 0.8751412034034729, "true": 0.12485881894826889}}, "ms": 86.4}
+{"id": "original-policy-02-0", "hobson": {"q": {"false": 0.34849631786346436, "true": 0.6515036821365356}}, "ms": 85.8}
+{"id": "original-policy-02-1", "hobson": {"q": {"false": 0.6481930613517761, "true": 0.3518069386482239}}, "ms": 75.5}
+{"id": "original-policy-03-0", "hobson": {"q": {"false": 0.21100543439388275, "true": 0.7889946103096008}}, "ms": 87.1}
+{"id": "original-policy-03-1", "hobson": {"q": {"false": 0.681342363357544, "true": 0.31865766644477844}}, "ms": 87.4}
+{"id": "original-policy-04-0", "hobson": {"q": {"false": 0.620492696762085, "true": 0.3795073330402374}}, "ms": 77.8}
+{"id": "original-policy-04-1", "hobson": {"q": {"false": 0.8266983032226562, "true": 0.1733017861843109}}, "ms": 85.7}
+{"id": "original-policy-05-0", "hobson": {"q": {"false": 0.4290443956851959, "true": 0.5709556341171265}}, "ms": 85.6}
+{"id": "original-policy-05-1", "hobson": {"q": {"false": 0.8093040585517883, "true": 0.19069594144821167}}, "ms": 86.7}
+{"id": "original-policy-06-0", "hobson": {"q": {"false": 0.12086786329746246, "true": 0.8791322112083435}}, "ms": 86.2}
+{"id": "original-policy-06-1", "hobson": {"q": {"false": 0.255632221698761, "true": 0.744367778301239}}, "ms": 87.6}
+{"id": "original-intent-01-0", "hobson": {"q": {"cancel": 0.0775408074259758, "change_address": 0.004019527230411768, "other": 0.09325096756219864, "refund": 0.8233790397644043, "status": 0.0018096532439813018}}, "ms": 85.1}
+{"id": "original-intent-01-1", "hobson": {"q": {"cancel": 0.19498662650585175, "change_address": 0.0039029247127473354, "other": 0.12419264018535614, "refund": 0.6752776503562927, "status": 0.0016401185421273112}}, "ms": 81.5}
+{"id": "original-intent-02-0", "hobson": {"q": {"cancel": 0.023381175473332405, "change_address": 0.14021036028862, "other": 0.2547101378440857, "refund": 0.012802965939044952, "status": 0.5688952803611755}}, "ms": 86.7}
+{"id": "original-intent-02-1", "hobson": {"q": {"cancel": 0.012703998945653439, "change_address": 0.021450022235512733, "other": 0.06516028940677643, "refund": 0.006171941291540861, "status": 0.8945137858390808}}, "ms": 87.6}
+{"id": "original-intent-03-0", "hobson": {"q": {"cancel": 0.01977759785950184, "change_address": 0.8685769438743591, "other": 0.08911052346229553, "refund": 0.007402710150927305, "status": 0.015132379718124866}}, "ms": 86.8}
+{"id": "original-intent-03-1", "hobson": {"q": {"cancel": 0.007370696868747473, "change_address": 0.9462466835975647, "other": 0.040555439889431, "refund": 0.004512131214141846, "status": 0.0013150587910786271}}, "ms": 84.9}
+{"id": "original-intent-04-0", "hobson": {"q": {"cancel": 0.9081739187240601, "change_address": 0.0032898925710469484, "other": 0.0636928528547287, "refund": 0.023932505398988724, "status": 0.0009108972153626382}}, "ms": 75.6}
+{"id": "original-intent-04-1", "hobson": {"q": {"cancel": 0.9518193006515503, "change_address": 0.003126663388684392, "other": 0.035792846232652664, "refund": 0.008472749032080173, "status": 0.0007884910446591675}}, "ms": 87.7}
+{"id": "original-intent-05-0", "hobson": {"q": {"cancel": 0.03718474134802818, "change_address": 0.0062783160246908665, "other": 0.4055103361606598, "refund": 0.5453658103942871, "status": 0.0056608025915920734}}, "ms": 85.4}
+{"id": "original-intent-05-1", "hobson": {"q": {"cancel": 0.08882731944322586, "change_address": 0.0072827208787202835, "other": 0.4870155155658722, "refund": 0.410523384809494, "status": 0.006351075600832701}}, "ms": 85.6}
+{"id": "original-intent-06-0", "hobson": {"q": {"cancel": 0.1669502556324005, "change_address": 0.016245895996689796, "other": 0.17722240090370178, "refund": 0.017490118741989136, "status": 0.6220913529396057}}, "ms": 85.3}
+{"id": "original-intent-06-1", "hobson": {"q": {"cancel": 0.1337931752204895, "change_address": 0.0111390994861722, "other": 0.13605062663555145, "refund": 0.03877212852239609, "status": 0.6802449226379395}}, "ms": 85.1}
+{"id": "original-ordinal-01-0", "hobson": {"q": {"0": 0.6525376439094543, "1": 0.20919980108737946, "2": 0.08737266808748245, "3": 0.050889886915683746}}, "ms": 74.2}
+{"id": "original-ordinal-01-1", "hobson": {"q": {"0": 0.6407454609870911, "1": 0.219880610704422, "2": 0.09207003563642502, "3": 0.04730395972728729}}, "ms": 88.9}
+{"id": "original-ordinal-02-0", "hobson": {"q": {"0": 0.20631591975688934, "1": 0.5938913822174072, "2": 0.15076111257076263, "3": 0.049031540751457214}}, "ms": 91.4}
+{"id": "original-ordinal-02-1", "hobson": {"q": {"0": 0.1455177515745163, "1": 0.717929482460022, "2": 0.09900976717472076, "3": 0.03754297271370888}}, "ms": 89.6}
+{"id": "original-ordinal-03-0", "hobson": {"q": {"0": 0.1459735631942749, "1": 0.13980208337306976, "2": 0.6579394340515137, "3": 0.056284960359334946}}, "ms": 91.4}
+{"id": "original-ordinal-03-1", "hobson": {"q": {"0": 0.18595360219478607, "1": 0.19954684376716614, "2": 0.5503093600273132, "3": 0.06419026851654053}}, "ms": 84.4}
+{"id": "original-ordinal-04-0", "hobson": {"q": {"0": 0.10200414806604385, "1": 0.10192010551691055, "2": 0.1806212216615677, "3": 0.6154544949531555}}, "ms": 88.6}
+{"id": "original-ordinal-04-1", "hobson": {"q": {"0": 0.11117290705442429, "1": 0.10777584463357925, "2": 0.20158651471138, "3": 0.5794647932052612}}, "ms": 91.1}
+{"id": "original-ordinal-05-0", "hobson": {"q": {"0": 0.42661136388778687, "1": 0.1362127810716629, "2": 0.3442513346672058, "3": 0.09292443096637726}}, "ms": 81.1}
+{"id": "original-ordinal-05-1", "hobson": {"q": {"0": 0.4311627745628357, "1": 0.21947230398654938, "2": 0.26129284501075745, "3": 0.0880720317363739}}, "ms": 89.5}
+{"id": "original-ordinal-06-0", "hobson": {"q": {"0": 0.14236654341220856, "1": 0.19846312701702118, "2": 0.6216834783554077, "3": 0.03748682513833046}}, "ms": 88.9}
+{"id": "original-ordinal-06-1", "hobson": {"q": {"0": 0.09398059546947479, "1": 0.12167085707187653, "2": 0.7467417120933533, "3": 0.03760688751935959}}, "ms": 77.4}
+{"id": "original-extraction-01-0", "hobson": {"q": {"courier": 0.0726221427321434, "pickup": 0.8444743156433105, "post": 0.016232429072260857, "unknown": 0.06667113304138184}}, "ms": 85.2}
+{"id": "original-extraction-01-1", "hobson": {"q": {"courier": 0.13177043199539185, "pickup": 0.7242663502693176, "post": 0.019682493060827255, "unknown": 0.12428076565265656}}, "ms": 83.8}
+{"id": "original-extraction-02-0", "hobson": {"q": {"courier": 0.05785265937447548, "pickup": 0.02194766141474247, "post": 0.24711181223392487, "unknown": 0.6730878949165344}}, "ms": 76.7}
+{"id": "original-extraction-02-1", "hobson": {"q": {"courier": 0.04437391832470894, "pickup": 0.005272977985441685, "post": 0.17385214567184448, "unknown": 0.7765009999275208}}, "ms": 87.8}
+{"id": "original-extraction-03-0", "hobson": {"q": {"courier": 0.5162695646286011, "pickup": 0.10161185264587402, "post": 0.021408556029200554, "unknown": 0.360710084438324}}, "ms": 87.5}
+{"id": "original-extraction-03-1", "hobson": {"q": {"courier": 0.9497120976448059, "pickup": 0.01960928365588188, "post": 0.011527225375175476, "unknown": 0.019151238724589348}}, "ms": 87.4}
+{"id": "original-extraction-04-0", "hobson": {"q": {"courier": 0.02950405888259411, "pickup": 0.03257208317518234, "post": 0.767097532749176, "unknown": 0.17082634568214417}}, "ms": 85.7}
+{"id": "original-extraction-04-1", "hobson": {"q": {"courier": 0.04293154925107956, "pickup": 0.007285561412572861, "post": 0.8882358074188232, "unknown": 0.06154705211520195}}, "ms": 85.8}
+{"id": "original-extraction-05-0", "hobson": {"q": {"courier": 0.06511230766773224, "pickup": 0.021566469222307205, "post": 0.020927052944898605, "unknown": 0.8923941850662231}}, "ms": 85.1}
+{"id": "original-extraction-05-1", "hobson": {"q": {"courier": 0.18120791018009186, "pickup": 0.017422063276171684, "post": 0.023668507114052773, "unknown": 0.7777015566825867}}, "ms": 75.1}
+{"id": "original-extraction-06-0", "hobson": {"q": {"courier": 0.8923618197441101, "pickup": 0.0085056833922863, "post": 0.06374756246805191, "unknown": 0.03538493439555168}}, "ms": 86.7}
+{"id": "original-extraction-06-1", "hobson": {"q": {"courier": 0.8993386626243591, "pickup": 0.01013627927750349, "post": 0.05019984766840935, "unknown": 0.04032520949840546}}, "ms": 87.6}
+{"id": "original-adequacy-01-0", "hobson": {"q": {"false": 0.3753224015235901, "true": 0.6246775984764099}}, "ms": 77.6}
+{"id": "original-adequacy-01-1", "hobson": {"q": {"false": 0.4619476795196533, "true": 0.5380523204803467}}, "ms": 88.0}
+{"id": "original-adequacy-02-0", "hobson": {"q": {"false": 0.5840855836868286, "true": 0.4159144163131714}}, "ms": 88.7}
+{"id": "original-adequacy-02-1", "hobson": {"q": {"false": 0.7169287204742432, "true": 0.2830713093280792}}, "ms": 79.5}
+{"id": "original-adequacy-03-0", "hobson": {"q": {"false": 0.4438033401966095, "true": 0.5561967492103577}}, "ms": 86.7}
+{"id": "original-adequacy-03-1", "hobson": {"q": {"false": 0.41514259576797485, "true": 0.5848574042320251}}, "ms": 87.8}
+{"id": "original-adequacy-04-0", "hobson": {"q": {"false": 0.18737353384494781, "true": 0.8126264810562134}}, "ms": 85.5}
+{"id": "original-adequacy-04-1", "hobson": {"q": {"false": 0.3046363592147827, "true": 0.6953636407852173}}, "ms": 79.4}
+{"id": "original-adequacy-05-0", "hobson": {"q": {"false": 0.60640949010849, "true": 0.3935905396938324}}, "ms": 87.0}
+{"id": "original-adequacy-05-1", "hobson": {"q": {"false": 0.5784149169921875, "true": 0.4215851426124573}}, "ms": 86.9}
+{"id": "original-adequacy-06-0", "hobson": {"q": {"false": 0.2941468358039856, "true": 0.7058531045913696}}, "ms": 86.7}
+{"id": "original-adequacy-06-1", "hobson": {"q": {"false": 0.24793687462806702, "true": 0.7520630955696106}}, "ms": 78.2}
+{"id": "original-routing-01-0", "hobson": {"q": {"coding": 0.04812149330973625, "coding_agent": 0.008505861274898052, "document": 0.0063730147667229176, "general": 0.06573347747325897, "math": 0.8650668263435364, "tools": 0.006199321709573269}}, "ms": 86.3}
+{"id": "original-routing-01-1", "hobson": {"q": {"coding": 0.057210616767406464, "coding_agent": 0.011071973480284214, "document": 0.009683425538241863, "general": 0.0854937955737114, "math": 0.8285532593727112, "tools": 0.007986960001289845}}, "ms": 91.8}
+{"id": "original-routing-02-0", "hobson": {"q": {"coding": 0.9301571846008301, "coding_agent": 0.01877491921186447, "document": 0.0036116966512054205, "general": 0.0422566682100296, "math": 0.0029742091428488493, "tools": 0.002225212287157774}}, "ms": 86.4}
+{"id": "original-routing-02-1", "hobson": {"q": {"coding": 0.9281613230705261, "coding_agent": 0.016091730445623398, "document": 0.004708775319159031, "general": 0.04469645768404007, "math": 0.004049818497151136, "tools": 0.0022918698377907276}}, "ms": 92.4}
+{"id": "original-routing-03-0", "hobson": {"q": {"coding": 0.055443596094846725, "coding_agent": 0.9197613596916199, "document": 0.0028263514395803213, "general": 0.01689680479466915, "math": 0.001012911438010633, "tools": 0.004058887250721455}}, "ms": 84.0}
+{"id": "original-routing-03-1", "hobson": {"q": {"coding": 0.040362175554037094, "coding_agent": 0.9376027584075928, "document": 0.0025920106563717127, "general": 0.014725867658853531, "math": 0.0007971454760991037, "tools": 0.003920186776667833}}, "ms": 72.4}
+{"id": "original-routing-04-0", "hobson": {"q": {"coding": 0.03519481047987938, "coding_agent": 0.01590985246002674, "document": 0.8148549199104309, "general": 0.12133467197418213, "math": 0.003126402385532856, "tools": 0.009579271078109741}}, "ms": 77.9}
+{"id": "original-routing-04-1", "hobson": {"q": {"coding": 0.07945933938026428, "coding_agent": 0.02635365165770054, "document": 0.7071582674980164, "general": 0.1689831167459488, "math": 0.0037794203963130713, "tools": 0.014266268350183964}}, "ms": 86.0}
+{"id": "original-routing-05-0", "hobson": {"q": {"coding": 0.0296684131026268, "coding_agent": 0.012220059521496296, "document": 0.0115811787545681, "general": 0.1903424859046936, "math": 0.003943803254514933, "tools": 0.7522440552711487}}, "ms": 86.4}
+{"id": "original-routing-05-1", "hobson": {"q": {"coding": 0.05645013973116875, "coding_agent": 0.01737455278635025, "document": 0.011673536151647568, "general": 0.699404776096344, "math": 0.004559787921607494, "tools": 0.2105371654033661}}, "ms": 92.5}
+{"id": "original-routing-06-0", "hobson": {"q": {"coding": 0.07767309248447418, "coding_agent": 0.022266702726483345, "document": 0.025969248265028, "general": 0.8513213992118835, "math": 0.007401683367788792, "tools": 0.015367865562438965}}, "ms": 92.1}
+{"id": "original-routing-06-1", "hobson": {"q": {"coding": 0.0823335275053978, "coding_agent": 0.01933162845671177, "document": 0.021189218387007713, "general": 0.8522456288337708, "math": 0.00678245397284627, "tools": 0.01811755821108818}}, "ms": 87.5}
+{"id": "hard-opus-a-long_policy-01", "hobson": {"q": {"deny_repeated_seepage": 0.09416801482439041, "deny_vacancy_exclusion": 0.18874333798885345, "pay_full_estimate_less_deductible": 0.008350038900971413, "pay_subject_to_10000_sublimit": 0.3578048646450043, "pay_subject_to_15000_sublimit": 0.35093382000923157}}, "ms": 1083.9}
+{"id": "hard-opus-a-long_policy-04", "hobson": {"q": {"budget_holder": 0.03771447017788887, "cfo": 0.10392433404922485, "department_head": 0.24905218183994293, "executive_committee": 0.01914747804403305, "vp_and_finance_director": 0.5901615023612976}}, "ms": 758.5}
+{"id": "hard-opus-a-long_policy-08", "hobson": {"q": {"full_repair_no_charge": 0.20447112619876862, "not_covered": 0.13166262209415436, "parts_covered_labour_charged": 0.6464977264404297, "pro_rata_replacement_credit": 0.017368488013744354}}, "ms": 638.8}
+{"id": "hard-opus-a-long_policy-09", "hobson": {"q": {"license_exception_lvs": 0.5776141285896301, "license_required": 0.09960709512233734, "no_license_required": 0.3113385736942291, "shipment_prohibited": 0.011440224014222622}}, "ms": 640.1}
+{"id": "hard-opus-a-long_policy-11", "hobson": {"q": {"false": 0.43509170413017273, "true": 0.5649083256721497}}, "ms": 649.4}
+{"id": "hard-opus-a-long_policy-13", "hobson": {"q": {"false": 0.7814555764198303, "true": 0.21854445338249207}}, "ms": 657.4}
+{"id": "hard-opus-a-long_policy-17", "hobson": {"q": {"database_oncall": 0.34953808784484863, "no_page_ticket_only": 0.49209755659103394, "platform_oncall": 0.11166433990001678, "security_incident_response": 0.013043652288615704, "vendor_support": 0.0336562804877758}}, "ms": 619.8}
+{"id": "hard-opus-a-long_policy-19", "hobson": {"q": {"false": 0.8107884526252747, "true": 0.1892116218805313}}, "ms": 613.8}
+{"id": "hard-opus-a-probability-03", "hobson": {"q": {"false": 0.5329688787460327, "true": 0.4670311510562897}}, "ms": 163.1}
+{"id": "hard-opus-a-probability-04", "hobson": {"q": {"early": 0.15344713628292084, "late": 0.506623387336731, "on_time": 0.339929461479187}}, "ms": 297.5}
+{"id": "hard-opus-a-probability-07", "hobson": {"q": {"escalated": 0.21879488229751587, "reopened": 0.047230370342731476, "resolved_first_contact": 0.7339747548103333}}, "ms": 345.4}
+{"id": "hard-opus-a-probability-08", "hobson": {"q": {"false": 0.6913875341415405, "true": 0.3086124658584595}}, "ms": 146.5}
+{"id": "hard-opus-a-temporal_numeric-03", "hobson": {"q": {"false": 0.6800905466079712, "true": 0.31990954279899597}}, "ms": 155.1}
+{"id": "hard-opus-a-temporal_numeric-06", "hobson": {"q": {"false": 0.22788122296333313, "true": 0.772118866443634}}, "ms": 176.7}
+{"id": "hard-opus-a-temporal_numeric-07", "hobson": {"q": {"sep_24": 0.3894706070423126, "sep_25": 0.13026206195354462, "sep_26": 0.25007233023643494, "sep_27": 0.11882416158914566, "sep_28": 0.11137088388204575}}, "ms": 367.4}
+{"id": "hard-opus-a-temporal_numeric-09", "hobson": {"q": {"false": 0.5292059183120728, "true": 0.47079405188560486}}, "ms": 150.8}
+{"id": "hard-opus-a-temporal_numeric-12", "hobson": {"q": {"0": 0.15495416522026062, "1": 0.19099459052085876, "2": 0.31861186027526855, "3": 0.3354393541812897}}, "ms": 180.8}
+{"id": "hard-opus-b-ambiguous-02", "hobson": {"q": {"cannot_determine": 0.09754972159862518, "false_positive": 0.20840908586978912, "real_incident": 0.6940411329269409}}, "ms": 183.2}
+{"id": "hard-opus-b-ambiguous-03", "hobson": {"q": {"insufficient_information": 0.2067795693874359, "time_barred": 0.6832477450370789, "within_limitation": 0.1099727526307106}}, "ms": 159.1}
+{"id": "hard-opus-b-ambiguous-07", "hobson": {"q": {"insufficient_information": 0.784128725528717, "over_limit": 0.12079884111881256, "within_policy": 0.09507233649492264}}, "ms": 159.1}
+{"id": "hard-opus-b-ambiguous-09", "hobson": {"q": {"compromised": 0.802035927772522, "inconclusive": 0.10634300112724304, "legitimate": 0.09162097424268723}}, "ms": 204.8}
+{"id": "hard-opus-b-ambiguous-10", "hobson": {"q": {"ask_user_which_alex": 0.6417970061302185, "send_to_alex_moreno": 0.3071373701095581, "send_to_alexandra_lind": 0.05106572061777115}}, "ms": 149.0}
+{"id": "hard-opus-b-ambiguous-11", "hobson": {"q": {"cannot_determine": 0.8627273440361023, "grade_correct": 0.12065023183822632, "grade_should_be_higher": 0.01662249118089676}}, "ms": 161.6}
+{"id": "hard-opus-b-ambiguous-13", "hobson": {"q": {"cannot_determine": 0.9170482158660889, "charge_data_team": 0.012952418997883797, "charge_platform_team": 0.006729396525770426, "split_50_50": 0.0632699653506279}}, "ms": 185.9}
+{"id": "hard-opus-b-multi_hop-03", "hobson": {"q": {"tier1_team_lead": 0.09852629154920578, "tier2_department_head": 0.5176664590835571, "tier3_cfo": 0.30898207426071167, "tier4_board": 0.07482516020536423}}, "ms": 821.6}
+{"id": "hard-opus-b-multi_hop-04", "hobson": {"q": {"ana": 0.12390316277742386, "bjorn": 0.10107523202896118, "chen": 0.06916706264019012, "dmitri": 0.031496431678533554, "esra": 0.01929721049964428, "no_page_ticket_only": 0.6550609469413757}}, "ms": 637.7}
+{"id": "hard-opus-b-multi_hop-05", "hobson": {"q": {"0": 0.1222841888666153, "1": 0.20745189487934113, "2": 0.24570998549461365, "3": 0.27843064069747925, "4": 0.14612321555614471}}, "ms": 713.4}
+{"id": "hard-opus-b-multi_hop-07", "hobson": {"q": {"credit_10_percent": 0.20219574868679047, "credit_20_percent": 0.47819796204566956, "credit_25_percent": 0.16847732663154602, "credit_50_percent": 0.12468330562114716, "credit_full_month": 0.013353457674384117, "no_credit": 0.013092168606817722}}, "ms": 743.5}
+{"id": "hard-opus-b-multi_hop-08", "hobson": {"q": {"false": 0.4406231939792633, "true": 0.5593767762184143}}, "ms": 615.6}
+{"id": "hard-opus-b-probability-01", "hobson": {"q": {"customer_wins": 0.18210221827030182, "customer_withdraws": 0.03279605507850647, "merchant_wins": 0.7851017117500305}}, "ms": 548.6}
+{"id": "hard-opus-b-probability-02", "hobson": {"q": {"bad_push": 0.9307244420051575, "database_hardware": 0.036860689520835876, "upstream_provider": 0.03241489455103874}}, "ms": 134.6}
+{"id": "hard-opus-b-probability-03", "hobson": {"q": {"false": 0.5857985019683838, "true": 0.4142014682292938}}, "ms": 339.9}
+{"id": "hard-opus-b-probability-04", "hobson": {"q": {"attended": 0.48606076836586, "late_cancellation": 0.1458701491355896, "no_show": 0.3680691421031952}}, "ms": 180.3}
+{"id": "hard-opus-b-probability-06", "hobson": {"q": {"modified": 0.1500803530216217, "overturned": 0.6581069231033325, "upheld": 0.19181281328201294}}, "ms": 302.2}
+{"id": "hard-opus-b-tradeoff-01", "hobson": {"q": {"escalate_to_engineering": 0.441444993019104, "escalate_to_security": 0.35846152901649475, "page_oncall": 0.005068417638540268, "process_refund": 0.19373174011707306, "send_kb_article": 0.001293286681175232}}, "ms": 273.9}
+{"id": "hard-opus-b-tradeoff-03", "hobson": {"q": {"order_a": 0.21204793453216553, "order_b": 0.4903547465801239, "order_c": 0.2427726536989212, "order_d": 0.05482477322220802}}, "ms": 229.1}
+{"id": "hard-opus-b-tradeoff-06", "hobson": {"q": {"false": 0.339549720287323, "true": 0.6604503393173218}}, "ms": 248.1}
+{"id": "hard-opus-b-tradeoff-07", "hobson": {"q": {"out_of_scope": 0.011829983443021774, "p0_fix_24h": 0.11765404790639877, "p1_fix_7d": 0.05621374770998955, "p2_fix_30d": 0.8090487122535706, "p3_backlog": 0.0052535696886479855}}, "ms": 218.5}
+{"id": "hard-opus-b-tradeoff-08", "hobson": {"q": {"false": 0.5838233232498169, "true": 0.4161766767501831}}, "ms": 178.6}
+{"id": "hard-opus-b-tradeoff-12", "hobson": {"q": {"deny_refund": 0.013874227181077003, "escalate_to_fraud_team": 0.0035227888729423285, "offer_store_credit": 0.013078229501843452, "refund_now": 0.9612239003181458, "wait_for_inspection": 0.00830091629177332}}, "ms": 188.7}
+{"id": "hard-opus-c-long_policy-02", "hobson": {"q": {"erase_all": 0.0288371779024601, "erase_but_retain_transaction_records": 0.8046002984046936, "erase_marketing_only": 0.0038541979156434536, "reject_unverified_request": 0.006960054859519005, "restrict_all_pending_legal_hold": 0.15574829280376434}}, "ms": 948.1}
+{"id": "hard-opus-c-long_policy-03", "hobson": {"q": {"eur_0": 0.45913755893707275, "eur_150": 0.09826956689357758, "eur_200": 0.05017577111721039, "eur_300": 0.24899399280548096, "eur_400": 0.10194893181324005, "eur_600": 0.04147426784038544}}, "ms": 914.9}
+{"id": "hard-opus-c-long_policy-04", "hobson": {"q": {"false": 0.312716007232666, "true": 0.687283992767334}}, "ms": 874.5}
+{"id": "hard-opus-c-long_policy-05", "hobson": {"q": {"0": 0.384214848279953, "1": 0.2536323666572571, "2": 0.29756683111190796, "3": 0.06458592414855957}}, "ms": 877.6}
+{"id": "hard-opus-c-long_policy-08", "hobson": {"q": {"0": 0.06711527705192566, "1": 0.34624752402305603, "2": 0.4882736802101135, "3": 0.09836355596780777}}, "ms": 888.6}
+{"id": "hard-opus-c-long_policy-10", "hobson": {"q": {"credit_minus_restocking_fee": 0.3698095381259918, "full_credit": 0.19186833500862122, "reject_return": 0.048207927495241165, "repair_or_replace_only": 0.3901141583919525}}, "ms": 950.7}
+{"id": "hard-opus-c-long_policy-11", "hobson": {"q": {"false": 0.43195489048957825, "true": 0.5680450797080994}}, "ms": 926.3}
+{"id": "hard-opus-c-probability-03", "hobson": {"q": {"halvorsen_polymer": 0.42765355110168457, "kuznets_technik": 0.3854692280292511, "ortega_seal_works": 0.18687722086906433}}, "ms": 183.4}
+{"id": "hard-opus-c-temporal_numeric-02", "hobson": {"q": {"false": 0.6131918430328369, "true": 0.3868081867694855}}, "ms": 289.4}
+{"id": "hard-opus-c-temporal_numeric-03", "hobson": {"q": {"eur_617_00": 0.24481789767742157, "eur_688_00": 0.06522530317306519, "eur_692_00": 0.0628216341137886, "eur_693_90": 0.6139739751815796, "eur_812_00": 0.013161159120500088}}, "ms": 252.0}
+{"id": "hard-opus-c-temporal_numeric-04", "hobson": {"q": {"usd_2222_50": 0.08988677710294724, "usd_2303_01": 0.2196677029132843, "usd_2303_33": 0.410282701253891, "usd_2335_00": 0.19637258350849152, "usd_2340_00": 0.08379017561674118}}, "ms": 269.3}
+{"id": "hard-opus-c-temporal_numeric-06", "hobson": {"q": {"none_declined": 0.1681423932313919, "sep_15_office_chair": 0.645933985710144, "sep_16_taxi": 0.030611788854002953, "sep_17_parking": 0.06355971097946167, "sep_18_book_set": 0.04378891363739967, "sep_21_client_dinner": 0.047963231801986694}}, "ms": 266.8}
+{"id": "hard-opus-c-temporal_numeric-08", "hobson": {"q": {"eur_497_40": 0.44878891110420227, "eur_498_81": 0.2192261815071106, "eur_506_06": 0.154844731092453, "eur_513_69": 0.12586314976215363, "eur_532_01": 0.051276981830596924}}, "ms": 295.4}
+{"id": "hard-opus-c-temporal_numeric-12", "hobson": {"q": {"covered": 0.09076809138059616, "expired_24_month_term": 0.17660066485404968, "expired_30_month_cap": 0.7326313257217407}}, "ms": 277.6}
+{"id": "hard-sol-a-adversarial-01", "hobson": {"q": {"deny_inactive_user": 0.012982729822397232, "deny_missing_approval": 0.2362934798002243, "grant_access": 0.5146868228912354, "grant_owner_exception": 0.23603695631027222}}, "ms": 112.5}
+{"id": "hard-sol-a-adversarial-06", "hobson": {"q": {"false": 0.9190483689308167, "true": 0.08095157891511917}}, "ms": 95.2}
+{"id": "hard-sol-a-adversarial-07", "hobson": {"q": {"delete_now": 0.32833319902420044, "needs_signature_review": 0.009753599762916565, "retain_indefinitely": 0.015100262127816677, "retain_until_2031": 0.6468129754066467}}, "ms": 100.5}
+{"id": "hard-sol-a-adversarial-08", "hobson": {"q": {"false": 0.6519355177879333, "true": 0.3480643928050995}}, "ms": 83.9}
+{"id": "hard-sol-a-adversarial-09", "hobson": {"q": {"0": 0.16532862186431885, "1": 0.2249661087989807, "2": 0.4532902240753174, "3": 0.15641506016254425}}, "ms": 100.4}
+{"id": "hard-sol-a-adversarial-11", "hobson": {"q": {"ethics_review": 0.7358542084693909, "major_grants": 0.030825486406683922, "manual_hold": 0.05063662678003311, "standard_research": 0.18268373608589172}}, "ms": 120.0}
+{"id": "hard-sol-a-multi_hop-01", "hobson": {"q": {"accept_s2_dusk": 0.7105304002761841, "reject_cutoff": 0.16332349181175232, "reject_tier": 0.07197749614715576, "reroute_s3": 0.05416862294077873}}, "ms": 746.2}
+{"id": "hard-sol-a-multi_hop-02", "hobson": {"q": {"executive_bridge": 0.0594247430562973, "heron_q2": 0.06352651864290237, "insufficient_information": 0.8276607394218445, "security_primary": 0.049388013780117035}}, "ms": 770.9}
+{"id": "hard-sol-a-multi_hop-05", "hobson": {"q": {"pay_manager_approved": 0.8715178370475769, "reject_category": 0.04561673849821091, "require_director": 0.07400762289762497, "require_finance_board": 0.008857958018779755}}, "ms": 741.7}
+{"id": "hard-sol-a-multi_hop-07", "hobson": {"q": {"admit": 0.2566846013069153, "deny_prerequisite": 0.4641314744949341, "deny_score": 0.07581152021884918, "manual_equivalency": 0.20337244868278503}}, "ms": 743.9}
+{"id": "hard-sol-a-multi_hop-08", "hobson": {"q": {"central_engineering": 0.22735945880413055, "insufficient_log": 0.05706046149134636, "local_maintenance": 0.7047122120857239, "safety_shutdown": 0.010867864824831486}}, "ms": 466.6}
+{"id": "hard-sol-a-multi_hop-09", "hobson": {"q": {"confirm_l3": 0.2157524824142456, "reject_capacity": 0.1166377142071724, "require_steward": 0.6519427299499512, "switch_l4": 0.01566709205508232}}, "ms": 361.6}
+{"id": "hard-sol-a-multi_hop-10", "hobson": {"q": {"approve_45_days": 0.6392979621887207, "deny_sensitive": 0.3062835931777954, "needs_field_review": 0.021650375798344612, "reduce_to_30_days": 0.03276808187365532}}, "ms": 361.3}
+{"id": "hard-sol-a-multi_hop-12", "hobson": {"q": {"covered_recurrence": 0.7263604998588562, "expired": 0.10939409583806992, "needs_authentication": 0.13462449610233307, "wrong_issue_class": 0.029620910063385963}}, "ms": 357.0}
+{"id": "hard-sol-a-trap-02", "hobson": {"q": {"false": 0.900719165802002, "true": 0.09928087890148163}}, "ms": 72.8}
+{"id": "hard-sol-a-trap-04", "hobson": {"q": {"false": 0.8820832371711731, "true": 0.11791673302650452}}, "ms": 73.7}
+{"id": "hard-sol-a-trap-05", "hobson": {"q": {"0": 0.2960396409034729, "1": 0.24397984147071838, "2": 0.3438611924648285, "3": 0.11611923575401306}}, "ms": 73.9}
+{"id": "hard-sol-a-trap-06", "hobson": {"q": {"await_internal_metrics": 0.02694808691740036, "close_agent_verified": 0.008092698641121387, "close_confirmed": 0.18663327395915985, "keep_open_unresolved": 0.7783259749412537}}, "ms": 75.6}
+{"id": "hard-sol-a-trap-08", "hobson": {"q": {"canceled": 0.005123667884618044, "indeterminate": 0.0036409767344594, "late": 0.5119097232818604, "on_time": 0.4793255925178528}}, "ms": 71.0}
+{"id": "hard-sol-a-trap-10", "hobson": {"q": {"blocked_failed_test": 0.054151926189661026, "blocked_second_review": 0.8031391501426697, "ready_one_review": 0.022457854822278023, "ready_two_reviews": 0.12025108188390732}}, "ms": 76.0}
+{"id": "hard-sol-a-trap-13", "hobson": {"q": {"false": 0.8794230222702026, "true": 0.12057695537805557}}, "ms": 73.6}
+{"id": "hard-sol-a-trap-15", "hobson": {"q": {"false": 0.7347973585128784, "true": 0.2652026116847992}}, "ms": 74.6}
+{"id": "hard-sol-b-judge_hard-01", "hobson": {"q": {"false": 0.41854342818260193, "true": 0.5814564824104309}}, "ms": 73.9}
+{"id": "hard-sol-b-judge_hard-02", "hobson": {"q": {"false": 0.3740096986293793, "true": 0.6259903907775879}}, "ms": 73.8}
+{"id": "hard-sol-b-judge_hard-05", "hobson": {"q": {"false": 0.39153409004211426, "true": 0.6084659099578857}}, "ms": 74.4}
+{"id": "hard-sol-b-judge_hard-08", "hobson": {"q": {"false": 0.11199983954429626, "true": 0.8880001306533813}}, "ms": 73.5}
+{"id": "hard-sol-b-judge_hard-10", "hobson": {"q": {"false": 0.3503006398677826, "true": 0.6496993899345398}}, "ms": 73.4}
+{"id": "hard-sol-b-judge_hard-14", "hobson": {"q": {"false": 0.7543797492980957, "true": 0.24562020599842072}}, "ms": 77.4}
+{"id": "hard-sol-b-judge_hard-15", "hobson": {"q": {"false": 0.18808087706565857, "true": 0.8119191527366638}}, "ms": 75.4}
+{"id": "hard-sol-b-judge_hard-18", "hobson": {"q": {"false": 0.21075545251369476, "true": 0.7892445921897888}}, "ms": 73.6}
+{"id": "hard-sol-b-long_policy-01", "hobson": {"q": {"approve_all": 0.25992435216903687, "approve_lodging_only": 0.4263359308242798, "approve_meals_only": 0.07792698591947556, "reject_entire_claim": 0.23581282794475555}}, "ms": 364.6}
+{"id": "hard-sol-b-long_policy-02", "hobson": {"q": {"analytics_owner_only": 0.08881683647632599, "deny_current_export": 0.03998921439051628, "privacy_and_security": 0.4569621980190277, "privacy_only": 0.4142318069934845}}, "ms": 352.2}
+{"id": "hard-sol-b-long_policy-05", "hobson": {"q": {"delete_everything": 0.09435094147920609, "delete_nothing": 0.2580561637878418, "delete_only_profile": 0.11957389116287231, "delete_profile_omar_april_and_table": 0.5280190110206604}}, "ms": 318.6}
+{"id": "hard-sol-b-long_policy-06", "hobson": {"q": {"east_ward": 0.8131611347198486, "harbor_neighbors": 0.07015909999608994, "no_award": 0.03979933261871338, "river_arts": 0.07688047736883163}}, "ms": 356.0}
+{"id": "hard-sol-b-routing_hard-01", "hobson": {"q": {"data_pipeline": 0.0026634943205863237, "desktop_support": 0.003480073995888233, "finance_review": 0.0020488123409450054, "office_file_repair": 0.9311027526855469, "spreadsheet_formula": 0.06070489436388016}}, "ms": 75.9}
+{"id": "hard-sol-b-routing_hard-02", "hobson": {"q": {"customer_support": 0.003335051704198122, "fraud_review": 0.0010923742083832622, "ledger_reconciliation": 0.981079638004303, "mobile_app": 0.004799056798219681, "payment_disputes": 0.009693866595625877}}, "ms": 74.5}
+{"id": "hard-sol-b-routing_hard-03", "hobson": {"q": {"api_platform": 0.022048866376280785, "authoritative_dns": 0.026590511202812195, "endpoint_devices": 0.049279555678367615, "network_dns": 0.897653341293335, "tls_certificates": 0.004427753854542971}}, "ms": 74.6}
+{"id": "hard-sol-b-routing_hard-07", "hobson": {"q": {"ci_infrastructure": 0.0042413994669914246, "code_signing": 0.017611777409911156, "endpoint_security": 0.0025016514118760824, "macos_runtime": 0.005646455567330122, "release_notarization": 0.9699987173080444}}, "ms": 75.1}
+{"id": "hard-sol-b-routing_hard-09", "hobson": {"q": {"git_client": 0.017689621075987816, "identity_login": 0.004478048533201218, "repository_admin": 0.0035774712450802326, "source_access": 0.9672889709472656, "vpn_network": 0.006965788546949625}}, "ms": 75.9}
+{"id": "hard-sol-b-temporal_numeric-01", "hobson": {"q": {"before_open": 0.16633795201778412, "late_by_2h_or_more": 0.021819427609443665, "late_by_under_2h": 0.04791335389018059, "within_window": 0.7639293074607849}}, "ms": 75.3}
+{"id": "hard-sol-b-temporal_numeric-02", "hobson": {"q": {"at_least_100gb_below": 0.05121292546391487, "exactly_equal": 0.03517795354127884, "over_limit": 0.7990895509719849, "under_100gb_below": 0.11451958864927292}}, "ms": 75.5}
+{"id": "hard-sol-b-temporal_numeric-03", "hobson": {"q": {"12_credits": 0.5706033110618591, "15_credits": 0.15871942043304443, "6_credits": 0.13140477240085602, "9_credits": 0.13927245140075684}}, "ms": 83.5}
+{"id": "hard-sol-b-temporal_numeric-04", "hobson": {"q": {"clear_fail": 0.24901744723320007, "narrow_fail": 0.5371402502059937, "pass": 0.21384228765964508}}, "ms": 75.1}
+{"id": "hard-sol-c-judge_hard-03", "hobson": {"q": {"false": 0.31880760192871094, "true": 0.6811923980712891}}, "ms": 75.8}
+{"id": "hard-sol-c-judge_hard-05", "hobson": {"q": {"false": 0.5066393613815308, "true": 0.4933606684207916}}, "ms": 82.3}
+{"id": "hard-sol-c-judge_hard-07", "hobson": {"q": {"false": 0.5966123938560486, "true": 0.40338757634162903}}, "ms": 77.1}
+{"id": "hard-sol-c-judge_hard-08", "hobson": {"q": {"false": 0.4286560118198395, "true": 0.5713439583778381}}, "ms": 71.2}
+{"id": "hard-sol-c-judge_hard-09", "hobson": {"q": {"false": 0.27210521697998047, "true": 0.7278948426246643}}, "ms": 73.2}
+{"id": "hard-sol-c-judge_hard-10", "hobson": {"q": {"false": 0.6644052863121033, "true": 0.3355947434902191}}, "ms": 72.6}
+{"id": "hard-sol-c-judge_hard-11", "hobson": {"q": {"false": 0.7918063402175903, "true": 0.20819367468357086}}, "ms": 74.9}
+{"id": "hard-sol-c-judge_hard-13", "hobson": {"q": {"false": 0.7376864552497864, "true": 0.26231351494789124}}, "ms": 75.8}
+{"id": "hard-sol-c-judge_hard-15", "hobson": {"q": {"false": 0.17644456028938293, "true": 0.8235554695129395}}, "ms": 73.6}
+{"id": "hard-sol-c-multi_hop-07", "hobson": {"q": {"partial_release": 0.03813934698700905, "programme_review": 0.9139204621315002, "reject_draw": 0.013713894411921501, "release_draw": 0.03422628343105316}}, "ms": 315.7}
+{"id": "hard-sol-c-multi_hop-09", "hobson": {"q": {"bus_substitution": 0.9168829917907715, "call_fen_cross": 0.022657785564661026, "pass_fen_cross": 0.030960936099290848, "terminate_oakmere": 0.029498320072889328}}, "ms": 317.2}
+{"id": "hard-sol-c-multi_hop-11", "hobson": {"q": {"adjuster_referral": 0.13796788454055786, "coverage_confirmed": 0.20160314440727234, "coverage_excluded": 0.5250523090362549, "documentation_needed": 0.1353766918182373}}, "ms": 354.5}
+{"id": "hard-sol-c-multi_hop-12", "hobson": {"q": {"conservation_hold": 0.2767772078514099, "deny_request": 0.11165735870599747, "digital_copy_only": 0.5358753204345703, "supervised_delivery": 0.07569004595279694}}, "ms": 82.1}
+{"id": "hard-sol-c-multi_hop-13", "hobson": {"q": {"engineering_review": 0.022499792277812958, "normal_release": 0.9599611759185791, "rework": 0.008228878490626812, "scrap_lot": 0.00931021198630333}}, "ms": 351.8}

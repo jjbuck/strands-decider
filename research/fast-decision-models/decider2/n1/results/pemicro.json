@@ -1,0 +1,66 @@
+[
+ {
+  "case": "fp32",
+  "N": 128,
+  "K": 128,
+  "total_us": 2253.38,
+  "per_matmul_ns": 4401.1,
+  "pe_active": 0.058
+ },
+ {
+  "case": "fp32",
+  "N": 512,
+  "K": 128,
+  "total_us": 2657.09,
+  "per_matmul_ns": 5189.6,
+  "pe_active": 0.204
+ },
+ {
+  "case": "fp32_mov01",
+  "N": 128,
+  "K": 128,
+  "total_us": 2213.21,
+  "per_matmul_ns": 4322.7,
+  "pe_active": 0.046
+ },
+ {
+  "case": "fp32_stat01",
+  "N": 128,
+  "K": 128,
+  "total_us": 2135.21,
+  "per_matmul_ns": 4170.3,
+  "pe_active": 0.006
+ },
+ {
+  "case": "bf16",
+  "N": 128,
+  "K": 128,
+  "total_us": 2159.12,
+  "per_matmul_ns": 4217.0,
+  "pe_active": 0.016
+ },
+ {
+  "case": "bf16",
+  "N": 512,
+  "K": 128,
+  "total_us": 2274.67,
+  "per_matmul_ns": 4442.7,
+  "pe_active": 0.065
+ },
+ {
+  "case": "fp32",
+  "N": 64,
+  "K": 128,
+  "total_us": 2214.4,
+  "per_matmul_ns": 4325.0,
+  "pe_active": 0.047
+ },
+ {
+  "case": "fp32_K1",
+  "N": 512,
+  "K": 1,
+  "total_us": 2115.27,
+  "per_matmul_ns": 4131.4,
+  "pe_active": 0.026
+ }
+]

@@ -1,0 +1,256 @@
+{
+ "model": "st4b",
+ "repo": "Tiiny/SmallThinker-4BA0.6B-Instruct",
+ "body_total": 3801612288,
+ "body_active": 630718464,
+ "layers": 32,
+ "gpu": "NVIDIA A10G",
+ "grouped_mm": true,
+ "triton0_1000": {
+  "T": 1000,
+  "impl": "triton",
+  "cfg": {
+   "BM": 64,
+   "BN1": 128,
+   "BK1": 64,
+   "BN2": 64,
+   "BK2": 64,
+   "w1": 4,
+   "s1": 3,
+   "w2": 4,
+   "s2": 3,
+   "nf": 1
+  },
+  "wall_median": 38.613,
+  "wall_p95": 38.804,
+  "wall_n": 20,
+  "kernels": {
+   "gemm": 10.599,
+   "moe_dn": 7.325,
+   "moe_gu": 14.515,
+   "other": 4.927,
+   "sort": 1.499
+  }
+ },
+ "triton1_1000": {
+  "T": 1000,
+  "impl": "triton",
+  "cfg": {
+   "BM": 128,
+   "BN1": 128,
+   "BK1": 64,
+   "BN2": 64,
+   "BK2": 64,
+   "w1": 4,
+   "s1": 3,
+   "w2": 4,
+   "s2": 3,
+   "nf": 1
+  },
+  "wall_median": 56.886,
+  "wall_p95": 57.084,
+  "wall_n": 20,
+  "kernels": {
+   "gemm": 10.609,
+   "moe_dn": 8.052,
+   "moe_gu": 31.933,
+   "other": 4.916,
+   "sort": 1.499
+  }
+ },
+ "triton2_1000": {
+  "T": 1000,
+  "impl": "triton",
+  "cfg": {
+   "BM": 32,
+   "BN1": 64,
+   "BK1": 64,
+   "BN2": 128,
+   "BK2": 64,
+   "w1": 4,
+   "s1": 3,
+   "w2": 4,
+   "s2": 3,
+   "nf": 1
+  },
+  "wall_median": 39.924,
+  "wall_p95": 40.143,
+  "wall_n": 20,
+  "kernels": {
+   "gemm": 10.601,
+   "moe_dn": 7.775,
+   "moe_gu": 15.38,
+   "other": 4.927,
+   "sort": 1.499
+  }
+ },
+ "best_1000": {
+  "ms": 38.613,
+  "cfg": {
+   "BM": 64,
+   "BN1": 128,
+   "BK1": 64,
+   "BN2": 64,
+   "BK2": 64,
+   "w1": 4,
+   "s1": 3,
+   "w2": 4,
+   "s2": 3,
+   "nf": 1
+  }
+ },
+ "alias_1000": {
+  "T": 1000,
+  "impl": "alias_compute_only",
+  "wall_median": 36.881,
+  "wall_p95": 37.219,
+  "wall_n": 20,
+  "kernels": {
+   "gemm": 10.609,
+   "moe_dn": 6.246,
+   "moe_gu": 13.662,
+   "other": 4.966,
+   "sort": 1.498
+  }
+ },
+ "balanced_1000": {
+  "T": 1000,
+  "impl": "balanced_routing",
+  "wall_median": 35.736,
+  "wall_p95": 35.76,
+  "wall_n": 20,
+  "kernels": {
+   "gemm": 10.616,
+   "moe_dn": 6.845,
+   "moe_gu": 12.533,
+   "other": 4.565,
+   "sort": 1.31
+  }
+ },
+ "triton0_4000": {
+  "T": 4000,
+  "impl": "triton",
+  "cfg": {
+   "BM": 64,
+   "BN1": 128,
+   "BK1": 64,
+   "BN2": 64,
+   "BK2": 64,
+   "w1": 4,
+   "s1": 3,
+   "w2": 4,
+   "s2": 3,
+   "nf": 1
+  },
+  "wall_median": 139.214,
+  "wall_p95": 139.502,
+  "wall_n": 20,
+  "kernels": {
+   "gemm": 59.136,
+   "moe_dn": 20.122,
+   "moe_gu": 43.459,
+   "other": 14.536,
+   "sort": 2.157
+  }
+ },
+ "triton1_4000": {
+  "T": 4000,
+  "impl": "triton",
+  "cfg": {
+   "BM": 128,
+   "BN1": 128,
+   "BK1": 64,
+   "BN2": 64,
+   "BK2": 64,
+   "w1": 4,
+   "s1": 3,
+   "w2": 4,
+   "s2": 3,
+   "nf": 1
+  },
+  "wall_median": 186.343,
+  "wall_p95": 186.89,
+  "wall_n": 20,
+  "kernels": {
+   "gemm": 59.228,
+   "moe_dn": 22.018,
+   "moe_gu": 88.781,
+   "other": 14.548,
+   "sort": 2.157
+  }
+ },
+ "triton2_4000": {
+  "T": 4000,
+  "impl": "triton",
+  "cfg": {
+   "BM": 32,
+   "BN1": 64,
+   "BK1": 64,
+   "BN2": 128,
+   "BK2": 64,
+   "w1": 4,
+   "s1": 3,
+   "w2": 4,
+   "s2": 3,
+   "nf": 1
+  },
+  "wall_median": 141.915,
+  "wall_p95": 142.048,
+  "wall_n": 20,
+  "kernels": {
+   "gemm": 59.239,
+   "moe_dn": 22.59,
+   "moe_gu": 43.701,
+   "other": 14.535,
+   "sort": 2.161
+  }
+ },
+ "best_4000": {
+  "ms": 139.214,
+  "cfg": {
+   "BM": 64,
+   "BN1": 128,
+   "BK1": 64,
+   "BN2": 64,
+   "BK2": 64,
+   "w1": 4,
+   "s1": 3,
+   "w2": 4,
+   "s2": 3,
+   "nf": 1
+  }
+ },
+ "alias_4000": {
+  "T": 4000,
+  "impl": "alias_compute_only",
+  "wall_median": 139.755,
+  "wall_p95": 139.903,
+  "wall_n": 20,
+  "kernels": {
+   "gemm": 59.269,
+   "moe_dn": 20.077,
+   "moe_gu": 43.645,
+   "other": 14.677,
+   "sort": 2.153
+  }
+ },
+ "balanced_4000": {
+  "T": 4000,
+  "impl": "balanced_routing",
+  "wall_median": 136.745,
+  "wall_p95": 136.868,
+  "wall_n": 20,
+  "kernels": {
+   "gemm": 59.226,
+   "moe_dn": 19.425,
+   "moe_gu": 42.632,
+   "other": 13.823,
+   "sort": 1.937
+  }
+ },
+ "stream": {
+  "stream_bytes": 7603424256,
+  "stream_ms": 15.216,
+  "stream_GBps": 499.7
+ }
+}

@@ -1,0 +1,12 @@
+pool 12651 cf 4880 v5 12557
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 4261.29it/s]
+{"upd": 0, "probe_kl": 0.0258, "probe_agree": 0.9271}
+/home/ubuntu/work/j9/train_j9.py:185: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /__w/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:820.)
+  lsum['hid'] += float(hl); lcnt['hid'] += 1
+{"upd": 1, "t": 15, "mem": 7.5, "lr": 2.7272428195020753e-06, "hid": 0.0326, "kl_real": 0.0663, "agree_real": 1.0, "live_frac": 0.6596, "T": 2423.5, "ce_v5": 0.4833, "acc_v5": 1.0, "kl_v5": 0.0, "agree_v5": 1.0}
+{"upd": 10, "t": 249, "mem": 7.5, "lr": 1.4983557339253815e-05, "hid": 0.0365, "kl_real": 0.037, "agree_real": 0.9167, "live_frac": 0.6637, "T": 2463.1481, "ce_v5": 0.2982, "acc_v5": 0.875, "kl_v5": 0.0, "agree_v5": 1.0}
+{"upd": 20, "t": 472, "mem": 7.5, "lr": 2.8510954431283423e-05, "hid": 0.033, "kl_real": 0.0388, "agree_real": 0.9222, "live_frac": 0.7031, "T": 2399.5833, "ce_v5": 0.1614, "acc_v5": 0.9667, "kl_v5": 0.0, "agree_v5": 1.0}
+{"upd": 30, "t": 746, "mem": 7.5, "lr": 2.9704992609906378e-05, "hid": 0.0357, "kl_real": 0.0248, "agree_real": 0.9082, "live_frac": 0.6717, "T": 2327.65, "ce_v5": 0.4739, "acc_v5": 0.9091, "kl_v5": 0.0004, "agree_v5": 1.0}
+{"upd": 40, "t": 902, "mem": 7.5, "lr": 2.9477032895167306e-05, "hid": 0.0423, "kl_real": 0.0523, "agree_real": 0.8857, "live_frac": 0.6232, "T": 2702.8583, "ce_v5": 0.4073, "acc_v5": 0.8, "kl_v5": 0.0001, "agree_v5": 1.0}
+{"upd": 50, "t": 1093, "mem": 7.5, "lr": 2.9185850380609763e-05, "hid": 0.034, "kl_real": 0.0327, "agree_real": 0.9677, "live_frac": 0.6916, "T": 2372.6417, "ce_v5": 0.6767, "acc_v5": 0.6667, "kl_v5": 0.0004, "agree_v5": 1.0, "probe_kl": 0.0289, "probe_agree": 0.9062}

@@ -1,0 +1,2 @@
+Q5_MEMFRAC=0.6 python q5dev.py --cfgs cfgs_q5.json --prefix 12 --tags b8+stack.G0.75.gen2.mixint4p.L14,b8+stack.G0.6.gen2.mixint4p.L14
+touch ~/work/q5/FIN3_DONE

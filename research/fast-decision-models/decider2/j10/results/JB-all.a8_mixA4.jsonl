@@ -1,0 +1,231 @@
+{"id": "easy-intent-00", "q": {"q": {"billing_question": 0.006609901785850525, "cancel_order": 0.013741374015808105, "change_address": 0.01319210883229971, "report_damage": 0.004114823881536722, "track_order": 0.9623417854309082}}}
+{"id": "easy-intent-01", "q": {"q": {"billing_question": 0.002999021438881755, "cancel_order": 0.991779625415802, "change_address": 0.0011274676071479917, "report_damage": 0.003229680471122265, "track_order": 0.0008642343454994261}}}
+{"id": "easy-intent-02", "q": {"q": {"billing_question": 0.00350624299608171, "cancel_order": 0.00942153949290514, "change_address": 0.9834038615226746, "report_damage": 0.0017220263835042715, "track_order": 0.0019462981726974249}}}
+{"id": "easy-intent-03", "q": {"q": {"billing_question": 0.0013639118988066912, "cancel_order": 0.006944324821233749, "change_address": 0.003047170350328088, "report_damage": 0.985275387763977, "track_order": 0.0033692321740090847}}}
+{"id": "easy-intent-04", "q": {"q": {"billing_question": 0.980911135673523, "cancel_order": 0.01221038494259119, "change_address": 0.0005939602851867676, "report_damage": 0.0037062102928757668, "track_order": 0.0025783339515328407}}}
+{"id": "easy-intent-05", "q": {"q": {"billing_question": 0.007121120113879442, "cancel_order": 0.011256895028054714, "change_address": 0.009825370274484158, "report_damage": 0.00545412627980113, "track_order": 0.9663424491882324}}}
+{"id": "easy-intent-06", "q": {"q": {"play_music": 0.002794892992824316, "send_message": 0.018612274900078773, "set_alarm": 0.9745931625366211, "turn_off_lights": 0.002063121646642685, "weather": 0.001936521497555077}}}
+{"id": "easy-intent-07", "q": {"q": {"play_music": 0.9926880598068237, "send_message": 0.0030292163137346506, "set_alarm": 0.0007921030628494918, "turn_off_lights": 0.0028180789668112993, "weather": 0.0006724979029968381}}}
+{"id": "easy-intent-08", "q": {"q": {"play_music": 0.0008426358108408749, "send_message": 0.0022107146214693785, "set_alarm": 0.0007585997227579355, "turn_off_lights": 0.0015922724269330502, "weather": 0.9945958256721497}}}
+{"id": "easy-intent-09", "q": {"q": {"play_music": 0.0014403349487110972, "send_message": 0.9907484650611877, "set_alarm": 0.003990776836872101, "turn_off_lights": 0.002529742894694209, "weather": 0.0012907348573207855}}}
+{"id": "easy-intent-10", "q": {"q": {"play_music": 0.0007358500151894987, "send_message": 0.0006193533190526068, "set_alarm": 0.000524258881341666, "turn_off_lights": 0.9974663257598877, "weather": 0.0006541322800330818}}}
+{"id": "easy-intent-11", "q": {"q": {"play_music": 0.0014927703887224197, "send_message": 0.0007000946206972003, "set_alarm": 0.9959458708763123, "turn_off_lights": 0.0013273347867652774, "weather": 0.0005339090712368488}}}
+{"id": "easy-fact-00", "q": {"q": {"false": 0.05423487722873688, "true": 0.9457651972770691}}}
+{"id": "easy-fact-01", "q": {"q": {"false": 0.9674516916275024, "true": 0.032548319548368454}}}
+{"id": "easy-fact-02", "q": {"q": {"false": 0.0589517280459404, "true": 0.9410483241081238}}}
+{"id": "easy-fact-03", "q": {"q": {"false": 0.9609296321868896, "true": 0.03907042741775513}}}
+{"id": "easy-fact-04", "q": {"q": {"false": 0.11585625261068344, "true": 0.8841437101364136}}}
+{"id": "easy-fact-05", "q": {"q": {"false": 0.9201198220252991, "true": 0.07988018542528152}}}
+{"id": "easy-fact-06", "q": {"q": {"false": 0.033020272850990295, "true": 0.9669797420501709}}}
+{"id": "easy-fact-07", "q": {"q": {"false": 0.8673490881919861, "true": 0.1326509416103363}}}
+{"id": "easy-fact-08", "q": {"q": {"false": 0.036346063017845154, "true": 0.9636539816856384}}}
+{"id": "easy-fact-09", "q": {"q": {"false": 0.9327764511108398, "true": 0.06722355633974075}}}
+{"id": "easy-fact-10", "q": {"q": {"false": 0.05569199100136757, "true": 0.9443079829216003}}}
+{"id": "easy-fact-11", "q": {"q": {"false": 0.9155490398406982, "true": 0.08445093780755997}}}
+{"id": "easy-extraction-00", "q": {"q": {"bank_transfer": 0.003244234248995781, "cash": 0.0024293973110616207, "credit_card": 0.011560835875570774, "paypal": 0.9827654957771301}}}
+{"id": "easy-extraction-01", "q": {"q": {"bank_transfer": 0.003141970606520772, "cash": 0.9829155206680298, "credit_card": 0.0064048380590975285, "paypal": 0.007537676952779293}}}
+{"id": "easy-extraction-02", "q": {"q": {"bank_transfer": 0.9751792550086975, "cash": 0.00854734517633915, "credit_card": 0.0024021603167057037, "paypal": 0.013871210627257824}}}
+{"id": "easy-extraction-03", "q": {"q": {"high": 0.6517026424407959, "low": 0.03129737079143524, "medium": 0.03119765780866146, "urgent": 0.28580233454704285}}}
+{"id": "easy-extraction-04", "q": {"q": {"high": 0.02693602442741394, "low": 0.8906562924385071, "medium": 0.06859691441059113, "urgent": 0.013810768723487854}}}
+{"id": "easy-extraction-05", "q": {"q": {"high": 0.10022178292274475, "low": 0.034763678908348083, "medium": 0.03793208673596382, "urgent": 0.8270824551582336}}}
+{"id": "easy-extraction-06", "q": {"q": {"L": 0.0957641452550888, "M": 0.7277470827102661, "S": 0.11895526200532913, "XL": 0.05753351002931595}}}
+{"id": "easy-extraction-07", "q": {"q": {"L": 0.062415774911642075, "M": 0.01980769634246826, "S": 0.012025208212435246, "XL": 0.9057512879371643}}}
+{"id": "easy-extraction-08", "q": {"q": {"friday": 0.009549758397042751, "monday": 0.005587560590356588, "thursday": 0.956430196762085, "tuesday": 0.01344729121774435, "wednesday": 0.014985251240432262}}}
+{"id": "easy-extraction-09", "q": {"q": {"friday": 0.045617248862981796, "monday": 0.8462867736816406, "thursday": 0.040445711463689804, "tuesday": 0.03663734719157219, "wednesday": 0.03101285733282566}}}
+{"id": "easy-extraction-10", "q": {"q": {"friday": 0.8639507293701172, "monday": 0.022980259731411934, "thursday": 0.03817242383956909, "tuesday": 0.027287522330880165, "wednesday": 0.047609008848667145}}}
+{"id": "easy-extraction-11", "q": {"q": {"bank_transfer": 0.009023109450936317, "cash": 0.008740919642150402, "credit_card": 0.9668075442314148, "paypal": 0.015428426675498486}}}
+{"id": "easy-tool_selection-00", "q": {"q": {"convert_currency": 0.0036445793230086565, "create_calendar_event": 0.0014893845655024052, "get_weather": 0.9907515048980713, "send_email": 0.002136536641046405, "translate_text": 0.001978005049750209}}}
+{"id": "easy-tool_selection-01", "q": {"q": {"convert_currency": 0.0007379259332083166, "create_calendar_event": 0.0010757236741483212, "get_weather": 0.0006138273747637868, "send_email": 0.9967657327651978, "translate_text": 0.0008067754679359496}}}
+{"id": "easy-tool_selection-02", "q": {"q": {"convert_currency": 0.0017033964395523071, "create_calendar_event": 0.9931500554084778, "get_weather": 0.0017795399762690067, "send_email": 0.0020665409974753857, "translate_text": 0.0013005121145397425}}}
+{"id": "easy-tool_selection-03", "q": {"q": {"convert_currency": 0.9964317083358765, "create_calendar_event": 0.00018582522170618176, "get_weather": 0.0010314363753423095, "send_email": 0.0006062292959541082, "translate_text": 0.0017448542639613152}}}
+{"id": "easy-tool_selection-04", "q": {"q": {"convert_currency": 0.010874329134821892, "create_calendar_event": 0.0019730059430003166, "get_weather": 0.003133977297693491, "send_email": 0.005372725892812014, "translate_text": 0.9786459803581238}}}
+{"id": "easy-tool_selection-05", "q": {"q": {"convert_currency": 0.0013115406036376953, "create_calendar_event": 0.9911566972732544, "get_weather": 0.0017835471080616117, "send_email": 0.00464373966678977, "translate_text": 0.0011045411229133606}}}
+{"id": "easy-tool_selection-06", "q": {"q": {"book_restaurant": 0.0005581792211160064, "call_taxi": 0.001980002736672759, "get_stock_price": 0.0007357089780271053, "search_flights": 0.9960072636604309, "set_reminder": 0.0007188884192146361}}}
+{"id": "easy-tool_selection-07", "q": {"q": {"book_restaurant": 0.98725825548172, "call_taxi": 0.007355567999184132, "get_stock_price": 0.0005770448478870094, "search_flights": 0.0004870580742135644, "set_reminder": 0.0043220785446465015}}}
+{"id": "easy-tool_selection-08", "q": {"q": {"book_restaurant": 0.000981050543487072, "call_taxi": 0.0075835492461919785, "get_stock_price": 0.0020327859092503786, "search_flights": 0.0012266214471310377, "set_reminder": 0.9881761074066162}}}
+{"id": "easy-tool_selection-09", "q": {"q": {"book_restaurant": 0.00098401156719774, "call_taxi": 0.001511166337877512, "get_stock_price": 0.9956510663032532, "search_flights": 0.0008509820909239352, "set_reminder": 0.0010027125244960189}}}
+{"id": "easy-tool_selection-10", "q": {"q": {"book_restaurant": 0.0012531683314591646, "call_taxi": 0.9959172606468201, "get_stock_price": 0.0010471382411196828, "search_flights": 0.0011106920428574085, "set_reminder": 0.000671775487717241}}}
+{"id": "easy-tool_selection-11", "q": {"q": {"book_restaurant": 0.0006267568678595126, "call_taxi": 0.0013917461037635803, "get_stock_price": 0.001019235118292272, "search_flights": 0.0006572024431079626, "set_reminder": 0.996304988861084}}}
+{"id": "original-policy-01-0", "q": {"q": {"false": 0.8278217911720276, "true": 0.172178253531456}}}
+{"id": "original-policy-01-1", "q": {"q": {"false": 0.7093735337257385, "true": 0.2906264662742615}}}
+{"id": "original-policy-02-0", "q": {"q": {"false": 0.7581114768981934, "true": 0.24188850820064545}}}
+{"id": "original-policy-02-1", "q": {"q": {"false": 0.8029671311378479, "true": 0.1970328539609909}}}
+{"id": "original-policy-03-0", "q": {"q": {"false": 0.6575139760971069, "true": 0.3424859642982483}}}
+{"id": "original-policy-03-1", "q": {"q": {"false": 0.7285454869270325, "true": 0.27145451307296753}}}
+{"id": "original-policy-04-0", "q": {"q": {"false": 0.4785929024219513, "true": 0.5214070677757263}}}
+{"id": "original-policy-04-1", "q": {"q": {"false": 0.8210713267326355, "true": 0.17892864346504211}}}
+{"id": "original-policy-05-0", "q": {"q": {"false": 0.5862399339675903, "true": 0.41376006603240967}}}
+{"id": "original-policy-05-1", "q": {"q": {"false": 0.8527716994285583, "true": 0.14722828567028046}}}
+{"id": "original-policy-06-0", "q": {"q": {"false": 0.22514493763446808, "true": 0.7748550772666931}}}
+{"id": "original-policy-06-1", "q": {"q": {"false": 0.40178045630455017, "true": 0.5982194542884827}}}
+{"id": "original-intent-01-0", "q": {"q": {"cancel": 0.4738476872444153, "change_address": 0.0035906289704144, "other": 0.16617827117443085, "refund": 0.3532103896141052, "status": 0.003173091681674123}}}
+{"id": "original-intent-01-1", "q": {"q": {"cancel": 0.12867774069309235, "change_address": 0.0016406605718657374, "other": 0.06929730623960495, "refund": 0.7981193661689758, "status": 0.0022649916354566813}}}
+{"id": "original-intent-02-0", "q": {"q": {"cancel": 0.0025401320308446884, "change_address": 0.8307552933692932, "other": 0.06644807755947113, "refund": 0.0023964683059602976, "status": 0.0978599339723587}}}
+{"id": "original-intent-02-1", "q": {"q": {"cancel": 0.006157088093459606, "change_address": 0.054685767740011215, "other": 0.22405584156513214, "refund": 0.006013444159179926, "status": 0.7090878486633301}}}
+{"id": "original-intent-03-0", "q": {"q": {"cancel": 0.007896103896200657, "change_address": 0.9465343952178955, "other": 0.03514179587364197, "refund": 0.005414035636931658, "status": 0.005013634450733662}}}
+{"id": "original-intent-03-1", "q": {"q": {"cancel": 0.0026683746837079525, "change_address": 0.9638153314590454, "other": 0.028056325390934944, "refund": 0.003219572128728032, "status": 0.0022403625771403313}}}
+{"id": "original-intent-04-0", "q": {"q": {"cancel": 0.9819456934928894, "change_address": 0.0005745559465140104, "other": 0.011813370510935783, "refund": 0.005141403526067734, "status": 0.000524839386343956}}}
+{"id": "original-intent-04-1", "q": {"q": {"cancel": 0.9779847264289856, "change_address": 0.00041795129072852433, "other": 0.016174936667084694, "refund": 0.004882591310888529, "status": 0.0005398272187449038}}}
+{"id": "original-intent-05-0", "q": {"q": {"cancel": 0.023775514215230942, "change_address": 0.0019791871309280396, "other": 0.07575787603855133, "refund": 0.894174337387085, "status": 0.004313030280172825}}}
+{"id": "original-intent-05-1", "q": {"q": {"cancel": 0.025578204542398453, "change_address": 0.0030255683232098818, "other": 0.07100484520196915, "refund": 0.8843019604682922, "status": 0.016089389100670815}}}
+{"id": "original-intent-06-0", "q": {"q": {"cancel": 0.030426084995269775, "change_address": 0.013548959977924824, "other": 0.06356995552778244, "refund": 0.008769587613642216, "status": 0.8836854696273804}}}
+{"id": "original-intent-06-1", "q": {"q": {"cancel": 0.0454411618411541, "change_address": 0.0356670580804348, "other": 0.1130535677075386, "refund": 0.017398212105035782, "status": 0.7884400486946106}}}
+{"id": "original-ordinal-01-0", "q": {"q": {"0": 0.2785947322845459, "1": 0.5194350481033325, "2": 0.180643692612648, "3": 0.0213265772908926}}}
+{"id": "original-ordinal-01-1", "q": {"q": {"0": 0.31661027669906616, "1": 0.4451443552970886, "2": 0.20675401389598846, "3": 0.03149133548140526}}}
+{"id": "original-ordinal-02-0", "q": {"q": {"0": 0.1949969232082367, "1": 0.6187469363212585, "2": 0.16525298357009888, "3": 0.0210031196475029}}}
+{"id": "original-ordinal-02-1", "q": {"q": {"0": 0.11547291278839111, "1": 0.7683094143867493, "2": 0.09836285561323166, "3": 0.01785486377775669}}}
+{"id": "original-ordinal-03-0", "q": {"q": {"0": 0.10571546852588654, "1": 0.1022387146949768, "2": 0.7668054103851318, "3": 0.025240346789360046}}}
+{"id": "original-ordinal-03-1", "q": {"q": {"0": 0.12020238488912582, "1": 0.1910027116537094, "2": 0.6538459062576294, "3": 0.03494895249605179}}}
+{"id": "original-ordinal-04-0", "q": {"q": {"0": 0.050302088260650635, "1": 0.06053332984447479, "2": 0.11404997855424881, "3": 0.7751146554946899}}}
+{"id": "original-ordinal-04-1", "q": {"q": {"0": 0.04923456162214279, "1": 0.049566324800252914, "2": 0.19648684561252594, "3": 0.7047123312950134}}}
+{"id": "original-ordinal-05-0", "q": {"q": {"0": 0.13691800832748413, "1": 0.10335712134838104, "2": 0.6914641857147217, "3": 0.06826071441173553}}}
+{"id": "original-ordinal-05-1", "q": {"q": {"0": 0.3746020793914795, "1": 0.16135446727275848, "2": 0.42019304633140564, "3": 0.04385039955377579}}}
+{"id": "original-ordinal-06-0", "q": {"q": {"0": 0.04958678409457207, "1": 0.22448378801345825, "2": 0.7163569331169128, "3": 0.009572467766702175}}}
+{"id": "original-ordinal-06-1", "q": {"q": {"0": 0.061200082302093506, "1": 0.3002665340900421, "2": 0.621630072593689, "3": 0.016903217881917953}}}
+{"id": "original-extraction-01-0", "q": {"q": {"courier": 0.28136423230171204, "pickup": 0.5256498456001282, "post": 0.034661874175071716, "unknown": 0.15832403302192688}}}
+{"id": "original-extraction-01-1", "q": {"q": {"courier": 0.16388987004756927, "pickup": 0.590764045715332, "post": 0.07040318846702576, "unknown": 0.1749430149793625}}}
+{"id": "original-extraction-02-0", "q": {"q": {"courier": 0.04118490591645241, "pickup": 0.025463242083787918, "post": 0.35134634375572205, "unknown": 0.582005500793457}}}
+{"id": "original-extraction-02-1", "q": {"q": {"courier": 0.02303149551153183, "pickup": 0.014448819682002068, "post": 0.3247368335723877, "unknown": 0.6377828121185303}}}
+{"id": "original-extraction-03-0", "q": {"q": {"courier": 0.7500386834144592, "pickup": 0.09537781029939651, "post": 0.03054475411772728, "unknown": 0.12403871864080429}}}
+{"id": "original-extraction-03-1", "q": {"q": {"courier": 0.9391888976097107, "pickup": 0.017418483272194862, "post": 0.0070633250288665295, "unknown": 0.0363292321562767}}}
+{"id": "original-extraction-04-0", "q": {"q": {"courier": 0.028437700122594833, "pickup": 0.03480301424860954, "post": 0.8079289793968201, "unknown": 0.12883031368255615}}}
+{"id": "original-extraction-04-1", "q": {"q": {"courier": 0.13821011781692505, "pickup": 0.0061891465447843075, "post": 0.7000980973243713, "unknown": 0.15550264716148376}}}
+{"id": "original-extraction-05-0", "q": {"q": {"courier": 0.04281911626458168, "pickup": 0.020031752064824104, "post": 0.042962122708559036, "unknown": 0.8941870331764221}}}
+{"id": "original-extraction-05-1", "q": {"q": {"courier": 0.45394501090049744, "pickup": 0.026569338515400887, "post": 0.09289151430130005, "unknown": 0.42659416794776917}}}
+{"id": "original-extraction-06-0", "q": {"q": {"courier": 0.8266405463218689, "pickup": 0.0027159934397786856, "post": 0.10689211636781693, "unknown": 0.06375128775835037}}}
+{"id": "original-extraction-06-1", "q": {"q": {"courier": 0.8293188214302063, "pickup": 0.009941074065864086, "post": 0.06320507824420929, "unknown": 0.09753505140542984}}}
+{"id": "original-adequacy-01-0", "q": {"q": {"false": 0.3758707642555237, "true": 0.6241292357444763}}}
+{"id": "original-adequacy-01-1", "q": {"q": {"false": 0.444868803024292, "true": 0.5551311373710632}}}
+{"id": "original-adequacy-02-0", "q": {"q": {"false": 0.17951500415802002, "true": 0.8204849362373352}}}
+{"id": "original-adequacy-02-1", "q": {"q": {"false": 0.7444116473197937, "true": 0.2555883228778839}}}
+{"id": "original-adequacy-03-0", "q": {"q": {"false": 0.25460466742515564, "true": 0.7453953623771667}}}
+{"id": "original-adequacy-03-1", "q": {"q": {"false": 0.4948928654193878, "true": 0.5051071047782898}}}
+{"id": "original-adequacy-04-0", "q": {"q": {"false": 0.20547330379486084, "true": 0.7945266962051392}}}
+{"id": "original-adequacy-04-1", "q": {"q": {"false": 0.2882843017578125, "true": 0.7117156386375427}}}
+{"id": "original-adequacy-05-0", "q": {"q": {"false": 0.35501861572265625, "true": 0.6449813842773438}}}
+{"id": "original-adequacy-05-1", "q": {"q": {"false": 0.3017534613609314, "true": 0.6982465386390686}}}
+{"id": "original-adequacy-06-0", "q": {"q": {"false": 0.31027114391326904, "true": 0.689728856086731}}}
+{"id": "original-adequacy-06-1", "q": {"q": {"false": 0.3070535361766815, "true": 0.6929464936256409}}}
+{"id": "original-routing-01-0", "q": {"q": {"coding": 0.06339216977357864, "coding_agent": 0.01695193164050579, "document": 0.026914410293102264, "general": 0.06868451833724976, "math": 0.8106319308280945, "tools": 0.01342504657804966}}}
+{"id": "original-routing-01-1", "q": {"q": {"coding": 0.10748311132192612, "coding_agent": 0.015816383063793182, "document": 0.02651703543961048, "general": 0.0992380902171135, "math": 0.7135514616966248, "tools": 0.03739389032125473}}}
+{"id": "original-routing-02-0", "q": {"q": {"coding": 0.8874216675758362, "coding_agent": 0.022816816344857216, "document": 0.01699313335120678, "general": 0.056154944002628326, "math": 0.006412697955965996, "tools": 0.010200762189924717}}}
+{"id": "original-routing-02-1", "q": {"q": {"coding": 0.8913183808326721, "coding_agent": 0.017791133373975754, "document": 0.013633781112730503, "general": 0.052511606365442276, "math": 0.01076357439160347, "tools": 0.013981550000607967}}}
+{"id": "original-routing-03-0", "q": {"q": {"coding": 0.17180752754211426, "coding_agent": 0.7199435830116272, "document": 0.0038755943533033133, "general": 0.02583502233028412, "math": 0.001415071776136756, "tools": 0.07712332159280777}}}
+{"id": "original-routing-03-1", "q": {"q": {"coding": 0.17881472408771515, "coding_agent": 0.642208993434906, "document": 0.006613458041101694, "general": 0.05605975165963173, "math": 0.0012539280578494072, "tools": 0.11504919081926346}}}
+{"id": "original-routing-04-0", "q": {"q": {"coding": 0.037355802953243256, "coding_agent": 0.014574619010090828, "document": 0.6071675419807434, "general": 0.07106800377368927, "math": 0.001710298121906817, "tools": 0.2681237459182739}}}
+{"id": "original-routing-04-1", "q": {"q": {"coding": 0.06647195667028427, "coding_agent": 0.01798500120639801, "document": 0.5435497760772705, "general": 0.14324165880680084, "math": 0.0026408976409584284, "tools": 0.2261108011007309}}}
+{"id": "original-routing-05-0", "q": {"q": {"coding": 0.057771582156419754, "coding_agent": 0.008582553826272488, "document": 0.008172182366251945, "general": 0.06591657549142838, "math": 0.001477536279708147, "tools": 0.8580796122550964}}}
+{"id": "original-routing-05-1", "q": {"q": {"coding": 0.19807635247707367, "coding_agent": 0.02092820033431053, "document": 0.019900867715477943, "general": 0.24811777472496033, "math": 0.002830935874953866, "tools": 0.510145902633667}}}
+{"id": "original-routing-06-0", "q": {"q": {"coding": 0.10575777292251587, "coding_agent": 0.0223555825650692, "document": 0.06283450126647949, "general": 0.7313857078552246, "math": 0.009200002998113632, "tools": 0.06846644729375839}}}
+{"id": "original-routing-06-1", "q": {"q": {"coding": 0.1271299421787262, "coding_agent": 0.03024427406489849, "document": 0.03340999782085419, "general": 0.7265053391456604, "math": 0.005283727310597897, "tools": 0.07742670923471451}}}
+{"id": "hard-opus-a-long_policy-01", "q": {"q": {"deny_repeated_seepage": 0.1957872211933136, "deny_vacancy_exclusion": 0.3358231782913208, "pay_full_estimate_less_deductible": 0.023183634504675865, "pay_subject_to_10000_sublimit": 0.31667840480804443, "pay_subject_to_15000_sublimit": 0.12852753698825836}}}
+{"id": "hard-opus-a-long_policy-04", "q": {"q": {"budget_holder": 0.05629953369498253, "cfo": 0.1513083279132843, "department_head": 0.44371679425239563, "executive_committee": 0.04865165799856186, "vp_and_finance_director": 0.3000237047672272}}}
+{"id": "hard-opus-a-long_policy-08", "q": {"q": {"full_repair_no_charge": 0.13309328258037567, "not_covered": 0.5016394853591919, "parts_covered_labour_charged": 0.18075348436832428, "pro_rata_replacement_credit": 0.18451373279094696}}}
+{"id": "hard-opus-a-long_policy-09", "q": {"q": {"license_exception_lvs": 0.4818199872970581, "license_required": 0.03331370651721954, "no_license_required": 0.45383283495903015, "shipment_prohibited": 0.031033501029014587}}}
+{"id": "hard-opus-a-long_policy-11", "q": {"q": {"false": 0.5502122640609741, "true": 0.44978779554367065}}}
+{"id": "hard-opus-a-long_policy-13", "q": {"q": {"false": 0.8122236132621765, "true": 0.1877763569355011}}}
+{"id": "hard-opus-a-long_policy-17", "q": {"q": {"database_oncall": 0.34509456157684326, "no_page_ticket_only": 0.41467833518981934, "platform_oncall": 0.032973889261484146, "security_incident_response": 0.10793667286634445, "vendor_support": 0.09931650757789612}}}
+{"id": "hard-opus-a-long_policy-19", "q": {"q": {"false": 0.42165419459342957, "true": 0.578345775604248}}}
+{"id": "hard-opus-a-probability-03", "q": {"q": {"false": 0.27445220947265625, "true": 0.7255477905273438}}}
+{"id": "hard-opus-a-probability-04", "q": {"q": {"early": 0.17334690690040588, "late": 0.5958547592163086, "on_time": 0.23079830408096313}}}
+{"id": "hard-opus-a-probability-07", "q": {"q": {"escalated": 0.20159387588500977, "reopened": 0.6832159757614136, "resolved_first_contact": 0.11519010365009308}}}
+{"id": "hard-opus-a-probability-08", "q": {"q": {"false": 0.5392330288887024, "true": 0.46076700091362}}}
+{"id": "hard-opus-a-temporal_numeric-03", "q": {"q": {"false": 0.7403066754341125, "true": 0.25969335436820984}}}
+{"id": "hard-opus-a-temporal_numeric-06", "q": {"q": {"false": 0.28382518887519836, "true": 0.716174840927124}}}
+{"id": "hard-opus-a-temporal_numeric-07", "q": {"q": {"sep_24": 0.33419492840766907, "sep_25": 0.13216716051101685, "sep_26": 0.14594119787216187, "sep_27": 0.15262003242969513, "sep_28": 0.2350766509771347}}}
+{"id": "hard-opus-a-temporal_numeric-09", "q": {"q": {"false": 0.3490428924560547, "true": 0.6509571075439453}}}
+{"id": "hard-opus-a-temporal_numeric-12", "q": {"q": {"0": 0.09705665707588196, "1": 0.25899794697761536, "2": 0.415860652923584, "3": 0.2280847132205963}}}
+{"id": "hard-opus-b-ambiguous-02", "q": {"q": {"cannot_determine": 0.05555247887969017, "false_positive": 0.3884326219558716, "real_incident": 0.5560148358345032}}}
+{"id": "hard-opus-b-ambiguous-03", "q": {"q": {"insufficient_information": 0.7563154101371765, "time_barred": 0.12945488095283508, "within_limitation": 0.11422969400882721}}}
+{"id": "hard-opus-b-ambiguous-07", "q": {"q": {"insufficient_information": 0.3426477909088135, "over_limit": 0.3917910158634186, "within_policy": 0.26556122303009033}}}
+{"id": "hard-opus-b-ambiguous-09", "q": {"q": {"compromised": 0.7037462592124939, "inconclusive": 0.07024022191762924, "legitimate": 0.2260134220123291}}}
+{"id": "hard-opus-b-ambiguous-10", "q": {"q": {"ask_user_which_alex": 0.6644508242607117, "send_to_alex_moreno": 0.21962520480155945, "send_to_alexandra_lind": 0.11592400074005127}}}
+{"id": "hard-opus-b-ambiguous-11", "q": {"q": {"cannot_determine": 0.27049967646598816, "grade_correct": 0.43412232398986816, "grade_should_be_higher": 0.2953779995441437}}}
+{"id": "hard-opus-b-ambiguous-13", "q": {"q": {"cannot_determine": 0.06169946491718292, "charge_data_team": 0.016434989869594574, "charge_platform_team": 0.014111097902059555, "split_50_50": 0.9077544808387756}}}
+{"id": "hard-opus-b-multi_hop-03", "q": {"q": {"tier1_team_lead": 0.05009569600224495, "tier2_department_head": 0.7174172401428223, "tier3_cfo": 0.06918369978666306, "tier4_board": 0.16330334544181824}}}
+{"id": "hard-opus-b-multi_hop-04", "q": {"q": {"ana": 0.11690420657396317, "bjorn": 0.2696244418621063, "chen": 0.11051992326974869, "dmitri": 0.18508370220661163, "esra": 0.20958568155765533, "no_page_ticket_only": 0.10828208923339844}}}
+{"id": "hard-opus-b-multi_hop-05", "q": {"q": {"0": 0.04279635474085808, "1": 0.34410011768341064, "2": 0.11995634436607361, "3": 0.3632394075393677, "4": 0.12990789115428925}}}
+{"id": "hard-opus-b-multi_hop-07", "q": {"q": {"credit_10_percent": 0.25243449211120605, "credit_20_percent": 0.13034233450889587, "credit_25_percent": 0.17661549150943756, "credit_50_percent": 0.20382294058799744, "credit_full_month": 0.168198823928833, "no_credit": 0.06858600676059723}}}
+{"id": "hard-opus-b-multi_hop-08", "q": {"q": {"false": 0.2818922698497772, "true": 0.7181078195571899}}}
+{"id": "hard-opus-b-probability-01", "q": {"q": {"customer_wins": 0.43612033128738403, "customer_withdraws": 0.17438077926635742, "merchant_wins": 0.38949885964393616}}}
+{"id": "hard-opus-b-probability-02", "q": {"q": {"bad_push": 0.6178992986679077, "database_hardware": 0.18248389661312103, "upstream_provider": 0.19961674511432648}}}
+{"id": "hard-opus-b-probability-03", "q": {"q": {"false": 0.4327462613582611, "true": 0.5672537088394165}}}
+{"id": "hard-opus-b-probability-04", "q": {"q": {"attended": 0.4446665644645691, "late_cancellation": 0.19927860796451569, "no_show": 0.35605475306510925}}}
+{"id": "hard-opus-b-probability-06", "q": {"q": {"modified": 0.2216745764017105, "overturned": 0.47617265582084656, "upheld": 0.30215272307395935}}}
+{"id": "hard-opus-b-tradeoff-01", "q": {"q": {"escalate_to_engineering": 0.5723567008972168, "escalate_to_security": 0.29461798071861267, "page_oncall": 0.06861032545566559, "process_refund": 0.05298630893230438, "send_kb_article": 0.011428659781813622}}}
+{"id": "hard-opus-b-tradeoff-03", "q": {"q": {"order_a": 0.12030169367790222, "order_b": 0.2939494848251343, "order_c": 0.4967726469039917, "order_d": 0.08897613734006882}}}
+{"id": "hard-opus-b-tradeoff-06", "q": {"q": {"false": 0.41498929262161255, "true": 0.5850107073783875}}}
+{"id": "hard-opus-b-tradeoff-07", "q": {"q": {"out_of_scope": 0.040056828409433365, "p0_fix_24h": 0.2970982491970062, "p1_fix_7d": 0.2866731584072113, "p2_fix_30d": 0.34027764201164246, "p3_backlog": 0.03589412569999695}}}
+{"id": "hard-opus-b-tradeoff-08", "q": {"q": {"false": 0.15130403637886047, "true": 0.8486959338188171}}}
+{"id": "hard-opus-b-tradeoff-12", "q": {"q": {"deny_refund": 0.015310770832002163, "escalate_to_fraud_team": 0.009285933338105679, "offer_store_credit": 0.05661888048052788, "refund_now": 0.8378055095672607, "wait_for_inspection": 0.08097895234823227}}}
+{"id": "hard-opus-c-long_policy-02", "q": {"q": {"erase_all": 0.09161237627267838, "erase_but_retain_transaction_records": 0.56244957447052, "erase_marketing_only": 0.01729733496904373, "reject_unverified_request": 0.09897010028362274, "restrict_all_pending_legal_hold": 0.22967059910297394}}}
+{"id": "hard-opus-c-long_policy-03", "q": {"q": {"eur_0": 0.2104969620704651, "eur_150": 0.0985180139541626, "eur_200": 0.03936838358640671, "eur_300": 0.11464069038629532, "eur_400": 0.4231713116168976, "eur_600": 0.1138046532869339}}}
+{"id": "hard-opus-c-long_policy-04", "q": {"q": {"false": 0.45505818724632263, "true": 0.5449418425559998}}}
+{"id": "hard-opus-c-long_policy-05", "q": {"q": {"0": 0.4499661326408386, "1": 0.18411298096179962, "2": 0.21101179718971252, "3": 0.15490902960300446}}}
+{"id": "hard-opus-c-long_policy-08", "q": {"q": {"0": 0.11929813027381897, "1": 0.33975768089294434, "2": 0.47471046447753906, "3": 0.06623373925685883}}}
+{"id": "hard-opus-c-long_policy-10", "q": {"q": {"credit_minus_restocking_fee": 0.38271886110305786, "full_credit": 0.33606889843940735, "reject_return": 0.09632158279418945, "repair_or_replace_only": 0.18489068746566772}}}
+{"id": "hard-opus-c-long_policy-11", "q": {"q": {"false": 0.18751323223114014, "true": 0.8124867677688599}}}
+{"id": "hard-opus-c-probability-03", "q": {"q": {"halvorsen_polymer": 0.22073587775230408, "kuznets_technik": 0.46330681443214417, "ortega_seal_works": 0.31595736742019653}}}
+{"id": "hard-opus-c-temporal_numeric-02", "q": {"q": {"false": 0.4157906770706177, "true": 0.5842093229293823}}}
+{"id": "hard-opus-c-temporal_numeric-03", "q": {"q": {"eur_617_00": 0.3907454013824463, "eur_688_00": 0.29740142822265625, "eur_692_00": 0.16794921457767487, "eur_693_90": 0.05659027025103569, "eur_812_00": 0.08731359243392944}}}
+{"id": "hard-opus-c-temporal_numeric-04", "q": {"q": {"usd_2222_50": 0.2804541289806366, "usd_2303_01": 0.22260205447673798, "usd_2303_33": 0.09070531278848648, "usd_2335_00": 0.08970639854669571, "usd_2340_00": 0.3165321350097656}}}
+{"id": "hard-opus-c-temporal_numeric-06", "q": {"q": {"none_declined": 0.1433764100074768, "sep_15_office_chair": 0.27117055654525757, "sep_16_taxi": 0.015531441196799278, "sep_17_parking": 0.09172870963811874, "sep_18_book_set": 0.249225452542305, "sep_21_client_dinner": 0.22896747291088104}}}
+{"id": "hard-opus-c-temporal_numeric-08", "q": {"q": {"eur_497_40": 0.24992616474628448, "eur_498_81": 0.2606048583984375, "eur_506_06": 0.10846680402755737, "eur_513_69": 0.28311753273010254, "eur_532_01": 0.09788472205400467}}}
+{"id": "hard-opus-c-temporal_numeric-12", "q": {"q": {"covered": 0.27312880754470825, "expired_24_month_term": 0.29502561688423157, "expired_30_month_cap": 0.4318455159664154}}}
+{"id": "hard-sol-a-adversarial-01", "q": {"q": {"deny_inactive_user": 0.02091720513999462, "deny_missing_approval": 0.16633644700050354, "grant_access": 0.32686662673950195, "grant_owner_exception": 0.4858797490596771}}}
+{"id": "hard-sol-a-adversarial-06", "q": {"q": {"false": 0.8073550462722778, "true": 0.19264495372772217}}}
+{"id": "hard-sol-a-adversarial-07", "q": {"q": {"delete_now": 0.38031360507011414, "needs_signature_review": 0.21980056166648865, "retain_indefinitely": 0.1632828563451767, "retain_until_2031": 0.23660290241241455}}}
+{"id": "hard-sol-a-adversarial-08", "q": {"q": {"false": 0.6724740266799927, "true": 0.32752594351768494}}}
+{"id": "hard-sol-a-adversarial-09", "q": {"q": {"0": 0.09897094964981079, "1": 0.11487996578216553, "2": 0.27228519320487976, "3": 0.5138638019561768}}}
+{"id": "hard-sol-a-adversarial-11", "q": {"q": {"ethics_review": 0.3418601453304291, "major_grants": 0.19722779095172882, "manual_hold": 0.1605292707681656, "standard_research": 0.30038267374038696}}}
+{"id": "hard-sol-a-multi_hop-01", "q": {"q": {"accept_s2_dusk": 0.11764823645353317, "reject_cutoff": 0.67128586769104, "reject_tier": 0.1659904271364212, "reroute_s3": 0.045075420290231705}}}
+{"id": "hard-sol-a-multi_hop-02", "q": {"q": {"executive_bridge": 0.040269140154123306, "heron_q2": 0.3049081861972809, "insufficient_information": 0.2758162021636963, "security_primary": 0.379006564617157}}}
+{"id": "hard-sol-a-multi_hop-05", "q": {"q": {"pay_manager_approved": 0.5304543375968933, "reject_category": 0.25205299258232117, "require_director": 0.18569910526275635, "require_finance_board": 0.03179352730512619}}}
+{"id": "hard-sol-a-multi_hop-07", "q": {"q": {"admit": 0.16332267224788666, "deny_prerequisite": 0.2869740128517151, "deny_score": 0.13612966239452362, "manual_equivalency": 0.4135737121105194}}}
+{"id": "hard-sol-a-multi_hop-08", "q": {"q": {"central_engineering": 0.04301716387271881, "insufficient_log": 0.13572067022323608, "local_maintenance": 0.5444983243942261, "safety_shutdown": 0.27676382660865784}}}
+{"id": "hard-sol-a-multi_hop-09", "q": {"q": {"confirm_l3": 0.4920697510242462, "reject_capacity": 0.15676340460777283, "require_steward": 0.26678067445755005, "switch_l4": 0.08438620716333389}}}
+{"id": "hard-sol-a-multi_hop-10", "q": {"q": {"approve_45_days": 0.4234980344772339, "deny_sensitive": 0.3559138774871826, "needs_field_review": 0.16281893849372864, "reduce_to_30_days": 0.05776918679475784}}}
+{"id": "hard-sol-a-multi_hop-12", "q": {"q": {"covered_recurrence": 0.23643091320991516, "expired": 0.48419931530952454, "needs_authentication": 0.14044447243213654, "wrong_issue_class": 0.13892531394958496}}}
+{"id": "hard-sol-a-trap-02", "q": {"q": {"false": 0.5221728086471558, "true": 0.47782716155052185}}}
+{"id": "hard-sol-a-trap-04", "q": {"q": {"false": 0.8120866417884827, "true": 0.18791334331035614}}}
+{"id": "hard-sol-a-trap-05", "q": {"q": {"0": 0.428644061088562, "1": 0.11596416682004929, "2": 0.2206389605998993, "3": 0.2347528338432312}}}
+{"id": "hard-sol-a-trap-06", "q": {"q": {"await_internal_metrics": 0.07605743408203125, "close_agent_verified": 0.19003137946128845, "close_confirmed": 0.06473790109157562, "keep_open_unresolved": 0.6691733002662659}}}
+{"id": "hard-sol-a-trap-08", "q": {"q": {"canceled": 0.045731253921985626, "indeterminate": 0.03828243911266327, "late": 0.3289332985877991, "on_time": 0.5870530605316162}}}
+{"id": "hard-sol-a-trap-10", "q": {"q": {"blocked_failed_test": 0.10701882839202881, "blocked_second_review": 0.5322601199150085, "ready_one_review": 0.20394913852214813, "ready_two_reviews": 0.15677189826965332}}}
+{"id": "hard-sol-a-trap-13", "q": {"q": {"false": 0.7875521183013916, "true": 0.21244794130325317}}}
+{"id": "hard-sol-a-trap-15", "q": {"q": {"false": 0.6479543447494507, "true": 0.3520456552505493}}}
+{"id": "hard-sol-b-judge_hard-01", "q": {"q": {"false": 0.24536001682281494, "true": 0.7546400427818298}}}
+{"id": "hard-sol-b-judge_hard-02", "q": {"q": {"false": 0.4302763342857361, "true": 0.5697236061096191}}}
+{"id": "hard-sol-b-judge_hard-05", "q": {"q": {"false": 0.2884981036186218, "true": 0.7115018963813782}}}
+{"id": "hard-sol-b-judge_hard-08", "q": {"q": {"false": 0.14868056774139404, "true": 0.851319432258606}}}
+{"id": "hard-sol-b-judge_hard-10", "q": {"q": {"false": 0.23288677632808685, "true": 0.7671131491661072}}}
+{"id": "hard-sol-b-judge_hard-14", "q": {"q": {"false": 0.15709035098552704, "true": 0.8429096341133118}}}
+{"id": "hard-sol-b-judge_hard-15", "q": {"q": {"false": 0.14956846833229065, "true": 0.850431501865387}}}
+{"id": "hard-sol-b-judge_hard-18", "q": {"q": {"false": 0.2970797121524811, "true": 0.7029203176498413}}}
+{"id": "hard-sol-b-long_policy-01", "q": {"q": {"approve_all": 0.08138269931077957, "approve_lodging_only": 0.33047714829444885, "approve_meals_only": 0.2016279250383377, "reject_entire_claim": 0.38651221990585327}}}
+{"id": "hard-sol-b-long_policy-02", "q": {"q": {"analytics_owner_only": 0.05896759778261185, "deny_current_export": 0.3191642761230469, "privacy_and_security": 0.26771584153175354, "privacy_only": 0.3541521728038788}}}
+{"id": "hard-sol-b-long_policy-05", "q": {"q": {"delete_everything": 0.04247027635574341, "delete_nothing": 0.24361670017242432, "delete_only_profile": 0.195338174700737, "delete_profile_omar_april_and_table": 0.5185748338699341}}}
+{"id": "hard-sol-b-long_policy-06", "q": {"q": {"east_ward": 0.08929429203271866, "harbor_neighbors": 0.22129526734352112, "no_award": 0.5048450827598572, "river_arts": 0.18456536531448364}}}
+{"id": "hard-sol-b-routing_hard-01", "q": {"q": {"data_pipeline": 0.045930780470371246, "desktop_support": 0.06464056670665741, "finance_review": 0.019839191809296608, "office_file_repair": 0.66653972864151, "spreadsheet_formula": 0.2030496597290039}}}
+{"id": "hard-sol-b-routing_hard-02", "q": {"q": {"customer_support": 0.05126349627971649, "fraud_review": 0.01652667671442032, "ledger_reconciliation": 0.6132787466049194, "mobile_app": 0.08053992688655853, "payment_disputes": 0.23839110136032104}}}
+{"id": "hard-sol-b-routing_hard-03", "q": {"q": {"api_platform": 0.14089764654636383, "authoritative_dns": 0.15722180902957916, "endpoint_devices": 0.11504760384559631, "network_dns": 0.38108694553375244, "tls_certificates": 0.20574600994586945}}}
+{"id": "hard-sol-b-routing_hard-07", "q": {"q": {"ci_infrastructure": 0.05661666765809059, "code_signing": 0.3274485170841217, "endpoint_security": 0.02101239562034607, "macos_runtime": 0.14943267405033112, "release_notarization": 0.445489764213562}}}
+{"id": "hard-sol-b-routing_hard-09", "q": {"q": {"git_client": 0.07187503576278687, "identity_login": 0.05311909317970276, "repository_admin": 0.12089616805315018, "source_access": 0.4012652039527893, "vpn_network": 0.3528445065021515}}}
+{"id": "hard-sol-b-temporal_numeric-01", "q": {"q": {"before_open": 0.2425033003091812, "late_by_2h_or_more": 0.07821609824895859, "late_by_under_2h": 0.06583600491285324, "within_window": 0.6134445667266846}}}
+{"id": "hard-sol-b-temporal_numeric-02", "q": {"q": {"at_least_100gb_below": 0.13636307418346405, "exactly_equal": 0.03188558667898178, "over_limit": 0.7510920763015747, "under_100gb_below": 0.08065920323133469}}}
+{"id": "hard-sol-b-temporal_numeric-03", "q": {"q": {"12_credits": 0.23157300055027008, "15_credits": 0.31810280680656433, "6_credits": 0.1779448688030243, "9_credits": 0.2723792791366577}}}
+{"id": "hard-sol-b-temporal_numeric-04", "q": {"q": {"clear_fail": 0.18447266519069672, "narrow_fail": 0.4641290307044983, "pass": 0.3513982594013214}}}
+{"id": "hard-sol-c-judge_hard-03", "q": {"q": {"false": 0.16145308315753937, "true": 0.8385469317436218}}}
+{"id": "hard-sol-c-judge_hard-05", "q": {"q": {"false": 0.1912389099597931, "true": 0.8087610602378845}}}
+{"id": "hard-sol-c-judge_hard-07", "q": {"q": {"false": 0.1541229486465454, "true": 0.8458771109580994}}}
+{"id": "hard-sol-c-judge_hard-08", "q": {"q": {"false": 0.14672397077083588, "true": 0.8532760143280029}}}
+{"id": "hard-sol-c-judge_hard-09", "q": {"q": {"false": 0.13407623767852783, "true": 0.8659237623214722}}}
+{"id": "hard-sol-c-judge_hard-10", "q": {"q": {"false": 0.22597359120845795, "true": 0.7740263938903809}}}
+{"id": "hard-sol-c-judge_hard-11", "q": {"q": {"false": 0.16225898265838623, "true": 0.8377410769462585}}}
+{"id": "hard-sol-c-judge_hard-13", "q": {"q": {"false": 0.22279669344425201, "true": 0.7772033214569092}}}
+{"id": "hard-sol-c-judge_hard-15", "q": {"q": {"false": 0.11805278807878494, "true": 0.8819471597671509}}}
+{"id": "hard-sol-c-multi_hop-07", "q": {"q": {"partial_release": 0.10878408700227737, "programme_review": 0.4211965501308441, "reject_draw": 0.14981038868427277, "release_draw": 0.32020893692970276}}}
+{"id": "hard-sol-c-multi_hop-09", "q": {"q": {"bus_substitution": 0.4766760468482971, "call_fen_cross": 0.07456492632627487, "pass_fen_cross": 0.1404779553413391, "terminate_oakmere": 0.3082810938358307}}}
+{"id": "hard-sol-c-multi_hop-11", "q": {"q": {"adjuster_referral": 0.04105338081717491, "coverage_confirmed": 0.2562139928340912, "coverage_excluded": 0.580715537071228, "documentation_needed": 0.12201713025569916}}}
+{"id": "hard-sol-c-multi_hop-12", "q": {"q": {"conservation_hold": 0.18424221873283386, "deny_request": 0.20732706785202026, "digital_copy_only": 0.40508347749710083, "supervised_delivery": 0.20334725081920624}}}
+{"id": "hard-sol-c-multi_hop-13", "q": {"q": {"engineering_review": 0.04924119636416435, "normal_release": 0.8323237299919128, "rework": 0.05994081869721413, "scrap_lot": 0.05849427357316017}}}

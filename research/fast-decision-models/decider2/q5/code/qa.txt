@@ -1,0 +1,12 @@
+while [ ! -f ~/work/q5/CAL_DONE ]; do sleep 20; done
+python q5kit.py --cfgs cfgs_q5.json --tags dense --out ~/work/q5/preds/dense.json
+python q5kit.py --cfgs cfgs_q5.json --tags b8 --out ~/work/q5/preds/b8.json
+python q5kit.py --cfgs cfgs_q5.json --tags b8+s24.L12-22.sgptd.int8n0.5.s --out ~/work/q5/preds/b8_s24_L12-22_sgptd_int8n05_s.json --start 12 --check 20
+python q5kit.py --cfgs cfgs_q5.json --tags s24.L12-22.sgptd.bf16n.s --out ~/work/q5/preds/s24_L12-22_sgptd_bf16n_s.json --start 12 --check 20
+Q5_MEMFRAC=0.50 python q5kit.py --cfgs cfgs_q5.json --tags b8+s24.L12-22.sgptd.int8n0.5.s --out ~/work/q5/preds/b8_s24_L12-22_sgptd_int8n05_s.json --start 12
+while [ ! -f ~/work/q5/next_qa.sh ]; do sleep 30; done; bash ~/work/q5/next_qa.sh
+python q5kit.py --cfgs cfgs_q5.json --tags nr.G12-23.dsalc.f0.75 --out ~/work/q5/preds/nr_G12-23_dsalc_f075.json --start 12
+Q5_MEMFRAC=0.44 python q5kit.py --cfgs cfgs_q5.json --tags b8+nr.G12-23.dsalc.f0.75 --out ~/work/q5/preds/b8_nr_G12-23_dsalc_f075.json --start 12
+python q5b13.py --cfgs dense --modes skip23,table0 --sub all --vocab
+Q5_MEMFRAC=0.44 python q5b13.py --cfgs b8 --modes both --sub all --limit 600
+touch ~/work/q5/QA_DONE

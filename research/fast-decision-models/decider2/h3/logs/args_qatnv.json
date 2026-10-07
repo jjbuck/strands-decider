@@ -1,0 +1,1 @@
+{"arm": "qatnv", "head": "std", "norm": "rms", "qat": "nvfp4", "steps": 1200, "accum": 4, "lr": 0.0001, "hlr": 0.001, "r": 16, "alpha": 32, "v5frac": 0.3, "maxtok": 2048, "hid": 1.0, "ckpts": 3, "qrot": false}

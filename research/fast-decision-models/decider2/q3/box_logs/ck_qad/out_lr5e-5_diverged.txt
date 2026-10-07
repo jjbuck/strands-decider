@@ -1,0 +1,16 @@
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 3877.07it/s]
+args {"mode": "qad", "init": "~/work/q3/gptq4.pt", "seed_ck": "/home/ubuntu/work/q3/ck_scale/best.pt", "lr": 5e-05, "tokens": 50000000.0, "accum": 4, "warm": 30, "l2sp": 100.0, "factored": 1, "w_hid": 0.5, "maxtok": 5000, "maxq": 8, "max_rows": 7000, "p_v5": 0.2, "dev_every": 10000000.0, "ndev": 100, "ck": "/home/ubuntu/work/q3/ck_qad", "seed": 0, "reg": 1.0, "reg_warm": 0.2, "round_h0": 0.0, "beta0": 20.0, "beta1": 2.0, "qrow_ab": 0, "pmap": "", "mem_gb": 21.0, "soft_dev": 0, "lat_init": "center", "curve_fast": 1, "ckpt": 1, "q8": "", "curve": "CF-probe,REAL-agree", "run": "qad"}
+pool 10116 dev 100 dev tasks 15 v5 12557
+seeded from /home/ubuntu/work/q3/ck_scale/best.pt codes changed vs GPTQ 0.0
+student ready lat params 1372.7M mem 10.7GB
+dev refs 100 questions 366
+resumed at step 985 tokens 10001577
+step 990 tok 10.05M kl 0.0157 hid 0.0567 q/mb 3.1 lr 4.57e-05 1461 tok/s mem 17.4GB
+step 1000 tok 10.15M kl 0.0258 hid 0.0563 q/mb 3.6 lr 4.56e-05 1531 tok/s mem 18.2GB drift 0.0281
+step 1010 tok 10.24M kl 0.0322 hid 0.0599 q/mb 2.6 lr 4.55e-05 1644 tok/s mem 18.2GB
+step 1020 tok 10.34M kl 0.0379 hid 0.0644 q/mb 3.2 lr 4.54e-05 1698 tok/s mem 18.2GB
+step 1030 tok 10.45M kl 0.0340 hid 0.0752 q/mb 2.8 lr 4.53e-05 1755 tok/s mem 18.2GB
+step 1040 tok 10.55M kl 0.0859 hid 0.0983 q/mb 2.6 lr 4.52e-05 1772 tok/s mem 18.3GB
+step 1050 tok 10.64M kl 0.0847 hid 0.1139 q/mb 2.3 lr 4.52e-05 1785 tok/s mem 18.3GB
+step 1060 tok 10.74M kl 0.0776 hid 0.1014 q/mb 2.7 lr 4.51e-05 1798 tok/s mem 18.3GB
+step 1070 tok 10.86M kl 0.0951 hid 0.1062 q/mb 3.0 lr 4.50e-05 1822 tok/s mem 18.3GB

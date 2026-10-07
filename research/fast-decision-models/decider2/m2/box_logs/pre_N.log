@@ -1,0 +1,2 @@
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 4279.78it/s]
+{'cfg': 'gran=nat;iso=all;comp=docfirst;freeze=8', 'n': 228, 'agree': 228, 'dp_max': 0.005686312913894653, 'dp_median': 0.0006520748138427734, 'comp_share': 0.6124467163551843, 'rel_hidden_diff_l23_max': 0.010409492067992687}

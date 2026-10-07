@@ -1,0 +1,10 @@
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 3509.97it/s]
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+mschema 100 748 23s mem 4.2G
+mschema 200 748 53s mem 4.3G
+mschema 300 748 78s mem 4.3G
+mschema 400 748 96s mem 4.3G
+mschema 500 748 118s mem 4.3G
+mschema 600 748 150s mem 4.5G
+mschema 700 748 200s mem 4.5G
+done mschema 748 221s

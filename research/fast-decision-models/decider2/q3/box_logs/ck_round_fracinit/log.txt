@@ -1,0 +1,8 @@
+04:05:03 args {"mode": "round", "init": "~/work/q3/gptq4.pt", "seed_ck": "/home/ubuntu/work/q3/ck_scale/best.pt", "lr": 0.01, "tokens": 3000000.0, "accum": 4, "warm": 10, "l2sp": 100.0, "factored": 1, "w_hid": 0.5, "maxtok": 5000, "maxq": 8, "max_rows": 7000, "p_v5": 0.2, "dev_every": 1500000.0, "ndev": 100, "ck": "/home/ubuntu/work/q3/ck_round", "seed": 0, "reg": 1.0, "reg_warm": 0.2, "beta0": 20.0, "beta1": 2.0, "qrow_ab": 0, "pmap": "", "mem_gb": 21.0, "curve": "", "run": ""}
+04:05:03 pool 10116 dev 100 dev tasks 15 v5 12557
+04:05:17 seeded from /home/ubuntu/work/q3/ck_scale/best.pt codes changed vs GPTQ 0.0
+04:05:33 round init: hard(V0) != GPTQ code fraction 3.287049255007446e-08
+04:05:35 student ready soft params 1372.7M mem 7.9GB
+04:05:35 dev refs 100 questions 366
+04:07:47 DEV {"n": 366, "flips": 0.0546448087431694, "tv": 0.053368551809279643, "kl": 0.01640205140877006, "n_sd": 96, "agree_sd": 0.9166666666666666, "nflip": 20, "code_change": 3.059625420724721e-08, "soft_tv": 0.07714216966853767, "soft_flips": 0.07923497267759563, "reg": 0.6523210431138674, "step": 0, "tokens": 0, "t": 132.0, "drift": 0.0}
+04:07:55 new best t0M

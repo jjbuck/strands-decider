@@ -1,0 +1,18 @@
+{
+ "2b_hf_T64": {
+  "kernels": 1795,
+  "busy_ms": 28.92,
+  "gaps_ms": 0.1,
+  "est_ms": 29.02,
+  "span_min_ms": 60.5,
+  "span_med_ms": 69.25
+ },
+ "2b_hf_T1000": {
+  "kernels": 1741,
+  "busy_ms": 123.36,
+  "gaps_ms": 0.12,
+  "est_ms": 123.47,
+  "span_min_ms": 517.68,
+  "span_med_ms": 529.23
+ }
+}

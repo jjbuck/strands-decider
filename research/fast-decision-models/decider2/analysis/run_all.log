@@ -1,0 +1,10 @@
+443 prediction sets -> ~/decider2/analysis/catalog.csv
+457 runs scored -> ~/decider2/analysis/results/metrics.csv
+wrote fig1
+wrote fig2
+wrote fig3
+wrote fig4
+wrote fig5
+wrote fig6
+wrote fig7
+figures copied to ~/code/jit-eval/docs/figures

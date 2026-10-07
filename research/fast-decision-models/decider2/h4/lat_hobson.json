@@ -1,0 +1,25 @@
+{
+ "meta": {
+  "gpu": "NVIDIA A10G",
+  "reps": 20,
+  "note": "hobson-v19 merged torso, same fused runtime"
+ },
+ "fwd_T256": {
+  "median": 15.74,
+  "p95": 15.74,
+  "min": 15.73,
+  "n": 20
+ },
+ "fwd_T1000": {
+  "median": 52.71,
+  "p95": 52.73,
+  "min": 52.6,
+  "n": 20
+ },
+ "fwd_T4000": {
+  "median": 200.64,
+  "p95": 200.67,
+  "min": 200.62,
+  "n": 20
+ }
+}

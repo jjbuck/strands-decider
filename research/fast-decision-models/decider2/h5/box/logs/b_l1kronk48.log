@@ -1,0 +1,32 @@
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 3718.74it/s]
+map precmap_w4a4_k48.json 48 overrides
+kron rot/kron_k1.pt 96 GEMMs
+cfg {'Win_g': (4, 4), 'Win_a': (4, 4), 'Wo_g': (4, 4), 'Wo_a': (4, 4), 'Wgu': (4, 4), 'Wd': (4, 4)} aclip 0.9 R rot/R1_l1.pt w gptq
+gptq calibration 128 seqs 247358 tokens
+gptq layer 0 done 22 s
+gptq layer 1 done 43 s
+gptq layer 2 done 63 s
+gptq layer 3 done 83 s
+gptq layer 4 done 103 s
+gptq layer 5 done 124 s
+gptq layer 6 done 145 s
+gptq layer 7 done 164 s
+gptq layer 8 done 185 s
+gptq layer 9 done 206 s
+gptq layer 10 done 227 s
+gptq layer 11 done 246 s
+gptq layer 12 done 267 s
+gptq layer 13 done 288 s
+gptq layer 14 done 309 s
+gptq layer 15 done 328 s
+gptq layer 16 done 349 s
+gptq layer 17 done 370 s
+gptq layer 18 done 391 s
+gptq layer 19 done 410 s
+gptq layer 20 done 431 s
+gptq layer 21 done 452 s
+gptq layer 22 done 473 s
+gptq layer 23 done 492 s
+built 501 s
+DEV {"name": "l1_kron_gptq_k48", "R": "rot/R1_l1.pt", "w": "gptq", "map": "precmap_w4a4_k48.json", "kron": "rot/kron_k1.pt", "cfg": {"Win_g": [4, 4], "Win_a": [4, 4], "Wo_g": [4, 4], "Wo_a": [4, 4], "Wgu": [4, 4], "Wd": [4, 4]}, "aclip": 0.9, "ba_hp": true, "flips": 6, "n": 240, "flip_rate": 0.025, "tv": 0.0257, "kl": 0.0035, "s": 701}
+saved q/l1_kron_gptq_k48.pt

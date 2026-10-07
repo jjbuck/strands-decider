@@ -1,0 +1,271 @@
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 4003.08it/s]
+0 2475 JB-all 133 1s 102 tok/s mem 6.7G
+10 2475 JB-all 117 6s 233 tok/s mem 6.7G
+20 2475 JB-all 95 11s 232 tok/s mem 6.7G
+30 2475 JB-all 84 15s 224 tok/s mem 6.7G
+40 2475 JB-all 122 20s 226 tok/s mem 6.7G
+50 2475 JB-all 114 24s 236 tok/s mem 6.7G
+60 2475 JB-all 113 29s 238 tok/s mem 6.7G
+70 2475 JB-all 111 34s 238 tok/s mem 6.7G
+80 2475 JB-all 137 39s 242 tok/s mem 6.7G
+90 2475 JB-all 105 44s 238 tok/s mem 6.7G
+100 2475 JB-all 107 50s 229 tok/s mem 6.7G
+110 2475 JB-all 144 57s 225 tok/s mem 6.7G
+[W1006 18:37:44.497439656 CUDACachingAllocator.cpp:3934] memory allocation failed with OOM on device 0 while trying to allocate 98566144 bytes (free: 80543744, total: 23684841472).
+[W1006 18:37:44.577174682 CUDACachingAllocator.cpp:3934] memory allocation failed with OOM on device 0 while trying to allocate 98566144 bytes (free: 26017792, total: 23684841472).
+[W1006 18:37:44.723767208 CUDACachingAllocator.cpp:3934] memory allocation failed with OOM on device 0 while trying to allocate 90177536 bytes (free: 17629184, total: 23684841472).
+[W1006 18:37:44.723898571 CUDACachingAllocator.cpp:3934] memory allocation failed with OOM on device 0 while trying to allocate 90177536 bytes (free: 17629184, total: 23684841472).
+Traceback (most recent call last):
+  File "/home/ubuntu/work/j13/code/route.py", line 116, in <module>
+    main()
+  File "/home/ubuntu/work/j13/code/route.py", line 72, in main
+    lp, sc, hk, (cos, sin) = tw.oracle_pass(pr, a.mode, ranks=ranks, k0=min(ks), ks=ks)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/work/j13/code/tw.py", line 292, in oracle_pass
+    Fm.backward()
+  File "/home/ubuntu/venv/lib/python3.12/site-packages/torch/_tensor.py", line 623, in backward
+    torch.autograd.backward(
+  File "/home/ubuntu/venv/lib/python3.12/site-packages/torch/autograd/__init__.py", line 395, in backward
+    _engine_run_backward(
+  File "/home/ubuntu/venv/lib/python3.12/site-packages/torch/autograd/graph.py", line 1072, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 86.00 MiB. GPU 0 has a total capacity of 22.06 GiB of which 16.81 MiB is free. Process 8565 has 7.67 GiB memory in use. Including non-PyTorch memory, this process has 7.34 GiB memory in use. Process 8982 has 7.02 GiB memory in use. Of the allocated memory 6.40 GiB is allocated by PyTorch, and 642.34 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 3601.60it/s]
+120 2475 JB-all 3936 3s 1207 tok/s mem 7.0G
+130 2475 JB-all 1221 16s 1471 tok/s mem 9.9G
+140 2475 JB-all 638 20s 1465 tok/s mem 10.2G
+150 2475 JB-all 503 32s 1479 tok/s mem 10.2G
+160 2475 JB-all 3588 39s 1494 tok/s mem 10.2G
+170 2475 JB-all 789 69s 1180 tok/s mem 10.2G
+180 2475 JB-all 2717 83s 1065 tok/s mem 10.2G
+190 2475 JB-all 358 121s 893 tok/s mem 10.2G
+200 2475 JB-all 254 127s 871 tok/s mem 10.2G
+210 2475 JB-all 318 151s 812 tok/s mem 10.2G
+220 2475 JB-all 337 158s 797 tok/s mem 10.2G
+230 2475 JB-all 2602 182s 761 tok/s mem 10.2G
+240 2475 CF-probe 1403 226s 715 tok/s mem 10.5G
+250 2475 CF-probe 4274 289s 672 tok/s mem 10.5G
+260 2475 CF-probe 3954 335s 681 tok/s mem 10.5G
+270 2475 CF-probe 4220 351s 723 tok/s mem 11.1G
+280 2475 CF-probe 3086 375s 775 tok/s mem 11.1G
+290 2475 CF-probe 3485 396s 816 tok/s mem 11.1G
+300 2475 CF-probe 2794 420s 858 tok/s mem 11.1G
+310 2475 CF-probe 3268 441s 891 tok/s mem 11.1G
+320 2475 CF-probe 3664 456s 914 tok/s mem 11.8G
+330 2475 CF-probe 3454 477s 943 tok/s mem 11.8G
+340 2475 CF-probe 3447 498s 968 tok/s mem 11.8G
+350 2475 CF-probe 1973 518s 991 tok/s mem 11.8G
+360 2475 CF-probe 2683 539s 1012 tok/s mem 11.8G
+370 2475 CF-probe 4071 561s 1034 tok/s mem 11.8G
+380 2475 CF-probe 1859 580s 1049 tok/s mem 11.8G
+390 2475 CF-probe 3488 605s 1071 tok/s mem 11.8G
+400 2475 CF-probe 3686 622s 1085 tok/s mem 11.8G
+410 2475 CF-probe 2903 644s 1100 tok/s mem 11.8G
+420 2475 CF-probe 3228 663s 1113 tok/s mem 11.8G
+430 2475 CF-probe 3774 680s 1125 tok/s mem 11.8G
+440 2475 CF-probe 3836 699s 1137 tok/s mem 11.8G
+450 2475 CF-probe 2368 714s 1146 tok/s mem 11.8G
+460 2475 CF-probe 2922 733s 1156 tok/s mem 11.8G
+470 2475 CF-probe 2752 753s 1166 tok/s mem 11.8G
+480 2475 CF-probe 1078 770s 1175 tok/s mem 11.8G
+490 2475 CF-probe 3609 791s 1185 tok/s mem 11.8G
+500 2475 CF-probe 2526 809s 1193 tok/s mem 11.8G
+510 2475 CF-probe 3416 826s 1200 tok/s mem 11.8G
+520 2475 CF-probe 1963 842s 1207 tok/s mem 11.8G
+530 2475 CF-probe 3307 863s 1214 tok/s mem 11.8G
+540 2475 CF-probe 3528 881s 1221 tok/s mem 11.8G
+550 2475 CF-probe 3352 899s 1228 tok/s mem 11.8G
+560 2475 CF-probe 3554 919s 1235 tok/s mem 11.8G
+570 2475 CF-probe 1690 936s 1241 tok/s mem 11.8G
+580 2475 CF-probe 2026 955s 1243 tok/s mem 11.8G
+590 2475 CF-probe 1487 987s 1230 tok/s mem 11.8G
+600 2475 CF-probe 1606 1012s 1219 tok/s mem 11.8G
+610 2475 CF-probe 2562 1042s 1211 tok/s mem 11.8G
+620 2475 CF-probe 2996 1062s 1218 tok/s mem 11.8G
+630 2475 CF-probe 1860 1077s 1222 tok/s mem 11.8G
+640 2475 CF-probe 3201 1094s 1227 tok/s mem 11.8G
+650 2475 CF-probe 3300 1114s 1232 tok/s mem 11.8G
+660 2475 CF-probe 3197 1133s 1237 tok/s mem 11.8G
+670 2475 CF-probe 3180 1152s 1242 tok/s mem 11.8G
+680 2475 CF-probe 1775 1170s 1247 tok/s mem 11.8G
+690 2475 CF-probe 2938 1190s 1252 tok/s mem 11.8G
+700 2475 CF-probe 2948 1210s 1257 tok/s mem 11.8G
+710 2475 CF-probe 2684 1228s 1261 tok/s mem 11.8G
+720 2475 CF-probe 1152 1239s 1263 tok/s mem 11.8G
+730 2475 CF-probe 3233 1252s 1266 tok/s mem 11.8G
+740 2475 CF-probe 2680 1268s 1270 tok/s mem 11.8G
+750 2475 CF-probe 2893 1281s 1272 tok/s mem 11.8G
+760 2475 CF-probe 2102 1296s 1275 tok/s mem 11.8G
+770 2475 CF-probe 2161 1311s 1278 tok/s mem 11.8G
+780 2475 CF-probe 1923 1327s 1281 tok/s mem 11.8G
+790 2475 CF-probe 2787 1335s 1282 tok/s mem 11.8G
+800 2475 CF-probe 2529 1349s 1285 tok/s mem 11.8G
+810 2475 CF-probe 1875 1361s 1288 tok/s mem 11.8G
+820 2475 CF-probe 841 1374s 1290 tok/s mem 11.8G
+830 2475 CF-probe 3081 1385s 1292 tok/s mem 11.8G
+840 2475 CF-probe 2477 1398s 1294 tok/s mem 11.8G
+850 2475 CF-probe 2990 1408s 1297 tok/s mem 11.8G
+860 2475 CF-probe 2281 1423s 1299 tok/s mem 11.8G
+870 2475 CF-probe 2814 1437s 1301 tok/s mem 11.8G
+880 2475 CF 6564 1478s 1309 tok/s mem 11.8G
+890 2475 CF 4772 1515s 1315 tok/s mem 11.8G
+900 2475 CF 6685 1556s 1321 tok/s mem 11.8G
+910 2475 CF 6606 1595s 1327 tok/s mem 11.8G
+920 2475 CF 6175 1636s 1333 tok/s mem 11.8G
+930 2475 CF 6378 1674s 1338 tok/s mem 11.8G
+940 2475 CF 5802 1712s 1344 tok/s mem 11.8G
+950 2475 CF 5872 1750s 1348 tok/s mem 11.8G
+960 2475 CF 5969 1788s 1353 tok/s mem 11.8G
+970 2475 CF 4440 1827s 1357 tok/s mem 11.8G
+980 2475 CF 6362 1867s 1362 tok/s mem 11.8G
+990 2475 CF 6966 1909s 1366 tok/s mem 11.8G
+1000 2475 CF 6651 1951s 1370 tok/s mem 11.8G
+1010 2475 CF 6092 1993s 1374 tok/s mem 11.8G
+1020 2475 CF 1317 2007s 1376 tok/s mem 11.9G
+1030 2475 CF 3692 2019s 1377 tok/s mem 11.9G
+1040 2475 CF 880 2030s 1378 tok/s mem 11.9G
+1050 2475 CF 1411 2045s 1380 tok/s mem 11.9G
+1060 2475 CF 1027 2052s 1380 tok/s mem 11.9G
+1070 2475 CF 829 2065s 1382 tok/s mem 11.9G
+1080 2475 CF 4426 2083s 1383 tok/s mem 11.9G
+1090 2475 CF 4190 2106s 1385 tok/s mem 11.9G
+1100 2475 CF 2879 2126s 1386 tok/s mem 11.9G
+1110 2475 CF 1905 2147s 1388 tok/s mem 11.9G
+1120 2475 CF 2922 2164s 1389 tok/s mem 11.9G
+1130 2475 CF 2544 2182s 1390 tok/s mem 11.9G
+1140 2475 CF 2899 2202s 1391 tok/s mem 11.9G
+1150 2475 CF 3095 2220s 1392 tok/s mem 11.9G
+1160 2475 CF 3138 2239s 1394 tok/s mem 11.9G
+1170 2475 CF 2899 2258s 1395 tok/s mem 11.9G
+1180 2475 CF 3023 2277s 1396 tok/s mem 11.9G
+1190 2475 CF 3143 2297s 1397 tok/s mem 11.9G
+1200 2475 CF 2794 2315s 1398 tok/s mem 11.9G
+1210 2475 CF 2656 2335s 1399 tok/s mem 11.9G
+1220 2475 CF 2187 2353s 1400 tok/s mem 11.9G
+1230 2475 CF 1532 2366s 1401 tok/s mem 11.9G
+1240 2475 CF 2161 2373s 1401 tok/s mem 11.9G
+1250 2475 CF 2742 2382s 1400 tok/s mem 11.9G
+1260 2475 CF 344 2390s 1401 tok/s mem 11.9G
+1270 2475 CF 2063 2405s 1401 tok/s mem 11.9G
+1280 2475 CF 253 2411s 1401 tok/s mem 11.9G
+1290 2475 CF 391 2421s 1401 tok/s mem 11.9G
+1300 2475 CF 2839 2434s 1401 tok/s mem 11.9G
+1310 2475 CF 1944 2445s 1401 tok/s mem 11.9G
+1320 2475 CF 2329 2453s 1401 tok/s mem 11.9G
+1330 2475 CF 2134 2464s 1401 tok/s mem 11.9G
+1340 2475 CF 2152 2474s 1401 tok/s mem 11.9G
+1350 2475 CF 2876 2488s 1401 tok/s mem 11.9G
+1360 2475 CF 2070 2501s 1402 tok/s mem 11.9G
+1370 2475 CF 880 2511s 1402 tok/s mem 11.9G
+1380 2475 CF 1363 2523s 1402 tok/s mem 11.9G
+1390 2475 CF 1332 2536s 1403 tok/s mem 11.9G
+1400 2475 CF 3047 2551s 1404 tok/s mem 11.9G
+1410 2475 CF 2297 2565s 1404 tok/s mem 11.9G
+1420 2475 CF 2547 2574s 1405 tok/s mem 11.9G
+1430 2475 CF 2559 2584s 1405 tok/s mem 11.9G
+1440 2475 CF 2496 2591s 1405 tok/s mem 11.9G
+1450 2475 CF 2695 2603s 1406 tok/s mem 11.9G
+1460 2475 CF 2444 2618s 1407 tok/s mem 11.9G
+1470 2475 CF 1620 2628s 1408 tok/s mem 11.9G
+1480 2475 CF 303 2636s 1408 tok/s mem 11.9G
+1490 2475 CF 247 2647s 1408 tok/s mem 11.9G
+1500 2475 CF 803 2653s 1408 tok/s mem 11.9G
+1510 2475 CF 231 2668s 1409 tok/s mem 11.9G
+1520 2475 CF 647 2674s 1409 tok/s mem 11.9G
+1530 2475 CF 621 2680s 1408 tok/s mem 11.9G
+1540 2475 CF 314 2690s 1409 tok/s mem 11.9G
+1550 2475 CF 504 2695s 1409 tok/s mem 11.9G
+1560 2475 CF 957 2703s 1410 tok/s mem 11.9G
+1570 2475 CF 1171 2716s 1410 tok/s mem 11.9G
+1580 2475 CF 2466 2730s 1411 tok/s mem 11.9G
+1590 2475 CF 2714 2740s 1411 tok/s mem 11.9G
+1600 2475 CF 2299 2748s 1411 tok/s mem 11.9G
+1610 2475 CF 4750 2766s 1412 tok/s mem 11.9G
+1620 2475 CF 2791 2786s 1413 tok/s mem 11.9G
+1630 2475 CF 2878 2805s 1414 tok/s mem 11.9G
+1640 2475 CF 4541 2827s 1415 tok/s mem 11.9G
+1650 2475 CF 1813 2845s 1416 tok/s mem 11.9G
+1660 2475 CF 1947 2862s 1416 tok/s mem 11.9G
+1670 2475 CF 1796 2879s 1417 tok/s mem 11.9G
+1680 2475 LONG 4484 2914s 1419 tok/s mem 11.9G
+1690 2475 LONG 7189 2954s 1421 tok/s mem 11.9G
+1700 2475 LONG 6547 2992s 1422 tok/s mem 11.9G
+1710 2475 LONG 5405 3035s 1424 tok/s mem 11.9G
+1720 2475 LONG 5667 3072s 1426 tok/s mem 11.9G
+1730 2475 LONG 4616 3108s 1428 tok/s mem 11.9G
+1740 2475 LONG 6275 3144s 1429 tok/s mem 11.9G
+1750 2475 LONG 4720 3178s 1431 tok/s mem 11.9G
+1760 2475 LONG 6028 3212s 1432 tok/s mem 11.9G
+1770 2475 LONG 4734 3247s 1433 tok/s mem 11.9G
+1780 2475 LONG 5119 3282s 1435 tok/s mem 11.9G
+1790 2475 LONG 5826 3316s 1436 tok/s mem 11.9G
+1800 2475 LONG 5808 3350s 1437 tok/s mem 11.9G
+1810 2475 LONG 5738 3383s 1439 tok/s mem 11.9G
+1820 2475 LONG 5692 3418s 1440 tok/s mem 11.9G
+1830 2475 LONG 7205 3456s 1441 tok/s mem 11.9G
+1840 2475 REAL-agree 1993 3492s 1442 tok/s mem 11.9G
+1850 2475 REAL-agree 3218 3505s 1443 tok/s mem 11.9G
+1860 2475 REAL-agree 1803 3519s 1444 tok/s mem 11.9G
+1870 2475 REAL-agree 1997 3533s 1444 tok/s mem 11.9G
+1880 2475 REAL-agree 434 3543s 1445 tok/s mem 11.9G
+1890 2475 REAL-agree 1707 3561s 1445 tok/s mem 11.9G
+1900 2475 REAL-agree 1807 3576s 1446 tok/s mem 11.9G
+1910 2475 REAL-agree 2803 3586s 1446 tok/s mem 11.9G
+1920 2475 REAL-agree 2954 3604s 1447 tok/s mem 11.9G
+1930 2475 REAL-agree 2024 3620s 1447 tok/s mem 11.9G
+1940 2475 REAL-agree 3010 3634s 1447 tok/s mem 11.9G
+1950 2475 REAL-agree 2049 3651s 1448 tok/s mem 11.9G
+1960 2475 REAL-agree 4180 3671s 1448 tok/s mem 11.9G
+1970 2475 REAL-agree 1443 3685s 1448 tok/s mem 11.9G
+1980 2475 REAL-agree 4859 3701s 1449 tok/s mem 11.9G
+1990 2475 REAL-agree 2901 3718s 1449 tok/s mem 11.9G
+2000 2475 REAL-agree 1982 3733s 1450 tok/s mem 11.9G
+2010 2475 REAL-agree 2962 3749s 1450 tok/s mem 11.9G
+2020 2475 REAL-agree 2801 3767s 1450 tok/s mem 11.9G
+2030 2475 REAL-agree 2495 3782s 1451 tok/s mem 11.9G
+2040 2475 REAL-agree 3858 3796s 1451 tok/s mem 11.9G
+2050 2475 REAL-agree 3317 3819s 1451 tok/s mem 11.9G
+2060 2475 REAL-agree 4038 3839s 1452 tok/s mem 11.9G
+2070 2475 REAL-agree 1864 3856s 1452 tok/s mem 11.9G
+2080 2475 REAL-agree 1720 3874s 1453 tok/s mem 11.9G
+2090 2475 REAL-agree 707 3885s 1453 tok/s mem 11.9G
+2100 2475 REAL-agree 3138 3899s 1453 tok/s mem 11.9G
+2110 2475 REAL-agree 3257 3916s 1454 tok/s mem 11.9G
+2120 2475 REAL-agree 3234 3934s 1454 tok/s mem 11.9G
+2130 2475 REAL-agree 3053 3952s 1454 tok/s mem 11.9G
+2140 2475 REAL-agree 2566 3967s 1455 tok/s mem 11.9G
+2150 2475 REAL-agree 3003 3984s 1455 tok/s mem 11.9G
+2160 2475 REAL-agree 2299 3999s 1455 tok/s mem 11.9G
+2170 2475 REAL-agree 2898 4016s 1456 tok/s mem 11.9G
+2180 2475 REAL-agree 2998 4034s 1456 tok/s mem 11.9G
+2190 2475 REAL-agree 1686 4049s 1456 tok/s mem 11.9G
+2200 2475 REAL-agree 1631 4061s 1457 tok/s mem 11.9G
+2210 2475 REAL-agree 1755 4074s 1457 tok/s mem 11.9G
+2220 2475 REAL-agree 1792 4085s 1458 tok/s mem 11.9G
+2230 2475 REAL-agree 1742 4099s 1458 tok/s mem 11.9G
+2240 2475 REAL-agree 1725 4113s 1459 tok/s mem 11.9G
+2250 2475 REAL-agree 1784 4122s 1459 tok/s mem 11.9G
+2260 2475 REAL-agree 1761 4138s 1459 tok/s mem 11.9G
+2270 2475 REAL-agree 1844 4150s 1460 tok/s mem 11.9G
+2280 2475 REAL-agree 3281 4167s 1460 tok/s mem 11.9G
+2290 2475 REAL-agree 1919 4182s 1461 tok/s mem 11.9G
+2300 2475 REAL-agree 1835 4198s 1461 tok/s mem 11.9G
+2310 2475 REAL-agree 2156 4213s 1461 tok/s mem 11.9G
+2320 2475 REAL-agree 1886 4227s 1461 tok/s mem 11.9G
+2330 2475 REAL-agree 3628 4243s 1462 tok/s mem 11.9G
+2340 2475 REAL-agree 3024 4263s 1462 tok/s mem 11.9G
+2350 2475 REAL-agree 3858 4286s 1462 tok/s mem 11.9G
+2360 2475 REAL-agree 3418 4304s 1463 tok/s mem 11.9G
+2370 2475 REAL-agree 1565 4320s 1463 tok/s mem 11.9G
+2380 2475 REAL-agree 3754 4337s 1464 tok/s mem 11.9G
+2390 2475 REAL-agree 1838 4351s 1464 tok/s mem 11.9G
+2400 2475 REAL-agree 3100 4365s 1464 tok/s mem 11.9G
+2410 2475 REAL-agree 2113 4379s 1464 tok/s mem 11.9G
+2420 2475 REAL-agree 2292 4395s 1465 tok/s mem 11.9G
+2430 2475 REAL-agree 1840 4411s 1465 tok/s mem 11.9G
+2440 2475 REAL-agree 1575 4421s 1465 tok/s mem 11.9G
+2450 2475 REAL-agree 2248 4435s 1465 tok/s mem 11.9G
+2460 2475 REAL-agree 1710 4453s 1465 tok/s mem 11.9G
+2470 2475 REAL-agree 2393 4468s 1466 tok/s mem 11.9G
+done

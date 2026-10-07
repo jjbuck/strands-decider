@@ -1,0 +1,6 @@
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 3778.91it/s]
+init parity early vs late max|dp| 0.00410732626914978 [0.0007672309875488281, 0.0010622143745422363, 0.0007278919219970703, 0.00410732626914978, 0.0017848610877990723, 0.0014406144618988037]
+/home/ubuntu/work/j6/train_e.py:90: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /__w/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:820.)
+  return kl + a.w_hid * hl, float(kl), float(hl), int(lp.argmax()) == int(tp.argmax())
+done 2 56.09247708320618

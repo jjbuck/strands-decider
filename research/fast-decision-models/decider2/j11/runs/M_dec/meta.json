@@ -1,0 +1,22 @@
+{
+ "arm": "dec",
+ "d": 768,
+ "L": 16,
+ "R": 3,
+ "budget_pf": 16.0,
+ "step_tok": 32768,
+ "micro_tok": 12288,
+ "lr": 0.0004,
+ "out": "runs/M_dec",
+ "eval_every": 300,
+ "shares": "0.7,0.15,0.15",
+ "max_steps": 40000,
+ "seed": 0,
+ "aux": 1.0,
+ "V": 84600,
+ "n_steps": 615,
+ "params": 178641664,
+ "params_nonemb": 113668864,
+ "Ls": null,
+ "Ld": null
+}

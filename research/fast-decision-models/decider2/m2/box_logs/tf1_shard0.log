@@ -1,0 +1,12 @@
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 3900.74it/s]
+items 483 configs ['nat0', 'iso_nat', 'iso_sec', 'const', 'iso_b256', 'nat_attn', 'nat_gdn', 'nat_ge8', 'nat_lt8', 'nat_sum', 'nat_glob', 'f8', 'f12', 'nat_f8', 'nat_f12', 'const_f12', 'topk64', 'nat_ge16', 'nat_zero'] done {'nat0': 0, 'iso_nat': 0, 'iso_sec': 0, 'const': 0, 'iso_b256': 0, 'nat_attn': 0, 'nat_gdn': 0, 'nat_ge8': 0, 'nat_lt8': 0, 'nat_sum': 0, 'nat_glob': 0, 'f8': 0, 'f12': 0, 'nat_f8': 0, 'nat_f12': 0, 'const_f12': 0, 'topk64': 0, 'nat_ge16': 0, 'nat_zero': 0}
+50 483 427s mism 0
+100 483 912s mism 0
+150 483 1321s mism 0
+200 483 1726s mism 0
+250 483 2132s mism 0
+300 483 2565s mism 0
+350 483 2969s mism 0
+400 483 3433s mism 0
+450 483 3830s mism 0
+done 483 4102s mism 0

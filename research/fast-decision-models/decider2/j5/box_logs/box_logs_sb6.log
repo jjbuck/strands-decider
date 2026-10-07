@@ -1,0 +1,61 @@
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 3828.86it/s]
+USDT:2026-10-06 18:21:51 19610:19610 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-06 18:21:51 19610:19610 SyncActivityProfilerHandler.cpp:46] profiler_stop
+{"key": "j5_precmap_w8a8_b8:w8a8|32|jb1|plain", "rows": 140, "wall": {"median": 7.381, "p95": 7.477, "n": 30}} {"other": 0.212, "glue": 0.997, "gemm": 5.167, "gdn_core": 0.875, "attn": 0.11, "counts": {"other": 126, "glue": 121, "gemm": 104, "gdn_core": 90, "attn": 12}, "kernels": 453, "busy": 7.362, "span": 7.453, "gaps": 0.11, "nongemm": 2.195}
+USDT:2026-10-06 18:22:03 19610:19610 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-06 18:22:03 19610:19610 SyncActivityProfilerHandler.cpp:46] profiler_stop
+{"key": "j5_precmap_w8a8_b8:w8a8|32|jb1|schema", "rows": 33, "wall": {"median": 5.378, "p95": 5.386, "n": 30}} {"other": 0.195, "glue": 0.674, "gemm": 3.768, "gdn_core": 0.604, "attn": 0.086, "counts": {"other": 119, "glue": 121, "gemm": 103, "gdn_core": 90, "attn": 12}, "kernels": 445, "busy": 5.328, "span": 5.427, "gaps": 0.115, "nongemm": 1.56}
+USDT:2026-10-06 18:22:05 19610:19610 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-06 18:22:05 19610:19610 SyncActivityProfilerHandler.cpp:46] profiler_stop
+{"key": "j5_precmap_w8a8_b8:w8a8|32|jb4|plain", "rows": 461, "wall": {"median": 18.052, "p95": 18.12, "n": 30}} {"other": 0.818, "glue": 2.241, "gemm": 11.921, "gdn_core": 2.508, "attn": 0.475, "counts": {"other": 332, "glue": 121, "gemm": 105, "gdn_core": 180, "attn": 54}, "kernels": 792, "busy": 17.963, "span": 18.118, "gaps": 0.2, "nongemm": 6.042}
+USDT:2026-10-06 18:22:07 19610:19610 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-06 18:22:07 19610:19610 SyncActivityProfilerHandler.cpp:46] profiler_stop
+{"key": "j5_precmap_w8a8_b8:w8a8|32|jb4|schema", "rows": 36, "wall": {"median": 5.437, "p95": 5.447, "n": 30}} {"other": 0.196, "glue": 0.683, "gemm": 3.798, "gdn_core": 0.613, "attn": 0.1, "counts": {"other": 121, "glue": 121, "gemm": 104, "gdn_core": 90, "attn": 12}, "kernels": 448, "busy": 5.39, "span": 5.481, "gaps": 0.106, "nongemm": 1.592}
+USDT:2026-10-06 18:22:07 19610:19610 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-06 18:22:08 19610:19610 SyncActivityProfilerHandler.cpp:46] profiler_stop
+{"key": "j5_precmap_w8a8_b8:w8a8|64|jb1|plain", "rows": 172, "wall": {"median": 8.01, "p95": 8.016, "n": 30}} {"other": 0.211, "glue": 1.193, "gemm": 5.564, "gdn_core": 0.882, "attn": 0.12, "counts": {"other": 125, "glue": 121, "gemm": 112, "gdn_core": 90, "attn": 12}, "kernels": 460, "busy": 7.97, "span": 8.06, "gaps": 0.11, "nongemm": 2.406}
+USDT:2026-10-06 18:22:08 19610:19610 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-06 18:22:08 19610:19610 SyncActivityProfilerHandler.cpp:46] profiler_stop
+{"key": "j5_precmap_w8a8_b8:w8a8|64|jb1|schema", "rows": 65, "wall": {"median": 5.947, "p95": 5.956, "n": 30}} {"other": 0.18, "glue": 0.745, "gemm": 4.109, "gdn_core": 0.797, "attn": 0.104, "counts": {"other": 103, "glue": 121, "gemm": 103, "gdn_core": 90, "attn": 12}, "kernels": 429, "busy": 5.935, "span": 5.968, "gaps": 0.051, "nongemm": 1.826}
+USDT:2026-10-06 18:22:10 19610:19610 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-06 18:22:10 19610:19610 SyncActivityProfilerHandler.cpp:46] profiler_stop
+{"key": "j5_precmap_w8a8_b8:w8a8|64|jb4|plain", "rows": 493, "wall": {"median": 18.485, "p95": 18.508, "n": 30}} {"other": 0.829, "glue": 2.411, "gemm": 11.944, "gdn_core": 2.703, "attn": 0.484, "counts": {"other": 332, "glue": 121, "gemm": 105, "gdn_core": 180, "attn": 54}, "kernels": 792, "busy": 18.37, "span": 18.525, "gaps": 0.201, "nongemm": 6.426}
+USDT:2026-10-06 18:22:11 19610:19610 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-06 18:22:11 19610:19610 SyncActivityProfilerHandler.cpp:46] profiler_stop
+{"key": "j5_precmap_w8a8_b8:w8a8|64|jb4|schema", "rows": 68, "wall": {"median": 6.159, "p95": 6.181, "n": 30}} {"other": 0.182, "glue": 0.759, "gemm": 4.086, "gdn_core": 0.8, "attn": 0.172, "counts": {"other": 98, "glue": 121, "gemm": 104, "gdn_core": 90, "attn": 12}, "kernels": 425, "busy": 5.999, "span": 5.998, "gaps": 0.019, "nongemm": 1.913}
+USDT:2026-10-06 18:22:12 19610:19610 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-06 18:22:12 19610:19610 SyncActivityProfilerHandler.cpp:46] profiler_stop
+{"key": "j5_precmap_w8a8_b8:w8a8|128|jb1|plain", "rows": 236, "wall": {"median": 9.34, "p95": 9.474, "n": 30}} {"other": 0.216, "glue": 1.361, "gemm": 6.554, "gdn_core": 0.958, "attn": 0.231, "counts": {"other": 125, "glue": 121, "gemm": 104, "gdn_core": 90, "attn": 12}, "kernels": 452, "busy": 9.32, "span": 9.398, "gaps": 0.105, "nongemm": 2.766}
+USDT:2026-10-06 18:22:13 19610:19610 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-06 18:22:13 19610:19610 SyncActivityProfilerHandler.cpp:46] profiler_stop
+{"key": "j5_precmap_w8a8_b8:w8a8|128|jb1|schema", "rows": 129, "wall": {"median": 7.489, "p95": 7.495, "n": 30}} {"other": 0.201, "glue": 0.982, "gemm": 5.167, "gdn_core": 0.927, "attn": 0.155, "counts": {"other": 120, "glue": 121, "gemm": 102, "gdn_core": 90, "attn": 12}, "kernels": 445, "busy": 7.432, "span": 7.523, "gaps": 0.111, "nongemm": 2.265}
+USDT:2026-10-06 18:22:15 19610:19610 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-06 18:22:15 19610:19610 SyncActivityProfilerHandler.cpp:46] profiler_stop
+{"key": "j5_precmap_w8a8_b8:w8a8|128|jb4|plain", "rows": 557, "wall": {"median": 19.963, "p95": 20.065, "n": 30}} {"other": 0.823, "glue": 2.672, "gemm": 13.145, "gdn_core": 2.776, "attn": 0.544, "counts": {"other": 308, "glue": 121, "gemm": 105, "gdn_core": 180, "attn": 60}, "kernels": 774, "busy": 19.958, "span": 20.028, "gaps": 0.126, "nongemm": 6.813}
+USDT:2026-10-06 18:22:16 19610:19610 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-06 18:22:16 19610:19610 SyncActivityProfilerHandler.cpp:46] profiler_stop
+{"key": "j5_precmap_w8a8_b8:w8a8|128|jb4|schema", "rows": 132, "wall": {"median": 7.666, "p95": 7.678, "n": 30}} {"other": 0.205, "glue": 0.981, "gemm": 5.254, "gdn_core": 0.924, "attn": 0.239, "counts": {"other": 122, "glue": 121, "gemm": 103, "gdn_core": 90, "attn": 12}, "kernels": 448, "busy": 7.602, "span": 7.693, "gaps": 0.111, "nongemm": 2.348}
+USDT:2026-10-06 18:22:17 19610:19610 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-06 18:22:17 19610:19610 SyncActivityProfilerHandler.cpp:46] profiler_stop
+{"key": "j5_precmap_w8a8_b8:w8a8|256|jb1|plain", "rows": 364, "wall": {"median": 13.315, "p95": 13.346, "n": 30}} {"other": 0.266, "glue": 1.913, "gemm": 9.315, "gdn_core": 1.368, "attn": 0.297, "counts": {"other": 150, "glue": 121, "gemm": 104, "gdn_core": 90, "attn": 12}, "kernels": 477, "busy": 13.158, "span": 13.301, "gaps": 0.172, "nongemm": 3.843}
+USDT:2026-10-06 18:22:18 19610:19610 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-06 18:22:18 19610:19610 SyncActivityProfilerHandler.cpp:46] profiler_stop
+{"key": "j5_precmap_w8a8_b8:w8a8|256|jb1|schema", "rows": 257, "wall": {"median": 10.879, "p95": 10.903, "n": 30}} {"other": 0.187, "glue": 1.542, "gemm": 7.666, "gdn_core": 1.084, "attn": 0.254, "counts": {"other": 96, "glue": 121, "gemm": 110, "gdn_core": 90, "attn": 12}, "kernels": 429, "busy": 10.733, "span": 10.712, "gaps": 0.012, "nongemm": 3.067}
+USDT:2026-10-06 18:22:20 19610:19610 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-06 18:22:20 19610:19610 SyncActivityProfilerHandler.cpp:46] profiler_stop
+{"key": "j5_precmap_w8a8_b8:w8a8|256|jb4|plain", "rows": 685, "wall": {"median": 24.842, "p95": 24.991, "n": 30}} {"other": 0.931, "glue": 3.364, "gemm": 16.552, "gdn_core": 2.999, "attn": 1.015, "counts": {"other": 315, "glue": 121, "gemm": 105, "gdn_core": 180, "attn": 60}, "kernels": 781, "busy": 24.861, "span": 24.932, "gaps": 0.135, "nongemm": 8.309}
+USDT:2026-10-06 18:22:21 19610:19610 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-06 18:22:21 19610:19610 SyncActivityProfilerHandler.cpp:46] profiler_stop
+{"key": "j5_precmap_w8a8_b8:w8a8|256|jb4|schema", "rows": 260, "wall": {"median": 11.034, "p95": 11.065, "n": 30}} {"other": 0.19, "glue": 1.546, "gemm": 7.659, "gdn_core": 1.088, "attn": 0.403, "counts": {"other": 98, "glue": 121, "gemm": 111, "gdn_core": 90, "attn": 12}, "kernels": 432, "busy": 10.886, "span": 10.865, "gaps": 0.013, "nongemm": 3.227}
+USDT:2026-10-06 18:22:23 19610:19610 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-06 18:22:23 19610:19610 SyncActivityProfilerHandler.cpp:46] profiler_stop
+{"key": "j5_precmap_w8a8_b8:w8a8|400|jb1|plain", "rows": 508, "wall": {"median": 16.975, "p95": 17.109, "n": 30}} {"other": 0.277, "glue": 2.512, "gemm": 11.986, "gdn_core": 1.759, "attn": 0.383, "counts": {"other": 150, "glue": 121, "gemm": 104, "gdn_core": 90, "attn": 12}, "kernels": 477, "busy": 16.917, "span": 17.057, "gaps": 0.173, "nongemm": 4.931}
+USDT:2026-10-06 18:22:24 19610:19610 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-06 18:22:24 19610:19610 SyncActivityProfilerHandler.cpp:46] profiler_stop
+{"key": "j5_precmap_w8a8_b8:w8a8|400|jb1|schema", "rows": 401, "wall": {"median": 15.504, "p95": 15.53, "n": 30}} {"other": 0.199, "glue": 2.123, "gemm": 10.745, "gdn_core": 1.559, "attn": 0.796, "counts": {"other": 104, "glue": 121, "gemm": 102, "gdn_core": 90, "attn": 12}, "kernels": 429, "busy": 15.421, "span": 15.428, "gaps": 0.041, "nongemm": 4.676}
+USDT:2026-10-06 18:22:27 19610:19610 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-06 18:22:27 19610:19610 SyncActivityProfilerHandler.cpp:46] profiler_stop
+{"key": "j5_precmap_w8a8_b8:w8a8|400|jb4|plain", "rows": 829, "wall": {"median": 28.812, "p95": 29.002, "n": 30}} {"other": 1.019, "glue": 4.145, "gemm": 18.946, "gdn_core": 3.512, "attn": 1.247, "counts": {"other": 307, "glue": 121, "gemm": 105, "gdn_core": 180, "attn": 60}, "kernels": 773, "busy": 28.869, "span": 28.904, "gaps": 0.109, "nongemm": 9.923}
+USDT:2026-10-06 18:22:28 19610:19610 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-06 18:22:28 19610:19610 SyncActivityProfilerHandler.cpp:46] profiler_stop
+{"key": "j5_precmap_w8a8_b8:w8a8|400|jb4|schema", "rows": 404, "wall": {"median": 15.461, "p95": 15.561, "n": 30}} {"other": 0.201, "glue": 2.151, "gemm": 10.829, "gdn_core": 1.575, "attn": 0.707, "counts": {"other": 106, "glue": 121, "gemm": 103, "gdn_core": 90, "attn": 12}, "kernels": 432, "busy": 15.463, "span": 15.472, "gaps": 0.041, "nongemm": 4.634}

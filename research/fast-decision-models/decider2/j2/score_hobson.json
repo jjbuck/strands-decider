@@ -1,0 +1,160 @@
+{
+ "hobson": {
+  "JB-all": {
+   "n_q": 231,
+   "coverage": 1.0,
+   "acc": 0.7229437229437229,
+   "n_acc": 231,
+   "agree": 1.0,
+   "tv": 0.0,
+   "kl": 0.0,
+   "agree_sd": 1.0,
+   "n_sd": 141,
+   "brier": 0.34785219697183306
+  },
+  "JB-hard": {
+   "n_q": 130,
+   "coverage": 1.0,
+   "acc": 0.5230769230769231,
+   "n_acc": 130,
+   "agree": 1.0,
+   "tv": 0.0,
+   "kl": 0.0,
+   "agree_sd": 1.0,
+   "n_sd": 69
+  },
+  "JB-long": {
+   "n_q": 77,
+   "coverage": 1.0,
+   "acc": 0.4025974025974026,
+   "n_acc": 77,
+   "agree": 1.0,
+   "tv": 0.0,
+   "kl": 0.0,
+   "agree_sd": 1.0,
+   "n_sd": 40
+  },
+  "REAL-agree": {
+   "n_q": 1083,
+   "coverage": 1.0,
+   "agree": 1.0,
+   "tv": 0.0,
+   "kl": 0.0,
+   "agree_sd": 1.0,
+   "n_sd": 346
+  },
+  "LONG": {
+   "n_q": 471,
+   "coverage": 1.0,
+   "agree": 1.0,
+   "tv": 0.0,
+   "kl": 0.0,
+   "agree_sd": 1.0,
+   "n_sd": 165
+  },
+  "REAL-label": {
+   "n_q": 400,
+   "coverage": 1.0,
+   "acc": 0.785,
+   "n_acc": 400,
+   "acc_consensus": 0.8179347826086957,
+   "n_consensus": 368,
+   "agree": 1.0,
+   "tv": 0.0,
+   "kl": 0.0,
+   "agree_sd": 1.0,
+   "n_sd": 109,
+   "brier": 0.34726471114400825
+  },
+  "CF": {
+   "n_pairs": 406,
+   "acc": 0.5935960591133005,
+   "flip": 0.2684729064039409,
+   "flip_any": 0.3054187192118227,
+   "dir": 0.9482758620689655,
+   "dmean": 0.17005136667758258,
+   "flip_rel": 1.0,
+   "dmean_rel": 1.0,
+   "flip_given_hobson": 1.0,
+   "agree": 1.0,
+   "tv": 0.0,
+   "by_kind": {
+    "amount_insert": 0.1,
+    "human_insert": 0.346,
+    "id_add_second": 0.0,
+    "id_digit_existing": 0.0,
+    "id_digit_inserted": 0.0,
+    "id_remove_one": 0.0,
+    "insists_3v4": 0.05,
+    "procedure_intent": 0.0,
+    "wrapup_replace": 0.918
+   },
+   "by_pos": {
+    "pos<0.5": 0.169,
+    "pos>=0.5": 0.342
+   },
+   "by_len": {
+    "state 2-4k": [
+     0.39,
+     159
+    ],
+    "state<2k": [
+     0.269,
+     171
+    ],
+    "state>=4k": [
+     0.013,
+     76
+    ]
+   }
+  },
+  "CF-probe": {
+   "n_pairs": 320,
+   "acc": 0.653125,
+   "flip": 0.328125,
+   "flip_any": 0.35,
+   "dir": 0.884375,
+   "dmean": 0.15224699809400527,
+   "flip_rel": 1.0,
+   "dmean_rel": 1.0,
+   "flip_given_hobson": 1.0,
+   "agree": 1.0,
+   "tv": 0.0,
+   "by_kind": {
+    "probe_amount_vs_limit": 0.326,
+    "probe_amount_vs_limit_distract": 0.237,
+    "probe_date_order": 0.061,
+    "probe_date_order_distract": 0.031,
+    "probe_id_match": 0.541,
+    "probe_id_match_distract": 0.381,
+    "probe_status_equal": 0.886,
+    "probe_status_equal_distract": 0.25
+   },
+   "by_pos": {
+    "pos<0.5": 0.328,
+    "pos>=0.5": 0.333
+   },
+   "by_len": {
+    "state 2-4k": [
+     0.284,
+     225
+    ],
+    "state<2k": [
+     0.432,
+     95
+    ]
+   }
+  },
+  "SHUF": {
+   "n_pairs": 387,
+   "change": 0.3385012919896641,
+   "both_right": 0.2454780361757106
+  },
+  "calib": {
+   "brier": 0.4359459363254678,
+   "ece": 0.036828885739429724,
+   "n": 2073
+  }
+ },
+ "_paired_vs_hobson": {}
+}

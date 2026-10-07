@@ -1,0 +1,53 @@
+{
+ "hobson::bf16::long": {
+  "LONG": {
+   "flip_rate": 0.012121212121212121,
+   "flips": 2,
+   "n": 165,
+   "tv": 0.0043401312522736175,
+   "agree_sd": 0.9878787878787879,
+   "n_sd": 165
+  }
+ },
+ "hobson::nvfp4::long": {
+  "LONG": {
+   "flip_rate": 0.12727272727272726,
+   "flips": 21,
+   "n": 165,
+   "tv": 0.07790769918981533,
+   "agree_sd": 0.8727272727272727,
+   "n_sd": 165,
+   "flip_rate_vs_dense": 0.12727272727272726,
+   "flips_vs_dense": 21,
+   "n_vs_dense": 165
+  }
+ },
+ "v1::bf16::long": {
+  "LONG": {
+   "flip_rate": 0.12727272727272726,
+   "flips": 21,
+   "n": 165,
+   "tv": 0.07984608221217333,
+   "agree_sd": 0.8727272727272727,
+   "n_sd": 165,
+   "flip_rate_vs_dense": 0.11515151515151516,
+   "flips_vs_dense": 19,
+   "n_vs_dense": 165
+  }
+ },
+ "v1::nvfp4::long": {
+  "LONG": {
+   "flip_rate": 0.14545454545454545,
+   "flips": 24,
+   "n": 165,
+   "tv": 0.11118778480663302,
+   "agree_sd": 0.8545454545454545,
+   "n_sd": 165,
+   "flip_rate_vs_dense": 0.13333333333333333,
+   "flips_vs_dense": 22,
+   "n_vs_dense": 165,
+   "flip_rate_vs_own_bf16": 0.048484848484848485,
+   "n_vs_own": 165
+  }
+ }
+}

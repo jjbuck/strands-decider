@@ -20,6 +20,10 @@ v18 preregistrations record the decision in Decision after the outcome. The curr
   the results and draw them.
 - [`../configs/experiments/`](../configs/experiments/): the training configuration of each
   preregistered run from v11 on.
+- [`fast-decision-models/`](fast-decision-models/README.md): a separate program on latency:
+  how fast hobson-v19 can answer a 1,000-token request on an RTX 3090-class GPU without
+  losing accuracy. It holds the report, its figures, and the code, results and notes of
+  every idea tried. Its pass bars were set in each round's brief before the experiments.
 
 To propose an experiment, write its preregistration first, in the form of the files in
 `preregistrations/`, and commit it before you train. Paths are relative to the repository

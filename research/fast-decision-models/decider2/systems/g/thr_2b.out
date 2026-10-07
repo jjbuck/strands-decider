@@ -1,0 +1,13 @@
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 3909.33it/s]
+2b throughput L=256 B=1: 19.34 ms  51.7 req/s  13237 tok/s
+2b throughput L=256 B=2: 36.38 ms  55.0 req/s  14072 tok/s
+2b throughput L=256 B=4: 74.29 ms  53.8 req/s  13784 tok/s
+2b throughput L=256 B=8: 148.63 ms  53.8 req/s  13779 tok/s
+2b throughput L=256 B=16: 290.93 ms  55.0 req/s  14079 tok/s
+2b throughput L=256 B=32: 559.79 ms  57.2 req/s  14634 tok/s
+2b throughput L=1000 B=1: 74.06 ms  13.5 req/s  13503 tok/s
+2b throughput L=1000 B=2: 148.40 ms  13.5 req/s  13477 tok/s
+2b throughput L=1000 B=4: 290.14 ms  13.8 req/s  13786 tok/s
+2b throughput L=1000 B=8: 554.40 ms  14.4 req/s  14430 tok/s
+2b throughput L=1000 B=16: 1082.21 ms  14.8 req/s  14785 tok/s
+2b throughput L=1000 B=32: 2137.80 ms  15.0 req/s  14969 tok/s

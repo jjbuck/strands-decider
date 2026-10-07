@@ -1,0 +1,1 @@
+{"updates": 3200, "np": 2, "nv": 3, "lr": 0.0002, "hlr": 0.0003, "glr": 0.0005, "maxtok": 6144, "v5max": 3072, "w_hid": 1.0, "w_ce": 1.0, "r_h": 24, "ck": "~/work/j6/ck_h", "every": 500, "holdout": "states_amount,WrapsUp,cc_insists,details_match,failure_cause,cc_refuses,UserAskedForHuman"}

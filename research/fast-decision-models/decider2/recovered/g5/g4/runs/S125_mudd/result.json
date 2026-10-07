@@ -1,0 +1,14 @@
+{
+ "name": "S125_mudd",
+ "scale": "S125",
+ "arm": "mudd",
+ "steps": 5219,
+ "tokens": 171016192,
+ "train_pflops": 179.99316847794586,
+ "val_loss": 3.6040821075439453,
+ "val_last_block": 3.554151773452759,
+ "params": 163661488,
+ "nonemb": 129806336,
+ "elapsed_min": 93.47713830868403,
+ "infer_gflop_1000": 322.680986112
+}

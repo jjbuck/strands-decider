@@ -1,0 +1,19 @@
+=== 13:53:55 preds/k64_eval.jsonl --fmt c:map:/home/ubuntu/work/q2/q2map_k64rr.json --taps 16
+c:map:/home/ubuntu/work/q2/q2map_k64rr.json 3200 329s
+done c:map:/home/ubuntu/work/q2/q2map_k64rr.json 3227 331s
+=== 13:59:41 preds/k64_dev.jsonl --fmt c:map:/home/ubuntu/work/q2/q2map_k64rr.json --suites DEV --taps 16
+c:map:/home/ubuntu/work/q2/q2map_k64rr.json 1600 185s
+done c:map:/home/ubuntu/work/q2/q2map_k64rr.json 1736 213s
+=== 14:03:28 preds/k64_exit.jsonl --fmt c:map:/home/ubuntu/work/q2/q2map_k64rr.json --suites EXIT --taps 16
+c:map:/home/ubuntu/work/q2/q2map_k64rr.json 4200 470s
+done c:map:/home/ubuntu/work/q2/q2map_k64rr.json 4205 471s
+=== 14:11:33 exit head
+EXIT 4205 DEV 1736
+exit k64 L16: best DEV KL 0.00044 agree 0.9902 at ep 35 (53s) log [(0, 0.01125, 0.9683), (1, 0.00445, 0.9729), (2, 0.00341, 0.9741), (3, 0.00244, 0.9798), (4, 0.00188, 0.9833), (5, 0.00178, 0.981), (6, 0.00162, 0.9827), (7, 0.0013, 0.9856), (8, 0.00115, 0.985), (9, 0.00112, 0.9862), (10, 0.00106, 0.9879), (11, 0.00089, 0.9873), (12, 0.00087, 0.9873), (13, 0.00099, 0.9868), (14, 0.00074, 0.9885), (15, 0.00075, 0.9896), (16, 0.0008, 0.9891), (17, 0.00092, 0.9908), (18, 0.00065, 0.9902), (19, 0.00072, 0.9885), (20, 0.00072, 0.9891), (21, 0.00061, 0.9914), (22, 0.00065, 0.9914), (23, 0.00058, 0.9902), (24, 0.00058, 0.9908), (25, 0.00052, 0.9908), (26, 0.0006, 0.9879), (27, 0.00068, 0.9914), (28, 0.0007, 0.9896), (29, 0.00049, 0.9914), (30, 0.00053, 0.9908), (31, 0.0005, 0.9919), (32, 0.00052, 0.9925), (33, 0.00055, 0.9914), (34, 0.0005, 0.9919), (35, 0.00044, 0.9902), (36, 0.00064, 0.9908), (37, 0.00087, 0.9948), (38, 0.00046, 0.9919), (39, 0.00048, 0.9908)]
+wrote exit preds 1736 3227
+X1_EXIT_DONE
+=== 14:12:39 preds/b8_eval.jsonl --fmt h2:map:/home/ubuntu/work/h1/precmap_w8a8_b8.json:w8a8
+h2:map:/home/ubuntu/work/h1/precmap_w8a8_b8.json:w8a8 3200 360s
+done h2:map:/home/ubuntu/work/h1/precmap_w8a8_b8.json:w8a8 3227 362s
+done h2_bf16 3227 517s int8 state-row share 0.0
+X1_DONE 14:27:46

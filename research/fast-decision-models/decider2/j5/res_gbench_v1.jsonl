@@ -1,0 +1,350 @@
+{"kind": "cublas", "shape": "gdn_in", "M": 16, "N": 8224, "K": 2048, "us": 92.67, "tflops": 5.8, "gbps": 363.5}
+{"kind": "tgemm", "shape": "gdn_in", "M": 16, "N": 8224, "K": 2048, "us": 123.39, "tflops": 4.4, "gbps": 273.0}
+{"kind": "sk_bf16", "shape": "gdn_in", "M": 16, "N": 8224, "K": 2048, "us": 103.42, "tflops": 5.2, "gbps": 325.7, "cfg": [16, 64, 64, 1, 4, 4]}
+{"kind": "sk_w8a16", "shape": "gdn_in", "M": 16, "N": 8224, "K": 2048, "us": 63.83, "tflops": 8.4, "gbps": 263.9, "cfg": [16, 128, 128, 1, 4, 4]}
+{"kind": "sk_w4a16", "shape": "gdn_in", "M": 16, "N": 8224, "K": 2048, "us": 51.03, "tflops": 10.6, "gbps": 175.3, "cfg": [16, 64, 128, 1, 4, 4]}
+{"kind": "sk_w8a8", "shape": "gdn_in", "M": 16, "N": 8224, "K": 2048, "us": 66.56, "tflops": 8.1, "gbps": 253.0, "cfg": [16, 128, 128, 1, 4, 4]}
+{"kind": "cut_s8", "shape": "gdn_in", "M": 16, "N": 8224, "K": 2048, "us": 50.52, "tflops": 10.7, "gbps": 333.4}
+{"kind": "cublas", "shape": "gdn_in", "M": 32, "N": 8224, "K": 2048, "us": 92.67, "tflops": 11.6, "gbps": 363.5}
+{"kind": "tgemm", "shape": "gdn_in", "M": 32, "N": 8224, "K": 2048, "us": 123.39, "tflops": 8.7, "gbps": 273.0}
+{"kind": "sk_bf16", "shape": "gdn_in", "M": 32, "N": 8224, "K": 2048, "us": 103.39, "tflops": 10.4, "gbps": 325.8, "cfg": [16, 128, 64, 1, 4, 4]}
+{"kind": "sk_w8a16", "shape": "gdn_in", "M": 32, "N": 8224, "K": 2048, "us": 63.82, "tflops": 16.9, "gbps": 263.9, "cfg": [16, 64, 128, 1, 4, 4]}
+{"kind": "sk_w4a16", "shape": "gdn_in", "M": 32, "N": 8224, "K": 2048, "us": 53.25, "tflops": 20.2, "gbps": 168.0, "cfg": [16, 128, 128, 1, 4, 4]}
+{"kind": "sk_w8a8", "shape": "gdn_in", "M": 32, "N": 8224, "K": 2048, "us": 64.17, "tflops": 16.8, "gbps": 262.5, "cfg": [16, 128, 128, 1, 4, 4]}
+{"kind": "cut_s8", "shape": "gdn_in", "M": 32, "N": 8224, "K": 2048, "us": 50.52, "tflops": 21.3, "gbps": 333.4}
+{"kind": "cublas", "shape": "gdn_in", "M": 64, "N": 8224, "K": 2048, "us": 95.74, "tflops": 22.5, "gbps": 351.8}
+{"kind": "tgemm", "shape": "gdn_in", "M": 64, "N": 8224, "K": 2048, "us": 118.78, "tflops": 18.1, "gbps": 283.6}
+{"kind": "sk_bf16", "shape": "gdn_in", "M": 64, "N": 8224, "K": 2048, "us": 107.01, "tflops": 20.1, "gbps": 314.8, "cfg": [32, 64, 64, 1, 4, 4]}
+{"kind": "sk_w8a16", "shape": "gdn_in", "M": 64, "N": 8224, "K": 2048, "us": 71.34, "tflops": 30.2, "gbps": 236.1, "cfg": [32, 64, 128, 1, 4, 4]}
+{"kind": "sk_w4a16", "shape": "gdn_in", "M": 64, "N": 8224, "K": 2048, "us": 66.4, "tflops": 32.5, "gbps": 134.8, "cfg": [32, 128, 128, 1, 4, 4]}
+{"kind": "sk_w8a8", "shape": "gdn_in", "M": 64, "N": 8224, "K": 2048, "us": 63.49, "tflops": 34.0, "gbps": 265.3, "cfg": [32, 64, 128, 1, 4, 4]}
+{"kind": "cut_s8", "shape": "gdn_in", "M": 64, "N": 8224, "K": 2048, "us": 52.22, "tflops": 41.3, "gbps": 322.5}
+{"kind": "cublas", "shape": "gdn_in", "M": 108, "N": 8224, "K": 2048, "us": 104.45, "tflops": 34.8, "gbps": 322.5}
+{"kind": "tgemm", "shape": "gdn_in", "M": 108, "N": 8224, "K": 2048, "us": 124.42, "tflops": 29.2, "gbps": 270.7}
+{"kind": "sk_bf16", "shape": "gdn_in", "M": 108, "N": 8224, "K": 2048, "us": 119.81, "tflops": 30.4, "gbps": 281.2, "cfg": [128, 128, 64, 1, 8, 4]}
+{"kind": "sk_w8a16", "shape": "gdn_in", "M": 108, "N": 8224, "K": 2048, "us": 110.25, "tflops": 33.0, "gbps": 152.8, "cfg": [32, 64, 128, 1, 4, 4]}
+{"kind": "sk_w4a16", "shape": "gdn_in", "M": 108, "N": 8224, "K": 2048, "us": 111.45, "tflops": 32.6, "gbps": 80.3, "cfg": [16, 64, 128, 1, 4, 4]}
+{"kind": "sk_w8a8", "shape": "gdn_in", "M": 108, "N": 8224, "K": 2048, "us": 74.07, "tflops": 49.1, "gbps": 227.4, "cfg": [32, 64, 128, 1, 4, 4]}
+{"kind": "cut_s8", "shape": "gdn_in", "M": 108, "N": 8224, "K": 2048, "us": 58.03, "tflops": 62.7, "gbps": 290.3}
+{"kind": "cublas", "shape": "gdn_in", "M": 140, "N": 8224, "K": 2048, "us": 181.79, "tflops": 25.9, "gbps": 185.3}
+{"kind": "tgemm", "shape": "gdn_in", "M": 140, "N": 8224, "K": 2048, "us": 207.87, "tflops": 22.7, "gbps": 162.0}
+{"kind": "sk_bf16", "shape": "gdn_in", "M": 140, "N": 8224, "K": 2048, "us": 138.75, "tflops": 34.0, "gbps": 242.8, "cfg": [64, 64, 64, 1, 4, 4]}
+{"kind": "sk_w8a16", "shape": "gdn_in", "M": 140, "N": 8224, "K": 2048, "us": 134.14, "tflops": 35.2, "gbps": 125.6, "cfg": [32, 64, 128, 1, 4, 4]}
+{"kind": "sk_w4a16", "shape": "gdn_in", "M": 140, "N": 8224, "K": 2048, "us": 137.9, "tflops": 34.2, "gbps": 64.9, "cfg": [16, 64, 128, 1, 4, 4]}
+{"kind": "sk_w8a8", "shape": "gdn_in", "M": 140, "N": 8224, "K": 2048, "us": 84.31, "tflops": 55.9, "gbps": 199.8, "cfg": [32, 64, 128, 1, 4, 4]}
+{"kind": "cut_s8", "shape": "gdn_in", "M": 140, "N": 8224, "K": 2048, "us": 74.07, "tflops": 63.7, "gbps": 227.4}
+{"kind": "cublas", "shape": "gdn_in", "M": 172, "N": 8224, "K": 2048, "us": 182.27, "tflops": 31.8, "gbps": 184.8}
+{"kind": "tgemm", "shape": "gdn_in", "M": 172, "N": 8224, "K": 2048, "us": 207.87, "tflops": 27.9, "gbps": 162.0}
+{"kind": "sk_bf16", "shape": "gdn_in", "M": 172, "N": 8224, "K": 2048, "us": 138.24, "tflops": 41.9, "gbps": 243.7, "cfg": [64, 64, 64, 1, 4, 4]}
+{"kind": "sk_w8a16", "shape": "gdn_in", "M": 172, "N": 8224, "K": 2048, "us": 148.14, "tflops": 39.1, "gbps": 113.7, "cfg": [32, 64, 128, 1, 4, 4]}
+{"kind": "sk_w4a16", "shape": "gdn_in", "M": 172, "N": 8224, "K": 2048, "us": 145.07, "tflops": 39.9, "gbps": 61.7, "cfg": [32, 128, 128, 1, 4, 4]}
+{"kind": "sk_w8a8", "shape": "gdn_in", "M": 172, "N": 8224, "K": 2048, "us": 87.38, "tflops": 66.3, "gbps": 192.8, "cfg": [64, 64, 128, 1, 4, 4]}
+{"kind": "cut_s8", "shape": "gdn_in", "M": 172, "N": 8224, "K": 2048, "us": 74.07, "tflops": 78.2, "gbps": 227.4}
+{"kind": "cublas", "shape": "gdn_in", "M": 236, "N": 8224, "K": 2048, "us": 176.13, "tflops": 45.1, "gbps": 191.3}
+{"kind": "tgemm", "shape": "gdn_in", "M": 236, "N": 8224, "K": 2048, "us": 208.38, "tflops": 38.1, "gbps": 161.7}
+{"kind": "sk_bf16", "shape": "gdn_in", "M": 236, "N": 8224, "K": 2048, "us": 173.57, "tflops": 45.8, "gbps": 194.1, "cfg": [64, 64, 64, 1, 4, 4]}
+{"kind": "sk_w8a16", "shape": "gdn_in", "M": 236, "N": 8224, "K": 2048, "us": 186.71, "tflops": 42.6, "gbps": 90.2, "cfg": [32, 64, 128, 1, 4, 4]}
+{"kind": "sk_w4a16", "shape": "gdn_in", "M": 236, "N": 8224, "K": 2048, "us": 193.54, "tflops": 41.1, "gbps": 46.2, "cfg": [32, 128, 128, 1, 4, 4]}
+{"kind": "sk_w8a8", "shape": "gdn_in", "M": 236, "N": 8224, "K": 2048, "us": 109.23, "tflops": 72.8, "gbps": 154.2, "cfg": [64, 64, 128, 1, 4, 4]}
+{"kind": "cut_s8", "shape": "gdn_in", "M": 236, "N": 8224, "K": 2048, "us": 93.53, "tflops": 85.0, "gbps": 180.1}
+{"kind": "cublas", "shape": "gdn_in", "M": 364, "N": 8224, "K": 2048, "us": 337.41, "tflops": 36.3, "gbps": 99.8}
+{"kind": "tgemm", "shape": "gdn_in", "M": 364, "N": 8224, "K": 2048, "us": 258.05, "tflops": 47.5, "gbps": 130.5}
+{"kind": "sk_bf16", "shape": "gdn_in", "M": 364, "N": 8224, "K": 2048, "us": 234.5, "tflops": 52.3, "gbps": 143.7, "cfg": [64, 64, 64, 1, 4, 4]}
+{"kind": "sk_w8a16", "shape": "gdn_in", "M": 364, "N": 8224, "K": 2048, "us": 271.02, "tflops": 45.2, "gbps": 62.1, "cfg": [32, 64, 128, 1, 4, 4]}
+{"kind": "sk_w4a16", "shape": "gdn_in", "M": 364, "N": 8224, "K": 2048, "us": 269.48, "tflops": 45.5, "gbps": 33.2, "cfg": [32, 128, 128, 1, 4, 4]}
+{"kind": "sk_w8a8", "shape": "gdn_in", "M": 364, "N": 8224, "K": 2048, "us": 147.79, "tflops": 83.0, "gbps": 114.0, "cfg": [64, 64, 128, 1, 4, 4]}
+{"kind": "cut_s8", "shape": "gdn_in", "M": 364, "N": 8224, "K": 2048, "us": 113.66, "tflops": 107.9, "gbps": 148.2}
+{"kind": "cublas", "shape": "gdn_in", "M": 508, "N": 8224, "K": 2048, "us": 342.02, "tflops": 50.0, "gbps": 98.5}
+{"kind": "tgemm", "shape": "gdn_in", "M": 508, "N": 8224, "K": 2048, "us": 344.06, "tflops": 49.7, "gbps": 97.9}
+{"kind": "sk_bf16", "shape": "gdn_in", "M": 508, "N": 8224, "K": 2048, "us": 301.55, "tflops": 56.7, "gbps": 111.7, "cfg": [64, 64, 64, 1, 4, 4]}
+{"kind": "sk_w8a16", "shape": "gdn_in", "M": 508, "N": 8224, "K": 2048, "us": 351.91, "tflops": 48.6, "gbps": 47.9, "cfg": [32, 64, 128, 1, 4, 4]}
+{"kind": "sk_w4a16", "shape": "gdn_in", "M": 508, "N": 8224, "K": 2048, "us": 348.33, "tflops": 49.1, "gbps": 25.7, "cfg": [32, 128, 128, 1, 4, 4]}
+{"kind": "sk_w8a8", "shape": "gdn_in", "M": 508, "N": 8224, "K": 2048, "us": 188.07, "tflops": 91.0, "gbps": 89.6, "cfg": [64, 64, 128, 1, 4, 4]}
+{"kind": "cut_s8", "shape": "gdn_in", "M": 508, "N": 8224, "K": 2048, "us": 153.26, "tflops": 111.7, "gbps": 109.9}
+{"kind": "cublas", "shape": "gdn_in", "M": 829, "N": 8224, "K": 2048, "us": 504.83, "tflops": 55.3, "gbps": 66.7}
+{"kind": "tgemm", "shape": "gdn_in", "M": 829, "N": 8224, "K": 2048, "us": 500.22, "tflops": 55.8, "gbps": 67.3}
+{"kind": "sk_bf16", "shape": "gdn_in", "M": 829, "N": 8224, "K": 2048, "us": 468.45, "tflops": 59.6, "gbps": 71.9, "cfg": [64, 64, 64, 1, 4, 4]}
+{"kind": "sk_w8a16", "shape": "gdn_in", "M": 829, "N": 8224, "K": 2048, "us": 555.35, "tflops": 50.3, "gbps": 30.3, "cfg": [32, 64, 128, 1, 4, 4]}
+{"kind": "sk_w4a16", "shape": "gdn_in", "M": 829, "N": 8224, "K": 2048, "us": 565.93, "tflops": 49.3, "gbps": 15.8, "cfg": [32, 128, 128, 1, 4, 4]}
+{"kind": "sk_w8a8", "shape": "gdn_in", "M": 829, "N": 8224, "K": 2048, "us": 291.49, "tflops": 95.8, "gbps": 57.8, "cfg": [64, 64, 128, 1, 4, 4]}
+{"kind": "cut_s8", "shape": "gdn_in", "M": 829, "N": 8224, "K": 2048, "us": 233.14, "tflops": 119.8, "gbps": 72.2}
+{"kind": "cublas", "shape": "attn_in", "M": 16, "N": 5120, "K": 2048, "us": 61.1, "tflops": 5.5, "gbps": 343.2}
+{"kind": "tgemm", "shape": "attn_in", "M": 16, "N": 5120, "K": 2048, "us": 67.23, "tflops": 5.0, "gbps": 311.9}
+{"kind": "sk_bf16", "shape": "attn_in", "M": 16, "N": 5120, "K": 2048, "us": 65.54, "tflops": 5.1, "gbps": 320.0, "cfg": [16, 128, 64, 1, 4, 4]}
+{"kind": "sk_w8a16", "shape": "attn_in", "M": 16, "N": 5120, "K": 2048, "us": 50.38, "tflops": 6.7, "gbps": 208.1, "cfg": [16, 128, 128, 1, 4, 4]}
+{"kind": "sk_w4a16", "shape": "attn_in", "M": 16, "N": 5120, "K": 2048, "us": 48.03, "tflops": 7.0, "gbps": 116.0, "cfg": [16, 128, 128, 1, 4, 4]}
+{"kind": "sk_w8a8", "shape": "attn_in", "M": 16, "N": 5120, "K": 2048, "us": 49.77, "tflops": 6.7, "gbps": 210.7, "cfg": [16, 128, 128, 1, 4, 4]}
+{"kind": "cut_s8", "shape": "attn_in", "M": 16, "N": 5120, "K": 2048, "us": 32.97, "tflops": 10.2, "gbps": 318.0}
+{"kind": "cublas", "shape": "attn_in", "M": 32, "N": 5120, "K": 2048, "us": 59.73, "tflops": 11.2, "gbps": 351.1}
+{"kind": "tgemm", "shape": "attn_in", "M": 32, "N": 5120, "K": 2048, "us": 66.9, "tflops": 10.0, "gbps": 313.5}
+{"kind": "sk_bf16", "shape": "attn_in", "M": 32, "N": 5120, "K": 2048, "us": 68.27, "tflops": 9.8, "gbps": 307.2, "cfg": [32, 64, 64, 1, 4, 4]}
+{"kind": "sk_w8a16", "shape": "attn_in", "M": 32, "N": 5120, "K": 2048, "us": 49.15, "tflops": 13.7, "gbps": 213.3, "cfg": [16, 64, 128, 1, 4, 4]}
+{"kind": "sk_w4a16", "shape": "attn_in", "M": 32, "N": 5120, "K": 2048, "us": 47.72, "tflops": 14.1, "gbps": 116.7, "cfg": [16, 64, 128, 1, 4, 4]}
+{"kind": "sk_w8a8", "shape": "attn_in", "M": 32, "N": 5120, "K": 2048, "us": 51.2, "tflops": 13.1, "gbps": 204.8, "cfg": [32, 128, 128, 1, 4, 4]}
+{"kind": "cut_s8", "shape": "attn_in", "M": 32, "N": 5120, "K": 2048, "us": 33.59, "tflops": 20.0, "gbps": 312.2}
+{"kind": "cublas", "shape": "attn_in", "M": 64, "N": 5120, "K": 2048, "us": 60.75, "tflops": 22.1, "gbps": 345.2}
+{"kind": "tgemm", "shape": "attn_in", "M": 64, "N": 5120, "K": 2048, "us": 68.61, "tflops": 19.6, "gbps": 305.7}
+{"kind": "sk_bf16", "shape": "attn_in", "M": 64, "N": 5120, "K": 2048, "us": 66.56, "tflops": 20.2, "gbps": 315.1, "cfg": [32, 64, 64, 1, 4, 4]}
+{"kind": "sk_w8a16", "shape": "attn_in", "M": 64, "N": 5120, "K": 2048, "us": 51.4, "tflops": 26.1, "gbps": 204.0, "cfg": [32, 128, 128, 1, 4, 4]}
+{"kind": "sk_w4a16", "shape": "attn_in", "M": 64, "N": 5120, "K": 2048, "us": 48.95, "tflops": 27.4, "gbps": 113.8, "cfg": [32, 64, 128, 1, 4, 4]}
+{"kind": "sk_w8a8", "shape": "attn_in", "M": 64, "N": 5120, "K": 2048, "us": 49.97, "tflops": 26.9, "gbps": 209.8, "cfg": [32, 128, 128, 1, 4, 4]}
+{"kind": "cut_s8", "shape": "attn_in", "M": 64, "N": 5120, "K": 2048, "us": 34.41, "tflops": 39.0, "gbps": 304.8}
+{"kind": "cublas", "shape": "attn_in", "M": 108, "N": 5120, "K": 2048, "us": 64.51, "tflops": 35.1, "gbps": 325.1}
+{"kind": "tgemm", "shape": "attn_in", "M": 108, "N": 5120, "K": 2048, "us": 74.75, "tflops": 30.3, "gbps": 280.5}
+{"kind": "sk_bf16", "shape": "attn_in", "M": 108, "N": 5120, "K": 2048, "us": 71.0, "tflops": 31.9, "gbps": 295.4, "cfg": [64, 64, 64, 1, 4, 4]}
+{"kind": "sk_w8a16", "shape": "attn_in", "M": 108, "N": 5120, "K": 2048, "us": 67.99, "tflops": 33.3, "gbps": 154.2, "cfg": [64, 128, 128, 1, 4, 4]}
+{"kind": "sk_w4a16", "shape": "attn_in", "M": 108, "N": 5120, "K": 2048, "us": 62.26, "tflops": 36.4, "gbps": 89.5, "cfg": [32, 128, 128, 1, 4, 4]}
+{"kind": "sk_w8a8", "shape": "attn_in", "M": 108, "N": 5120, "K": 2048, "us": 50.79, "tflops": 44.6, "gbps": 206.5, "cfg": [64, 64, 128, 1, 4, 4]}
+{"kind": "cut_s8", "shape": "attn_in", "M": 108, "N": 5120, "K": 2048, "us": 35.64, "tflops": 63.6, "gbps": 294.3}
+{"kind": "cublas", "shape": "attn_in", "M": 140, "N": 5120, "K": 2048, "us": 112.64, "tflops": 26.1, "gbps": 186.2}
+{"kind": "tgemm", "shape": "attn_in", "M": 140, "N": 5120, "K": 2048, "us": 110.25, "tflops": 26.6, "gbps": 190.2}
+{"kind": "sk_bf16", "shape": "attn_in", "M": 140, "N": 5120, "K": 2048, "us": 86.36, "tflops": 34.0, "gbps": 242.8, "cfg": [64, 64, 64, 1, 4, 4]}
+{"kind": "sk_w8a16", "shape": "attn_in", "M": 140, "N": 5120, "K": 2048, "us": 80.08, "tflops": 36.7, "gbps": 130.9, "cfg": [32, 64, 128, 1, 4, 4]}
+{"kind": "sk_w4a16", "shape": "attn_in", "M": 140, "N": 5120, "K": 2048, "us": 86.12, "tflops": 34.1, "gbps": 64.7, "cfg": [16, 64, 128, 1, 4, 4]}
+{"kind": "sk_w8a8", "shape": "attn_in", "M": 140, "N": 5120, "K": 2048, "us": 53.86, "tflops": 54.5, "gbps": 194.7, "cfg": [32, 64, 128, 1, 4, 4]}
+{"kind": "cut_s8", "shape": "attn_in", "M": 140, "N": 5120, "K": 2048, "us": 50.38, "tflops": 58.3, "gbps": 208.1}
+{"kind": "cublas", "shape": "attn_in", "M": 172, "N": 5120, "K": 2048, "us": 99.33, "tflops": 36.3, "gbps": 211.1}
+{"kind": "tgemm", "shape": "attn_in", "M": 172, "N": 5120, "K": 2048, "us": 110.93, "tflops": 32.5, "gbps": 189.0}
+{"kind": "sk_bf16", "shape": "attn_in", "M": 172, "N": 5120, "K": 2048, "us": 87.38, "tflops": 41.3, "gbps": 240.0, "cfg": [64, 64, 64, 1, 4, 4]}
+{"kind": "sk_w8a16", "shape": "attn_in", "M": 172, "N": 5120, "K": 2048, "us": 91.55, "tflops": 39.4, "gbps": 114.5, "cfg": [32, 64, 128, 1, 4, 4]}
+{"kind": "sk_w4a16", "shape": "attn_in", "M": 172, "N": 5120, "K": 2048, "us": 92.88, "tflops": 38.8, "gbps": 60.0, "cfg": [32, 128, 128, 1, 4, 4]}
+{"kind": "sk_w8a8", "shape": "attn_in", "M": 172, "N": 5120, "K": 2048, "us": 58.57, "tflops": 61.6, "gbps": 179.0, "cfg": [32, 64, 128, 1, 4, 4]}
+{"kind": "cut_s8", "shape": "attn_in", "M": 172, "N": 5120, "K": 2048, "us": 50.79, "tflops": 71.0, "gbps": 206.5}
+{"kind": "cublas", "shape": "attn_in", "M": 236, "N": 5120, "K": 2048, "us": 130.39, "tflops": 38.0, "gbps": 160.8}
+{"kind": "tgemm", "shape": "attn_in", "M": 236, "N": 5120, "K": 2048, "us": 110.59, "tflops": 44.8, "gbps": 189.6}
+{"kind": "sk_bf16", "shape": "attn_in", "M": 236, "N": 5120, "K": 2048, "us": 104.11, "tflops": 47.5, "gbps": 201.4, "cfg": [128, 128, 64, 1, 8, 4]}
+{"kind": "sk_w8a16", "shape": "attn_in", "M": 236, "N": 5120, "K": 2048, "us": 117.15, "tflops": 42.2, "gbps": 89.5, "cfg": [32, 64, 128, 1, 4, 4]}
+{"kind": "sk_w4a16", "shape": "attn_in", "M": 236, "N": 5120, "K": 2048, "us": 113.15, "tflops": 43.7, "gbps": 49.2, "cfg": [32, 128, 128, 1, 4, 4]}
+{"kind": "sk_w8a8", "shape": "attn_in", "M": 236, "N": 5120, "K": 2048, "us": 65.33, "tflops": 75.8, "gbps": 160.5, "cfg": [128, 128, 128, 1, 8, 4]}
+{"kind": "cut_s8", "shape": "attn_in", "M": 236, "N": 5120, "K": 2048, "us": 50.38, "tflops": 98.2, "gbps": 208.1}
+{"kind": "cublas", "shape": "attn_in", "M": 364, "N": 5120, "K": 2048, "us": 172.71, "tflops": 44.2, "gbps": 121.4}
+{"kind": "tgemm", "shape": "attn_in", "M": 364, "N": 5120, "K": 2048, "us": 158.72, "tflops": 48.1, "gbps": 132.1}
+{"kind": "sk_bf16", "shape": "attn_in", "M": 364, "N": 5120, "K": 2048, "us": 147.11, "tflops": 51.9, "gbps": 142.6, "cfg": [64, 64, 64, 1, 4, 4]}
+{"kind": "sk_w8a16", "shape": "attn_in", "M": 364, "N": 5120, "K": 2048, "us": 168.55, "tflops": 45.3, "gbps": 62.2, "cfg": [32, 64, 128, 1, 4, 4]}
+{"kind": "sk_w4a16", "shape": "attn_in", "M": 364, "N": 5120, "K": 2048, "us": 166.29, "tflops": 45.9, "gbps": 33.5, "cfg": [32, 128, 128, 1, 4, 4]}
+{"kind": "sk_w8a8", "shape": "attn_in", "M": 364, "N": 5120, "K": 2048, "us": 92.77, "tflops": 82.3, "gbps": 113.0, "cfg": [64, 64, 128, 1, 4, 4]}
+{"kind": "cut_s8", "shape": "attn_in", "M": 364, "N": 5120, "K": 2048, "us": 70.04, "tflops": 109.0, "gbps": 149.7}
+{"kind": "cublas", "shape": "attn_in", "M": 508, "N": 5120, "K": 2048, "us": 174.42, "tflops": 61.1, "gbps": 120.2}
+{"kind": "tgemm", "shape": "attn_in", "M": 508, "N": 5120, "K": 2048, "us": 180.57, "tflops": 59.0, "gbps": 116.1}
+{"kind": "sk_bf16", "shape": "attn_in", "M": 508, "N": 5120, "K": 2048, "us": 191.49, "tflops": 55.6, "gbps": 109.5, "cfg": [64, 64, 64, 1, 4, 4]}
+{"kind": "sk_w8a16", "shape": "attn_in", "M": 508, "N": 5120, "K": 2048, "us": 221.39, "tflops": 48.1, "gbps": 47.4, "cfg": [32, 64, 128, 1, 4, 4]}
+{"kind": "sk_w4a16", "shape": "attn_in", "M": 508, "N": 5120, "K": 2048, "us": 217.6, "tflops": 49.0, "gbps": 25.6, "cfg": [32, 128, 128, 1, 4, 4]}
+{"kind": "sk_w8a8", "shape": "attn_in", "M": 508, "N": 5120, "K": 2048, "us": 118.58, "tflops": 89.8, "gbps": 88.4, "cfg": [64, 64, 128, 1, 4, 4]}
+{"kind": "cut_s8", "shape": "attn_in", "M": 508, "N": 5120, "K": 2048, "us": 90.93, "tflops": 117.2, "gbps": 115.3}
+{"kind": "cublas", "shape": "attn_in", "M": 829, "N": 5120, "K": 2048, "us": 335.87, "tflops": 51.8, "gbps": 62.4}
+{"kind": "tgemm", "shape": "attn_in", "M": 829, "N": 5120, "K": 2048, "us": 334.85, "tflops": 51.9, "gbps": 62.6}
+{"kind": "sk_bf16", "shape": "attn_in", "M": 829, "N": 5120, "K": 2048, "us": 294.57, "tflops": 59.0, "gbps": 71.2, "cfg": [64, 64, 64, 1, 4, 4]}
+{"kind": "sk_w8a16", "shape": "attn_in", "M": 829, "N": 5120, "K": 2048, "us": 348.35, "tflops": 49.9, "gbps": 30.1, "cfg": [32, 64, 128, 1, 4, 4]}
+{"kind": "sk_w4a16", "shape": "attn_in", "M": 829, "N": 5120, "K": 2048, "us": 344.78, "tflops": 50.4, "gbps": 16.2, "cfg": [32, 128, 128, 1, 4, 4]}
+{"kind": "sk_w8a8", "shape": "attn_in", "M": 829, "N": 5120, "K": 2048, "us": 184.93, "tflops": 94.0, "gbps": 56.7, "cfg": [64, 64, 128, 1, 4, 4]}
+{"kind": "cut_s8", "shape": "attn_in", "M": 829, "N": 5120, "K": 2048, "us": 151.76, "tflops": 114.6, "gbps": 69.1}
+{"kind": "cublas", "shape": "out", "M": 16, "N": 2048, "K": 2048, "us": 26.11, "tflops": 5.1, "gbps": 321.3}
+{"kind": "tgemm", "shape": "out", "M": 16, "N": 2048, "K": 2048, "us": 54.27, "tflops": 2.5, "gbps": 154.6}
+{"kind": "sk_bf16", "shape": "out", "M": 16, "N": 2048, "K": 2048, "us": 42.84, "tflops": 3.1, "gbps": 195.8, "cfg": [16, 128, 64, 1, 4, 4]}
+{"kind": "sk_w8a16", "shape": "out", "M": 16, "N": 2048, "K": 2048, "us": 38.91, "tflops": 3.4, "gbps": 107.8, "cfg": [16, 64, 128, 1, 4, 4]}
+{"kind": "sk_w4a16", "shape": "out", "M": 16, "N": 2048, "K": 2048, "us": 37.25, "tflops": 3.6, "gbps": 59.8, "cfg": [16, 64, 128, 1, 4, 4]}
+{"kind": "sk_w8a8", "shape": "out", "M": 16, "N": 2048, "K": 2048, "us": 45.91, "tflops": 2.9, "gbps": 91.4, "cfg": [16, 128, 128, 1, 4, 4]}
+{"kind": "cut_s8", "shape": "out", "M": 16, "N": 2048, "K": 2048, "us": 25.77, "tflops": 5.2, "gbps": 162.8}
+{"kind": "cublas", "shape": "out", "M": 32, "N": 2048, "K": 2048, "us": 30.21, "tflops": 8.9, "gbps": 277.7}
+{"kind": "tgemm", "shape": "out", "M": 32, "N": 2048, "K": 2048, "us": 54.27, "tflops": 4.9, "gbps": 154.6}
+{"kind": "sk_bf16", "shape": "out", "M": 32, "N": 2048, "K": 2048, "us": 41.81, "tflops": 6.4, "gbps": 200.6, "cfg": [16, 128, 64, 1, 4, 4]}
+{"kind": "sk_w8a16", "shape": "out", "M": 32, "N": 2048, "K": 2048, "us": 42.5, "tflops": 6.3, "gbps": 98.7, "cfg": [32, 128, 128, 1, 4, 4]}
+{"kind": "sk_w4a16", "shape": "out", "M": 32, "N": 2048, "K": 2048, "us": 37.12, "tflops": 7.2, "gbps": 60.0, "cfg": [16, 128, 128, 1, 4, 4]}
+{"kind": "sk_w8a8", "shape": "out", "M": 32, "N": 2048, "K": 2048, "us": 45.65, "tflops": 5.9, "gbps": 91.9, "cfg": [16, 128, 128, 1, 4, 4]}
+{"kind": "cut_s8", "shape": "out", "M": 32, "N": 2048, "K": 2048, "us": 25.77, "tflops": 10.4, "gbps": 162.8}
+{"kind": "cublas", "shape": "out", "M": 64, "N": 2048, "K": 2048, "us": 33.79, "tflops": 15.9, "gbps": 248.2}
+{"kind": "tgemm", "shape": "out", "M": 64, "N": 2048, "K": 2048, "us": 54.1, "tflops": 9.9, "gbps": 155.1}
+{"kind": "sk_bf16", "shape": "out", "M": 64, "N": 2048, "K": 2048, "us": 44.54, "tflops": 12.1, "gbps": 188.3, "cfg": [32, 128, 64, 1, 4, 4]}
+{"kind": "sk_w8a16", "shape": "out", "M": 64, "N": 2048, "K": 2048, "us": 39.59, "tflops": 13.6, "gbps": 105.9, "cfg": [16, 128, 128, 1, 4, 4]}
+{"kind": "sk_w4a16", "shape": "out", "M": 64, "N": 2048, "K": 2048, "us": 36.74, "tflops": 14.6, "gbps": 60.7, "cfg": [16, 128, 128, 1, 4, 4]}
+{"kind": "sk_w8a8", "shape": "out", "M": 64, "N": 2048, "K": 2048, "us": 46.76, "tflops": 11.5, "gbps": 89.7, "cfg": [32, 128, 128, 1, 4, 4]}
+{"kind": "cut_s8", "shape": "out", "M": 64, "N": 2048, "K": 2048, "us": 25.69, "tflops": 20.9, "gbps": 163.3}
+{"kind": "cublas", "shape": "out", "M": 108, "N": 2048, "K": 2048, "us": 29.35, "tflops": 30.9, "gbps": 285.8}
+{"kind": "tgemm", "shape": "out", "M": 108, "N": 2048, "K": 2048, "us": 54.44, "tflops": 16.6, "gbps": 154.1}
+{"kind": "sk_bf16", "shape": "out", "M": 108, "N": 2048, "K": 2048, "us": 45.24, "tflops": 20.0, "gbps": 185.4, "cfg": [32, 128, 64, 1, 4, 4]}
+{"kind": "sk_w8a16", "shape": "out", "M": 108, "N": 2048, "K": 2048, "us": 41.47, "tflops": 21.8, "gbps": 101.1, "cfg": [32, 128, 128, 1, 4, 4]}
+{"kind": "sk_w4a16", "shape": "out", "M": 108, "N": 2048, "K": 2048, "us": 39.25, "tflops": 23.1, "gbps": 56.8, "cfg": [32, 64, 128, 1, 4, 4]}
+{"kind": "sk_w8a8", "shape": "out", "M": 108, "N": 2048, "K": 2048, "us": 48.12, "tflops": 18.8, "gbps": 87.2, "cfg": [16, 128, 128, 1, 4, 4]}
+{"kind": "cut_s8", "shape": "out", "M": 108, "N": 2048, "K": 2048, "us": 26.03, "tflops": 34.8, "gbps": 161.2}
+{"kind": "cublas", "shape": "out", "M": 140, "N": 2048, "K": 2048, "us": 48.64, "tflops": 24.1, "gbps": 172.5}
+{"kind": "tgemm", "shape": "out", "M": 140, "N": 2048, "K": 2048, "us": 55.13, "tflops": 21.3, "gbps": 152.2}
+{"kind": "sk_bf16", "shape": "out", "M": 140, "N": 2048, "K": 2048, "us": 43.18, "tflops": 27.2, "gbps": 194.3, "cfg": [32, 128, 64, 1, 4, 4]}
+{"kind": "sk_w8a16", "shape": "out", "M": 140, "N": 2048, "K": 2048, "us": 38.74, "tflops": 30.3, "gbps": 108.3, "cfg": [32, 64, 128, 1, 4, 4]}
+{"kind": "sk_w4a16", "shape": "out", "M": 140, "N": 2048, "K": 2048, "us": 38.06, "tflops": 30.9, "gbps": 58.5, "cfg": [32, 64, 128, 1, 4, 4]}
+{"kind": "sk_w8a8", "shape": "out", "M": 140, "N": 2048, "K": 2048, "us": 48.13, "tflops": 24.4, "gbps": 87.1, "cfg": [32, 128, 128, 1, 4, 4]}
+{"kind": "cut_s8", "shape": "out", "M": 140, "N": 2048, "K": 2048, "us": 26.03, "tflops": 45.1, "gbps": 161.2}
+{"kind": "cublas", "shape": "out", "M": 172, "N": 2048, "K": 2048, "us": 62.29, "tflops": 23.2, "gbps": 134.7}
+{"kind": "tgemm", "shape": "out", "M": 172, "N": 2048, "K": 2048, "us": 55.98, "tflops": 25.8, "gbps": 149.9}
+{"kind": "sk_bf16", "shape": "out", "M": 172, "N": 2048, "K": 2048, "us": 54.27, "tflops": 26.6, "gbps": 154.6, "cfg": [64, 64, 64, 1, 4, 4]}
+{"kind": "sk_w8a16", "shape": "out", "M": 172, "N": 2048, "K": 2048, "us": 45.74, "tflops": 31.5, "gbps": 91.7, "cfg": [32, 64, 128, 1, 4, 4]}
+{"kind": "sk_w4a16", "shape": "out", "M": 172, "N": 2048, "K": 2048, "us": 50.39, "tflops": 28.6, "gbps": 44.2, "cfg": [16, 64, 128, 1, 4, 4]}
+{"kind": "sk_w8a8", "shape": "out", "M": 172, "N": 2048, "K": 2048, "us": 47.53, "tflops": 30.4, "gbps": 88.2, "cfg": [16, 64, 128, 1, 4, 4]}
+{"kind": "cut_s8", "shape": "out", "M": 172, "N": 2048, "K": 2048, "us": 25.94, "tflops": 55.6, "gbps": 161.7}
+{"kind": "cublas", "shape": "out", "M": 236, "N": 2048, "K": 2048, "us": 48.3, "tflops": 41.0, "gbps": 173.7}
+{"kind": "tgemm", "shape": "out", "M": 236, "N": 2048, "K": 2048, "us": 55.3, "tflops": 35.8, "gbps": 151.7}
+{"kind": "sk_bf16", "shape": "out", "M": 236, "N": 2048, "K": 2048, "us": 54.78, "tflops": 36.1, "gbps": 153.1, "cfg": [64, 64, 64, 1, 4, 4]}
+{"kind": "sk_w8a16", "shape": "out", "M": 236, "N": 2048, "K": 2048, "us": 56.83, "tflops": 34.8, "gbps": 73.8, "cfg": [32, 64, 128, 1, 4, 4]}
+{"kind": "sk_w4a16", "shape": "out", "M": 236, "N": 2048, "K": 2048, "us": 57.3, "tflops": 34.5, "gbps": 38.9, "cfg": [16, 64, 128, 1, 4, 4]}
+{"kind": "sk_w8a8", "shape": "out", "M": 236, "N": 2048, "K": 2048, "us": 49.4, "tflops": 40.1, "gbps": 84.9, "cfg": [64, 128, 128, 1, 4, 4]}
+{"kind": "cut_s8", "shape": "out", "M": 236, "N": 2048, "K": 2048, "us": 26.2, "tflops": 75.6, "gbps": 160.1}
+{"kind": "cublas", "shape": "out", "M": 364, "N": 2048, "K": 2048, "us": 70.66, "tflops": 43.2, "gbps": 118.7}
+{"kind": "tgemm", "shape": "out", "M": 364, "N": 2048, "K": 2048, "us": 102.23, "tflops": 29.9, "gbps": 82.1}
+{"kind": "sk_bf16", "shape": "out", "M": 364, "N": 2048, "K": 2048, "us": 75.78, "tflops": 40.3, "gbps": 110.7, "cfg": [64, 64, 64, 1, 4, 4]}
+{"kind": "sk_w8a16", "shape": "out", "M": 364, "N": 2048, "K": 2048, "us": 71.25, "tflops": 42.9, "gbps": 58.9, "cfg": [32, 64, 128, 1, 4, 4]}
+{"kind": "sk_w4a16", "shape": "out", "M": 364, "N": 2048, "K": 2048, "us": 84.14, "tflops": 36.3, "gbps": 26.5, "cfg": [32, 64, 128, 1, 4, 4]}
+{"kind": "sk_w8a8", "shape": "out", "M": 364, "N": 2048, "K": 2048, "us": 48.3, "tflops": 63.2, "gbps": 86.8, "cfg": [64, 64, 128, 1, 4, 4]}
+{"kind": "cut_s8", "shape": "out", "M": 364, "N": 2048, "K": 2048, "us": 46.34, "tflops": 65.9, "gbps": 90.5}
+{"kind": "cublas", "shape": "out", "M": 508, "N": 2048, "K": 2048, "us": 91.48, "tflops": 46.6, "gbps": 91.7}
+{"kind": "tgemm", "shape": "out", "M": 508, "N": 2048, "K": 2048, "us": 92.16, "tflops": 46.2, "gbps": 91.0}
+{"kind": "sk_bf16", "shape": "out", "M": 508, "N": 2048, "K": 2048, "us": 95.23, "tflops": 44.7, "gbps": 88.1, "cfg": [64, 64, 64, 1, 4, 4]}
+{"kind": "sk_w8a16", "shape": "out", "M": 508, "N": 2048, "K": 2048, "us": 94.38, "tflops": 45.2, "gbps": 44.4, "cfg": [32, 64, 128, 1, 4, 4]}
+{"kind": "sk_w4a16", "shape": "out", "M": 508, "N": 2048, "K": 2048, "us": 109.87, "tflops": 38.8, "gbps": 20.3, "cfg": [32, 128, 128, 1, 4, 4]}
+{"kind": "sk_w8a8", "shape": "out", "M": 508, "N": 2048, "K": 2048, "us": 57.51, "tflops": 74.1, "gbps": 72.9, "cfg": [128, 128, 128, 1, 8, 4]}
+{"kind": "cut_s8", "shape": "out", "M": 508, "N": 2048, "K": 2048, "us": 46.76, "tflops": 91.1, "gbps": 89.7}
+{"kind": "cublas", "shape": "out", "M": 829, "N": 2048, "K": 2048, "us": 166.23, "tflops": 41.8, "gbps": 50.5}
+{"kind": "tgemm", "shape": "out", "M": 829, "N": 2048, "K": 2048, "us": 168.79, "tflops": 41.2, "gbps": 49.7}
+{"kind": "sk_bf16", "shape": "out", "M": 829, "N": 2048, "K": 2048, "us": 136.19, "tflops": 51.1, "gbps": 61.6, "cfg": [64, 64, 64, 1, 4, 4]}
+{"kind": "sk_w8a16", "shape": "out", "M": 829, "N": 2048, "K": 2048, "us": 141.99, "tflops": 49.0, "gbps": 29.5, "cfg": [32, 64, 128, 1, 4, 4]}
+{"kind": "sk_w4a16", "shape": "out", "M": 829, "N": 2048, "K": 2048, "us": 162.39, "tflops": 42.8, "gbps": 13.7, "cfg": [32, 128, 128, 1, 4, 4]}
+{"kind": "sk_w8a8", "shape": "out", "M": 829, "N": 2048, "K": 2048, "us": 84.39, "tflops": 82.4, "gbps": 49.7, "cfg": [64, 64, 128, 1, 4, 4]}
+{"kind": "cut_s8", "shape": "out", "M": 829, "N": 2048, "K": 2048, "us": 67.5, "tflops": 103.0, "gbps": 62.1}
+{"kind": "cublas", "shape": "gate_up", "M": 16, "N": 12288, "K": 2048, "us": 127.49, "tflops": 6.3, "gbps": 394.8}
+{"kind": "tgemm", "shape": "gate_up", "M": 16, "N": 12288, "K": 2048, "us": 164.86, "tflops": 4.9, "gbps": 305.3}
+{"kind": "sk_bf16", "shape": "gate_up", "M": 16, "N": 12288, "K": 2048, "us": 139.26, "tflops": 5.8, "gbps": 361.4, "cfg": [16, 128, 64, 1, 4, 4]}
+{"kind": "sk_w8a16", "shape": "gate_up", "M": 16, "N": 12288, "K": 2048, "us": 91.65, "tflops": 8.8, "gbps": 274.6, "cfg": [16, 64, 128, 1, 4, 4]}
+{"kind": "sk_w4a16", "shape": "gate_up", "M": 16, "N": 12288, "K": 2048, "us": 59.11, "tflops": 13.6, "gbps": 226.2, "cfg": [16, 64, 128, 1, 4, 4]}
+{"kind": "sk_w8a8", "shape": "gate_up", "M": 16, "N": 12288, "K": 2048, "us": 87.55, "tflops": 9.2, "gbps": 287.4, "cfg": [16, 64, 128, 1, 4, 4]}
+{"kind": "cut_s8", "shape": "gate_up", "M": 16, "N": 12288, "K": 2048, "us": 75.74, "tflops": 10.6, "gbps": 332.2}
+{"kind": "cublas", "shape": "gate_up", "M": 32, "N": 12288, "K": 2048, "us": 146.43, "tflops": 11.0, "gbps": 343.7}
+{"kind": "tgemm", "shape": "gate_up", "M": 32, "N": 12288, "K": 2048, "us": 166.4, "tflops": 9.7, "gbps": 302.5}
+{"kind": "sk_bf16", "shape": "gate_up", "M": 32, "N": 12288, "K": 2048, "us": 137.22, "tflops": 11.7, "gbps": 366.8, "cfg": [16, 64, 64, 1, 4, 4]}
+{"kind": "sk_w8a16", "shape": "gate_up", "M": 32, "N": 12288, "K": 2048, "us": 94.21, "tflops": 17.1, "gbps": 267.1, "cfg": [16, 64, 128, 1, 4, 4]}
+{"kind": "sk_w4a16", "shape": "gate_up", "M": 32, "N": 12288, "K": 2048, "us": 69.63, "tflops": 23.1, "gbps": 192.0, "cfg": [32, 64, 128, 1, 4, 4]}
+{"kind": "sk_w8a8", "shape": "gate_up", "M": 32, "N": 12288, "K": 2048, "us": 88.06, "tflops": 18.3, "gbps": 285.8, "cfg": [16, 64, 128, 1, 4, 4]}
+{"kind": "cut_s8", "shape": "gate_up", "M": 32, "N": 12288, "K": 2048, "us": 77.31, "tflops": 20.8, "gbps": 325.5}
+{"kind": "cublas", "shape": "gate_up", "M": 64, "N": 12288, "K": 2048, "us": 147.46, "tflops": 21.8, "gbps": 341.3}
+{"kind": "tgemm", "shape": "gate_up", "M": 64, "N": 12288, "K": 2048, "us": 166.94, "tflops": 19.3, "gbps": 301.5}
+{"kind": "sk_bf16", "shape": "gate_up", "M": 64, "N": 12288, "K": 2048, "us": 143.87, "tflops": 22.4, "gbps": 349.8, "cfg": [32, 64, 64, 1, 4, 4]}
+{"kind": "sk_w8a16", "shape": "gate_up", "M": 64, "N": 12288, "K": 2048, "us": 97.25, "tflops": 33.1, "gbps": 258.8, "cfg": [32, 64, 128, 1, 4, 4]}
+{"kind": "sk_w4a16", "shape": "gate_up", "M": 64, "N": 12288, "K": 2048, "us": 93.18, "tflops": 34.6, "gbps": 143.5, "cfg": [32, 64, 128, 1, 4, 4]}
+{"kind": "sk_w8a8", "shape": "gate_up", "M": 64, "N": 12288, "K": 2048, "us": 94.21, "tflops": 34.2, "gbps": 267.1, "cfg": [32, 64, 128, 1, 4, 4]}
+{"kind": "cut_s8", "shape": "gate_up", "M": 64, "N": 12288, "K": 2048, "us": 80.9, "tflops": 39.8, "gbps": 311.1}
+{"kind": "cublas", "shape": "gate_up", "M": 108, "N": 12288, "K": 2048, "us": 165.89, "tflops": 32.8, "gbps": 303.4}
+{"kind": "tgemm", "shape": "gate_up", "M": 108, "N": 12288, "K": 2048, "us": 170.5, "tflops": 31.9, "gbps": 295.2}
+{"kind": "sk_bf16", "shape": "gate_up", "M": 108, "N": 12288, "K": 2048, "us": 174.59, "tflops": 31.1, "gbps": 288.3, "cfg": [64, 128, 64, 1, 4, 4]}
+{"kind": "sk_w8a16", "shape": "gate_up", "M": 108, "N": 12288, "K": 2048, "us": 159.23, "tflops": 34.1, "gbps": 158.0, "cfg": [32, 64, 128, 1, 4, 4]}
+{"kind": "sk_w4a16", "shape": "gate_up", "M": 108, "N": 12288, "K": 2048, "us": 150.53, "tflops": 36.1, "gbps": 88.8, "cfg": [32, 128, 128, 1, 4, 4]}
+{"kind": "sk_w8a8", "shape": "gate_up", "M": 108, "N": 12288, "K": 2048, "us": 101.89, "tflops": 53.4, "gbps": 247.0, "cfg": [64, 64, 128, 1, 4, 4]}
+{"kind": "cut_s8", "shape": "gate_up", "M": 108, "N": 12288, "K": 2048, "us": 87.04, "tflops": 62.5, "gbps": 289.1}
+{"kind": "cublas", "shape": "gate_up", "M": 140, "N": 12288, "K": 2048, "us": 186.88, "tflops": 37.7, "gbps": 269.3}
+{"kind": "tgemm", "shape": "gate_up", "M": 140, "N": 12288, "K": 2048, "us": 258.05, "tflops": 27.3, "gbps": 195.0}
+{"kind": "sk_bf16", "shape": "gate_up", "M": 140, "N": 12288, "K": 2048, "us": 192.51, "tflops": 36.6, "gbps": 261.4, "cfg": [32, 128, 64, 1, 4, 4]}
+{"kind": "sk_w8a16", "shape": "gate_up", "M": 140, "N": 12288, "K": 2048, "us": 183.3, "tflops": 38.4, "gbps": 137.3, "cfg": [32, 64, 128, 1, 4, 4]}
+{"kind": "sk_w4a16", "shape": "gate_up", "M": 140, "N": 12288, "K": 2048, "us": 174.34, "tflops": 40.4, "gbps": 76.7, "cfg": [32, 128, 128, 1, 4, 4]}
+{"kind": "sk_w8a8", "shape": "gate_up", "M": 140, "N": 12288, "K": 2048, "us": 118.27, "tflops": 59.6, "gbps": 212.8, "cfg": [32, 64, 128, 1, 4, 4]}
+{"kind": "cut_s8", "shape": "gate_up", "M": 140, "N": 12288, "K": 2048, "us": 97.79, "tflops": 72.1, "gbps": 257.3}
+{"kind": "cublas", "shape": "gate_up", "M": 172, "N": 12288, "K": 2048, "us": 186.88, "tflops": 46.3, "gbps": 269.3}
+{"kind": "tgemm", "shape": "gate_up", "M": 172, "N": 12288, "K": 2048, "us": 259.07, "tflops": 33.4, "gbps": 194.3}
+{"kind": "sk_bf16", "shape": "gate_up", "M": 172, "N": 12288, "K": 2048, "us": 199.17, "tflops": 43.5, "gbps": 252.7, "cfg": [64, 64, 64, 1, 4, 4]}
+{"kind": "sk_w8a16", "shape": "gate_up", "M": 172, "N": 12288, "K": 2048, "us": 218.11, "tflops": 39.7, "gbps": 115.4, "cfg": [32, 64, 128, 1, 4, 4]}
+{"kind": "sk_w4a16", "shape": "gate_up", "M": 172, "N": 12288, "K": 2048, "us": 221.18, "tflops": 39.1, "gbps": 60.4, "cfg": [32, 128, 128, 1, 4, 4]}
+{"kind": "sk_w8a8", "shape": "gate_up", "M": 172, "N": 12288, "K": 2048, "us": 127.49, "tflops": 67.9, "gbps": 197.4, "cfg": [64, 64, 128, 1, 4, 4]}
+{"kind": "cut_s8", "shape": "gate_up", "M": 172, "N": 12288, "K": 2048, "us": 98.82, "tflops": 87.6, "gbps": 254.7}
+{"kind": "cublas", "shape": "gate_up", "M": 236, "N": 12288, "K": 2048, "us": 254.98, "tflops": 46.6, "gbps": 197.4}
+{"kind": "tgemm", "shape": "gate_up", "M": 236, "N": 12288, "K": 2048, "us": 261.12, "tflops": 45.5, "gbps": 192.8}
+{"kind": "sk_bf16", "shape": "gate_up", "M": 236, "N": 12288, "K": 2048, "us": 236.99, "tflops": 50.1, "gbps": 212.4, "cfg": [64, 64, 64, 1, 4, 4]}
+{"kind": "sk_w8a16", "shape": "gate_up", "M": 236, "N": 12288, "K": 2048, "us": 278.53, "tflops": 42.6, "gbps": 90.4, "cfg": [32, 64, 128, 1, 4, 4]}
+{"kind": "sk_w4a16", "shape": "gate_up", "M": 236, "N": 12288, "K": 2048, "us": 274.18, "tflops": 43.3, "gbps": 48.8, "cfg": [32, 128, 128, 1, 4, 4]}
+{"kind": "sk_w8a8", "shape": "gate_up", "M": 236, "N": 12288, "K": 2048, "us": 162.82, "tflops": 73.0, "gbps": 154.6, "cfg": [64, 64, 128, 1, 4, 4]}
+{"kind": "cut_s8", "shape": "gate_up", "M": 236, "N": 12288, "K": 2048, "us": 120.32, "tflops": 98.7, "gbps": 209.2}
+{"kind": "cublas", "shape": "gate_up", "M": 364, "N": 12288, "K": 2048, "us": 334.34, "tflops": 54.8, "gbps": 150.5}
+{"kind": "tgemm", "shape": "gate_up", "M": 364, "N": 12288, "K": 2048, "us": 395.26, "tflops": 46.4, "gbps": 127.3}
+{"kind": "sk_bf16", "shape": "gate_up", "M": 364, "N": 12288, "K": 2048, "us": 336.38, "tflops": 54.5, "gbps": 149.6, "cfg": [64, 64, 64, 1, 4, 4]}
+{"kind": "sk_w8a16", "shape": "gate_up", "M": 364, "N": 12288, "K": 2048, "us": 395.78, "tflops": 46.3, "gbps": 63.6, "cfg": [32, 64, 128, 1, 4, 4]}
+{"kind": "sk_w4a16", "shape": "gate_up", "M": 364, "N": 12288, "K": 2048, "us": 402.18, "tflops": 45.6, "gbps": 33.2, "cfg": [32, 128, 128, 1, 4, 4]}
+{"kind": "sk_w8a8", "shape": "gate_up", "M": 364, "N": 12288, "K": 2048, "us": 216.58, "tflops": 84.6, "gbps": 116.2, "cfg": [64, 64, 128, 1, 4, 4]}
+{"kind": "cut_s8", "shape": "gate_up", "M": 364, "N": 12288, "K": 2048, "us": 176.11, "tflops": 104.0, "gbps": 142.9}
+{"kind": "cublas", "shape": "gate_up", "M": 508, "N": 12288, "K": 2048, "us": 411.65, "tflops": 62.1, "gbps": 122.3}
+{"kind": "tgemm", "shape": "gate_up", "M": 508, "N": 12288, "K": 2048, "us": 422.9, "tflops": 60.5, "gbps": 119.0}
+{"kind": "sk_bf16", "shape": "gate_up", "M": 508, "N": 12288, "K": 2048, "us": 437.25, "tflops": 58.5, "gbps": 115.1, "cfg": [64, 64, 64, 1, 4, 4]}
+{"kind": "sk_w8a16", "shape": "gate_up", "M": 508, "N": 12288, "K": 2048, "us": 520.7, "tflops": 49.1, "gbps": 48.3, "cfg": [32, 64, 128, 1, 4, 4]}
+{"kind": "sk_w4a16", "shape": "gate_up", "M": 508, "N": 12288, "K": 2048, "us": 527.1, "tflops": 48.5, "gbps": 25.4, "cfg": [32, 128, 128, 1, 4, 4]}
+{"kind": "sk_w8a8", "shape": "gate_up", "M": 508, "N": 12288, "K": 2048, "us": 276.99, "tflops": 92.3, "gbps": 90.9, "cfg": [64, 64, 128, 1, 4, 4]}
+{"kind": "cut_s8", "shape": "gate_up", "M": 508, "N": 12288, "K": 2048, "us": 216.58, "tflops": 118.1, "gbps": 116.2}
+{"kind": "cublas", "shape": "gate_up", "M": 829, "N": 12288, "K": 2048, "us": 828.91, "tflops": 50.3, "gbps": 60.7}
+{"kind": "tgemm", "shape": "gate_up", "M": 829, "N": 12288, "K": 2048, "us": 736.77, "tflops": 56.6, "gbps": 68.3}
+{"kind": "sk_bf16", "shape": "gate_up", "M": 829, "N": 12288, "K": 2048, "us": 681.98, "tflops": 61.2, "gbps": 73.8, "cfg": [64, 64, 64, 1, 4, 4]}
+{"kind": "sk_w8a16", "shape": "gate_up", "M": 829, "N": 12288, "K": 2048, "us": 823.3, "tflops": 50.7, "gbps": 30.6, "cfg": [32, 64, 128, 1, 4, 4]}
+{"kind": "sk_w4a16", "shape": "gate_up", "M": 829, "N": 12288, "K": 2048, "us": 827.14, "tflops": 50.4, "gbps": 16.2, "cfg": [32, 128, 128, 1, 4, 4]}
+{"kind": "sk_w8a8", "shape": "gate_up", "M": 829, "N": 12288, "K": 2048, "us": 430.08, "tflops": 97.0, "gbps": 58.5, "cfg": [64, 64, 128, 1, 4, 4]}
+{"kind": "cut_s8", "shape": "gate_up", "M": 829, "N": 12288, "K": 2048, "us": 336.9, "tflops": 123.9, "gbps": 74.7}
+{"kind": "cublas", "shape": "down", "M": 16, "N": 2048, "K": 6144, "us": 79.87, "tflops": 5.0, "gbps": 315.1}
+{"kind": "tgemm", "shape": "down", "M": 16, "N": 2048, "K": 6144, "us": 159.23, "tflops": 2.5, "gbps": 158.0}
+{"kind": "sk_bf16", "shape": "down", "M": 16, "N": 2048, "K": 6144, "us": 80.9, "tflops": 5.0, "gbps": 311.1, "cfg": [16, 64, 64, 1, 4, 4]}
+{"kind": "sk_w8a16", "shape": "down", "M": 16, "N": 2048, "K": 6144, "us": 45.31, "tflops": 8.9, "gbps": 277.7, "cfg": [16, 64, 128, 1, 4, 4]}
+{"kind": "sk_w4a16", "shape": "down", "M": 16, "N": 2048, "K": 6144, "us": 60.42, "tflops": 6.7, "gbps": 110.6, "cfg": [16, 64, 128, 1, 4, 4]}
+{"kind": "sk_w8a8", "shape": "down", "M": 16, "N": 2048, "K": 6144, "us": 56.06, "tflops": 7.2, "gbps": 224.4, "cfg": [16, 128, 128, 1, 4, 4]}
+{"kind": "cut_s8", "shape": "down", "M": 16, "N": 2048, "K": 6144, "us": 69.38, "tflops": 5.8, "gbps": 181.4}
+{"kind": "cublas", "shape": "down", "M": 32, "N": 2048, "K": 6144, "us": 77.31, "tflops": 10.4, "gbps": 325.5}
+{"kind": "tgemm", "shape": "down", "M": 32, "N": 2048, "K": 6144, "us": 153.09, "tflops": 5.3, "gbps": 164.4}
+{"kind": "sk_bf16", "shape": "down", "M": 32, "N": 2048, "K": 6144, "us": 80.9, "tflops": 10.0, "gbps": 311.1, "cfg": [16, 64, 64, 1, 4, 4]}
+{"kind": "sk_w8a16", "shape": "down", "M": 32, "N": 2048, "K": 6144, "us": 45.57, "tflops": 17.7, "gbps": 276.1, "cfg": [16, 64, 128, 1, 4, 4]}
+{"kind": "sk_w4a16", "shape": "down", "M": 32, "N": 2048, "K": 6144, "us": 58.37, "tflops": 13.8, "gbps": 114.5, "cfg": [16, 64, 128, 1, 4, 4]}
+{"kind": "sk_w8a8", "shape": "down", "M": 32, "N": 2048, "K": 6144, "us": 52.74, "tflops": 15.3, "gbps": 238.6, "cfg": [32, 64, 128, 1, 4, 4]}
+{"kind": "cut_s8", "shape": "down", "M": 32, "N": 2048, "K": 6144, "us": 69.38, "tflops": 11.6, "gbps": 181.4}
+{"kind": "cublas", "shape": "down", "M": 64, "N": 2048, "K": 6144, "us": 80.9, "tflops": 19.9, "gbps": 311.1}
+{"kind": "tgemm", "shape": "down", "M": 64, "N": 2048, "K": 6144, "us": 153.09, "tflops": 10.5, "gbps": 164.4}
+{"kind": "sk_bf16", "shape": "down", "M": 64, "N": 2048, "K": 6144, "us": 83.46, "tflops": 19.3, "gbps": 301.5, "cfg": [32, 64, 64, 1, 4, 4]}
+{"kind": "sk_w8a16", "shape": "down", "M": 64, "N": 2048, "K": 6144, "us": 56.83, "tflops": 28.3, "gbps": 221.4, "cfg": [32, 64, 128, 1, 4, 4]}
+{"kind": "sk_w4a16", "shape": "down", "M": 64, "N": 2048, "K": 6144, "us": 70.91, "tflops": 22.7, "gbps": 94.3, "cfg": [16, 64, 128, 1, 4, 4]}
+{"kind": "sk_w8a8", "shape": "down", "M": 64, "N": 2048, "K": 6144, "us": 54.27, "tflops": 29.7, "gbps": 231.8, "cfg": [32, 64, 128, 1, 4, 4]}
+{"kind": "cut_s8", "shape": "down", "M": 64, "N": 2048, "K": 6144, "us": 69.63, "tflops": 23.1, "gbps": 180.7}
+{"kind": "cublas", "shape": "down", "M": 108, "N": 2048, "K": 6144, "us": 76.8, "tflops": 35.4, "gbps": 327.7}
+{"kind": "tgemm", "shape": "down", "M": 108, "N": 2048, "K": 6144, "us": 153.09, "tflops": 17.8, "gbps": 164.4}
+{"kind": "sk_bf16", "shape": "down", "M": 108, "N": 2048, "K": 6144, "us": 95.74, "tflops": 28.4, "gbps": 262.8, "cfg": [64, 64, 64, 1, 4, 4]}
+{"kind": "sk_w8a16", "shape": "down", "M": 108, "N": 2048, "K": 6144, "us": 87.3, "tflops": 31.1, "gbps": 144.1, "cfg": [32, 64, 128, 1, 4, 4]}
+{"kind": "sk_w4a16", "shape": "down", "M": 108, "N": 2048, "K": 6144, "us": 89.34, "tflops": 30.4, "gbps": 74.8, "cfg": [16, 64, 128, 1, 4, 4]}
+{"kind": "sk_w8a8", "shape": "down", "M": 108, "N": 2048, "K": 6144, "us": 55.55, "tflops": 48.9, "gbps": 226.5, "cfg": [32, 64, 128, 1, 4, 4]}
+{"kind": "cut_s8", "shape": "down", "M": 108, "N": 2048, "K": 6144, "us": 69.63, "tflops": 39.0, "gbps": 180.7}
+{"kind": "cublas", "shape": "down", "M": 140, "N": 2048, "K": 6144, "us": 109.06, "tflops": 32.3, "gbps": 230.8}
+{"kind": "tgemm", "shape": "down", "M": 140, "N": 2048, "K": 6144, "us": 153.09, "tflops": 23.0, "gbps": 164.4}
+{"kind": "sk_bf16", "shape": "down", "M": 140, "N": 2048, "K": 6144, "us": 97.79, "tflops": 36.0, "gbps": 257.3, "cfg": [32, 128, 64, 1, 4, 4]}
+{"kind": "sk_w8a16", "shape": "down", "M": 140, "N": 2048, "K": 6144, "us": 87.55, "tflops": 40.2, "gbps": 143.7, "cfg": [32, 64, 128, 1, 4, 4]}
+{"kind": "sk_w4a16", "shape": "down", "M": 140, "N": 2048, "K": 6144, "us": 100.35, "tflops": 35.1, "gbps": 66.6, "cfg": [32, 64, 128, 1, 4, 4]}
+{"kind": "sk_w8a8", "shape": "down", "M": 140, "N": 2048, "K": 6144, "us": 59.14, "tflops": 59.6, "gbps": 212.8, "cfg": [32, 64, 128, 1, 4, 4]}
+{"kind": "cut_s8", "shape": "down", "M": 140, "N": 2048, "K": 6144, "us": 69.38, "tflops": 50.8, "gbps": 181.4}
+{"kind": "cublas", "shape": "down", "M": 172, "N": 2048, "K": 6144, "us": 148.99, "tflops": 29.1, "gbps": 168.9}
+{"kind": "tgemm", "shape": "down", "M": 172, "N": 2048, "K": 6144, "us": 152.06, "tflops": 28.5, "gbps": 165.5}
+{"kind": "sk_bf16", "shape": "down", "M": 172, "N": 2048, "K": 6144, "us": 150.02, "tflops": 28.9, "gbps": 167.8, "cfg": [64, 64, 64, 1, 4, 4]}
+{"kind": "sk_w8a16", "shape": "down", "M": 172, "N": 2048, "K": 6144, "us": 125.18, "tflops": 34.6, "gbps": 100.5, "cfg": [32, 64, 128, 1, 4, 4]}
+{"kind": "sk_w4a16", "shape": "down", "M": 172, "N": 2048, "K": 6144, "us": 142.21, "tflops": 30.4, "gbps": 47.0, "cfg": [16, 64, 128, 1, 4, 4]}
+{"kind": "sk_w8a8", "shape": "down", "M": 172, "N": 2048, "K": 6144, "us": 91.39, "tflops": 47.4, "gbps": 137.7, "cfg": [32, 64, 128, 1, 4, 4]}
+{"kind": "cut_s8", "shape": "down", "M": 172, "N": 2048, "K": 6144, "us": 69.12, "tflops": 62.6, "gbps": 182.0}
+{"kind": "cublas", "shape": "down", "M": 236, "N": 2048, "K": 6144, "us": 133.12, "tflops": 44.6, "gbps": 189.0}
+{"kind": "tgemm", "shape": "down", "M": 236, "N": 2048, "K": 6144, "us": 152.58, "tflops": 38.9, "gbps": 164.9}
+{"kind": "sk_bf16", "shape": "down", "M": 236, "N": 2048, "K": 6144, "us": 155.65, "tflops": 38.2, "gbps": 161.7, "cfg": [64, 64, 64, 1, 4, 4]}
+{"kind": "sk_w8a16", "shape": "down", "M": 236, "N": 2048, "K": 6144, "us": 155.39, "tflops": 38.2, "gbps": 81.0, "cfg": [16, 64, 128, 1, 4, 4]}
+{"kind": "sk_w4a16", "shape": "down", "M": 236, "N": 2048, "K": 6144, "us": 164.1, "tflops": 36.2, "gbps": 40.7, "cfg": [16, 64, 128, 1, 4, 4]}
+{"kind": "sk_w8a8", "shape": "down", "M": 236, "N": 2048, "K": 6144, "us": 92.67, "tflops": 64.1, "gbps": 135.8, "cfg": [64, 128, 128, 1, 4, 4]}
+{"kind": "cut_s8", "shape": "down", "M": 236, "N": 2048, "K": 6144, "us": 69.38, "tflops": 85.6, "gbps": 181.4}
+{"kind": "cublas", "shape": "down", "M": 364, "N": 2048, "K": 6144, "us": 182.27, "tflops": 50.3, "gbps": 138.1}
+{"kind": "tgemm", "shape": "down", "M": 364, "N": 2048, "K": 6144, "us": 286.21, "tflops": 32.0, "gbps": 87.9}
+{"kind": "sk_bf16", "shape": "down", "M": 364, "N": 2048, "K": 6144, "us": 211.97, "tflops": 43.2, "gbps": 118.7, "cfg": [64, 64, 64, 1, 4, 4]}
+{"kind": "sk_w8a16", "shape": "down", "M": 364, "N": 2048, "K": 6144, "us": 194.56, "tflops": 47.1, "gbps": 64.7, "cfg": [32, 64, 128, 1, 4, 4]}
+{"kind": "sk_w4a16", "shape": "down", "M": 364, "N": 2048, "K": 6144, "us": 238.72, "tflops": 38.4, "gbps": 28.0, "cfg": [32, 64, 128, 1, 4, 4]}
+{"kind": "sk_w8a8", "shape": "down", "M": 364, "N": 2048, "K": 6144, "us": 132.61, "tflops": 69.1, "gbps": 94.9, "cfg": [64, 64, 128, 1, 4, 4]}
+{"kind": "cut_s8", "shape": "down", "M": 364, "N": 2048, "K": 6144, "us": 128.26, "tflops": 71.4, "gbps": 98.1}
+{"kind": "cublas", "shape": "down", "M": 508, "N": 2048, "K": 6144, "us": 255.49, "tflops": 50.0, "gbps": 98.5}
+{"kind": "tgemm", "shape": "down", "M": 508, "N": 2048, "K": 6144, "us": 487.94, "tflops": 26.2, "gbps": 51.6}
+{"kind": "sk_bf16", "shape": "down", "M": 508, "N": 2048, "K": 6144, "us": 270.34, "tflops": 47.3, "gbps": 93.1, "cfg": [64, 64, 64, 1, 4, 4]}
+{"kind": "sk_w8a16", "shape": "down", "M": 508, "N": 2048, "K": 6144, "us": 260.61, "tflops": 49.1, "gbps": 48.3, "cfg": [32, 64, 128, 1, 4, 4]}
+{"kind": "sk_w4a16", "shape": "down", "M": 508, "N": 2048, "K": 6144, "us": 317.82, "tflops": 40.2, "gbps": 21.0, "cfg": [32, 128, 128, 1, 4, 4]}
+{"kind": "sk_w8a8", "shape": "down", "M": 508, "N": 2048, "K": 6144, "us": 164.61, "tflops": 77.7, "gbps": 76.4, "cfg": [64, 64, 128, 1, 4, 4]}
+{"kind": "cut_s8", "shape": "down", "M": 508, "N": 2048, "K": 6144, "us": 129.54, "tflops": 98.7, "gbps": 97.1}
+{"kind": "cublas", "shape": "down", "M": 829, "N": 2048, "K": 6144, "us": 484.86, "tflops": 43.0, "gbps": 51.9}
+{"kind": "tgemm", "shape": "down", "M": 829, "N": 2048, "K": 6144, "us": 495.62, "tflops": 42.1, "gbps": 50.8}
+{"kind": "sk_bf16", "shape": "down", "M": 829, "N": 2048, "K": 6144, "us": 391.68, "tflops": 53.3, "gbps": 64.3, "cfg": [64, 64, 64, 1, 4, 4]}
+{"kind": "sk_w8a16", "shape": "down", "M": 829, "N": 2048, "K": 6144, "us": 399.87, "tflops": 52.2, "gbps": 31.5, "cfg": [32, 64, 128, 1, 4, 4]}
+{"kind": "sk_w4a16", "shape": "down", "M": 829, "N": 2048, "K": 6144, "us": 469.5, "tflops": 44.4, "gbps": 14.2, "cfg": [32, 128, 128, 1, 4, 4]}
+{"kind": "sk_w8a8", "shape": "down", "M": 829, "N": 2048, "K": 6144, "us": 241.66, "tflops": 86.3, "gbps": 52.1, "cfg": [64, 64, 128, 1, 4, 4]}
+{"kind": "cut_s8", "shape": "down", "M": 829, "N": 2048, "K": 6144, "us": 189.7, "tflops": 110.0, "gbps": 66.3}

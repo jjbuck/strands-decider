@@ -1,0 +1,310 @@
+{
+ "updated": "2026-10-07 04:56 PDT",
+ "owner": "Q5",
+ "status": "FINAL. Deployable settings that meet the bar on the full kit (3,227 q): (1) b8 + B12 global 60% of L12-23 neurons (19.8% of GEMM MACs removed; measured GEMM time 0.817x of b8, 0.790x with B13); (2) b8 + int4 2:4 pair-wise state rows L14-23 (Q4 kernel class measured 0.83x for L12-22); (3) b8 + int8 2:4 state rows L12-22 (Q4: 0.924x). The stack b8 + B12 60% + int4 2:4 on mixer state rows L14-23 equals b8 on every metric and misses CF by the one pair b8 alone misses in this GPTQ draw (nominal 0.69x). Anything with 75% removal over b8 fails. In bf16, B12 75% passes only with 640-request calibration.",
+ "format_of_entries": {
+  "s24": "2:4 along K (each group of 4 consecutive inputs of every weight row, in the kernel basis, keeps <= 2 non-zeros). layers [..]; gemms [Win, Wo, Wgu, Wd]; role 'all' = every row through the sparse weights, 's' = state rows sparse, question rows (rows >= q0: question text, options, readout) through the dense weights of the base format (two weight copies); prec bf16n (natural basis) | int8 | int4 (rotated H1 FORMAT v1 arithmetic, per-token absmax activations, per-channel weight scales); method = how the 2 kept weights were chosen",
+  "neur": "MLP neuron removal per layer: removed neurons' gate/up rows and down columns deleted, mean replacement folded into a down-projection bias (exact), optional least-squares update of the kept down-projection columns",
+  "base fmt": "Q1/H1 format of every non-structured GEMM/row, e.g. b8 = W8A8-GPTQ with 8 GEMMs in bf16"
+ },
+ "measured_so_far": {
+  "B12_dead_neurons": "MEASURED (160 banking + 160 retail train-split requests, 288k + 262k tokens): 0 of 147,456 SwiGLU neurons is dead at |m| < 0.01 on either domain (every neuron reaches |m| >= 0.074 somewhere; 3 in layer 23 stay below 0.1). Exact dead-neuron removal saves 0 FLOPs.",
+  "B12_saliency_concentration": "MEASURED: layers 0-11 hold 92% of the MLP mean-replacement decision saliency; in layers 13-22, 90% of a layer's saliency sits in 14-1000 of its 6144 neurons (99% in 700-4300)."
+ },
+ "accurate_settings": [
+  {
+   "name": "b8+nr.G12-23.dsalc.f0.6",
+   "what": "W8A8-b8 (H1/Q1 FORMAT v1, GPTQ codes from H1's calibration) with B12 applied first: 60% of the SwiGLU neurons of layers 12-23 removed (44,237 of 73,728; global decision-saliency ranking; decision-weighted least-squares update of the kept down-projection columns; removed means folded into a down-projection bias, added after the GEMM). Wgu codes = b8 codes of the kept rows (GPTQ rows are independent); Wd codes re-run by GPTQ on the updated, narrowed Wd (removed inputs dead in the Hessian). Emulation keeps Wd's 6144-wide online Hadamard with zeros at removed inputs; a deployed kernel needs a Hadamard at the kept width (pad to a supported size).",
+   "kept_neurons_per_layer": {
+    "12": 6144,
+    "13": 6124,
+    "14": 5324,
+    "15": 3981,
+    "16": 2280,
+    "17": 1229,
+    "18": 1066,
+    "19": 737,
+    "20": 501,
+    "21": 488,
+    "22": 698,
+    "23": 919
+   },
+   "gemm_shapes": "per layer i in 12-23: Wgu [2*kept_i, 2048], Wd [2048, kept_i]; all other GEMMs as b8",
+   "removed_share": "19.8% of all GEMM MACs",
+   "kit_measured": {
+    "REAL_flips": "3/1083 = 0.28%",
+    "paired_vs_bf16_runtime": "1 lost / 3 gained, p .625",
+    "TV": 0.0054,
+    "CF_retention": 1.0,
+    "CF_probe_retention": 0.952,
+    "JB_hard": "0.538, McNemar p .5",
+    "REAL_label": 0.7875,
+    "LONG_flips": "3/471",
+    "meets_bar": true
+   },
+   "bank_subset_measured": {
+    "REAL_flips": "3/883",
+    "LONG_flips": "3/471",
+    "CF_probe": "33/36",
+    "REAL_label": 0.746
+   },
+   "speed": "MEASURED (box q5, cuBLAS int8/bf16, 96-GEMM sequence, GPU idle, median of 30): GEMM time 0.817x of b8 at M=1125 (0.810x at 381, 0.818x at 4125); with B13 0.790x (0.791, 0.789). ARITHMETIC end to end at 1000 tokens from Q4's b8 36.35 ms / 27.0 ms GEMM: ~30.7 ms (0.84x) with B13.",
+   "how_to_rebuild": "box q5: q5lib.S5(g, json.load(open(\"~/work/q5/cfgs_q5.json\"))[\"b8+nr.G12-23.dsalc.f0.6\"]) -> S.nr[i] = dict(rem bool[6144], Wd bf16 [2048,6144] with zero columns at removed, bias fp32 [2048]); calibration statistics in ~/work/q5/cal/{bank,ret}"
+  },
+  {
+   "name": "b8+s24.L14-23.sgptd.int4p.s",
+   "what": "W8A8-b8 + int4 2:4 with Ampere PAIR-wise masks (keep 2 of every 4 adjacent nibble pairs along K) on the STATE rows of all four GEMMs of layers 14-23 (not b8 bf16 GEMMs 23.Wo, 23.Wd). Rotated basis, H1 FORMAT v1 arithmetic for int4 (Hadamard; per-token absmax int4 activations, clip 0.9; per-output-channel int4 weights). Mask: SparseGPT with the decision-weighted state-row Hessian, pair saliency = sum of the pair's two OBS saliencies; then a mask-fixed joint int4 GPTQ pass. Question rows: b8 dense int8 weights (second weight copy).",
+   "sparse_share": "40.2% of GEMM MACs of every state row (36.2% of all GEMM MACs at 1000 state + 110 question rows)",
+   "kit_measured": {
+    "REAL_flips": "3/1083 = 0.28%",
+    "paired_vs_bf16_runtime": "1 lost / 3 gained, p .625",
+    "TV": 0.0054,
+    "CF_retention": 0.991,
+    "CF_probe_retention": 0.962,
+    "JB_hard": "0.531, McNemar p 1.0",
+    "REAL_label": 0.79,
+    "LONG_flips": "2/471",
+    "meets_bar": true
+   },
+   "bank_subset_measured": {
+    "REAL_flips": "3/883",
+    "LONG_flips": "2/471",
+    "CF_probe": "34/36",
+    "REAL_label": 0.749
+   },
+   "speed": "Q4 MEASURED int4 2:4 state rows L12-22 (11 layers): GEMM 0.828x of b8 at 1000+125 rows; ARITHMETIC for L14-23 at nominal rates 0.74x (0.70x with B13)",
+   "arrays": "box q5 ~/work/q5/cache/s24_{i}_{k}_s_int4p_sgptd_gen_0.01.pt: dict(q int8-stored int4 codes [N,K] with pair-wise 2:4 zeros, s fp32 [N]) for i in 14..23"
+  },
+  {
+   "name": "nr.G12-23.dsalc.f0.6",
+   "what": "B12: remove 60% of the SwiGLU neurons of layers 12-23 (44,237 of 73,728), ranked GLOBALLY across those layers by Fisher-weighted decision saliency of mean replacement (sum over requests and Fisher directions of lam * (sum_t dD/dm_tj (m_tj - mu_j))^2); delete their gate and up rows and down columns; update the kept down-projection columns by decision-weighted least squares (W_R += W_S C_SR C_RR^-1 with C the decision-weighted covariance of m, 1% damping) and fold the removed neurons' weighted means into a down-projection bias. Calibration: 160 banking + 160 retail train-split requests. bf16 elsewhere.",
+   "kept_neurons_per_layer": {
+    "12": 6144,
+    "13": 6124,
+    "14": 5324,
+    "15": 3981,
+    "16": 2280,
+    "17": 1229,
+    "18": 1066,
+    "19": 737,
+    "20": 501,
+    "21": 488,
+    "22": 698,
+    "23": 919
+   },
+   "removed_share": "19.8% of all GEMM MACs (narrower dense Wgu / Wd, no special kernel)",
+   "kit_measured": {
+    "REAL_flips": "6/1083 = 0.55%",
+    "paired_vs_bf16_runtime": "1 lost / 0 gained, p 1.0",
+    "TV": 0.0039,
+    "CF_retention": 1.0,
+    "CF_probe_retention": 0.971,
+    "JB_hard": "0.546, McNemar p .25",
+    "REAL_label": 0.785,
+    "LONG_flips": "3/471",
+    "meets_bar": true
+   },
+   "bank_subset_measured": {
+    "REAL_flips": "6/883",
+    "LONG_flips": "3/471",
+    "CF_probe": "35/36",
+    "REAL_label": 0.743
+   },
+   "speed": "same GEMM shapes as b8+nr.G12-23.dsalc.f0.6: measured 0.817x of b8 GEMM time over b8",
+   "arrays": "recomputed deterministically on box q5 by q5lib.S5(g, cfgs_q5.json[\"nr.G12-23.dsalc.f0.6\"]) from ~/work/q5/cal/{bank,ret}"
+  },
+  {
+   "name": "b8+s24.L12-22.sgptd.int8n0.5.s",
+   "what": "W8A8-b8 everywhere, except: the STATE rows of all four GEMMs of layers 12-22 (not 12.Wo, which b8 keeps in bf16) go through int8 2:4 weights. 2:4 in the NATURAL input basis (no Hadamard on these GEMMs: a rotation destroys the 2:4 pattern); per-input-channel smoothing s_k = rms(x_k)^0.5 / max|W_:k|^0.5 (normalized to mean 1) applied to the activations in the quantize prologue (x/s) and folded into the weights (W s); per-token absmax int8 activations; per-output-channel int8 weights. Mask + kept weights: SparseGPT with the decision-weighted state-row Hessian, then a second pass with the mask fixed and joint int8 GPTQ. Question rows (>= q0) use b8 dense int8 weights (second weight copy).",
+   "sparse_share": "45.9% of GEMM MACs of every state row (41.3% of all GEMM MACs at 1000 state + 110 question rows)",
+   "speed": "Q4 MEASURED (q4/NOTES.md, their kernels, magnitude masks; speed does not depend on which weights are kept): GEMM time 0.924x of b8 at 1000+125 rows",
+   "kit_measured": {
+    "REAL_flips": "6/1083 = 0.55% vs hobson",
+    "paired_vs_bf16_runtime": "5 lost / 4 gained, p 1.0",
+    "paired_vs_b8": "REAL 5 / 4 p 1.0; LONG 2 / 1",
+    "TV": 0.0069,
+    "CF_retention": 0.991,
+    "CF_probe_retention": 0.952,
+    "JB_hard": "0.531, McNemar p 1.0",
+    "REAL_label": 0.7925,
+    "LONG_flips": "4/471",
+    "meets_bar": true
+   },
+   "bank_subset_measured": {
+    "REAL_flips": "6/883",
+    "LONG_flips": "4/471",
+    "CF_probe_retention": "0.944 (36 tracked pairs)",
+    "REAL_label": 0.752
+   },
+   "arrays": "box q5 ~/work/q5/cache/s24_{i}_{k}_s_int8n_sgptd_gen_0.01_sm0.5.pt: dict(q int8 [N,K] codes with exact 2:4 zeros, s fp32 [N] per-channel scales, sm fp32 [K] smoothing)"
+  },
+  {
+   "name": "s24.L12-22.sgptd.bf16n.s",
+   "what": "2:4 along K on all four GEMMs of layers 12-22, STATE rows only (rows < q0); question rows use the dense bf16 weights (two weight copies). bf16, natural basis (masks on W x diag(norm gain)). Mask + kept-weight update: SparseGPT with the decision-weighted input Hessian H_d = sum_t w_t x_t x_t^T (w_t = Fisher-weighted squared decision gradient of the GEMM output at row t), state rows only, calibrated on 160 banking + 160 retail train-split requests.",
+   "sparse_share": "46.2% of GEMM MACs of every state row (41.6% of all GEMM MACs at a 1000-token state with 110 question rows)",
+   "kit_measured": {
+    "REAL_flips": "7/1083 = 0.65% vs hobson (bar 0.70%)",
+    "paired_vs_bf16_runtime": "6 lost / 4 gained, p .754",
+    "TV": 0.0062,
+    "CF_retention": 1.0,
+    "CF_probe_retention": 0.952,
+    "JB_hard": "0.523, McNemar vs hobson p 1.0",
+    "REAL_label": 0.79,
+    "LONG_flips": "4/471",
+    "meets_bar": true
+   },
+   "bank_subset_measured": {
+    "REAL_flips": "7/883",
+    "LONG_flips": "4/471",
+    "CF_probe_retention": "0.972 (36 tracked pairs)",
+    "REAL_label": 0.749,
+    "note": "hobson tracks only 1 banking CF pair, so banking CF retention is not measurable"
+   },
+   "speed_note": "bf16 2:4 runs at the int8 dense rate, so by itself this is not faster than W8A8-b8; it shows the structural error is inside the bar. The deployable versions are int8 / int4 2:4 over b8 (below).",
+   "masks": "box q5 ~/work/q5/cache/s24_{i}_{k}_s_bf16n_sgptd_gen_0.01.pt (bf16 weights with exact zeros)"
+  },
+  {
+   "name": "s24.L12-22.sgptd.bf16n.s.bank",
+   "what": "same as s24.L12-22.sgptd.bf16n.s with masks calibrated on banking traffic only (160 train-split requests)",
+   "kit_measured": {
+    "REAL_flips": "7/1083",
+    "paired_vs_bf16": "4/2 p .69",
+    "TV": 0.0059,
+    "CF": 1.0,
+    "CF_probe": 0.971,
+    "JB_hard": ".523 p 1.0",
+    "REAL_label": 0.7875,
+    "LONG": "5/471",
+    "meets_bar": true
+   },
+   "bank_subset_measured": {
+    "REAL": "7/883",
+    "LONG": "5/471",
+    "CF_probe": "36/36",
+    "REAL_label": 0.746
+   }
+  },
+  {
+   "name": "nr.G12-23.dsalc.f0.75.gen2",
+   "what": "B12 in bf16: 75% of the L12-23 neurons removed (55,296; 24.7% of GEMM MACs), as nr.G12-23.dsalc.f0.75 but calibrated on 2x the data (640 train-split requests: 320 banking + 320 retail, two disjoint sets). Kept per layer: L12 6134, L13 5108, L14 2888, L15 1618, L16 648, L17 267, L18 245, L19 203, L20 183, L21 202, L22 345, L23 591.",
+   "kit_measured": {
+    "REAL_flips": "5/1083 = 0.46%",
+    "paired_vs_bf16": "1/1 p 1.0",
+    "TV": 0.005,
+    "CF": 1.0,
+    "CF_probe": 0.962,
+    "JB_hard": ".546 p .25",
+    "REAL_label": 0.7825,
+    "LONG": "5/471",
+    "meets_bar": true,
+    "note": "with 320-request calibration the same removal missed by one REAL flip (8/1083); REAL-label .7825 is close to the .78 bar"
+   },
+   "bank_subset_measured": {
+    "REAL": "5/883",
+    "CF_probe": "35/36",
+    "REAL_label": 0.74
+   },
+   "speed": "MEASURED GEMM time 0.771x of b8 over b8 (0.745x with B13), cuBLAS, this box"
+  }
+ ],
+ "pending": [],
+ "near_misses": [
+  {
+   "name": "b8+stack.G0.6.mixint4p.L14",
+   "what": "b8 + B12 global 60% L12-23 + int4 2:4 pair-wise on the STATE rows of Win/Wo of layers 14-23 (MLPs of those layers are narrowed by B12, mixers sparse)",
+   "kit_measured": {
+    "REAL_flips": "5/1083 = 0.46%",
+    "paired_vs_bf16": "2/2 p 1.0",
+    "TV": 0.0059,
+    "CF": "0.982 (107/109)",
+    "CF_probe": 0.952,
+    "JB_hard": ".538 p .5",
+    "REAL_label": 0.785,
+    "LONG": "4/471",
+    "meets_bar": false,
+    "misses": "CF retention by one pair: the SAME two airline asked_for_human pairs that b8 alone loses in this GPTQ draw (bf16 P 0.514 / 0.510). Every other metric equals b8 alone (b8: REAL 5, CF .982, CF-probe .962)."
+   },
+   "speed": "ARITHMETIC nominal 0.71x of b8 GEMM time, 0.69x with B13 (B12 part measured at nominal; int4 2:4 part per Q4 runs below nominal)"
+  },
+  {
+   "name": "b8+s24.L13-23.sgptd.int4p.s",
+   "what": "W8A8-b8 + int4 2:4 with Ampere PAIR-wise masks (keep 2 of every 4 adjacent nibble pairs) on the STATE rows of all four GEMMs of layers 13-23 (not b8 bf16 GEMMs 23.Wo, 23.Wd); rotated basis (H1 FORMAT v1: Hadamard, per-token absmax int4 clip 0.9, per-channel int4 weights); mask by decision-weighted SparseGPT (pair saliency = sum of the pair's OBS saliencies) then mask-fixed joint int4 GPTQ. Question rows: b8 dense int8.",
+   "sparse_share": "44.5% of GEMM MACs of every state row",
+   "speed": "Q4 MEASURED int4 2:4 state rows L12-22: GEMM time 0.828x of b8 at 1000+125 rows (L13-23 has a similar share)",
+   "kit_measured": {
+    "REAL_flips": "8/1083 = 0.74% (bar 0.70%)",
+    "paired_vs_bf16_runtime": "4 lost / 1 gained, p .375",
+    "TV": 0.0066,
+    "CF_retention": "0.972 (106/109; b8 alone 0.982)",
+    "CF_probe_retention": 0.962,
+    "JB_hard": "0.538, p .5",
+    "REAL_label": 0.7875,
+    "meets_bar": false,
+    "misses": "REAL flips by 1 question (8 vs 7.6 allowed); CF retention by 2 pairs (b8 itself misses by 1 in this calibration draw). All 3 lost CF pairs are threshold items (bf16 P(expected) 0.510-0.517)."
+   },
+   "arrays": "box q5 ~/work/q5/cache/s24_{i}_{k}_s_int4p_sgptd_gen_0.01.pt"
+  },
+  {
+   "name": "nr.G12-23.dsalc.f0.75",
+   "what": "B12 in bf16: remove 75% of the MLP neurons of layers 12-23 (55,296 neurons; 24.7% of all GEMM MACs), ranked GLOBALLY across those layers by Fisher-weighted decision saliency of mean replacement; kept down-projection columns updated by decision-weighted least squares (regression of removed on kept neurons), mean folded into a bias. Kept neurons per layer: L12 6136, L13 5125, L14 2889, L15 1613, L16 644, L17 268, L18 243, L19 196, L20 182, L21 205, L22 344, L23 587.",
+   "kit_measured": {
+    "REAL_flips": "8/1083 = 0.74% (bar <= 7)",
+    "paired_vs_bf16": "3 lost / 0 gained, p .25",
+    "TV": 0.0052,
+    "CF": 1.0,
+    "CF_probe": 0.981,
+    "JB_hard": ".546 p .25",
+    "REAL_label": 0.785,
+    "LONG": "5/471",
+    "meets_bar": false,
+    "misses": "REAL flips by one question; the 3 lost questions are threshold items (hobson P(answer) 0.502 / 0.496 binary, or a top-2 near-tie)."
+   },
+   "speed": "ARITHMETIC: removes 24.7% of GEMM MACs as narrower dense GEMMs; over b8: 0.75x of b8 GEMM time at nominal rates (0.73x with B13)",
+   "arrays": "recomputed from box q5 ~/work/q5/cal/{bank,ret}/ (neurons.pt, H_{i}_Wd.pt) by q5lib.S5 with cfg nr.G12-23.dsalc.f0.75 in ~/work/q5/cfgs_q5.json"
+  }
+ ],
+ "failed": [
+  {
+   "name": "b8+stack.G0.75.mixint4p",
+   "what": "b8 + B12 global 75% L12-23 + int4 2:4 pair-wise on the state rows of Win/Wo of L13-23",
+   "kit_measured": {
+    "REAL_flips": "10/1083 = 0.92%",
+    "paired_vs_bf16": "8/3 p .23",
+    "TV": 0.0075,
+    "CF": 0.982,
+    "CF_probe": 0.962
+   },
+   "speed": "ARITHMETIC 0.63x of b8 GEMM time nominal"
+  },
+  {
+   "name": "nr.L12-23.dsalc.f0.5 (uniform 50% per layer)",
+   "kit_measured": {
+    "REAL_flips": "8/1083",
+    "paired": "7/4 p .55",
+    "TV": 0.0076,
+    "CF": 0.991,
+    "CF_probe": 0.943
+   }
+  },
+  {
+   "name": "b8+stack.G0.75.gen2.mixint4p.L14",
+   "what": "b8 + B12 75% (640-request calibration) + int4 2:4 pair-wise state rows of Win/Wo L14-23",
+   "kit_measured": {
+    "REAL_flips": "10/1083 = 0.92%",
+    "paired_vs_bf16": "8/3 p .23",
+    "TV": 0.0067,
+    "CF": 0.982,
+    "CF_probe": 0.952,
+    "REAL_label": 0.7825
+   },
+   "speed": "ARITHMETIC 0.642x of b8 GEMM time nominal"
+  }
+ ],
+ "b13": {
+  "skip23_layer23_state_rows_KV_only": "VERIFIED never read: 0 NaN in 3227 logit vectors; bf16 numerics: max |d logit| 0.031, 1 flip / 3227; b8 (with table0, 600 q): 0 flips, 583/600 bit-identical",
+  "table0_layer0_per_token": "bf16: 93.8% bit-identical, max |d logit| 0.071, 1 flip / 3227; per-deployment table: 13,376 banking token ids cover 99.75% of banking eval tokens, 220 MB bf16",
+  "measured_gemm_time": "B13 alone 0.949x of b8 GEMM time at M=1125 (cuBLAS, this box)"
+ },
+ "b7": "Neuron removal is calibration-sensitive: retail-calibrated removal costs banking 27-44x KL; matched calibration is 12-30% better than generic at equal size. 2:4 masks: banking-only = generic within 1-2 kit items. GPTQ precision calibration per deployment: no gain for b8; for w4q8 it helps only the domain under-represented in the pool (retail).",
+ "box_note": "All arrays and calibration statistics live on box q5 (~/work/q5), which auto-terminates at its 10 h TTL (07:33 PDT 2026-10-07); configs in ~/decider2/q5/res/cfgs_q5.json, code in ~/decider2/q5/code. The masks / removals are deterministic given the calibration files; the calibration requests are listed in the box meta files (rids) and reproducible from q5lib.req_set."
+}

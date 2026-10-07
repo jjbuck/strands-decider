@@ -1,0 +1,63 @@
+while [ ! -f ~/work/q1/spec/heldout.json ]; do sleep 20; done
+python q1cal.py --n 128
+python q1b5.py --budget 4 --role s --tag b4s
+python q1fo.py --cfg w4a4 --tag w4a4 --n 300
+python q1fo.py --cfg w4q8 --tag w4q8 --n 300
+python q1hd.py --n 160
+python q1b13.py --n 80 --cfgs dense,w4q8,b8
+python q1b5.py --budget 4 --role s --tag b4si --cands ident
+python q1fo.py --cfg tc4q8 --tag tc4q8 --n 300
+python q1fo.py --cfg tc4iq8 --tag tc4iq8 --n 300
+python q1fo.py --cfg w4a4 --tag w4a4 --n 300
+python q1fo.py --cfg w4q8 --tag w4q8 --n 300
+python q1b5.py --budget 4 --role s --tag b4sr --shrink 0.15
+python q1b5.py --budget 4 --role s --tag b4sir --cands ident --shrink 0.15
+python q1fo.py --cfg tc4rq8 --tag tc4rq8 --n 300
+python q1fo.py --cfg tc4irq8 --tag tc4irq8 --n 300
+python q1fo.py --cfg w8a8 --tag w8a8 --n 100 --b10 0
+python q1fo.py --cfg w4a4_l0 --tag w4a4_l0 --n 100 --b10 0
+mkdir -p preds; python q1eval.py --cfgs cfgs.json --tags dense,w4q8 --out preds/base.json
+python q1dm.py --tags b8,w4a4,w4q8,nsq8,ns5q8,w4q8d,w4bq,w4q8_wonly,w4q8_aonly,w4q8_r4l64,w4q8_r4l256,tc4rq8,tc4irq8,resq128q8,sens128q8,g64q8,srq8,corr128q8,b9f75q8,w4q8w4 --n 300
+mkdir -p preds; python q1eval.py --cfgs cfgs.json --tags dense,w4q8 --out preds/base.json
+python q1b5.py --budget 4.5 --role s --tag b45sr --shrink 0.15 --cands pca,joint,jointc,mix
+python q1dm.py --tags tc45rq8,tc4rq8_l0,tc45rq8_l0,w4q8_l0 --n 300
+mkdir -p preds; python q1eval.py --cfgs cfgs.json --tags tc45rq8,w4q8 --out preds/base.json
+python q1dm.py --tags resq128q8,sens128q8,g64q8,srq8,corr128q8,b9f75q8,w4q8w4 --n 300
+mkdir -p preds; python q1eval.py --cfgs cfgs.json --tags tc45rq8,w4q8 --out preds/base.json
+python q1b5.py --budget 4 --role s --tag b4shr --shrink 0.15 --cands shared --rot had64
+python q1b5.py --budget 4.5 --role s --tag b45shr --shrink 0.15 --cands shared --rot had64
+python q1dm.py --tags tc4shq8,tc45shq8 --n 300
+mkdir -p preds; python q1eval.py --cfgs cfgs.json --tags tc45rq8,w4q8 --out preds/base.json
+python q1eval.py --cfgs cfgs.json --tags tc4rq8,resq128q8 --out preds/b2.json
+python q1router.py --base w4q8 --n 150
+mkdir -p preds; python q1eval.py --cfgs cfgs.json --tags tc45rq8,w4q8 --out preds/base.json
+python q1eval.py --cfgs cfgs.json --tags tc4rq8,resq128q8 --out preds/b2.json
+python q1dm.py --tags resq128q8,sens128q8,g64q8,srq8,corr128q8,b9f75q8,w4q8w4 --n 300
+mkdir -p preds; python q1eval.py --cfgs cfgs.json --tags tc45rq8,w4q8 --out preds/base.json
+python q1eval.py --cfgs cfgs.json --tags tc4rq8,resq128q8 --out preds/b2.json
+python q1b5.py --budget 4 --role s --tag b4shH --shrink 0.15 --cands shared --rot haar
+python q1b5.py --budget 4 --role s --tag b4sih --shrink 0.15 --cands ident --rot had64
+python q1dm.py --tags tc4shHq8,tc4ihq8 --n 300
+python q1router.py --base w4q8 --n 150
+python q1dm.py --tags resq128q8,sens128q8,g64q8,srq8,corr128q8,b9f75q8,w4q8w4 --n 300
+mkdir -p preds; python q1eval.py --cfgs cfgs.json --tags tc45rq8,w4q8 --out preds/base.json
+python q1eval.py --cfgs cfgs.json --tags tc4rq8,resq128q8 --out preds/b2.json
+python q1b5.py --budget 4 --role s --tag b4shF --shrink 0.15 --cands shared --rot hadfull
+python q1b5.py --budget 4.5 --role s --tag b45shF --shrink 0.15 --cands shared --rot hadfull
+python q1dm.py --tags tc4shFq8,tc45shFq8 --n 300
+mkdir -p preds; python q1eval.py --cfgs cfgs.json --tags tc45rq8,w4q8 --out preds/base.json
+python q1eval.py --cfgs cfgs.json --tags tc4rq8,resq128q8 --out preds/b2.json
+python q1b3.py
+mkdir -p preds; python q1eval.py --cfgs cfgs.json --tags tc45rq8,w4q8 --out preds/base.json
+python q1eval.py --cfgs cfgs.json --tags tc4rq8,resq128q8 --out preds/b2.json
+python q1eval.py --cfgs cfgs.json --tags tc4shFq8,resq128q8 --out preds/b2.json
+python q1router.py --base tc45rq8 --n 150 --fracs 0.1,0.2 --rules oracle,qattn7
+python q1eval.py --cfgs cfgs.json --tags w4a4,proto256fq8,tc4rq8 --out preds/b3.json
+python mkproto.py
+python q1dm.py --tags proto256q8,proto64q8 --n 300
+python q1eval.py --cfgs cfgs.json --tags tc4shFq8,resq128q8 --out preds/b2.json
+python q1router.py --base tc45rq8 --n 150 --fracs 0.1,0.2 --rules oracle,qattn7
+python q1eval.py --cfgs cfgs.json --tags w4a4,proto256fq8,tc4rq8 --out preds/b3.json
+python q1dm.py --tags proto256fq8,proto64fq8 --n 300
+python q1router.py --base tc45rq8 --n 150 --fracs 0.1,0.2 --rules oracle,qattn7
+python q1eval.py --cfgs cfgs.json --tags w4a4,proto256fq8,tc4rq8 --out preds/b3.json

@@ -1,0 +1,74 @@
+{
+ "gate_up|16": {
+  "sep": 60.67,
+  "cfg_sep": 8,
+  "deep": 227.33,
+  "cfg_deep": 8,
+  "per_kernel_fixed_us": 5.12,
+  "deep_per_K": 56.83
+ },
+ "out|16": {
+  "sep": 19.01,
+  "cfg_sep": 7,
+  "deep": 48.38,
+  "cfg_deep": 10,
+  "per_kernel_fixed_us": 9.22,
+  "deep_per_K": 12.1
+ },
+ "gdn_in|16": {
+  "sep": 41.98,
+  "cfg_sep": 8,
+  "deep": 152.22,
+  "cfg_deep": 10,
+  "per_kernel_fixed_us": 5.24,
+  "deep_per_K": 38.05
+ },
+ "gate_up|140": {
+  "sep": 79.87,
+  "cfg_sep": 5,
+  "deep": 276.33,
+  "cfg_deep": 6,
+  "per_kernel_fixed_us": 14.39,
+  "deep_per_K": 69.08
+ },
+ "out|140": {
+  "sep": 18.73,
+  "cfg_sep": 10,
+  "deep": 60.72,
+  "cfg_deep": 10,
+  "per_kernel_fixed_us": 4.73,
+  "deep_per_K": 15.18
+ },
+ "gdn_in|140": {
+  "sep": 56.32,
+  "cfg_sep": 7,
+  "deep": 248.22,
+  "cfg_deep": 3,
+  "per_kernel_fixed_us": -7.65,
+  "deep_per_K": 62.05
+ },
+ "gate_up|364": {
+  "sep": 162.82,
+  "cfg_sep": 7,
+  "deep": 633.75,
+  "cfg_deep": 7,
+  "per_kernel_fixed_us": 5.84,
+  "deep_per_K": 158.44
+ },
+ "out|364": {
+  "sep": 35.03,
+  "cfg_sep": 7,
+  "deep": 126.21,
+  "cfg_deep": 7,
+  "per_kernel_fixed_us": 4.64,
+  "deep_per_K": 31.55
+ },
+ "gdn_in|364": {
+  "sep": 106.71,
+  "cfg_sep": 3,
+  "deep": 405.09,
+  "cfg_deep": 3,
+  "per_kernel_fixed_us": 7.25,
+  "deep_per_K": 101.27
+ }
+}

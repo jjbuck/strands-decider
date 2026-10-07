@@ -1,0 +1,17 @@
+06:49:40 train N start
+09:34:18 train N end rc=0
+09:34:18 train C start
+09:34:18 eval N ck_N/s512.pt
+10:19:17 eval N done
+12:01:56 train C end rc=0
+12:02:04 phase3 latency start N=ck_N/s512.pt C=ck_C/s470.pt
+12:07:01 phase3 latency done
+12:08:36 phase3b real latency start
+12:22:59 phase3c real latency start
+12:41:05 phase3c latency done
+13:19:05 eval C done
+14:15:26 N2 end rc=0
+14:15:26 eval N2 ck_N/s773.pt
+14:37:57 phase3c done
+14:38:24 phase4 start
+15:03:06 phase4 done

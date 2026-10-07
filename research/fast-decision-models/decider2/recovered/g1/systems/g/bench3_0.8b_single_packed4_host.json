@@ -1,0 +1,67 @@
+{
+ "0.8b_lean_graph_q1_t64": {
+  "median": 10.61,
+  "p95": 10.63,
+  "min": 10.6,
+  "gpu_replay_median": 9.96
+ },
+ "0.8b_lean_graph_q1_t256": {
+  "median": 18.12,
+  "p95": 18.15,
+  "min": 18.07,
+  "gpu_replay_median": 17.19
+ },
+ "0.8b_lean_graph_q1_t1000": {
+  "median": 51.62,
+  "p95": 51.64,
+  "min": 51.6,
+  "gpu_replay_median": 49.66
+ },
+ "0.8b_lean_graph_q1_t2000": {
+  "median": 123.08,
+  "p95": 123.12,
+  "min": 123.03,
+  "gpu_replay_median": 119.67
+ },
+ "0.8b_lean_graph_q1_t4000": {
+  "median": 163.41,
+  "p95": 163.54,
+  "min": 163.36,
+  "gpu_replay_median": 157.4
+ },
+ "0.8b_packed_q4_t64": {
+  "median": 22.71,
+  "p95": 22.82,
+  "min": 22.65,
+  "gpu_replay_median": 21.57
+ },
+ "0.8b_packed_q4_t256": {
+  "median": 35.13,
+  "p95": 35.22,
+  "min": 35.08,
+  "gpu_replay_median": 33.72
+ },
+ "0.8b_packed_q4_t1000": {
+  "median": 61.39,
+  "p95": 61.44,
+  "min": 61.32,
+  "gpu_replay_median": 58.92
+ },
+ "0.8b_packed_q4_t2000": {
+  "median": 102.2,
+  "p95": 102.3,
+  "min": 102.09,
+  "gpu_replay_median": 98.27
+ },
+ "0.8b_packed_q4_t4000": {
+  "median": 190.52,
+  "p95": 190.6,
+  "min": 190.34,
+  "gpu_replay_median": 183.89
+ },
+ "0.8b_hostprep_t64": 0.323,
+ "0.8b_hostprep_t256": 0.602,
+ "0.8b_hostprep_t1000": 1.639,
+ "0.8b_hostprep_t2000": 2.946,
+ "0.8b_hostprep_t4000": 5.554
+}

@@ -1,0 +1,113 @@
+{
+ "hobson": {
+  "above_amount": {
+   "item": 0.69,
+   "pair": 0.4
+  },
+  "above_amount_distract": {
+   "item": 0.5,
+   "pair": 0.08
+  },
+  "before_date": {
+   "item": 0.59,
+   "pair": 0.18
+  },
+  "before_date_distract": {
+   "item": 0.43,
+   "pair": 0.08
+  },
+  "lookup_value": {
+   "item": 0.81,
+   "pair": 0.62
+  },
+  "lookup_value_distract": {
+   "item": 0.65,
+   "pair": 0.34
+  },
+  "stated_match": {
+   "item": 0.79,
+   "pair": 0.58
+  },
+  "stated_match_distract": {
+   "item": 0.6,
+   "pair": 0.3
+  },
+  "ALL": {
+   "pair": 0.323
+  }
+ },
+ "C": {
+  "above_amount": {
+   "item": 0.99,
+   "pair": 0.98
+  },
+  "above_amount_distract": {
+   "item": 1.0,
+   "pair": 1.0
+  },
+  "before_date": {
+   "item": 0.99,
+   "pair": 0.98
+  },
+  "before_date_distract": {
+   "item": 0.99,
+   "pair": 0.98
+  },
+  "lookup_value": {
+   "item": 1.0,
+   "pair": 1.0
+  },
+  "lookup_value_distract": {
+   "item": 1.0,
+   "pair": 1.0
+  },
+  "stated_match": {
+   "item": 0.99,
+   "pair": 0.98
+  },
+  "stated_match_distract": {
+   "item": 0.82,
+   "pair": 0.76
+  },
+  "ALL": {
+   "pair": 0.96
+  }
+ },
+ "V": {
+  "above_amount": {
+   "item": 1.0,
+   "pair": 1.0
+  },
+  "above_amount_distract": {
+   "item": 0.99,
+   "pair": 0.98
+  },
+  "before_date": {
+   "item": 0.99,
+   "pair": 0.98
+  },
+  "before_date_distract": {
+   "item": 1.0,
+   "pair": 1.0
+  },
+  "lookup_value": {
+   "item": 1.0,
+   "pair": 1.0
+  },
+  "lookup_value_distract": {
+   "item": 0.99,
+   "pair": 0.98
+  },
+  "stated_match": {
+   "item": 0.99,
+   "pair": 0.98
+  },
+  "stated_match_distract": {
+   "item": 0.84,
+   "pair": 0.8
+  },
+  "ALL": {
+   "pair": 0.965
+  }
+ }
+}

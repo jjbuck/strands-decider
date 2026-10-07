@@ -1,0 +1,29 @@
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 3856.54it/s]
+2b lean_graph q=1 tokens=64 {'median': 19.53, 'p95': 19.6, 'min': 19.51, 'gpu_replay_median': 18.88}
+2b lean_graph q=1 tokens=128 {'median': 20.11, 'p95': 20.13, 'min': 20.08, 'gpu_replay_median': 19.38}
+2b lean_graph q=1 tokens=256 {'median': 29.82, 'p95': 29.84, 'min': 29.8, 'gpu_replay_median': 28.9}
+2b lean_graph q=1 tokens=512 {'median': 60.51, 'p95': 60.52, 'min': 60.5, 'gpu_replay_median': 59.22}
+2b lean_graph q=1 tokens=1000 {'median': 94.04, 'p95': 94.07, 'min': 94.02, 'gpu_replay_median': 92.08}
+2b lean_graph q=1 tokens=2000 {'median': 227.34, 'p95': 227.4, 'min': 227.29, 'gpu_replay_median': 223.94}
+2b lean_graph q=1 tokens=4000 {'median': 304.27, 'p95': 304.3, 'min': 304.21, 'gpu_replay_median': 298.26}
+2b packed q=4 tokens=64 {'median': 38.79, 'p95': 38.87, 'min': 38.68, 'gpu_replay_median': 37.71}
+2b packed q=4 tokens=128 {'median': 47.9, 'p95': 47.94, 'min': 47.82, 'gpu_replay_median': 46.71}
+2b packed q=4 tokens=256 {'median': 62.98, 'p95': 63.03, 'min': 62.95, 'gpu_replay_median': 61.6}
+2b packed q=4 tokens=512 {'median': 90.2, 'p95': 90.35, 'min': 90.14, 'gpu_replay_median': 88.43}
+2b packed q=4 tokens=1000 {'median': 108.29, 'p95': 108.36, 'min': 108.2, 'gpu_replay_median': 105.88}
+2b packed q=4 tokens=2000 {'median': 182.46, 'p95': 182.51, 'min': 182.32, 'gpu_replay_median': 178.6}
+2b packed q=4 tokens=4000 {'median': 337.93, 'p95': 338.2, 'min': 337.77, 'gpu_replay_median': 331.44}
+2b host prep (render+tokenize+offsets) ms 64 0.333
+2b tokenize state only (no offsets) ms 64 0.122
+2b host prep (render+tokenize+offsets) ms 128 0.422
+2b tokenize state only (no offsets) ms 128 0.207
+2b host prep (render+tokenize+offsets) ms 256 0.598
+2b tokenize state only (no offsets) ms 256 0.377
+2b host prep (render+tokenize+offsets) ms 512 0.953
+2b tokenize state only (no offsets) ms 512 0.735
+2b host prep (render+tokenize+offsets) ms 1000 1.613
+2b tokenize state only (no offsets) ms 1000 1.407
+2b host prep (render+tokenize+offsets) ms 2000 2.951
+2b tokenize state only (no offsets) ms 2000 2.708
+2b host prep (render+tokenize+offsets) ms 4000 5.491
+2b tokenize state only (no offsets) ms 4000 5.266

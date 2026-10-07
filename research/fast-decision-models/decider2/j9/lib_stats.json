@@ -1,0 +1,46 @@
+{
+ "banking_knowledge": {
+  "n_blocks": 9542,
+  "tok_total": 3024585,
+  "tok_mean": 316.97600083839865,
+  "tok_median": 248.0,
+  "uses": 87857,
+  "blocks_for_90pct_uses": 2679,
+  "blocks_for_99pct_uses": 8664,
+  "kv_MB": 37166.10048,
+  "state_MB_bf16_E": 90049.609728
+ },
+ "banking_knowledge/frame": {
+  "n_blocks": 10,
+  "tok_total": 468,
+  "tok_mean": 46.8,
+  "tok_median": 44.0,
+  "uses": 7926,
+  "blocks_for_90pct_uses": 3,
+  "blocks_for_99pct_uses": 7,
+  "kv_MB": 5.750784,
+  "state_MB_bf16_E": 94.37184
+ },
+ "retail": {
+  "n_blocks": 365,
+  "tok_total": 117267,
+  "tok_mean": 321.27945205479455,
+  "tok_median": 279.0,
+  "uses": 8558,
+  "blocks_for_90pct_uses": 117,
+  "blocks_for_99pct_uses": 283,
+  "kv_MB": 1440.976896,
+  "state_MB_bf16_E": 3444.57216
+ },
+ "retail/frame": {
+  "n_blocks": 6,
+  "tok_total": 219,
+  "tok_mean": 36.5,
+  "tok_median": 37.0,
+  "uses": 4264,
+  "blocks_for_90pct_uses": 2,
+  "blocks_for_99pct_uses": 2,
+  "kv_MB": 2.691072,
+  "state_MB_bf16_E": 56.623104
+ }
+}

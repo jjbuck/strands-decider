@@ -1,0 +1,20 @@
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 4116.14it/s]
+digit-bearing vocab ids 28 of 248077
+questions 3227 done 0
+q2_dk48rr 200 18s
+q2_dk48rr 400 31s
+q2_dk48rr 600 46s
+q2_dk48rr 800 63s
+q2_dk48rr 1000 83s
+q2_dk48rr 1200 100s
+q2_dk48rr 1400 133s
+q2_dk48rr 1600 181s
+q2_dk48rr 1800 223s
+q2_dk48rr 2000 262s
+q2_dk48rr 2200 280s
+q2_dk48rr 2400 293s
+q2_dk48rr 2600 308s
+q2_dk48rr 2800 331s
+q2_dk48rr 3000 351s
+q2_dk48rr 3200 367s
+done q2_dk48rr 3227 369s int8 state-row share 0.1487

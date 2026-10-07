@@ -1,0 +1,9 @@
+while [ ! -f ~/work/q5/FINAL_DONE ]; do sleep 20; done
+Q5_MEMFRAC=0.88 python q5cal.py --dom bank2 --n 160 --layers 12-15 --neur --nofisher
+Q5_MEMFRAC=0.88 python q5cal.py --dom ret2 --n 160 --layers 12-15 --neur --nofisher
+Q5_MEMFRAC=0.88 python q5cal.py --dom bank2 --n 160 --layers 16-19 --nofisher
+Q5_MEMFRAC=0.88 python q5cal.py --dom ret2 --n 160 --layers 16-19 --nofisher
+Q5_MEMFRAC=0.88 python q5cal.py --dom bank2 --n 160 --layers 20-23 --nofisher
+Q5_MEMFRAC=0.88 python q5cal.py --dom ret2 --n 160 --layers 20-23 --nofisher
+Q5_MEMFRAC=0.6 python q5dev.py --cfgs cfgs_q5.json --prefix 12 --tags b8+stack.G0.6.mixint4p.L14,b8+stack.G0.6.mixint8n.L14,nr.G12-23.dsalc.f0.75.gen2,nr.G12-23.dsalc.f0.6.gen2,nr.G12-23.dsalc.f0.85.gen2,nr.G12-23.dsalc.f0.75.bank+,nr.G12-23.dsalc.f0.75.ret+,b8+nr.G12-23.dsalc.f0.75.gen2,b8+nr.G12-23.dsalc.f0.6.gen2
+touch ~/work/q5/LATE_DEV_DONE

@@ -1,0 +1,93 @@
+panel,id,name,size,brier,accuracy
+"JB-all (JevBench, 231 tasks) · all configurations",hobson,"hobson-v19, bf16 fused runtime",2B,0.3479,0.7229
+"JB-all (JevBench, 231 tasks) · all configurations",P1,"W8A8 + rotation + GPTQ, 8 GEMMs bf16",2B,0.3471,0.7229
+"JB-all (JevBench, 231 tasks) · all configurations",P2,W4A4 + rotation + GPTQ,2B,0.3809,0.7143
+"JB-all (JevBench, 231 tasks) · all configurations",P2a,W4A4 with 48 GEMMs at W8A8,2B,0.3508,0.7316
+"JB-all (JevBench, 231 tasks) · all configurations",P2b,"W4A4, 64 GEMMs W8A8, question rows bf16 (H6)",2B,0.349,0.7229
+"JB-all (JevBench, 231 tasks) · all configurations",P3,"W4A16 weight-only, GPTQ g128",2B,0.351,0.7446
+"JB-all (JevBench, 231 tasks) · all configurations",P9,"natively ternary BitNet 2B, W1.58A8",2B,0.464,0.619
+"JB-all (JevBench, 231 tasks) · all configurations",R1,W8A8 + always exit at layer 16,2B,0.3543,0.7273
+"JB-all (JevBench, 231 tasks) · all configurations",R1a,W8A8 + always exit at layer 8,2B,0.5996,0.4589
+"JB-all (JevBench, 231 tasks) · all configurations",R2a,depth split DT-A8: state rows 8 of 24 layers,2B,0.4127,0.684
+"JB-all (JevBench, 231 tasks) · all configurations",R2b,"depth split DT-set12: 12 layers, options as a set",2B,0.3601,0.6883
+"JB-all (JevBench, 231 tasks) · all configurations",R2c,"depth split at 16 layers, untrained",2B,0.3468,0.7359
+"JB-all (JevBench, 231 tasks) · all configurations",A1,"T5Gemma 2B encoder, masked state cache (e1b)",2B,0.3975,0.6883
+"JB-all (JevBench, 231 tasks) · all configurations",A1a,"T5Gemma 2B encoder, state sees question (e1a)",2B,0.3944,0.6883
+"JB-all (JevBench, 231 tasks) · all configurations",A2,"bidirectional GDN, masked state cache",2B,0.3345,0.7446
+"JB-all (JevBench, 231 tasks) · all configurations",A2a,"bidirectional GDN, state sees question",2B,0.3326,0.7403
+"JB-all (JevBench, 231 tasks) · all configurations",A3,question-first compiled schema (H7),2B,0.4929,0.5541
+"JB-all (JevBench, 231 tasks) · all configurations",A5,"compiled question rows, 92% compiled (J14 A)",2B,0.4299,0.6926
+"JB-all (JevBench, 231 tasks) · all configurations",A5a,"compiled question rows, 69% compiled (J14 C)",2B,0.3649,0.7143
+"JB-all (JevBench, 231 tasks) · all configurations",A5b,"compiled question headers only, 12% compiled (J14 F)",2B,0.3526,0.7186
+"JB-all (JevBench, 231 tasks) · all configurations",A6,precompiled deployment documents + compile adapter (J9 s400),2B,0.3486,0.7273
+"JB-all (JevBench, 231 tasks) · all configurations",A7,"64k super-token vocabulary, 1,100 updates (J7 TL)",2B,0.3721,0.7056
+"JB-all (JevBench, 231 tasks) · all configurations",A7a,"16k super-token vocabulary, 400 updates (J7 T16k)",2B,0.3769,0.6926
+"JB-all (JevBench, 231 tasks) · all configurations",A8,value-identity and structure channels (J7 V),2B,0.3639,0.7229
+"JB-all (JevBench, 231 tasks) · all configurations",A9,exact-relation module (J12 xr),2B,0.3612,0.7186
+"JB-all (JevBench, 231 tasks) · all configurations",A10,"decision pretraining + fine-tune, 12k rows (J4 b)",2B,0.4122,0.671
+"JB-all (JevBench, 231 tasks) · all configurations",A11,"slot model, 114M from scratch (J11 M_slot)",small,0.6746,0.3333
+"JB-all (JevBench, 231 tasks) · all configurations",A11a,"decoder, 114M from scratch (J11 M_dec)",small,0.6831,0.2987
+"JB-all (JevBench, 231 tasks) · all configurations",P10,"row role: state rows W4A4, question rows W8A8 (Q2 deployed kernels)",2B,0.3538,0.7273
+"JB-all (JevBench, 231 tasks) · all configurations",P11,"k64rr: 64 most sensitive GEMMs W8A8, other 32 row role (Q2 deployed kernels)",2B,0.3479,0.7229
+"JB-all (JevBench, 231 tasks) · all configurations",B4,W4A4 + decision-level scales + 20M-token QAT (Q3),2B,0.3807,0.7056
+"JB-all (JevBench, 231 tasks) · all configurations",B11a,"W8A8 + decision-aware int4 2:4 on state rows, layers 14-23 (Q5)",2B,0.3482,0.7273
+"JB-all (JevBench, 231 tasks) · all configurations",B11b,"W8A8 + decision-aware int8 2:4 on state rows, layers 12-22 (Q5)",2B,0.3502,0.7273
+"JB-all (JevBench, 231 tasks) · all configurations",B12,W8A8 + 60% of layer 12-23 MLP neurons removed by decision saliency (Q5),2B,0.3473,0.7316
+"JB-all (JevBench, 231 tasks) · all configurations",B13,"W8A8 + exact eliminations (layer 23 K/V only, layer-0 table) (Q4)",2B,0.3487,0.7316
+"JB-all (JevBench, 231 tasks) · all configurations",M1,"all-attention hobson, 2.3M tokens of training (M1 d3)",2B,0.4347,0.645
+"JB-all (JevBench, 231 tasks) · all configurations",M2,"segment-isolated state, depth 12, global question readers, 4.1 h training (M2 N k12)",2B,0.3849,0.6926
+"JB-all (JevBench, 231 tasks) · all configurations",M2a,"constants isolated, depth 12 (M2 C k12)",2B,0.3707,0.697
+"JB-all (JevBench, 231 tasks) · all configurations",M2b,"constants isolated, depth 8 (M2 C k8)",2B,0.4396,0.6537
+"JB-all (JevBench, 231 tasks) · all configurations",M2c,"segment-isolated state, depth 8 (M2 N k8, 2.6 h)",2B,0.446,0.6494
+"JB-all (JevBench, 231 tasks) · all configurations",C1,"k64rr + layer-16 exit cascade (Q2, box q2b, deployed kernels)",2B,0.3539,0.7273
+"JB-all (JevBench, 231 tasks) · all configurations",HW1a,"Sapphire Rapids AMX, 16 cores",2B,0.3487,0.7229
+"JB-all (JevBench, 231 tasks) · all configurations",E1,"hobson + detail augmentation, Qwen tokens (J7 C)",2B,0.3604,0.7186
+"JB-all (JevBench, 231 tasks) · all configurations",E1a,"hobson + detail augmentation, LoRA (J12 ctl)",2B,0.3535,0.7143
+"JB-all (JevBench, 231 tasks) · all configurations",E2,this-that-model-1.0,2B,0.5558,0.6667
+"REAL-label (400 real questions, Opus labels) · all configurations",hobson,"hobson-v19, bf16 fused runtime",2B,0.3473,0.785
+"REAL-label (400 real questions, Opus labels) · all configurations",P1,"W8A8 + rotation + GPTQ, 8 GEMMs bf16",2B,0.3473,0.785
+"REAL-label (400 real questions, Opus labels) · all configurations",P2,W4A4 + rotation + GPTQ,2B,0.3807,0.755
+"REAL-label (400 real questions, Opus labels) · all configurations",P2a,W4A4 with 48 GEMMs at W8A8,2B,0.3533,0.78
+"REAL-label (400 real questions, Opus labels) · all configurations",P2b,"W4A4, 64 GEMMs W8A8, question rows bf16 (H6)",2B,0.3475,0.7825
+"REAL-label (400 real questions, Opus labels) · all configurations",P3,"W4A16 weight-only, GPTQ g128",2B,0.3453,0.79
+"REAL-label (400 real questions, Opus labels) · all configurations",P9,"natively ternary BitNet 2B, W1.58A8",2B,0.392,0.733
+"REAL-label (400 real questions, Opus labels) · all configurations",R1,W8A8 + always exit at layer 16,2B,0.3468,0.7875
+"REAL-label (400 real questions, Opus labels) · all configurations",R1a,W8A8 + always exit at layer 8,2B,0.3787,0.76
+"REAL-label (400 real questions, Opus labels) · all configurations",R2a,depth split DT-A8: state rows 8 of 24 layers,2B,0.3474,0.7825
+"REAL-label (400 real questions, Opus labels) · all configurations",R2b,"depth split DT-set12: 12 layers, options as a set",2B,0.3279,0.7875
+"REAL-label (400 real questions, Opus labels) · all configurations",R2c,"depth split at 16 layers, untrained",2B,0.3486,0.7825
+"REAL-label (400 real questions, Opus labels) · all configurations",A1,"T5Gemma 2B encoder, masked state cache (e1b)",2B,0.3591,0.77
+"REAL-label (400 real questions, Opus labels) · all configurations",A1a,"T5Gemma 2B encoder, state sees question (e1a)",2B,0.3657,0.7625
+"REAL-label (400 real questions, Opus labels) · all configurations",A2,"bidirectional GDN, masked state cache",2B,0.3488,0.785
+"REAL-label (400 real questions, Opus labels) · all configurations",A2a,"bidirectional GDN, state sees question",2B,0.3465,0.7925
+"REAL-label (400 real questions, Opus labels) · all configurations",A3,question-first compiled schema (H7),2B,0.3736,0.785
+"REAL-label (400 real questions, Opus labels) · all configurations",A4,"questions compiled into weights, late (J6)",2B,0.3645,0.7775
+"REAL-label (400 real questions, Opus labels) · all configurations",A5,"compiled question rows, 92% compiled (J14 A)",2B,0.4294,0.7025
+"REAL-label (400 real questions, Opus labels) · all configurations",A5a,"compiled question rows, 69% compiled (J14 C)",2B,0.3623,0.785
+"REAL-label (400 real questions, Opus labels) · all configurations",A5b,"compiled question headers only, 12% compiled (J14 F)",2B,0.3451,0.7825
+"REAL-label (400 real questions, Opus labels) · all configurations",A6,precompiled deployment documents + compile adapter (J9 s400),2B,0.3585,0.7675
+"REAL-label (400 real questions, Opus labels) · all configurations",A6a,"precompiled deployment documents, untrained",2B,0.3593,0.775
+"REAL-label (400 real questions, Opus labels) · all configurations",A7,"64k super-token vocabulary, 1,100 updates (J7 TL)",2B,0.3717,0.7675
+"REAL-label (400 real questions, Opus labels) · all configurations",A7a,"16k super-token vocabulary, 400 updates (J7 T16k)",2B,0.3602,0.7725
+"REAL-label (400 real questions, Opus labels) · all configurations",A8,value-identity and structure channels (J7 V),2B,0.3566,0.795
+"REAL-label (400 real questions, Opus labels) · all configurations",A9,exact-relation module (J12 xr),2B,0.3706,0.755
+"REAL-label (400 real questions, Opus labels) · all configurations",A10,"decision pretraining + fine-tune, 12k rows (J4 b)",2B,0.3799,0.7525
+"REAL-label (400 real questions, Opus labels) · all configurations",A11,"slot model, 114M from scratch (J11 M_slot)",small,0.4733,0.6725
+"REAL-label (400 real questions, Opus labels) · all configurations",A11a,"decoder, 114M from scratch (J11 M_dec)",small,0.4732,0.645
+"REAL-label (400 real questions, Opus labels) · all configurations",P10,"row role: state rows W4A4, question rows W8A8 (Q2 deployed kernels)",2B,0.3557,0.7825
+"REAL-label (400 real questions, Opus labels) · all configurations",P11,"k64rr: 64 most sensitive GEMMs W8A8, other 32 row role (Q2 deployed kernels)",2B,0.3468,0.79
+"REAL-label (400 real questions, Opus labels) · all configurations",B4,W4A4 + decision-level scales + 20M-token QAT (Q3),2B,0.362,0.7825
+"REAL-label (400 real questions, Opus labels) · all configurations",B11a,"W8A8 + decision-aware int4 2:4 on state rows, layers 14-23 (Q5)",2B,0.3465,0.79
+"REAL-label (400 real questions, Opus labels) · all configurations",B11b,"W8A8 + decision-aware int8 2:4 on state rows, layers 12-22 (Q5)",2B,0.3464,0.7925
+"REAL-label (400 real questions, Opus labels) · all configurations",B12,W8A8 + 60% of layer 12-23 MLP neurons removed by decision saliency (Q5),2B,0.3463,0.7875
+"REAL-label (400 real questions, Opus labels) · all configurations",B13,"W8A8 + exact eliminations (layer 23 K/V only, layer-0 table) (Q4)",2B,0.3474,0.7925
+"REAL-label (400 real questions, Opus labels) · all configurations",M1,"all-attention hobson, 2.3M tokens of training (M1 d3)",2B,0.3736,0.77
+"REAL-label (400 real questions, Opus labels) · all configurations",M2,"segment-isolated state, depth 12, global question readers, 4.1 h training (M2 N k12)",2B,0.3553,0.7875
+"REAL-label (400 real questions, Opus labels) · all configurations",M2a,"constants isolated, depth 12 (M2 C k12)",2B,0.3486,0.77
+"REAL-label (400 real questions, Opus labels) · all configurations",M2b,"constants isolated, depth 8 (M2 C k8)",2B,0.344,0.78
+"REAL-label (400 real questions, Opus labels) · all configurations",M2c,"segment-isolated state, depth 8 (M2 N k8, 2.6 h)",2B,0.3478,0.7925
+"REAL-label (400 real questions, Opus labels) · all configurations",C1,"k64rr + layer-16 exit cascade (Q2, box q2b, deployed kernels)",2B,0.3467,0.79
+"REAL-label (400 real questions, Opus labels) · all configurations",HW1a,"Sapphire Rapids AMX, 16 cores",2B,0.3473,0.7875
+"REAL-label (400 real questions, Opus labels) · all configurations",E1,"hobson + detail augmentation, Qwen tokens (J7 C)",2B,0.3581,0.7825
+"REAL-label (400 real questions, Opus labels) · all configurations",E1a,"hobson + detail augmentation, LoRA (J12 ctl)",2B,0.3654,0.7525
+"REAL-label (400 real questions, Opus labels) · all configurations",E2,this-that-model-1.0,2B,0.4642,0.685

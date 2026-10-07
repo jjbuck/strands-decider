@@ -1,0 +1,7 @@
+=== 22:58:17 dcasc {16}
+{"suite": "JB-all", "id": "hard-opus-a-temporal_numeric-09", "q": "q", "T": 534, "exit": 24, "casc": 18.73, "b8": 18.49}
+{"suite": "JB-all", "id": "easy-extraction-11", "q": "q", "T": 95, "exit": 16, "casc": 4.916, "b8": 7.146}
+=== 23:03:07 dcasc {8,16}
+{"suite": "JB-all", "id": "hard-opus-a-temporal_numeric-09", "q": "q", "T": 534, "exit": 24, "casc": 18.892, "b8": 18.475}
+{"suite": "JB-all", "id": "easy-extraction-11", "q": "q", "T": 95, "exit": 8, "casc": 2.533, "b8": 7.138}
+E2E2_DONE 23:07:46

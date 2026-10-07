@@ -1,0 +1,1466 @@
+{
+ "tf_24A": {
+  "JB-all n": 130,
+  "JB-all acc": 0.5307692307692308,
+  "JB-all hob": 0.5230769230769231,
+  "JB-all mcnemar p": 1.0,
+  "JB-all model-only/hob-only": "1/0",
+  "JB-all brier": 0.5575415303666439,
+  "JB-all brier hob": 0.5571760288952108,
+  "JB-all ece": 0.1282701382454701,
+  "JB-all ece hob": 0.135230856502159,
+  "JB-hard n": 130,
+  "JB-hard acc": 0.5307692307692308,
+  "JB-hard hob": 0.5230769230769231,
+  "JB-hard mcnemar p": 1.0,
+  "JB-hard model-only/hob-only": "1/0",
+  "JB-hard brier": 0.5575415303666439,
+  "JB-hard brier hob": 0.5571760288952108,
+  "JB-hard ece": 0.1282701382454701,
+  "JB-hard ece hob": 0.135230856502159,
+  "REAL-label n": 90,
+  "REAL-label acc": 0.8222222222222222,
+  "REAL-label hob": 0.8111111111111111,
+  "REAL-label mcnemar p": 1.0,
+  "REAL-label model-only/hob-only": "1/0",
+  "REAL-label brier": 0.3076694726094783,
+  "REAL-label brier hob": 0.3077024410166079,
+  "REAL-label ece": 0.12338960434254978,
+  "REAL-label ece hob": 0.11548153330683548,
+  "CF n": 240,
+  "CF acc": 0.625,
+  "CF hob": 0.6208333333333333,
+  "CF mcnemar p": 1.0,
+  "CF model-only/hob-only": "1/0",
+  "CF brier": 0.48618207644003564,
+  "CF brier hob": 0.486487890418881,
+  "CF ece": 0.08480227106481547,
+  "CF ece hob": 0.08898760754922908,
+  "CF-probe n": 240,
+  "CF-probe acc": 0.6375,
+  "CF-probe hob": 0.6375,
+  "CF-probe mcnemar p": 1.0,
+  "CF-probe model-only/hob-only": "1/1",
+  "CF-probe brier": 0.4184998366667222,
+  "CF-probe brier hob": 0.41857517099792657,
+  "CF-probe ece": 0.07917696145397571,
+  "CF-probe ece hob": 0.08737358100986171,
+  "REAL-label short<2000": [
+   55,
+   0.8,
+   0.8
+  ],
+  "REAL-label long>=2000": [
+   35,
+   0.8571428571428571,
+   0.8285714285714286
+  ],
+  "JB-long coverage": 1.0,
+  "JB-long agree": 0.987012987012987,
+  "JB-long agree_sd": 1.0,
+  "JB-long tv": 0.004792995169656441,
+  "REAL-agree coverage": 0.22437673130193905,
+  "REAL-agree agree": 0.9958847736625515,
+  "REAL-agree agree_sd": 0.9879518072289156,
+  "REAL-agree tv": 0.003084555847076185,
+  "LONG coverage": 0.19532908704883228,
+  "LONG agree": 1.0,
+  "LONG agree_sd": 1.0,
+  "LONG tv": 0.0030617002457468466,
+  "CF n_pairs": 120,
+  "CF flip": 0.3,
+  "CF flip_rel": 1.0285714285714285,
+  "CF flip_given_hobson": 1.0,
+  "CF dir": 0.9416666666666667,
+  "CF agree": 0.9916666666666667,
+  "CF flip hob": 0.2916666666666667,
+  "CF acc_pair hob": 0.6208333333333333,
+  "CF by kind": {
+   "amount_insert": [
+    0.111,
+    0.1,
+    90
+   ],
+   "human_insert": [
+    0.317,
+    0.346,
+    156
+   ],
+   "id_add_second": [
+    0.0,
+    0.0,
+    5
+   ],
+   "id_digit_existing": [
+    0.0,
+    0.0,
+    26
+   ],
+   "id_digit_inserted": [
+    0.0,
+    0.0,
+    10
+   ],
+   "id_remove_one": [
+    0.0,
+    0.0,
+    10
+   ],
+   "insists_3v4": [
+    0.0,
+    0.05,
+    20
+   ],
+   "procedure_intent": [
+    0.0,
+    0.0,
+    40
+   ],
+   "wrapup_replace": [
+    0.952,
+    0.918,
+    49
+   ]
+  },
+  "CF-probe n_pairs": 120,
+  "CF-probe flip": 0.30833333333333335,
+  "CF-probe flip_rel": 1.0,
+  "CF-probe flip_given_hobson": 0.972972972972973,
+  "CF-probe dir": 0.875,
+  "CF-probe agree": 0.9916666666666667,
+  "CF-probe flip hob": 0.30833333333333335,
+  "CF-probe acc_pair hob": 0.6375,
+  "CF-probe by kind": {
+   "probe_amount_vs_limit": [
+    0.267,
+    0.326,
+    43
+   ],
+   "probe_amount_vs_limit_distract": [
+    0.071,
+    0.237,
+    38
+   ],
+   "probe_date_order": [
+    0.056,
+    0.061,
+    49
+   ],
+   "probe_date_order_distract": [
+    0.062,
+    0.031,
+    32
+   ],
+   "probe_id_match": [
+    0.417,
+    0.541,
+    37
+   ],
+   "probe_id_match_distract": [
+    0.625,
+    0.381,
+    42
+   ],
+   "probe_status_equal": [
+    0.727,
+    0.886,
+    35
+   ],
+   "probe_status_equal_distract": [
+    0.389,
+    0.25,
+    44
+   ]
+  },
+  "SHUF both_right": 0.17647058823529413,
+  "bar": {
+   "jb_all_ok": true,
+   "jb_hard_ok": true,
+   "real_label_ok": true,
+   "cf_ok": true,
+   "cfp_ok": true
+  },
+  "PASS": true
+ },
+ "tf_16A": {
+  "JB-all n": 130,
+  "JB-all acc": 0.5461538461538461,
+  "JB-all hob": 0.5230769230769231,
+  "JB-all mcnemar p": 0.25,
+  "JB-all model-only/hob-only": "3/0",
+  "JB-all brier": 0.5562726445158388,
+  "JB-all brier hob": 0.5571760288952108,
+  "JB-all ece": 0.11186305626549932,
+  "JB-all ece hob": 0.135230856502159,
+  "JB-hard n": 130,
+  "JB-hard acc": 0.5461538461538461,
+  "JB-hard hob": 0.5230769230769231,
+  "JB-hard mcnemar p": 0.25,
+  "JB-hard model-only/hob-only": "3/0",
+  "JB-hard brier": 0.5562726445158388,
+  "JB-hard brier hob": 0.5571760288952108,
+  "JB-hard ece": 0.11186305626549932,
+  "JB-hard ece hob": 0.135230856502159,
+  "REAL-label n": 90,
+  "REAL-label acc": 0.8111111111111111,
+  "REAL-label hob": 0.8111111111111111,
+  "REAL-label mcnemar p": 1.0,
+  "REAL-label model-only/hob-only": "0/0",
+  "REAL-label brier": 0.3089003071667978,
+  "REAL-label brier hob": 0.3077024410166079,
+  "REAL-label ece": 0.1273024991229947,
+  "REAL-label ece hob": 0.11548153330683548,
+  "CF n": 240,
+  "CF acc": 0.6291666666666667,
+  "CF hob": 0.6208333333333333,
+  "CF mcnemar p": 0.5,
+  "CF model-only/hob-only": "2/0",
+  "CF brier": 0.4854587165650257,
+  "CF brier hob": 0.486487890418881,
+  "CF ece": 0.07942381093736788,
+  "CF ece hob": 0.08898760754922908,
+  "CF-probe n": 240,
+  "CF-probe acc": 0.6458333333333334,
+  "CF-probe hob": 0.6375,
+  "CF-probe mcnemar p": 0.625,
+  "CF-probe model-only/hob-only": "3/1",
+  "CF-probe brier": 0.41825516814451486,
+  "CF-probe brier hob": 0.41857517099792657,
+  "CF-probe ece": 0.07982085133282653,
+  "CF-probe ece hob": 0.08737358100986171,
+  "REAL-label short<2000": [
+   55,
+   0.8,
+   0.8
+  ],
+  "REAL-label long>=2000": [
+   35,
+   0.8285714285714286,
+   0.8285714285714286
+  ],
+  "JB-long coverage": 1.0,
+  "JB-long agree": 0.961038961038961,
+  "JB-long agree_sd": 0.975,
+  "JB-long tv": 0.006780120075815164,
+  "REAL-agree coverage": 0.22437673130193905,
+  "REAL-agree agree": 1.0,
+  "REAL-agree agree_sd": 1.0,
+  "REAL-agree tv": 0.005448508095571133,
+  "LONG coverage": 0.19532908704883228,
+  "LONG agree": 1.0,
+  "LONG agree_sd": 1.0,
+  "LONG tv": 0.006224628676638166,
+  "CF n_pairs": 120,
+  "CF flip": 0.3,
+  "CF flip_rel": 1.0285714285714285,
+  "CF flip_given_hobson": 1.0,
+  "CF dir": 0.95,
+  "CF agree": 0.9916666666666667,
+  "CF flip hob": 0.2916666666666667,
+  "CF acc_pair hob": 0.6208333333333333,
+  "CF by kind": {
+   "amount_insert": [
+    0.111,
+    0.1,
+    90
+   ],
+   "human_insert": [
+    0.317,
+    0.346,
+    156
+   ],
+   "id_add_second": [
+    0.0,
+    0.0,
+    5
+   ],
+   "id_digit_existing": [
+    0.0,
+    0.0,
+    26
+   ],
+   "id_digit_inserted": [
+    0.0,
+    0.0,
+    10
+   ],
+   "id_remove_one": [
+    0.0,
+    0.0,
+    10
+   ],
+   "insists_3v4": [
+    0.0,
+    0.05,
+    20
+   ],
+   "procedure_intent": [
+    0.0,
+    0.0,
+    40
+   ],
+   "wrapup_replace": [
+    0.952,
+    0.918,
+    49
+   ]
+  },
+  "CF-probe n_pairs": 120,
+  "CF-probe flip": 0.31666666666666665,
+  "CF-probe flip_rel": 1.027027027027027,
+  "CF-probe flip_given_hobson": 0.972972972972973,
+  "CF-probe dir": 0.875,
+  "CF-probe agree": 0.9833333333333333,
+  "CF-probe flip hob": 0.30833333333333335,
+  "CF-probe acc_pair hob": 0.6375,
+  "CF-probe by kind": {
+   "probe_amount_vs_limit": [
+    0.333,
+    0.326,
+    43
+   ],
+   "probe_amount_vs_limit_distract": [
+    0.071,
+    0.237,
+    38
+   ],
+   "probe_date_order": [
+    0.056,
+    0.061,
+    49
+   ],
+   "probe_date_order_distract": [
+    0.062,
+    0.031,
+    32
+   ],
+   "probe_id_match": [
+    0.417,
+    0.541,
+    37
+   ],
+   "probe_id_match_distract": [
+    0.625,
+    0.381,
+    42
+   ],
+   "probe_status_equal": [
+    0.727,
+    0.886,
+    35
+   ],
+   "probe_status_equal_distract": [
+    0.389,
+    0.25,
+    44
+   ]
+  },
+  "SHUF both_right": 0.17647058823529413,
+  "bar": {
+   "jb_all_ok": true,
+   "jb_hard_ok": true,
+   "real_label_ok": true,
+   "cf_ok": true,
+   "cfp_ok": true
+  },
+  "PASS": true
+ },
+ "tf_12A": {
+  "JB-all n": 130,
+  "JB-all acc": 0.47692307692307695,
+  "JB-all hob": 0.5230769230769231,
+  "JB-all mcnemar p": 0.1795654296875,
+  "JB-all model-only/hob-only": "4/10",
+  "JB-all brier": 0.5848275911030701,
+  "JB-all brier hob": 0.5571760288952108,
+  "JB-all ece": 0.17547288993249271,
+  "JB-all ece hob": 0.135230856502159,
+  "JB-hard n": 130,
+  "JB-hard acc": 0.47692307692307695,
+  "JB-hard hob": 0.5230769230769231,
+  "JB-hard mcnemar p": 0.1795654296875,
+  "JB-hard model-only/hob-only": "4/10",
+  "JB-hard brier": 0.5848275911030701,
+  "JB-hard brier hob": 0.5571760288952108,
+  "JB-hard ece": 0.17547288993249271,
+  "JB-hard ece hob": 0.135230856502159,
+  "REAL-label n": 90,
+  "REAL-label acc": 0.7888888888888889,
+  "REAL-label hob": 0.8111111111111111,
+  "REAL-label mcnemar p": 0.5,
+  "REAL-label model-only/hob-only": "0/2",
+  "REAL-label brier": 0.30860890092395976,
+  "REAL-label brier hob": 0.3077024410166079,
+  "REAL-label ece": 0.11274727861752239,
+  "REAL-label ece hob": 0.11548153330683548,
+  "CF n": 240,
+  "CF acc": 0.6625,
+  "CF hob": 0.6208333333333333,
+  "CF mcnemar p": 0.001953125,
+  "CF model-only/hob-only": "10/0",
+  "CF brier": 0.4609961081158253,
+  "CF brier hob": 0.486487890418881,
+  "CF ece": 0.056895947926121127,
+  "CF ece hob": 0.08898760754922908,
+  "CF-probe n": 240,
+  "CF-probe acc": 0.6458333333333334,
+  "CF-probe hob": 0.6375,
+  "CF-probe mcnemar p": 0.7744140625,
+  "CF-probe model-only/hob-only": "7/5",
+  "CF-probe brier": 0.41814014261780286,
+  "CF-probe brier hob": 0.41857517099792657,
+  "CF-probe ece": 0.06461583744872,
+  "CF-probe ece hob": 0.08737358100986171,
+  "REAL-label short<2000": [
+   55,
+   0.7818181818181819,
+   0.8
+  ],
+  "REAL-label long>=2000": [
+   35,
+   0.8,
+   0.8285714285714286
+  ],
+  "JB-long coverage": 1.0,
+  "JB-long agree": 0.9090909090909091,
+  "JB-long agree_sd": 0.925,
+  "JB-long tv": 0.059015101250936224,
+  "REAL-agree coverage": 0.22437673130193905,
+  "REAL-agree agree": 0.9711934156378601,
+  "REAL-agree agree_sd": 0.9518072289156626,
+  "REAL-agree tv": 0.023869188497081223,
+  "LONG coverage": 0.19532908704883228,
+  "LONG agree": 0.967391304347826,
+  "LONG agree_sd": 0.9629629629629629,
+  "LONG tv": 0.02149452858530489,
+  "CF n_pairs": 120,
+  "CF flip": 0.36666666666666664,
+  "CF flip_rel": 1.257142857142857,
+  "CF flip_given_hobson": 1.0,
+  "CF dir": 0.9333333333333333,
+  "CF agree": 0.9541666666666667,
+  "CF flip hob": 0.2916666666666667,
+  "CF acc_pair hob": 0.6208333333333333,
+  "CF by kind": {
+   "amount_insert": [
+    0.333,
+    0.1,
+    90
+   ],
+   "human_insert": [
+    0.341,
+    0.346,
+    156
+   ],
+   "id_add_second": [
+    0.0,
+    0.0,
+    5
+   ],
+   "id_digit_existing": [
+    0.0,
+    0.0,
+    26
+   ],
+   "id_digit_inserted": [
+    0.0,
+    0.0,
+    10
+   ],
+   "id_remove_one": [
+    0.0,
+    0.0,
+    10
+   ],
+   "insists_3v4": [
+    0.0,
+    0.05,
+    20
+   ],
+   "procedure_intent": [
+    0.0,
+    0.0,
+    40
+   ],
+   "wrapup_replace": [
+    1.0,
+    0.918,
+    49
+   ]
+  },
+  "CF-probe n_pairs": 120,
+  "CF-probe flip": 0.31666666666666665,
+  "CF-probe flip_rel": 1.027027027027027,
+  "CF-probe flip_given_hobson": 0.8648648648648649,
+  "CF-probe dir": 0.875,
+  "CF-probe agree": 0.95,
+  "CF-probe flip hob": 0.30833333333333335,
+  "CF-probe acc_pair hob": 0.6375,
+  "CF-probe by kind": {
+   "probe_amount_vs_limit": [
+    0.267,
+    0.326,
+    43
+   ],
+   "probe_amount_vs_limit_distract": [
+    0.286,
+    0.237,
+    38
+   ],
+   "probe_date_order": [
+    0.0,
+    0.061,
+    49
+   ],
+   "probe_date_order_distract": [
+    0.062,
+    0.031,
+    32
+   ],
+   "probe_id_match": [
+    0.583,
+    0.541,
+    37
+   ],
+   "probe_id_match_distract": [
+    0.625,
+    0.381,
+    42
+   ],
+   "probe_status_equal": [
+    0.727,
+    0.886,
+    35
+   ],
+   "probe_status_equal_distract": [
+    0.222,
+    0.25,
+    44
+   ]
+  },
+  "SHUF both_right": 0.23529411764705882,
+  "bar": {
+   "jb_all_ok": true,
+   "jb_hard_ok": true,
+   "real_label_ok": true,
+   "cf_ok": true,
+   "cfp_ok": true
+  },
+  "PASS": true
+ },
+ "tf_12G": {
+  "JB-all n": 130,
+  "JB-all acc": 0.5384615384615384,
+  "JB-all hob": 0.5230769230769231,
+  "JB-all mcnemar p": 0.5,
+  "JB-all model-only/hob-only": "2/0",
+  "JB-all brier": 0.5620128363211796,
+  "JB-all brier hob": 0.5571760288952108,
+  "JB-all ece": 0.11401009994348235,
+  "JB-all ece hob": 0.135230856502159,
+  "JB-hard n": 130,
+  "JB-hard acc": 0.5384615384615384,
+  "JB-hard hob": 0.5230769230769231,
+  "JB-hard mcnemar p": 0.5,
+  "JB-hard model-only/hob-only": "2/0",
+  "JB-hard brier": 0.5620128363211796,
+  "JB-hard brier hob": 0.5571760288952108,
+  "JB-hard ece": 0.11401009994348235,
+  "JB-hard ece hob": 0.135230856502159,
+  "REAL-label n": 90,
+  "REAL-label acc": 0.8222222222222222,
+  "REAL-label hob": 0.8111111111111111,
+  "REAL-label mcnemar p": 1.0,
+  "REAL-label model-only/hob-only": "1/0",
+  "REAL-label brier": 0.3059764388299705,
+  "REAL-label brier hob": 0.3077024410166079,
+  "REAL-label ece": 0.12905445863027248,
+  "REAL-label ece hob": 0.11548153330683548,
+  "CF n": 240,
+  "CF acc": 0.6375,
+  "CF hob": 0.6208333333333333,
+  "CF mcnemar p": 0.125,
+  "CF model-only/hob-only": "4/0",
+  "CF brier": 0.47786823518266797,
+  "CF brier hob": 0.486487890418881,
+  "CF ece": 0.0735943809372788,
+  "CF ece hob": 0.08898760754922908,
+  "CF-probe n": 240,
+  "CF-probe acc": 0.6416666666666667,
+  "CF-probe hob": 0.6375,
+  "CF-probe mcnemar p": 1.0,
+  "CF-probe model-only/hob-only": "3/2",
+  "CF-probe brier": 0.41778465841839674,
+  "CF-probe brier hob": 0.41857517099792657,
+  "CF-probe ece": 0.08349236569222071,
+  "CF-probe ece hob": 0.08737358100986171,
+  "REAL-label short<2000": [
+   55,
+   0.8181818181818182,
+   0.8
+  ],
+  "REAL-label long>=2000": [
+   35,
+   0.8285714285714286,
+   0.8285714285714286
+  ],
+  "JB-long coverage": 1.0,
+  "JB-long agree": 0.974025974025974,
+  "JB-long agree_sd": 1.0,
+  "JB-long tv": 0.014920230652219164,
+  "REAL-agree coverage": 0.22437673130193905,
+  "REAL-agree agree": 0.9958847736625515,
+  "REAL-agree agree_sd": 1.0,
+  "REAL-agree tv": 0.010873170386516655,
+  "LONG coverage": 0.19532908704883228,
+  "LONG agree": 1.0,
+  "LONG agree_sd": 1.0,
+  "LONG tv": 0.009144775902857654,
+  "CF n_pairs": 120,
+  "CF flip": 0.31666666666666665,
+  "CF flip_rel": 1.0857142857142856,
+  "CF flip_given_hobson": 1.0,
+  "CF dir": 0.9416666666666667,
+  "CF agree": 0.975,
+  "CF flip hob": 0.2916666666666667,
+  "CF acc_pair hob": 0.6208333333333333,
+  "CF by kind": {
+   "amount_insert": [
+    0.148,
+    0.1,
+    90
+   ],
+   "human_insert": [
+    0.317,
+    0.346,
+    156
+   ],
+   "id_add_second": [
+    0.0,
+    0.0,
+    5
+   ],
+   "id_digit_existing": [
+    0.0,
+    0.0,
+    26
+   ],
+   "id_digit_inserted": [
+    0.0,
+    0.0,
+    10
+   ],
+   "id_remove_one": [
+    0.0,
+    0.0,
+    10
+   ],
+   "insists_3v4": [
+    0.0,
+    0.05,
+    20
+   ],
+   "procedure_intent": [
+    0.0,
+    0.0,
+    40
+   ],
+   "wrapup_replace": [
+    1.0,
+    0.918,
+    49
+   ]
+  },
+  "CF-probe n_pairs": 120,
+  "CF-probe flip": 0.31666666666666665,
+  "CF-probe flip_rel": 1.027027027027027,
+  "CF-probe flip_given_hobson": 0.9459459459459459,
+  "CF-probe dir": 0.875,
+  "CF-probe agree": 0.9791666666666666,
+  "CF-probe flip hob": 0.30833333333333335,
+  "CF-probe acc_pair hob": 0.6375,
+  "CF-probe by kind": {
+   "probe_amount_vs_limit": [
+    0.333,
+    0.326,
+    43
+   ],
+   "probe_amount_vs_limit_distract": [
+    0.071,
+    0.237,
+    38
+   ],
+   "probe_date_order": [
+    0.056,
+    0.061,
+    49
+   ],
+   "probe_date_order_distract": [
+    0.062,
+    0.031,
+    32
+   ],
+   "probe_id_match": [
+    0.417,
+    0.541,
+    37
+   ],
+   "probe_id_match_distract": [
+    0.625,
+    0.381,
+    42
+   ],
+   "probe_status_equal": [
+    0.727,
+    0.886,
+    35
+   ],
+   "probe_status_equal_distract": [
+    0.389,
+    0.25,
+    44
+   ]
+  },
+  "SHUF both_right": 0.20588235294117646,
+  "bar": {
+   "jb_all_ok": true,
+   "jb_hard_ok": true,
+   "real_label_ok": true,
+   "cf_ok": true,
+   "cfp_ok": true
+  },
+  "PASS": true
+ },
+ "tf_8A": {
+  "JB-all n": 130,
+  "JB-all acc": 0.46153846153846156,
+  "JB-all hob": 0.5230769230769231,
+  "JB-all mcnemar p": 0.2558750795433298,
+  "JB-all model-only/hob-only": "15/23",
+  "JB-all brier": 0.6006429785014656,
+  "JB-all brier hob": 0.5571760288952108,
+  "JB-all ece": 0.12929491639110272,
+  "JB-all ece hob": 0.135230856502159,
+  "JB-hard n": 130,
+  "JB-hard acc": 0.46153846153846156,
+  "JB-hard hob": 0.5230769230769231,
+  "JB-hard mcnemar p": 0.2558750795433298,
+  "JB-hard model-only/hob-only": "15/23",
+  "JB-hard brier": 0.6006429785014656,
+  "JB-hard brier hob": 0.5571760288952108,
+  "JB-hard ece": 0.12929491639110272,
+  "JB-hard ece hob": 0.135230856502159,
+  "REAL-label n": 90,
+  "REAL-label acc": 0.7444444444444445,
+  "REAL-label hob": 0.8111111111111111,
+  "REAL-label mcnemar p": 0.14599609375,
+  "REAL-label model-only/hob-only": "3/9",
+  "REAL-label brier": 0.3618081575129934,
+  "REAL-label brier hob": 0.3077024410166079,
+  "REAL-label ece": 0.059420080396627974,
+  "REAL-label ece hob": 0.11548153330683548,
+  "CF n": 240,
+  "CF acc": 0.6166666666666667,
+  "CF hob": 0.6208333333333333,
+  "CF mcnemar p": 1.0,
+  "CF model-only/hob-only": "14/15",
+  "CF brier": 0.5201313122605518,
+  "CF brier hob": 0.486487890418881,
+  "CF ece": 0.06844453041280542,
+  "CF ece hob": 0.08898760754922908,
+  "CF-probe n": 240,
+  "CF-probe acc": 0.6333333333333333,
+  "CF-probe hob": 0.6375,
+  "CF-probe mcnemar p": 1.0,
+  "CF-probe model-only/hob-only": "24/25",
+  "CF-probe brier": 0.4474470426331018,
+  "CF-probe brier hob": 0.41857517099792657,
+  "CF-probe ece": 0.05222744451456151,
+  "CF-probe ece hob": 0.08737358100986171,
+  "REAL-label short<2000": [
+   55,
+   0.7818181818181819,
+   0.8
+  ],
+  "REAL-label long>=2000": [
+   35,
+   0.6857142857142857,
+   0.8285714285714286
+  ],
+  "JB-long coverage": 1.0,
+  "JB-long agree": 0.5844155844155844,
+  "JB-long agree_sd": 0.5,
+  "JB-long tv": 0.23183740389012486,
+  "REAL-agree coverage": 0.22437673130193905,
+  "REAL-agree agree": 0.8806584362139918,
+  "REAL-agree agree_sd": 0.7831325301204819,
+  "REAL-agree tv": 0.09246164744818651,
+  "LONG coverage": 0.19532908704883228,
+  "LONG agree": 0.9239130434782609,
+  "LONG agree_sd": 0.7407407407407407,
+  "LONG tv": 0.08914993639800813,
+  "CF n_pairs": 120,
+  "CF flip": 0.325,
+  "CF flip_rel": 1.1142857142857143,
+  "CF flip_given_hobson": 0.7428571428571429,
+  "CF dir": 0.925,
+  "CF agree": 0.8583333333333333,
+  "CF flip hob": 0.2916666666666667,
+  "CF acc_pair hob": 0.6208333333333333,
+  "CF by kind": {
+   "amount_insert": [
+    0.444,
+    0.1,
+    90
+   ],
+   "human_insert": [
+    0.341,
+    0.346,
+    156
+   ],
+   "id_add_second": [
+    0.0,
+    0.0,
+    5
+   ],
+   "id_digit_existing": [
+    0.0,
+    0.0,
+    26
+   ],
+   "id_digit_inserted": [
+    0.0,
+    0.0,
+    10
+   ],
+   "id_remove_one": [
+    0.0,
+    0.0,
+    10
+   ],
+   "insists_3v4": [
+    0.0,
+    0.05,
+    20
+   ],
+   "procedure_intent": [
+    0.0,
+    0.0,
+    40
+   ],
+   "wrapup_replace": [
+    0.619,
+    0.918,
+    49
+   ]
+  },
+  "CF-probe n_pairs": 120,
+  "CF-probe flip": 0.2833333333333333,
+  "CF-probe flip_rel": 0.9189189189189189,
+  "CF-probe flip_given_hobson": 0.5405405405405406,
+  "CF-probe dir": 0.7916666666666666,
+  "CF-probe agree": 0.7958333333333333,
+  "CF-probe flip hob": 0.30833333333333335,
+  "CF-probe acc_pair hob": 0.6375,
+  "CF-probe by kind": {
+   "probe_amount_vs_limit": [
+    0.067,
+    0.326,
+    43
+   ],
+   "probe_amount_vs_limit_distract": [
+    0.143,
+    0.237,
+    38
+   ],
+   "probe_date_order": [
+    0.0,
+    0.061,
+    49
+   ],
+   "probe_date_order_distract": [
+    0.0,
+    0.031,
+    32
+   ],
+   "probe_id_match": [
+    1.0,
+    0.541,
+    37
+   ],
+   "probe_id_match_distract": [
+    0.312,
+    0.381,
+    42
+   ],
+   "probe_status_equal": [
+    0.818,
+    0.886,
+    35
+   ],
+   "probe_status_equal_distract": [
+    0.278,
+    0.25,
+    44
+   ]
+  },
+  "SHUF both_right": 0.29411764705882354,
+  "bar": {
+   "jb_all_ok": true,
+   "jb_hard_ok": true,
+   "real_label_ok": false,
+   "cf_ok": true,
+   "cfp_ok": false
+  },
+  "PASS": false
+ },
+ "tf_8G": {
+  "JB-all n": 130,
+  "JB-all acc": 0.4461538461538462,
+  "JB-all hob": 0.5230769230769231,
+  "JB-all mcnemar p": 0.11018416518345475,
+  "JB-all model-only/hob-only": "11/21",
+  "JB-all brier": 0.6375512869904569,
+  "JB-all brier hob": 0.5571760288952108,
+  "JB-all ece": 0.16567434484379945,
+  "JB-all ece hob": 0.135230856502159,
+  "JB-hard n": 130,
+  "JB-hard acc": 0.4461538461538462,
+  "JB-hard hob": 0.5230769230769231,
+  "JB-hard mcnemar p": 0.11018416518345475,
+  "JB-hard model-only/hob-only": "11/21",
+  "JB-hard brier": 0.6375512869904569,
+  "JB-hard brier hob": 0.5571760288952108,
+  "JB-hard ece": 0.16567434484379945,
+  "JB-hard ece hob": 0.135230856502159,
+  "REAL-label n": 90,
+  "REAL-label acc": 0.7777777777777778,
+  "REAL-label hob": 0.8111111111111111,
+  "REAL-label mcnemar p": 0.453125,
+  "REAL-label model-only/hob-only": "2/5",
+  "REAL-label brier": 0.34564319381772424,
+  "REAL-label brier hob": 0.3077024410166079,
+  "REAL-label ece": 0.061094023940599,
+  "REAL-label ece hob": 0.11548153330683548,
+  "CF n": 240,
+  "CF acc": 0.5666666666666667,
+  "CF hob": 0.6208333333333333,
+  "CF mcnemar p": 0.007197380065917969,
+  "CF model-only/hob-only": "4/17",
+  "CF brier": 0.5212623211993637,
+  "CF brier hob": 0.486487890418881,
+  "CF ece": 0.11644204234528151,
+  "CF ece hob": 0.08898760754922908,
+  "CF-probe n": 240,
+  "CF-probe acc": 0.6375,
+  "CF-probe hob": 0.6375,
+  "CF-probe mcnemar p": 1.0,
+  "CF-probe model-only/hob-only": "23/23",
+  "CF-probe brier": 0.4541123616300532,
+  "CF-probe brier hob": 0.41857517099792657,
+  "CF-probe ece": 0.053829997268761025,
+  "CF-probe ece hob": 0.08737358100986171,
+  "REAL-label short<2000": [
+   55,
+   0.8,
+   0.8
+  ],
+  "REAL-label long>=2000": [
+   35,
+   0.7428571428571429,
+   0.8285714285714286
+  ],
+  "JB-long coverage": 1.0,
+  "JB-long agree": 0.6623376623376623,
+  "JB-long agree_sd": 0.65,
+  "JB-long tv": 0.20353716483848722,
+  "REAL-agree coverage": 0.22437673130193905,
+  "REAL-agree agree": 0.9094650205761317,
+  "REAL-agree agree_sd": 0.8795180722891566,
+  "REAL-agree tv": 0.07863958470350504,
+  "LONG coverage": 0.19532908704883228,
+  "LONG agree": 0.9456521739130435,
+  "LONG agree_sd": 0.8518518518518519,
+  "LONG tv": 0.07140426664850259,
+  "CF n_pairs": 120,
+  "CF flip": 0.225,
+  "CF flip_rel": 0.7714285714285714,
+  "CF flip_given_hobson": 0.6857142857142857,
+  "CF dir": 0.9083333333333333,
+  "CF agree": 0.8916666666666667,
+  "CF flip hob": 0.2916666666666667,
+  "CF acc_pair hob": 0.6208333333333333,
+  "CF by kind": {
+   "amount_insert": [
+    0.185,
+    0.1,
+    90
+   ],
+   "human_insert": [
+    0.098,
+    0.346,
+    156
+   ],
+   "id_add_second": [
+    0.0,
+    0.0,
+    5
+   ],
+   "id_digit_existing": [
+    0.0,
+    0.0,
+    26
+   ],
+   "id_digit_inserted": [
+    0.0,
+    0.0,
+    10
+   ],
+   "id_remove_one": [
+    0.0,
+    0.0,
+    10
+   ],
+   "insists_3v4": [
+    0.0,
+    0.05,
+    20
+   ],
+   "procedure_intent": [
+    0.0,
+    0.0,
+    40
+   ],
+   "wrapup_replace": [
+    0.857,
+    0.918,
+    49
+   ]
+  },
+  "CF-probe n_pairs": 120,
+  "CF-probe flip": 0.275,
+  "CF-probe flip_rel": 0.8918918918918919,
+  "CF-probe flip_given_hobson": 0.5675675675675675,
+  "CF-probe dir": 0.7416666666666667,
+  "CF-probe agree": 0.8083333333333333,
+  "CF-probe flip hob": 0.30833333333333335,
+  "CF-probe acc_pair hob": 0.6375,
+  "CF-probe by kind": {
+   "probe_amount_vs_limit": [
+    0.067,
+    0.326,
+    43
+   ],
+   "probe_amount_vs_limit_distract": [
+    0.071,
+    0.237,
+    38
+   ],
+   "probe_date_order": [
+    0.0,
+    0.061,
+    49
+   ],
+   "probe_date_order_distract": [
+    0.0,
+    0.031,
+    32
+   ],
+   "probe_id_match": [
+    1.0,
+    0.541,
+    37
+   ],
+   "probe_id_match_distract": [
+    0.25,
+    0.381,
+    42
+   ],
+   "probe_status_equal": [
+    0.818,
+    0.886,
+    35
+   ],
+   "probe_status_equal_distract": [
+    0.333,
+    0.25,
+    44
+   ]
+  },
+  "SHUF both_right": 0.17647058823529413,
+  "bar": {
+   "jb_all_ok": true,
+   "jb_hard_ok": true,
+   "real_label_ok": false,
+   "cf_ok": false,
+   "cfp_ok": false
+  },
+  "PASS": false
+ },
+ "tf_4A": {
+  "JB-all n": 130,
+  "JB-all acc": 0.4846153846153846,
+  "JB-all hob": 0.5230769230769231,
+  "JB-all mcnemar p": 0.5900533317766357,
+  "JB-all model-only/hob-only": "25/30",
+  "JB-all brier": 0.612848466357514,
+  "JB-all brier hob": 0.5571760288952108,
+  "JB-all ece": 0.06895312067854258,
+  "JB-all ece hob": 0.135230856502159,
+  "JB-hard n": 130,
+  "JB-hard acc": 0.4846153846153846,
+  "JB-hard hob": 0.5230769230769231,
+  "JB-hard mcnemar p": 0.5900533317766357,
+  "JB-hard model-only/hob-only": "25/30",
+  "JB-hard brier": 0.612848466357514,
+  "JB-hard brier hob": 0.5571760288952108,
+  "JB-hard ece": 0.06895312067854258,
+  "JB-hard ece hob": 0.135230856502159,
+  "REAL-label n": 90,
+  "REAL-label acc": 0.6777777777777778,
+  "REAL-label hob": 0.8111111111111111,
+  "REAL-label mcnemar p": 0.028959274291992188,
+  "REAL-label model-only/hob-only": "7/19",
+  "REAL-label brier": 0.4280809639834535,
+  "REAL-label brier hob": 0.3077024410166079,
+  "REAL-label ece": 0.06941190864494416,
+  "REAL-label ece hob": 0.11548153330683548,
+  "CF n": 240,
+  "CF acc": 0.45416666666666666,
+  "CF hob": 0.6208333333333333,
+  "CF mcnemar p": 7.237175237417024e-07,
+  "CF model-only/hob-only": "13/53",
+  "CF brier": 0.7070437969477956,
+  "CF brier hob": 0.486487890418881,
+  "CF ece": 0.27913113618985574,
+  "CF ece hob": 0.08898760754922908,
+  "CF-probe n": 240,
+  "CF-probe acc": 0.49583333333333335,
+  "CF-probe hob": 0.6375,
+  "CF-probe mcnemar p": 0.0015330525764724046,
+  "CF-probe model-only/hob-only": "38/72",
+  "CF-probe brier": 0.5318484818650261,
+  "CF-probe brier hob": 0.41857517099792657,
+  "CF-probe ece": 0.12280728109180211,
+  "CF-probe ece hob": 0.08737358100986171,
+  "REAL-label short<2000": [
+   55,
+   0.7636363636363637,
+   0.8
+  ],
+  "REAL-label long>=2000": [
+   35,
+   0.5428571428571428,
+   0.8285714285714286
+  ],
+  "JB-long coverage": 1.0,
+  "JB-long agree": 0.44155844155844154,
+  "JB-long agree_sd": 0.275,
+  "JB-long tv": 0.3019704872216745,
+  "REAL-agree coverage": 0.22437673130193905,
+  "REAL-agree agree": 0.6995884773662552,
+  "REAL-agree agree_sd": 0.2289156626506024,
+  "REAL-agree tv": 0.1955710209156531,
+  "LONG coverage": 0.19532908704883228,
+  "LONG agree": 0.7391304347826086,
+  "LONG agree_sd": 0.2222222222222222,
+  "LONG tv": 0.19882795975806586,
+  "CF n_pairs": 120,
+  "CF flip": 0.0,
+  "CF flip_rel": 0.0,
+  "CF flip_given_hobson": 0.0,
+  "CF dir": 0.6833333333333333,
+  "CF agree": 0.6916666666666667,
+  "CF flip hob": 0.2916666666666667,
+  "CF acc_pair hob": 0.6208333333333333,
+  "CF by kind": {
+   "amount_insert": [
+    0.0,
+    0.1,
+    90
+   ],
+   "human_insert": [
+    0.0,
+    0.346,
+    156
+   ],
+   "id_add_second": [
+    0.0,
+    0.0,
+    5
+   ],
+   "id_digit_existing": [
+    0.0,
+    0.0,
+    26
+   ],
+   "id_digit_inserted": [
+    0.0,
+    0.0,
+    10
+   ],
+   "id_remove_one": [
+    0.0,
+    0.0,
+    10
+   ],
+   "insists_3v4": [
+    0.0,
+    0.05,
+    20
+   ],
+   "procedure_intent": [
+    0.0,
+    0.0,
+    40
+   ],
+   "wrapup_replace": [
+    0.0,
+    0.918,
+    49
+   ]
+  },
+  "CF-probe n_pairs": 120,
+  "CF-probe flip": 0.0,
+  "CF-probe flip_rel": 0.0,
+  "CF-probe flip_given_hobson": 0.0,
+  "CF-probe dir": 0.525,
+  "CF-probe agree": 0.5416666666666666,
+  "CF-probe flip hob": 0.30833333333333335,
+  "CF-probe acc_pair hob": 0.6375,
+  "CF-probe by kind": {
+   "probe_amount_vs_limit": [
+    0.0,
+    0.326,
+    43
+   ],
+   "probe_amount_vs_limit_distract": [
+    0.0,
+    0.237,
+    38
+   ],
+   "probe_date_order": [
+    0.0,
+    0.061,
+    49
+   ],
+   "probe_date_order_distract": [
+    0.0,
+    0.031,
+    32
+   ],
+   "probe_id_match": [
+    0.0,
+    0.541,
+    37
+   ],
+   "probe_id_match_distract": [
+    0.0,
+    0.381,
+    42
+   ],
+   "probe_status_equal": [
+    0.0,
+    0.886,
+    35
+   ],
+   "probe_status_equal_distract": [
+    0.0,
+    0.25,
+    44
+   ]
+  },
+  "SHUF both_right": 0.0,
+  "bar": {
+   "jb_all_ok": true,
+   "jb_hard_ok": true,
+   "real_label_ok": false,
+   "cf_ok": false,
+   "cfp_ok": false
+  },
+  "PASS": false
+ },
+ "tf_4G": {
+  "JB-all n": 130,
+  "JB-all acc": 0.4846153846153846,
+  "JB-all hob": 0.5230769230769231,
+  "JB-all mcnemar p": 0.5600646295802107,
+  "JB-all model-only/hob-only": "21/26",
+  "JB-all brier": 0.6238798466547282,
+  "JB-all brier hob": 0.5571760288952108,
+  "JB-all ece": 0.1118105899317574,
+  "JB-all ece hob": 0.135230856502159,
+  "JB-hard n": 130,
+  "JB-hard acc": 0.4846153846153846,
+  "JB-hard hob": 0.5230769230769231,
+  "JB-hard mcnemar p": 0.5600646295802107,
+  "JB-hard model-only/hob-only": "21/26",
+  "JB-hard brier": 0.6238798466547282,
+  "JB-hard brier hob": 0.5571760288952108,
+  "JB-hard ece": 0.1118105899317574,
+  "JB-hard ece hob": 0.135230856502159,
+  "REAL-label n": 90,
+  "REAL-label acc": 0.6666666666666666,
+  "REAL-label hob": 0.8111111111111111,
+  "REAL-label mcnemar p": 0.01463329792022705,
+  "REAL-label model-only/hob-only": "6/19",
+  "REAL-label brier": 0.42727989101791963,
+  "REAL-label brier hob": 0.3077024410166079,
+  "REAL-label ece": 0.09878127917945821,
+  "REAL-label ece hob": 0.11548153330683548,
+  "CF n": 240,
+  "CF acc": 0.475,
+  "CF hob": 0.6208333333333333,
+  "CF mcnemar p": 7.878384167270269e-08,
+  "CF model-only/hob-only": "5/40",
+  "CF brier": 0.6852263903526992,
+  "CF brier hob": 0.486487890418881,
+  "CF ece": 0.24584167527536116,
+  "CF ece hob": 0.08898760754922908,
+  "CF-probe n": 240,
+  "CF-probe acc": 0.5083333333333333,
+  "CF-probe hob": 0.6375,
+  "CF-probe mcnemar p": 0.0011686374974383248,
+  "CF-probe model-only/hob-only": "28/59",
+  "CF-probe brier": 0.5314085398955052,
+  "CF-probe brier hob": 0.41857517099792657,
+  "CF-probe ece": 0.10679622780960671,
+  "CF-probe ece hob": 0.08737358100986171,
+  "REAL-label short<2000": [
+   55,
+   0.7454545454545455,
+   0.8
+  ],
+  "REAL-label long>=2000": [
+   35,
+   0.5428571428571428,
+   0.8285714285714286
+  ],
+  "JB-long coverage": 1.0,
+  "JB-long agree": 0.5064935064935064,
+  "JB-long agree_sd": 0.375,
+  "JB-long tv": 0.2838355529677974,
+  "REAL-agree coverage": 0.22437673130193905,
+  "REAL-agree agree": 0.7037037037037037,
+  "REAL-agree agree_sd": 0.3253012048192771,
+  "REAL-agree tv": 0.19084912013358926,
+  "LONG coverage": 0.19532908704883228,
+  "LONG agree": 0.75,
+  "LONG agree_sd": 0.2962962962962963,
+  "LONG tv": 0.19191220363743097,
+  "CF n_pairs": 120,
+  "CF flip": 0.041666666666666664,
+  "CF flip_rel": 0.14285714285714285,
+  "CF flip_given_hobson": 0.11428571428571428,
+  "CF dir": 0.7166666666666667,
+  "CF agree": 0.7791666666666667,
+  "CF flip hob": 0.2916666666666667,
+  "CF acc_pair hob": 0.6208333333333333,
+  "CF by kind": {
+   "amount_insert": [
+    0.0,
+    0.1,
+    90
+   ],
+   "human_insert": [
+    0.0,
+    0.346,
+    156
+   ],
+   "id_add_second": [
+    0.0,
+    0.0,
+    5
+   ],
+   "id_digit_existing": [
+    0.1,
+    0.0,
+    26
+   ],
+   "id_digit_inserted": [
+    0.0,
+    0.0,
+    10
+   ],
+   "id_remove_one": [
+    0.0,
+    0.0,
+    10
+   ],
+   "insists_3v4": [
+    0.0,
+    0.05,
+    20
+   ],
+   "procedure_intent": [
+    0.0,
+    0.0,
+    40
+   ],
+   "wrapup_replace": [
+    0.19,
+    0.918,
+    49
+   ]
+  },
+  "CF-probe n_pairs": 120,
+  "CF-probe flip": 0.025,
+  "CF-probe flip_rel": 0.08108108108108109,
+  "CF-probe flip_given_hobson": 0.02702702702702703,
+  "CF-probe dir": 0.6083333333333333,
+  "CF-probe agree": 0.6375,
+  "CF-probe flip hob": 0.30833333333333335,
+  "CF-probe acc_pair hob": 0.6375,
+  "CF-probe by kind": {
+   "probe_amount_vs_limit": [
+    0.0,
+    0.326,
+    43
+   ],
+   "probe_amount_vs_limit_distract": [
+    0.0,
+    0.237,
+    38
+   ],
+   "probe_date_order": [
+    0.0,
+    0.061,
+    49
+   ],
+   "probe_date_order_distract": [
+    0.062,
+    0.031,
+    32
+   ],
+   "probe_id_match": [
+    0.0,
+    0.541,
+    37
+   ],
+   "probe_id_match_distract": [
+    0.125,
+    0.381,
+    42
+   ],
+   "probe_status_equal": [
+    0.0,
+    0.886,
+    35
+   ],
+   "probe_status_equal_distract": [
+    0.0,
+    0.25,
+    44
+   ]
+  },
+  "SHUF both_right": 0.0,
+  "bar": {
+   "jb_all_ok": true,
+   "jb_hard_ok": true,
+   "real_label_ok": false,
+   "cf_ok": false,
+   "cfp_ok": false
+  },
+  "PASS": false
+ }
+}

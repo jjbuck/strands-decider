@@ -1,0 +1,26 @@
+{
+ "0.6b_hf_graph_q1_t64": {
+  "median": 9.59,
+  "p95": 9.62,
+  "min": 9.55,
+  "gpu_replay_median": 8.93
+ },
+ "0.6b_hf_graph_q1_t256": {
+  "median": 16.56,
+  "p95": 16.58,
+  "min": 16.53,
+  "gpu_replay_median": 15.64
+ },
+ "0.6b_hf_graph_q1_t1000": {
+  "median": 56.98,
+  "p95": 57.01,
+  "min": 56.93,
+  "gpu_replay_median": 54.97
+ },
+ "0.6b_hf_graph_q1_t2000": {
+  "median": 181.83,
+  "p95": 181.92,
+  "min": 181.72,
+  "gpu_replay_median": 178.42
+ }
+}

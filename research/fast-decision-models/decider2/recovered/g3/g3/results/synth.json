@@ -1,0 +1,302 @@
+{
+ "tag": "synth",
+ "cfg": {
+  "T": [
+   1000,
+   4000
+  ],
+  "L": 24,
+  "d": 1024,
+  "H": 16,
+  "KV": 4,
+  "E": 64,
+  "k": 8,
+  "ffn": 448,
+  "skew": [
+   0.0,
+   0.5
+  ],
+  "bits": "16,8,4",
+  "dense": 1,
+  "tag": "synth"
+ },
+ "gpu": "NVIDIA A10G",
+ "rows": [
+  {
+   "name": "moe",
+   "T": 1000,
+   "bits": 16,
+   "qcheck_cos_min": null,
+   "route": "random-router",
+   "body_total": 2178416640,
+   "body_active": 328728576,
+   "weight_bytes": 4356933632,
+   "stream_ms": 8.81,
+   "wall_ms": 21.06,
+   "p95": 21.203,
+   "kernels": {
+    "gemm": 5.089,
+    "moe_dn": 3.427,
+    "moe_gu": 6.691,
+    "other": 4.068,
+    "sort": 1.659
+   },
+   "alias_compute_only_ms": 21.114
+  },
+  {
+   "name": "moe",
+   "T": 1000,
+   "bits": 16,
+   "qcheck_cos_min": null,
+   "route": "skew_cv0.5",
+   "body_total": 2178416640,
+   "body_active": 328728576,
+   "weight_bytes": 4356933632,
+   "stream_ms": 8.811,
+   "wall_ms": 23.019,
+   "p95": 23.032,
+   "kernels": {
+    "gemm": 5.092,
+    "moe_dn": 4.467,
+    "moe_gu": 8.091,
+    "other": 3.749,
+    "sort": 1.533
+   }
+  },
+  {
+   "name": "moe",
+   "T": 1000,
+   "bits": 8,
+   "qcheck_cos_min": 0.99968,
+   "route": "random-router",
+   "body_total": 2178416640,
+   "body_active": 328728576,
+   "weight_bytes": 2254798848,
+   "stream_ms": 4.746,
+   "wall_ms": 25.837,
+   "p95": 26.107,
+   "kernels": {
+    "gemm": 5.09,
+    "moe_dn": 7.055,
+    "moe_gu": 7.713,
+    "other": 4.047,
+    "sort": 1.66
+   }
+  },
+  {
+   "name": "moe",
+   "T": 1000,
+   "bits": 8,
+   "qcheck_cos_min": null,
+   "route": "skew_cv0.5",
+   "body_total": 2178416640,
+   "body_active": 328728576,
+   "weight_bytes": 2254798848,
+   "stream_ms": 4.743,
+   "wall_ms": 28.344,
+   "p95": 28.362,
+   "kernels": {
+    "gemm": 5.092,
+    "moe_dn": 9.379,
+    "moe_gu": 8.524,
+    "other": 3.737,
+    "sort": 1.532
+   }
+  },
+  {
+   "name": "moe",
+   "T": 1000,
+   "bits": 4,
+   "qcheck_cos_min": 0.99975,
+   "route": "random-router",
+   "body_total": 2178416640,
+   "body_active": 328728576,
+   "weight_bytes": 1197834240,
+   "stream_ms": 2.772,
+   "wall_ms": 26.241,
+   "p95": 26.427,
+   "kernels": {
+    "gemm": 5.093,
+    "moe_dn": 7.09,
+    "moe_gu": 8.091,
+    "other": 4.061,
+    "sort": 1.662
+   }
+  },
+  {
+   "name": "moe",
+   "T": 1000,
+   "bits": 4,
+   "qcheck_cos_min": null,
+   "route": "skew_cv0.5",
+   "body_total": 2178416640,
+   "body_active": 328728576,
+   "weight_bytes": 1197834240,
+   "stream_ms": 2.776,
+   "wall_ms": 28.322,
+   "p95": 28.33,
+   "kernels": {
+    "gemm": 5.092,
+    "moe_dn": 9.008,
+    "moe_gu": 8.878,
+    "other": 3.735,
+    "sort": 1.533
+   }
+  },
+  {
+   "name": "moe",
+   "T": 4000,
+   "bits": 16,
+   "qcheck_cos_min": null,
+   "route": "random-router",
+   "body_total": 2178416640,
+   "body_active": 328728576,
+   "weight_bytes": 4356933632,
+   "stream_ms": 8.814,
+   "wall_ms": 78.115,
+   "p95": 78.233,
+   "kernels": {
+    "gemm": 28.464,
+    "moe_dn": 12.226,
+    "moe_gu": 25.717,
+    "other": 10.24,
+    "sort": 1.689
+   },
+   "alias_compute_only_ms": 78.561
+  },
+  {
+   "name": "moe",
+   "T": 4000,
+   "bits": 16,
+   "qcheck_cos_min": null,
+   "route": "skew_cv0.5",
+   "body_total": 2178416640,
+   "body_active": 328728576,
+   "weight_bytes": 4356933632,
+   "stream_ms": 8.807,
+   "wall_ms": 78.535,
+   "p95": 78.72,
+   "kernels": {
+    "gemm": 28.449,
+    "moe_dn": 12.664,
+    "moe_gu": 26.714,
+    "other": 9.381,
+    "sort": 1.491
+   }
+  },
+  {
+   "name": "moe",
+   "T": 4000,
+   "bits": 8,
+   "qcheck_cos_min": null,
+   "route": "random-router",
+   "body_total": 2178416640,
+   "body_active": 328728576,
+   "weight_bytes": 2254798848,
+   "stream_ms": 4.746,
+   "wall_ms": 95.298,
+   "p95": 95.508,
+   "kernels": {
+    "gemm": 28.518,
+    "moe_dn": 30.077,
+    "moe_gu": 25.03,
+    "other": 10.212,
+    "sort": 1.691
+   }
+  },
+  {
+   "name": "moe",
+   "T": 4000,
+   "bits": 8,
+   "qcheck_cos_min": null,
+   "route": "skew_cv0.5",
+   "body_total": 2178416640,
+   "body_active": 328728576,
+   "weight_bytes": 2254798848,
+   "stream_ms": 4.745,
+   "wall_ms": 97.026,
+   "p95": 97.146,
+   "kernels": {
+    "gemm": 28.497,
+    "moe_dn": 31.86,
+    "moe_gu": 26.014,
+    "other": 9.342,
+    "sort": 1.487
+   }
+  },
+  {
+   "name": "moe",
+   "T": 4000,
+   "bits": 4,
+   "qcheck_cos_min": null,
+   "route": "random-router",
+   "body_total": 2178416640,
+   "body_active": 328728576,
+   "weight_bytes": 1197834240,
+   "stream_ms": 2.779,
+   "wall_ms": 97.306,
+   "p95": 97.55,
+   "kernels": {
+    "gemm": 28.486,
+    "moe_dn": 30.975,
+    "moe_gu": 26.065,
+    "other": 10.208,
+    "sort": 1.69
+   }
+  },
+  {
+   "name": "moe",
+   "T": 4000,
+   "bits": 4,
+   "qcheck_cos_min": null,
+   "route": "skew_cv0.5",
+   "body_total": 2178416640,
+   "body_active": 328728576,
+   "weight_bytes": 1197834240,
+   "stream_ms": 2.773,
+   "wall_ms": 98.592,
+   "p95": 98.737,
+   "kernels": {
+    "gemm": 28.47,
+    "moe_dn": 32.346,
+    "moe_gu": 27.085,
+    "other": 9.345,
+    "sort": 1.489
+   }
+  },
+  {
+   "name": "dense",
+   "T": 1000,
+   "bits": 16,
+   "qcheck_cos_min": null,
+   "route": "random-router",
+   "body_total": 327180288,
+   "body_active": 327180288,
+   "weight_bytes": 654460928,
+   "stream_ms": 1.729,
+   "wall_ms": 18.075,
+   "p95": 18.109,
+   "kernels": {
+    "gemm": 14.741,
+    "other": 3.283
+   }
+  },
+  {
+   "name": "dense",
+   "T": 4000,
+   "bits": 16,
+   "qcheck_cos_min": null,
+   "route": "random-router",
+   "body_total": 327180288,
+   "body_active": 327180288,
+   "weight_bytes": 654460928,
+   "stream_ms": 1.66,
+   "wall_ms": 76.143,
+   "p95": 76.281,
+   "kernels": {
+    "gemm": 64.004,
+    "other": 12.179
+   }
+  }
+ ]
+}

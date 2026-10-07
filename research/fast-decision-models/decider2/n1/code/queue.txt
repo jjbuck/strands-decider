@@ -1,0 +1,21 @@
+# ENV -- nbuild args   (tag must be unique; output neff/<tag>_C128.pt)
+HOB_MODEL=n5 HOB_KMOD=gdn12 -- --L 384 --sel 32 --C 128 --tag L384_S32_n12
+HOB_MODEL=n5 HOB_KMOD=gdn12 -- --L 1152 --sel 32 --C 128 --tag L1152_S32_n12
+HOB_MODEL=n5 HOB_KMOD=gdn9 -- --L 384 --sel 32 --C 128 --tag L384_S32_n9
+HOB_MODEL=n5 HOB_KMOD=gdn9 -- --L 256 --sel 32 --C 128 --tag L256_S32_n9
+HOB_MODEL=n5 HOB_KMOD=gdn9 -- --L 4096 --sel 32 --C 128 --tag L4096_S32_n9
+HOB_MODEL=m2 HOB_KMOD=gdn9 M2_K=8 M2_B=256 -- --T 1000 --M 1 --C 128 --tag P1000_M1_m2k8
+HOB_MODEL=n5 HOB_KMOD=gdn11 -- --L 256 --sel 32 --C 128 --tag L256_S32_n11
+HOB_MODEL=n5 HOB_KMOD=gdn11 -- --L 384 --sel 32 --C 128 --tag L384_S32_n11
+HOB_MODEL=n5 HOB_KMOD=gdn11 -- --L 4096 --sel 32 --C 128 --tag L4096_S32_n11
+HOB_MODEL=n5 HOB_KMOD=gdn11 -- --T 1000 --M 4 --C 128 --tag P1000_M4_n11
+HOB_MODEL=n5 HOB_KMOD=gdn11 -- --T 64 --M 4 --C 128 --tag P64_M4_n11
+HOB_MODEL=n5 HOB_KMOD=gdn11 -- --T 256 --M 4 --C 128 --tag P256_M4_n11
+HOB_MODEL=n5 HOB_KMOD=gdn11 -- --T 4000 --M 4 --C 128 --tag P4000_M4_n11
+HOB_MODEL=m1 HOB_KMOD=gdn11 -- --T 1000 --M 4 --C 128 --tag P1000_M4_m1
+HOB_MODEL=m2 HOB_KMOD=gdn11 M2_K=8 M2_B=256 -- --T 4000 --M 1 --C 128 --tag P4000_M1_m2k8
+HOB_MODEL=m2 HOB_KMOD=gdn11 M2_K=8 M2_B=256 -- --T 1000 --M 4 --C 128 --tag P1000_M4_m2k8
+HOB_MODEL=m1 HOB_KMOD=gdn11 -- --L 256 --sel 32 --C 128 --tag L256_S32_m1
+HOB_MODEL=n5 HOB_KMOD=gdn11 HOB_FAKEGDN=2 -- --L 1152 --sel 32 --C 128 --tag L1152_S32_n11fake2
+HOB_MODEL=n5 HOB_KMOD=gdn11 HOB_FAKEGDN=1 -- --L 1152 --sel 32 --C 128 --tag L1152_S32_n11fake1
+HOB_MODEL=m1 HOB_KMOD=gdn11 -- --L 384 --sel 32 --C 128 --tag L384_S32_m1

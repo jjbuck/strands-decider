@@ -1,0 +1,22 @@
+{
+ "arm": "slot",
+ "d": 448,
+ "L": 8,
+ "R": 3,
+ "budget_pf": 5.0,
+ "step_tok": 32768,
+ "micro_tok": 32768,
+ "lr": 0.0006,
+ "out": "runs/XS_slot",
+ "eval_every": 300,
+ "shares": "0.7,0.15,0.15",
+ "max_steps": 40000,
+ "seed": 0,
+ "aux": 1.0,
+ "V": 84600,
+ "n_steps": 1766,
+ "params": 56122496,
+ "params_nonemb": 18221696,
+ "Ls": 2,
+ "Ld": 6
+}

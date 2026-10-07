@@ -1,0 +1,384 @@
+{
+ "updated": "2026-10-07 04:52 PDT",
+ "owner": "Q1",
+ "note": "Specs use q1/code/q1fmt.py (Fmt) keys on top of H1 FORMAT v1 arithmetic (h1/FORMAT.md): rotated inputs, per-token absmax activations (int4 clip 0.9), per-channel GPTQ act-order weights (64 train-split calibration states), integer GEMM, fp32 epilogue. a_s / a_q = activation bits of state rows / question rows (question rows = rows >= q0: question text, options, readout). Numbers marked MEASURED-prior come from H2 deployed kernels (FAST_DECISION_MODEL.md sec 5); Q1 emulation results will replace them.",
+ "b1_1_implication": "Decision sensitivity is low-rank only for question rows at layers 13-23; for state rows (and all rows at layers 0-12) r99 is 47-92% of K. Expect row-role precision (question rows int8) to remove most of the question-row error; B1 low-rank correction cannot carry the state rows. See sensitivity.json.",
+ "reference": {
+  "b8": {
+   "spec": {
+    "a_s": 8,
+    "a_q": 8,
+    "map": "H1 b8: 23.Wd 0.Wo 7.Wo 11.Wo 10.Wo 23.Wo 12.Wo 9.Wo in bf16"
+   },
+   "real_flips": "0.18% (H2 deployed), 0.65-1.11% across GPTQ draws (J15)",
+   "tv": 0.0048,
+   "status": "MEASURED-prior"
+  },
+  "w4a4": {
+   "spec": {
+    "a_s": 4,
+    "a_q": 4
+   },
+   "real_flips": "8.6-9.2% (H2/J15 deployed)",
+   "status": "MEASURED-prior"
+  }
+ },
+ "candidates": {
+  "tc4rq8": {
+   "spec": {
+    "a_s": 4,
+    "a_q": 8,
+    "tc": {
+     "tag": "b4sr"
+    }
+   },
+   "what": "B5 decision-weighted transform coding of state rows at average 4 bits: per GEMM, centered input in an orthogonal basis (best of PCA / sensitivity / joint / mix by a distortion model), directions sorted by variance x sensitivity, slices int8 / int4 / dropped (bias), Haar rotation inside each slice; question rows W8A8. Plans: box ~/work/q1/b5/b4sr/P_{i}_{k}.pt",
+   "dev": {
+    "flips": "4/300",
+    "rms_dm": 0.11,
+    "tv": 0.0141
+   },
+   "mac_share_state_rows": {
+    "int4": 0.77,
+    "int8": 0.115,
+    "dropped": 0.115
+   },
+   "deployable": "NO as emulated: per-GEMM dense bases need an online K x K transform for Wo/Wd; deployable variant tc4shq8 under test",
+   "status": "DEV MEASURED; full kit pending"
+  },
+  "w4q8": {
+   "spec": {
+    "a_s": 4,
+    "a_q": 8
+   },
+   "what": "row role: state rows W4A4, question rows W8A8 (separate int8 weights)",
+   "dev": {
+    "flips": "9/300",
+    "rms_dm": 0.2,
+    "tv": 0.0267
+   },
+   "status": "DEV MEASURED; full kit pending"
+  },
+  "tc4irq8": {
+   "spec": {
+    "a_s": 4,
+    "a_q": 8,
+    "tc": {
+     "tag": "b4sir"
+    }
+   },
+   "what": "B5 in the channel basis (deployable for every GEMM: permutation + rotation inside slices)",
+   "dev": {
+    "flips": "7/300",
+    "rms_dm": 0.16,
+    "tv": 0.0215
+   },
+   "status": "DEV MEASURED"
+  },
+  "tc4shFq8": {
+   "spec": {
+    "a_s": 4,
+    "a_q": 8,
+    "tc": {
+     "tag": "b4shF"
+    }
+   },
+   "what": "deployable B5: residual readers in one shared offline basis (replaces R1), per-GEMM slice permutation; Wo/Wd channel basis; full-slice Kronecker Hadamard (2^a or 12*2^a) inside each slice; question rows int8",
+   "dev": {
+    "flips": "8/300",
+    "rms_dm": 0.18
+   },
+   "status": "full kit queued"
+  }
+ },
+ "best": {
+  "tag": "none passes the bar",
+  "best_accuracy": "tc45rq8 (B5 per-GEMM bases, 4.5 bits; not deployable): REAL 1.29%, CF .890, CF-probe .914",
+  "best_deployable": "resq128q8 (ResQ-style PCA-128 int8 + int4, question rows int8): REAL 2.40%, CF .945, CF-probe .848",
+  "recommended_qat_base": "w4q8 row role (deployed by Q2; 0.727x b8 e2e) or resq128q8"
+ },
+ "screen_metric": "DEV = 300 train-split requests (tau tasks disjoint from the spectrum set), emulation, vs in-runtime bf16. rms_dm = rms change of the dense top-2 logit margin (logit units). b8 reference: 0/300 flips, rms_dm 0.030, TV .0039. Full-kit scores pending.",
+ "refuted_on_dev": {
+  "noise shaping along rows (sigma-delta, c=1 / 0.5)": {
+   "rms_dm": [
+    0.276,
+    0.219
+   ],
+   "vs_w4q8": 0.2
+  },
+  "decision-weighted GPTQ (Hd)": {
+   "rms_dm": 0.2025,
+   "vs_w4q8": 0.2003
+  },
+  "last-64 / last-256 state rows int8": {
+   "rms_dm": [
+    0.1935,
+    0.1698
+   ],
+   "int8_row_share": [
+    0.04,
+    0.16
+   ]
+  }
+ },
+ "error_split_state_rows_dev": {
+  "weights_only_w4": 0.085,
+  "activations_only_a4": 0.196,
+  "both": 0.2,
+  "note": "rms_dm with question rows exact; activation rounding of state rows is ~84% of the variance"
+ },
+ "dev_screen": {
+  "b8": {
+   "flips": 0,
+   "rms_dm": 0.03,
+   "tv": 0.0039,
+   "note": "reference W8A8-GPTQ, 8 GEMMs bf16"
+  },
+  "w4a4": {
+   "flips": 26,
+   "rms_dm": 0.479,
+   "tv": 0.0739,
+   "int4": 1.0,
+   "q2_gemm_vs_b8": 0.535
+  },
+  "w4q8 (row role)": {
+   "flips": 9,
+   "rms_dm": 0.2,
+   "tv": 0.0267,
+   "int4_state": 1.0,
+   "q2_gemm_vs_b8": 0.801,
+   "q2_e2e_T1000_1q_ms": 26.34
+  },
+  "w4q8w4 (row role, one weight copy: question rows W4A8)": {
+   "flips": 11,
+   "rms_dm": 0.246,
+   "tv": 0.0344
+  },
+  "resq128q8 (ResQ-style PCA-128 int8 + int4, question rows int8)": {
+   "flips": 5,
+   "rms_dm": 0.154,
+   "tv": 0.019,
+   "int4_state": 0.947,
+   "q2_gemm_vs_b8_without_rowrole": 0.685
+  },
+  "sens128q8 (B1: G_in top-128 int8 + int4)": {
+   "flips": 11,
+   "rms_dm": 0.204,
+   "tv": 0.0265,
+   "int4_state": 0.947
+  },
+  "corr128q8 (B1.2 exact low-rank correction r=128)": {
+   "flips": 7,
+   "rms_dm": 0.177,
+   "tv": 0.0225,
+   "extra_bf16_macs": 0.081,
+   "q2_gemm_vs_b8_without_rowrole": "0.717 (tail) - 0.874 (tail + Z)"
+  },
+  "g64q8 (group-scaled int4 g=64)": {
+   "flips": 11,
+   "rms_dm": 0.178,
+   "tv": 0.0225,
+   "q2_gemm_vs_b8_without_rowrole": 0.891
+  },
+  "srq8 (B2 stochastic rounding)": {
+   "flips": 20,
+   "rms_dm": 0.322,
+   "tv": 0.0404
+  },
+  "b9f75q8 (B9 f=0.75)": {
+   "flips": 81,
+   "rms_dm": 1.504,
+   "tv": 0.2275,
+   "q2_gemm_vs_b8_without_rowrole": 0.531
+  },
+  "nsq8 / ns5q8 (noise shaping along rows, c=1 / .5)": {
+   "flips": [
+    13,
+    11
+   ],
+   "rms_dm": [
+    0.276,
+    0.219
+   ]
+  },
+  "w4q8d (GPTQ on decision-weighted Hessian)": {
+   "flips": 10,
+   "rms_dm": 0.2025
+  },
+  "w4q8 + last 64 / 256 state rows int8": {
+   "flips": [
+    10,
+    5
+   ],
+   "rms_dm": [
+    0.1935,
+    0.1698
+   ]
+  },
+  "w4q8_l0 (layer-0 state rows W8A8)": {
+   "flips": 6,
+   "rms_dm": 0.175,
+   "int4_state": 0.957
+  },
+  "tc4rq8 (B5 per-GEMM basis, 4 bits; NOT deployable: online KxK transforms)": {
+   "flips": 4,
+   "rms_dm": 0.11,
+   "tv": 0.0141,
+   "int4_state": 0.77,
+   "int8": 0.115,
+   "dropped": 0.115
+  },
+  "tc45rq8 (B5 per-GEMM basis, 4.5 bits; NOT deployable)": {
+   "flips": 2,
+   "rms_dm": 0.088,
+   "tv": 0.0117,
+   "int4_state": 0.818,
+   "int8": 0.152,
+   "dropped": 0.03
+  },
+  "tc4shFq8 (B5 deployable: shared residual basis + channel basis Wo/Wd, full-slice Hadamard)": {
+   "flips": 8,
+   "rms_dm": 0.18,
+   "tv": 0.0228,
+   "int4_state": 0.93,
+   "int8": 0.035
+  },
+  "tc4shHq8 (B5 shared basis, Haar slices: not fast)": {
+   "flips": 11,
+   "rms_dm": 0.164
+  },
+  "row router on w4q8, 20% state rows int8 (oracle / layer-7 question attention / random)": {
+   "rms_dm": [
+    0.085,
+    0.092,
+    0.167
+   ],
+   "note": "layer-7 attention needs a pre-pass of 8 layers"
+  },
+  "B3 prototypes Kc=256 / 64 (fixed)": {
+   "flips": [
+    8,
+    6
+   ],
+   "rms_dm": [
+    0.152,
+    0.179
+   ],
+   "tv": [
+    0.0194,
+    0.0224
+   ],
+   "int4_state": 1.0,
+   "search_macs": [
+    0.055,
+    0.014
+   ]
+  },
+  "router on B5 (tc45rq8 + 10/20% state rows int8): oracle / layer-7 question attention": {
+   "rms_dm": {
+    "none": 0.086,
+    "oracle@0.1": 0.051,
+    "oracle@0.2": 0.045,
+    "qattn7@0.1": 0.063,
+    "qattn7@0.2": 0.05
+   },
+   "n": 150,
+   "note": "closest to W8A8 (0.038) of anything tested; not deployable as is"
+  }
+ },
+ "full_kit": {
+  "note": "emulation (Q2 FORMATS F2 arithmetic), all 3227 evalkit questions, vs hobson refs; paired McNemar vs my bf16 emulation",
+  "dense_bf16": {
+   "real_flips": "6/1083 = 0.55%",
+   "tv": 0.0032,
+   "cf": 1.0,
+   "cf_probe": 0.952,
+   "jb_hard": 0.538,
+   "jb_mcnemar_p": 0.5,
+   "real_label": 0.783
+  },
+  "tc45rq8": {
+   "real_flips": "14/1083 = 1.29%",
+   "paired_vs_bf16": "12 lost / 4 gained, p .077",
+   "tv": 0.0145,
+   "cf": 0.89,
+   "cf_probe": 0.914,
+   "jb_hard": 0.531,
+   "jb_mcnemar_p": 1.0,
+   "real_label": 0.79,
+   "long_flips": 0.0149,
+   "passes": false
+  },
+  "w4q8": {
+   "real_flips": "40/1083 = 3.69%",
+   "paired_vs_bf16": "38 lost / 4 gained, p < .001",
+   "tv": 0.0325,
+   "cf": 0.798,
+   "cf_probe": 0.676,
+   "jb_hard": 0.585,
+   "jb_mcnemar_p": 0.057,
+   "real_label": 0.7775,
+   "long_flips": 0.0318,
+   "passes": false,
+   "q2_deployed": "REAL 3.88%, CF .835, CF-probe .762"
+  },
+  "tc4shFq8": {
+   "real_flips": "34/1083 = 3.14%",
+   "paired_vs_bf16": "30 lost / 2 gained, p < .001",
+   "tv": 0.0275,
+   "cf": 0.872,
+   "cf_probe": 0.8,
+   "jb_hard": 0.538,
+   "jb_mcnemar_p": 0.791,
+   "real_label": 0.7825,
+   "long_flips": 0.0234,
+   "passes": false
+  },
+  "resq128q8": {
+   "real_flips": "26/1083 = 2.40%",
+   "paired_vs_bf16": "23 lost / 3 gained, p < .001",
+   "tv": 0.0193,
+   "cf": 0.945,
+   "cf_probe": 0.848,
+   "jb_hard": 0.531,
+   "jb_mcnemar_p": 1.0,
+   "real_label": 0.78,
+   "long_flips": 0.0318,
+   "passes": false
+  },
+  "w4a4": {
+   "real_flips": "95/1083 = 8.77%",
+   "paired_vs_bf16": "93 lost / 4 gained",
+   "tv": 0.0818,
+   "cf": 0.651,
+   "cf_probe": 0.648,
+   "jb_hard": 0.569,
+   "jb_mcnemar_p": 0.21,
+   "real_label": 0.7575,
+   "passes": false
+  },
+  "proto256fq8": {
+   "real_flips": "41/1083 = 3.79%",
+   "paired_vs_bf16": "37 lost / 2 gained",
+   "tv": 0.0234,
+   "cf": 0.927,
+   "cf_probe": 0.829,
+   "jb_hard": 0.508,
+   "jb_mcnemar_p": 0.815,
+   "real_label": 0.795,
+   "passes": false
+  },
+  "tc4rq8": {
+   "real_flips": "29/1083 = 2.68%",
+   "paired_vs_bf16": "26 lost / 3 gained",
+   "tv": 0.0172,
+   "cf": 0.936,
+   "cf_probe": 0.81,
+   "jb_hard": 0.492,
+   "jb_mcnemar_p": 0.424,
+   "real_label": 0.79,
+   "long_flips": 0.0276,
+   "passes": false
+  }
+ }
+}

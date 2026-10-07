@@ -1,0 +1,234 @@
+05:02:26 args {"mode": "qad", "init": "~/work/q3/gptq4.pt", "seed_ck": "/home/ubuntu/work/q3/ck_scale/best.pt", "lr": 2e-05, "tokens": 50000000.0, "accum": 4, "warm": 30, "l2sp": 100.0, "factored": 1, "w_hid": 0.5, "maxtok": 5000, "maxq": 8, "max_rows": 7000, "p_v5": 0.2, "dev_every": 10000000.0, "ndev": 100, "ck": "/home/ubuntu/work/q3/ck_qad", "seed": 0, "reg": 1.0, "reg_warm": 0.2, "round_h0": 0.0, "beta0": 20.0, "beta1": 2.0, "qrow_ab": 0, "pmap": "", "mem_gb": 21.0, "soft_dev": 0, "lat_init": "center", "curve_fast": 1, "ckpt": 1, "q8": "", "curve": "CF-probe,REAL-agree", "run": "qad"}
+05:02:26 pool 10116 dev 100 dev tasks 15 v5 12557
+05:02:41 seeded from /home/ubuntu/work/q3/ck_scale/best.pt codes changed vs GPTQ 0.0
+05:02:42 student ready lat params 1372.7M mem 10.7GB
+05:02:42 dev refs 100 questions 366
+05:03:37 DEV {"n": 366, "flips": 0.06284153005464481, "tv": 0.05352305858319656, "kl": 0.016072138384262243, "n_sd": 96, "agree_sd": 0.9375, "nflip": 23, "code_change": 0.0, "step": 0, "tokens": 0, "t": 54.5, "drift": 0.0}
+05:03:43 new best t0M
+05:03:43 eval_suites ['CF-probe', 'REAL-agree'] /home/ubuntu/work/q3/preds/qad_t0M.jsonl 0 0s
+05:04:48 step 10 tok 0.11M kl 0.0317 hid 0.0576 q/mb 3.0 lr 6.67e-06 1763 tok/s mem 18.2GB
+05:05:36 step 20 tok 0.20M kl 0.0177 hid 0.0587 q/mb 1.9 lr 1.33e-05 1770 tok/s mem 18.2GB
+05:06:28 step 30 tok 0.29M kl 0.0255 hid 0.0604 q/mb 3.1 lr 2.00e-05 1777 tok/s mem 18.2GB
+05:07:19 step 40 tok 0.38M kl 0.0109 hid 0.0590 q/mb 2.8 lr 2.00e-05 1776 tok/s mem 18.2GB
+05:08:17 step 50 tok 0.49M kl 0.0221 hid 0.0589 q/mb 2.6 lr 2.00e-05 1800 tok/s mem 18.2GB
+05:09:12 step 60 tok 0.60M kl 0.0259 hid 0.0567 q/mb 2.8 lr 2.00e-05 1816 tok/s mem 18.2GB
+05:10:06 step 70 tok 0.70M kl 0.0170 hid 0.0602 q/mb 2.6 lr 2.00e-05 1823 tok/s mem 18.2GB
+05:10:53 step 80 tok 0.78M kl 0.0181 hid 0.0584 q/mb 2.6 lr 2.00e-05 1814 tok/s mem 18.2GB
+05:11:42 step 90 tok 0.87M kl 0.0242 hid 0.0593 q/mb 2.1 lr 2.00e-05 1813 tok/s mem 18.2GB
+05:12:38 step 100 tok 0.97M kl 0.0227 hid 0.0592 q/mb 2.9 lr 2.00e-05 1819 tok/s mem 18.2GB drift 0.0152
+05:13:35 step 110 tok 1.08M kl 0.0211 hid 0.0594 q/mb 3.4 lr 2.00e-05 1825 tok/s mem 18.2GB
+05:14:33 step 120 tok 1.19M kl 0.0283 hid 0.0584 q/mb 2.5 lr 2.00e-05 1837 tok/s mem 18.2GB
+05:15:23 step 130 tok 1.28M kl 0.0171 hid 0.0573 q/mb 2.7 lr 2.00e-05 1835 tok/s mem 18.2GB
+05:16:15 step 140 tok 1.38M kl 0.0199 hid 0.0581 q/mb 3.0 lr 2.00e-05 1833 tok/s mem 18.2GB
+05:17:10 step 150 tok 1.48M kl 0.0282 hid 0.0575 q/mb 2.8 lr 2.00e-05 1835 tok/s mem 18.2GB
+05:18:09 step 160 tok 1.59M kl 0.0319 hid 0.0580 q/mb 2.7 lr 2.00e-05 1842 tok/s mem 18.2GB
+05:19:08 step 170 tok 1.71M kl 0.0285 hid 0.0582 q/mb 3.1 lr 1.99e-05 1848 tok/s mem 18.2GB
+05:20:04 step 180 tok 1.82M kl 0.0401 hid 0.0584 q/mb 2.6 lr 1.99e-05 1851 tok/s mem 18.3GB
+05:20:58 step 190 tok 1.92M kl 0.0303 hid 0.0596 q/mb 2.8 lr 1.99e-05 1854 tok/s mem 18.3GB
+05:21:50 step 200 tok 2.01M kl 0.0317 hid 0.0564 q/mb 2.5 lr 1.99e-05 1854 tok/s mem 18.3GB drift 0.0223
+05:22:46 step 210 tok 2.12M kl 0.0223 hid 0.0575 q/mb 2.9 lr 1.99e-05 1855 tok/s mem 18.3GB
+05:23:42 step 220 tok 2.23M kl 0.0355 hid 0.0599 q/mb 3.4 lr 1.99e-05 1858 tok/s mem 18.3GB
+05:24:38 step 230 tok 2.33M kl 0.0328 hid 0.0565 q/mb 2.3 lr 1.99e-05 1859 tok/s mem 18.3GB
+05:25:29 step 240 tok 2.42M kl 0.0171 hid 0.0571 q/mb 2.9 lr 1.99e-05 1857 tok/s mem 18.3GB
+05:26:21 step 250 tok 2.52M kl 0.0185 hid 0.0561 q/mb 2.5 lr 1.99e-05 1856 tok/s mem 18.3GB
+05:27:10 step 260 tok 2.60M kl 0.0135 hid 0.0573 q/mb 3.1 lr 1.99e-05 1852 tok/s mem 18.3GB
+05:27:59 step 270 tok 2.69M kl 0.0273 hid 0.0566 q/mb 2.0 lr 1.99e-05 1848 tok/s mem 18.3GB
+05:28:47 step 280 tok 2.77M kl 0.0258 hid 0.0574 q/mb 2.4 lr 1.99e-05 1845 tok/s mem 18.3GB
+05:29:40 step 290 tok 2.87M kl 0.0167 hid 0.0574 q/mb 3.2 lr 1.99e-05 1845 tok/s mem 18.3GB
+05:30:36 step 300 tok 2.98M kl 0.0237 hid 0.0571 q/mb 3.5 lr 1.98e-05 1847 tok/s mem 18.3GB drift 0.0232
+05:31:33 step 310 tok 3.09M kl 0.0282 hid 0.0574 q/mb 2.9 lr 1.98e-05 1848 tok/s mem 18.3GB
+05:32:30 step 320 tok 3.19M kl 0.0205 hid 0.0591 q/mb 3.1 lr 1.98e-05 1850 tok/s mem 18.3GB
+05:33:22 step 330 tok 3.29M kl 0.0223 hid 0.0568 q/mb 2.4 lr 1.98e-05 1850 tok/s mem 18.3GB
+05:34:17 step 340 tok 3.39M kl 0.0181 hid 0.0573 q/mb 3.3 lr 1.98e-05 1851 tok/s mem 18.3GB
+05:35:15 step 350 tok 3.50M kl 0.0242 hid 0.0575 q/mb 3.9 lr 1.98e-05 1852 tok/s mem 18.3GB
+05:36:12 step 360 tok 3.61M kl 0.0215 hid 0.0580 q/mb 2.8 lr 1.98e-05 1853 tok/s mem 18.3GB
+05:37:08 step 370 tok 3.72M kl 0.0359 hid 0.0571 q/mb 2.5 lr 1.98e-05 1856 tok/s mem 18.3GB
+05:38:03 step 380 tok 3.82M kl 0.0214 hid 0.0582 q/mb 2.5 lr 1.97e-05 1856 tok/s mem 18.3GB
+05:38:58 step 390 tok 3.93M kl 0.0196 hid 0.0575 q/mb 3.0 lr 1.97e-05 1857 tok/s mem 18.3GB
+05:39:54 step 400 tok 4.03M kl 0.0229 hid 0.0566 q/mb 2.1 lr 1.97e-05 1859 tok/s mem 18.3GB drift 0.0243
+05:40:49 step 410 tok 4.14M kl 0.0255 hid 0.0570 q/mb 2.9 lr 1.97e-05 1860 tok/s mem 18.3GB
+05:41:43 step 420 tok 4.24M kl 0.0208 hid 0.0564 q/mb 2.3 lr 1.97e-05 1860 tok/s mem 18.3GB
+05:42:41 step 430 tok 4.35M kl 0.0137 hid 0.0561 q/mb 2.7 lr 1.97e-05 1863 tok/s mem 18.3GB
+05:43:35 step 440 tok 4.45M kl 0.0184 hid 0.0575 q/mb 3.1 lr 1.97e-05 1863 tok/s mem 18.3GB
+05:44:30 step 450 tok 4.56M kl 0.0306 hid 0.0558 q/mb 2.7 lr 1.96e-05 1864 tok/s mem 18.3GB
+05:45:24 step 460 tok 4.66M kl 0.0216 hid 0.0574 q/mb 2.4 lr 1.96e-05 1864 tok/s mem 18.3GB
+05:46:23 step 470 tok 4.78M kl 0.0287 hid 0.0563 q/mb 2.7 lr 1.96e-05 1866 tok/s mem 18.3GB
+05:47:18 step 480 tok 4.88M kl 0.0287 hid 0.0569 q/mb 1.8 lr 1.96e-05 1865 tok/s mem 18.3GB
+05:48:13 step 490 tok 4.98M kl 0.0147 hid 0.0585 q/mb 3.6 lr 1.96e-05 1866 tok/s mem 18.3GB
+05:49:13 step 500 tok 5.10M kl 0.0220 hid 0.0559 q/mb 3.1 lr 1.95e-05 1868 tok/s mem 18.3GB drift 0.0246
+05:50:04 step 510 tok 5.19M kl 0.0285 hid 0.0566 q/mb 2.1 lr 1.95e-05 1865 tok/s mem 18.3GB
+05:51:01 step 520 tok 5.30M kl 0.0196 hid 0.0567 q/mb 2.4 lr 1.95e-05 1866 tok/s mem 18.3GB
+05:51:55 step 530 tok 5.39M kl 0.0285 hid 0.0569 q/mb 2.9 lr 1.95e-05 1865 tok/s mem 18.3GB
+05:52:47 step 540 tok 5.49M kl 0.0258 hid 0.0569 q/mb 2.8 lr 1.95e-05 1866 tok/s mem 18.3GB
+05:53:37 step 550 tok 5.58M kl 0.0239 hid 0.0575 q/mb 2.4 lr 1.95e-05 1865 tok/s mem 18.3GB
+05:54:29 step 560 tok 5.68M kl 0.0183 hid 0.0577 q/mb 2.3 lr 1.94e-05 1865 tok/s mem 18.3GB
+05:55:19 step 570 tok 5.77M kl 0.0152 hid 0.0583 q/mb 2.5 lr 1.94e-05 1864 tok/s mem 18.3GB
+05:56:09 step 580 tok 5.85M kl 0.0144 hid 0.0581 q/mb 2.1 lr 1.94e-05 1861 tok/s mem 18.3GB
+05:57:00 step 590 tok 5.95M kl 0.0232 hid 0.0586 q/mb 2.1 lr 1.94e-05 1860 tok/s mem 18.3GB
+05:58:01 step 600 tok 6.07M kl 0.0247 hid 0.0567 q/mb 3.0 lr 1.94e-05 1863 tok/s mem 18.3GB drift 0.0250
+05:58:49 step 610 tok 6.15M kl 0.0184 hid 0.0565 q/mb 2.5 lr 1.93e-05 1860 tok/s mem 18.3GB
+05:59:43 step 620 tok 6.25M kl 0.0220 hid 0.0570 q/mb 2.8 lr 1.93e-05 1860 tok/s mem 18.3GB
+06:00:34 step 630 tok 6.34M kl 0.0223 hid 0.0596 q/mb 3.0 lr 1.93e-05 1860 tok/s mem 18.3GB
+06:01:28 step 640 tok 6.44M kl 0.0214 hid 0.0573 q/mb 3.5 lr 1.93e-05 1860 tok/s mem 18.3GB
+06:02:29 step 650 tok 6.56M kl 0.0232 hid 0.0563 q/mb 3.4 lr 1.92e-05 1861 tok/s mem 18.3GB
+06:03:27 step 660 tok 6.67M kl 0.0282 hid 0.0568 q/mb 2.2 lr 1.92e-05 1862 tok/s mem 18.3GB
+06:04:23 step 670 tok 6.78M kl 0.0171 hid 0.0570 q/mb 2.6 lr 1.92e-05 1863 tok/s mem 18.3GB
+06:05:20 step 680 tok 6.89M kl 0.0264 hid 0.0558 q/mb 3.5 lr 1.92e-05 1864 tok/s mem 18.3GB
+06:06:13 step 690 tok 6.99M kl 0.0283 hid 0.0557 q/mb 2.2 lr 1.91e-05 1864 tok/s mem 18.3GB
+06:07:05 step 700 tok 7.09M kl 0.0235 hid 0.0562 q/mb 2.8 lr 1.91e-05 1864 tok/s mem 18.3GB drift 0.0258
+06:08:01 step 710 tok 7.19M kl 0.0284 hid 0.0553 q/mb 3.0 lr 1.91e-05 1865 tok/s mem 18.3GB
+06:08:58 step 720 tok 7.30M kl 0.0231 hid 0.0569 q/mb 2.7 lr 1.91e-05 1866 tok/s mem 18.3GB
+06:09:55 step 730 tok 7.41M kl 0.0300 hid 0.0569 q/mb 3.2 lr 1.90e-05 1867 tok/s mem 18.3GB
+06:10:51 step 740 tok 7.52M kl 0.0170 hid 0.0568 q/mb 3.8 lr 1.90e-05 1867 tok/s mem 18.3GB
+06:11:51 step 750 tok 7.64M kl 0.0194 hid 0.0550 q/mb 2.7 lr 1.90e-05 1868 tok/s mem 18.3GB
+06:12:44 step 760 tok 7.73M kl 0.0176 hid 0.0565 q/mb 2.1 lr 1.90e-05 1867 tok/s mem 18.3GB
+06:13:38 step 770 tok 7.83M kl 0.0233 hid 0.0579 q/mb 2.1 lr 1.89e-05 1867 tok/s mem 18.3GB
+06:14:27 step 780 tok 7.92M kl 0.0167 hid 0.0558 q/mb 1.9 lr 1.89e-05 1866 tok/s mem 18.3GB
+06:15:21 step 790 tok 8.02M kl 0.0192 hid 0.0593 q/mb 3.5 lr 1.89e-05 1865 tok/s mem 18.3GB
+06:16:17 step 800 tok 8.13M kl 0.0191 hid 0.0571 q/mb 2.2 lr 1.89e-05 1866 tok/s mem 18.3GB drift 0.0255
+06:17:15 step 810 tok 8.24M kl 0.0203 hid 0.0565 q/mb 3.1 lr 1.88e-05 1867 tok/s mem 18.3GB
+06:18:14 step 820 tok 8.35M kl 0.0263 hid 0.0564 q/mb 3.2 lr 1.88e-05 1868 tok/s mem 18.3GB
+06:19:11 step 830 tok 8.46M kl 0.0176 hid 0.0579 q/mb 2.2 lr 1.88e-05 1869 tok/s mem 18.3GB
+06:20:01 step 840 tok 8.55M kl 0.0277 hid 0.0573 q/mb 2.4 lr 1.87e-05 1868 tok/s mem 18.3GB
+06:20:56 step 850 tok 8.66M kl 0.0227 hid 0.0563 q/mb 3.4 lr 1.87e-05 1868 tok/s mem 18.3GB
+06:21:50 step 860 tok 8.76M kl 0.0209 hid 0.0563 q/mb 2.9 lr 1.87e-05 1868 tok/s mem 18.3GB
+06:22:43 step 870 tok 8.85M kl 0.0174 hid 0.0565 q/mb 3.4 lr 1.86e-05 1868 tok/s mem 18.3GB
+06:23:34 step 880 tok 8.95M kl 0.0209 hid 0.0572 q/mb 2.4 lr 1.86e-05 1867 tok/s mem 18.3GB
+06:24:28 step 890 tok 9.05M kl 0.0180 hid 0.0557 q/mb 2.9 lr 1.86e-05 1867 tok/s mem 18.3GB
+06:25:27 step 900 tok 9.16M kl 0.0215 hid 0.0562 q/mb 2.3 lr 1.86e-05 1868 tok/s mem 18.3GB drift 0.0260
+06:26:14 step 910 tok 9.24M kl 0.0145 hid 0.0586 q/mb 2.7 lr 1.85e-05 1866 tok/s mem 18.3GB
+06:27:04 step 920 tok 9.33M kl 0.0176 hid 0.0561 q/mb 2.9 lr 1.85e-05 1865 tok/s mem 18.3GB
+06:27:59 step 930 tok 9.43M kl 0.0241 hid 0.0557 q/mb 2.9 lr 1.85e-05 1866 tok/s mem 18.3GB
+06:28:56 step 940 tok 9.54M kl 0.0141 hid 0.0566 q/mb 3.3 lr 1.84e-05 1866 tok/s mem 18.3GB
+06:29:52 step 950 tok 9.65M kl 0.0196 hid 0.0562 q/mb 2.6 lr 1.84e-05 1867 tok/s mem 18.3GB
+06:30:41 step 960 tok 9.74M kl 0.0303 hid 0.0581 q/mb 2.2 lr 1.84e-05 1866 tok/s mem 18.3GB
+06:31:39 step 970 tok 9.85M kl 0.0202 hid 0.0563 q/mb 2.5 lr 1.83e-05 1867 tok/s mem 18.3GB
+06:32:34 step 980 tok 9.95M kl 0.0228 hid 0.0563 q/mb 2.7 lr 1.83e-05 1867 tok/s mem 18.3GB
+06:33:54 DEV {"n": 366, "flips": 0.05737704918032787, "tv": 0.04810143681751981, "kl": 0.012850290449028275, "n_sd": 96, "agree_sd": 0.90625, "nflip": 21, "code_change": 5.560213568148453e-05, "step": 985, "tokens": 10001577, "t": 54.4, "drift": 0.025724806262733536}
+06:34:54 new best t10M
+06:39:39 eval_suites ['CF-probe', 'REAL-agree'] /home/ubuntu/work/q3/preds/qad_t10M.jsonl 1723 284s
+06:40:02 step 990 tok 10.04M kl 0.0230 hid 0.0567 q/mb 2.1 lr 1.83e-05 1738 tok/s mem 18.3GB
+06:41:01 step 1000 tok 10.15M kl 0.0172 hid 0.0554 q/mb 4.2 lr 1.82e-05 1739 tok/s mem 18.3GB drift 0.0258
+06:41:54 step 1010 tok 10.25M kl 0.0329 hid 0.0576 q/mb 2.5 lr 1.82e-05 1740 tok/s mem 18.3GB
+06:43:09 args {"mode": "qad", "init": "~/work/q3/gptq4.pt", "seed_ck": "/home/ubuntu/work/q3/ck_scale/best.pt", "lr": 5e-05, "tokens": 50000000.0, "accum": 4, "warm": 30, "l2sp": 100.0, "factored": 1, "w_hid": 0.5, "maxtok": 5000, "maxq": 8, "max_rows": 7000, "p_v5": 0.2, "dev_every": 10000000.0, "ndev": 100, "ck": "/home/ubuntu/work/q3/ck_qad", "seed": 0, "reg": 1.0, "reg_warm": 0.2, "round_h0": 0.0, "beta0": 20.0, "beta1": 2.0, "qrow_ab": 0, "pmap": "", "mem_gb": 21.0, "soft_dev": 0, "lat_init": "center", "curve_fast": 1, "ckpt": 1, "q8": "", "curve": "CF-probe,REAL-agree", "run": "qad"}
+06:43:09 pool 10116 dev 100 dev tasks 15 v5 12557
+06:43:23 seeded from /home/ubuntu/work/q3/ck_scale/best.pt codes changed vs GPTQ 0.0
+06:43:24 student ready lat params 1372.7M mem 10.7GB
+06:43:24 dev refs 100 questions 366
+06:43:27 resumed at step 985 tokens 10001577
+06:43:58 step 990 tok 10.05M kl 0.0157 hid 0.0567 q/mb 3.1 lr 4.57e-05 1461 tok/s mem 17.4GB
+06:45:01 step 1000 tok 10.15M kl 0.0258 hid 0.0563 q/mb 3.6 lr 4.56e-05 1531 tok/s mem 18.2GB drift 0.0281
+06:45:54 step 1010 tok 10.24M kl 0.0322 hid 0.0599 q/mb 2.6 lr 4.55e-05 1644 tok/s mem 18.2GB
+06:46:47 step 1020 tok 10.34M kl 0.0379 hid 0.0644 q/mb 3.2 lr 4.54e-05 1698 tok/s mem 18.2GB
+06:47:43 step 1030 tok 10.45M kl 0.0340 hid 0.0752 q/mb 2.8 lr 4.53e-05 1755 tok/s mem 18.2GB
+06:48:34 step 1040 tok 10.55M kl 0.0859 hid 0.0983 q/mb 2.6 lr 4.52e-05 1772 tok/s mem 18.3GB
+06:49:27 step 1050 tok 10.64M kl 0.0847 hid 0.1139 q/mb 2.3 lr 4.52e-05 1785 tok/s mem 18.3GB
+06:50:20 step 1060 tok 10.74M kl 0.0776 hid 0.1014 q/mb 2.7 lr 4.51e-05 1798 tok/s mem 18.3GB
+06:51:18 step 1070 tok 10.86M kl 0.0951 hid 0.1062 q/mb 3.0 lr 4.50e-05 1822 tok/s mem 18.3GB
+06:51:45 args {"mode": "qad", "init": "~/work/q3/gptq4.pt", "seed_ck": "/home/ubuntu/work/q3/ck_scale/best.pt", "lr": 2e-05, "tokens": 50000000.0, "accum": 4, "warm": 30, "l2sp": 100.0, "factored": 1, "w_hid": 0.5, "maxtok": 5000, "maxq": 8, "max_rows": 7000, "p_v5": 0.2, "dev_every": 10000000.0, "ndev": 100, "ck": "/home/ubuntu/work/q3/ck_qad", "seed": 0, "reg": 1.0, "reg_warm": 0.2, "round_h0": 0.0, "beta0": 20.0, "beta1": 2.0, "qrow_ab": 0, "pmap": "", "mem_gb": 21.0, "soft_dev": 0, "lat_init": "center", "curve_fast": 1, "ckpt": 1, "q8": "", "curve": "CF-probe,REAL-agree", "run": "qad"}
+06:51:45 pool 10116 dev 100 dev tasks 15 v5 12557
+06:52:00 seeded from /home/ubuntu/work/q3/ck_scale/best.pt codes changed vs GPTQ 0.0
+06:52:01 student ready lat params 1372.7M mem 10.7GB
+06:52:01 dev refs 100 questions 366
+06:52:04 resumed at step 985 tokens 10001577
+06:52:35 step 990 tok 10.05M kl 0.0169 hid 0.0568 q/mb 3.1 lr 1.83e-05 1474 tok/s mem 17.4GB
+06:53:29 step 1000 tok 10.15M kl 0.0271 hid 0.0561 q/mb 3.6 lr 1.82e-05 1691 tok/s mem 18.2GB drift 0.0264
+06:54:22 step 1010 tok 10.24M kl 0.0330 hid 0.0591 q/mb 2.6 lr 1.82e-05 1755 tok/s mem 18.2GB
+06:55:15 step 1020 tok 10.34M kl 0.0445 hid 0.0587 q/mb 3.2 lr 1.82e-05 1779 tok/s mem 18.2GB
+06:56:11 step 1030 tok 10.45M kl 0.0311 hid 0.0573 q/mb 2.8 lr 1.81e-05 1820 tok/s mem 18.2GB
+06:57:02 step 1040 tok 10.55M kl 0.0232 hid 0.0562 q/mb 2.6 lr 1.81e-05 1826 tok/s mem 18.3GB
+06:57:55 step 1050 tok 10.64M kl 0.0308 hid 0.0551 q/mb 2.3 lr 1.81e-05 1832 tok/s mem 18.3GB
+06:58:48 step 1060 tok 10.74M kl 0.0175 hid 0.0550 q/mb 2.7 lr 1.80e-05 1838 tok/s mem 18.3GB
+06:59:46 step 1070 tok 10.86M kl 0.0227 hid 0.0554 q/mb 3.0 lr 1.80e-05 1857 tok/s mem 18.3GB
+07:00:41 step 1080 tok 10.97M kl 0.0146 hid 0.0545 q/mb 3.4 lr 1.79e-05 1867 tok/s mem 18.3GB
+07:01:40 step 1090 tok 11.08M kl 0.0255 hid 0.0559 q/mb 3.4 lr 1.79e-05 1875 tok/s mem 18.3GB
+07:02:32 step 1100 tok 11.18M kl 0.0242 hid 0.0559 q/mb 2.5 lr 1.79e-05 1874 tok/s mem 18.3GB drift 0.0273
+07:03:22 step 1110 tok 11.27M kl 0.0185 hid 0.0555 q/mb 2.1 lr 1.78e-05 1873 tok/s mem 18.3GB
+07:04:10 step 1120 tok 11.36M kl 0.0155 hid 0.0558 q/mb 3.0 lr 1.78e-05 1865 tok/s mem 18.3GB
+07:05:08 step 1130 tok 11.47M kl 0.0177 hid 0.0564 q/mb 2.7 lr 1.78e-05 1869 tok/s mem 18.3GB
+07:06:08 step 1140 tok 11.58M kl 0.0166 hid 0.0559 q/mb 2.8 lr 1.77e-05 1875 tok/s mem 18.3GB
+07:07:02 step 1150 tok 11.69M kl 0.0187 hid 0.0551 q/mb 2.8 lr 1.77e-05 1877 tok/s mem 18.3GB
+07:07:56 step 1160 tok 11.79M kl 0.0209 hid 0.0568 q/mb 2.8 lr 1.76e-05 1877 tok/s mem 18.3GB
+07:08:47 step 1170 tok 11.88M kl 0.0146 hid 0.0554 q/mb 2.9 lr 1.76e-05 1875 tok/s mem 18.3GB
+07:09:46 step 1180 tok 12.00M kl 0.0189 hid 0.0573 q/mb 2.9 lr 1.76e-05 1877 tok/s mem 18.3GB
+07:10:38 step 1190 tok 12.09M kl 0.0210 hid 0.0574 q/mb 3.0 lr 1.75e-05 1877 tok/s mem 18.3GB
+07:11:35 step 1200 tok 12.20M kl 0.0184 hid 0.0570 q/mb 2.9 lr 1.75e-05 1878 tok/s mem 18.3GB drift 0.0264
+07:12:24 step 1210 tok 12.29M kl 0.0174 hid 0.0554 q/mb 2.9 lr 1.75e-05 1874 tok/s mem 18.3GB
+07:13:18 step 1220 tok 12.39M kl 0.0214 hid 0.0559 q/mb 3.0 lr 1.74e-05 1875 tok/s mem 18.3GB
+07:14:08 step 1230 tok 12.48M kl 0.0156 hid 0.0554 q/mb 2.7 lr 1.74e-05 1874 tok/s mem 18.3GB
+07:15:06 step 1240 tok 12.60M kl 0.0213 hid 0.0552 q/mb 3.2 lr 1.73e-05 1878 tok/s mem 18.3GB
+07:16:02 step 1250 tok 12.71M kl 0.0355 hid 0.0567 q/mb 2.0 lr 1.73e-05 1881 tok/s mem 18.3GB
+07:17:01 step 1260 tok 12.82M kl 0.0188 hid 0.0560 q/mb 2.6 lr 1.72e-05 1886 tok/s mem 18.3GB
+07:17:53 step 1270 tok 12.92M kl 0.0223 hid 0.0565 q/mb 2.8 lr 1.72e-05 1886 tok/s mem 18.3GB
+07:18:47 step 1280 tok 13.03M kl 0.0195 hid 0.0568 q/mb 3.0 lr 1.72e-05 1887 tok/s mem 18.3GB
+07:19:41 step 1290 tok 13.13M kl 0.0188 hid 0.0565 q/mb 2.6 lr 1.71e-05 1886 tok/s mem 18.3GB
+07:20:37 step 1300 tok 13.23M kl 0.0223 hid 0.0576 q/mb 3.4 lr 1.71e-05 1886 tok/s mem 18.3GB drift 0.0262
+07:21:33 step 1310 tok 13.34M kl 0.0215 hid 0.0552 q/mb 3.2 lr 1.70e-05 1887 tok/s mem 18.3GB
+07:22:22 step 1320 tok 13.43M kl 0.0180 hid 0.0574 q/mb 2.1 lr 1.70e-05 1886 tok/s mem 18.3GB
+07:23:20 step 1330 tok 13.55M kl 0.0294 hid 0.0559 q/mb 3.0 lr 1.69e-05 1889 tok/s mem 18.3GB
+07:24:11 step 1340 tok 13.64M kl 0.0200 hid 0.0576 q/mb 2.6 lr 1.69e-05 1889 tok/s mem 18.3GB
+07:25:03 step 1350 tok 13.74M kl 0.0220 hid 0.0572 q/mb 2.5 lr 1.69e-05 1887 tok/s mem 18.3GB
+07:25:52 step 1360 tok 13.82M kl 0.0234 hid 0.0583 q/mb 2.6 lr 1.68e-05 1884 tok/s mem 18.3GB
+07:26:49 step 1370 tok 13.94M kl 0.0220 hid 0.0582 q/mb 2.8 lr 1.68e-05 1887 tok/s mem 18.3GB
+07:27:42 step 1380 tok 14.04M kl 0.0145 hid 0.0558 q/mb 2.8 lr 1.67e-05 1887 tok/s mem 18.3GB
+07:28:39 step 1390 tok 14.15M kl 0.0167 hid 0.0561 q/mb 3.2 lr 1.67e-05 1890 tok/s mem 18.3GB
+07:29:35 step 1400 tok 14.26M kl 0.0148 hid 0.0574 q/mb 3.1 lr 1.66e-05 1890 tok/s mem 18.3GB drift 0.0256
+07:30:33 step 1410 tok 14.37M kl 0.0242 hid 0.0573 q/mb 2.7 lr 1.66e-05 1891 tok/s mem 18.3GB
+07:31:21 step 1420 tok 14.45M kl 0.0199 hid 0.0586 q/mb 2.4 lr 1.65e-05 1888 tok/s mem 18.3GB
+07:32:17 step 1430 tok 14.56M kl 0.0154 hid 0.0567 q/mb 2.5 lr 1.65e-05 1889 tok/s mem 18.3GB
+07:33:11 step 1440 tok 14.66M kl 0.0302 hid 0.0566 q/mb 2.4 lr 1.64e-05 1889 tok/s mem 18.3GB
+07:34:00 step 1450 tok 14.75M kl 0.0148 hid 0.0577 q/mb 3.1 lr 1.64e-05 1887 tok/s mem 18.3GB
+07:34:56 step 1460 tok 14.86M kl 0.0248 hid 0.0568 q/mb 2.7 lr 1.64e-05 1888 tok/s mem 18.3GB
+07:35:45 step 1470 tok 14.95M kl 0.0199 hid 0.0578 q/mb 2.2 lr 1.63e-05 1887 tok/s mem 18.3GB
+07:36:39 step 1480 tok 15.04M kl 0.0246 hid 0.0568 q/mb 3.2 lr 1.63e-05 1885 tok/s mem 18.3GB
+07:37:39 step 1490 tok 15.17M kl 0.0266 hid 0.0582 q/mb 2.7 lr 1.62e-05 1888 tok/s mem 18.3GB
+07:38:33 step 1500 tok 15.27M kl 0.0381 hid 0.0549 q/mb 2.8 lr 1.62e-05 1888 tok/s mem 18.3GB drift 0.0257
+07:39:30 step 1510 tok 15.38M kl 0.0182 hid 0.0556 q/mb 2.8 lr 1.61e-05 1889 tok/s mem 18.3GB
+07:40:22 step 1520 tok 15.47M kl 0.0164 hid 0.0567 q/mb 2.8 lr 1.61e-05 1888 tok/s mem 18.3GB
+07:41:19 step 1530 tok 15.59M kl 0.0198 hid 0.0562 q/mb 2.5 lr 1.60e-05 1890 tok/s mem 18.3GB
+07:42:10 step 1540 tok 15.68M kl 0.0170 hid 0.0563 q/mb 3.0 lr 1.60e-05 1889 tok/s mem 18.3GB
+07:43:00 step 1550 tok 15.77M kl 0.0155 hid 0.0568 q/mb 3.2 lr 1.59e-05 1887 tok/s mem 18.3GB
+07:43:53 step 1560 tok 15.87M kl 0.0227 hid 0.0570 q/mb 3.0 lr 1.59e-05 1887 tok/s mem 18.3GB
+07:44:49 step 1570 tok 15.98M kl 0.0153 hid 0.0581 q/mb 3.2 lr 1.58e-05 1888 tok/s mem 18.3GB
+07:45:41 step 1580 tok 16.07M kl 0.0165 hid 0.0571 q/mb 2.1 lr 1.58e-05 1887 tok/s mem 18.3GB
+07:46:40 step 1590 tok 16.19M kl 0.0197 hid 0.0568 q/mb 2.9 lr 1.57e-05 1889 tok/s mem 18.3GB
+07:47:34 step 1600 tok 16.29M kl 0.0238 hid 0.0577 q/mb 3.1 lr 1.57e-05 1889 tok/s mem 18.3GB drift 0.0250
+07:48:36 step 1610 tok 16.41M kl 0.0218 hid 0.0562 q/mb 3.4 lr 1.56e-05 1890 tok/s mem 18.3GB
+07:49:32 step 1620 tok 16.52M kl 0.0193 hid 0.0554 q/mb 2.6 lr 1.56e-05 1891 tok/s mem 18.3GB
+07:50:22 step 1630 tok 16.61M kl 0.0179 hid 0.0570 q/mb 1.9 lr 1.55e-05 1890 tok/s mem 18.3GB
+07:51:08 step 1640 tok 16.69M kl 0.0129 hid 0.0607 q/mb 2.2 lr 1.55e-05 1887 tok/s mem 18.3GB
+07:52:00 step 1650 tok 16.79M kl 0.0225 hid 0.0566 q/mb 2.5 lr 1.54e-05 1886 tok/s mem 18.3GB
+07:52:56 step 1660 tok 16.89M kl 0.0181 hid 0.0561 q/mb 3.0 lr 1.54e-05 1887 tok/s mem 18.3GB
+07:53:47 step 1670 tok 16.99M kl 0.0266 hid 0.0562 q/mb 2.6 lr 1.53e-05 1887 tok/s mem 18.3GB
+07:54:35 step 1680 tok 17.07M kl 0.0240 hid 0.0566 q/mb 2.4 lr 1.53e-05 1885 tok/s mem 18.3GB
+07:55:35 step 1690 tok 17.19M kl 0.0219 hid 0.0577 q/mb 2.8 lr 1.53e-05 1885 tok/s mem 18.3GB
+07:56:30 step 1700 tok 17.29M kl 0.0267 hid 0.0567 q/mb 2.6 lr 1.52e-05 1886 tok/s mem 18.3GB drift 0.0251
+07:57:27 step 1710 tok 17.40M kl 0.0241 hid 0.0549 q/mb 3.3 lr 1.51e-05 1887 tok/s mem 18.3GB
+07:58:23 step 1720 tok 17.51M kl 0.0204 hid 0.0558 q/mb 3.0 lr 1.51e-05 1886 tok/s mem 18.3GB
+07:59:17 step 1730 tok 17.61M kl 0.0185 hid 0.0558 q/mb 2.4 lr 1.50e-05 1887 tok/s mem 18.3GB
+08:00:10 step 1740 tok 17.71M kl 0.0152 hid 0.0585 q/mb 2.5 lr 1.50e-05 1886 tok/s mem 18.3GB
+08:01:05 step 1750 tok 17.81M kl 0.0297 hid 0.0595 q/mb 2.5 lr 1.49e-05 1886 tok/s mem 18.3GB
+08:01:59 step 1760 tok 17.91M kl 0.0158 hid 0.0569 q/mb 3.2 lr 1.49e-05 1886 tok/s mem 18.3GB
+08:02:57 step 1770 tok 18.02M kl 0.0221 hid 0.0561 q/mb 3.0 lr 1.48e-05 1886 tok/s mem 18.3GB
+08:03:51 step 1780 tok 18.12M kl 0.0244 hid 0.0568 q/mb 2.7 lr 1.48e-05 1886 tok/s mem 18.3GB
+08:04:49 step 1790 tok 18.24M kl 0.0549 hid 0.0564 q/mb 2.2 lr 1.47e-05 1887 tok/s mem 18.3GB
+08:05:39 step 1800 tok 18.33M kl 0.0223 hid 0.0559 q/mb 2.1 lr 1.47e-05 1887 tok/s mem 18.3GB drift 0.0263
+08:06:32 step 1810 tok 18.43M kl 0.0206 hid 0.0573 q/mb 2.4 lr 1.46e-05 1886 tok/s mem 18.3GB
+08:07:23 step 1820 tok 18.52M kl 0.0117 hid 0.0575 q/mb 2.8 lr 1.46e-05 1886 tok/s mem 18.3GB
+08:08:16 step 1830 tok 18.62M kl 0.0250 hid 0.0583 q/mb 2.5 lr 1.45e-05 1886 tok/s mem 18.3GB
+08:09:07 step 1840 tok 18.72M kl 0.0152 hid 0.0573 q/mb 2.5 lr 1.45e-05 1885 tok/s mem 18.3GB
+08:09:57 step 1850 tok 18.80M kl 0.0162 hid 0.0570 q/mb 2.9 lr 1.44e-05 1884 tok/s mem 18.3GB
+08:10:48 step 1860 tok 18.90M kl 0.0147 hid 0.0581 q/mb 3.5 lr 1.44e-05 1883 tok/s mem 18.3GB
+08:11:45 step 1870 tok 19.01M kl 0.0287 hid 0.0574 q/mb 2.8 lr 1.43e-05 1884 tok/s mem 18.3GB
+08:12:34 step 1880 tok 19.10M kl 0.0164 hid 0.0580 q/mb 3.0 lr 1.43e-05 1883 tok/s mem 18.3GB
+08:13:31 step 1890 tok 19.21M kl 0.0215 hid 0.0568 q/mb 2.5 lr 1.42e-05 1883 tok/s mem 18.3GB
+08:14:22 step 1900 tok 19.30M kl 0.0205 hid 0.0560 q/mb 2.6 lr 1.42e-05 1883 tok/s mem 18.3GB drift 0.0260
+08:15:15 step 1910 tok 19.39M kl 0.0156 hid 0.0558 q/mb 3.5 lr 1.41e-05 1882 tok/s mem 18.3GB
+08:16:14 step 1920 tok 19.51M kl 0.0172 hid 0.0545 q/mb 2.9 lr 1.40e-05 1884 tok/s mem 18.3GB
+08:17:05 step 1930 tok 19.61M kl 0.0283 hid 0.0575 q/mb 2.4 lr 1.40e-05 1884 tok/s mem 18.3GB
+08:18:01 step 1940 tok 19.72M kl 0.0189 hid 0.0562 q/mb 3.0 lr 1.39e-05 1885 tok/s mem 18.3GB
+08:18:55 step 1950 tok 19.83M kl 0.0188 hid 0.0563 q/mb 2.5 lr 1.39e-05 1885 tok/s mem 18.3GB
+08:19:50 step 1960 tok 19.93M kl 0.0227 hid 0.0567 q/mb 2.5 lr 1.38e-05 1886 tok/s mem 18.3GB
+08:21:24 DEV {"n": 366, "flips": 0.040983606557377046, "tv": 0.05137326023121532, "kl": 0.015012052421904324, "n_sd": 96, "agree_sd": 0.9166666666666666, "nflip": 15, "code_change": 4.982454301201602e-05, "step": 1967, "tokens": 20007418, "t": 55.4, "drift": 0.025650002406601004}
+08:27:00 eval_suites ['CF-probe', 'REAL-agree'] /home/ubuntu/work/q3/preds/qad_t20M.jsonl 1723 285s
+08:27:13 step 1970 tok 20.03M kl 0.0157 hid 0.0562 q/mb 2.7 lr 1.38e-05 1756 tok/s mem 18.3GB

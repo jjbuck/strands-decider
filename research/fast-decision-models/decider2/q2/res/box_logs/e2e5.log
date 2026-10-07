@@ -1,0 +1,49 @@
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 3738.57it/s]
+USDT:2026-10-07 05:26:47 30157:30157 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-07 05:26:47 30157:30157 SyncActivityProfilerHandler.cpp:46] profiler_stop
+{"key": "cmap:/home/ubuntu/work/q2/q2map_k64rr.json|64|1q", "name": "cmap:/home/ubuntu/work/q2/q2map_k64rr.json", "T": 64, "bundle": "1q", "rows": 189, "q0": 64, "wall": {"median": 8.5, "p95": 8.52, "n": 20}, "kern": {"other": 0.192, "glue": 1.282, "gemm": 7.427, "gdn_core": 0.903, "attn": 0.132, "kernels": 461, "busy": 9.935, "gemm_cut": 5.39, "gemm_q2": 1.996, "gemm_other": 0.041}, "mem_gb": 17.0}
+USDT:2026-10-07 05:26:52 30157:30157 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-07 05:26:52 30157:30157 SyncActivityProfilerHandler.cpp:46] profiler_stop
+{"key": "cmap:/home/ubuntu/work/q2/q2map_k64rr.json|64|15q", "name": "cmap:/home/ubuntu/work/q2/q2map_k64rr.json", "T": 64, "bundle": "15q", "rows": 3784, "q0": 64, "wall": {"median": 128.945, "p95": 129.089, "n": 20}, "kern": {"other": 3.48, "glue": 17.45, "gemm": 91.828, "gdn_core": 13.131, "attn": 3.863, "kernels": 1028, "busy": 129.753, "gemm_cut": 58.113, "gemm_q2": 33.563, "gemm_other": 0.153}, "mem_gb": 11.89}
+USDT:2026-10-07 05:26:52 30157:30157 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-07 05:26:52 30157:30157 SyncActivityProfilerHandler.cpp:46] profiler_stop
+{"key": "cmap:/home/ubuntu/work/q2/q2map_k64rr.json|256|1q", "name": "cmap:/home/ubuntu/work/q2/q2map_k64rr.json", "T": 256, "bundle": "1q", "rows": 381, "q0": 256, "wall": {"median": 13.419, "p95": 13.526, "n": 20}, "kern": {"other": 0.202, "glue": 2.05, "gemm": 10.611, "gdn_core": 1.426, "attn": 0.316, "kernels": 461, "busy": 14.605, "gemm_cut": 8.617, "gemm_q2": 1.953, "gemm_other": 0.041}, "mem_gb": 11.59}
+USDT:2026-10-07 05:26:57 30157:30157 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-07 05:26:57 30157:30157 SyncActivityProfilerHandler.cpp:46] profiler_stop
+{"key": "cmap:/home/ubuntu/work/q2/q2map_k64rr.json|256|15q", "name": "cmap:/home/ubuntu/work/q2/q2map_k64rr.json", "T": 256, "bundle": "15q", "rows": 3976, "q0": 256, "wall": {"median": 136.267, "p95": 136.587, "n": 20}, "kern": {"other": 3.744, "glue": 18.31, "gemm": 97.349, "gdn_core": 13.495, "attn": 5.416, "kernels": 1034, "busy": 138.314, "gemm_cut": 63.578, "gemm_q2": 33.622, "gemm_other": 0.149}, "mem_gb": 11.92}
+USDT:2026-10-07 05:26:58 30157:30157 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-07 05:26:58 30157:30157 SyncActivityProfilerHandler.cpp:46] profiler_stop
+{"key": "cmap:/home/ubuntu/work/q2/q2map_k64rr.json|1000|1q", "name": "cmap:/home/ubuntu/work/q2/q2map_k64rr.json", "T": 1000, "bundle": "1q", "rows": 1125, "q0": 1000, "wall": {"median": 31.895, "p95": 31.906, "n": 20}, "kern": {"other": 0.259, "glue": 5.479, "gemm": 22.623, "gdn_core": 3.73, "attn": 1.031, "kernels": 455, "busy": 33.122, "gemm_cut": 20.642, "gemm_q2": 1.94, "gemm_other": 0.041}, "mem_gb": 11.67}
+USDT:2026-10-07 05:27:03 30157:30157 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-07 05:27:03 30157:30157 SyncActivityProfilerHandler.cpp:46] profiler_stop
+{"key": "cmap:/home/ubuntu/work/q2/q2map_k64rr.json|1000|15q", "name": "cmap:/home/ubuntu/work/q2/q2map_k64rr.json", "T": 1000, "bundle": "15q", "rows": 4720, "q0": 1000, "wall": {"median": 159.547, "p95": 159.885, "n": 20}, "kern": {"other": 4.559, "glue": 21.627, "gemm": 110.367, "gdn_core": 15.8, "attn": 9.781, "kernels": 1028, "busy": 162.134, "gemm_cut": 76.475, "gemm_q2": 33.742, "gemm_other": 0.15}, "mem_gb": 11.99}
+USDT:2026-10-07 05:27:07 30157:30157 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-07 05:27:07 30157:30157 SyncActivityProfilerHandler.cpp:46] profiler_stop
+{"key": "cmap:/home/ubuntu/work/q2/q2map_k64rr.json|4000|1q", "name": "cmap:/home/ubuntu/work/q2/q2map_k64rr.json", "T": 4000, "bundle": "1q", "rows": 4125, "q0": 4000, "wall": {"median": 119.807, "p95": 119.866, "n": 20}, "kern": {"other": 0.568, "glue": 18.684, "gemm": 80.561, "gdn_core": 13.149, "attn": 8.44, "kernels": 455, "busy": 121.401, "gemm_cut": 78.356, "gemm_q2": 2.164, "gemm_other": 0.041}, "mem_gb": 11.94}
+USDT:2026-10-07 05:27:15 30157:30157 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-07 05:27:16 30157:30157 SyncActivityProfilerHandler.cpp:46] profiler_stop
+{"key": "cmap:/home/ubuntu/work/q2/q2map_k64rr.json|4000|15q", "name": "cmap:/home/ubuntu/work/q2/q2map_k64rr.json", "T": 4000, "bundle": "15q", "rows": 7720, "q0": 4000, "wall": {"median": 267.727, "p95": 268.04, "n": 20}, "kern": {"other": 8.206, "glue": 35.017, "gemm": 173.381, "gdn_core": 25.171, "attn": 28.573, "kernels": 1028, "busy": 270.348, "gemm_cut": 138.91, "gemm_q2": 34.322, "gemm_other": 0.149}, "mem_gb": 12.2}
+USDT:2026-10-07 05:27:16 30157:30157 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-07 05:27:16 30157:30157 SyncActivityProfilerHandler.cpp:46] profiler_stop
+{"key": "cmap:/home/ubuntu/work/q2/q2map_k48rr.json|64|1q", "name": "cmap:/home/ubuntu/work/q2/q2map_k48rr.json", "T": 64, "bundle": "1q", "rows": 189, "q0": 64, "wall": {"median": 8.843, "p95": 8.858, "n": 20}, "kern": {"other": 0.19, "glue": 1.282, "gemm": 8.12, "gdn_core": 0.908, "attn": 0.131, "kernels": 477, "busy": 10.631, "gemm_cut": 5.182, "gemm_q2": 2.897, "gemm_other": 0.041}, "mem_gb": 17.07}
+USDT:2026-10-07 05:27:21 30157:30157 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-07 05:27:21 30157:30157 SyncActivityProfilerHandler.cpp:46] profiler_stop
+{"key": "cmap:/home/ubuntu/work/q2/q2map_k48rr.json|64|15q", "name": "cmap:/home/ubuntu/work/q2/q2map_k48rr.json", "T": 64, "bundle": "15q", "rows": 3784, "q0": 64, "wall": {"median": 129.198, "p95": 129.4, "n": 20}, "kern": {"other": 3.496, "glue": 17.595, "gemm": 93.232, "gdn_core": 13.182, "attn": 3.919, "kernels": 1044, "busy": 131.423, "gemm_cut": 46.222, "gemm_q2": 46.857, "gemm_other": 0.152}, "mem_gb": 12.07}
+USDT:2026-10-07 05:27:21 30157:30157 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-07 05:27:21 30157:30157 SyncActivityProfilerHandler.cpp:46] profiler_stop
+{"key": "cmap:/home/ubuntu/work/q2/q2map_k48rr.json|256|1q", "name": "cmap:/home/ubuntu/work/q2/q2map_k48rr.json", "T": 256, "bundle": "1q", "rows": 381, "q0": 256, "wall": {"median": 13.001, "p95": 13.071, "n": 20}, "kern": {"other": 0.2, "glue": 2.061, "gemm": 10.826, "gdn_core": 1.432, "attn": 0.31, "kernels": 477, "busy": 14.829, "gemm_cut": 8.009, "gemm_q2": 2.776, "gemm_other": 0.041}, "mem_gb": 11.76}
+USDT:2026-10-07 05:27:26 30157:30157 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-07 05:27:26 30157:30157 SyncActivityProfilerHandler.cpp:46] profiler_stop
+{"key": "cmap:/home/ubuntu/work/q2/q2map_k48rr.json|256|15q", "name": "cmap:/home/ubuntu/work/q2/q2map_k48rr.json", "T": 256, "bundle": "15q", "rows": 3976, "q0": 256, "wall": {"median": 136.871, "p95": 137.129, "n": 20}, "kern": {"other": 3.754, "glue": 18.425, "gemm": 98.416, "gdn_core": 13.519, "attn": 5.455, "kernels": 1050, "busy": 139.569, "gemm_cut": 50.731, "gemm_q2": 47.533, "gemm_other": 0.151}, "mem_gb": 12.1}
+USDT:2026-10-07 05:27:27 30157:30157 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-07 05:27:27 30157:30157 SyncActivityProfilerHandler.cpp:46] profiler_stop
+{"key": "cmap:/home/ubuntu/work/q2/q2map_k48rr.json|1000|1q", "name": "cmap:/home/ubuntu/work/q2/q2map_k48rr.json", "T": 1000, "bundle": "1q", "rows": 1125, "q0": 1000, "wall": {"median": 30.908, "p95": 31.112, "n": 20}, "kern": {"other": 0.254, "glue": 5.469, "gemm": 22.103, "gdn_core": 3.747, "attn": 1.029, "kernels": 471, "busy": 32.603, "gemm_cut": 19.431, "gemm_q2": 2.631, "gemm_other": 0.041}, "mem_gb": 11.84}
+USDT:2026-10-07 05:27:32 30157:30157 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-07 05:27:32 30157:30157 SyncActivityProfilerHandler.cpp:46] profiler_stop
+{"key": "cmap:/home/ubuntu/work/q2/q2map_k48rr.json|1000|15q", "name": "cmap:/home/ubuntu/work/q2/q2map_k48rr.json", "T": 1000, "bundle": "15q", "rows": 4720, "q0": 1000, "wall": {"median": 158.812, "p95": 159.085, "n": 20}, "kern": {"other": 4.548, "glue": 21.691, "gemm": 109.008, "gdn_core": 15.825, "attn": 9.818, "kernels": 1044, "busy": 160.889, "gemm_cut": 61.697, "gemm_q2": 47.16, "gemm_other": 0.151}, "mem_gb": 12.16}
+USDT:2026-10-07 05:27:36 30157:30157 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-07 05:27:36 30157:30157 SyncActivityProfilerHandler.cpp:46] profiler_stop
+{"key": "cmap:/home/ubuntu/work/q2/q2map_k48rr.json|4000|1q", "name": "cmap:/home/ubuntu/work/q2/q2map_k48rr.json", "T": 4000, "bundle": "1q", "rows": 4125, "q0": 4000, "wall": {"median": 112.783, "p95": 112.89, "n": 20}, "kern": {"other": 0.564, "glue": 18.754, "gemm": 74.295, "gdn_core": 13.171, "attn": 8.512, "kernels": 471, "busy": 115.296, "gemm_cut": 70.947, "gemm_q2": 3.306, "gemm_other": 0.042}, "mem_gb": 12.12}
+USDT:2026-10-07 05:27:44 30157:30157 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-07 05:27:44 30157:30157 SyncActivityProfilerHandler.cpp:46] profiler_stop
+{"key": "cmap:/home/ubuntu/work/q2/q2map_k48rr.json|4000|15q", "name": "cmap:/home/ubuntu/work/q2/q2map_k48rr.json", "T": 4000, "bundle": "15q", "rows": 7720, "q0": 4000, "wall": {"median": 259.272, "p95": 259.557, "n": 20}, "kern": {"other": 8.215, "glue": 35.135, "gemm": 165.449, "gdn_core": 25.238, "attn": 28.823, "kernels": 1044, "busy": 262.86, "gemm_cut": 117.677, "gemm_q2": 47.623, "gemm_other": 0.148}, "mem_gb": 12.37}

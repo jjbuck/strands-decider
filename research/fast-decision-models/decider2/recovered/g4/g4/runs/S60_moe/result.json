@@ -1,0 +1,14 @@
+{
+ "name": "S60_moe",
+ "scale": "S60",
+ "arm": "moe",
+ "steps": 4563,
+ "tokens": 149520384,
+ "train_pflops": 82.998482863915,
+ "val_loss": 3.8775815963745117,
+ "val_last_block": 3.8364686965942383,
+ "params": 419884416,
+ "nonemb": 60300288,
+ "elapsed_min": 48.4157528201739,
+ "infer_gflop_1000": 153.564512256
+}

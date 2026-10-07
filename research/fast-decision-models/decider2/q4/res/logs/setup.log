@@ -1,0 +1,184 @@
++ source /home/ubuntu/venv/bin/activate
+++ deactivate nondestructive
+++ '[' -n '' ']'
+++ '[' -n '' ']'
+++ hash -r
+++ '[' -n '' ']'
+++ unset VIRTUAL_ENV
+++ unset VIRTUAL_ENV_PROMPT
+++ '[' '!' nondestructive = nondestructive ']'
+++ case "$(uname)" in
++++ uname
+++ export VIRTUAL_ENV=/home/ubuntu/venv
+++ VIRTUAL_ENV=/home/ubuntu/venv
+++ _OLD_VIRTUAL_PATH=/usr/local/cuda/bin:/usr/local/cuda/include:/opt/amazon/openmpi/bin:/opt/amazon/efa/bin:/usr/local/cuda/bin:/usr/local/cuda/include:/usr/local/cuda/bin:/usr/local/cuda/include:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+++ PATH=/home/ubuntu/venv/bin:/usr/local/cuda/bin:/usr/local/cuda/include:/opt/amazon/openmpi/bin:/opt/amazon/efa/bin:/usr/local/cuda/bin:/usr/local/cuda/include:/usr/local/cuda/bin:/usr/local/cuda/include:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+++ export PATH
+++ VIRTUAL_ENV_PROMPT='(venv) '
+++ export VIRTUAL_ENV_PROMPT
+++ '[' -n '' ']'
+++ '[' -z '' ']'
+++ _OLD_VIRTUAL_PS1=
+++ PS1='((venv) ) '
+++ export PS1
+++ hash -r
++ cd /home/ubuntu/work
++ nvidia-smi --query-gpu=name,clocks.max.sm,memory.total --format=csv
+name, clocks.max.sm [MHz], memory.total [MiB]
+NVIDIA A10G, 1710 MHz, 23028 MiB
++ nvcc --version
++ tail -2
+Cuda compilation tools, release 12.8, V12.8.93
+Build cuda_12.8.r12.8/compiler.35583870_0
++ python -c 'import torch, triton, fla; print(torch.__version__, triton.__version__, fla.__version__)'
+2.14.1+cu130 3.8.0 0.5.2
++ '[' -f cutlass/include/cutlass/cutlass.h ']'
++ git clone -q --depth 1 --branch v3.5.1 https://github.com/NVIDIA/cutlass.git cutlass
+Note: switching to 'f7b19de32c5d1f3cedfc735c2849f12b537522ee'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
++ '[' -f cutlass4/include/cutlass/cutlass.h ']'
++ git clone -q --depth 1 https://github.com/NVIDIA/cutlass.git cutlass4
++ NV='/usr/local/cuda/bin/nvcc -O3 -std=c++17 -gencode=arch=compute_86,code=sm_86 --expt-relaxed-constexpr -DNDEBUG -shared -Xcompiler -fPIC'
++ cd /home/ubuntu/work/h2
++ '[' -f libg2s4.so ']'
++ /usr/local/cuda/bin/nvcc -O3 -std=c++17 -gencode=arch=compute_86,code=sm_86 --expt-relaxed-constexpr -DNDEBUG -shared -Xcompiler -fPIC -I ../cutlass/include -I ../cutlass/tools/util/include -o libg2s4.so g2s4.cu
++ echo g2s4 rc 0
+g2s4 rc 0
++ '[' -f libh2mix.so ']'
++ /usr/local/cuda/bin/nvcc -O3 -std=c++17 -gencode=arch=compute_86,code=sm_86 --expt-relaxed-constexpr -DNDEBUG -shared -Xcompiler -fPIC -I ../cutlass4/include -I ../cutlass4/tools/util/include -o libh2mix.so h2mix.cu
+../cutlass4/include/cutlass/gemm/kernel/sm100_static_tile_scheduler.hpp(53): warning #20012-D: __device__ annotation is ignored on a function("StaticPersistentTileScheduler100") that is explicitly defaulted on its first declaration
+    __inline__ __attribute__((always_inline)) __attribute__((device)) __attribute__((host))
+                                                             ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+../cutlass4/include/cutlass/gemm/kernel/sm100_static_tile_scheduler.hpp(53): warning #20012-D: __host__ annotation is ignored on a function("StaticPersistentTileScheduler100") that is explicitly defaulted on its first declaration
+    __inline__ __attribute__((always_inline)) __attribute__((device)) __attribute__((host))
+                                                                                     ^
+
+../cutlass4/include/cutlass/gemm/kernel/sm100_static_tile_scheduler.hpp(53): warning #20012-D: __device__ annotation is ignored on a function("StaticPersistentTileScheduler100") that is explicitly defaulted on its first declaration
+    __inline__ __attribute__((always_inline)) __attribute__((device)) __attribute__((host))
+                                                             ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+../cutlass4/include/cutlass/gemm/kernel/sm100_static_tile_scheduler.hpp(53): warning #20012-D: __host__ annotation is ignored on a function("StaticPersistentTileScheduler100") that is explicitly defaulted on its first declaration
+    __inline__ __attribute__((always_inline)) __attribute__((device)) __attribute__((host))
+                                                                                     ^
+
++ echo h2mix rc 0
+h2mix rc 0
++ '[' -f libh2evt.so ']'
++ /usr/local/cuda/bin/nvcc -O3 -std=c++17 -gencode=arch=compute_86,code=sm_86 --expt-relaxed-constexpr -DNDEBUG -shared -Xcompiler -fPIC -I ../cutlass4/include -I ../cutlass4/tools/util/include -o libh2evt.so h2evt.cu
+../cutlass4/include/cutlass/gemm/kernel/sm100_static_tile_scheduler.hpp(53): warning #20012-D: __device__ annotation is ignored on a function("StaticPersistentTileScheduler100") that is explicitly defaulted on its first declaration
+    __inline__ __attribute__((always_inline)) __attribute__((device)) __attribute__((host))
+                                                             ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+../cutlass4/include/cutlass/gemm/kernel/sm100_static_tile_scheduler.hpp(53): warning #20012-D: __host__ annotation is ignored on a function("StaticPersistentTileScheduler100") that is explicitly defaulted on its first declaration
+    __inline__ __attribute__((always_inline)) __attribute__((device)) __attribute__((host))
+                                                                                     ^
+
+../cutlass4/include/cutlass/gemm/kernel/sm100_static_tile_scheduler.hpp(53): warning #20012-D: __device__ annotation is ignored on a function("StaticPersistentTileScheduler100") that is explicitly defaulted on its first declaration
+    __inline__ __attribute__((always_inline)) __attribute__((device)) __attribute__((host))
+                                                             ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+../cutlass4/include/cutlass/gemm/kernel/sm100_static_tile_scheduler.hpp(53): warning #20012-D: __host__ annotation is ignored on a function("StaticPersistentTileScheduler100") that is explicitly defaulted on its first declaration
+    __inline__ __attribute__((always_inline)) __attribute__((device)) __attribute__((host))
+                                                                                     ^
+
++ echo h2evt rc 0
+h2evt rc 0
++ '[' -f libg2s4x.so ']'
++ /usr/local/cuda/bin/nvcc -O3 -std=c++17 -gencode=arch=compute_86,code=sm_86 --expt-relaxed-constexpr -DNDEBUG -shared -Xcompiler -fPIC -I ../cutlass/include -I ../cutlass/tools/util/include -o libg2s4x.so /home/ubuntu/work/j5/g2s4x.cu
++ echo g2s4x rc 0
+g2s4x rc 0
++ cd /home/ubuntu/work/q2
++ '[' -f libq2gemm.so ']'
++ /usr/local/cuda/bin/nvcc -O3 -std=c++17 -gencode=arch=compute_86,code=sm_86 --expt-relaxed-constexpr -DNDEBUG -shared -Xcompiler -fPIC --expt-extended-lambda -o libq2gemm.so q2gemm.cu
++ echo q2gemm rc 0
+q2gemm rc 0
++ cd /home/ubuntu/work/q4
++ '[' -f libq2sp.so ']'
++ /usr/local/cuda/bin/nvcc -O3 -std=c++17 -gencode=arch=compute_86,code=sm_86 --expt-relaxed-constexpr -DNDEBUG -shared -Xcompiler -fPIC -I ../cutlass/include -I ../cutlass/tools/util/include -o libq2sp.so q2sp_copy.cu
++ echo q2sp rc 0
+q2sp rc 0
++ ls -la /home/ubuntu/work/h2/libg2s4.so /home/ubuntu/work/h2/libg2s4x.so /home/ubuntu/work/h2/libh2evt.so /home/ubuntu/work/h2/libh2mix.so /home/ubuntu/work/q2/libq2gemm.so /home/ubuntu/work/q4/libq2sp.so /home/ubuntu/work/q4/libq4sp.so
+-rwxrwxr-x 1 ubuntu ubuntu 1561264 Oct  7 04:49 /home/ubuntu/work/h2/libg2s4.so
+-rwxrwxr-x 1 ubuntu ubuntu 2098784 Oct  7 04:50 /home/ubuntu/work/h2/libg2s4x.so
+-rwxrwxr-x 1 ubuntu ubuntu 1259104 Oct  7 04:50 /home/ubuntu/work/h2/libh2evt.so
+-rwxrwxr-x 1 ubuntu ubuntu 1307672 Oct  7 04:49 /home/ubuntu/work/h2/libh2mix.so
+-rwxrwxr-x 1 ubuntu ubuntu 5426048 Oct  7 04:54 /home/ubuntu/work/q2/libq2gemm.so
+-rwxrwxr-x 1 ubuntu ubuntu 2882168 Oct  7 04:54 /home/ubuntu/work/q4/libq2sp.so
+-rwxrwxr-x 1 ubuntu ubuntu 3772624 Oct  7 04:53 /home/ubuntu/work/q4/libq4sp.so
++ cp -n /home/ubuntu/work/h1/precmap_w4a4_k24.json /home/ubuntu/work/h1/precmap_w4a4_k48.json /home/ubuntu/work/h1/precmap_w8a8_b16.json /home/ubuntu/work/h1/precmap_w8a8_b8.json /home/ubuntu/work/h2/
++ cp -n /home/ubuntu/work/q4/qspecs.json /home/ubuntu/work/h2/
++ cd /home/ubuntu/work/h2
++ '[' -f bundles.pt ']'
++ python prep_q.py
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 4142.93it/s]
+top 4-question sets [(('details_match', 'failure_cause', 'needed_procedure', 'rule_bound_values'), 80), (('cc_can_still_help', 'cc_ends', 'cc_insists', 'cc_offers_transfer'), 4), (('cc_can_still_help', 'cc_claims_done', 'cc_ends', 'cc_refuses'), 4)]
+1q [('details_match', 125, 2)] total 125
+4q [('details_match', 125, 2), ('failure_cause', 152, 3), ('needed_procedure', 1201, 48), ('rule_bound_values', 135, 2)] total 1613
+15q [('needed_procedure', 1201, 48), ('details_match', 125, 2), ('rule_bound_values', 135, 2), ('failure_cause', 152, 3), ('procedure', 1014, 23), ('cc_offers_transfer', 99, 2), ('cc_ends', 110, 2), ('cc_refuses', 94, 2), ('cc_procedure_found', 108, 2), ('cc_asked_for_human', 93, 2), ('cc_claims_done', 105, 2), ('cc_can_still_help', 112, 2), ('cc_insists', 78, 2), ('identity_established', 202, 2), ('leaks_internal', 92, 2)] total 3720
++ cd /home/ubuntu/work/h2
++ '[' -f /home/ubuntu/work/h1/hess/H_23_Wd.pt ']'
++ python h2gptq.py calib
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 4359.97it/s]
+calib seqs 64 tokens 145075
+group [0, 1, 2, 3, 4, 5] 57s
+group [6, 7, 8, 9, 10, 11] 68s
+group [12, 13, 14, 15, 16, 17] 83s
+group [18, 19, 20, 21, 22, 23] 100s
+done
++ '[' -f codes_gptq_w8.pt ']'
++ python h2gptq.py codes w8
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 3708.14it/s]
+layer 0 2s
+layer 1 4s
+layer 2 6s
+layer 3 8s
+layer 4 10s
+layer 5 12s
+layer 6 14s
+layer 7 16s
+layer 8 18s
+layer 9 20s
+layer 10 22s
+layer 11 24s
+layer 12 26s
+layer 13 28s
+layer 14 30s
+layer 15 32s
+layer 16 34s
+layer 17 36s
+layer 18 38s
+layer 19 40s
+layer 20 42s
+layer 21 44s
+layer 22 46s
+layer 23 48s
+saved
++ ls -la /home/ubuntu/work/h2/codes_gptq_w8.pt /home/ubuntu/work/h2/bundles.pt
+-rw-rw-r-- 1 ubuntu ubuntu      18285 Oct  7 04:54 /home/ubuntu/work/h2/bundles.pt
+-rw-rw-r-- 1 ubuntu ubuntu 1375059555 Oct  7 04:57 /home/ubuntu/work/h2/codes_gptq_w8.pt
++ echo SETUP_DONE
+SETUP_DONE

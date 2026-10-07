@@ -1,0 +1,1 @@
+--layout set --Ls 8,8,12 --bridge A --updates 400 --accum 16 --every 100 --max_hours 1.6

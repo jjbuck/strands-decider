@@ -1,0 +1,5 @@
+examples 5500
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 3698.83it/s]
+codes loaded 96 mem 5.2G
+{"step": 1, "t": 8, "mem": 9.2, "lr": 1.9999999999999998e-05, "ctl_kl": 0.08336, "ctl_flip": 1.0, "qat_kl": 0.08415, "qat_flip": 1.0, "qatp_kl": 0.00134, "qatp_flip": 0.0}
+{"step": 50, "t": 339, "mem": 10.6, "lr": 0.000259589664532192, "ctl_kl": 0.68262, "ctl_flip": 0.5102, "qat_kl": 0.68165, "qat_flip": 0.5102, "qatp_kl": 0.0417, "qatp_flip": 0.06122}

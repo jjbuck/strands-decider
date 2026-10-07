@@ -1,0 +1,18 @@
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 3795.64it/s]
+64 1 native {'median': 15.22, 'p95': 15.22, 'min': 15.21, 'n': 15} R c 0.37 {'median': 15.36, 'p95': 15.37, 'min': 15.35, 'n': 15}
+64 1 native {'median': 15.22, 'p95': 15.22, 'min': 15.21, 'n': 15} R c 0.55 {'median': 10.01, 'p95': 10.02, 'min': 10.0, 'n': 15}
+128 1 native {'median': 15.54, 'p95': 15.55, 'min': 15.53, 'n': 15} R c 0.37 {'median': 16.65, 'p95': 16.66, 'min': 16.65, 'n': 15}
+128 1 native {'median': 15.54, 'p95': 15.55, 'min': 15.53, 'n': 15} R c 0.55 {'median': 16.94, 'p95': 16.94, 'min': 16.93, 'n': 15}
+256 1 native {'median': 22.84, 'p95': 22.84, 'min': 22.83, 'n': 15} R c 0.37 {'median': 17.88, 'p95': 17.89, 'min': 17.87, 'n': 15}
+256 1 native {'median': 22.84, 'p95': 22.84, 'min': 22.83, 'n': 15} R c 0.55 {'median': 21.32, 'p95': 21.33, 'min': 21.3, 'n': 15}
+400 1 native {'median': 28.11, 'p95': 28.12, 'min': 28.1, 'n': 15} R c 0.37 {'median': 25.15, 'p95': 25.15, 'min': 25.14, 'n': 15}
+400 1 native {'median': 28.11, 'p95': 28.12, 'min': 28.1, 'n': 15} R c 0.55 {'median': 28.2, 'p95': 28.21, 'min': 28.19, 'n': 15}
+1000 1 native {'median': 57.07, 'p95': 57.11, 'min': 57.06, 'n': 15} R c 0.37 {'median': 46.48, 'p95': 46.48, 'min': 46.47, 'n': 15}
+1000 1 native {'median': 57.07, 'p95': 57.11, 'min': 57.06, 'n': 15} R c 0.55 {'median': 43.19, 'p95': 43.19, 'min': 43.18, 'n': 15}
+Traceback (most recent call last):
+  File "/home/ubuntu/work/j9/j9lat.py", line 296, in <module>
+    main()
+  File "/home/ubuntu/work/j9/j9lat.py", line 244, in main
+    buf = torch.tensor([inputs[0]], device=dev)
+                        ~~~~~~^^^
+IndexError: list index out of range

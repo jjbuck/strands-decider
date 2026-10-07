@@ -1,0 +1,12 @@
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 4084.48it/s]
+sources Counter({'v5': 12800, 'real': 2600, 'syn': 1500}) syn files 5115
+2000 126s
+4000 227s
+6000 319s
+8000 415s
+10000 512s
+12000 607s
+14000 709s
+16000 805s
+ft rows 16900 teacher argmax==gold 0.8862937062937063 856s
+mntp rows 3000

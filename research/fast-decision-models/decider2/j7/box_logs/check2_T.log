@@ -1,0 +1,2 @@
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 3930.24it/s]
+fused runtime vs j7lib {'ckpt': 'ck_T/s400.pt', 'level': '64k', 'n': 24, 'agree': 24, 'dp_med': 0.0004951730370521545, 'dp_max': 0.0032256990671157837}

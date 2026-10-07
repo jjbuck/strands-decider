@@ -1,0 +1,73 @@
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 4113.16it/s]
+USDT:2026-10-07 05:23:00 29457:29457 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-07 05:23:00 29457:29457 SyncActivityProfilerHandler.cpp:46] profiler_stop
+{"key": "w4q8c|64|1q", "name": "w4q8c", "T": 64, "bundle": "1q", "rows": 189, "q0": 64, "wall": {"median": 9.822, "p95": 9.84, "n": 20}, "kern": {"other": 0.195, "glue": 1.299, "gemm": 7.399, "gdn_core": 0.901, "attn": 0.13, "kernels": 525, "busy": 9.925, "gemm_q2": 4.666, "gemm_cut": 2.692, "gemm_other": 0.041}, "mem_gb": 17.0}
+USDT:2026-10-07 05:23:04 29457:29457 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-07 05:23:04 29457:29457 SyncActivityProfilerHandler.cpp:46] profiler_stop
+{"key": "w4q8c|64|15q", "name": "w4q8c", "T": 64, "bundle": "15q", "rows": 3784, "q0": 64, "wall": {"median": 131.475, "p95": 131.883, "n": 20}, "kern": {"other": 3.515, "glue": 17.628, "gemm": 93.301, "gdn_core": 13.228, "attn": 4.027, "kernels": 1092, "busy": 131.699, "gemm_q2": 90.357, "gemm_cut": 2.793, "gemm_other": 0.152}, "mem_gb": 12.33}
+USDT:2026-10-07 05:23:05 29457:29457 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-07 05:23:05 29457:29457 SyncActivityProfilerHandler.cpp:46] profiler_stop
+{"key": "w4q8c|256|1q", "name": "w4q8c", "T": 256, "bundle": "1q", "rows": 381, "q0": 256, "wall": {"median": 12.475, "p95": 12.534, "n": 20}, "kern": {"other": 0.202, "glue": 2.007, "gemm": 8.402, "gdn_core": 1.424, "attn": 0.31, "kernels": 525, "busy": 12.345, "gemm_q2": 4.848, "gemm_cut": 3.513, "gemm_other": 0.041}, "mem_gb": 12.03}
+USDT:2026-10-07 05:23:09 29457:29457 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-07 05:23:09 29457:29457 SyncActivityProfilerHandler.cpp:46] profiler_stop
+{"key": "w4q8c|256|15q", "name": "w4q8c", "T": 256, "bundle": "15q", "rows": 3976, "q0": 256, "wall": {"median": 134.749, "p95": 135.15, "n": 20}, "kern": {"other": 3.772, "glue": 18.606, "gemm": 92.556, "gdn_core": 13.572, "attn": 5.592, "kernels": 1098, "busy": 134.097, "gemm_q2": 88.66, "gemm_cut": 3.744, "gemm_other": 0.151}, "mem_gb": 12.36}
+USDT:2026-10-07 05:23:10 29457:29457 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-07 05:23:10 29457:29457 SyncActivityProfilerHandler.cpp:46] profiler_stop
+{"key": "w4q8c|1000|1q", "name": "w4q8c", "T": 1000, "bundle": "1q", "rows": 1125, "q0": 1000, "wall": {"median": 27.396, "p95": 27.411, "n": 20}, "kern": {"other": 0.263, "glue": 5.378, "gemm": 16.862, "gdn_core": 3.718, "attn": 1.03, "kernels": 519, "busy": 27.251, "gemm_q2": 4.808, "gemm_cut": 12.012, "gemm_other": 0.041}, "mem_gb": 12.11}
+USDT:2026-10-07 05:23:15 29457:29457 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-07 05:23:15 29457:29457 SyncActivityProfilerHandler.cpp:46] profiler_stop
+{"key": "w4q8c|1000|15q", "name": "w4q8c", "T": 1000, "bundle": "15q", "rows": 4720, "q0": 1000, "wall": {"median": 155.022, "p95": 155.491, "n": 20}, "kern": {"other": 4.577, "glue": 21.769, "gemm": 101.771, "gdn_core": 15.796, "attn": 9.984, "kernels": 1092, "busy": 153.897, "gemm_q2": 88.996, "gemm_cut": 12.624, "gemm_other": 0.151}, "mem_gb": 12.43}
+USDT:2026-10-07 05:23:18 29457:29457 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-07 05:23:18 29457:29457 SyncActivityProfilerHandler.cpp:46] profiler_stop
+{"key": "w4q8c|4000|1q", "name": "w4q8c", "T": 4000, "bundle": "1q", "rows": 4125, "q0": 4000, "wall": {"median": 89.462, "p95": 89.869, "n": 20}, "kern": {"other": 0.568, "glue": 18.625, "gemm": 48.542, "gdn_core": 13.176, "attn": 8.519, "kernels": 519, "busy": 89.429, "gemm_q2": 4.843, "gemm_cut": 43.657, "gemm_other": 0.042}, "mem_gb": 12.38}
+USDT:2026-10-07 05:23:25 29457:29457 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-07 05:23:25 29457:29457 SyncActivityProfilerHandler.cpp:46] profiler_stop
+{"key": "w4q8c|4000|15q", "name": "w4q8c", "T": 4000, "bundle": "15q", "rows": 7720, "q0": 4000, "wall": {"median": 231.625, "p95": 231.929, "n": 20}, "kern": {"other": 8.25, "glue": 35.043, "gemm": 133.475, "gdn_core": 25.229, "attn": 29.218, "kernels": 1092, "busy": 231.215, "gemm_q2": 88.545, "gemm_cut": 44.779, "gemm_other": 0.15}, "mem_gb": 12.64}
+USDT:2026-10-07 05:23:26 29457:29457 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-07 05:23:26 29457:29457 SyncActivityProfilerHandler.cpp:46] profiler_stop
+{"key": "b8|64|1q", "name": "b8", "T": 64, "bundle": "1q", "rows": 189, "q0": 64, "wall": {"median": 8.574, "p95": 8.587, "n": 20}, "kern": {"other": 0.193, "glue": 1.231, "gemm": 5.962, "gdn_core": 0.9, "attn": 0.129, "kernels": 429, "busy": 8.414, "gemm_cut": 5.496, "gemm_other": 0.466}, "mem_gb": 17.07}
+USDT:2026-10-07 05:23:30 29457:29457 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-07 05:23:30 29457:29457 SyncActivityProfilerHandler.cpp:46] profiler_stop
+{"key": "b8|64|15q", "name": "b8", "T": 64, "bundle": "15q", "rows": 3784, "q0": 64, "wall": {"median": 128.853, "p95": 128.869, "n": 20}, "kern": {"other": 3.475, "glue": 17.286, "gemm": 91.153, "gdn_core": 13.063, "attn": 3.781, "kernels": 996, "busy": 128.759, "gemm_cut": 91.008, "gemm_other": 0.145}, "mem_gb": 11.75}
+USDT:2026-10-07 05:23:30 29457:29457 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-07 05:23:30 29457:29457 SyncActivityProfilerHandler.cpp:46] profiler_stop
+{"key": "b8|256|1q", "name": "b8", "T": 256, "bundle": "1q", "rows": 381, "q0": 256, "wall": {"median": 14.394, "p95": 14.401, "n": 20}, "kern": {"other": 0.207, "glue": 2.023, "gemm": 10.448, "gdn_core": 1.425, "attn": 0.31, "kernels": 437, "busy": 14.413, "gemm_cut": 9.783, "gemm_other": 0.664}, "mem_gb": 11.44}
+USDT:2026-10-07 05:23:35 29457:29457 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-07 05:23:35 29457:29457 SyncActivityProfilerHandler.cpp:46] profiler_stop
+{"key": "b8|256|15q", "name": "b8", "T": 256, "bundle": "15q", "rows": 3976, "q0": 256, "wall": {"median": 141.166, "p95": 141.389, "n": 20}, "kern": {"other": 3.722, "glue": 18.043, "gemm": 100.575, "gdn_core": 13.43, "attn": 5.33, "kernels": 1002, "busy": 141.1, "gemm_cut": 100.43, "gemm_other": 0.145}, "mem_gb": 11.78}
+USDT:2026-10-07 05:23:36 29457:29457 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-07 05:23:36 29457:29457 SyncActivityProfilerHandler.cpp:46] profiler_stop
+{"key": "b8|1000|1q", "name": "b8", "T": 1000, "bundle": "1q", "rows": 1125, "q0": 1000, "wall": {"median": 36.36, "p95": 36.638, "n": 20}, "kern": {"other": 0.263, "glue": 5.413, "gemm": 25.792, "gdn_core": 3.722, "attn": 1.029, "kernels": 423, "busy": 36.22, "gemm_cut": 25.75, "gemm_other": 0.042}, "mem_gb": 11.52}
+USDT:2026-10-07 05:23:41 29457:29457 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-07 05:23:41 29457:29457 SyncActivityProfilerHandler.cpp:46] profiler_stop
+{"key": "b8|1000|15q", "name": "b8", "T": 1000, "bundle": "15q", "rows": 4720, "q0": 1000, "wall": {"median": 165.628, "p95": 165.841, "n": 20}, "kern": {"other": 4.548, "glue": 21.369, "gemm": 114.681, "gdn_core": 15.724, "attn": 9.595, "kernels": 996, "busy": 165.918, "gemm_cut": 108.259, "gemm_other": 6.422}, "mem_gb": 11.84}
+USDT:2026-10-07 05:23:45 29457:29457 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-07 05:23:45 29457:29457 SyncActivityProfilerHandler.cpp:46] profiler_stop
+{"key": "b8|4000|1q", "name": "b8", "T": 4000, "bundle": "1q", "rows": 4125, "q0": 4000, "wall": {"median": 142.554, "p95": 142.568, "n": 20}, "kern": {"other": 0.566, "glue": 18.79, "gemm": 101.966, "gdn_core": 13.159, "attn": 8.46, "kernels": 423, "busy": 142.942, "gemm_cut": 101.925, "gemm_other": 0.042}, "mem_gb": 11.8}
+USDT:2026-10-07 05:23:54 29457:29457 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-07 05:23:54 29457:29457 SyncActivityProfilerHandler.cpp:46] profiler_stop
+{"key": "b8|4000|15q", "name": "b8", "T": 4000, "bundle": "15q", "rows": 7720, "q0": 4000, "wall": {"median": 294.806, "p95": 295.2, "n": 20}, "kern": {"other": 8.187, "glue": 34.794, "gemm": 198.776, "gdn_core": 25.119, "attn": 28.318, "kernels": 1003, "busy": 295.193, "gemm_cut": 195.31, "gemm_other": 3.466}, "mem_gb": 12.05}
+USDT:2026-10-07 05:23:55 29457:29457 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-07 05:23:55 29457:29457 SyncActivityProfilerHandler.cpp:46] profiler_stop
+{"key": "w4a4|64|1q", "name": "w4a4", "T": 64, "bundle": "1q", "rows": 189, "q0": 64, "wall": {"median": 5.931, "p95": 5.947, "n": 20}, "kern": {"other": 0.193, "glue": 1.255, "gemm": 3.282, "gdn_core": 0.908, "attn": 0.129, "kernels": 429, "busy": 5.767, "gemm_cut": 3.241, "gemm_other": 0.041}, "mem_gb": 17.14}
+USDT:2026-10-07 05:23:57 29457:29457 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-07 05:23:57 29457:29457 SyncActivityProfilerHandler.cpp:46] profiler_stop
+{"key": "w4a4|64|15q", "name": "w4a4", "T": 64, "bundle": "15q", "rows": 3784, "q0": 64, "wall": {"median": 78.522, "p95": 78.554, "n": 20}, "kern": {"other": 3.48, "glue": 16.938, "gemm": 40.885, "gdn_core": 13.1, "attn": 3.817, "kernels": 996, "busy": 78.22, "gemm_cut": 40.739, "gemm_other": 0.146}, "mem_gb": 11.07}
+USDT:2026-10-07 05:23:58 29457:29457 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-07 05:23:58 29457:29457 SyncActivityProfilerHandler.cpp:46] profiler_stop
+{"key": "w4a4|256|1q", "name": "w4a4", "T": 256, "bundle": "1q", "rows": 381, "q0": 256, "wall": {"median": 9.669, "p95": 9.745, "n": 20}, "kern": {"other": 0.203, "glue": 2.068, "gemm": 5.506, "gdn_core": 1.437, "attn": 0.31, "kernels": 429, "busy": 9.523, "gemm_cut": 5.464, "gemm_other": 0.042}, "mem_gb": 10.77}
+USDT:2026-10-07 05:24:00 29457:29457 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-07 05:24:01 29457:29457 SyncActivityProfilerHandler.cpp:46] profiler_stop
+{"key": "w4a4|256|15q", "name": "w4a4", "T": 256, "bundle": "15q", "rows": 3976, "q0": 256, "wall": {"median": 84.214, "p95": 84.508, "n": 20}, "kern": {"other": 3.726, "glue": 17.759, "gemm": 43.673, "gdn_core": 13.421, "attn": 5.372, "kernels": 1002, "busy": 83.95, "gemm_cut": 43.529, "gemm_other": 0.143}, "mem_gb": 11.1}
+USDT:2026-10-07 05:24:01 29457:29457 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-07 05:24:01 29457:29457 SyncActivityProfilerHandler.cpp:46] profiler_stop
+{"key": "w4a4|1000|1q", "name": "w4a4", "T": 1000, "bundle": "1q", "rows": 1125, "q0": 1000, "wall": {"median": 23.587, "p95": 23.604, "n": 20}, "kern": {"other": 0.259, "glue": 5.385, "gemm": 13.082, "gdn_core": 3.725, "attn": 1.028, "kernels": 423, "busy": 23.479, "gemm_cut": 13.04, "gemm_other": 0.041}, "mem_gb": 10.85}
+USDT:2026-10-07 05:24:04 29457:29457 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-07 05:24:05 29457:29457 SyncActivityProfilerHandler.cpp:46] profiler_stop
+{"key": "w4a4|1000|15q", "name": "w4a4", "T": 1000, "bundle": "15q", "rows": 4720, "q0": 1000, "wall": {"median": 103.103, "p95": 103.131, "n": 20}, "kern": {"other": 4.549, "glue": 20.843, "gemm": 52.044, "gdn_core": 15.724, "attn": 9.668, "kernels": 996, "busy": 102.827, "gemm_cut": 51.898, "gemm_other": 0.146}, "mem_gb": 11.16}
+USDT:2026-10-07 05:24:07 29457:29457 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-07 05:24:07 29457:29457 SyncActivityProfilerHandler.cpp:46] profiler_stop
+{"key": "w4a4|4000|1q", "name": "w4a4", "T": 4000, "bundle": "1q", "rows": 4125, "q0": 4000, "wall": {"median": 85.848, "p95": 86.337, "n": 20}, "kern": {"other": 0.567, "glue": 18.453, "gemm": 45.115, "gdn_core": 13.157, "attn": 8.529, "kernels": 423, "busy": 85.822, "gemm_cut": 45.073, "gemm_other": 0.042}, "mem_gb": 11.12}
+USDT:2026-10-07 05:24:13 29457:29457 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-07 05:24:13 29457:29457 SyncActivityProfilerHandler.cpp:46] profiler_stop
+{"key": "w4a4|4000|15q", "name": "w4a4", "T": 4000, "bundle": "15q", "rows": 7720, "q0": 4000, "wall": {"median": 195.344, "p95": 195.42, "n": 20}, "kern": {"other": 8.224, "glue": 33.924, "gemm": 99.563, "gdn_core": 25.12, "attn": 28.317, "kernels": 996, "busy": 195.148, "gemm_cut": 99.418, "gemm_other": 0.145}, "mem_gb": 11.36}

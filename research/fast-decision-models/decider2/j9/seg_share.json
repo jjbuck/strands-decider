@@ -1,0 +1,417 @@
+{
+ "REAL-agree": {
+  "groups": {
+   "ALL|": {
+    "n": 561,
+    "mean_tok": 2166.511586452763,
+    "frame": 0.013861954742955686,
+    "blk": 0.35789398336203415,
+    "dyn": 0.6282440618950101,
+    "const": 0.3717559381049898,
+    "blk_per_req": 3.5597147950089125,
+    "blk_tok_in_train_lib": 0.6285331353206632,
+    "mean_live": 1361.0980392156862
+   },
+   "banking_knowledge|after_model_call": {
+    "n": 104,
+    "mean_tok": 2013.7596153846155,
+    "frame": 0.01125907816894347,
+    "blk": 0.5579069001246234,
+    "dyn": 0.43083402170643315,
+    "const": 0.5691659782935669,
+    "blk_per_req": 4.951923076923077,
+    "blk_tok_in_train_lib": 0.7985758667613807,
+    "mean_live": 867.5961538461538
+   },
+   "banking_knowledge|after_tool_call": {
+    "n": 90,
+    "mean_tok": 1947.0444444444445,
+    "frame": 0.01083693803713891,
+    "blk": 0.6351849526918292,
+    "dyn": 0.3539781092710319,
+    "const": 0.6460218907289681,
+    "blk_per_req": 4.855555555555555,
+    "blk_tok_in_train_lib": 0.7242915925466732,
+    "mean_live": 689.2111111111111
+   },
+   "banking_knowledge|before_invocation": {
+    "n": 113,
+    "mean_tok": 2025.1858407079646,
+    "frame": 0.014494463525689765,
+    "blk": 0.3476355278222036,
+    "dyn": 0.6378700086521066,
+    "const": 0.36212999134789337,
+    "blk_per_req": 3.9469026548672566,
+    "blk_tok_in_train_lib": 0.4026145433976494,
+    "mean_live": 1291.8053097345132
+   },
+   "banking_knowledge|before_model_call": {
+    "n": 40,
+    "mean_tok": 2529.5,
+    "frame": 0.018047044870527773,
+    "blk": 0.6600711603083613,
+    "dyn": 0.3218817948211109,
+    "const": 0.6781182051788891,
+    "blk_per_req": 6.425,
+    "blk_tok_in_train_lib": 0.9558590123678615,
+    "mean_live": 814.2
+   },
+   "banking_knowledge|before_tool_call": {
+    "n": 14,
+    "mean_tok": 2458.4285714285716,
+    "frame": 0.006624440699633912,
+    "blk": 0.1619501423673659,
+    "dyn": 0.8314254169330002,
+    "const": 0.16857458306699982,
+    "blk_per_req": 2.4285714285714284,
+    "blk_tok_in_train_lib": 0.6478292070326516,
+    "mean_live": 2044.0
+   },
+   "retail|after_model_call": {
+    "n": 110,
+    "mean_tok": 2084.4727272727273,
+    "frame": 0.017750292203827435,
+    "blk": 0.09719048200547774,
+    "dyn": 0.8850592257906948,
+    "const": 0.11494077420930517,
+    "blk_per_req": 1.209090909090909,
+    "blk_tok_in_train_lib": 0.0,
+    "mean_live": 1844.8818181818183
+   },
+   "retail|before_tool_call": {
+    "n": 90,
+    "mean_tok": 2633.4666666666667,
+    "frame": 0.013290466305503519,
+    "blk": 0.1377145460989317,
+    "dyn": 0.8489949875955648,
+    "const": 0.15100501240443523,
+    "blk_per_req": 1.9444444444444444,
+    "blk_tok_in_train_lib": 0.0,
+    "mean_live": 2235.8
+   }
+  },
+  "tok_mismatch": 0,
+  "n": 561
+ },
+ "LONG": {
+  "groups": {
+   "ALL|": {
+    "n": 187,
+    "mean_tok": 5223.3422459893045,
+    "frame": 0.010599274134515467,
+    "blk": 0.5385287146857227,
+    "dyn": 0.4508720111797618,
+    "const": 0.5491279888202383,
+    "blk_per_req": 11.470588235294118,
+    "blk_tok_in_train_lib": 0.8207202822727826,
+    "mean_live": 2355.0588235294117
+   },
+   "banking_knowledge|after_model_call": {
+    "n": 83,
+    "mean_tok": 5735.843373493976,
+    "frame": 0.01130284093892769,
+    "blk": 0.468169931208318,
+    "dyn": 0.5205272278527543,
+    "const": 0.4794727721472457,
+    "blk_per_req": 11.771084337349398,
+    "blk_tok_in_train_lib": 0.8730729886398306,
+    "mean_live": 2985.6626506024095
+   },
+   "banking_knowledge|after_tool_call": {
+    "n": 72,
+    "mean_tok": 4671.847222222223,
+    "frame": 0.01042295309076531,
+    "blk": 0.7092691743986587,
+    "dyn": 0.28030787251057604,
+    "const": 0.7196921274894239,
+    "blk_per_req": 10.569444444444445,
+    "blk_tok_in_train_lib": 0.7891977080966891,
+    "mean_live": 1309.5555555555557
+   },
+   "banking_knowledge|before_invocation": {
+    "n": 18,
+    "mean_tok": 4255.222222222223,
+    "frame": 0.009687442880643393,
+    "blk": 0.3349217954408962,
+    "dyn": 0.6553907616784604,
+    "const": 0.34460923832153956,
+    "blk_per_req": 10.88888888888889,
+    "blk_tok_in_train_lib": 0.5943164542158812,
+    "mean_live": 2788.8333333333335
+   },
+   "banking_knowledge|before_model_call": {
+    "n": 2,
+    "mean_tok": 4191.5,
+    "frame": 0.012883216032446618,
+    "blk": 0.4614099964213289,
+    "dyn": 0.5257067875462245,
+    "const": 0.4742932124537755,
+    "blk_per_req": 8.5,
+    "blk_tok_in_train_lib": 1.0,
+    "mean_live": 2203.5
+   },
+   "banking_knowledge|before_tool_call": {
+    "n": 12,
+    "mean_tok": 6611.666666666667,
+    "frame": 0.0077640534408873205,
+    "blk": 0.4415427275018906,
+    "dyn": 0.5506932190572221,
+    "const": 0.44930678094277793,
+    "blk_per_req": 16.166666666666668,
+    "blk_tok_in_train_lib": 0.8483101164649464,
+    "mean_live": 3641.0
+   }
+  },
+  "tok_mismatch": 0,
+  "n": 187
+ },
+ "CF": {
+  "groups": {
+   "ALL|": {
+    "n": 802,
+    "mean_tok": 2568.623441396509,
+    "frame": 0.01670213530248986,
+    "blk": 0.3220943711663291,
+    "dyn": 0.661203493531181,
+    "const": 0.338796506468819,
+    "blk_per_req": 3.546134663341646,
+    "blk_tok_in_train_lib": 0.7524784258642465,
+    "mean_live": 1698.3827930174564
+   },
+   "airline|after_model_call": {
+    "n": 140,
+    "mean_tok": 1331.607142857143,
+    "frame": 0.027785972911358457,
+    "blk": 0.0,
+    "dyn": 0.9722140270886416,
+    "const": 0.027785972911358457,
+    "blk_per_req": 0.0,
+    "blk_tok_in_train_lib": 0.0,
+    "mean_live": 1294.607142857143
+   },
+   "airline|before_tool_call": {
+    "n": 100,
+    "mean_tok": 1709.0,
+    "frame": 0.02047981275599766,
+    "blk": 0.0,
+    "dyn": 0.9795201872440024,
+    "const": 0.02047981275599766,
+    "blk_per_req": 0.0,
+    "blk_tok_in_train_lib": 0.0,
+    "mean_live": 1674.0
+   },
+   "banking_knowledge|after_model_call": {
+    "n": 140,
+    "mean_tok": 6113.157142857143,
+    "frame": 0.011450711696785154,
+    "blk": 0.4916374751414397,
+    "dyn": 0.4969118131617752,
+    "const": 0.5030881868382248,
+    "blk_per_req": 11.8,
+    "blk_tok_in_train_lib": 0.8847429913205502,
+    "mean_live": 3037.7
+   },
+   "banking_knowledge|after_tool_call": {
+    "n": 71,
+    "mean_tok": 1947.5633802816901,
+    "frame": 0.025159643324630995,
+    "blk": 0.520686737490689,
+    "dyn": 0.45415361918468,
+    "const": 0.54584638081532,
+    "blk_per_req": 4.295774647887324,
+    "blk_tok_in_train_lib": 0.7810386255364657,
+    "mean_live": 884.4929577464789
+   },
+   "banking_knowledge|before_invocation": {
+    "n": 80,
+    "mean_tok": 1869.75,
+    "frame": 0.015296162588581361,
+    "blk": 0.3980612381334403,
+    "dyn": 0.5866425992779783,
+    "const": 0.41335740072202165,
+    "blk_per_req": 3.6,
+    "blk_tok_in_train_lib": 0.4601457794498001,
+    "mean_live": 1096.875
+   },
+   "banking_knowledge|before_model_call": {
+    "n": 21,
+    "mean_tok": 3010.1428571428573,
+    "frame": 0.017939347918940723,
+    "blk": 0.6863936215651844,
+    "dyn": 0.2956670305158749,
+    "const": 0.704332969484125,
+    "blk_per_req": 8.047619047619047,
+    "blk_tok_in_train_lib": 1.0,
+    "mean_live": 890.0
+   },
+   "retail|after_model_call": {
+    "n": 138,
+    "mean_tok": 1365.4130434782608,
+    "frame": 0.027098027352767916,
+    "blk": 0.08143206652974361,
+    "dyn": 0.8914699061174884,
+    "const": 0.10853009388251153,
+    "blk_per_req": 0.9420289855072463,
+    "blk_tok_in_train_lib": 0.0,
+    "mean_live": 1217.2246376811595
+   },
+   "retail|before_tool_call": {
+    "n": 112,
+    "mean_tok": 2744.3928571428573,
+    "frame": 0.012753276160483063,
+    "blk": 0.1707637650794477,
+    "dyn": 0.8164829587600693,
+    "const": 0.18351704123993076,
+    "blk_per_req": 2.6785714285714284,
+    "blk_tok_in_train_lib": 0.0,
+    "mean_live": 2240.75
+   }
+  },
+  "tok_mismatch": 0,
+  "n": 802
+ },
+ "CF-probe": {
+  "groups": {
+   "ALL|": {
+    "n": 640,
+    "mean_tok": 2593.3671875,
+    "frame": 0.01563483767182506,
+    "blk": 0.22951580203102265,
+    "dyn": 0.7548493602971523,
+    "const": 0.2451506397028477,
+    "blk_per_req": 3.190625,
+    "blk_tok_in_train_lib": 0.5873260880978631,
+    "mean_live": 1957.6015625
+   },
+   "airline|after_model_call": {
+    "n": 94,
+    "mean_tok": 2147.7021276595747,
+    "frame": 0.017227714925402707,
+    "blk": 0.0,
+    "dyn": 0.9827722850745972,
+    "const": 0.017227714925402707,
+    "blk_per_req": 0.0,
+    "blk_tok_in_train_lib": 0.0,
+    "mean_live": 2110.7021276595747
+   },
+   "airline|before_tool_call": {
+    "n": 66,
+    "mean_tok": 1576.3636363636363,
+    "frame": 0.022202998846597464,
+    "blk": 0.0,
+    "dyn": 0.9777970011534025,
+    "const": 0.022202998846597464,
+    "blk_per_req": 0.0,
+    "blk_tok_in_train_lib": 0.0,
+    "mean_live": 1541.3636363636363
+   },
+   "banking_knowledge|after_model_call": {
+    "n": 14,
+    "mean_tok": 3192.714285714286,
+    "frame": 0.017495189941384402,
+    "blk": 0.4709159246498725,
+    "dyn": 0.5115888854087431,
+    "const": 0.48841111459125686,
+    "blk_per_req": 7.142857142857143,
+    "blk_tok_in_train_lib": 0.8854577414604019,
+    "mean_live": 1633.357142857143
+   },
+   "banking_knowledge|after_tool_call": {
+    "n": 86,
+    "mean_tok": 2672.732558139535,
+    "frame": 0.018333297078593026,
+    "blk": 0.4908572795893063,
+    "dyn": 0.49080942333210065,
+    "const": 0.5091905766678994,
+    "blk_per_req": 6.511627906976744,
+    "blk_tok_in_train_lib": 0.8821016432382607,
+    "mean_live": 1311.8023255813953
+   },
+   "banking_knowledge|before_invocation": {
+    "n": 146,
+    "mean_tok": 3035.2397260273974,
+    "frame": 0.014406119893037268,
+    "blk": 0.32147942547021857,
+    "dyn": 0.6641144546367442,
+    "const": 0.3358855453632558,
+    "blk_per_req": 5.636986301369863,
+    "blk_tok_in_train_lib": 0.5574258398730889,
+    "mean_live": 2015.7465753424658
+   },
+   "banking_knowledge|before_model_call": {
+    "n": 12,
+    "mean_tok": 3598.25,
+    "frame": 0.01500729521295074,
+    "blk": 0.5787072419463165,
+    "dyn": 0.40628546284073275,
+    "const": 0.5937145371592673,
+    "blk_per_req": 8.833333333333334,
+    "blk_tok_in_train_lib": 1.0,
+    "mean_live": 1461.9166666666667
+   },
+   "banking_knowledge|before_tool_call": {
+    "n": 2,
+    "mean_tok": 3852.0,
+    "frame": 0.009865005192107996,
+    "blk": 0.26583592938733125,
+    "dyn": 0.7242990654205608,
+    "const": 0.2757009345794392,
+    "blk_per_req": 5.0,
+    "blk_tok_in_train_lib": 0.5732421875,
+    "mean_live": 2790.0
+   },
+   "retail|after_model_call": {
+    "n": 178,
+    "mean_tok": 2582.747191011236,
+    "frame": 0.014330181476478535,
+    "blk": 0.1265419410130751,
+    "dyn": 0.8591278775104464,
+    "const": 0.14087212248955364,
+    "blk_per_req": 1.8707865168539326,
+    "blk_tok_in_train_lib": 0.0,
+    "mean_live": 2218.9101123595506
+   },
+   "retail|before_tool_call": {
+    "n": 42,
+    "mean_tok": 2988.595238095238,
+    "frame": 0.011711187769377235,
+    "blk": 0.15449207702296827,
+    "dyn": 0.8337967352076545,
+    "const": 0.1662032647923455,
+    "blk_per_req": 2.619047619047619,
+    "blk_tok_in_train_lib": 0.0,
+    "mean_live": 2491.8809523809523
+   }
+  },
+  "tok_mismatch": 0,
+  "n": 640
+ },
+ "JB-all": {
+  "groups": {
+   "ALL|": {
+    "n": 231,
+    "mean_tok": 555.6623376623377,
+    "frame": 0.0,
+    "blk": 0.0,
+    "dyn": 1.0,
+    "const": 0.0,
+    "blk_per_req": 0.0,
+    "blk_tok_in_train_lib": 0.0,
+    "mean_live": 555.6623376623377
+   },
+   "jb|": {
+    "n": 231,
+    "mean_tok": 555.6623376623377,
+    "frame": 0.0,
+    "blk": 0.0,
+    "dyn": 1.0,
+    "const": 0.0,
+    "blk_per_req": 0.0,
+    "blk_tok_in_train_lib": 0.0,
+    "mean_live": 555.6623376623377
+   }
+  },
+  "tok_mismatch": 0,
+  "n": 231
+ }
+}

@@ -1,0 +1,11 @@
+04:52:39 args {"mode": "qad", "init": "~/work/q3/gptq4.pt", "seed_ck": "/home/ubuntu/work/q3/ck_scale/best.pt", "lr": 2e-05, "tokens": 50000000.0, "accum": 4, "warm": 30, "l2sp": 100.0, "factored": 1, "w_hid": 0.5, "maxtok": 5000, "maxq": 8, "max_rows": 7000, "p_v5": 0.2, "dev_every": 10000000.0, "ndev": 100, "ck": "/home/ubuntu/work/q3/ck_qad", "seed": 0, "reg": 1.0, "reg_warm": 0.2, "round_h0": 0.0, "beta0": 20.0, "beta1": 2.0, "qrow_ab": 0, "pmap": "", "mem_gb": 21.0, "soft_dev": 0, "curve_fast": 1, "ckpt": 1, "q8": "", "curve": "CF-probe,REAL-agree", "run": "qad"}
+04:52:39 pool 10116 dev 100 dev tasks 15 v5 12557
+04:52:53 seeded from /home/ubuntu/work/q3/ck_scale/best.pt codes changed vs GPTQ 0.0
+04:52:54 student ready lat params 1372.7M mem 10.7GB
+04:52:54 dev refs 100 questions 366
+04:53:48 DEV {"n": 366, "flips": 0.06284153005464481, "tv": 0.05352305858319656, "kl": 0.016072138384262243, "n_sd": 96, "agree_sd": 0.9375, "nflip": 23, "code_change": 0.0, "step": 0, "tokens": 0, "t": 54.6, "drift": 0.0}
+04:53:56 new best t0M
+04:58:44 eval_suites ['CF-probe', 'REAL-agree'] /home/ubuntu/work/q3/preds/qad_t0M.jsonl 1723 288s
+04:59:53 step 10 tok 0.11M kl 0.1238 hid 0.0767 q/mb 3.0 lr 6.67e-06 1643 tok/s mem 18.2GB
+05:00:42 step 20 tok 0.20M kl 0.1932 hid 0.1642 q/mb 1.9 lr 1.33e-05 1699 tok/s mem 18.2GB
+05:01:34 step 30 tok 0.29M kl 0.2082 hid 0.2075 q/mb 3.1 lr 2.00e-05 1727 tok/s mem 18.2GB

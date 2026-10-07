@@ -1,0 +1,13 @@
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 4153.96it/s]
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]Loading weights: 100%|██████████| 310/310 [00:00<00:00, 3857.95it/s]
+[transformers] [1mQwen3Model LOAD REPORT[0m from: Qwen/Qwen3-0.6B
+Key            | Status     |  | 
+---------------+------------+--+-
+lm_head.weight | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+0.6b hf_graph q=1 tokens=64 {'median': 9.59, 'p95': 9.62, 'min': 9.55, 'gpu_replay_median': 8.93}
+0.6b hf_graph q=1 tokens=256 {'median': 16.56, 'p95': 16.58, 'min': 16.53, 'gpu_replay_median': 15.64}
+0.6b hf_graph q=1 tokens=1000 {'median': 56.98, 'p95': 57.01, 'min': 56.93, 'gpu_replay_median': 54.97}
+0.6b hf_graph q=1 tokens=2000 {'median': 181.83, 'p95': 181.92, 'min': 181.72, 'gpu_replay_median': 178.42}

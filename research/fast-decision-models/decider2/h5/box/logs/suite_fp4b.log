@@ -1,0 +1,19 @@
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 3593.98it/s]
+items 1613 done 0 mode q
+100 1613 JB-all 29s
+200 1613 REAL-agree 101s
+300 1613 REAL-agree 184s
+400 1613 REAL-agree 275s
+500 1613 REAL-agree 377s
+600 1613 REAL-agree 463s
+700 1613 LONG 612s
+800 1613 LONG 811s
+900 1613 CF 995s
+1000 1613 CF 1159s
+1100 1613 CF 1247s
+1200 1613 CF 1310s
+1300 1613 CF-probe 1387s
+1400 1613 CF-probe 1500s
+1500 1613 CF-probe 1601s
+1600 1613 CF-probe 1684s
+done 1613 1689

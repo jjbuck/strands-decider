@@ -1,0 +1,28 @@
+{
+  "base_model": "Tiiny/SmallThinker-4BA0.6B-Instruct",
+  "num_slots": 24,
+  "head_hidden": 0,
+  "head_dropout": 0.05,
+  "max_length": 4096,
+  "torch_dtype": "bfloat16",
+  "head_init": "random",
+  "kl_frozen_weight": 0.0,
+  "head_type": "pointer",
+  "pointer_dim": 256,
+  "temperature": 1.0,
+  "temperature_by_kind": {},
+  "ordinal_smoothing": 0.1,
+  "use_lora": true,
+  "lora_r": 16,
+  "lora_alpha": 32,
+  "lora_dropout": 0.0,
+  "lora_targets": [
+    "q_proj",
+    "k_proj",
+    "v_proj",
+    "o_proj",
+    "gate_proj",
+    "up_proj",
+    "down_proj"
+  ]
+}

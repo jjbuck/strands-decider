@@ -1,0 +1,24 @@
+{
+ "REAL-agree": {
+  "n": 561,
+  "tok_median_qwen": 2489.0,
+  "tok_median_super": 1061.0,
+  "ms_median_qwen": 128.59,
+  "ms_median_super": 61.38,
+  "ms_p90_qwen": 182.72,
+  "ms_p90_super": 90.58,
+  "speedup_median": 2.003,
+  "speedup_total": 2.048
+ },
+ "LONG": {
+  "n": 187,
+  "tok_median_qwen": 5086.0,
+  "tok_median_super": 2000.0,
+  "ms_median_qwen": 253.34,
+  "ms_median_super": 110.16,
+  "ms_p90_qwen": 345.08,
+  "ms_p90_super": 149.73,
+  "speedup_median": 2.39,
+  "speedup_total": 2.374
+ }
+}

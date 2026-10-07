@@ -1,0 +1,1 @@
+{"arm": "xr", "updates": 450, "accum": 8, "lr": 0.0001, "hlr": 0.0002, "xlr": 0.001, "p_real": 0.45, "p_v5": 0.15, "w_synkl": 0.2, "w_ptr": 0.3, "perm": 0.5, "maxtok": 3072, "ck": "/home/ubuntu/work/j12/ck_xr", "syn": "~/work/j12/data/xr_train.jsonl", "every": 250, "seed": 7}

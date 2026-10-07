@@ -1,0 +1,42 @@
+lib 9758
+train keys 1113
+REAL-agree n 561 tok mismatch 0
+  ALL|                                     n=561  tok=   2167 const=0.249 (frame 0.014 blk 0.235) live=  1627 blk/req=2.1 inTrainLib=0.88
+  banking_knowledge|after_model_call       n=104  tok=   2014 const=0.451 (frame 0.011 blk 0.439) live=  1106 blk/req=3.3 inTrainLib=0.95
+  banking_knowledge|after_tool_call        n=90   tok=   1947 const=0.581 (frame 0.011 blk 0.570) live=   816 blk/req=4.0 inTrainLib=0.80
+  banking_knowledge|before_invocation      n=113  tok=   2025 const=0.114 (frame 0.014 blk 0.099) live=  1795 blk/req=1.4 inTrainLib=0.83
+  banking_knowledge|before_model_call      n=40   tok=   2530 const=0.622 (frame 0.018 blk 0.604) live=   956 blk/req=5.5 inTrainLib=1.00
+  banking_knowledge|before_tool_call       n=14   tok=   2458 const=0.141 (frame 0.007 blk 0.134) live=  2113 blk/req=2.4 inTrainLib=1.00
+  retail|after_model_call                  n=110  tok=   2084 const=0.024 (frame 0.018 blk 0.006) live=  2035 blk/req=0.1 inTrainLib=0.00
+  retail|before_tool_call                  n=90   tok=   2633 const=0.031 (frame 0.013 blk 0.017) live=  2553 blk/req=0.5 inTrainLib=0.00
+LONG n 187 tok mismatch 0
+  ALL|                                     n=187  tok=   5223 const=0.480 (frame 0.011 blk 0.469) live=  2717 blk/req=7.7 inTrainLib=0.87
+  banking_knowledge|after_model_call       n=83   tok=   5736 const=0.416 (frame 0.011 blk 0.404) live=  3352 blk/req=7.9 inTrainLib=0.94
+  banking_knowledge|after_tool_call        n=72   tok=   4672 const=0.697 (frame 0.010 blk 0.687) live=  1414 blk/req=9.4 inTrainLib=0.80
+  banking_knowledge|before_invocation      n=18   tok=   4255 const=0.115 (frame 0.010 blk 0.106) live=  3764 blk/req=2.3 inTrainLib=0.73
+  banking_knowledge|before_model_call      n=2    tok=   4192 const=0.468 (frame 0.013 blk 0.455) live=  2230 blk/req=8.0 inTrainLib=1.00
+  banking_knowledge|before_tool_call       n=12   tok=   6612 const=0.297 (frame 0.008 blk 0.289) live=  4651 blk/req=5.2 inTrainLib=0.92
+CF n 802 tok mismatch 0
+  ALL|                                     n=802  tok=   2569 const=0.270 (frame 0.017 blk 0.253) live=  1876 blk/req=2.4 inTrainLib=0.91
+  airline|after_model_call                 n=140  tok=   1332 const=0.028 (frame 0.028 blk 0.000) live=  1295 blk/req=0.0 inTrainLib=0.00
+  airline|before_tool_call                 n=100  tok=   1709 const=0.020 (frame 0.020 blk 0.000) live=  1674 blk/req=0.0 inTrainLib=0.00
+  banking_knowledge|after_model_call       n=140  tok=   6113 const=0.460 (frame 0.011 blk 0.448) live=  3302 blk/req=9.2 inTrainLib=0.94
+  banking_knowledge|after_tool_call        n=71   tok=   1948 const=0.521 (frame 0.025 blk 0.496) live=   933 blk/req=3.7 inTrainLib=0.77
+  banking_knowledge|before_invocation      n=80   tok=   1870 const=0.154 (frame 0.015 blk 0.139) live=  1581 blk/req=1.7 inTrainLib=0.88
+  banking_knowledge|before_model_call      n=21   tok=   3010 const=0.647 (frame 0.018 blk 0.629) live=  1062 blk/req=7.0 inTrainLib=1.00
+  retail|after_model_call                  n=138  tok=   1365 const=0.033 (frame 0.027 blk 0.006) live=  1321 blk/req=0.1 inTrainLib=0.00
+  retail|before_tool_call                  n=112  tok=   2744 const=0.037 (frame 0.013 blk 0.024) live=  2644 blk/req=0.9 inTrainLib=0.00
+CF-probe n 640 tok mismatch 0
+  ALL|                                     n=640  tok=   2593 const=0.145 (frame 0.016 blk 0.129) live=  2218 blk/req=1.8 inTrainLib=0.93
+  airline|after_model_call                 n=94   tok=   2148 const=0.017 (frame 0.017 blk 0.000) live=  2111 blk/req=0.0 inTrainLib=0.00
+  airline|before_tool_call                 n=66   tok=   1576 const=0.022 (frame 0.022 blk 0.000) live=  1541 blk/req=0.0 inTrainLib=0.00
+  banking_knowledge|after_model_call       n=14   tok=   3193 const=0.405 (frame 0.017 blk 0.387) live=  1901 blk/req=4.0 inTrainLib=0.98
+  banking_knowledge|after_tool_call        n=86   tok=   2673 const=0.468 (frame 0.018 blk 0.449) live=  1423 blk/req=5.6 inTrainLib=0.94
+  banking_knowledge|before_invocation      n=146  tok=   3035 const=0.153 (frame 0.014 blk 0.139) live=  2570 blk/req=2.9 inTrainLib=0.98
+  banking_knowledge|before_model_call      n=12   tok=   3598 const=0.578 (frame 0.015 blk 0.563) live=  1518 blk/req=8.2 inTrainLib=1.00
+  banking_knowledge|before_tool_call       n=2    tok=   3852 const=0.222 (frame 0.010 blk 0.212) live=  2997 blk/req=5.0 inTrainLib=1.00
+  retail|after_model_call                  n=178  tok=   2583 const=0.022 (frame 0.014 blk 0.007) live=  2527 blk/req=0.3 inTrainLib=0.00
+  retail|before_tool_call                  n=42   tok=   2989 const=0.035 (frame 0.012 blk 0.024) live=  2883 blk/req=0.7 inTrainLib=0.00
+JB-all n 231 tok mismatch 0
+  ALL|                                     n=231  tok=    556 const=0.000 (frame 0.000 blk 0.000) live=   556 blk/req=0.0 inTrainLib=0.00
+  jb|                                      n=231  tok=    556 const=0.000 (frame 0.000 blk 0.000) live=   556 blk/req=0.0 inTrainLib=0.00

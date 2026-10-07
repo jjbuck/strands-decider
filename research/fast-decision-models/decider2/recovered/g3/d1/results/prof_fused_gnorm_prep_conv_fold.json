@@ -1,0 +1,187 @@
+{
+ "1000": {
+  "kernels": 382,
+  "busy_ms": 52.72,
+  "span_ms": 52.7,
+  "gaps_ms": 0.007,
+  "cat_ms": {
+   "gemm": 46.92,
+   "fla_gdn": 3.39,
+   "conv_l2": 1.19,
+   "other": 0.67,
+   "norms": 0.39,
+   "attn_prep": 0.24
+  },
+  "cat_ms_fewer_ctas_than_SMs": {
+   "other": 0.23,
+   "fla_gdn": 1.0,
+   "gemm": 11.43
+  },
+  "gemm_tflops": 58.5,
+  "other_top": [
+   [
+    "chunk_fwd_kernel_o",
+    1.103
+   ],
+   [
+    "chunk_gated_delta_rule_fwd_kernel_h_blockdim64",
+    0.976
+   ],
+   [
+    "recompute_w_u_fwd_kernel",
+    0.694
+   ],
+   [
+    "chunk_gated_delta_rule_fwd_kkt_solve_kernel",
+    0.551
+   ],
+   [
+    "void at::native::vectorized_elementwise_kernel<4, at::native",
+    0.375
+   ],
+   [
+    "void at::native::elementwise_kernel<128, 4, at::native::gpu_",
+    0.118
+   ],
+   [
+    "void at::native::elementwise_kernel<128, 2, at::native::gpu_",
+    0.072
+   ],
+   [
+    "void at::native::unrolled_elementwise_kernel<at::native::dir",
+    0.05
+   ],
+   [
+    "gdn_gate_chunk_cumsum_scalar_kernel",
+    0.034
+   ],
+   [
+    "void at::native::reduce_kernel<512, 1, at::native::ReduceOp<",
+    0.031
+   ]
+  ]
+ },
+ "1024": {
+  "kernels": 382,
+  "busy_ms": 52.92,
+  "span_ms": 52.9,
+  "gaps_ms": 0.007,
+  "cat_ms": {
+   "gemm": 46.97,
+   "fla_gdn": 3.42,
+   "conv_l2": 1.21,
+   "other": 0.68,
+   "norms": 0.4,
+   "attn_prep": 0.25
+  },
+  "cat_ms_fewer_ctas_than_SMs": {
+   "other": 0.23,
+   "fla_gdn": 1.01,
+   "gemm": 11.44
+  },
+  "gemm_tflops": 59.8,
+  "other_top": [
+   [
+    "chunk_fwd_kernel_o",
+    1.117
+   ],
+   [
+    "chunk_gated_delta_rule_fwd_kernel_h_blockdim64",
+    0.982
+   ],
+   [
+    "recompute_w_u_fwd_kernel",
+    0.709
+   ],
+   [
+    "chunk_gated_delta_rule_fwd_kkt_solve_kernel",
+    0.552
+   ],
+   [
+    "void at::native::vectorized_elementwise_kernel<4, at::native",
+    0.38
+   ],
+   [
+    "void at::native::elementwise_kernel<128, 4, at::native::gpu_",
+    0.119
+   ],
+   [
+    "void at::native::elementwise_kernel<128, 2, at::native::gpu_",
+    0.074
+   ],
+   [
+    "void at::native::unrolled_elementwise_kernel<at::native::dir",
+    0.052
+   ],
+   [
+    "gdn_gate_chunk_cumsum_scalar_kernel",
+    0.034
+   ],
+   [
+    "void at::native::reduce_kernel<512, 1, at::native::ReduceOp<",
+    0.031
+   ]
+  ]
+ },
+ "1056": {
+  "kernels": 382,
+  "busy_ms": 56.83,
+  "span_ms": 56.8,
+  "gaps_ms": 0.007,
+  "cat_ms": {
+   "gemm": 50.83,
+   "fla_gdn": 3.53,
+   "conv_l2": 1.12,
+   "other": 0.71,
+   "norms": 0.42,
+   "attn_prep": 0.23
+  },
+  "cat_ms_fewer_ctas_than_SMs": {
+   "other": 0.23,
+   "fla_gdn": 1.06
+  },
+  "gemm_tflops": 57.0,
+  "other_top": [
+   [
+    "chunk_fwd_kernel_o",
+    1.14
+   ],
+   [
+    "chunk_gated_delta_rule_fwd_kernel_h_blockdim64",
+    1.029
+   ],
+   [
+    "recompute_w_u_fwd_kernel",
+    0.736
+   ],
+   [
+    "chunk_gated_delta_rule_fwd_kkt_solve_kernel",
+    0.557
+   ],
+   [
+    "void at::native::vectorized_elementwise_kernel<4, at::native",
+    0.402
+   ],
+   [
+    "void at::native::elementwise_kernel<128, 4, at::native::gpu_",
+    0.12
+   ],
+   [
+    "void at::native::elementwise_kernel<128, 2, at::native::gpu_",
+    0.077
+   ],
+   [
+    "void at::native::unrolled_elementwise_kernel<at::native::dir",
+    0.053
+   ],
+   [
+    "gdn_gate_chunk_cumsum_scalar_kernel",
+    0.036
+   ],
+   [
+    "void at::native::reduce_kernel<512, 1, at::native::ReduceOp<",
+    0.033
+   ]
+  ]
+ }
+}

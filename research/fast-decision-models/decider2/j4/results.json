@@ -1,0 +1,2542 @@
+{
+ "hobson": {
+  "JB-all": 0.7229437229437229,
+  "JB-hard": 0.5230769230769231,
+  "JB-all mcnemar(model_only,hob_only,p)": [
+   0,
+   0,
+   1.0
+  ],
+  "JB-hard mcnemar(model_only,hob_only,p)": [
+   0,
+   0,
+   1.0
+  ],
+  "JB-all brier,ece": [
+   0.3479,
+   0.0483
+  ],
+  "REAL agree": 1.0,
+  "REAL agree_sd": 1.0,
+  "REAL-label": 0.785,
+  "REAL-label consensus": 0.8179347826086957,
+  "REAL-label brier,ece": [
+   0.3473,
+   0.1156
+  ],
+  "REAL-label mcnemar": [
+   0,
+   0,
+   1.0
+  ],
+  "LONG agree": 1.0,
+  "LONG agree_sd": 1.0,
+  "CF acc": 0.5935960591133005,
+  "CF flip": 0.2684729064039409,
+  "CF dir": 0.9482758620689655,
+  "CF fgh": 1.0,
+  "CF flip mcnemar": [
+   0,
+   0,
+   1.0
+  ],
+  "CF kinds": {
+   "amount_insert": [
+    0.1,
+    90
+   ],
+   "human_insert": [
+    0.346,
+    156
+   ],
+   "identity": [
+    0.0,
+    51
+   ],
+   "insists_3v4": [
+    0.05,
+    20
+   ],
+   "procedure_intent": [
+    0.0,
+    40
+   ],
+   "wrapup_replace": [
+    0.918,
+    49
+   ]
+  },
+  "CF-probe acc": 0.653125,
+  "CF-probe flip": 0.328125,
+  "CF-probe dir": 0.884375,
+  "CF-probe fgh": 1.0,
+  "CF-probe flip mcnemar": [
+   0,
+   0,
+   1.0
+  ],
+  "CF-probe kinds": {
+   "probe_amount_vs_limit": [
+    0.326,
+    43
+   ],
+   "probe_amount_vs_limit_distract": [
+    0.237,
+    38
+   ],
+   "probe_date_order": [
+    0.061,
+    49
+   ],
+   "probe_date_order_distract": [
+    0.031,
+    32
+   ],
+   "probe_id_match": [
+    0.541,
+    37
+   ],
+   "probe_id_match_distract": [
+    0.381,
+    42
+   ],
+   "probe_status_equal": [
+    0.886,
+    35
+   ],
+   "probe_status_equal_distract": [
+    0.25,
+    44
+   ]
+  },
+  "SHUF both_right": 0.2454780361757106
+ },
+ "a_r1000": {
+  "JB-all": 0.5497835497835498,
+  "JB-hard": 0.3769230769230769,
+  "JB-all mcnemar(model_only,hob_only,p)": [
+   11,
+   51,
+   0.0
+  ],
+  "JB-hard mcnemar(model_only,hob_only,p)": [
+   10,
+   29,
+   0.0034
+  ],
+  "JB-all brier,ece": [
+   0.5447,
+   0.0946
+  ],
+  "REAL agree": 0.8033240997229917,
+  "REAL agree_sd": 0.6184971098265896,
+  "REAL-label": 0.725,
+  "REAL-label consensus": 0.7581521739130435,
+  "REAL-label brier,ece": [
+   0.4042,
+   0.0938
+  ],
+  "REAL-label mcnemar": [
+   20,
+   44,
+   0.0037
+  ],
+  "CF acc": 0.5886699507389163,
+  "CF flip": 0.27586206896551724,
+  "CF dir": 0.9556650246305419,
+  "CF fgh": 0.44954128440366975,
+  "CF flip mcnemar": [
+   63,
+   60,
+   0.857
+  ],
+  "CF kinds": {
+   "amount_insert": [
+    0.578,
+    90
+   ],
+   "human_insert": [
+    0.288,
+    156
+   ],
+   "identity": [
+    0.02,
+    51
+   ],
+   "insists_3v4": [
+    0.0,
+    20
+   ],
+   "procedure_intent": [
+    0.0,
+    40
+   ],
+   "wrapup_replace": [
+    0.286,
+    49
+   ]
+  },
+  "CF-probe acc": 0.5859375,
+  "CF-probe flip": 0.1875,
+  "CF-probe dir": 0.815625,
+  "CF-probe fgh": 0.4380952380952381,
+  "CF-probe flip mcnemar": [
+   14,
+   59,
+   0.0
+  ],
+  "CF-probe kinds": {
+   "probe_amount_vs_limit": [
+    0.07,
+    43
+   ],
+   "probe_amount_vs_limit_distract": [
+    0.026,
+    38
+   ],
+   "probe_date_order": [
+    0.0,
+    49
+   ],
+   "probe_date_order_distract": [
+    0.0,
+    32
+   ],
+   "probe_id_match": [
+    0.162,
+    37
+   ],
+   "probe_id_match_distract": [
+    0.024,
+    42
+   ],
+   "probe_status_equal": [
+    0.943,
+    35
+   ],
+   "probe_status_equal_distract": [
+    0.364,
+    44
+   ]
+  },
+  "SHUF both_right": 0.27648578811369506
+ },
+ "a_r12000": {
+  "JB-all": 0.6883116883116883,
+  "JB-hard": 0.49230769230769234,
+  "JB-all mcnemar(model_only,hob_only,p)": [
+   13,
+   21,
+   0.2295
+  ],
+  "JB-hard mcnemar(model_only,hob_only,p)": [
+   13,
+   17,
+   0.5847
+  ],
+  "JB-all brier,ece": [
+   0.406,
+   0.0689
+  ],
+  "REAL agree": 0.8836565096952909,
+  "REAL agree_sd": 0.8439306358381503,
+  "REAL-label": 0.74,
+  "REAL-label consensus": 0.7717391304347826,
+  "REAL-label brier,ece": [
+   0.4019,
+   0.0895
+  ],
+  "REAL-label mcnemar": [
+   10,
+   28,
+   0.0051
+  ],
+  "LONG agree": 0.9044585987261147,
+  "LONG agree_sd": 0.896969696969697,
+  "CF acc": 0.6699507389162561,
+  "CF flip": 0.43349753694581283,
+  "CF dir": 0.9605911330049262,
+  "CF fgh": 0.926605504587156,
+  "CF flip mcnemar": [
+   75,
+   8,
+   0.0
+  ],
+  "CF kinds": {
+   "amount_insert": [
+    0.5,
+    90
+   ],
+   "human_insert": [
+    0.545,
+    156
+   ],
+   "identity": [
+    0.0,
+    51
+   ],
+   "insists_3v4": [
+    0.0,
+    20
+   ],
+   "procedure_intent": [
+    0.0,
+    40
+   ],
+   "wrapup_replace": [
+    0.939,
+    49
+   ]
+  },
+  "CF-probe acc": 0.6453125,
+  "CF-probe flip": 0.3,
+  "CF-probe dir": 0.909375,
+  "CF-probe fgh": 0.6095238095238096,
+  "CF-probe flip mcnemar": [
+   32,
+   41,
+   0.3492
+  ],
+  "CF-probe kinds": {
+   "probe_amount_vs_limit": [
+    0.047,
+    43
+   ],
+   "probe_amount_vs_limit_distract": [
+    0.0,
+    38
+   ],
+   "probe_date_order": [
+    0.143,
+    49
+   ],
+   "probe_date_order_distract": [
+    0.062,
+    32
+   ],
+   "probe_id_match": [
+    0.757,
+    37
+   ],
+   "probe_id_match_distract": [
+    0.333,
+    42
+   ],
+   "probe_status_equal": [
+    0.886,
+    35
+   ],
+   "probe_status_equal_distract": [
+    0.273,
+    44
+   ]
+  },
+  "SHUF both_right": 0.4108527131782946
+ },
+ "a_r4000": {
+  "JB-all": 0.6277056277056277,
+  "JB-hard": 0.4,
+  "JB-all mcnemar(model_only,hob_only,p)": [
+   9,
+   31,
+   0.0007
+  ],
+  "JB-hard mcnemar(model_only,hob_only,p)": [
+   9,
+   25,
+   0.009
+  ],
+  "JB-all brier,ece": [
+   0.5161,
+   0.1725
+  ],
+  "REAL agree": 0.8319482917820868,
+  "REAL agree_sd": 0.8005780346820809,
+  "REAL-label": 0.735,
+  "REAL-label consensus": 0.7527173913043478,
+  "REAL-label brier,ece": [
+   0.3992,
+   0.0889
+  ],
+  "REAL-label mcnemar": [
+   14,
+   34,
+   0.0055
+  ],
+  "CF acc": 0.6133004926108374,
+  "CF flip": 0.3251231527093596,
+  "CF dir": 0.9655172413793104,
+  "CF fgh": 0.7798165137614679,
+  "CF flip mcnemar": [
+   47,
+   24,
+   0.0086
+  ],
+  "CF kinds": {
+   "amount_insert": [
+    0.378,
+    90
+   ],
+   "human_insert": [
+    0.321,
+    156
+   ],
+   "identity": [
+    0.0,
+    51
+   ],
+   "insists_3v4": [
+    0.15,
+    20
+   ],
+   "procedure_intent": [
+    0.0,
+    40
+   ],
+   "wrapup_replace": [
+    0.918,
+    49
+   ]
+  },
+  "CF-probe acc": 0.60625,
+  "CF-probe flip": 0.21875,
+  "CF-probe dir": 0.88125,
+  "CF-probe fgh": 0.4857142857142857,
+  "CF-probe flip mcnemar": [
+   19,
+   54,
+   0.0001
+  ],
+  "CF-probe kinds": {
+   "probe_amount_vs_limit": [
+    0.0,
+    43
+   ],
+   "probe_amount_vs_limit_distract": [
+    0.0,
+    38
+   ],
+   "probe_date_order": [
+    0.0,
+    49
+   ],
+   "probe_date_order_distract": [
+    0.0,
+    32
+   ],
+   "probe_id_match": [
+    0.757,
+    37
+   ],
+   "probe_id_match_distract": [
+    0.024,
+    42
+   ],
+   "probe_status_equal": [
+    0.943,
+    35
+   ],
+   "probe_status_equal_distract": [
+    0.182,
+    44
+   ]
+  },
+  "SHUF both_right": 0.31266149870801035
+ },
+ "a2_r1000": {
+  "JB-all": 0.5974025974025974,
+  "JB-hard": 0.4153846153846154,
+  "JB-all mcnemar(model_only,hob_only,p)": [
+   12,
+   41,
+   0.0001
+  ],
+  "JB-hard mcnemar(model_only,hob_only,p)": [
+   11,
+   25,
+   0.0288
+  ],
+  "JB-all brier,ece": [
+   0.533,
+   0.1283
+  ],
+  "REAL agree": 0.795,
+  "REAL agree_sd": 0.6513761467889908,
+  "REAL-label": 0.72,
+  "REAL-label consensus": 0.7418478260869565,
+  "REAL-label brier,ece": [
+   0.3804,
+   0.0886
+  ],
+  "REAL-label mcnemar": [
+   26,
+   52,
+   0.0043
+  ],
+  "CF acc": 0.5812807881773399,
+  "CF flip": 0.26108374384236455,
+  "CF dir": 0.9753694581280788,
+  "CF fgh": 0.44954128440366975,
+  "CF flip mcnemar": [
+   57,
+   60,
+   0.8534
+  ],
+  "CF kinds": {
+   "amount_insert": [
+    0.667,
+    90
+   ],
+   "human_insert": [
+    0.0,
+    156
+   ],
+   "identity": [
+    0.0,
+    51
+   ],
+   "insists_3v4": [
+    0.0,
+    20
+   ],
+   "procedure_intent": [
+    0.0,
+    40
+   ],
+   "wrapup_replace": [
+    0.939,
+    49
+   ]
+  },
+  "CF-probe acc": 0.621875,
+  "CF-probe flip": 0.25,
+  "CF-probe dir": 0.86875,
+  "CF-probe fgh": 0.44761904761904764,
+  "CF-probe flip mcnemar": [
+   33,
+   58,
+   0.0115
+  ],
+  "CF-probe kinds": {
+   "probe_amount_vs_limit": [
+    0.023,
+    43
+   ],
+   "probe_amount_vs_limit_distract": [
+    0.0,
+    38
+   ],
+   "probe_date_order": [
+    0.143,
+    49
+   ],
+   "probe_date_order_distract": [
+    0.062,
+    32
+   ],
+   "probe_id_match": [
+    0.622,
+    37
+   ],
+   "probe_id_match_distract": [
+    0.238,
+    42
+   ],
+   "probe_status_equal": [
+    0.657,
+    35
+   ],
+   "probe_status_equal_distract": [
+    0.318,
+    44
+   ]
+  },
+  "SHUF both_right": 0.22739018087855298
+ },
+ "a2_r4000": {
+  "JB-all": 0.6493506493506493,
+  "JB-hard": 0.43846153846153846,
+  "JB-all mcnemar(model_only,hob_only,p)": [
+   11,
+   28,
+   0.0095
+  ],
+  "JB-hard mcnemar(model_only,hob_only,p)": [
+   11,
+   22,
+   0.0801
+  ],
+  "JB-all brier,ece": [
+   0.4795,
+   0.1822
+  ],
+  "REAL agree": 0.825,
+  "REAL agree_sd": 0.9174311926605505,
+  "REAL-label": 0.7,
+  "REAL-label consensus": 0.7255434782608695,
+  "REAL-label brier,ece": [
+   0.4342,
+   0.061
+  ],
+  "REAL-label mcnemar": [
+   17,
+   51,
+   0.0
+  ],
+  "CF acc": 0.6859605911330049,
+  "CF flip": 0.458128078817734,
+  "CF dir": 0.9458128078817734,
+  "CF fgh": 0.7981651376146789,
+  "CF flip mcnemar": [
+   99,
+   22,
+   0.0
+  ],
+  "CF kinds": {
+   "amount_insert": [
+    0.711,
+    90
+   ],
+   "human_insert": [
+    0.526,
+    156
+   ],
+   "identity": [
+    0.02,
+    51
+   ],
+   "insists_3v4": [
+    0.0,
+    20
+   ],
+   "procedure_intent": [
+    0.0,
+    40
+   ],
+   "wrapup_replace": [
+    0.796,
+    49
+   ]
+  },
+  "CF-probe acc": 0.6390625,
+  "CF-probe flip": 0.290625,
+  "CF-probe dir": 0.915625,
+  "CF-probe fgh": 0.6095238095238096,
+  "CF-probe flip mcnemar": [
+   29,
+   41,
+   0.1882
+  ],
+  "CF-probe kinds": {
+   "probe_amount_vs_limit": [
+    0.279,
+    43
+   ],
+   "probe_amount_vs_limit_distract": [
+    0.079,
+    38
+   ],
+   "probe_date_order": [
+    0.0,
+    49
+   ],
+   "probe_date_order_distract": [
+    0.0,
+    32
+   ],
+   "probe_id_match": [
+    0.351,
+    37
+   ],
+   "probe_id_match_distract": [
+    0.262,
+    42
+   ],
+   "probe_status_equal": [
+    0.971,
+    35
+   ],
+   "probe_status_equal_distract": [
+    0.455,
+    44
+   ]
+  },
+  "SHUF both_right": 0.4470284237726098
+ },
+ "a3_r4000": {
+  "JB-all": 0.6190476190476191,
+  "JB-hard": 0.3923076923076923,
+  "JB-all mcnemar(model_only,hob_only,p)": [
+   7,
+   31,
+   0.0001
+  ],
+  "JB-hard mcnemar(model_only,hob_only,p)": [
+   7,
+   24,
+   0.0033
+  ],
+  "JB-all brier,ece": [
+   0.4699,
+   0.0975
+  ],
+  "REAL agree": 0.87,
+  "REAL agree_sd": 0.8440366972477065,
+  "REAL-label": 0.74,
+  "REAL-label consensus": 0.7663043478260869,
+  "REAL-label brier,ece": [
+   0.3969,
+   0.0989
+  ],
+  "REAL-label mcnemar": [
+   16,
+   34,
+   0.0153
+  ],
+  "CF acc": 0.5874384236453202,
+  "CF flip": 0.25862068965517243,
+  "CF dir": 0.9261083743842364,
+  "CF fgh": 0.6880733944954128,
+  "CF flip mcnemar": [
+   30,
+   34,
+   0.708
+  ],
+  "CF kinds": {
+   "amount_insert": [
+    0.222,
+    90
+   ],
+   "human_insert": [
+    0.218,
+    156
+   ],
+   "identity": [
+    0.0,
+    51
+   ],
+   "insists_3v4": [
+    0.1,
+    20
+   ],
+   "procedure_intent": [
+    0.0,
+    40
+   ],
+   "wrapup_replace": [
+    1.0,
+    49
+   ]
+  },
+  "CF-probe acc": 0.6359375,
+  "CF-probe flip": 0.28125,
+  "CF-probe dir": 0.91875,
+  "CF-probe fgh": 0.6,
+  "CF-probe flip mcnemar": [
+   27,
+   42,
+   0.0912
+  ],
+  "CF-probe kinds": {
+   "probe_amount_vs_limit": [
+    0.093,
+    43
+   ],
+   "probe_amount_vs_limit_distract": [
+    0.026,
+    38
+   ],
+   "probe_date_order": [
+    0.0,
+    49
+   ],
+   "probe_date_order_distract": [
+    0.0,
+    32
+   ],
+   "probe_id_match": [
+    0.432,
+    37
+   ],
+   "probe_id_match_distract": [
+    0.333,
+    42
+   ],
+   "probe_status_equal": [
+    0.914,
+    35
+   ],
+   "probe_status_equal_distract": [
+    0.523,
+    44
+   ]
+  },
+  "SHUF both_right": 0.2351421188630491
+ },
+ "b_r1000": {
+  "JB-all": 0.6363636363636364,
+  "JB-hard": 0.4153846153846154,
+  "JB-all mcnemar(model_only,hob_only,p)": [
+   19,
+   39,
+   0.0119
+  ],
+  "JB-hard mcnemar(model_only,hob_only,p)": [
+   18,
+   32,
+   0.0649
+  ],
+  "JB-all brier,ece": [
+   0.4573,
+   0.1083
+  ],
+  "REAL agree": 0.7543859649122807,
+  "REAL agree_sd": 0.6907514450867052,
+  "REAL-label": 0.68,
+  "REAL-label consensus": 0.7038043478260869,
+  "REAL-label brier,ece": [
+   0.4571,
+   0.0838
+  ],
+  "REAL-label mcnemar": [
+   24,
+   66,
+   0.0
+  ],
+  "CF acc": 0.6687192118226601,
+  "CF flip": 0.43842364532019706,
+  "CF dir": 0.9261083743842364,
+  "CF fgh": 0.6330275229357798,
+  "CF flip mcnemar": [
+   109,
+   40,
+   0.0
+  ],
+  "CF kinds": {
+   "amount_insert": [
+    0.522,
+    90
+   ],
+   "human_insert": [
+    0.686,
+    156
+   ],
+   "identity": [
+    0.0,
+    51
+   ],
+   "insists_3v4": [
+    0.0,
+    20
+   ],
+   "procedure_intent": [
+    0.0,
+    40
+   ],
+   "wrapup_replace": [
+    0.49,
+    49
+   ]
+  },
+  "CF-probe acc": 0.7453125,
+  "CF-probe flip": 0.49375,
+  "CF-probe dir": 0.984375,
+  "CF-probe fgh": 0.7619047619047619,
+  "CF-probe flip mcnemar": [
+   78,
+   25,
+   0.0
+  ],
+  "CF-probe kinds": {
+   "probe_amount_vs_limit": [
+    0.767,
+    43
+   ],
+   "probe_amount_vs_limit_distract": [
+    0.5,
+    38
+   ],
+   "probe_date_order": [
+    0.0,
+    49
+   ],
+   "probe_date_order_distract": [
+    0.0,
+    32
+   ],
+   "probe_id_match": [
+    1.0,
+    37
+   ],
+   "probe_id_match_distract": [
+    0.119,
+    42
+   ],
+   "probe_status_equal": [
+    1.0,
+    35
+   ],
+   "probe_status_equal_distract": [
+    0.659,
+    44
+   ]
+  },
+  "SHUF both_right": 0.4754521963824289
+ },
+ "b_r12000": {
+  "JB-all": 0.670995670995671,
+  "JB-hard": 0.45384615384615384,
+  "JB-all mcnemar(model_only,hob_only,p)": [
+   13,
+   25,
+   0.073
+  ],
+  "JB-hard mcnemar(model_only,hob_only,p)": [
+   13,
+   22,
+   0.1755
+  ],
+  "JB-all brier,ece": [
+   0.4122,
+   0.0886
+  ],
+  "REAL agree": 0.8845798707294552,
+  "REAL agree_sd": 0.8352601156069365,
+  "REAL-label": 0.7525,
+  "REAL-label consensus": 0.7907608695652174,
+  "REAL-label brier,ece": [
+   0.3799,
+   0.0983
+  ],
+  "REAL-label mcnemar": [
+   13,
+   26,
+   0.0533
+  ],
+  "LONG agree": 0.8959660297239915,
+  "LONG agree_sd": 0.8727272727272727,
+  "CF acc": 0.6822660098522167,
+  "CF flip": 0.4630541871921182,
+  "CF dir": 0.9556650246305419,
+  "CF fgh": 0.8532110091743119,
+  "CF flip mcnemar": [
+   95,
+   16,
+   0.0
+  ],
+  "CF kinds": {
+   "amount_insert": [
+    0.778,
+    90
+   ],
+   "human_insert": [
+    0.487,
+    156
+   ],
+   "identity": [
+    0.0,
+    51
+   ],
+   "insists_3v4": [
+    0.05,
+    20
+   ],
+   "procedure_intent": [
+    0.0,
+    40
+   ],
+   "wrapup_replace": [
+    0.837,
+    49
+   ]
+  },
+  "CF-probe acc": 0.69375,
+  "CF-probe flip": 0.390625,
+  "CF-probe dir": 0.915625,
+  "CF-probe fgh": 0.6761904761904762,
+  "CF-probe flip mcnemar": [
+   54,
+   34,
+   0.0422
+  ],
+  "CF-probe kinds": {
+   "probe_amount_vs_limit": [
+    0.047,
+    43
+   ],
+   "probe_amount_vs_limit_distract": [
+    0.0,
+    38
+   ],
+   "probe_date_order": [
+    0.0,
+    49
+   ],
+   "probe_date_order_distract": [
+    0.062,
+    32
+   ],
+   "probe_id_match": [
+    0.973,
+    37
+   ],
+   "probe_id_match_distract": [
+    0.5,
+    42
+   ],
+   "probe_status_equal": [
+    0.943,
+    35
+   ],
+   "probe_status_equal_distract": [
+    0.705,
+    44
+   ]
+  },
+  "SHUF both_right": 0.4418604651162791
+ },
+ "b_r4000": {
+  "JB-all": 0.670995670995671,
+  "JB-hard": 0.46923076923076923,
+  "JB-all mcnemar(model_only,hob_only,p)": [
+   18,
+   30,
+   0.1114
+  ],
+  "JB-hard mcnemar(model_only,hob_only,p)": [
+   17,
+   24,
+   0.3489
+  ],
+  "JB-all brier,ece": [
+   0.4424,
+   0.0694
+  ],
+  "REAL agree": 0.8956602031394275,
+  "REAL agree_sd": 0.7890173410404624,
+  "REAL-label": 0.7475,
+  "REAL-label consensus": 0.7880434782608695,
+  "REAL-label brier,ece": [
+   0.3767,
+   0.0547
+  ],
+  "REAL-label mcnemar": [
+   10,
+   25,
+   0.0167
+  ],
+  "CF acc": 0.6551724137931034,
+  "CF flip": 0.4088669950738916,
+  "CF dir": 0.9802955665024631,
+  "CF fgh": 0.8073394495412844,
+  "CF flip mcnemar": [
+   78,
+   21,
+   0.0
+  ],
+  "CF kinds": {
+   "amount_insert": [
+    0.589,
+    90
+   ],
+   "human_insert": [
+    0.449,
+    156
+   ],
+   "identity": [
+    0.0,
+    51
+   ],
+   "insists_3v4": [
+    0.25,
+    20
+   ],
+   "procedure_intent": [
+    0.0,
+    40
+   ],
+   "wrapup_replace": [
+    0.776,
+    49
+   ]
+  },
+  "CF-probe acc": 0.76875,
+  "CF-probe flip": 0.55,
+  "CF-probe dir": 0.9625,
+  "CF-probe fgh": 0.8476190476190476,
+  "CF-probe flip mcnemar": [
+   87,
+   16,
+   0.0
+  ],
+  "CF-probe kinds": {
+   "probe_amount_vs_limit": [
+    0.791,
+    43
+   ],
+   "probe_amount_vs_limit_distract": [
+    0.263,
+    38
+   ],
+   "probe_date_order": [
+    0.0,
+    49
+   ],
+   "probe_date_order_distract": [
+    0.031,
+    32
+   ],
+   "probe_id_match": [
+    0.973,
+    37
+   ],
+   "probe_id_match_distract": [
+    0.548,
+    42
+   ],
+   "probe_status_equal": [
+    1.0,
+    35
+   ],
+   "probe_status_equal_distract": [
+    0.841,
+    44
+   ]
+  },
+  "SHUF both_right": 0.4005167958656331
+ },
+ "b2_r1000": {
+  "JB-all": 0.6147186147186147,
+  "JB-hard": 0.4076923076923077,
+  "JB-all mcnemar(model_only,hob_only,p)": [
+   18,
+   43,
+   0.0019
+  ],
+  "JB-hard mcnemar(model_only,hob_only,p)": [
+   17,
+   32,
+   0.0444
+  ],
+  "JB-all brier,ece": [
+   0.4571,
+   0.0844
+  ],
+  "REAL agree": 0.81,
+  "REAL agree_sd": 0.7889908256880734,
+  "REAL-label": 0.7,
+  "REAL-label consensus": 0.7255434782608695,
+  "REAL-label brier,ece": [
+   0.4314,
+   0.0712
+  ],
+  "REAL-label mcnemar": [
+   19,
+   53,
+   0.0001
+  ],
+  "CF acc": 0.6724137931034483,
+  "CF flip": 0.4482758620689655,
+  "CF dir": 0.9458128078817734,
+  "CF fgh": 0.7155963302752294,
+  "CF flip mcnemar": [
+   104,
+   31,
+   0.0
+  ],
+  "CF kinds": {
+   "amount_insert": [
+    0.522,
+    90
+   ],
+   "human_insert": [
+    0.673,
+    156
+   ],
+   "identity": [
+    0.0,
+    51
+   ],
+   "insists_3v4": [
+    0.0,
+    20
+   ],
+   "procedure_intent": [
+    0.0,
+    40
+   ],
+   "wrapup_replace": [
+    0.612,
+    49
+   ]
+  },
+  "CF-probe acc": 0.7359375,
+  "CF-probe flip": 0.475,
+  "CF-probe dir": 0.965625,
+  "CF-probe fgh": 0.7333333333333333,
+  "CF-probe flip mcnemar": [
+   75,
+   28,
+   0.0
+  ],
+  "CF-probe kinds": {
+   "probe_amount_vs_limit": [
+    0.651,
+    43
+   ],
+   "probe_amount_vs_limit_distract": [
+    0.237,
+    38
+   ],
+   "probe_date_order": [
+    0.0,
+    49
+   ],
+   "probe_date_order_distract": [
+    0.0,
+    32
+   ],
+   "probe_id_match": [
+    1.0,
+    37
+   ],
+   "probe_id_match_distract": [
+    0.19,
+    42
+   ],
+   "probe_status_equal": [
+    1.0,
+    35
+   ],
+   "probe_status_equal_distract": [
+    0.795,
+    44
+   ]
+  },
+  "SHUF both_right": 0.46770025839793283
+ },
+ "b2_r4000": {
+  "JB-all": 0.6493506493506493,
+  "JB-hard": 0.4307692307692308,
+  "JB-all mcnemar(model_only,hob_only,p)": [
+   13,
+   30,
+   0.0137
+  ],
+  "JB-hard mcnemar(model_only,hob_only,p)": [
+   13,
+   25,
+   0.073
+  ],
+  "JB-all brier,ece": [
+   0.4351,
+   0.0902
+  ],
+  "REAL agree": 0.8775,
+  "REAL agree_sd": 0.8532110091743119,
+  "REAL-label": 0.7025,
+  "REAL-label consensus": 0.7418478260869565,
+  "REAL-label brier,ece": [
+   0.4041,
+   0.058
+  ],
+  "REAL-label mcnemar": [
+   7,
+   40,
+   0.0
+  ],
+  "CF acc": 0.6354679802955665,
+  "CF flip": 0.3694581280788177,
+  "CF dir": 0.9802955665024631,
+  "CF fgh": 0.9174311926605505,
+  "CF flip mcnemar": [
+   50,
+   9,
+   0.0
+  ],
+  "CF kinds": {
+   "amount_insert": [
+    0.278,
+    90
+   ],
+   "human_insert": [
+    0.474,
+    156
+   ],
+   "identity": [
+    0.0,
+    51
+   ],
+   "insists_3v4": [
+    0.1,
+    20
+   ],
+   "procedure_intent": [
+    0.0,
+    40
+   ],
+   "wrapup_replace": [
+    1.0,
+    49
+   ]
+  },
+  "CF-probe acc": 0.75625,
+  "CF-probe flip": 0.515625,
+  "CF-probe dir": 0.9625,
+  "CF-probe fgh": 0.8,
+  "CF-probe flip mcnemar": [
+   81,
+   21,
+   0.0
+  ],
+  "CF-probe kinds": {
+   "probe_amount_vs_limit": [
+    0.744,
+    43
+   ],
+   "probe_amount_vs_limit_distract": [
+    0.368,
+    38
+   ],
+   "probe_date_order": [
+    0.0,
+    49
+   ],
+   "probe_date_order_distract": [
+    0.0,
+    32
+   ],
+   "probe_id_match": [
+    0.946,
+    37
+   ],
+   "probe_id_match_distract": [
+    0.5,
+    42
+   ],
+   "probe_status_equal": [
+    0.943,
+    35
+   ],
+   "probe_status_equal_distract": [
+    0.682,
+    44
+   ]
+  },
+  "SHUF both_right": 0.35658914728682173
+ },
+ "b3_r4000": {
+  "JB-all": 0.6493506493506493,
+  "JB-hard": 0.4307692307692308,
+  "JB-all mcnemar(model_only,hob_only,p)": [
+   12,
+   29,
+   0.0115
+  ],
+  "JB-hard mcnemar(model_only,hob_only,p)": [
+   12,
+   24,
+   0.0652
+  ],
+  "JB-all brier,ece": [
+   0.4826,
+   0.1677
+  ],
+  "REAL agree": 0.8525,
+  "REAL agree_sd": 0.8165137614678899,
+  "REAL-label": 0.71,
+  "REAL-label consensus": 0.75,
+  "REAL-label brier,ece": [
+   0.4023,
+   0.0892
+  ],
+  "REAL-label mcnemar": [
+   12,
+   42,
+   0.0001
+  ],
+  "CF acc": 0.6059113300492611,
+  "CF flip": 0.31527093596059114,
+  "CF dir": 0.9753694581280788,
+  "CF fgh": 0.7981651376146789,
+  "CF flip mcnemar": [
+   41,
+   22,
+   0.0226
+  ],
+  "CF kinds": {
+   "amount_insert": [
+    0.4,
+    90
+   ],
+   "human_insert": [
+    0.295,
+    156
+   ],
+   "identity": [
+    0.0,
+    51
+   ],
+   "insists_3v4": [
+    0.1,
+    20
+   ],
+   "procedure_intent": [
+    0.0,
+    40
+   ],
+   "wrapup_replace": [
+    0.898,
+    49
+   ]
+  },
+  "CF-probe acc": 0.6921875,
+  "CF-probe flip": 0.384375,
+  "CF-probe dir": 0.915625,
+  "CF-probe fgh": 0.6666666666666666,
+  "CF-probe flip mcnemar": [
+   53,
+   35,
+   0.0693
+  ],
+  "CF-probe kinds": {
+   "probe_amount_vs_limit": [
+    0.233,
+    43
+   ],
+   "probe_amount_vs_limit_distract": [
+    0.0,
+    38
+   ],
+   "probe_date_order": [
+    0.061,
+    49
+   ],
+   "probe_date_order_distract": [
+    0.031,
+    32
+   ],
+   "probe_id_match": [
+    0.811,
+    37
+   ],
+   "probe_id_match_distract": [
+    0.595,
+    42
+   ],
+   "probe_status_equal": [
+    0.857,
+    35
+   ],
+   "probe_status_equal_distract": [
+    0.545,
+    44
+   ]
+  },
+  "SHUF both_right": 0.29198966408268734
+ },
+ "bf_r1000": {
+  "JB-all": 0.5887445887445888,
+  "JB-hard": 0.4307692307692308,
+  "JB-all mcnemar(model_only,hob_only,p)": [
+   19,
+   50,
+   0.0002
+  ],
+  "JB-hard mcnemar(model_only,hob_only,p)": [
+   18,
+   30,
+   0.1114
+  ],
+  "JB-all brier,ece": [
+   0.5172,
+   0.1508
+  ],
+  "REAL agree": 0.7425,
+  "REAL agree_sd": 0.6330275229357798,
+  "REAL-label": 0.635,
+  "REAL-label consensus": 0.654891304347826,
+  "REAL-label brier,ece": [
+   0.4897,
+   0.1025
+  ],
+  "REAL-label mcnemar": [
+   18,
+   78,
+   0.0
+  ],
+  "CF acc": 0.6231527093596059,
+  "CF flip": 0.3522167487684729,
+  "CF dir": 0.9113300492610837,
+  "CF fgh": 0.5321100917431193,
+  "CF flip mcnemar": [
+   85,
+   51,
+   0.0045
+  ],
+  "CF kinds": {
+   "amount_insert": [
+    0.256,
+    90
+   ],
+   "human_insert": [
+    0.724,
+    156
+   ],
+   "identity": [
+    0.0,
+    51
+   ],
+   "insists_3v4": [
+    0.0,
+    20
+   ],
+   "procedure_intent": [
+    0.0,
+    40
+   ],
+   "wrapup_replace": [
+    0.143,
+    49
+   ]
+  },
+  "CF-probe acc": 0.740625,
+  "CF-probe flip": 0.48125,
+  "CF-probe dir": 0.971875,
+  "CF-probe fgh": 0.7523809523809524,
+  "CF-probe flip mcnemar": [
+   75,
+   26,
+   0.0
+  ],
+  "CF-probe kinds": {
+   "probe_amount_vs_limit": [
+    0.86,
+    43
+   ],
+   "probe_amount_vs_limit_distract": [
+    0.526,
+    38
+   ],
+   "probe_date_order": [
+    0.0,
+    49
+   ],
+   "probe_date_order_distract": [
+    0.0,
+    32
+   ],
+   "probe_id_match": [
+    0.973,
+    37
+   ],
+   "probe_id_match_distract": [
+    0.024,
+    42
+   ],
+   "probe_status_equal": [
+    0.971,
+    35
+   ],
+   "probe_status_equal_distract": [
+    0.591,
+    44
+   ]
+  },
+  "SHUF both_right": 0.3643410852713178
+ },
+ "bf_r4000": {
+  "JB-all": 0.6796536796536796,
+  "JB-hard": 0.46923076923076923,
+  "JB-all mcnemar(model_only,hob_only,p)": [
+   18,
+   28,
+   0.1839
+  ],
+  "JB-hard mcnemar(model_only,hob_only,p)": [
+   17,
+   24,
+   0.3489
+  ],
+  "JB-all brier,ece": [
+   0.4442,
+   0.0911
+  ],
+  "REAL agree": 0.895,
+  "REAL agree_sd": 0.8807339449541285,
+  "REAL-label": 0.745,
+  "REAL-label consensus": 0.7853260869565217,
+  "REAL-label brier,ece": [
+   0.3743,
+   0.0399
+  ],
+  "REAL-label mcnemar": [
+   12,
+   28,
+   0.0166
+  ],
+  "CF acc": 0.6822660098522167,
+  "CF flip": 0.4630541871921182,
+  "CF dir": 0.9827586206896551,
+  "CF fgh": 0.8715596330275229,
+  "CF flip mcnemar": [
+   93,
+   14,
+   0.0
+  ],
+  "CF kinds": {
+   "amount_insert": [
+    0.656,
+    90
+   ],
+   "human_insert": [
+    0.558,
+    156
+   ],
+   "identity": [
+    0.0,
+    51
+   ],
+   "insists_3v4": [
+    0.0,
+    20
+   ],
+   "procedure_intent": [
+    0.0,
+    40
+   ],
+   "wrapup_replace": [
+    0.857,
+    49
+   ]
+  },
+  "CF-probe acc": 0.790625,
+  "CF-probe flip": 0.584375,
+  "CF-probe dir": 0.965625,
+  "CF-probe fgh": 0.9238095238095239,
+  "CF-probe flip mcnemar": [
+   90,
+   8,
+   0.0
+  ],
+  "CF-probe kinds": {
+   "probe_amount_vs_limit": [
+    0.767,
+    43
+   ],
+   "probe_amount_vs_limit_distract": [
+    0.289,
+    38
+   ],
+   "probe_date_order": [
+    0.143,
+    49
+   ],
+   "probe_date_order_distract": [
+    0.156,
+    32
+   ],
+   "probe_id_match": [
+    0.973,
+    37
+   ],
+   "probe_id_match_distract": [
+    0.595,
+    42
+   ],
+   "probe_status_equal": [
+    0.971,
+    35
+   ],
+   "probe_status_equal_distract": [
+    0.818,
+    44
+   ]
+  },
+  "SHUF both_right": 0.4392764857881137
+ },
+ "c_r16000": {
+  "JB-all": 0.70995670995671,
+  "JB-hard": 0.5230769230769231,
+  "JB-all mcnemar(model_only,hob_only,p)": [
+   13,
+   16,
+   0.7111
+  ],
+  "JB-hard mcnemar(model_only,hob_only,p)": [
+   12,
+   12,
+   1.0
+  ],
+  "JB-all brier,ece": [
+   0.3576,
+   0.0735
+  ],
+  "REAL agree": 0.9104339796860572,
+  "REAL agree_sd": 0.7456647398843931,
+  "REAL-label": 0.7725,
+  "REAL-label consensus": 0.8097826086956522,
+  "REAL-label brier,ece": [
+   0.3673,
+   0.1014
+  ],
+  "REAL-label mcnemar": [
+   11,
+   16,
+   0.4421
+  ],
+  "CF acc": 0.6330049261083743,
+  "CF flip": 0.3645320197044335,
+  "CF dir": 0.958128078817734,
+  "CF fgh": 0.8715596330275229,
+  "CF flip mcnemar": [
+   53,
+   14,
+   0.0
+  ],
+  "CF kinds": {
+   "amount_insert": [
+    0.344,
+    90
+   ],
+   "human_insert": [
+    0.442,
+    156
+   ],
+   "identity": [
+    0.02,
+    51
+   ],
+   "insists_3v4": [
+    0.0,
+    20
+   ],
+   "procedure_intent": [
+    0.0,
+    40
+   ],
+   "wrapup_replace": [
+    0.959,
+    49
+   ]
+  },
+  "CF-probe acc": 0.678125,
+  "CF-probe flip": 0.3625,
+  "CF-probe dir": 0.940625,
+  "CF-probe fgh": 0.6761904761904762,
+  "CF-probe flip mcnemar": [
+   45,
+   34,
+   0.2604
+  ],
+  "CF-probe kinds": {
+   "probe_amount_vs_limit": [
+    0.0,
+    43
+   ],
+   "probe_amount_vs_limit_distract": [
+    0.0,
+    38
+   ],
+   "probe_date_order": [
+    0.122,
+    49
+   ],
+   "probe_date_order_distract": [
+    0.062,
+    32
+   ],
+   "probe_id_match": [
+    0.676,
+    37
+   ],
+   "probe_id_match_distract": [
+    0.571,
+    42
+   ],
+   "probe_status_equal": [
+    0.886,
+    35
+   ],
+   "probe_status_equal_distract": [
+    0.636,
+    44
+   ]
+  },
+  "SHUF both_right": 0.34108527131782945
+ },
+ "d_r1000": {
+  "JB-all": 0.6190476190476191,
+  "JB-hard": 0.4307692307692308,
+  "JB-all mcnemar(model_only,hob_only,p)": [
+   12,
+   36,
+   0.0007
+  ],
+  "JB-hard mcnemar(model_only,hob_only,p)": [
+   12,
+   24,
+   0.0652
+  ],
+  "JB-all brier,ece": [
+   0.4927,
+   0.0856
+  ],
+  "REAL agree": 0.67,
+  "REAL agree_sd": 0.8256880733944955,
+  "REAL-label": 0.5425,
+  "REAL-label consensus": 0.5625,
+  "REAL-label brier,ece": [
+   0.5246,
+   0.1476
+  ],
+  "REAL-label mcnemar": [
+   17,
+   114,
+   0.0
+  ],
+  "CF acc": 0.5480295566502463,
+  "CF flip": 0.1921182266009852,
+  "CF dir": 0.9482758620689655,
+  "CF fgh": 0.5688073394495413,
+  "CF flip mcnemar": [
+   16,
+   47,
+   0.0001
+  ],
+  "CF kinds": {
+   "amount_insert": [
+    0.089,
+    90
+   ],
+   "human_insert": [
+    0.192,
+    156
+   ],
+   "identity": [
+    0.0,
+    51
+   ],
+   "insists_3v4": [
+    0.0,
+    20
+   ],
+   "procedure_intent": [
+    0.0,
+    40
+   ],
+   "wrapup_replace": [
+    0.816,
+    49
+   ]
+  },
+  "CF-probe acc": 0.5453125,
+  "CF-probe flip": 0.09375,
+  "CF-probe dir": 0.8375,
+  "CF-probe fgh": 0.26666666666666666,
+  "CF-probe flip mcnemar": [
+   2,
+   77,
+   0.0
+  ],
+  "CF-probe kinds": {
+   "probe_amount_vs_limit": [
+    0.0,
+    43
+   ],
+   "probe_amount_vs_limit_distract": [
+    0.0,
+    38
+   ],
+   "probe_date_order": [
+    0.0,
+    49
+   ],
+   "probe_date_order_distract": [
+    0.0,
+    32
+   ],
+   "probe_id_match": [
+    0.0,
+    37
+   ],
+   "probe_id_match_distract": [
+    0.0,
+    42
+   ],
+   "probe_status_equal": [
+    0.8,
+    35
+   ],
+   "probe_status_equal_distract": [
+    0.045,
+    44
+   ]
+  },
+  "SHUF both_right": 0.1834625322997416
+ },
+ "d_r4000": {
+  "JB-all": 0.6536796536796536,
+  "JB-hard": 0.43846153846153846,
+  "JB-all mcnemar(model_only,hob_only,p)": [
+   13,
+   29,
+   0.0195
+  ],
+  "JB-hard mcnemar(model_only,hob_only,p)": [
+   12,
+   23,
+   0.0895
+  ],
+  "JB-all brier,ece": [
+   0.4578,
+   0.1372
+  ],
+  "REAL agree": 0.86,
+  "REAL agree_sd": 0.8256880733944955,
+  "REAL-label": 0.6925,
+  "REAL-label consensus": 0.7255434782608695,
+  "REAL-label brier,ece": [
+   0.4139,
+   0.1154
+  ],
+  "REAL-label mcnemar": [
+   9,
+   46,
+   0.0
+  ],
+  "CF acc": 0.6674876847290641,
+  "CF flip": 0.43103448275862066,
+  "CF dir": 0.9852216748768473,
+  "CF fgh": 0.8348623853211009,
+  "CF flip mcnemar": [
+   84,
+   18,
+   0.0
+  ],
+  "CF kinds": {
+   "amount_insert": [
+    0.822,
+    90
+   ],
+   "human_insert": [
+    0.346,
+    156
+   ],
+   "identity": [
+    0.0,
+    51
+   ],
+   "insists_3v4": [
+    0.0,
+    20
+   ],
+   "procedure_intent": [
+    0.0,
+    40
+   ],
+   "wrapup_replace": [
+    0.959,
+    49
+   ]
+  },
+  "CF-probe acc": 0.6609375,
+  "CF-probe flip": 0.321875,
+  "CF-probe dir": 0.9125,
+  "CF-probe fgh": 0.6,
+  "CF-probe flip mcnemar": [
+   40,
+   42,
+   0.9122
+  ],
+  "CF-probe kinds": {
+   "probe_amount_vs_limit": [
+    0.07,
+    43
+   ],
+   "probe_amount_vs_limit_distract": [
+    0.0,
+    38
+   ],
+   "probe_date_order": [
+    0.0,
+    49
+   ],
+   "probe_date_order_distract": [
+    0.0,
+    32
+   ],
+   "probe_id_match": [
+    0.73,
+    37
+   ],
+   "probe_id_match_distract": [
+    0.286,
+    42
+   ],
+   "probe_status_equal": [
+    0.971,
+    35
+   ],
+   "probe_status_equal_distract": [
+    0.614,
+    44
+   ]
+  },
+  "SHUF both_right": 0.4108527131782946
+ },
+ "e_r1000": {
+  "JB-all": 0.6147186147186147,
+  "JB-hard": 0.4230769230769231,
+  "JB-all mcnemar(model_only,hob_only,p)": [
+   20,
+   45,
+   0.0026
+  ],
+  "JB-hard mcnemar(model_only,hob_only,p)": [
+   19,
+   32,
+   0.0919
+  ],
+  "JB-all brier,ece": [
+   0.4932,
+   0.1336
+  ],
+  "REAL agree": 0.83,
+  "REAL agree_sd": 0.7522935779816514,
+  "REAL-label": 0.715,
+  "REAL-label consensus": 0.7418478260869565,
+  "REAL-label brier,ece": [
+   0.4335,
+   0.1046
+  ],
+  "REAL-label mcnemar": [
+   18,
+   46,
+   0.0006
+  ],
+  "CF acc": 0.6440886699507389,
+  "CF flip": 0.39655172413793105,
+  "CF dir": 0.9359605911330049,
+  "CF fgh": 0.7614678899082569,
+  "CF flip mcnemar": [
+   78,
+   26,
+   0.0
+  ],
+  "CF kinds": {
+   "amount_insert": [
+    0.3,
+    90
+   ],
+   "human_insert": [
+    0.628,
+    156
+   ],
+   "identity": [
+    0.0,
+    51
+   ],
+   "insists_3v4": [
+    0.0,
+    20
+   ],
+   "procedure_intent": [
+    0.0,
+    40
+   ],
+   "wrapup_replace": [
+    0.735,
+    49
+   ]
+  },
+  "CF-probe acc": 0.7578125,
+  "CF-probe flip": 0.51875,
+  "CF-probe dir": 0.978125,
+  "CF-probe fgh": 0.780952380952381,
+  "CF-probe flip mcnemar": [
+   84,
+   23,
+   0.0
+  ],
+  "CF-probe kinds": {
+   "probe_amount_vs_limit": [
+    0.767,
+    43
+   ],
+   "probe_amount_vs_limit_distract": [
+    0.316,
+    38
+   ],
+   "probe_date_order": [
+    0.0,
+    49
+   ],
+   "probe_date_order_distract": [
+    0.0,
+    32
+   ],
+   "probe_id_match": [
+    1.0,
+    37
+   ],
+   "probe_id_match_distract": [
+    0.357,
+    42
+   ],
+   "probe_status_equal": [
+    1.0,
+    35
+   ],
+   "probe_status_equal_distract": [
+    0.773,
+    44
+   ]
+  },
+  "SHUF both_right": 0.3979328165374677
+ },
+ "e_r12000": {
+  "JB-all": 0.683982683982684,
+  "JB-hard": 0.4846153846153846,
+  "JB-all mcnemar(model_only,hob_only,p)": [
+   18,
+   27,
+   0.2327
+  ],
+  "JB-hard mcnemar(model_only,hob_only,p)": [
+   18,
+   23,
+   0.5327
+  ],
+  "JB-all brier,ece": [
+   0.4224,
+   0.0774
+  ],
+  "REAL agree": 0.8467220683287165,
+  "REAL agree_sd": 0.8092485549132948,
+  "REAL-label": 0.715,
+  "REAL-label consensus": 0.7445652173913043,
+  "REAL-label brier,ece": [
+   0.3998,
+   0.1048
+  ],
+  "REAL-label mcnemar": [
+   13,
+   41,
+   0.0002
+  ],
+  "LONG agree": 0.7898089171974523,
+  "LONG agree_sd": 0.7878787878787878,
+  "CF acc": 0.7302955665024631,
+  "CF flip": 0.5591133004926109,
+  "CF dir": 0.9827586206896551,
+  "CF fgh": 0.908256880733945,
+  "CF flip mcnemar": [
+   128,
+   10,
+   0.0
+  ],
+  "CF kinds": {
+   "amount_insert": [
+    0.789,
+    90
+   ],
+   "human_insert": [
+    0.692,
+    156
+   ],
+   "identity": [
+    0.0,
+    51
+   ],
+   "insists_3v4": [
+    0.15,
+    20
+   ],
+   "procedure_intent": [
+    0.0,
+    40
+   ],
+   "wrapup_replace": [
+    0.918,
+    49
+   ]
+  },
+  "CF-probe acc": 0.690625,
+  "CF-probe flip": 0.384375,
+  "CF-probe dir": 0.9625,
+  "CF-probe fgh": 0.6857142857142857,
+  "CF-probe flip mcnemar": [
+   51,
+   33,
+   0.063
+  ],
+  "CF-probe kinds": {
+   "probe_amount_vs_limit": [
+    0.302,
+    43
+   ],
+   "probe_amount_vs_limit_distract": [
+    0.316,
+    38
+   ],
+   "probe_date_order": [
+    0.0,
+    49
+   ],
+   "probe_date_order_distract": [
+    0.0,
+    32
+   ],
+   "probe_id_match": [
+    1.0,
+    37
+   ],
+   "probe_id_match_distract": [
+    0.19,
+    42
+   ],
+   "probe_status_equal": [
+    0.971,
+    35
+   ],
+   "probe_status_equal_distract": [
+    0.432,
+    44
+   ]
+  },
+  "SHUF both_right": 0.5452196382428941
+ },
+ "e_r4000": {
+  "JB-all": 0.645021645021645,
+  "JB-hard": 0.4153846153846154,
+  "JB-all mcnemar(model_only,hob_only,p)": [
+   16,
+   34,
+   0.0153
+  ],
+  "JB-hard mcnemar(model_only,hob_only,p)": [
+   15,
+   29,
+   0.0488
+  ],
+  "JB-all brier,ece": [
+   0.4308,
+   0.0829
+  ],
+  "REAL agree": 0.8425,
+  "REAL agree_sd": 0.5871559633027523,
+  "REAL-label": 0.71,
+  "REAL-label consensus": 0.7391304347826086,
+  "REAL-label brier,ece": [
+   0.4067,
+   0.0559
+  ],
+  "REAL-label mcnemar": [
+   15,
+   45,
+   0.0001
+  ],
+  "CF acc": 0.6231527093596059,
+  "CF flip": 0.3472906403940887,
+  "CF dir": 0.9753694581280788,
+  "CF fgh": 0.5229357798165137,
+  "CF flip mcnemar": [
+   84,
+   52,
+   0.0076
+  ],
+  "CF kinds": {
+   "amount_insert": [
+    0.489,
+    90
+   ],
+   "human_insert": [
+    0.551,
+    156
+   ],
+   "identity": [
+    0.0,
+    51
+   ],
+   "insists_3v4": [
+    0.1,
+    20
+   ],
+   "procedure_intent": [
+    0.0,
+    40
+   ],
+   "wrapup_replace": [
+    0.184,
+    49
+   ]
+  },
+  "CF-probe acc": 0.778125,
+  "CF-probe flip": 0.559375,
+  "CF-probe dir": 0.94375,
+  "CF-probe fgh": 0.8666666666666667,
+  "CF-probe flip mcnemar": [
+   88,
+   14,
+   0.0
+  ],
+  "CF-probe kinds": {
+   "probe_amount_vs_limit": [
+    0.767,
+    43
+   ],
+   "probe_amount_vs_limit_distract": [
+    0.447,
+    38
+   ],
+   "probe_date_order": [
+    0.0,
+    49
+   ],
+   "probe_date_order_distract": [
+    0.0,
+    32
+   ],
+   "probe_id_match": [
+    1.0,
+    37
+   ],
+   "probe_id_match_distract": [
+    0.548,
+    42
+   ],
+   "probe_status_equal": [
+    1.0,
+    35
+   ],
+   "probe_status_equal_distract": [
+    0.773,
+    44
+   ]
+  },
+  "SHUF both_right": 0.3695090439276486
+ },
+ "c_final": {
+  "JB-all": 0.7272727272727273,
+  "JB-hard": 0.5461538461538461,
+  "JB-all mcnemar(model_only,hob_only,p)": [
+   12,
+   11,
+   1.0
+  ],
+  "JB-hard mcnemar(model_only,hob_only,p)": [
+   12,
+   9,
+   0.6636
+  ],
+  "JB-all brier,ece": [
+   0.3554,
+   0.0544
+  ],
+  "REAL agree": 0.8919667590027701,
+  "REAL agree_sd": 0.8959537572254336,
+  "REAL-label": 0.7525,
+  "REAL-label consensus": 0.7907608695652174,
+  "REAL-label brier,ece": [
+   0.3878,
+   0.0893
+  ],
+  "REAL-label mcnemar": [
+   11,
+   24,
+   0.041
+  ],
+  "LONG agree": 0.9044585987261147,
+  "LONG agree_sd": 0.8727272727272727,
+  "CF acc": 0.6354679802955665,
+  "CF flip": 0.3669950738916256,
+  "CF dir": 0.9605911330049262,
+  "CF fgh": 0.8715596330275229,
+  "CF flip mcnemar": [
+   54,
+   14,
+   0.0
+  ],
+  "CF kinds": {
+   "amount_insert": [
+    0.333,
+    90
+   ],
+   "human_insert": [
+    0.481,
+    156
+   ],
+   "identity": [
+    0.0,
+    51
+   ],
+   "insists_3v4": [
+    0.0,
+    20
+   ],
+   "procedure_intent": [
+    0.0,
+    40
+   ],
+   "wrapup_replace": [
+    0.898,
+    49
+   ]
+  },
+  "CF-probe acc": 0.68125,
+  "CF-probe flip": 0.3625,
+  "CF-probe dir": 0.934375,
+  "CF-probe fgh": 0.7238095238095238,
+  "CF-probe flip mcnemar": [
+   40,
+   29,
+   0.2284
+  ],
+  "CF-probe kinds": {
+   "probe_amount_vs_limit": [
+    0.023,
+    43
+   ],
+   "probe_amount_vs_limit_distract": [
+    0.0,
+    38
+   ],
+   "probe_date_order": [
+    0.061,
+    49
+   ],
+   "probe_date_order_distract": [
+    0.0,
+    32
+   ],
+   "probe_id_match": [
+    0.838,
+    37
+   ],
+   "probe_id_match_distract": [
+    0.619,
+    42
+   ],
+   "probe_status_equal": [
+    0.914,
+    35
+   ],
+   "probe_status_equal_distract": [
+    0.523,
+    44
+   ]
+  },
+  "SHUF both_right": 0.35400516795865633
+ },
+ "dp_only": {
+  "JB-all": 0.4458874458874459,
+  "JB-hard": 0.38461538461538464,
+  "JB-all mcnemar(model_only,hob_only,p)": [
+   23,
+   87,
+   0.0
+  ],
+  "JB-hard mcnemar(model_only,hob_only,p)": [
+   22,
+   40,
+   0.03
+  ],
+  "JB-all brier,ece": [
+   0.6554,
+   0.1748
+  ],
+  "REAL agree": 0.6509695290858726,
+  "REAL agree_sd": 0.21676300578034682,
+  "REAL-label": 0.5725,
+  "REAL-label consensus": 0.595108695652174,
+  "REAL-label brier,ece": [
+   0.5208,
+   0.1644
+  ],
+  "REAL-label mcnemar": [
+   23,
+   108,
+   0.0
+  ],
+  "CF acc": 0.5036945812807881,
+  "CF flip": 0.11330049261083744,
+  "CF dir": 0.7463054187192119,
+  "CF fgh": 0.2018348623853211,
+  "CF flip mcnemar": [
+   24,
+   87,
+   0.0
+  ],
+  "CF kinds": {
+   "amount_insert": [
+    0.178,
+    90
+   ],
+   "human_insert": [
+    0.154,
+    156
+   ],
+   "identity": [
+    0.0,
+    51
+   ],
+   "insists_3v4": [
+    0.1,
+    20
+   ],
+   "procedure_intent": [
+    0.0,
+    40
+   ],
+   "wrapup_replace": [
+    0.082,
+    49
+   ]
+  },
+  "CF-probe acc": 0.6578125,
+  "CF-probe flip": 0.315625,
+  "CF-probe dir": 0.915625,
+  "CF-probe fgh": 0.5904761904761905,
+  "CF-probe flip mcnemar": [
+   39,
+   43,
+   0.7407
+  ],
+  "CF-probe kinds": {
+   "probe_amount_vs_limit": [
+    0.047,
+    43
+   ],
+   "probe_amount_vs_limit_distract": [
+    0.026,
+    38
+   ],
+   "probe_date_order": [
+    0.0,
+    49
+   ],
+   "probe_date_order_distract": [
+    0.0,
+    32
+   ],
+   "probe_id_match": [
+    1.0,
+    37
+   ],
+   "probe_id_match_distract": [
+    0.238,
+    42
+   ],
+   "probe_status_equal": [
+    0.943,
+    35
+   ],
+   "probe_status_equal_distract": [
+    0.409,
+    44
+   ]
+  },
+  "SHUF both_right": 0.14987080103359174
+ }
+}

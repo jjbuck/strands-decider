@@ -1,0 +1,19 @@
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 4251.57it/s]
+questions 3227 done 0
+q2_ck64rr 200 8s
+q2_ck64rr 400 21s
+q2_ck64rr 600 35s
+q2_ck64rr 800 51s
+q2_ck64rr 1000 69s
+q2_ck64rr 1200 85s
+q2_ck64rr 1400 113s
+q2_ck64rr 1600 152s
+q2_ck64rr 1800 187s
+q2_ck64rr 2000 220s
+q2_ck64rr 2200 236s
+q2_ck64rr 2400 248s
+q2_ck64rr 2600 262s
+q2_ck64rr 2800 283s
+q2_ck64rr 3000 301s
+q2_ck64rr 3200 316s
+done q2_ck64rr 3227 318s

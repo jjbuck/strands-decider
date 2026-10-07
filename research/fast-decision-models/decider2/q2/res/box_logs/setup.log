@@ -1,0 +1,192 @@
++ source /home/ubuntu/venv/bin/activate
+++ deactivate nondestructive
+++ '[' -n '' ']'
+++ '[' -n '' ']'
+++ hash -r
+++ '[' -n '' ']'
+++ unset VIRTUAL_ENV
+++ unset VIRTUAL_ENV_PROMPT
+++ '[' '!' nondestructive = nondestructive ']'
+++ case "$(uname)" in
++++ uname
+++ export VIRTUAL_ENV=/home/ubuntu/venv
+++ VIRTUAL_ENV=/home/ubuntu/venv
+++ _OLD_VIRTUAL_PATH=/usr/local/cuda/bin:/usr/local/cuda/include:/opt/amazon/openmpi/bin:/opt/amazon/efa/bin:/usr/local/cuda/bin:/usr/local/cuda/include:/usr/local/cuda/bin:/usr/local/cuda/include:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+++ PATH=/home/ubuntu/venv/bin:/usr/local/cuda/bin:/usr/local/cuda/include:/opt/amazon/openmpi/bin:/opt/amazon/efa/bin:/usr/local/cuda/bin:/usr/local/cuda/include:/usr/local/cuda/bin:/usr/local/cuda/include:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+++ export PATH
+++ VIRTUAL_ENV_PROMPT='(venv) '
+++ export VIRTUAL_ENV_PROMPT
+++ '[' -n '' ']'
+++ '[' -z '' ']'
+++ _OLD_VIRTUAL_PS1=
+++ PS1='((venv) ) '
+++ export PS1
+++ hash -r
++ cd /home/ubuntu/work
++ nvidia-smi --query-gpu=name,clocks.max.sm,memory.total --format=csv
+name, clocks.max.sm [MHz], memory.total [MiB]
+NVIDIA A10G, 1710 MHz, 23028 MiB
++ python -c 'import torch, triton, fla; print(torch.__version__, triton.__version__, fla.__version__)'
+2.14.1+cu130 3.8.0 0.5.2
++ '[' -f cutlass/include/cutlass/cutlass.h ']'
++ git clone -q --depth 1 --branch v3.5.1 https://github.com/NVIDIA/cutlass.git cutlass
+Note: switching to 'f7b19de32c5d1f3cedfc735c2849f12b537522ee'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
++ '[' -f cutlass4/include/cutlass/cutlass.h ']'
++ git clone -q --depth 1 https://github.com/NVIDIA/cutlass.git cutlass4
++ cd cutlass4
++ git log -1 '--format=%H %cd'
+0b55a2f691d69981583568fd9eb69687b1f0de8a Wed Sep 23 16:49:11 2026 +0800
++ grep -m3 -E 'CUTLASS_(MAJOR|MINOR|PATCH)' include/cutlass/version.h
+#define CUTLASS_MAJOR 4
+#define CUTLASS_MINOR 8
+#define CUTLASS_PATCH 0
++ NV='/usr/local/cuda/bin/nvcc -O3 -std=c++17 -gencode=arch=compute_86,code=sm_86 --expt-relaxed-constexpr -DNDEBUG -shared -Xcompiler -fPIC'
++ cd /home/ubuntu/work/h2
++ '[' -f libg2s4.so ']'
++ /usr/local/cuda/bin/nvcc -O3 -std=c++17 -gencode=arch=compute_86,code=sm_86 --expt-relaxed-constexpr -DNDEBUG -shared -Xcompiler -fPIC -I ../cutlass/include -I ../cutlass/tools/util/include -o libg2s4.so g2s4.cu
++ echo g2s4 rc 0
+g2s4 rc 0
++ '[' -f libh2mix.so ']'
++ /usr/local/cuda/bin/nvcc -O3 -std=c++17 -gencode=arch=compute_86,code=sm_86 --expt-relaxed-constexpr -DNDEBUG -shared -Xcompiler -fPIC -I ../cutlass4/include -I ../cutlass4/tools/util/include -o libh2mix.so h2mix.cu
+../cutlass4/include/cutlass/gemm/kernel/sm100_static_tile_scheduler.hpp(53): warning #20012-D: __device__ annotation is ignored on a function("StaticPersistentTileScheduler100") that is explicitly defaulted on its first declaration
+    __inline__ __attribute__((always_inline)) __attribute__((device)) __attribute__((host))
+                                                             ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+../cutlass4/include/cutlass/gemm/kernel/sm100_static_tile_scheduler.hpp(53): warning #20012-D: __host__ annotation is ignored on a function("StaticPersistentTileScheduler100") that is explicitly defaulted on its first declaration
+    __inline__ __attribute__((always_inline)) __attribute__((device)) __attribute__((host))
+                                                                                     ^
+
+../cutlass4/include/cutlass/gemm/kernel/sm100_static_tile_scheduler.hpp(53): warning #20012-D: __device__ annotation is ignored on a function("StaticPersistentTileScheduler100") that is explicitly defaulted on its first declaration
+    __inline__ __attribute__((always_inline)) __attribute__((device)) __attribute__((host))
+                                                             ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+../cutlass4/include/cutlass/gemm/kernel/sm100_static_tile_scheduler.hpp(53): warning #20012-D: __host__ annotation is ignored on a function("StaticPersistentTileScheduler100") that is explicitly defaulted on its first declaration
+    __inline__ __attribute__((always_inline)) __attribute__((device)) __attribute__((host))
+                                                                                     ^
+
++ echo h2mix rc 0
+h2mix rc 0
++ '[' -f libh2evt.so ']'
++ /usr/local/cuda/bin/nvcc -O3 -std=c++17 -gencode=arch=compute_86,code=sm_86 --expt-relaxed-constexpr -DNDEBUG -shared -Xcompiler -fPIC -I ../cutlass4/include -I ../cutlass4/tools/util/include -o libh2evt.so h2evt.cu
+../cutlass4/include/cutlass/gemm/kernel/sm100_static_tile_scheduler.hpp(53): warning #20012-D: __device__ annotation is ignored on a function("StaticPersistentTileScheduler100") that is explicitly defaulted on its first declaration
+    __inline__ __attribute__((always_inline)) __attribute__((device)) __attribute__((host))
+                                                             ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+../cutlass4/include/cutlass/gemm/kernel/sm100_static_tile_scheduler.hpp(53): warning #20012-D: __host__ annotation is ignored on a function("StaticPersistentTileScheduler100") that is explicitly defaulted on its first declaration
+    __inline__ __attribute__((always_inline)) __attribute__((device)) __attribute__((host))
+                                                                                     ^
+
+../cutlass4/include/cutlass/gemm/kernel/sm100_static_tile_scheduler.hpp(53): warning #20012-D: __device__ annotation is ignored on a function("StaticPersistentTileScheduler100") that is explicitly defaulted on its first declaration
+    __inline__ __attribute__((always_inline)) __attribute__((device)) __attribute__((host))
+                                                             ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+../cutlass4/include/cutlass/gemm/kernel/sm100_static_tile_scheduler.hpp(53): warning #20012-D: __host__ annotation is ignored on a function("StaticPersistentTileScheduler100") that is explicitly defaulted on its first declaration
+    __inline__ __attribute__((always_inline)) __attribute__((device)) __attribute__((host))
+                                                                                     ^
+
++ echo h2evt rc 0
+h2evt rc 0
++ '[' -f libg2s4x.so ']'
++ /usr/local/cuda/bin/nvcc -O3 -std=c++17 -gencode=arch=compute_86,code=sm_86 --expt-relaxed-constexpr -DNDEBUG -shared -Xcompiler -fPIC -I ../cutlass/include -I ../cutlass/tools/util/include -o libg2s4x.so /home/ubuntu/work/j5/g2s4x.cu
++ echo g2s4x rc 0
+g2s4x rc 0
++ ls -la /home/ubuntu/work/h2/libg2s4.so /home/ubuntu/work/h2/libg2s4x.so /home/ubuntu/work/h2/libh2evt.so /home/ubuntu/work/h2/libh2mix.so
+-rwxrwxr-x 1 ubuntu ubuntu 1561264 Oct  7 03:16 /home/ubuntu/work/h2/libg2s4.so
+-rwxrwxr-x 1 ubuntu ubuntu 2098784 Oct  7 03:17 /home/ubuntu/work/h2/libg2s4x.so
+-rwxrwxr-x 1 ubuntu ubuntu 1259104 Oct  7 03:17 /home/ubuntu/work/h2/libh2evt.so
+-rwxrwxr-x 1 ubuntu ubuntu 1307672 Oct  7 03:16 /home/ubuntu/work/h2/libh2mix.so
++ cp -n /home/ubuntu/work/h1/precmap_w4a4_k24.json /home/ubuntu/work/h1/precmap_w4a4_k48.json /home/ubuntu/work/h1/precmap_w8a8_b16.json /home/ubuntu/work/h1/precmap_w8a8_b8.json /home/ubuntu/work/h2/
++ '[' -f /home/ubuntu/work/h1/hess/H_23_Wd.pt ']'
++ python h2gptq.py calib
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 3823.59it/s]
+calib seqs 64 tokens 145075
+group [0, 1, 2, 3, 4, 5] 56s
+group [6, 7, 8, 9, 10, 11] 68s
+group [12, 13, 14, 15, 16, 17] 82s
+group [18, 19, 20, 21, 22, 23] 100s
+done
++ '[' -f codes_gptq_w8.pt ']'
++ python h2gptq.py codes w8
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 3905.39it/s]
+layer 0 2s
+layer 1 4s
+layer 2 6s
+layer 3 9s
+layer 4 11s
+layer 5 13s
+layer 6 15s
+layer 7 17s
+layer 8 19s
+layer 9 21s
+layer 10 23s
+layer 11 25s
+layer 12 27s
+layer 13 29s
+layer 14 31s
+layer 15 34s
+layer 16 36s
+layer 17 38s
+layer 18 40s
+layer 19 42s
+layer 20 44s
+layer 21 46s
+layer 22 48s
+layer 23 50s
+saved
++ '[' -f codes_gptq_w4.pt ']'
++ python h2gptq.py codes w4
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 3908.64it/s]
+layer 0 2s
+layer 1 4s
+layer 2 7s
+layer 3 9s
+layer 4 11s
+layer 5 13s
+layer 6 15s
+layer 7 17s
+layer 8 19s
+layer 9 21s
+layer 10 24s
+layer 11 26s
+layer 12 28s
+layer 13 30s
+layer 14 32s
+layer 15 34s
+layer 16 36s
+layer 17 38s
+layer 18 41s
+layer 19 43s
+layer 20 45s
+layer 21 47s
+layer 22 49s
+layer 23 51s
+saved
++ ls -la /home/ubuntu/work/h2/codes_gptq_w4.pt /home/ubuntu/work/h2/codes_gptq_w8.pt
+-rw-rw-r-- 1 ubuntu ubuntu 1375059555 Oct  7 03:21 /home/ubuntu/work/h2/codes_gptq_w4.pt
+-rw-rw-r-- 1 ubuntu ubuntu 1375059555 Oct  7 03:20 /home/ubuntu/work/h2/codes_gptq_w8.pt
++ echo SETUP_DONE
+SETUP_DONE

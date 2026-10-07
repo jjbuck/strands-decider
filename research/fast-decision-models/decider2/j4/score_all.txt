@@ -1,0 +1,585 @@
+== hobson
+  JB-all: 0.7229
+  JB-hard: 0.5231
+  JB-all mcnemar(model_only,hob_only,p): (0, 0, 1.0)
+  JB-hard mcnemar(model_only,hob_only,p): (0, 0, 1.0)
+  JB-all brier,ece: (0.3479, 0.0483)
+  REAL agree: 1.0
+  REAL agree_sd: 1.0
+  REAL-label: 0.785
+  REAL-label consensus: 0.8179
+  REAL-label brier,ece: (0.3473, 0.1156)
+  REAL-label mcnemar: (0, 0, 1.0)
+  LONG agree: 1.0
+  LONG agree_sd: 1.0
+  CF acc: 0.5936
+  CF flip: 0.2685
+  CF dir: 0.9483
+  CF fgh: 1.0
+  CF flip mcnemar: (0, 0, 1.0)
+  CF kinds: {'amount_insert': (0.1, 90), 'human_insert': (0.346, 156), 'identity': (0.0, 51), 'insists_3v4': (0.05, 20), 'procedure_intent': (0.0, 40), 'wrapup_replace': (0.918, 49)}
+  CF-probe acc: 0.6531
+  CF-probe flip: 0.3281
+  CF-probe dir: 0.8844
+  CF-probe fgh: 1.0
+  CF-probe flip mcnemar: (0, 0, 1.0)
+  CF-probe kinds: {'probe_amount_vs_limit': (0.326, 43), 'probe_amount_vs_limit_distract': (0.237, 38), 'probe_date_order': (0.061, 49), 'probe_date_order_distract': (0.031, 32), 'probe_id_match': (0.541, 37), 'probe_id_match_distract': (0.381, 42), 'probe_status_equal': (0.886, 35), 'probe_status_equal_distract': (0.25, 44)}
+  SHUF both_right: 0.2455
+== a_r1000
+  JB-all: 0.5498
+  JB-hard: 0.3769
+  JB-all mcnemar(model_only,hob_only,p): (11, 51, 0.0)
+  JB-hard mcnemar(model_only,hob_only,p): (10, 29, 0.0034)
+  JB-all brier,ece: (0.5447, 0.0946)
+  REAL agree: 0.8033
+  REAL agree_sd: 0.6185
+  REAL-label: 0.725
+  REAL-label consensus: 0.7582
+  REAL-label brier,ece: (0.4042, 0.0938)
+  REAL-label mcnemar: (20, 44, 0.0037)
+  CF acc: 0.5887
+  CF flip: 0.2759
+  CF dir: 0.9557
+  CF fgh: 0.4495
+  CF flip mcnemar: (63, 60, 0.857)
+  CF kinds: {'amount_insert': (0.578, 90), 'human_insert': (0.288, 156), 'identity': (0.02, 51), 'insists_3v4': (0.0, 20), 'procedure_intent': (0.0, 40), 'wrapup_replace': (0.286, 49)}
+  CF-probe acc: 0.5859
+  CF-probe flip: 0.1875
+  CF-probe dir: 0.8156
+  CF-probe fgh: 0.4381
+  CF-probe flip mcnemar: (14, 59, 0.0)
+  CF-probe kinds: {'probe_amount_vs_limit': (0.07, 43), 'probe_amount_vs_limit_distract': (0.026, 38), 'probe_date_order': (0.0, 49), 'probe_date_order_distract': (0.0, 32), 'probe_id_match': (0.162, 37), 'probe_id_match_distract': (0.024, 42), 'probe_status_equal': (0.943, 35), 'probe_status_equal_distract': (0.364, 44)}
+  SHUF both_right: 0.2765
+== a_r12000
+  JB-all: 0.6883
+  JB-hard: 0.4923
+  JB-all mcnemar(model_only,hob_only,p): (13, 21, 0.2295)
+  JB-hard mcnemar(model_only,hob_only,p): (13, 17, 0.5847)
+  JB-all brier,ece: (0.406, 0.0689)
+  REAL agree: 0.8837
+  REAL agree_sd: 0.8439
+  REAL-label: 0.74
+  REAL-label consensus: 0.7717
+  REAL-label brier,ece: (0.4019, 0.0895)
+  REAL-label mcnemar: (10, 28, 0.0051)
+  LONG agree: 0.9045
+  LONG agree_sd: 0.897
+  CF acc: 0.67
+  CF flip: 0.4335
+  CF dir: 0.9606
+  CF fgh: 0.9266
+  CF flip mcnemar: (75, 8, 0.0)
+  CF kinds: {'amount_insert': (0.5, 90), 'human_insert': (0.545, 156), 'identity': (0.0, 51), 'insists_3v4': (0.0, 20), 'procedure_intent': (0.0, 40), 'wrapup_replace': (0.939, 49)}
+  CF-probe acc: 0.6453
+  CF-probe flip: 0.3
+  CF-probe dir: 0.9094
+  CF-probe fgh: 0.6095
+  CF-probe flip mcnemar: (32, 41, 0.3492)
+  CF-probe kinds: {'probe_amount_vs_limit': (0.047, 43), 'probe_amount_vs_limit_distract': (0.0, 38), 'probe_date_order': (0.143, 49), 'probe_date_order_distract': (0.062, 32), 'probe_id_match': (0.757, 37), 'probe_id_match_distract': (0.333, 42), 'probe_status_equal': (0.886, 35), 'probe_status_equal_distract': (0.273, 44)}
+  SHUF both_right: 0.4109
+== a_r4000
+  JB-all: 0.6277
+  JB-hard: 0.4
+  JB-all mcnemar(model_only,hob_only,p): (9, 31, 0.0007)
+  JB-hard mcnemar(model_only,hob_only,p): (9, 25, 0.009)
+  JB-all brier,ece: (0.5161, 0.1725)
+  REAL agree: 0.8319
+  REAL agree_sd: 0.8006
+  REAL-label: 0.735
+  REAL-label consensus: 0.7527
+  REAL-label brier,ece: (0.3992, 0.0889)
+  REAL-label mcnemar: (14, 34, 0.0055)
+  CF acc: 0.6133
+  CF flip: 0.3251
+  CF dir: 0.9655
+  CF fgh: 0.7798
+  CF flip mcnemar: (47, 24, 0.0086)
+  CF kinds: {'amount_insert': (0.378, 90), 'human_insert': (0.321, 156), 'identity': (0.0, 51), 'insists_3v4': (0.15, 20), 'procedure_intent': (0.0, 40), 'wrapup_replace': (0.918, 49)}
+  CF-probe acc: 0.6062
+  CF-probe flip: 0.2188
+  CF-probe dir: 0.8812
+  CF-probe fgh: 0.4857
+  CF-probe flip mcnemar: (19, 54, 0.0001)
+  CF-probe kinds: {'probe_amount_vs_limit': (0.0, 43), 'probe_amount_vs_limit_distract': (0.0, 38), 'probe_date_order': (0.0, 49), 'probe_date_order_distract': (0.0, 32), 'probe_id_match': (0.757, 37), 'probe_id_match_distract': (0.024, 42), 'probe_status_equal': (0.943, 35), 'probe_status_equal_distract': (0.182, 44)}
+  SHUF both_right: 0.3127
+== a2_r1000
+  JB-all: 0.5974
+  JB-hard: 0.4154
+  JB-all mcnemar(model_only,hob_only,p): (12, 41, 0.0001)
+  JB-hard mcnemar(model_only,hob_only,p): (11, 25, 0.0288)
+  JB-all brier,ece: (0.533, 0.1283)
+  REAL agree: 0.795
+  REAL agree_sd: 0.6514
+  REAL-label: 0.72
+  REAL-label consensus: 0.7418
+  REAL-label brier,ece: (0.3804, 0.0886)
+  REAL-label mcnemar: (26, 52, 0.0043)
+  CF acc: 0.5813
+  CF flip: 0.2611
+  CF dir: 0.9754
+  CF fgh: 0.4495
+  CF flip mcnemar: (57, 60, 0.8534)
+  CF kinds: {'amount_insert': (0.667, 90), 'human_insert': (0.0, 156), 'identity': (0.0, 51), 'insists_3v4': (0.0, 20), 'procedure_intent': (0.0, 40), 'wrapup_replace': (0.939, 49)}
+  CF-probe acc: 0.6219
+  CF-probe flip: 0.25
+  CF-probe dir: 0.8688
+  CF-probe fgh: 0.4476
+  CF-probe flip mcnemar: (33, 58, 0.0115)
+  CF-probe kinds: {'probe_amount_vs_limit': (0.023, 43), 'probe_amount_vs_limit_distract': (0.0, 38), 'probe_date_order': (0.143, 49), 'probe_date_order_distract': (0.062, 32), 'probe_id_match': (0.622, 37), 'probe_id_match_distract': (0.238, 42), 'probe_status_equal': (0.657, 35), 'probe_status_equal_distract': (0.318, 44)}
+  SHUF both_right: 0.2274
+== a2_r4000
+  JB-all: 0.6494
+  JB-hard: 0.4385
+  JB-all mcnemar(model_only,hob_only,p): (11, 28, 0.0095)
+  JB-hard mcnemar(model_only,hob_only,p): (11, 22, 0.0801)
+  JB-all brier,ece: (0.4795, 0.1822)
+  REAL agree: 0.825
+  REAL agree_sd: 0.9174
+  REAL-label: 0.7
+  REAL-label consensus: 0.7255
+  REAL-label brier,ece: (0.4342, 0.061)
+  REAL-label mcnemar: (17, 51, 0.0)
+  CF acc: 0.686
+  CF flip: 0.4581
+  CF dir: 0.9458
+  CF fgh: 0.7982
+  CF flip mcnemar: (99, 22, 0.0)
+  CF kinds: {'amount_insert': (0.711, 90), 'human_insert': (0.526, 156), 'identity': (0.02, 51), 'insists_3v4': (0.0, 20), 'procedure_intent': (0.0, 40), 'wrapup_replace': (0.796, 49)}
+  CF-probe acc: 0.6391
+  CF-probe flip: 0.2906
+  CF-probe dir: 0.9156
+  CF-probe fgh: 0.6095
+  CF-probe flip mcnemar: (29, 41, 0.1882)
+  CF-probe kinds: {'probe_amount_vs_limit': (0.279, 43), 'probe_amount_vs_limit_distract': (0.079, 38), 'probe_date_order': (0.0, 49), 'probe_date_order_distract': (0.0, 32), 'probe_id_match': (0.351, 37), 'probe_id_match_distract': (0.262, 42), 'probe_status_equal': (0.971, 35), 'probe_status_equal_distract': (0.455, 44)}
+  SHUF both_right: 0.447
+== a3_r4000
+  JB-all: 0.619
+  JB-hard: 0.3923
+  JB-all mcnemar(model_only,hob_only,p): (7, 31, 0.0001)
+  JB-hard mcnemar(model_only,hob_only,p): (7, 24, 0.0033)
+  JB-all brier,ece: (0.4699, 0.0975)
+  REAL agree: 0.87
+  REAL agree_sd: 0.844
+  REAL-label: 0.74
+  REAL-label consensus: 0.7663
+  REAL-label brier,ece: (0.3969, 0.0989)
+  REAL-label mcnemar: (16, 34, 0.0153)
+  CF acc: 0.5874
+  CF flip: 0.2586
+  CF dir: 0.9261
+  CF fgh: 0.6881
+  CF flip mcnemar: (30, 34, 0.708)
+  CF kinds: {'amount_insert': (0.222, 90), 'human_insert': (0.218, 156), 'identity': (0.0, 51), 'insists_3v4': (0.1, 20), 'procedure_intent': (0.0, 40), 'wrapup_replace': (1.0, 49)}
+  CF-probe acc: 0.6359
+  CF-probe flip: 0.2812
+  CF-probe dir: 0.9187
+  CF-probe fgh: 0.6
+  CF-probe flip mcnemar: (27, 42, 0.0912)
+  CF-probe kinds: {'probe_amount_vs_limit': (0.093, 43), 'probe_amount_vs_limit_distract': (0.026, 38), 'probe_date_order': (0.0, 49), 'probe_date_order_distract': (0.0, 32), 'probe_id_match': (0.432, 37), 'probe_id_match_distract': (0.333, 42), 'probe_status_equal': (0.914, 35), 'probe_status_equal_distract': (0.523, 44)}
+  SHUF both_right: 0.2351
+== b_r1000
+  JB-all: 0.6364
+  JB-hard: 0.4154
+  JB-all mcnemar(model_only,hob_only,p): (19, 39, 0.0119)
+  JB-hard mcnemar(model_only,hob_only,p): (18, 32, 0.0649)
+  JB-all brier,ece: (0.4573, 0.1083)
+  REAL agree: 0.7544
+  REAL agree_sd: 0.6908
+  REAL-label: 0.68
+  REAL-label consensus: 0.7038
+  REAL-label brier,ece: (0.4571, 0.0838)
+  REAL-label mcnemar: (24, 66, 0.0)
+  CF acc: 0.6687
+  CF flip: 0.4384
+  CF dir: 0.9261
+  CF fgh: 0.633
+  CF flip mcnemar: (109, 40, 0.0)
+  CF kinds: {'amount_insert': (0.522, 90), 'human_insert': (0.686, 156), 'identity': (0.0, 51), 'insists_3v4': (0.0, 20), 'procedure_intent': (0.0, 40), 'wrapup_replace': (0.49, 49)}
+  CF-probe acc: 0.7453
+  CF-probe flip: 0.4938
+  CF-probe dir: 0.9844
+  CF-probe fgh: 0.7619
+  CF-probe flip mcnemar: (78, 25, 0.0)
+  CF-probe kinds: {'probe_amount_vs_limit': (0.767, 43), 'probe_amount_vs_limit_distract': (0.5, 38), 'probe_date_order': (0.0, 49), 'probe_date_order_distract': (0.0, 32), 'probe_id_match': (1.0, 37), 'probe_id_match_distract': (0.119, 42), 'probe_status_equal': (1.0, 35), 'probe_status_equal_distract': (0.659, 44)}
+  SHUF both_right: 0.4755
+== b_r12000
+  JB-all: 0.671
+  JB-hard: 0.4538
+  JB-all mcnemar(model_only,hob_only,p): (13, 25, 0.073)
+  JB-hard mcnemar(model_only,hob_only,p): (13, 22, 0.1755)
+  JB-all brier,ece: (0.4122, 0.0886)
+  REAL agree: 0.8846
+  REAL agree_sd: 0.8353
+  REAL-label: 0.7525
+  REAL-label consensus: 0.7908
+  REAL-label brier,ece: (0.3799, 0.0983)
+  REAL-label mcnemar: (13, 26, 0.0533)
+  LONG agree: 0.896
+  LONG agree_sd: 0.8727
+  CF acc: 0.6823
+  CF flip: 0.4631
+  CF dir: 0.9557
+  CF fgh: 0.8532
+  CF flip mcnemar: (95, 16, 0.0)
+  CF kinds: {'amount_insert': (0.778, 90), 'human_insert': (0.487, 156), 'identity': (0.0, 51), 'insists_3v4': (0.05, 20), 'procedure_intent': (0.0, 40), 'wrapup_replace': (0.837, 49)}
+  CF-probe acc: 0.6937
+  CF-probe flip: 0.3906
+  CF-probe dir: 0.9156
+  CF-probe fgh: 0.6762
+  CF-probe flip mcnemar: (54, 34, 0.0422)
+  CF-probe kinds: {'probe_amount_vs_limit': (0.047, 43), 'probe_amount_vs_limit_distract': (0.0, 38), 'probe_date_order': (0.0, 49), 'probe_date_order_distract': (0.062, 32), 'probe_id_match': (0.973, 37), 'probe_id_match_distract': (0.5, 42), 'probe_status_equal': (0.943, 35), 'probe_status_equal_distract': (0.705, 44)}
+  SHUF both_right: 0.4419
+== b_r4000
+  JB-all: 0.671
+  JB-hard: 0.4692
+  JB-all mcnemar(model_only,hob_only,p): (18, 30, 0.1114)
+  JB-hard mcnemar(model_only,hob_only,p): (17, 24, 0.3489)
+  JB-all brier,ece: (0.4424, 0.0694)
+  REAL agree: 0.8957
+  REAL agree_sd: 0.789
+  REAL-label: 0.7475
+  REAL-label consensus: 0.788
+  REAL-label brier,ece: (0.3767, 0.0547)
+  REAL-label mcnemar: (10, 25, 0.0167)
+  CF acc: 0.6552
+  CF flip: 0.4089
+  CF dir: 0.9803
+  CF fgh: 0.8073
+  CF flip mcnemar: (78, 21, 0.0)
+  CF kinds: {'amount_insert': (0.589, 90), 'human_insert': (0.449, 156), 'identity': (0.0, 51), 'insists_3v4': (0.25, 20), 'procedure_intent': (0.0, 40), 'wrapup_replace': (0.776, 49)}
+  CF-probe acc: 0.7688
+  CF-probe flip: 0.55
+  CF-probe dir: 0.9625
+  CF-probe fgh: 0.8476
+  CF-probe flip mcnemar: (87, 16, 0.0)
+  CF-probe kinds: {'probe_amount_vs_limit': (0.791, 43), 'probe_amount_vs_limit_distract': (0.263, 38), 'probe_date_order': (0.0, 49), 'probe_date_order_distract': (0.031, 32), 'probe_id_match': (0.973, 37), 'probe_id_match_distract': (0.548, 42), 'probe_status_equal': (1.0, 35), 'probe_status_equal_distract': (0.841, 44)}
+  SHUF both_right: 0.4005
+== b2_r1000
+  JB-all: 0.6147
+  JB-hard: 0.4077
+  JB-all mcnemar(model_only,hob_only,p): (18, 43, 0.0019)
+  JB-hard mcnemar(model_only,hob_only,p): (17, 32, 0.0444)
+  JB-all brier,ece: (0.4571, 0.0844)
+  REAL agree: 0.81
+  REAL agree_sd: 0.789
+  REAL-label: 0.7
+  REAL-label consensus: 0.7255
+  REAL-label brier,ece: (0.4314, 0.0712)
+  REAL-label mcnemar: (19, 53, 0.0001)
+  CF acc: 0.6724
+  CF flip: 0.4483
+  CF dir: 0.9458
+  CF fgh: 0.7156
+  CF flip mcnemar: (104, 31, 0.0)
+  CF kinds: {'amount_insert': (0.522, 90), 'human_insert': (0.673, 156), 'identity': (0.0, 51), 'insists_3v4': (0.0, 20), 'procedure_intent': (0.0, 40), 'wrapup_replace': (0.612, 49)}
+  CF-probe acc: 0.7359
+  CF-probe flip: 0.475
+  CF-probe dir: 0.9656
+  CF-probe fgh: 0.7333
+  CF-probe flip mcnemar: (75, 28, 0.0)
+  CF-probe kinds: {'probe_amount_vs_limit': (0.651, 43), 'probe_amount_vs_limit_distract': (0.237, 38), 'probe_date_order': (0.0, 49), 'probe_date_order_distract': (0.0, 32), 'probe_id_match': (1.0, 37), 'probe_id_match_distract': (0.19, 42), 'probe_status_equal': (1.0, 35), 'probe_status_equal_distract': (0.795, 44)}
+  SHUF both_right: 0.4677
+== b2_r4000
+  JB-all: 0.6494
+  JB-hard: 0.4308
+  JB-all mcnemar(model_only,hob_only,p): (13, 30, 0.0137)
+  JB-hard mcnemar(model_only,hob_only,p): (13, 25, 0.073)
+  JB-all brier,ece: (0.4351, 0.0902)
+  REAL agree: 0.8775
+  REAL agree_sd: 0.8532
+  REAL-label: 0.7025
+  REAL-label consensus: 0.7418
+  REAL-label brier,ece: (0.4041, 0.058)
+  REAL-label mcnemar: (7, 40, 0.0)
+  CF acc: 0.6355
+  CF flip: 0.3695
+  CF dir: 0.9803
+  CF fgh: 0.9174
+  CF flip mcnemar: (50, 9, 0.0)
+  CF kinds: {'amount_insert': (0.278, 90), 'human_insert': (0.474, 156), 'identity': (0.0, 51), 'insists_3v4': (0.1, 20), 'procedure_intent': (0.0, 40), 'wrapup_replace': (1.0, 49)}
+  CF-probe acc: 0.7562
+  CF-probe flip: 0.5156
+  CF-probe dir: 0.9625
+  CF-probe fgh: 0.8
+  CF-probe flip mcnemar: (81, 21, 0.0)
+  CF-probe kinds: {'probe_amount_vs_limit': (0.744, 43), 'probe_amount_vs_limit_distract': (0.368, 38), 'probe_date_order': (0.0, 49), 'probe_date_order_distract': (0.0, 32), 'probe_id_match': (0.946, 37), 'probe_id_match_distract': (0.5, 42), 'probe_status_equal': (0.943, 35), 'probe_status_equal_distract': (0.682, 44)}
+  SHUF both_right: 0.3566
+== b3_r4000
+  JB-all: 0.6494
+  JB-hard: 0.4308
+  JB-all mcnemar(model_only,hob_only,p): (12, 29, 0.0115)
+  JB-hard mcnemar(model_only,hob_only,p): (12, 24, 0.0652)
+  JB-all brier,ece: (0.4826, 0.1677)
+  REAL agree: 0.8525
+  REAL agree_sd: 0.8165
+  REAL-label: 0.71
+  REAL-label consensus: 0.75
+  REAL-label brier,ece: (0.4023, 0.0892)
+  REAL-label mcnemar: (12, 42, 0.0001)
+  CF acc: 0.6059
+  CF flip: 0.3153
+  CF dir: 0.9754
+  CF fgh: 0.7982
+  CF flip mcnemar: (41, 22, 0.0226)
+  CF kinds: {'amount_insert': (0.4, 90), 'human_insert': (0.295, 156), 'identity': (0.0, 51), 'insists_3v4': (0.1, 20), 'procedure_intent': (0.0, 40), 'wrapup_replace': (0.898, 49)}
+  CF-probe acc: 0.6922
+  CF-probe flip: 0.3844
+  CF-probe dir: 0.9156
+  CF-probe fgh: 0.6667
+  CF-probe flip mcnemar: (53, 35, 0.0693)
+  CF-probe kinds: {'probe_amount_vs_limit': (0.233, 43), 'probe_amount_vs_limit_distract': (0.0, 38), 'probe_date_order': (0.061, 49), 'probe_date_order_distract': (0.031, 32), 'probe_id_match': (0.811, 37), 'probe_id_match_distract': (0.595, 42), 'probe_status_equal': (0.857, 35), 'probe_status_equal_distract': (0.545, 44)}
+  SHUF both_right: 0.292
+== bf_r1000
+  JB-all: 0.5887
+  JB-hard: 0.4308
+  JB-all mcnemar(model_only,hob_only,p): (19, 50, 0.0002)
+  JB-hard mcnemar(model_only,hob_only,p): (18, 30, 0.1114)
+  JB-all brier,ece: (0.5172, 0.1508)
+  REAL agree: 0.7425
+  REAL agree_sd: 0.633
+  REAL-label: 0.635
+  REAL-label consensus: 0.6549
+  REAL-label brier,ece: (0.4897, 0.1025)
+  REAL-label mcnemar: (18, 78, 0.0)
+  CF acc: 0.6232
+  CF flip: 0.3522
+  CF dir: 0.9113
+  CF fgh: 0.5321
+  CF flip mcnemar: (85, 51, 0.0045)
+  CF kinds: {'amount_insert': (0.256, 90), 'human_insert': (0.724, 156), 'identity': (0.0, 51), 'insists_3v4': (0.0, 20), 'procedure_intent': (0.0, 40), 'wrapup_replace': (0.143, 49)}
+  CF-probe acc: 0.7406
+  CF-probe flip: 0.4813
+  CF-probe dir: 0.9719
+  CF-probe fgh: 0.7524
+  CF-probe flip mcnemar: (75, 26, 0.0)
+  CF-probe kinds: {'probe_amount_vs_limit': (0.86, 43), 'probe_amount_vs_limit_distract': (0.526, 38), 'probe_date_order': (0.0, 49), 'probe_date_order_distract': (0.0, 32), 'probe_id_match': (0.973, 37), 'probe_id_match_distract': (0.024, 42), 'probe_status_equal': (0.971, 35), 'probe_status_equal_distract': (0.591, 44)}
+  SHUF both_right: 0.3643
+== bf_r4000
+  JB-all: 0.6797
+  JB-hard: 0.4692
+  JB-all mcnemar(model_only,hob_only,p): (18, 28, 0.1839)
+  JB-hard mcnemar(model_only,hob_only,p): (17, 24, 0.3489)
+  JB-all brier,ece: (0.4442, 0.0911)
+  REAL agree: 0.895
+  REAL agree_sd: 0.8807
+  REAL-label: 0.745
+  REAL-label consensus: 0.7853
+  REAL-label brier,ece: (0.3743, 0.0399)
+  REAL-label mcnemar: (12, 28, 0.0166)
+  CF acc: 0.6823
+  CF flip: 0.4631
+  CF dir: 0.9828
+  CF fgh: 0.8716
+  CF flip mcnemar: (93, 14, 0.0)
+  CF kinds: {'amount_insert': (0.656, 90), 'human_insert': (0.558, 156), 'identity': (0.0, 51), 'insists_3v4': (0.0, 20), 'procedure_intent': (0.0, 40), 'wrapup_replace': (0.857, 49)}
+  CF-probe acc: 0.7906
+  CF-probe flip: 0.5844
+  CF-probe dir: 0.9656
+  CF-probe fgh: 0.9238
+  CF-probe flip mcnemar: (90, 8, 0.0)
+  CF-probe kinds: {'probe_amount_vs_limit': (0.767, 43), 'probe_amount_vs_limit_distract': (0.289, 38), 'probe_date_order': (0.143, 49), 'probe_date_order_distract': (0.156, 32), 'probe_id_match': (0.973, 37), 'probe_id_match_distract': (0.595, 42), 'probe_status_equal': (0.971, 35), 'probe_status_equal_distract': (0.818, 44)}
+  SHUF both_right: 0.4393
+== c_r16000
+  JB-all: 0.71
+  JB-hard: 0.5231
+  JB-all mcnemar(model_only,hob_only,p): (13, 16, 0.7111)
+  JB-hard mcnemar(model_only,hob_only,p): (12, 12, 1.0)
+  JB-all brier,ece: (0.3576, 0.0735)
+  REAL agree: 0.9104
+  REAL agree_sd: 0.7457
+  REAL-label: 0.7725
+  REAL-label consensus: 0.8098
+  REAL-label brier,ece: (0.3673, 0.1014)
+  REAL-label mcnemar: (11, 16, 0.4421)
+  CF acc: 0.633
+  CF flip: 0.3645
+  CF dir: 0.9581
+  CF fgh: 0.8716
+  CF flip mcnemar: (53, 14, 0.0)
+  CF kinds: {'amount_insert': (0.344, 90), 'human_insert': (0.442, 156), 'identity': (0.02, 51), 'insists_3v4': (0.0, 20), 'procedure_intent': (0.0, 40), 'wrapup_replace': (0.959, 49)}
+  CF-probe acc: 0.6781
+  CF-probe flip: 0.3625
+  CF-probe dir: 0.9406
+  CF-probe fgh: 0.6762
+  CF-probe flip mcnemar: (45, 34, 0.2604)
+  CF-probe kinds: {'probe_amount_vs_limit': (0.0, 43), 'probe_amount_vs_limit_distract': (0.0, 38), 'probe_date_order': (0.122, 49), 'probe_date_order_distract': (0.062, 32), 'probe_id_match': (0.676, 37), 'probe_id_match_distract': (0.571, 42), 'probe_status_equal': (0.886, 35), 'probe_status_equal_distract': (0.636, 44)}
+  SHUF both_right: 0.3411
+== d_r1000
+  JB-all: 0.619
+  JB-hard: 0.4308
+  JB-all mcnemar(model_only,hob_only,p): (12, 36, 0.0007)
+  JB-hard mcnemar(model_only,hob_only,p): (12, 24, 0.0652)
+  JB-all brier,ece: (0.4927, 0.0856)
+  REAL agree: 0.67
+  REAL agree_sd: 0.8257
+  REAL-label: 0.5425
+  REAL-label consensus: 0.5625
+  REAL-label brier,ece: (0.5246, 0.1476)
+  REAL-label mcnemar: (17, 114, 0.0)
+  CF acc: 0.548
+  CF flip: 0.1921
+  CF dir: 0.9483
+  CF fgh: 0.5688
+  CF flip mcnemar: (16, 47, 0.0001)
+  CF kinds: {'amount_insert': (0.089, 90), 'human_insert': (0.192, 156), 'identity': (0.0, 51), 'insists_3v4': (0.0, 20), 'procedure_intent': (0.0, 40), 'wrapup_replace': (0.816, 49)}
+  CF-probe acc: 0.5453
+  CF-probe flip: 0.0938
+  CF-probe dir: 0.8375
+  CF-probe fgh: 0.2667
+  CF-probe flip mcnemar: (2, 77, 0.0)
+  CF-probe kinds: {'probe_amount_vs_limit': (0.0, 43), 'probe_amount_vs_limit_distract': (0.0, 38), 'probe_date_order': (0.0, 49), 'probe_date_order_distract': (0.0, 32), 'probe_id_match': (0.0, 37), 'probe_id_match_distract': (0.0, 42), 'probe_status_equal': (0.8, 35), 'probe_status_equal_distract': (0.045, 44)}
+  SHUF both_right: 0.1835
+== d_r4000
+  JB-all: 0.6537
+  JB-hard: 0.4385
+  JB-all mcnemar(model_only,hob_only,p): (13, 29, 0.0195)
+  JB-hard mcnemar(model_only,hob_only,p): (12, 23, 0.0895)
+  JB-all brier,ece: (0.4578, 0.1372)
+  REAL agree: 0.86
+  REAL agree_sd: 0.8257
+  REAL-label: 0.6925
+  REAL-label consensus: 0.7255
+  REAL-label brier,ece: (0.4139, 0.1154)
+  REAL-label mcnemar: (9, 46, 0.0)
+  CF acc: 0.6675
+  CF flip: 0.431
+  CF dir: 0.9852
+  CF fgh: 0.8349
+  CF flip mcnemar: (84, 18, 0.0)
+  CF kinds: {'amount_insert': (0.822, 90), 'human_insert': (0.346, 156), 'identity': (0.0, 51), 'insists_3v4': (0.0, 20), 'procedure_intent': (0.0, 40), 'wrapup_replace': (0.959, 49)}
+  CF-probe acc: 0.6609
+  CF-probe flip: 0.3219
+  CF-probe dir: 0.9125
+  CF-probe fgh: 0.6
+  CF-probe flip mcnemar: (40, 42, 0.9122)
+  CF-probe kinds: {'probe_amount_vs_limit': (0.07, 43), 'probe_amount_vs_limit_distract': (0.0, 38), 'probe_date_order': (0.0, 49), 'probe_date_order_distract': (0.0, 32), 'probe_id_match': (0.73, 37), 'probe_id_match_distract': (0.286, 42), 'probe_status_equal': (0.971, 35), 'probe_status_equal_distract': (0.614, 44)}
+  SHUF both_right: 0.4109
+== e_r1000
+  JB-all: 0.6147
+  JB-hard: 0.4231
+  JB-all mcnemar(model_only,hob_only,p): (20, 45, 0.0026)
+  JB-hard mcnemar(model_only,hob_only,p): (19, 32, 0.0919)
+  JB-all brier,ece: (0.4932, 0.1336)
+  REAL agree: 0.83
+  REAL agree_sd: 0.7523
+  REAL-label: 0.715
+  REAL-label consensus: 0.7418
+  REAL-label brier,ece: (0.4335, 0.1046)
+  REAL-label mcnemar: (18, 46, 0.0006)
+  CF acc: 0.6441
+  CF flip: 0.3966
+  CF dir: 0.936
+  CF fgh: 0.7615
+  CF flip mcnemar: (78, 26, 0.0)
+  CF kinds: {'amount_insert': (0.3, 90), 'human_insert': (0.628, 156), 'identity': (0.0, 51), 'insists_3v4': (0.0, 20), 'procedure_intent': (0.0, 40), 'wrapup_replace': (0.735, 49)}
+  CF-probe acc: 0.7578
+  CF-probe flip: 0.5188
+  CF-probe dir: 0.9781
+  CF-probe fgh: 0.781
+  CF-probe flip mcnemar: (84, 23, 0.0)
+  CF-probe kinds: {'probe_amount_vs_limit': (0.767, 43), 'probe_amount_vs_limit_distract': (0.316, 38), 'probe_date_order': (0.0, 49), 'probe_date_order_distract': (0.0, 32), 'probe_id_match': (1.0, 37), 'probe_id_match_distract': (0.357, 42), 'probe_status_equal': (1.0, 35), 'probe_status_equal_distract': (0.773, 44)}
+  SHUF both_right: 0.3979
+== e_r12000
+  JB-all: 0.684
+  JB-hard: 0.4846
+  JB-all mcnemar(model_only,hob_only,p): (18, 27, 0.2327)
+  JB-hard mcnemar(model_only,hob_only,p): (18, 23, 0.5327)
+  JB-all brier,ece: (0.4224, 0.0774)
+  REAL agree: 0.8467
+  REAL agree_sd: 0.8092
+  REAL-label: 0.715
+  REAL-label consensus: 0.7446
+  REAL-label brier,ece: (0.3998, 0.1048)
+  REAL-label mcnemar: (13, 41, 0.0002)
+  LONG agree: 0.7898
+  LONG agree_sd: 0.7879
+  CF acc: 0.7303
+  CF flip: 0.5591
+  CF dir: 0.9828
+  CF fgh: 0.9083
+  CF flip mcnemar: (128, 10, 0.0)
+  CF kinds: {'amount_insert': (0.789, 90), 'human_insert': (0.692, 156), 'identity': (0.0, 51), 'insists_3v4': (0.15, 20), 'procedure_intent': (0.0, 40), 'wrapup_replace': (0.918, 49)}
+  CF-probe acc: 0.6906
+  CF-probe flip: 0.3844
+  CF-probe dir: 0.9625
+  CF-probe fgh: 0.6857
+  CF-probe flip mcnemar: (51, 33, 0.063)
+  CF-probe kinds: {'probe_amount_vs_limit': (0.302, 43), 'probe_amount_vs_limit_distract': (0.316, 38), 'probe_date_order': (0.0, 49), 'probe_date_order_distract': (0.0, 32), 'probe_id_match': (1.0, 37), 'probe_id_match_distract': (0.19, 42), 'probe_status_equal': (0.971, 35), 'probe_status_equal_distract': (0.432, 44)}
+  SHUF both_right: 0.5452
+== e_r4000
+  JB-all: 0.645
+  JB-hard: 0.4154
+  JB-all mcnemar(model_only,hob_only,p): (16, 34, 0.0153)
+  JB-hard mcnemar(model_only,hob_only,p): (15, 29, 0.0488)
+  JB-all brier,ece: (0.4308, 0.0829)
+  REAL agree: 0.8425
+  REAL agree_sd: 0.5872
+  REAL-label: 0.71
+  REAL-label consensus: 0.7391
+  REAL-label brier,ece: (0.4067, 0.0559)
+  REAL-label mcnemar: (15, 45, 0.0001)
+  CF acc: 0.6232
+  CF flip: 0.3473
+  CF dir: 0.9754
+  CF fgh: 0.5229
+  CF flip mcnemar: (84, 52, 0.0076)
+  CF kinds: {'amount_insert': (0.489, 90), 'human_insert': (0.551, 156), 'identity': (0.0, 51), 'insists_3v4': (0.1, 20), 'procedure_intent': (0.0, 40), 'wrapup_replace': (0.184, 49)}
+  CF-probe acc: 0.7781
+  CF-probe flip: 0.5594
+  CF-probe dir: 0.9437
+  CF-probe fgh: 0.8667
+  CF-probe flip mcnemar: (88, 14, 0.0)
+  CF-probe kinds: {'probe_amount_vs_limit': (0.767, 43), 'probe_amount_vs_limit_distract': (0.447, 38), 'probe_date_order': (0.0, 49), 'probe_date_order_distract': (0.0, 32), 'probe_id_match': (1.0, 37), 'probe_id_match_distract': (0.548, 42), 'probe_status_equal': (1.0, 35), 'probe_status_equal_distract': (0.773, 44)}
+  SHUF both_right: 0.3695
+== c_final
+  JB-all: 0.7273
+  JB-hard: 0.5462
+  JB-all mcnemar(model_only,hob_only,p): (12, 11, 1.0)
+  JB-hard mcnemar(model_only,hob_only,p): (12, 9, 0.6636)
+  JB-all brier,ece: (0.3554, 0.0544)
+  REAL agree: 0.892
+  REAL agree_sd: 0.896
+  REAL-label: 0.7525
+  REAL-label consensus: 0.7908
+  REAL-label brier,ece: (0.3878, 0.0893)
+  REAL-label mcnemar: (11, 24, 0.041)
+  LONG agree: 0.9045
+  LONG agree_sd: 0.8727
+  CF acc: 0.6355
+  CF flip: 0.367
+  CF dir: 0.9606
+  CF fgh: 0.8716
+  CF flip mcnemar: (54, 14, 0.0)
+  CF kinds: {'amount_insert': (0.333, 90), 'human_insert': (0.481, 156), 'identity': (0.0, 51), 'insists_3v4': (0.0, 20), 'procedure_intent': (0.0, 40), 'wrapup_replace': (0.898, 49)}
+  CF-probe acc: 0.6813
+  CF-probe flip: 0.3625
+  CF-probe dir: 0.9344
+  CF-probe fgh: 0.7238
+  CF-probe flip mcnemar: (40, 29, 0.2284)
+  CF-probe kinds: {'probe_amount_vs_limit': (0.023, 43), 'probe_amount_vs_limit_distract': (0.0, 38), 'probe_date_order': (0.061, 49), 'probe_date_order_distract': (0.0, 32), 'probe_id_match': (0.838, 37), 'probe_id_match_distract': (0.619, 42), 'probe_status_equal': (0.914, 35), 'probe_status_equal_distract': (0.523, 44)}
+  SHUF both_right: 0.354
+== dp_only
+  JB-all: 0.4459
+  JB-hard: 0.3846
+  JB-all mcnemar(model_only,hob_only,p): (23, 87, 0.0)
+  JB-hard mcnemar(model_only,hob_only,p): (22, 40, 0.03)
+  JB-all brier,ece: (0.6554, 0.1748)
+  REAL agree: 0.651
+  REAL agree_sd: 0.2168
+  REAL-label: 0.5725
+  REAL-label consensus: 0.5951
+  REAL-label brier,ece: (0.5208, 0.1644)
+  REAL-label mcnemar: (23, 108, 0.0)
+  CF acc: 0.5037
+  CF flip: 0.1133
+  CF dir: 0.7463
+  CF fgh: 0.2018
+  CF flip mcnemar: (24, 87, 0.0)
+  CF kinds: {'amount_insert': (0.178, 90), 'human_insert': (0.154, 156), 'identity': (0.0, 51), 'insists_3v4': (0.1, 20), 'procedure_intent': (0.0, 40), 'wrapup_replace': (0.082, 49)}
+  CF-probe acc: 0.6578
+  CF-probe flip: 0.3156
+  CF-probe dir: 0.9156
+  CF-probe fgh: 0.5905
+  CF-probe flip mcnemar: (39, 43, 0.7407)
+  CF-probe kinds: {'probe_amount_vs_limit': (0.047, 43), 'probe_amount_vs_limit_distract': (0.026, 38), 'probe_date_order': (0.0, 49), 'probe_date_order_distract': (0.0, 32), 'probe_id_match': (1.0, 37), 'probe_id_match_distract': (0.238, 42), 'probe_status_equal': (0.943, 35), 'probe_status_equal_distract': (0.409, 44)}
+  SHUF both_right: 0.1499

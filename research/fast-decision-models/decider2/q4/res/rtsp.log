@@ -1,0 +1,8 @@
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 4288.15it/s]
+sparse built 43
+1937 1844 dense [0.866, 0.134] sparse12-22 [0.872, 0.128] finite True
+1922 1844 dense [0.692, 0.308] sparse12-22 [0.697, 0.303] finite True
+1943 1844 dense [0.808, 0.192] sparse12-22 [0.802, 0.198] finite True
+1938 1844 dense [0.925, 0.075] sparse12-22 [0.927, 0.073] finite True
+1680 1568 dense [0.428, 0.572] sparse12-22 [0.425, 0.575] finite True
+1667 1568 dense [0.875, 0.125] sparse12-22 [0.868, 0.132] finite True

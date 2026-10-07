@@ -1,0 +1,29 @@
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 4254.25it/s]
+fwd 256 {'median': 15.75, 'p95': 15.76, 'min': 15.74, 'n': 20}
+fwd 1000 {'median': 52.69, 'p95': 52.71, 'min': 52.68, 'n': 20}
+fwd 4000 {'median': 200.48, 'p95': 200.5, 'min': 200.44, 'n': 20}
+sweep 256 {'median': 15.74, 'p95': 15.75, 'min': 15.73, 'n': 20}
+sweep 260 {'median': 22.26, 'p95': 22.27, 'min': 22.25, 'n': 20}
+sweep 280 {'median': 22.31, 'p95': 22.32, 'min': 22.29, 'n': 20}
+sweep 320 {'median': 22.59, 'p95': 22.6, 'min': 22.58, 'n': 20}
+sweep 335 {'median': 22.9, 'p95': 22.91, 'min': 22.89, 'n': 20}
+sweep 352 {'median': 22.86, 'p95': 22.87, 'min': 22.85, 'n': 20}
+sweep 384 {'median': 25.04, 'p95': 25.05, 'min': 25.03, 'n': 20}
+sweep 448 {'median': 28.0, 'p95': 28.02, 'min': 27.99, 'n': 20}
+sweep 512 {'median': 32.97, 'p95': 32.99, 'min': 32.96, 'n': 20}
+sweep 1004 {'median': 52.73, 'p95': 52.74, 'min': 52.64, 'n': 20}
+sweep 1024 {'median': 52.87, 'p95': 52.88, 'min': 52.78, 'n': 20}
+sweep 1096 {'median': 57.05, 'p95': 57.07, 'min': 57.03, 'n': 20}
+Q1 256 {'statefirst': (22.88, 22.89, 335), 'schema_nocache': (22.89, 22.9, 335), 'schema_cached': (22.67, 22.67, 260)}
+Q1 1000 {'statefirst': (56.83, 56.85, 1079), 'schema_nocache': (56.84, 56.85, 1079), 'schema_cached': (53.74, 53.75, 1004)}
+Q1 4000 {'statefirst': (201.24, 201.29, 4079), 'schema_nocache': (201.23, 201.28, 4079), 'schema_cached': (204.02, 204.1, 4004)}
+Q4 256 {'statefirst': (37.15, 37.16, 571), 'schema_nocache': (37.15, 37.15, 571), 'schema_cached': (22.86, 22.87, 280)}
+Q4 1000 {'statefirst': (79.41, 79.42, 1315), 'schema_nocache': (79.4, 79.41, 1315), 'schema_cached': (54.14, 54.15, 1024)}
+Q4 4000 {'statefirst': (210.47, 210.51, 4315), 'schema_nocache': (210.46, 210.52, 4315), 'schema_cached': (204.86, 204.95, 4024)}
+Q15 256 {'statefirst': (97.19, 97.21, 1823), 'schema_nocache': (97.19, 97.2, 1823), 'schema_cached': (23.98, 23.99, 352)}
+Q15 1000 {'statefirst': (135.46, 135.49, 2567), 'schema_nocache': (135.47, 135.49, 2567), 'schema_cached': (59.79, 59.81, 1096)}
+Q15 4000 {'statefirst': (273.51, 273.58, 5567), 'schema_nocache': (273.53, 273.62, 5567), 'schema_cached': (209.73, 209.75, 4096)}
+Q1proc 256 {'statefirst': (92.96, 92.97, 1752), 'schema_nocache': (92.97, 92.98, 1752), 'schema_cached': (23.16, 23.17, 260)}
+Q1proc 1000 {'statefirst': (121.6, 121.62, 2496), 'schema_nocache': (121.62, 121.63, 2496), 'schema_cached': (55.28, 55.3, 1004)}
+Q1proc 4000 {'statefirst': (269.58, 269.68, 5496), 'schema_nocache': (269.56, 269.76, 5496), 'schema_cached': (208.93, 208.96, 4004)}
+done tt

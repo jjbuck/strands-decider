@@ -1,0 +1,93 @@
+{
+ "meta": {
+  "gpu": "NVIDIA A10G",
+  "reps": 20,
+  "torch": "2.14.1+cu130",
+  "ckpt": "ck/dp/final.pt,ck/b/r12000.pt",
+  "note": "J4 model = Qwen3.5-2B-Base + merged LoRA stack + pointer head (hobson shapes), TTL fused runtime, plain layout"
+ },
+ "Q1_T64_plain": {
+  "median": 19.02,
+  "p95": 19.03,
+  "min": 19.01,
+  "n": 20,
+  "q_tokens": 93
+ },
+ "Q1_T128_plain": {
+  "median": 19.36,
+  "p95": 19.37,
+  "min": 19.35,
+  "n": 20,
+  "q_tokens": 93
+ },
+ "Q1_T256_plain": {
+  "median": 25.84,
+  "p95": 25.85,
+  "min": 25.82,
+  "n": 20,
+  "q_tokens": 93
+ },
+ "Q1_T400_plain": {
+  "median": 37.38,
+  "p95": 37.4,
+  "min": 37.36,
+  "n": 20,
+  "q_tokens": 93
+ },
+ "Q1_T1000_plain": {
+  "median": 63.1,
+  "p95": 63.12,
+  "min": 63.08,
+  "n": 20,
+  "q_tokens": 93
+ },
+ "Q1_T4000_plain": {
+  "median": 212.07,
+  "p95": 212.2,
+  "min": 211.92,
+  "n": 20,
+  "q_tokens": 93
+ },
+ "Q4_T64_plain": {
+  "median": 48.56,
+  "p95": 48.67,
+  "min": 48.53,
+  "n": 20,
+  "q_tokens": 364
+ },
+ "Q4_T128_plain": {
+  "median": 48.93,
+  "p95": 49.03,
+  "min": 48.92,
+  "n": 20,
+  "q_tokens": 364
+ },
+ "Q4_T256_plain": {
+  "median": 55.57,
+  "p95": 55.59,
+  "min": 55.47,
+  "n": 20,
+  "q_tokens": 364
+ },
+ "Q4_T400_plain": {
+  "median": 67.26,
+  "p95": 67.29,
+  "min": 67.25,
+  "n": 20,
+  "q_tokens": 364
+ },
+ "Q4_T1000_plain": {
+  "median": 93.35,
+  "p95": 93.37,
+  "min": 93.33,
+  "n": 20,
+  "q_tokens": 364
+ },
+ "Q4_T4000_plain": {
+  "median": 243.85,
+  "p95": 243.91,
+  "min": 243.81,
+  "n": 20,
+  "q_tokens": 364
+ }
+}

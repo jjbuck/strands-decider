@@ -1,0 +1,29 @@
+== ft_S125_dense init S125_dense cfg Cfg({'scale': 'S125', 'arm': 'dense', 'd': 1024, 'L': 11, 'H': 16, 'Hkv': 2, 'hd': 64, 'ffn': 3072, 'mon_ffn': 11520, 'kind': 'dense', 'nb': 0})
+step 100 probe 0.7616 squad 1.5264 63s
+step 200 probe 0.7730 squad 1.4674 94s
+step 300 probe 0.7600 squad 1.4392 126s
+step 400 probe 0.7465 squad 1.4389 157s
+step 500 probe 0.7097 squad 1.4198 188s
+step 600 probe 0.7455 squad 1.4186 220s
+step 700 probe 0.7010 squad 1.4264 251s
+step 800 probe 0.6996 squad 1.4139 282s
+EVAL step 800: probe acc 0.500 flip 0.000 distract-flip 0.000 | squad acc 0.262 (n 600) | official CF-probe (fits 1k) acc 0.500 flip 0.000 n_pairs 21 | by kind {'amount_vs_limit': 0.0, 'amount_vs_limit_distract': 0.0, 'date_order': 0.0, 'date_order_distract': 0.0, 'id_match': 0.0, 'id_match_distract': 0.0, 'status_equal': 0.0, 'status_equal_distract': 0.0}
+step 900 probe 0.7045 squad 1.4034 342s
+step 1000 probe 0.7041 squad 1.4032 373s
+step 1100 probe 0.7025 squad 1.4051 404s
+step 1200 probe 0.7038 squad 1.4092 436s
+step 1300 probe 0.6993 squad 1.3948 467s
+step 1400 probe 0.7000 squad 1.4037 498s
+step 1500 probe 0.7164 squad 1.4024 530s
+step 1600 probe 0.6986 squad 1.4021 561s
+EVAL step 1600: probe acc 0.500 flip 0.000 distract-flip 0.000 | squad acc 0.250 (n 600) | official CF-probe (fits 1k) acc 0.500 flip 0.000 n_pairs 21 | by kind {'amount_vs_limit': 0.0, 'amount_vs_limit_distract': 0.0, 'date_order': 0.0, 'date_order_distract': 0.0, 'id_match': 0.0, 'id_match_distract': 0.0, 'status_equal': 0.0, 'status_equal_distract': 0.0}
+step 1700 probe 0.6994 squad 1.3942 601s
+step 1800 probe 0.6954 squad 1.3998 632s
+step 1900 probe 0.6972 squad 1.3965 664s
+step 2000 probe 0.6968 squad 1.3838 695s
+step 2100 probe 0.6948 squad 1.3981 726s
+step 2200 probe 0.6993 squad 1.3928 758s
+step 2300 probe 0.6958 squad 1.3885 789s
+step 2400 probe 0.6949 squad 1.3912 821s
+EVAL step 2400: probe acc 0.500 flip 0.000 distract-flip 0.000 | squad acc 0.229 (n 1500) | official CF-probe (fits 1k) acc 0.500 flip 0.000 n_pairs 21 | by kind {'amount_vs_limit': 0.0, 'amount_vs_limit_distract': 0.0, 'date_order': 0.0, 'date_order_distract': 0.0, 'id_match': 0.0, 'id_match_distract': 0.0, 'status_equal': 0.0, 'status_equal_distract': 0.0}
+DONE ft_S125_dense 13.9 min

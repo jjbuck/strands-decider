@@ -1,0 +1,53 @@
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 3798.94it/s]
+/home/ubuntu/work/j13/code/heal.py:60: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /__w/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:820.)
+  v = float(kl); ema = v if ema is None else 0.95 * ema + 0.05 * v
+25 T 1888 kl 0.0000 ema 0.0509 mse 0.0088 33s mem 9.5G
+50 T 2975 kl 0.0568 ema 0.0310 mse 0.0011 63s mem 9.5G
+75 T 2023 kl 0.1287 ema 0.0348 mse 0.0015 94s mem 9.5G
+100 T 4156 kl 0.0045 ema 0.0248 mse 0.0013 126s mem 9.5G
+125 T 2939 kl 0.0001 ema 0.0295 mse 0.0023 156s mem 9.5G
+150 T 2856 kl 0.0016 ema 0.0331 mse 0.0032 187s mem 9.5G
+175 T 1707 kl 0.0128 ema 0.0211 mse 0.0035 215s mem 9.5G
+200 T 3129 kl 0.0003 ema 0.0246 mse 0.0039 244s mem 9.5G
+225 T 2001 kl 0.0001 ema 0.0186 mse 0.0022 276s mem 9.5G
+250 T 3253 kl 0.0102 ema 0.0161 mse 0.0028 309s mem 9.5G
+275 T 1881 kl 0.1342 ema 0.0301 mse 0.0010 340s mem 9.5G
+300 T 2395 kl 0.0518 ema 0.0293 mse 0.0021 370s mem 9.5G
+325 T 4088 kl 0.0497 ema 0.0286 mse 0.0013 402s mem 9.5G
+350 T 2028 kl 0.0123 ema 0.0223 mse 0.0023 435s mem 9.5G
+375 T 2544 kl 0.0004 ema 0.0244 mse 0.0018 464s mem 9.5G
+400 T 1695 kl 0.0082 ema 0.0169 mse 0.0022 492s mem 9.5G
+425 T 940 kl 0.0029 ema 0.0149 mse 0.0026 521s mem 9.5G
+450 T 1639 kl 0.0087 ema 0.0126 mse 0.0026 550s mem 9.5G
+475 T 1779 kl 0.0016 ema 0.0124 mse 0.0010 580s mem 9.5G
+500 T 3199 kl 0.0009 ema 0.0137 mse 0.0015 607s mem 9.5G
+525 T 1696 kl 0.0001 ema 0.0103 mse 0.0010 639s mem 9.6G
+550 T 3129 kl 0.0158 ema 0.0138 mse 0.0008 668s mem 9.6G
+575 T 1888 kl 0.0000 ema 0.0254 mse 0.0014 696s mem 9.6G
+600 T 2465 kl 0.0002 ema 0.0242 mse 0.0011 723s mem 9.7G
+625 T 697 kl 0.0003 ema 0.0179 mse 0.0020 753s mem 9.7G
+650 T 2009 kl 0.0002 ema 0.0149 mse 0.0010 780s mem 9.7G
+675 T 2290 kl 0.0202 ema 0.0114 mse 0.0016 811s mem 9.7G
+700 T 2173 kl 0.0462 ema 0.0118 mse 0.0008 841s mem 9.7G
+725 T 2435 kl 0.0001 ema 0.0127 mse 0.0018 873s mem 9.7G
+750 T 2952 kl 0.0000 ema 0.0101 mse 0.0016 905s mem 9.7G
+775 T 3039 kl 0.0003 ema 0.0110 mse 0.0018 937s mem 9.7G
+800 T 3146 kl 0.0115 ema 0.0080 mse 0.0010 969s mem 9.7G
+825 T 1827 kl 0.0018 ema 0.0143 mse 0.0023 1000s mem 9.7G
+850 T 1918 kl 0.0345 ema 0.0173 mse 0.0016 1031s mem 9.7G
+875 T 3370 kl 0.0000 ema 0.0066 mse 0.0012 1060s mem 9.7G
+900 T 1863 kl 0.0000 ema 0.0111 mse 0.0016 1093s mem 9.7G
+925 T 3379 kl 0.0004 ema 0.0087 mse 0.0016 1122s mem 9.7G
+950 T 868 kl 0.0002 ema 0.0109 mse 0.0012 1150s mem 9.7G
+975 T 1749 kl 0.0119 ema 0.0091 mse 0.0005 1180s mem 9.7G
+1000 T 1933 kl 0.0195 ema 0.0078 mse 0.0011 1207s mem 9.7G
+1025 T 1787 kl 0.0008 ema 0.0083 mse 0.0015 1236s mem 9.8G
+1050 T 2993 kl 0.0000 ema 0.0054 mse 0.0008 1267s mem 9.8G
+1075 T 2845 kl 0.0053 ema 0.0084 mse 0.0019 1296s mem 9.8G
+1100 T 1648 kl 0.0000 ema 0.0053 mse 0.0011 1323s mem 9.8G
+1125 T 2745 kl 0.0401 ema 0.0149 mse 0.0012 1352s mem 9.8G
+1150 T 1771 kl 0.0000 ema 0.0065 mse 0.0017 1381s mem 9.8G
+1175 T 2924 kl 0.0169 ema 0.0099 mse 0.0007 1413s mem 9.8G
+1200 T 903 kl 0.0016 ema 0.0105 mse 0.0013 1441s mem 9.8G
+done 1441s

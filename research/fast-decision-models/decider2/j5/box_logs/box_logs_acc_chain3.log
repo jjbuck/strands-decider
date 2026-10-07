@@ -1,0 +1,16 @@
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 4171.79it/s]
+mix:w4g128:w8 400 31s
+mix:w4g128:w8 800 81s
+mix:w4g128:w8 1200 136s
+mix:w4g128:w8 1600 241s
+mix:w4g128:w8 2000 346s
+mix:w4g128:w8 2400 392s
+mix:w4g128:w8 2800 448s
+mix:w4g128:w8 3200 503s
+done mix:w4g128:w8 3227 506s
+w4g128rtn 400 116s
+w4g128rtn 800 185s
+w4g128rtn 1200 229s
+w4g128rtn 1600 292s
+done w4g128rtn 1795 315s
+CHAIN DONE

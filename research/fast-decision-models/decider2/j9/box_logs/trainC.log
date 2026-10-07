@@ -1,0 +1,29 @@
+pool 12651 cf 4880 v5 12557
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 4061.96it/s]
+{"upd": 0, "probe_kl": 0.0258, "probe_agree": 0.9271}
+/home/ubuntu/work/j9/train_j9.py:193: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /__w/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:820.)
+  lsum['hid'] += float(hl); lcnt['hid'] += 1
+{"upd": 1, "t": 12, "mem": 7.5, "lr": 4.999930604700777e-06, "hid": 0.0468, "kl_real": 0.0808, "agree_real": 0.875, "live_frac": 0.522, "T": 2987.5}
+{"upd": 10, "t": 118, "mem": 7.5, "lr": 2.7461852004947463e-05, "hid": 0.0468, "kl_real": 0.043, "agree_real": 0.9028, "live_frac": 0.5579, "T": 3173.5278}
+{"upd": 20, "t": 239, "mem": 7.5, "lr": 4.97229876633906e-05, "hid": 0.0478, "kl_real": 0.0275, "agree_real": 0.975, "live_frac": 0.5694, "T": 3260.1875}
+{"upd": 30, "t": 348, "mem": 7.5, "lr": 4.9378323208947725e-05, "hid": 0.0455, "kl_real": 0.0338, "agree_real": 0.95, "live_frac": 0.5786, "T": 2921.575}
+{"upd": 40, "t": 475, "mem": 7.5, "lr": 4.889877161664096e-05, "hid": 0.0492, "kl_real": 0.0375, "agree_real": 0.925, "live_frac": 0.5373, "T": 3387.925}
+{"upd": 50, "t": 633, "mem": 7.5, "lr": 4.8287289481503954e-05, "hid": 0.0442, "kl_real": 0.0308, "agree_real": 0.8875, "live_frac": 0.5562, "T": 2943.8125, "probe_kl": 0.0259, "probe_agree": 0.9583}
+{"upd": 60, "t": 747, "mem": 7.5, "lr": 4.7547646794238276e-05, "hid": 0.0469, "kl_real": 0.0194, "agree_real": 0.9375, "live_frac": 0.548, "T": 3043.6375}
+{"upd": 70, "t": 868, "mem": 7.5, "lr": 4.668440369796708e-05, "hid": 0.0394, "kl_real": 0.0203, "agree_real": 0.9375, "live_frac": 0.6021, "T": 3298.25}
+{"upd": 80, "t": 973, "mem": 7.5, "lr": 4.570288237343632e-05, "hid": 0.0435, "kl_real": 0.0299, "agree_real": 0.8875, "live_frac": 0.5543, "T": 2811.375}
+{"upd": 90, "t": 1092, "mem": 7.5, "lr": 4.4609134226000695e-05, "hid": 0.0438, "kl_real": 0.0259, "agree_real": 0.95, "live_frac": 0.5562, "T": 3199.9875}
+{"upd": 100, "t": 1249, "mem": 7.5, "lr": 4.340990257669732e-05, "hid": 0.038, "kl_real": 0.0175, "agree_real": 0.9625, "live_frac": 0.5609, "T": 2915.45, "probe_kl": 0.0117, "probe_agree": 0.9688}
+saved 100
+{"upd": 110, "t": 1365, "mem": 7.5, "lr": 4.211258108742913e-05, "hid": 0.0425, "kl_real": 0.0097, "agree_real": 0.9875, "live_frac": 0.5437, "T": 3093.7625}
+{"upd": 120, "t": 1481, "mem": 7.5, "lr": 4.072516817658065e-05, "hid": 0.0361, "kl_real": 0.0141, "agree_real": 0.975, "live_frac": 0.5615, "T": 3120.1125}
+{"upd": 130, "t": 1595, "mem": 7.5, "lr": 3.925621770610885e-05, "hid": 0.0422, "kl_real": 0.037, "agree_real": 0.9375, "live_frac": 0.5529, "T": 3046.375}
+{"upd": 140, "t": 1711, "mem": 7.5, "lr": 3.771478624413981e-05, "hid": 0.0411, "kl_real": 0.0203, "agree_real": 0.925, "live_frac": 0.5426, "T": 3082.9625}
+{"upd": 150, "t": 1878, "mem": 7.5, "lr": 3.611037722821452e-05, "hid": 0.0413, "kl_real": 0.0196, "agree_real": 0.9125, "live_frac": 0.5544, "T": 3221.1375, "probe_kl": 0.0113, "probe_agree": 0.9479}
+{"upd": 160, "t": 1999, "mem": 7.5, "lr": 3.4452882373436316e-05, "hid": 0.0335, "kl_real": 0.016, "agree_real": 0.9625, "live_frac": 0.5976, "T": 3289.825}
+{"upd": 170, "t": 2120, "mem": 7.5, "lr": 3.275252068675788e-05, "hid": 0.0329, "kl_real": 0.033, "agree_real": 0.875, "live_frac": 0.6095, "T": 3285.625}
+{"upd": 180, "t": 2239, "mem": 7.5, "lr": 3.1019775463405195e-05, "hid": 0.0386, "kl_real": 0.0264, "agree_real": 0.95, "live_frac": 0.568, "T": 3226.05}
+{"upd": 190, "t": 2351, "mem": 7.5, "lr": 2.9265329653876518e-05, "hid": 0.0408, "kl_real": 0.0128, "agree_real": 0.9625, "live_frac": 0.5657, "T": 3022.5}
+{"upd": 200, "t": 2509, "mem": 7.5, "lr": 2.7500000000000004e-05, "hid": 0.0322, "kl_real": 0.0094, "agree_real": 0.95, "live_frac": 0.5877, "T": 2923.15, "probe_kl": 0.0115, "probe_agree": 0.9479}
+saved 200

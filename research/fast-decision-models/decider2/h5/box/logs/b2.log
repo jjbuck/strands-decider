@@ -1,0 +1,30 @@
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 3785.47it/s]
+cfg {'Win_g': (4, 4), 'Win_a': (4, 4), 'Wo_g': (4, 4), 'Wo_a': (4, 4), 'Wgu': (4, 4), 'Wd': (4, 4)} aclip 0.9 R rot/R1_l1.pt w gptq
+gptq calibration 128 seqs 247358 tokens
+gptq layer 0 done 26 s
+gptq layer 1 done 46 s
+gptq layer 2 done 67 s
+gptq layer 3 done 86 s
+gptq layer 4 done 106 s
+gptq layer 5 done 126 s
+gptq layer 6 done 147 s
+gptq layer 7 done 165 s
+gptq layer 8 done 186 s
+gptq layer 9 done 206 s
+gptq layer 10 done 227 s
+gptq layer 11 done 245 s
+gptq layer 12 done 266 s
+gptq layer 13 done 286 s
+gptq layer 14 done 306 s
+gptq layer 15 done 325 s
+gptq layer 16 done 345 s
+gptq layer 17 done 365 s
+gptq layer 18 done 385 s
+gptq layer 19 done 404 s
+gptq layer 20 done 424 s
+gptq layer 21 done 444 s
+gptq layer 22 done 464 s
+gptq layer 23 done 482 s
+built 491 s
+DEV {"name": "l1_gptq_w4a4", "R": "rot/R1_l1.pt", "w": "gptq", "cfg": {"Win_g": [4, 4], "Win_a": [4, 4], "Wo_g": [4, 4], "Wo_a": [4, 4], "Wgu": [4, 4], "Wd": [4, 4]}, "aclip": 0.9, "ba_hp": true, "flips": 18, "n": 240, "flip_rate": 0.075, "tv": 0.0865, "kl": 0.036, "s": 677}
+saved q/l1_gptq_w4a4.pt

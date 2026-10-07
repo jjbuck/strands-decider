@@ -1,0 +1,38 @@
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 3936.11it/s]
+hobson nvfp4-qb16 0/1641 2s
+hobson nvfp4-qb16 100/1641 81s
+hobson nvfp4-qb16 200/1641 163s
+hobson nvfp4-qb16 300/1641 249s
+hobson nvfp4-qb16 400/1641 334s
+hobson nvfp4-qb16 500/1641 430s
+hobson nvfp4-qb16 600/1641 522s
+hobson nvfp4-qb16 700/1641 633s
+hobson nvfp4-qb16 800/1641 743s
+hobson nvfp4-qb16 900/1641 825s
+hobson nvfp4-qb16 1000/1641 918s
+hobson nvfp4-qb16 1100/1641 1017s
+hobson nvfp4-qb16 1200/1641 1104s
+hobson nvfp4-qb16 1300/1641 1162s
+hobson nvfp4-qb16 1400/1641 1272s
+hobson nvfp4-qb16 1500/1641 1352s
+hobson nvfp4-qb16 1600/1641 1400s
+DONE hobson nvfp4-qb16 1641 rows (1641 new) 1414s
+hobson w4a4r-qb16 0/1641 4s
+hobson w4a4r-qb16 100/1641 86s
+hobson w4a4r-qb16 200/1641 171s
+hobson w4a4r-qb16 300/1641 261s
+hobson w4a4r-qb16 400/1641 349s
+hobson w4a4r-qb16 500/1641 449s
+hobson w4a4r-qb16 600/1641 543s
+hobson w4a4r-qb16 700/1641 659s
+hobson w4a4r-qb16 800/1641 772s
+hobson w4a4r-qb16 900/1641 858s
+hobson w4a4r-qb16 1000/1641 955s
+hobson w4a4r-qb16 1100/1641 1057s
+hobson w4a4r-qb16 1200/1641 1147s
+hobson w4a4r-qb16 1300/1641 1208s
+hobson w4a4r-qb16 1400/1641 1322s
+hobson w4a4r-qb16 1500/1641 1405s
+hobson w4a4r-qb16 1600/1641 1455s
+DONE hobson w4a4r-qb16 1641 rows (1641 new) 1470s
+all done 2884.378314256668

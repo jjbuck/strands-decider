@@ -1,0 +1,68 @@
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 3722.43it/s]
+configs ['w4a8,gptq', 'w4a8,gptq,lrot=lora_qat_w4a8_B_s900.pt', 'w4a8,gptq,lrot=lora_qat_w4a8_B_s300.pt', 'w4a8,gptq,lrot=lora_qat_w4a8_B_s600.pt']
+w4a8,gptq 49/774 REAL-agree T=2160 100s mem 8.2G
+w4a8,gptq 99/774 REAL-agree T=1728 148s mem 8.3G
+w4a8,gptq 149/774 REAL-agree T=3010 196s mem 8.3G
+w4a8,gptq 199/774 REAL-agree T=1651 241s mem 8.3G
+w4a8,gptq 249/774 REAL-agree T=995 287s mem 8.3G
+w4a8,gptq 299/774 REAL-agree T=3869 334s mem 8.3G
+w4a8,gptq 349/774 CF T=2922 383s mem 8.6G
+w4a8,gptq 399/774 CF T=2187 438s mem 8.6G
+w4a8,gptq 449/774 CF T=2782 478s mem 8.6G
+w4a8,gptq 499/774 CF T=2390 502s mem 8.6G
+w4a8,gptq 549/774 CF T=2714 533s mem 8.6G
+w4a8,gptq 599/774 CF-probe T=2683 568s mem 8.6G
+w4a8,gptq 649/774 CF-probe T=3304 615s mem 8.6G
+w4a8,gptq 699/774 CF-probe T=2678 663s mem 8.6G
+w4a8,gptq 749/774 CF-probe T=985 697s mem 8.6G
+config done w4a8,gptq 711s
+w4a8,gptq,lrot=lora_qat_w4a8_B_s900.pt 25/774 REAL-agree T=2069 788s mem 8.6G
+w4a8,gptq,lrot=lora_qat_w4a8_B_s900.pt 75/774 REAL-agree T=2028 833s mem 8.6G
+w4a8,gptq,lrot=lora_qat_w4a8_B_s900.pt 125/774 REAL-agree T=1913 881s mem 8.6G
+w4a8,gptq,lrot=lora_qat_w4a8_B_s900.pt 175/774 REAL-agree T=1923 926s mem 8.6G
+w4a8,gptq,lrot=lora_qat_w4a8_B_s900.pt 225/774 REAL-agree T=2495 969s mem 8.6G
+w4a8,gptq,lrot=lora_qat_w4a8_B_s900.pt 275/774 REAL-agree T=4757 1015s mem 8.6G
+w4a8,gptq,lrot=lora_qat_w4a8_B_s900.pt 325/774 REAL-agree T=2645 1061s mem 8.6G
+w4a8,gptq,lrot=lora_qat_w4a8_B_s900.pt 375/774 CF T=2820 1114s mem 8.7G
+w4a8,gptq,lrot=lora_qat_w4a8_B_s900.pt 425/774 CF T=2137 1160s mem 8.7G
+w4a8,gptq,lrot=lora_qat_w4a8_B_s900.pt 475/774 CF T=2297 1194s mem 8.7G
+w4a8,gptq,lrot=lora_qat_w4a8_B_s900.pt 525/774 CF T=2703 1217s mem 8.7G
+w4a8,gptq,lrot=lora_qat_w4a8_B_s900.pt 575/774 CF-probe T=4220 1254s mem 8.7G
+w4a8,gptq,lrot=lora_qat_w4a8_B_s900.pt 625/774 CF-probe T=3684 1308s mem 8.7G
+w4a8,gptq,lrot=lora_qat_w4a8_B_s900.pt 675/774 CF-probe T=3201 1358s mem 8.7G
+w4a8,gptq,lrot=lora_qat_w4a8_B_s900.pt 725/774 CF-probe T=988 1401s mem 8.7G
+config done w4a8,gptq,lrot=lora_qat_w4a8_B_s900.pt 1432s
+w4a8,gptq,lrot=lora_qat_w4a8_B_s300.pt 1/774 REAL-agree T=2507 1489s mem 8.7G
+w4a8,gptq,lrot=lora_qat_w4a8_B_s300.pt 51/774 REAL-agree T=2898 1517s mem 8.7G
+w4a8,gptq,lrot=lora_qat_w4a8_B_s300.pt 101/774 REAL-agree T=2191 1549s mem 8.7G
+w4a8,gptq,lrot=lora_qat_w4a8_B_s300.pt 151/774 REAL-agree T=1994 1584s mem 8.7G
+w4a8,gptq,lrot=lora_qat_w4a8_B_s300.pt 201/774 REAL-agree T=2459 1629s mem 8.7G
+w4a8,gptq,lrot=lora_qat_w4a8_B_s300.pt 251/774 REAL-agree T=2475 1674s mem 8.7G
+w4a8,gptq,lrot=lora_qat_w4a8_B_s300.pt 301/774 REAL-agree T=1675 1720s mem 8.7G
+w4a8,gptq,lrot=lora_qat_w4a8_B_s300.pt 351/774 CF T=3201 1771s mem 8.7G
+w4a8,gptq,lrot=lora_qat_w4a8_B_s300.pt 401/774 CF T=1728 1824s mem 8.7G
+w4a8,gptq,lrot=lora_qat_w4a8_B_s300.pt 451/774 CF T=228 1863s mem 8.7G
+w4a8,gptq,lrot=lora_qat_w4a8_B_s300.pt 501/774 CF T=2818 1889s mem 8.7G
+w4a8,gptq,lrot=lora_qat_w4a8_B_s300.pt 551/774 CF T=697 1918s mem 8.7G
+w4a8,gptq,lrot=lora_qat_w4a8_B_s300.pt 601/774 CF-probe T=3822 1970s mem 8.7G
+w4a8,gptq,lrot=lora_qat_w4a8_B_s300.pt 651/774 CF-probe T=1733 2022s mem 8.7G
+w4a8,gptq,lrot=lora_qat_w4a8_B_s300.pt 701/774 CF-probe T=2087 2071s mem 8.7G
+w4a8,gptq,lrot=lora_qat_w4a8_B_s300.pt 751/774 CF-probe T=738 2105s mem 8.7G
+config done w4a8,gptq,lrot=lora_qat_w4a8_B_s300.pt 2118s
+w4a8,gptq,lrot=lora_qat_w4a8_B_s600.pt 27/774 REAL-agree T=2825 2198s mem 8.7G
+w4a8,gptq,lrot=lora_qat_w4a8_B_s600.pt 77/774 REAL-agree T=2178 2238s mem 8.7G
+w4a8,gptq,lrot=lora_qat_w4a8_B_s600.pt 127/774 REAL-agree T=1816 2280s mem 8.7G
+w4a8,gptq,lrot=lora_qat_w4a8_B_s600.pt 177/774 REAL-agree T=1822 2326s mem 8.7G
+w4a8,gptq,lrot=lora_qat_w4a8_B_s600.pt 227/774 REAL-agree T=2500 2371s mem 8.7G
+w4a8,gptq,lrot=lora_qat_w4a8_B_s600.pt 277/774 REAL-agree T=1811 2415s mem 8.7G
+w4a8,gptq,lrot=lora_qat_w4a8_B_s600.pt 327/774 REAL-agree T=1747 2464s mem 8.7G
+w4a8,gptq,lrot=lora_qat_w4a8_B_s600.pt 377/774 CF T=2954 2518s mem 8.7G
+w4a8,gptq,lrot=lora_qat_w4a8_B_s600.pt 427/774 CF T=2152 2565s mem 8.7G
+w4a8,gptq,lrot=lora_qat_w4a8_B_s600.pt 477/774 CF T=752 2597s mem 8.7G
+w4a8,gptq,lrot=lora_qat_w4a8_B_s600.pt 527/774 CF T=2220 2622s mem 8.7G
+w4a8,gptq,lrot=lora_qat_w4a8_B_s600.pt 577/774 CF-probe T=4052 2660s mem 8.7G
+w4a8,gptq,lrot=lora_qat_w4a8_B_s600.pt 627/774 CF-probe T=3388 2715s mem 8.7G
+w4a8,gptq,lrot=lora_qat_w4a8_B_s600.pt 677/774 CF-probe T=3334 2765s mem 8.7G
+w4a8,gptq,lrot=lora_qat_w4a8_B_s600.pt 727/774 CF-probe T=2391 2808s mem 8.7G
+config done w4a8,gptq,lrot=lora_qat_w4a8_B_s600.pt 2838s
+done 2838s

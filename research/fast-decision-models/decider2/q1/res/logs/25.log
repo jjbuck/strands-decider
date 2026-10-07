@@ -1,0 +1,27 @@
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 4006.79it/s]
+Traceback (most recent call last):
+  File "/home/ubuntu/work/q1/q1dm.py", line 35, in <module>
+    h, _ = g.fwd(ids, q0=pr['q0']); lq = g.logits(h, pr).cpu()
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/venv/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/work/h1/h1lib.py", line 318, in fwd
+    x = x + self.lin(i, 'Wd', m)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/work/q1/q1lib.py", line 114, in lin
+    y = f(self, i, k, x, xn) if f is not None else super().lin(i, k, x, xn)
+        ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/work/q1/q1fmt.py", line 160, in __call__
+    y[lo:hi, :Nq] = self.qgemm(i, k, src[lo:hi], bits, role).to(x.dtype)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/work/q1/q1fmt.py", line 176, in qgemm
+    if sp['split']: return self.qgemm_split(i, k, s_, role)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/work/q1/q1fmt.py", line 300, in qgemm_split
+    if self.spec['wq'] == 'gptq': qlo, slo = HL.gptq(Wrot, Hlo_r, 7.0)
+                                             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/work/h1/h1lib.py", line 94, in gptq
+    L = torch.linalg.cholesky(H)
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+torch._C._LinAlgError: linalg.cholesky: The factorization could not be completed because the input is not positive-definite (the leading minor of order 3312 is not positive-definite).

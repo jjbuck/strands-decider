@@ -1,0 +1,25 @@
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 3942.15it/s]
+collected {(0, 'Win'): (8192, 2048), (0, 'Wgu'): (8192, 2048)}
+local loss: identity 0.22849  hadamard R0 0.00837
+/home/ubuntu/work/h5/h5rotl.py:104: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /__w/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:820.)
+  l.backward(retain_graph=True); loss += float(l)
+{"step": 1, "loss": 0.008367480564629659, "dR": 0.0, "t": 2}
+{"step": 20, "loss": 0.006365247929352336, "dR": 0.1255, "t": 44}
+{"step": 40, "loss": 0.0056774784043227555, "dR": 0.19, "t": 89}
+{"step": 60, "loss": 0.005390930151406792, "dR": 0.2286, "t": 134}
+{"step": 80, "loss": 0.005215131146542262, "dR": 0.2547, "t": 180}
+{"step": 100, "loss": 0.005080284405266866, "dR": 0.2738, "t": 226}
+{"step": 120, "loss": 0.0049769917040976, "dR": 0.289, "t": 271}
+{"step": 140, "loss": 0.0048950697091640905, "dR": 0.3014, "t": 317}
+{"step": 160, "loss": 0.004831933429159108, "dR": 0.3116, "t": 362}
+{"step": 180, "loss": 0.0047831920492171776, "dR": 0.32, "t": 405}
+{"step": 200, "loss": 0.004743491654153331, "dR": 0.327, "t": 425}
+{"step": 220, "loss": 0.00471296557043388, "dR": 0.3326, "t": 465}
+{"step": 240, "loss": 0.004690700381615898, "dR": 0.337, "t": 509}
+{"step": 260, "loss": 0.004673372459365055, "dR": 0.3402, "t": 554}
+{"step": 280, "loss": 0.004663638768761302, "dR": 0.3422, "t": 591}
+{"step": 300, "loss": 0.004658142315747682, "dR": 0.3429, "t": 630}
+final local loss 0.004658086691051722
+DEV W16A4 hadamard {"flips": 15, "n": 120, "flip_rate": 0.125, "tv": 0.0874, "kl": 0.0358}
+DEV W16A4 learned {"flips": 12, "n": 120, "flip_rate": 0.1, "tv": 0.0764, "kl": 0.0301}

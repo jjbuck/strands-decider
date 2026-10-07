@@ -1,0 +1,10 @@
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 4029.68it/s]
+mode qag rev [0, 1, 2, 4, 5, 6, 8, 9, 10] attn_nc True
+questions 2756 todo 2756
+prepped 2756 17s
+501 2756 67s
+1002 2756 224s
+1503 2756 436s
+2003 2756 711s
+2500 2756 1045s
+done 2756 1323s

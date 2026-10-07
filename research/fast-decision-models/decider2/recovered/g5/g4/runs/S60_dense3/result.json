@@ -1,0 +1,14 @@
+{
+ "name": "S60_dense3",
+ "scale": "S60",
+ "arm": "dense3",
+ "steps": 8872,
+ "tokens": 290717696,
+ "train_pflops": 82.99258077354393,
+ "val_loss": 3.8109524250030518,
+ "val_last_block": 3.7644224166870117,
+ "params": 45225600,
+ "nonemb": 20063232,
+ "elapsed_min": 30.527904438972474,
+ "infer_gflop_1000": 51.105005568
+}

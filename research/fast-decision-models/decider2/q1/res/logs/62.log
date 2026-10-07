@@ -1,0 +1,20 @@
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 4071.91it/s]
+/home/ubuntu/work/q1/q1router.py:48: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /__w/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:820.)
+  o = torch.argsort(lg.detach(), descending=True); t1, t2 = int(o[0]), int(o[1]); m0 = float(lg[t1] - lg[t2])
+10 85s {'none': 0.0703, 'oracle@0.1': 0.0481, 'oracle@0.2': 0.0438, 'qattn7@0.1': 0.0518, 'qattn7@0.2': 0.0528}
+20 120s {'none': 0.0888, 'oracle@0.1': 0.043, 'oracle@0.2': 0.0558, 'qattn7@0.1': 0.0618, 'qattn7@0.2': 0.0414}
+30 155s {'none': 0.0922, 'oracle@0.1': 0.0472, 'oracle@0.2': 0.0497, 'qattn7@0.1': 0.0688, 'qattn7@0.2': 0.0384}
+40 189s {'none': 0.1033, 'oracle@0.1': 0.049, 'oracle@0.2': 0.0468, 'qattn7@0.1': 0.0663, 'qattn7@0.2': 0.0546}
+50 223s {'none': 0.0975, 'oracle@0.1': 0.0561, 'oracle@0.2': 0.0529, 'qattn7@0.1': 0.0717, 'qattn7@0.2': 0.0546}
+60 256s {'none': 0.1049, 'oracle@0.1': 0.0564, 'oracle@0.2': 0.0518, 'qattn7@0.1': 0.0704, 'qattn7@0.2': 0.0558}
+70 290s {'none': 0.105, 'oracle@0.1': 0.0575, 'oracle@0.2': 0.0509, 'qattn7@0.1': 0.0688, 'qattn7@0.2': 0.056}
+80 327s {'none': 0.1029, 'oracle@0.1': 0.0562, 'oracle@0.2': 0.0487, 'qattn7@0.1': 0.068, 'qattn7@0.2': 0.0542}
+90 364s {'none': 0.0997, 'oracle@0.1': 0.0543, 'oracle@0.2': 0.0477, 'qattn7@0.1': 0.0684, 'qattn7@0.2': 0.0539}
+100 395s {'none': 0.0952, 'oracle@0.1': 0.0526, 'oracle@0.2': 0.0463, 'qattn7@0.1': 0.0664, 'qattn7@0.2': 0.053}
+110 430s {'none': 0.0922, 'oracle@0.1': 0.0518, 'oracle@0.2': 0.0451, 'qattn7@0.1': 0.0645, 'qattn7@0.2': 0.051}
+120 461s {'none': 0.0906, 'oracle@0.1': 0.0528, 'oracle@0.2': 0.0462, 'qattn7@0.1': 0.0663, 'qattn7@0.2': 0.0535}
+130 493s {'none': 0.088, 'oracle@0.1': 0.0518, 'oracle@0.2': 0.0458, 'qattn7@0.1': 0.0642, 'qattn7@0.2': 0.052}
+140 529s {'none': 0.088, 'oracle@0.1': 0.0508, 'oracle@0.2': 0.0455, 'qattn7@0.1': 0.063, 'qattn7@0.2': 0.051}
+150 565s {'none': 0.0859, 'oracle@0.1': 0.0512, 'oracle@0.2': 0.0451, 'qattn7@0.1': 0.0628, 'qattn7@0.2': 0.0501}
+done {'none': 0.0859, 'oracle@0.1': 0.0512, 'oracle@0.2': 0.0451, 'qattn7@0.1': 0.0628, 'qattn7@0.2': 0.0501}

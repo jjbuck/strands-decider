@@ -1,0 +1,357 @@
+{
+ "qag_all": {
+  "JB-all": {
+   "n_q": 231,
+   "coverage": 1.0,
+   "acc": 0.7445887445887446,
+   "n_acc": 231,
+   "agree": 0.935064935064935,
+   "tv": 0.06717737519415896,
+   "kl": 0.025092687224170507,
+   "agree_sd": 0.9432624113475178,
+   "n_sd": 141,
+   "brier": 0.3345399706830067
+  },
+  "JB-hard": {
+   "n_q": 130,
+   "coverage": 1.0,
+   "acc": 0.5692307692307692,
+   "n_acc": 130,
+   "agree": 0.8923076923076924,
+   "tv": 0.08567042464100644,
+   "kl": 0.033657349224960595,
+   "agree_sd": 0.8840579710144928,
+   "n_sd": 69
+  },
+  "JB-long": {
+   "n_q": 77,
+   "coverage": 1.0,
+   "acc": 0.45454545454545453,
+   "n_acc": 77,
+   "agree": 0.8441558441558441,
+   "tv": 0.09513428245382735,
+   "kl": 0.03923109141533909,
+   "agree_sd": 0.85,
+   "n_sd": 40
+  },
+  "REAL-agree": {
+   "n_q": 1083,
+   "coverage": 1.0,
+   "agree": 0.948291782086796,
+   "tv": 0.043435343497829085,
+   "kl": 0.012142550883902146,
+   "agree_sd": 0.9190751445086706,
+   "n_sd": 346
+  },
+  "LONG": {
+   "n_q": 471,
+   "coverage": 1.0,
+   "agree": 0.9320594479830149,
+   "tv": 0.048652840784726786,
+   "kl": 0.014998697405711333,
+   "agree_sd": 0.8545454545454545,
+   "n_sd": 165
+  },
+  "REAL-label": {
+   "n_q": 400,
+   "coverage": 1.0,
+   "acc": 0.785,
+   "n_acc": 400,
+   "acc_consensus": 0.8206521739130435,
+   "n_consensus": 368,
+   "agree": 0.9475,
+   "tv": 0.03967352400349399,
+   "kl": 0.01028151862936516,
+   "agree_sd": 0.926605504587156,
+   "n_sd": 109,
+   "brier": 0.3488175291772712
+  },
+  "CF": {
+   "n_pairs": 406,
+   "acc": 0.5985221674876847,
+   "flip": 0.2857142857142857,
+   "flip_any": 0.312807881773399,
+   "dir": 0.9778325123152709,
+   "dmean": 0.18823365563861677,
+   "flip_rel": 1.0642201834862384,
+   "dmean_rel": 1.1069223336235092,
+   "flip_given_hobson": 0.908256880733945,
+   "agree": 0.9451371571072319,
+   "tv": 0.0402846360148063,
+   "by_kind": {
+    "amount_insert": 0.167,
+    "human_insert": 0.365,
+    "id_add_second": 0.0,
+    "id_digit_existing": 0.0,
+    "id_digit_inserted": 0.0,
+    "id_remove_one": 0.0,
+    "insists_3v4": 0.05,
+    "procedure_intent": 0.0,
+    "wrapup_replace": 0.878
+   },
+   "by_pos": {
+    "pos<0.5": 0.174,
+    "pos>=0.5": 0.368
+   },
+   "by_len": {
+    "state 2-4k": [
+     0.415,
+     159
+    ],
+    "state<2k": [
+     0.287,
+     171
+    ],
+    "state>=4k": [
+     0.013,
+     76
+    ]
+   }
+  },
+  "CF-probe": {
+   "n_pairs": 320,
+   "acc": 0.659375,
+   "flip": 0.33125,
+   "flip_any": 0.34375,
+   "dir": 0.8875,
+   "dmean": 0.20037715273529128,
+   "flip_rel": 1.0095238095238095,
+   "dmean_rel": 1.3161320436122355,
+   "flip_given_hobson": 0.7238095238095238,
+   "agree": 0.871875,
+   "tv": 0.06056847269888856,
+   "by_kind": {
+    "probe_amount_vs_limit": 0.233,
+    "probe_amount_vs_limit_distract": 0.105,
+    "probe_date_order": 0.082,
+    "probe_date_order_distract": 0.0,
+    "probe_id_match": 0.676,
+    "probe_id_match_distract": 0.286,
+    "probe_status_equal": 0.943,
+    "probe_status_equal_distract": 0.409
+   },
+   "by_pos": {
+    "pos<0.5": 0.338,
+    "pos>=0.5": 0.2
+   },
+   "by_len": {
+    "state 2-4k": [
+     0.267,
+     225
+    ],
+    "state<2k": [
+     0.484,
+     95
+    ]
+   }
+  },
+  "SHUF": {
+   "n_pairs": 387,
+   "change": 0.3281653746770026,
+   "both_right": 0.2661498708010336
+  },
+  "calib": {
+   "brier": 0.42196557036918986,
+   "ece": 0.046974138465234565,
+   "n": 2073
+  }
+ },
+ "hobson": {
+  "JB-all": {
+   "n_q": 231,
+   "coverage": 1.0,
+   "acc": 0.7229437229437229,
+   "n_acc": 231,
+   "agree": 1.0,
+   "tv": 0.0,
+   "kl": 0.0,
+   "agree_sd": 1.0,
+   "n_sd": 141,
+   "brier": 0.34785219697183306
+  },
+  "JB-hard": {
+   "n_q": 130,
+   "coverage": 1.0,
+   "acc": 0.5230769230769231,
+   "n_acc": 130,
+   "agree": 1.0,
+   "tv": 0.0,
+   "kl": 0.0,
+   "agree_sd": 1.0,
+   "n_sd": 69
+  },
+  "JB-long": {
+   "n_q": 77,
+   "coverage": 1.0,
+   "acc": 0.4025974025974026,
+   "n_acc": 77,
+   "agree": 1.0,
+   "tv": 0.0,
+   "kl": 0.0,
+   "agree_sd": 1.0,
+   "n_sd": 40
+  },
+  "REAL-agree": {
+   "n_q": 1083,
+   "coverage": 1.0,
+   "agree": 1.0,
+   "tv": 0.0,
+   "kl": 0.0,
+   "agree_sd": 1.0,
+   "n_sd": 346
+  },
+  "LONG": {
+   "n_q": 471,
+   "coverage": 1.0,
+   "agree": 1.0,
+   "tv": 0.0,
+   "kl": 0.0,
+   "agree_sd": 1.0,
+   "n_sd": 165
+  },
+  "REAL-label": {
+   "n_q": 400,
+   "coverage": 1.0,
+   "acc": 0.785,
+   "n_acc": 400,
+   "acc_consensus": 0.8179347826086957,
+   "n_consensus": 368,
+   "agree": 1.0,
+   "tv": 0.0,
+   "kl": 0.0,
+   "agree_sd": 1.0,
+   "n_sd": 109,
+   "brier": 0.34726471114400825
+  },
+  "CF": {
+   "n_pairs": 406,
+   "acc": 0.5935960591133005,
+   "flip": 0.2684729064039409,
+   "flip_any": 0.3054187192118227,
+   "dir": 0.9482758620689655,
+   "dmean": 0.17005136667758258,
+   "flip_rel": 1.0,
+   "dmean_rel": 1.0,
+   "flip_given_hobson": 1.0,
+   "agree": 1.0,
+   "tv": 0.0,
+   "by_kind": {
+    "amount_insert": 0.1,
+    "human_insert": 0.346,
+    "id_add_second": 0.0,
+    "id_digit_existing": 0.0,
+    "id_digit_inserted": 0.0,
+    "id_remove_one": 0.0,
+    "insists_3v4": 0.05,
+    "procedure_intent": 0.0,
+    "wrapup_replace": 0.918
+   },
+   "by_pos": {
+    "pos<0.5": 0.169,
+    "pos>=0.5": 0.342
+   },
+   "by_len": {
+    "state 2-4k": [
+     0.39,
+     159
+    ],
+    "state<2k": [
+     0.269,
+     171
+    ],
+    "state>=4k": [
+     0.013,
+     76
+    ]
+   }
+  },
+  "CF-probe": {
+   "n_pairs": 320,
+   "acc": 0.653125,
+   "flip": 0.328125,
+   "flip_any": 0.35,
+   "dir": 0.884375,
+   "dmean": 0.15224699809400527,
+   "flip_rel": 1.0,
+   "dmean_rel": 1.0,
+   "flip_given_hobson": 1.0,
+   "agree": 1.0,
+   "tv": 0.0,
+   "by_kind": {
+    "probe_amount_vs_limit": 0.326,
+    "probe_amount_vs_limit_distract": 0.237,
+    "probe_date_order": 0.061,
+    "probe_date_order_distract": 0.031,
+    "probe_id_match": 0.541,
+    "probe_id_match_distract": 0.381,
+    "probe_status_equal": 0.886,
+    "probe_status_equal_distract": 0.25
+   },
+   "by_pos": {
+    "pos<0.5": 0.328,
+    "pos>=0.5": 0.333
+   },
+   "by_len": {
+    "state 2-4k": [
+     0.284,
+     225
+    ],
+    "state<2k": [
+     0.432,
+     95
+    ]
+   }
+  },
+  "SHUF": {
+   "n_pairs": 387,
+   "change": 0.3385012919896641,
+   "both_right": 0.2454780361757106
+  },
+  "calib": {
+   "brier": 0.4359459363254678,
+   "ece": 0.036828885739429724,
+   "n": 2073
+  }
+ },
+ "_paired_vs_hobson": {
+  "qag_all": {
+   "JB-all": [
+    9,
+    4,
+    0.266845703125
+   ],
+   "JB-hard": [
+    9,
+    3,
+    0.14599609375
+   ],
+   "REAL-label": [
+    10,
+    10,
+    1.0
+   ],
+   "CF pairs": [
+    17,
+    10,
+    0.24778856337070465
+   ],
+   "CF items": [
+    19,
+    15,
+    0.6075913612730801
+   ],
+   "CF-probe pairs": [
+    30,
+    29,
+    1.0
+   ],
+   "CF-probe items": [
+    43,
+    39,
+    0.7406528413457828
+   ],
+   "REAL-agree mutual_agree": 0.9483,
+   "LONG mutual_agree": 0.9321
+  }
+ }
+}

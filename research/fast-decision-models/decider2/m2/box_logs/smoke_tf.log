@@ -1,0 +1,4 @@
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 4021.97it/s]
+items 60 configs ['df8', 'ro8', 'df24'] done {'df8': 0, 'ro8': 0, 'df24': 0}
+50 60 28s mism 0
+done 60 34s mism 0

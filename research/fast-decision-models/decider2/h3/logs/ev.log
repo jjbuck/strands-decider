@@ -1,0 +1,467 @@
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 4059.43it/s]
+hobson bf16 0/1641 1s
+hobson bf16 100/1641 18s
+hobson bf16 200/1641 35s
+hobson bf16 300/1641 53s
+hobson bf16 400/1641 76s
+hobson bf16 500/1641 95s
+hobson bf16 600/1641 114s
+hobson bf16 700/1641 137s
+hobson bf16 800/1641 159s
+hobson bf16 900/1641 176s
+hobson bf16 1000/1641 195s
+hobson bf16 1100/1641 216s
+hobson bf16 1200/1641 234s
+hobson bf16 1300/1641 246s
+hobson bf16 1400/1641 269s
+hobson bf16 1500/1641 286s
+hobson bf16 1600/1641 296s
+DONE hobson bf16 1641 rows (1641 new) 300s
+hobson w4a4 0/1641 2s
+hobson w4a4 100/1641 27s
+hobson w4a4 200/1641 54s
+hobson w4a4 300/1641 82s
+hobson w4a4 400/1641 108s
+hobson w4a4 500/1641 139s
+hobson w4a4 600/1641 168s
+hobson w4a4 700/1641 202s
+hobson w4a4 800/1641 237s
+hobson w4a4 900/1641 264s
+hobson w4a4 1000/1641 294s
+hobson w4a4 1100/1641 326s
+hobson w4a4 1200/1641 356s
+hobson w4a4 1300/1641 386s
+hobson w4a4 1400/1641 432s
+hobson w4a4 1500/1641 490s
+hobson w4a4 1600/1641 525s
+DONE hobson w4a4 1641 rows (1641 new) 535s
+hobson w4a4r 0/1641 5s
+hobson w4a4r 100/1641 86s
+hobson w4a4r 200/1641 170s
+hobson w4a4r 300/1641 259s
+hobson w4a4r 400/1641 344s
+hobson w4a4r 500/1641 441s
+hobson w4a4r 600/1641 533s
+hobson w4a4r 700/1641 642s
+hobson w4a4r 800/1641 741s
+hobson w4a4r 900/1641 826s
+hobson w4a4r 1000/1641 922s
+hobson w4a4r 1100/1641 1025s
+hobson w4a4r 1200/1641 1114s
+hobson w4a4r 1300/1641 1173s
+hobson w4a4r 1400/1641 1288s
+hobson w4a4r 1500/1641 1370s
+hobson w4a4r 1600/1641 1418s
+DONE hobson w4a4r 1641 rows (1641 new) 1433s
+hobson nvfp4 0/1641 2s
+hobson nvfp4 100/1641 78s
+hobson nvfp4 200/1641 157s
+hobson nvfp4 300/1641 241s
+hobson nvfp4 400/1641 321s
+hobson nvfp4 500/1641 412s
+hobson nvfp4 600/1641 498s
+hobson nvfp4 700/1641 601s
+hobson nvfp4 800/1641 705s
+hobson nvfp4 900/1641 770s
+hobson nvfp4 1000/1641 819s
+hobson nvfp4 1100/1641 861s
+hobson nvfp4 1200/1641 898s
+hobson nvfp4 1300/1641 923s
+hobson nvfp4 1400/1641 970s
+hobson nvfp4 1500/1641 1004s
+hobson nvfp4 1600/1641 1025s
+DONE hobson nvfp4 1641 rows (1641 new) 1032s
+all done 3299.152608394623
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 4304.44it/s]
+DONE hobson bf16 1641 rows (0 new) 0s
+DONE hobson w4a4 1641 rows (0 new) 0s
+DONE hobson w4a4r 1641 rows (0 new) 0s
+DONE hobson nvfp4 1641 rows (0 new) 0s
+all done 0.09795856475830078
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 3784.07it/s]
+loaded ck/v1/final.pt {'norm_mode': 'rms', 'head': 'HypHead', 'lora_scale': 2.0}
+v1 bf16 0/1641 1s
+v1 bf16 100/1641 17s
+v1 bf16 200/1641 35s
+v1 bf16 300/1641 53s
+v1 bf16 400/1641 70s
+v1 bf16 500/1641 89s
+v1 bf16 600/1641 108s
+v1 bf16 700/1641 130s
+v1 bf16 800/1641 153s
+v1 bf16 900/1641 170s
+v1 bf16 1000/1641 189s
+v1 bf16 1100/1641 210s
+v1 bf16 1200/1641 228s
+v1 bf16 1300/1641 240s
+v1 bf16 1400/1641 263s
+v1 bf16 1500/1641 280s
+v1 bf16 1600/1641 290s
+DONE v1 bf16 1641 rows (1641 new) 294s
+v1 w4a4 0/1641 2s
+v1 w4a4 100/1641 27s
+v1 w4a4 200/1641 54s
+v1 w4a4 300/1641 82s
+v1 w4a4 400/1641 109s
+v1 w4a4 500/1641 139s
+v1 w4a4 600/1641 168s
+v1 w4a4 700/1641 202s
+v1 w4a4 800/1641 237s
+v1 w4a4 900/1641 264s
+v1 w4a4 1000/1641 294s
+v1 w4a4 1100/1641 355s
+v1 w4a4 1200/1641 417s
+v1 w4a4 1300/1641 458s
+v1 w4a4 1400/1641 509s
+v1 w4a4 1500/1641 535s
+v1 w4a4 1600/1641 551s
+DONE v1 w4a4 1641 rows (1641 new) 556s
+v1 w4a4r 0/1641 2s
+v1 w4a4r 100/1641 37s
+v1 w4a4r 200/1641 74s
+v1 w4a4r 300/1641 112s
+v1 w4a4r 400/1641 149s
+v1 w4a4r 500/1641 190s
+v1 w4a4r 600/1641 230s
+v1 w4a4r 700/1641 277s
+v1 w4a4r 800/1641 325s
+v1 w4a4r 900/1641 361s
+v1 w4a4r 1000/1641 403s
+v1 w4a4r 1100/1641 447s
+v1 w4a4r 1200/1641 486s
+v1 w4a4r 1300/1641 511s
+v1 w4a4r 1400/1641 560s
+v1 w4a4r 1500/1641 595s
+v1 w4a4r 1600/1641 617s
+DONE v1 w4a4r 1641 rows (1641 new) 624s
+v1 nvfp4 0/1641 1s
+v1 nvfp4 100/1641 34s
+v1 nvfp4 200/1641 69s
+v1 nvfp4 300/1641 106s
+v1 nvfp4 400/1641 141s
+v1 nvfp4 500/1641 181s
+v1 nvfp4 600/1641 219s
+v1 nvfp4 700/1641 264s
+v1 nvfp4 800/1641 310s
+v1 nvfp4 900/1641 345s
+v1 nvfp4 1000/1641 384s
+v1 nvfp4 1100/1641 427s
+v1 nvfp4 1200/1641 464s
+v1 nvfp4 1300/1641 489s
+v1 nvfp4 1400/1641 535s
+v1 nvfp4 1500/1641 569s
+v1 nvfp4 1600/1641 590s
+DONE v1 nvfp4 1641 rows (1641 new) 597s
+all done 2070.8176321983337
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 4212.93it/s]
+DONE hobson bf16 1641 rows (0 new) 0s
+DONE hobson w4a4 1641 rows (0 new) 0s
+DONE hobson w4a4r 1641 rows (0 new) 0s
+DONE hobson nvfp4 1641 rows (0 new) 0s
+all done 0.10936784744262695
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 4324.54it/s]
+loaded ck/v1/final.pt {'norm_mode': 'rms', 'head': 'HypHead', 'lora_scale': 2.0} merged
+DONE v1 bf16 1641 rows (0 new) 0s
+DONE v1 w4a4 1641 rows (0 new) 0s
+DONE v1 w4a4r 1641 rows (0 new) 0s
+DONE v1 nvfp4 1641 rows (0 new) 0s
+all done 0.0981597900390625
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 3722.70it/s]
+loaded ck/v2/final.pt {'norm_mode': 'l2s', 'head': 'HypHead', 'lora_scale': 2.0} unmerged LoRA
+v2 bf16 0/1641 1s
+v2 bf16 100/1641 21s
+v2 bf16 200/1641 42s
+v2 bf16 300/1641 65s
+v2 bf16 400/1641 86s
+v2 bf16 500/1641 111s
+v2 bf16 600/1641 134s
+v2 bf16 700/1641 161s
+v2 bf16 800/1641 189s
+v2 bf16 900/1641 210s
+v2 bf16 1000/1641 234s
+v2 bf16 1100/1641 260s
+v2 bf16 1200/1641 283s
+v2 bf16 1300/1641 298s
+v2 bf16 1400/1641 326s
+v2 bf16 1500/1641 347s
+v2 bf16 1600/1641 360s
+DONE v2 bf16 1641 rows (1641 new) 364s
+v2 w4a4 0/1641 2s
+v2 w4a4 100/1641 28s
+v2 w4a4 200/1641 55s
+v2 w4a4 300/1641 83s
+v2 w4a4 400/1641 111s
+v2 w4a4 500/1641 142s
+v2 w4a4 600/1641 171s
+v2 w4a4 700/1641 207s
+v2 w4a4 800/1641 286s
+v2 w4a4 900/1641 346s
+v2 w4a4 1000/1641 415s
+v2 w4a4 1100/1641 488s
+v2 w4a4 1200/1641 552s
+v2 w4a4 1300/1641 594s
+v2 w4a4 1400/1641 676s
+v2 w4a4 1500/1641 734s
+v2 w4a4 1600/1641 769s
+DONE v2 w4a4 1641 rows (1641 new) 779s
+v2 w4a4r 0/1641 5s
+v2 w4a4r 100/1641 81s
+v2 w4a4r 200/1641 160s
+v2 w4a4r 300/1641 243s
+v2 w4a4r 400/1641 323s
+v2 w4a4r 500/1641 413s
+v2 w4a4r 600/1641 498s
+v2 w4a4r 700/1641 600s
+v2 w4a4r 800/1641 703s
+v2 w4a4r 900/1641 782s
+v2 w4a4r 1000/1641 871s
+v2 w4a4r 1100/1641 967s
+v2 w4a4r 1200/1641 1050s
+v2 w4a4r 1300/1641 1105s
+v2 w4a4r 1400/1641 1211s
+v2 w4a4r 1500/1641 1287s
+v2 w4a4r 1600/1641 1333s
+DONE v2 w4a4r 1641 rows (1641 new) 1346s
+v2 nvfp4 0/1641 2s
+v2 nvfp4 100/1641 77s
+v2 nvfp4 200/1641 156s
+v2 nvfp4 300/1641 240s
+v2 nvfp4 400/1641 320s
+v2 nvfp4 500/1641 410s
+v2 nvfp4 600/1641 497s
+v2 nvfp4 700/1641 599s
+v2 nvfp4 800/1641 703s
+v2 nvfp4 900/1641 782s
+v2 nvfp4 1000/1641 872s
+v2 nvfp4 1100/1641 966s
+v2 nvfp4 1200/1641 1004s
+v2 nvfp4 1300/1641 1029s
+v2 nvfp4 1400/1641 1076s
+v2 nvfp4 1500/1641 1111s
+v2 nvfp4 1600/1641 1132s
+DONE v2 nvfp4 1641 rows (1641 new) 1139s
+all done 3628.7251834869385
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 4278.20it/s]
+loaded ck/v2/final.pt {'norm_mode': 'l2s', 'head': 'HypHead', 'lora_scale': 2.0} unmerged LoRA
+DONE v2 bf16 1641 rows (0 new) 0s
+DONE v2 w4a4 1641 rows (0 new) 0s
+DONE v2 w4a4r 1641 rows (0 new) 0s
+DONE v2 nvfp4 1641 rows (0 new) 0s
+all done 0.0973825454711914
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 4002.60it/s]
+loaded ck/qat/final.pt {'norm_mode': 'rms', 'head': 'StdHead', 'lora_scale': 2.0} unmerged LoRA
+qat w4a4 0/1641 2s
+qat w4a4 100/1641 28s
+qat w4a4 200/1641 54s
+qat w4a4 300/1641 82s
+qat w4a4 400/1641 109s
+qat w4a4 500/1641 139s
+qat w4a4 600/1641 168s
+qat w4a4 700/1641 203s
+qat w4a4 800/1641 237s
+qat w4a4 900/1641 264s
+qat w4a4 1000/1641 294s
+qat w4a4 1100/1641 326s
+qat w4a4 1200/1641 354s
+qat w4a4 1300/1641 373s
+qat w4a4 1400/1641 409s
+qat w4a4 1500/1641 435s
+qat w4a4 1600/1641 451s
+DONE qat w4a4 1641 rows (1641 new) 456s
+qat bf16 0/1641 0s
+qat bf16 100/1641 20s
+qat bf16 200/1641 41s
+qat bf16 300/1641 63s
+qat bf16 400/1641 83s
+qat bf16 500/1641 107s
+qat bf16 600/1641 130s
+qat bf16 700/1641 156s
+qat bf16 800/1641 183s
+qat bf16 900/1641 204s
+qat bf16 1000/1641 227s
+qat bf16 1100/1641 252s
+qat bf16 1200/1641 275s
+qat bf16 1300/1641 289s
+qat bf16 1400/1641 317s
+qat bf16 1500/1641 337s
+qat bf16 1600/1641 350s
+DONE qat bf16 1641 rows (1641 new) 354s
+all done 809.3599469661713
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 3564.90it/s]
+loaded ck/qatnv/final.pt {'norm_mode': 'rms', 'head': 'StdHead', 'lora_scale': 2.0} unmerged LoRA
+qatnv nvfp4 0/1641 1s
+qatnv nvfp4 100/1641 35s
+qatnv nvfp4 200/1641 70s
+qatnv nvfp4 300/1641 106s
+qatnv nvfp4 400/1641 141s
+qatnv nvfp4 500/1641 181s
+qatnv nvfp4 600/1641 219s
+qatnv nvfp4 700/1641 265s
+qatnv nvfp4 800/1641 310s
+qatnv nvfp4 900/1641 345s
+qatnv nvfp4 1000/1641 385s
+qatnv nvfp4 1100/1641 427s
+qatnv nvfp4 1200/1641 464s
+qatnv nvfp4 1300/1641 489s
+qatnv nvfp4 1400/1641 536s
+qatnv nvfp4 1500/1641 570s
+qatnv nvfp4 1600/1641 591s
+DONE qatnv nvfp4 1641 rows (1641 new) 598s
+qatnv bf16 0/1641 0s
+qatnv bf16 100/1641 20s
+qatnv bf16 200/1641 41s
+qatnv bf16 300/1641 63s
+qatnv bf16 400/1641 83s
+qatnv bf16 500/1641 107s
+qatnv bf16 600/1641 130s
+qatnv bf16 700/1641 156s
+qatnv bf16 800/1641 183s
+qatnv bf16 900/1641 204s
+qatnv bf16 1000/1641 228s
+qatnv bf16 1100/1641 253s
+qatnv bf16 1200/1641 275s
+qatnv bf16 1300/1641 289s
+qatnv bf16 1400/1641 317s
+qatnv bf16 1500/1641 337s
+qatnv bf16 1600/1641 350s
+DONE qatnv bf16 1641 rows (1641 new) 354s
+all done 951.6557304859161
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 4197.85it/s]
+hobson bf16 0/165 1s
+hobson bf16 100/165 47s
+DONE hobson bf16 165 rows (165 new) 74s
+hobson nvfp4 0/165 1s
+hobson nvfp4 100/165 94s
+DONE hobson nvfp4 165 rows (165 new) 150s
+all done 224.04420232772827
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 3637.05it/s]
+loaded ck/v1/final.pt {'norm_mode': 'rms', 'head': 'HypHead', 'lora_scale': 2.0} merged
+v1 bf16 0/165 1s
+v1 bf16 100/165 46s
+DONE v1 bf16 165 rows (165 new) 73s
+v1 nvfp4 0/165 1s
+v1 nvfp4 100/165 94s
+DONE v1 nvfp4 165 rows (165 new) 150s
+all done 223.6519660949707
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 3980.16it/s]
+hobson nvfp4r 0/1641 2s
+hobson nvfp4r 100/1641 45s
+hobson nvfp4r 200/1641 89s
+hobson nvfp4r 300/1641 136s
+hobson nvfp4r 400/1641 181s
+hobson nvfp4r 500/1641 232s
+hobson nvfp4r 600/1641 281s
+hobson nvfp4r 700/1641 338s
+hobson nvfp4r 800/1641 397s
+hobson nvfp4r 900/1641 442s
+hobson nvfp4r 1000/1641 492s
+hobson nvfp4r 1100/1641 547s
+hobson nvfp4r 1200/1641 594s
+hobson nvfp4r 1300/1641 626s
+hobson nvfp4r 1400/1641 686s
+hobson nvfp4r 1500/1641 729s
+hobson nvfp4r 1600/1641 756s
+DONE hobson nvfp4r 1641 rows (1641 new) 764s
+all done 764.0922124385834
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 3769.76it/s]
+loaded ck/v1x2/final.pt {'norm_mode': 'rms', 'head': 'HypHead', 'lora_scale': 2.0} unmerged LoRA
+v1x2 bf16 0/1641 1s
+v1x2 bf16 100/1641 21s
+v1x2 bf16 200/1641 41s
+v1x2 bf16 300/1641 63s
+v1x2 bf16 400/1641 84s
+v1x2 bf16 500/1641 108s
+v1x2 bf16 600/1641 130s
+v1x2 bf16 700/1641 157s
+v1x2 bf16 800/1641 184s
+v1x2 bf16 900/1641 205s
+v1x2 bf16 1000/1641 228s
+v1x2 bf16 1100/1641 253s
+v1x2 bf16 1200/1641 276s
+v1x2 bf16 1300/1641 290s
+v1x2 bf16 1400/1641 318s
+v1x2 bf16 1500/1641 338s
+v1x2 bf16 1600/1641 351s
+DONE v1x2 bf16 1641 rows (1641 new) 355s
+v1x2 nvfp4 0/1641 1s
+v1x2 nvfp4 100/1641 34s
+v1x2 nvfp4 200/1641 69s
+v1x2 nvfp4 300/1641 106s
+v1x2 nvfp4 400/1641 141s
+v1x2 nvfp4 500/1641 181s
+v1x2 nvfp4 600/1641 219s
+v1x2 nvfp4 700/1641 264s
+v1x2 nvfp4 800/1641 310s
+v1x2 nvfp4 900/1641 345s
+v1x2 nvfp4 1000/1641 384s
+v1x2 nvfp4 1100/1641 427s
+v1x2 nvfp4 1200/1641 464s
+v1x2 nvfp4 1300/1641 489s
+v1x2 nvfp4 1400/1641 536s
+v1x2 nvfp4 1500/1641 569s
+v1x2 nvfp4 1600/1641 591s
+DONE v1x2 nvfp4 1641 rows (1641 new) 597s
+all done 952.2109656333923
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 3984.63it/s]
+loaded ck/qatnv/final.pt {'norm_mode': 'rms', 'head': 'StdHead', 'lora_scale': 2.0} unmerged LoRA
+qatnv nvfp4-qb16 0/1641 2s
+qatnv nvfp4-qb16 100/1641 37s
+qatnv nvfp4-qb16 200/1641 74s
+qatnv nvfp4-qb16 300/1641 113s
+qatnv nvfp4-qb16 400/1641 152s
+qatnv nvfp4-qb16 500/1641 196s
+qatnv nvfp4-qb16 600/1641 238s
+qatnv nvfp4-qb16 700/1641 290s
+qatnv nvfp4-qb16 800/1641 340s
+qatnv nvfp4-qb16 900/1641 377s
+qatnv nvfp4-qb16 1000/1641 419s
+qatnv nvfp4-qb16 1100/1641 464s
+qatnv nvfp4-qb16 1200/1641 503s
+qatnv nvfp4-qb16 1300/1641 530s
+qatnv nvfp4-qb16 1400/1641 579s
+qatnv nvfp4-qb16 1500/1641 615s
+qatnv nvfp4-qb16 1600/1641 639s
+DONE qatnv nvfp4-qb16 1641 rows (1641 new) 646s
+all done 645.9054284095764
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 3955.41it/s]
+loaded ck/v1/final.pt {'norm_mode': 'rms', 'head': 'HypHead', 'lora_scale': 2.0} merged
+v1 nvfp4-qb16 0/1641 2s
+v1 nvfp4-qb16 100/1641 37s
+v1 nvfp4-qb16 200/1641 73s
+v1 nvfp4-qb16 300/1641 112s
+v1 nvfp4-qb16 400/1641 150s
+v1 nvfp4-qb16 500/1641 194s
+v1 nvfp4-qb16 600/1641 235s
+v1 nvfp4-qb16 700/1641 286s
+v1 nvfp4-qb16 800/1641 335s
+v1 nvfp4-qb16 900/1641 372s
+v1 nvfp4-qb16 1000/1641 414s
+v1 nvfp4-qb16 1100/1641 458s
+v1 nvfp4-qb16 1200/1641 497s
+v1 nvfp4-qb16 1300/1641 523s
+v1 nvfp4-qb16 1400/1641 573s
+v1 nvfp4-qb16 1500/1641 608s
+v1 nvfp4-qb16 1600/1641 631s
+DONE v1 nvfp4-qb16 1641 rows (1641 new) 638s
+all done 638.1442034244537
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 4090.94it/s]
+loaded ck/v2/final.pt {'norm_mode': 'l2s', 'head': 'HypHead', 'lora_scale': 2.0} unmerged LoRA
+v2 w4a4r-qb16 0/1641 3s
+v2 w4a4r-qb16 100/1641 39s
+v2 w4a4r-qb16 200/1641 77s
+v2 w4a4r-qb16 300/1641 116s
+v2 w4a4r-qb16 400/1641 156s
+v2 w4a4r-qb16 500/1641 200s
+v2 w4a4r-qb16 600/1641 243s
+v2 w4a4r-qb16 700/1641 295s
+v2 w4a4r-qb16 800/1641 346s
+v2 w4a4r-qb16 900/1641 383s
+v2 w4a4r-qb16 1000/1641 426s
+v2 w4a4r-qb16 1100/1641 472s
+v2 w4a4r-qb16 1200/1641 511s
+v2 w4a4r-qb16 1300/1641 538s
+v2 w4a4r-qb16 1400/1641 589s
+v2 w4a4r-qb16 1500/1641 625s
+v2 w4a4r-qb16 1600/1641 648s
+DONE v2 w4a4r-qb16 1641 rows (1641 new) 655s
+all done 655.4817624092102

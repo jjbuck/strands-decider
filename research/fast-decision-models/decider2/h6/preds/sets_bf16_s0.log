@@ -1,0 +1,18 @@
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 3718.04it/s]
+mem after build 8.87
+model built bf16 sets  fold ba16 False aclip4 0.9
+questions 2756 groups 473
+204 11s
+448 65s
+607 83s
+842 107s
+1002 124s
+1252 151s
+1402 171s
+1676 193s
+1978 231s
+2116 243s
+2200 258s
+2400 289s
+2600 319s
+done 2756 337s

@@ -1,0 +1,26 @@
+03:37:45 args {"mode": "scale", "init": "~/work/q3/gptq4.pt", "seed_ck": "", "lr": 0.001, "tokens": 1500000.0, "accum": 4, "warm": 10, "l2sp": 100.0, "factored": 1, "w_hid": 0.5, "maxtok": 5000, "maxq": 8, "max_rows": 7000, "p_v5": 0.2, "dev_every": 750000.0, "ndev": 100, "ck": "/home/ubuntu/work/q3/ck_scale", "seed": 0, "reg": 1.0, "reg_warm": 0.2, "beta0": 20.0, "beta1": 2.0, "qrow_ab": 0, "pmap": "", "mem_gb": 21.0, "curve": "", "run": ""}
+03:37:45 pool 10116 dev 100 dev tasks 15 v5 12557
+03:37:48 student ready code params 0.6M mem 5.2GB
+03:38:45 dev refs 100 questions 366
+03:39:40 DEV {"n": 366, "flips": 0.05191256830601093, "tv": 0.07151638378536766, "kl": 0.02530561627732982, "n_sd": 96, "agree_sd": 0.8958333333333334, "nflip": 19, "code_change": 0.0, "step": 0, "tokens": 0, "t": 55.4, "drift": 0.0}
+03:39:45 new best t0M
+03:41:13 step 10 tok 0.11M kl 0.0438 hid 0.0610 q/mb 3.0 lr 9.90e-04 1296 tok/s mem 7.8GB
+03:42:12 step 20 tok 0.20M kl 0.0397 hid 0.0627 q/mb 1.9 lr 9.65e-04 1361 tok/s mem 7.9GB
+03:43:16 step 30 tok 0.29M kl 0.0326 hid 0.0647 q/mb 3.1 lr 9.20e-04 1390 tok/s mem 7.9GB
+03:44:18 step 40 tok 0.38M kl 0.0233 hid 0.0625 q/mb 2.8 lr 8.70e-04 1405 tok/s mem 7.9GB
+03:45:30 step 50 tok 0.49M kl 0.0273 hid 0.0617 q/mb 2.6 lr 7.88e-04 1425 tok/s mem 8.0GB
+03:46:40 step 60 tok 0.60M kl 0.0318 hid 0.0581 q/mb 2.8 lr 7.03e-04 1438 tok/s mem 8.0GB
+03:47:47 step 70 tok 0.70M kl 0.0228 hid 0.0625 q/mb 2.6 lr 6.12e-04 1447 tok/s mem 8.0GB
+03:49:22 DEV {"n": 366, "flips": 0.05737704918032787, "tv": 0.05596342627811526, "kl": 0.01833703925691881, "n_sd": 96, "agree_sd": 0.90625, "nflip": 21, "code_change": 0.0, "step": 77, "tokens": 756815, "t": 54.1, "drift": 0.0}
+03:49:47 new best t1M
+03:50:03 step 80 tok 0.78M kl 0.0209 hid 0.0594 q/mb 2.6 lr 5.29e-04 1263 tok/s mem 8.0GB
+03:51:02 step 90 tok 0.87M kl 0.0338 hid 0.0595 q/mb 2.1 lr 4.52e-04 1282 tok/s mem 8.0GB
+03:52:12 step 100 tok 0.97M kl 0.0270 hid 0.0609 q/mb 2.9 lr 3.63e-04 1301 tok/s mem 8.0GB drift 0.0000
+03:53:23 step 110 tok 1.08M kl 0.0173 hid 0.0607 q/mb 3.4 lr 2.72e-04 1319 tok/s mem 8.0GB
+03:54:39 step 120 tok 1.19M kl 0.0226 hid 0.0586 q/mb 2.5 lr 1.94e-04 1336 tok/s mem 8.0GB
+03:55:38 step 130 tok 1.28M kl 0.0263 hid 0.0577 q/mb 2.7 lr 1.50e-04 1346 tok/s mem 8.0GB
+03:56:43 step 140 tok 1.38M kl 0.0184 hid 0.0581 q/mb 3.0 lr 1.17e-04 1354 tok/s mem 8.0GB
+03:57:52 step 150 tok 1.48M kl 0.0320 hid 0.0572 q/mb 2.8 lr 1.01e-04 1363 tok/s mem 8.0GB
+03:59:05 DEV {"n": 366, "flips": 0.06284153005464481, "tv": 0.05352305858319656, "kl": 0.016072138384262243, "n_sd": 96, "agree_sd": 0.9375, "nflip": 23, "code_change": 0.0, "step": 152, "tokens": 1510104, "t": 54.5, "drift": 0.0}
+03:59:29 new best t2M
+03:59:29 done 1510104

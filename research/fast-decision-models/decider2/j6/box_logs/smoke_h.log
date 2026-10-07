@@ -1,0 +1,7 @@
+pool 10284 v5 100449 hold ['UserAskedForHuman', 'WrapsUp', 'cc_insists', 'cc_refuses', 'details_match', 'failure_cause', 'states_amount']
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 3889.07it/s]
+/home/ubuntu/work/j6/train_h.py:136: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /__w/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:820.)
+  stats['kl_' + src] += float(kl); cnt['kl_' + src] += 1
+{"upd": 1, "pi": 2, "vi": 3, "t": 2, "tok_s": 4114, "mem": 13.1, "lr": 1.0333333333333333e-05, "kl_pool": 0.5093, "agree_pool": 0.4286, "ce_v5": 1.7795, "acc_v5": 0.3333, "tacc_v5": 1.0, "kl_v5": 1.1853, "agree_v5": 0.3333, "hid": 0.7856}
+done 3 6.203336715698242

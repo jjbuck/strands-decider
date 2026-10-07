@@ -1,0 +1,29 @@
+== ft_S60_slot init S60_slot cfg Cfg({'scale': 'S60', 'arm': 'slot', 'd': 768, 'L': 9, 'H': 12, 'Hkv': 2, 'hd': 64, 'ffn': 2304, 'mon_ffn': 8704, 'kind': 'slot', 'k': 2, 'S': 16, 'T': 128, 'nb': 0})
+step 100 probe 0.7597 squad 1.4845 13s
+step 200 probe 0.7626 squad 1.4691 22s
+step 300 probe 0.7252 squad 1.4227 32s
+step 400 probe 0.7177 squad 1.4474 42s
+step 500 probe 0.7415 squad 1.4185 51s
+step 600 probe 0.8008 squad 1.4847 61s
+step 700 probe 0.7754 squad 1.4400 71s
+step 800 probe 0.7078 squad 1.4488 80s
+EVAL step 800: probe acc 0.500 flip 0.000 distract-flip 0.000 | squad acc 0.235 (n 600) | official CF-probe (fits 1k) acc 0.500 flip 0.000 n_pairs 21 | by kind {'amount_vs_limit': 0.0, 'amount_vs_limit_distract': 0.0, 'date_order': 0.0, 'date_order_distract': 0.0, 'id_match': 0.0, 'id_match_distract': 0.0, 'status_equal': 0.0, 'status_equal_distract': 0.0}
+step 900 probe 0.7138 squad 1.4201 96s
+step 1000 probe 0.6977 squad 1.4071 105s
+step 1100 probe 0.7175 squad 1.4351 115s
+step 1200 probe 0.7121 squad 1.4154 125s
+step 1300 probe 0.7063 squad 1.4065 134s
+step 1400 probe 0.7030 squad 1.4066 144s
+step 1500 probe 0.7061 squad 1.3991 154s
+step 1600 probe 0.6999 squad 1.3991 163s
+EVAL step 1600: probe acc 0.500 flip 0.000 distract-flip 0.000 | squad acc 0.250 (n 600) | official CF-probe (fits 1k) acc 0.500 flip 0.000 n_pairs 21 | by kind {'amount_vs_limit': 0.0, 'amount_vs_limit_distract': 0.0, 'date_order': 0.0, 'date_order_distract': 0.0, 'id_match': 0.0, 'id_match_distract': 0.0, 'status_equal': 0.0, 'status_equal_distract': 0.0}
+step 1700 probe 0.7005 squad 1.3978 175s
+step 1800 probe 0.6989 squad 1.3901 185s
+step 1900 probe 0.6940 squad 1.3927 195s
+step 2000 probe 0.6968 squad 1.3926 204s
+step 2100 probe 0.6949 squad 1.3882 214s
+step 2200 probe 0.6961 squad 1.3897 224s
+step 2300 probe 0.6961 squad 1.3896 233s
+step 2400 probe 0.6957 squad 1.3874 243s
+EVAL step 2400: probe acc 0.500 flip 0.000 distract-flip 0.000 | squad acc 0.252 (n 1500) | official CF-probe (fits 1k) acc 0.500 flip 0.000 n_pairs 21 | by kind {'amount_vs_limit': 0.0, 'amount_vs_limit_distract': 0.0, 'date_order': 0.0, 'date_order_distract': 0.0, 'id_match': 0.0, 'id_match_distract': 0.0, 'status_equal': 0.0, 'status_equal_distract': 0.0}
+DONE ft_S60_slot 4.1 min

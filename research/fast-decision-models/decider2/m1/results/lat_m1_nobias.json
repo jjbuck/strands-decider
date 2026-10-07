@@ -1,0 +1,95 @@
+{
+ "meta": {
+  "gpu": "NVIDIA A10G",
+  "reps": 20,
+  "torch": "2.14.1+cu130",
+  "ckpt": "",
+  "aug": 0,
+  "head_dim": 128,
+  "note": "bf16 lean2/TTL fused kernels, CUDA graph, exact T, fresh banking states per rep"
+ },
+ "Q1_T64_m1S": {
+  "median": 15.0,
+  "p95": 15.01,
+  "min": 15.0,
+  "n": 20,
+  "q_tokens": 93
+ },
+ "Q1_T64_m1B": {
+  "median": 23.86,
+  "p95": 23.87,
+  "min": 23.85,
+  "n": 20,
+  "q_tokens": 93
+ },
+ "Q1_T256_m1S": {
+  "median": 25.16,
+  "p95": 25.17,
+  "min": 25.15,
+  "n": 20,
+  "q_tokens": 93
+ },
+ "Q1_T256_m1B": {
+  "median": 29.5,
+  "p95": 29.51,
+  "min": 29.49,
+  "n": 20,
+  "q_tokens": 93
+ },
+ "Q1_T1000_m1S": {
+  "median": 56.38,
+  "p95": 56.42,
+  "min": 56.32,
+  "n": 20,
+  "q_tokens": 93
+ },
+ "Q1_T1000_m1B": {
+  "median": 67.41,
+  "p95": 67.48,
+  "min": 67.34,
+  "n": 20,
+  "q_tokens": 93
+ },
+ "Q1_T4000_m1S": {
+  "median": 210.58,
+  "p95": 210.71,
+  "min": 210.43,
+  "n": 20,
+  "q_tokens": 93
+ },
+ "Q1_T4000_m1B": {
+  "median": 232.39,
+  "p95": 232.54,
+  "min": 232.18,
+  "n": 20,
+  "q_tokens": 93
+ },
+ "Q4_T64_m1B": {
+  "median": 47.95,
+  "p95": 47.97,
+  "min": 47.94,
+  "n": 20,
+  "q_tokens": 364
+ },
+ "Q4_T256_m1B": {
+  "median": 53.91,
+  "p95": 53.93,
+  "min": 53.89,
+  "n": 20,
+  "q_tokens": 364
+ },
+ "Q4_T1000_m1B": {
+  "median": 93.39,
+  "p95": 93.43,
+  "min": 93.36,
+  "n": 20,
+  "q_tokens": 364
+ },
+ "Q4_T4000_m1B": {
+  "median": 265.01,
+  "p95": 265.12,
+  "min": 264.86,
+  "n": 20,
+  "q_tokens": 364
+ }
+}

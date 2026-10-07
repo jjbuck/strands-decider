@@ -1,0 +1,83 @@
+panel,id,name,size,latency_ms_at_1000,value
+"JB-all accuracy (JevBench, 231 tasks) · all configurations",hobson,"hobson-v19, bf16 fused runtime",2B,57.1,0.7229
+"JB-all accuracy (JevBench, 231 tasks) · all configurations",P1,"W8A8 + rotation + GPTQ, 8 GEMMs bf16",2B,36.317,0.7229
+"JB-all accuracy (JevBench, 231 tasks) · all configurations",P2,W4A4 + rotation + GPTQ,2B,23.418,0.7143
+"JB-all accuracy (JevBench, 231 tasks) · all configurations",P2a,W4A4 with 48 GEMMs at W8A8,2B,29.18,0.7316
+"JB-all accuracy (JevBench, 231 tasks) · all configurations",P2b,"W4A4, 64 GEMMs W8A8, question rows bf16 (H6)",2B,40.4,0.7229
+"JB-all accuracy (JevBench, 231 tasks) · all configurations",P3,"W4A16 weight-only, GPTQ g128",2B,68.4134,0.7446
+"JB-all accuracy (JevBench, 231 tasks) · all configurations",P9,"natively ternary BitNet 2B, W1.58A8",2B,48.3,0.619
+"JB-all accuracy (JevBench, 231 tasks) · all configurations",R1,W8A8 + always exit at layer 16,2B,24.079,0.7273
+"JB-all accuracy (JevBench, 231 tasks) · all configurations",R1a,W8A8 + always exit at layer 8,2B,12.035,0.4589
+"JB-all accuracy (JevBench, 231 tasks) · all configurations",R2a,depth split DT-A8: state rows 8 of 24 layers,2B,33.0,0.684
+"JB-all accuracy (JevBench, 231 tasks) · all configurations",R2b,"depth split DT-set12: 12 layers, options as a set",2B,42.7,0.6883
+"JB-all accuracy (JevBench, 231 tasks) · all configurations",R2c,"depth split at 16 layers, untrained",2B,50.2,0.7359
+"JB-all accuracy (JevBench, 231 tasks) · all configurations",A1,"T5Gemma 2B encoder, masked state cache (e1b)",2B,86.4053,0.6883
+"JB-all accuracy (JevBench, 231 tasks) · all configurations",A1a,"T5Gemma 2B encoder, state sees question (e1a)",2B,86.4053,0.6883
+"JB-all accuracy (JevBench, 231 tasks) · all configurations",A2,"bidirectional GDN, masked state cache",2B,64.8,0.7446
+"JB-all accuracy (JevBench, 231 tasks) · all configurations",A2a,"bidirectional GDN, state sees question",2B,64.8,0.7403
+"JB-all accuracy (JevBench, 231 tasks) · all configurations",A6,precompiled deployment documents + compile adapter (J9 s400),2B,39.2,0.7273
+"JB-all accuracy (JevBench, 231 tasks) · all configurations",A7,"64k super-token vocabulary, 1,100 updates (J7 TL)",2B,27.8395,0.7056
+"JB-all accuracy (JevBench, 231 tasks) · all configurations",A7a,"16k super-token vocabulary, 400 updates (J7 T16k)",2B,37.3862,0.6926
+"JB-all accuracy (JevBench, 231 tasks) · all configurations",A8,value-identity and structure channels (J7 V),2B,57.3902,0.7229
+"JB-all accuracy (JevBench, 231 tasks) · all configurations",A9,exact-relation module (J12 xr),2B,57.9545,0.7186
+"JB-all accuracy (JevBench, 231 tasks) · all configurations",A10,"decision pretraining + fine-tune, 12k rows (J4 b)",2B,57.1,0.671
+"JB-all accuracy (JevBench, 231 tasks) · all configurations",A11,"slot model, 114M from scratch (J11 M_slot)",small,5.53,0.3333
+"JB-all accuracy (JevBench, 231 tasks) · all configurations",A11a,"decoder, 114M from scratch (J11 M_dec)",small,13.3,0.2987
+"JB-all accuracy (JevBench, 231 tasks) · all configurations",P10,"row role: state rows W4A4, question rows W8A8 (Q2 deployed kernels)",2B,26.34,0.7273
+"JB-all accuracy (JevBench, 231 tasks) · all configurations",P11,"k64rr: 64 most sensitive GEMMs W8A8, other 32 row role (Q2 deployed kernels)",2B,31.89,0.7229
+"JB-all accuracy (JevBench, 231 tasks) · all configurations",B4,W4A4 + decision-level scales + 20M-token QAT (Q3),2B,23.418,0.7056
+"JB-all accuracy (JevBench, 231 tasks) · all configurations",B11a,"W8A8 + decision-aware int4 2:4 on state rows, layers 14-23 (Q5)",2B,31.7,0.7273
+"JB-all accuracy (JevBench, 231 tasks) · all configurations",B11b,"W8A8 + decision-aware int8 2:4 on state rows, layers 12-22 (Q5)",2B,32.35,0.7273
+"JB-all accuracy (JevBench, 231 tasks) · all configurations",B12,W8A8 + 60% of layer 12-23 MLP neurons removed by decision saliency (Q5),2B,30.7,0.7316
+"JB-all accuracy (JevBench, 231 tasks) · all configurations",B13,"W8A8 + exact eliminations (layer 23 K/V only, layer-0 table) (Q4)",2B,34.8,0.7316
+"JB-all accuracy (JevBench, 231 tasks) · all configurations",M1,"all-attention hobson, 2.3M tokens of training (M1 d3)",2B,56.54,0.645
+"JB-all accuracy (JevBench, 231 tasks) · all configurations",M2,"segment-isolated state, depth 12, global question readers, 4.1 h training (M2 N k12)",2B,34.8,0.6926
+"JB-all accuracy (JevBench, 231 tasks) · all configurations",M2a,"constants isolated, depth 12 (M2 C k12)",2B,33.1,0.697
+"JB-all accuracy (JevBench, 231 tasks) · all configurations",M2b,"constants isolated, depth 8 (M2 C k8)",2B,28.7,0.6537
+"JB-all accuracy (JevBench, 231 tasks) · all configurations",M2c,"segment-isolated state, depth 8 (M2 N k8, 2.6 h)",2B,29.8,0.6494
+"JB-all accuracy (JevBench, 231 tasks) · all configurations",C1,"k64rr + layer-16 exit cascade (Q2, box q2b, deployed kernels)",2B,23.77,0.7273
+"JB-all accuracy (JevBench, 231 tasks) · all configurations",HW1a,"Sapphire Rapids AMX, 16 cores",2B,577.0,0.7229
+"JB-all accuracy (JevBench, 231 tasks) · all configurations",E1,"hobson + detail augmentation, Qwen tokens (J7 C)",2B,57.1,0.7186
+"JB-all accuracy (JevBench, 231 tasks) · all configurations",E1a,"hobson + detail augmentation, LoRA (J12 ctl)",2B,57.1,0.7143
+"JB-all accuracy (JevBench, 231 tasks) · all configurations",E2,this-that-model-1.0,2B,57.1,0.6667
+JB-all Brier score (lower is better) · all configurations,hobson,"hobson-v19, bf16 fused runtime",2B,57.1,0.3479
+JB-all Brier score (lower is better) · all configurations,P1,"W8A8 + rotation + GPTQ, 8 GEMMs bf16",2B,36.317,0.3471
+JB-all Brier score (lower is better) · all configurations,P2,W4A4 + rotation + GPTQ,2B,23.418,0.3809
+JB-all Brier score (lower is better) · all configurations,P2a,W4A4 with 48 GEMMs at W8A8,2B,29.18,0.3508
+JB-all Brier score (lower is better) · all configurations,P2b,"W4A4, 64 GEMMs W8A8, question rows bf16 (H6)",2B,40.4,0.349
+JB-all Brier score (lower is better) · all configurations,P3,"W4A16 weight-only, GPTQ g128",2B,68.4134,0.351
+JB-all Brier score (lower is better) · all configurations,P9,"natively ternary BitNet 2B, W1.58A8",2B,48.3,0.464
+JB-all Brier score (lower is better) · all configurations,R1,W8A8 + always exit at layer 16,2B,24.079,0.3543
+JB-all Brier score (lower is better) · all configurations,R1a,W8A8 + always exit at layer 8,2B,12.035,0.5996
+JB-all Brier score (lower is better) · all configurations,R2a,depth split DT-A8: state rows 8 of 24 layers,2B,33.0,0.4127
+JB-all Brier score (lower is better) · all configurations,R2b,"depth split DT-set12: 12 layers, options as a set",2B,42.7,0.3601
+JB-all Brier score (lower is better) · all configurations,R2c,"depth split at 16 layers, untrained",2B,50.2,0.3468
+JB-all Brier score (lower is better) · all configurations,A1,"T5Gemma 2B encoder, masked state cache (e1b)",2B,86.4053,0.3975
+JB-all Brier score (lower is better) · all configurations,A1a,"T5Gemma 2B encoder, state sees question (e1a)",2B,86.4053,0.3944
+JB-all Brier score (lower is better) · all configurations,A2,"bidirectional GDN, masked state cache",2B,64.8,0.3345
+JB-all Brier score (lower is better) · all configurations,A2a,"bidirectional GDN, state sees question",2B,64.8,0.3326
+JB-all Brier score (lower is better) · all configurations,A6,precompiled deployment documents + compile adapter (J9 s400),2B,39.2,0.3486
+JB-all Brier score (lower is better) · all configurations,A7,"64k super-token vocabulary, 1,100 updates (J7 TL)",2B,27.8395,0.3721
+JB-all Brier score (lower is better) · all configurations,A7a,"16k super-token vocabulary, 400 updates (J7 T16k)",2B,37.3862,0.3769
+JB-all Brier score (lower is better) · all configurations,A8,value-identity and structure channels (J7 V),2B,57.3902,0.3639
+JB-all Brier score (lower is better) · all configurations,A9,exact-relation module (J12 xr),2B,57.9545,0.3612
+JB-all Brier score (lower is better) · all configurations,A10,"decision pretraining + fine-tune, 12k rows (J4 b)",2B,57.1,0.4122
+JB-all Brier score (lower is better) · all configurations,A11,"slot model, 114M from scratch (J11 M_slot)",small,5.53,0.6746
+JB-all Brier score (lower is better) · all configurations,A11a,"decoder, 114M from scratch (J11 M_dec)",small,13.3,0.6831
+JB-all Brier score (lower is better) · all configurations,P10,"row role: state rows W4A4, question rows W8A8 (Q2 deployed kernels)",2B,26.34,0.3538
+JB-all Brier score (lower is better) · all configurations,P11,"k64rr: 64 most sensitive GEMMs W8A8, other 32 row role (Q2 deployed kernels)",2B,31.89,0.3479
+JB-all Brier score (lower is better) · all configurations,B4,W4A4 + decision-level scales + 20M-token QAT (Q3),2B,23.418,0.3807
+JB-all Brier score (lower is better) · all configurations,B11a,"W8A8 + decision-aware int4 2:4 on state rows, layers 14-23 (Q5)",2B,31.7,0.3482
+JB-all Brier score (lower is better) · all configurations,B11b,"W8A8 + decision-aware int8 2:4 on state rows, layers 12-22 (Q5)",2B,32.35,0.3502
+JB-all Brier score (lower is better) · all configurations,B12,W8A8 + 60% of layer 12-23 MLP neurons removed by decision saliency (Q5),2B,30.7,0.3473
+JB-all Brier score (lower is better) · all configurations,B13,"W8A8 + exact eliminations (layer 23 K/V only, layer-0 table) (Q4)",2B,34.8,0.3487
+JB-all Brier score (lower is better) · all configurations,M1,"all-attention hobson, 2.3M tokens of training (M1 d3)",2B,56.54,0.4347
+JB-all Brier score (lower is better) · all configurations,M2,"segment-isolated state, depth 12, global question readers, 4.1 h training (M2 N k12)",2B,34.8,0.3849
+JB-all Brier score (lower is better) · all configurations,M2a,"constants isolated, depth 12 (M2 C k12)",2B,33.1,0.3707
+JB-all Brier score (lower is better) · all configurations,M2b,"constants isolated, depth 8 (M2 C k8)",2B,28.7,0.4396
+JB-all Brier score (lower is better) · all configurations,M2c,"segment-isolated state, depth 8 (M2 N k8, 2.6 h)",2B,29.8,0.446
+JB-all Brier score (lower is better) · all configurations,C1,"k64rr + layer-16 exit cascade (Q2, box q2b, deployed kernels)",2B,23.77,0.3539
+JB-all Brier score (lower is better) · all configurations,HW1a,"Sapphire Rapids AMX, 16 cores",2B,577.0,0.3487
+JB-all Brier score (lower is better) · all configurations,E1,"hobson + detail augmentation, Qwen tokens (J7 C)",2B,57.1,0.3604
+JB-all Brier score (lower is better) · all configurations,E1a,"hobson + detail augmentation, LoRA (J12 ctl)",2B,57.1,0.3535
+JB-all Brier score (lower is better) · all configurations,E2,this-that-model-1.0,2B,57.1,0.5558

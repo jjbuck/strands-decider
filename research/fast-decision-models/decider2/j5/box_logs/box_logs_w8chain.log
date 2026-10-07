@@ -1,0 +1,40 @@
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 3817.48it/s]
+layer 0 2s
+layer 1 4s
+layer 2 6s
+layer 3 8s
+layer 4 10s
+layer 5 12s
+layer 6 14s
+layer 7 16s
+layer 8 18s
+layer 9 20s
+layer 10 22s
+layer 11 24s
+layer 12 25s
+layer 13 27s
+layer 14 29s
+layer 15 31s
+layer 16 34s
+layer 17 36s
+layer 18 38s
+layer 19 40s
+layer 20 42s
+layer 21 44s
+layer 22 46s
+layer 23 47s
+saved
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 3685.22it/s]
+h2 400 25s
+h2 800 59s
+h2 1200 98s
+h2 1600 176s
+h2 2000 254s
+h2 2400 286s
+h2 2800 326s
+h2 3200 364s
+done h2 3227 366s
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 3853.74it/s]
+j5 400 82s
+j5 800 173s
+j5 1200 276s

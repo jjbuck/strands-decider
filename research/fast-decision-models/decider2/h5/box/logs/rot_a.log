@@ -1,0 +1,14 @@
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 3886.80it/s]
+train requests 6823 dev 120
+step 0 dev {"flips": 14, "n": 120, "flip_rate": 0.1167, "tv": 0.0904, "kl": 0.0462}
+/home/ubuntu/work/h5/h5rot.py:75: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /__w/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:820.)
+  acc['kl'] += float(kl); acc['hid'] += float(hl); acc['n'] += 1
+{"step": 1, "kl": 0.05509452149271965, "hid": 0.07896006107330322, "t": 9, "lr": 5.676190476190476e-06, "orth_err": 3.5762786865234375e-06, "dR": 0.0003, "mem": 7.5}
+{"step": 5, "kl": 0.026489845127798617, "hid": 0.0808132691308856, "t": 57, "lr": 1.657142857142857e-05, "orth_err": 9.5367431640625e-07, "dR": 0.0018, "mem": 7.5}
+{"step": 10, "kl": 0.030267387349158525, "hid": 0.07748544402420521, "t": 117, "lr": 1.866666666666667e-05, "orth_err": 7.152557373046875e-07, "dR": 0.0041, "mem": 7.5}
+{"step": 15, "kl": 0.03890979172865627, "hid": 0.07783019468188286, "t": 192, "lr": 1.8e-05, "orth_err": 8.344650268554688e-07, "dR": 0.0057, "mem": 7.5}
+{"step": 20, "kl": 0.02877296940423548, "hid": 0.07853620313107967, "t": 248, "lr": 1.7333333333333336e-05, "orth_err": 8.940696716308594e-07, "dR": 0.0069, "mem": 7.5}
+{"step": 25, "kl": 0.038283579098060724, "hid": 0.07883164510130883, "t": 301, "lr": 1.6666666666666667e-05, "orth_err": 8.344650268554688e-07, "dR": 0.008, "mem": 7.5}
+dev 25 {"flips": 9, "n": 120, "flip_rate": 0.075, "tv": 0.0951, "kl": 0.0448}
+{"step": 30, "kl": 0.03769086799584329, "hid": 0.07858399972319603, "t": 504, "lr": 1.6000000000000003e-05, "orth_err": 8.344650268554688e-07, "dR": 0.0088, "mem": 7.5}

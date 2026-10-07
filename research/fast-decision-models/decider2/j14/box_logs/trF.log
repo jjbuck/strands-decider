@@ -1,0 +1,28 @@
+pool 10491 dev 120 dev tasks 18 v5 12557
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 3693.61it/s]
+DEV {"n": 378, "n_sd": 107, "agree": 0.9126984126984127, "agree_sd": 0.794392523364486, "tv": 0.06089350644489208, "sd_proc": 0.8125, "n_proc": 48, "sd_other": 0.7796610169491526, "step": 0, "t": 114.17676019668579}
+/home/ubuntu/work/j14/j14train.py:133: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /__w/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:820.)
+  return w * (kl + a.w_hid * hid), float(kl), float(hid)
+step 10 kl 0.0145 hid 0.0187 lr 9.92e-05 61s mem 7.5GB
+step 20 kl 0.0084 hid 0.0111 lr 9.65e-05 113s mem 7.5GB
+step 30 kl 0.0070 hid 0.0093 lr 9.20e-05 165s mem 7.5GB
+step 40 kl 0.0048 hid 0.0083 lr 8.58e-05 215s mem 7.5GB
+step 50 kl 0.0035 hid 0.0074 lr 7.83e-05 263s mem 7.5GB
+DEV {"n": 378, "n_sd": 107, "agree": 0.9656084656084656, "agree_sd": 0.9252336448598131, "tv": 0.028531459893750413, "sd_proc": 0.8958333333333334, "n_proc": 48, "sd_other": 0.9491525423728814, "step": 50, "t": 70.63917875289917}
+new best 50
+step 60 kl 0.0031 hid 0.0079 lr 6.98e-05 387s mem 7.5GB
+step 70 kl 0.0055 hid 0.0069 lr 6.06e-05 439s mem 7.5GB
+step 80 kl 0.0033 hid 0.0059 lr 5.12e-05 487s mem 7.5GB
+step 90 kl 0.0048 hid 0.0058 lr 4.20e-05 543s mem 7.5GB
+step 100 kl 0.0041 hid 0.0058 lr 3.33e-05 596s mem 7.5GB
+DEV {"n": 378, "n_sd": 107, "agree": 0.9814814814814815, "agree_sd": 0.9532710280373832, "tv": 0.025771612472704084, "sd_proc": 0.9166666666666666, "n_proc": 48, "sd_other": 0.9830508474576272, "step": 100, "t": 70.40852332115173}
+new best 100
+step 110 kl 0.0050 hid 0.0059 lr 2.56e-05 722s mem 7.5GB
+step 120 kl 0.0037 hid 0.0056 lr 1.92e-05 778s mem 7.5GB
+step 130 kl 0.0092 hid 0.0059 lr 1.43e-05 830s mem 7.5GB
+step 140 kl 0.0057 hid 0.0063 lr 1.12e-05 890s mem 7.5GB
+step 150 kl 0.0028 hid 0.0057 lr 1.00e-05 938s mem 7.5GB
+DEV {"n": 378, "n_sd": 107, "agree": 0.9761904761904762, "agree_sd": 0.9626168224299065, "tv": 0.024035223510865338, "sd_proc": 0.9583333333333334, "n_proc": 48, "sd_other": 0.9661016949152542, "step": 150, "t": 70.35603523254395}
+new best 150
+done

@@ -1,0 +1,12 @@
+{"suite": "REAL-agree", "id": "4adb54f48f64362b", "q": "cc_asked_for_human", "T": 1937, "kind": "noul", "probs": {"false": 0.8563905954360962, "true": 0.14360937476158142}, "logits": [-0.03025, -1.81588]}
+{"suite": "REAL-agree", "id": "4adb54f48f64362b", "q": "cc_insists", "T": 1922, "kind": "noul", "probs": {"false": 0.5438879728317261, "true": 0.4561120867729187}, "logits": [-0.6159, -0.79191]}
+{"suite": "REAL-agree", "id": "4adb54f48f64362b", "q": "cc_offers_transfer", "T": 1943, "kind": "noul", "probs": {"false": 0.8122476935386658, "true": 0.187752366065979}, "logits": [-0.14326, -1.60794]}
+{"suite": "REAL-agree", "id": "4adb54f48f64362b", "q": "cc_refuses", "T": 1938, "kind": "noul", "probs": {"false": 0.8538280725479126, "true": 0.1461719572544098}, "logits": [0.57875, -1.18619]}
+{"suite": "REAL-agree", "id": "424b39d9f1f39542", "q": "cc_can_still_help", "T": 1680, "kind": "noul", "probs": {"false": 0.3739345371723175, "true": 0.6260654330253601}, "logits": [-0.17821, 0.33717]}
+{"suite": "REAL-agree", "id": "424b39d9f1f39542", "q": "cc_offers_transfer", "T": 1667, "kind": "noul", "probs": {"false": 0.8800233602523804, "true": 0.11997658014297485}, "logits": [0.78045, -1.2122]}
+{"suite": "REAL-agree", "id": "424b39d9f1f39542", "q": "cc_procedure_found", "T": 1676, "kind": "noul", "probs": {"false": 0.5804657340049744, "true": 0.41953426599502563}, "logits": [0.84223, 0.51755]}
+{"suite": "REAL-agree", "id": "424b39d9f1f39542", "q": "cc_refuses", "T": 1662, "kind": "noul", "probs": {"false": 0.2784869372844696, "true": 0.721513032913208}, "logits": [0.1809, 1.13288]}
+{"suite": "REAL-agree", "id": "e266911233236926", "q": "cc_can_still_help", "T": 3769, "kind": "noul", "probs": {"false": 0.24151884019374847, "true": 0.7584811449050903}, "logits": [-0.52021, 0.62416]}
+{"suite": "REAL-agree", "id": "e266911233236926", "q": "cc_claims_done", "T": 3762, "kind": "noul", "probs": {"false": 0.802996039390564, "true": 0.19700397551059723}, "logits": [0.66582, -0.73931]}
+{"suite": "REAL-agree", "id": "e266911233236926", "q": "cc_insists", "T": 3735, "kind": "noul", "probs": {"false": 0.644359290599823, "true": 0.3556407690048218}, "logits": [-0.53161, -1.12594]}
+{"suite": "REAL-agree", "id": "e266911233236926", "q": "cc_refuses", "T": 3751, "kind": "noul", "probs": {"false": 0.8726654052734375, "true": 0.12733455002307892}, "logits": [0.88218, -1.04255]}

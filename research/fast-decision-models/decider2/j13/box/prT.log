@@ -1,0 +1,23 @@
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 4102.84it/s]
+0 210 CF-probe 2687 6s 483 tok/s mem 6.7G
+10 210 CF-probe 4220 53s 561 tok/s mem 9.7G
+20 210 CF-probe 3159 120s 561 tok/s mem 9.7G
+30 210 CF-probe 3021 175s 563 tok/s mem 10.3G
+40 210 CF-probe 3629 226s 563 tok/s mem 10.3G
+50 210 CF-probe 1339 273s 565 tok/s mem 10.3G
+60 210 CF-probe 3684 313s 566 tok/s mem 10.7G
+70 210 CF-probe 4006 374s 565 tok/s mem 10.7G
+80 210 CF-probe 2712 427s 564 tok/s mem 10.7G
+90 210 CF-probe 2845 474s 565 tok/s mem 11.7G
+100 210 CF-probe 3128 521s 566 tok/s mem 11.8G
+110 210 CF-probe 3201 553s 567 tok/s mem 11.8G
+120 210 CF-probe 2283 609s 566 tok/s mem 11.8G
+130 210 CF-probe 3096 657s 566 tok/s mem 11.8G
+140 210 CF-probe 2027 705s 566 tok/s mem 11.8G
+150 210 CF-probe 2791 735s 567 tok/s mem 11.8G
+160 210 CF-probe 990 759s 567 tok/s mem 11.8G
+170 210 CF-probe 2614 800s 567 tok/s mem 11.8G
+180 210 CF-probe 2756 826s 567 tok/s mem 11.8G
+190 210 CF-probe 3081 852s 568 tok/s mem 11.8G
+200 210 CF-probe 1375 879s 569 tok/s mem 11.8G
+done

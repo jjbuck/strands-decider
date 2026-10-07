@@ -1,0 +1,1586 @@
+{
+ "base_T256": {
+  "stage_eager": {
+   "stages": {
+    "G:gate_up": {
+     "ms": 5.842,
+     "n": 24,
+     "n_lt_sm": 0,
+     "ms_lt_sm": 0.0
+    },
+    "G:in_gdn": {
+     "ms": 2.954,
+     "n": 18,
+     "n_lt_sm": 18,
+     "ms_lt_sm": 2.954
+    },
+    "G:down": {
+     "ms": 2.943,
+     "n": 24,
+     "n_lt_sm": 24,
+     "ms_lt_sm": 2.943
+    },
+    "S:add_rms": {
+     "ms": 1.667,
+     "n": 480,
+     "n_lt_sm": 192,
+     "ms_lt_sm": 0.528
+    },
+    "S:gdn_chunk": {
+     "ms": 1.386,
+     "n": 198,
+     "n_lt_sm": 72,
+     "ms_lt_sm": 0.769
+    },
+    "S:gdn_gnorm": {
+     "ms": 1.085,
+     "n": 234,
+     "n_lt_sm": 36,
+     "ms_lt_sm": 0.052
+    },
+    "G:out": {
+     "ms": 1.068,
+     "n": 24,
+     "n_lt_sm": 24,
+     "ms_lt_sm": 1.068
+    },
+    "S:silu_mul": {
+     "ms": 0.814,
+     "n": 48,
+     "n_lt_sm": 0,
+     "ms_lt_sm": 0.0
+    },
+    "G:in_attn": {
+     "ms": 0.727,
+     "n": 6,
+     "n_lt_sm": 0,
+     "ms_lt_sm": 0.0
+    },
+    "S:attn_prep": {
+     "ms": 0.63,
+     "n": 216,
+     "n_lt_sm": 96,
+     "ms_lt_sm": 0.175
+    },
+    "S:gdn_glue": {
+     "ms": 0.373,
+     "n": 144,
+     "n_lt_sm": 144,
+     "ms_lt_sm": 0.373
+    },
+    "S:attn_sdpa": {
+     "ms": 0.27,
+     "n": 12,
+     "n_lt_sm": 0,
+     "ms_lt_sm": 0.0
+    },
+    "S:gdn_conv": {
+     "ms": 0.175,
+     "n": 18,
+     "n_lt_sm": 0,
+     "ms_lt_sm": 0.0
+    },
+    "S:embed_rope": {
+     "ms": 0.051,
+     "n": 17,
+     "n_lt_sm": 11,
+     "ms_lt_sm": 0.025
+    },
+    "S:attn_gate": {
+     "ms": 0.032,
+     "n": 6,
+     "n_lt_sm": 0,
+     "ms_lt_sm": 0.0
+    }
+   },
+   "gemm": {
+    "G:in_gdn": {
+     "ms": 2.954,
+     "tflops": 52.5
+    },
+    "G:in_attn": {
+     "ms": 0.727,
+     "tflops": 44.3
+    },
+    "G:out": {
+     "ms": 1.068,
+     "tflops": 48.3
+    },
+    "G:gate_up": {
+     "ms": 5.842,
+     "tflops": 52.9
+    },
+    "G:down": {
+     "ms": 2.943,
+     "tflops": 52.5
+    }
+   },
+   "gemm_ms": 13.53,
+   "nongemm_ms": 6.48,
+   "top_kernels": [
+    [
+     "G:gate_up | ampere_bf16_s1688gemm_bf16_128x128_ldg8_f2f_stages_32x1_tn",
+     5.842
+    ],
+    [
+     "G:in_gdn | ampere_bf16_s16816gemm_bf16_256x128_ldg8_f2f_stages_32x3_tn",
+     2.954
+    ],
+    [
+     "G:down | ampere_bf16_s16816gemm_bf16_128x64_ldg8_f2f_stages_64x4_tn",
+     2.943
+    ],
+    [
+     "G:out | ampere_bf16_s16816gemm_bf16_128x64_ldg8_f2f_stages_64x4_tn",
+     1.068
+    ],
+    [
+     "G:in_attn | ampere_bf16_s16816gemm_bf16_256x128_ldg8_f2f_stages_32x3_tn",
+     0.727
+    ],
+    [
+     "S:silu_mul | void at::native::elementwise_kernel<128, 4, at::native::gpu_kernel_impl_nocast<at::native::Binary",
+     0.465
+    ],
+    [
+     "S:add_rms | void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl_nocast<at::native::BinaryF",
+     0.409
+    ],
+    [
+     "S:gdn_chunk | chunk_gated_delta_rule_fwd_kkt_solve_kernel",
+     0.385
+    ],
+    [
+     "S:silu_mul | void at::native::elementwise_kernel<128, 4, at::native::gpu_kernel_impl_nocast<at::native::(anony",
+     0.35
+    ],
+    [
+     "S:add_rms | void at::native::reduce_kernel<512, 1, at::native::ReduceOp<float, at::native::MeanOps<float, floa",
+     0.319
+    ],
+    [
+     "S:gdn_gnorm | void at::native::unrolled_elementwise_kernel<at::native::direct_copy_kernel_cuda(at::TensorItera",
+     0.256
+    ],
+    [
+     "S:gdn_chunk | void at::native::elementwise_kernel<128, 4, at::native::gpu_kernel_impl_nocast<at::native::direc",
+     0.255
+    ],
+    [
+     "S:add_rms | void at::native::unrolled_elementwise_kernel<at::native::direct_copy_kernel_cuda(at::TensorIterato",
+     0.248
+    ],
+    [
+     "S:gdn_chunk | chunk_fwd_kernel_o",
+     0.224
+    ],
+    [
+     "S:gdn_chunk | chunk_gated_delta_rule_fwd_kernel_h_blockdim64",
+     0.213
+    ],
+    [
+     "S:add_rms | void at::native::vectorized_elementwise_kernel<4, at::native::CUDAFunctor_add<c10::BFloat16>, std:",
+     0.208
+    ],
+    [
+     "S:attn_sdpa | void pytorch_flash::flash_fwd_splitkv_kernel<Flash_fwd_kernel_traits<256, 64, 64, 4, false, fals",
+     0.179
+    ],
+    [
+     "S:gdn_conv | causal_conv1d_fwd_kernel",
+     0.175
+    ],
+    [
+     "S:gdn_gnorm | void at::native::unrolled_elementwise_kernel<at::native::BinaryFunctor<float, float, float, at::",
+     0.158
+    ],
+    [
+     "S:add_rms | void at::native::vectorized_elementwise_kernel<4, at::native::(anonymous namespace)::pow_tensor_sc",
+     0.145
+    ],
+    [
+     "S:gdn_gnorm | void at::native::elementwise_kernel<128, 4, at::native::gpu_kernel_impl_nocast<at::native::direc",
+     0.142
+    ],
+    [
+     "S:add_rms | void at::native::vectorized_elementwise_kernel<4, at::native::CUDAFunctorOnSelf_add<float>, std::a",
+     0.138
+    ],
+    [
+     "S:gdn_chunk | recompute_w_u_fwd_kernel",
+     0.138
+    ],
+    [
+     "S:attn_prep | void at::native::elementwise_kernel<128, 4, at::native::gpu_kernel_impl_nocast<at::native::Binar",
+     0.134
+    ],
+    [
+     "S:add_rms | void at::native::vectorized_elementwise_kernel<4, at::native::bfloat16_copy_kernel_cuda(at::Tensor",
+     0.129
+    ],
+    [
+     "S:gdn_chunk | l2norm_fwd_kernel",
+     0.112
+    ],
+    [
+     "S:gdn_gnorm | void at::native::reduce_kernel<512, 1, at::native::ReduceOp<float, at::native::MeanOps<float, fl",
+     0.095
+    ],
+    [
+     "S:gdn_gnorm | void at::native::vectorized_elementwise_kernel<4, at::native::bfloat16_copy_kernel_cuda(at::Tens",
+     0.095
+    ],
+    [
+     "S:attn_sdpa | void pytorch_flash::flash_fwd_splitkv_combine_kernel<Flash_fwd_kernel_traits<256, 64, 64, 4, fal",
+     0.091
+    ],
+    [
+     "S:attn_prep | void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl_nocast<at::native::Binar",
+     0.085
+    ]
+   ]
+  },
+  "graph": {
+   "kernels": 1475,
+   "busy_ms": 19.51,
+   "span_ms": 19.57,
+   "gaps_ms": 0.112,
+   "eager_kernels": 1469,
+   "seq_match": true
+  },
+  "stage_graph": {
+   "stages": {
+    "G:gate_up": {
+     "ms": 5.837,
+     "n": 24,
+     "n_lt_sm": 0,
+     "ms_lt_sm": 0.0
+    },
+    "G:in_gdn": {
+     "ms": 2.954,
+     "n": 18,
+     "n_lt_sm": 18,
+     "ms_lt_sm": 2.954
+    },
+    "G:down": {
+     "ms": 2.923,
+     "n": 24,
+     "n_lt_sm": 24,
+     "ms_lt_sm": 2.923
+    },
+    "S:add_rms": {
+     "ms": 1.508,
+     "n": 480,
+     "n_lt_sm": 192,
+     "ms_lt_sm": 0.462
+    },
+    "S:gdn_chunk": {
+     "ms": 1.315,
+     "n": 198,
+     "n_lt_sm": 72,
+     "ms_lt_sm": 0.749
+    },
+    "G:out": {
+     "ms": 1.058,
+     "n": 24,
+     "n_lt_sm": 24,
+     "ms_lt_sm": 1.058
+    },
+    "S:gdn_gnorm": {
+     "ms": 1.026,
+     "n": 234,
+     "n_lt_sm": 36,
+     "ms_lt_sm": 0.047
+    },
+    "S:silu_mul": {
+     "ms": 0.764,
+     "n": 48,
+     "n_lt_sm": 0,
+     "ms_lt_sm": 0.0
+    },
+    "G:in_attn": {
+     "ms": 0.734,
+     "n": 6,
+     "n_lt_sm": 0,
+     "ms_lt_sm": 0.0
+    },
+    "S:attn_prep": {
+     "ms": 0.558,
+     "n": 216,
+     "n_lt_sm": 96,
+     "ms_lt_sm": 0.155
+    },
+    "S:gdn_glue": {
+     "ms": 0.314,
+     "n": 144,
+     "n_lt_sm": 144,
+     "ms_lt_sm": 0.314
+    },
+    "S:attn_sdpa": {
+     "ms": 0.255,
+     "n": 12,
+     "n_lt_sm": 0,
+     "ms_lt_sm": 0.0
+    },
+    "S:gdn_conv": {
+     "ms": 0.184,
+     "n": 18,
+     "n_lt_sm": 0,
+     "ms_lt_sm": 0.0
+    },
+    "S:embed_rope": {
+     "ms": 0.049,
+     "n": 17,
+     "n_lt_sm": 11,
+     "ms_lt_sm": 0.023
+    },
+    "S:attn_gate": {
+     "ms": 0.029,
+     "n": 6,
+     "n_lt_sm": 0,
+     "ms_lt_sm": 0.0
+    }
+   },
+   "gemm": {
+    "G:in_gdn": {
+     "ms": 2.954,
+     "tflops": 52.5
+    },
+    "G:in_attn": {
+     "ms": 0.734,
+     "tflops": 43.9
+    },
+    "G:out": {
+     "ms": 1.058,
+     "tflops": 48.7
+    },
+    "G:gate_up": {
+     "ms": 5.837,
+     "tflops": 53.0
+    },
+    "G:down": {
+     "ms": 2.923,
+     "tflops": 52.9
+    }
+   },
+   "gemm_ms": 13.51,
+   "nongemm_ms": 6.0,
+   "top_kernels": [
+    [
+     "G:gate_up | ampere_bf16_s1688gemm_bf16_128x128_ldg8_f2f_stages_32x1_tn",
+     5.837
+    ],
+    [
+     "G:in_gdn | ampere_bf16_s16816gemm_bf16_256x128_ldg8_f2f_stages_32x3_tn",
+     2.954
+    ],
+    [
+     "G:down | ampere_bf16_s16816gemm_bf16_128x64_ldg8_f2f_stages_64x4_tn",
+     2.923
+    ],
+    [
+     "G:out | ampere_bf16_s16816gemm_bf16_128x64_ldg8_f2f_stages_64x4_tn",
+     1.058
+    ],
+    [
+     "G:in_attn | ampere_bf16_s16816gemm_bf16_256x128_ldg8_f2f_stages_32x3_tn",
+     0.734
+    ],
+    [
+     "S:silu_mul | void at::native::elementwise_kernel<128, 4, at::native::gpu_kernel_impl_nocast<at::native::Binary",
+     0.441
+    ],
+    [
+     "S:gdn_chunk | chunk_gated_delta_rule_fwd_kkt_solve_kernel",
+     0.382
+    ],
+    [
+     "S:add_rms | void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl_nocast<at::native::BinaryF",
+     0.354
+    ],
+    [
+     "S:silu_mul | void at::native::elementwise_kernel<128, 4, at::native::gpu_kernel_impl_nocast<at::native::(anony",
+     0.323
+    ],
+    [
+     "S:add_rms | void at::native::reduce_kernel<512, 1, at::native::ReduceOp<float, at::native::MeanOps<float, floa",
+     0.268
+    ],
+    [
+     "S:gdn_gnorm | void at::native::unrolled_elementwise_kernel<at::native::direct_copy_kernel_cuda(at::TensorItera",
+     0.259
+    ],
+    [
+     "S:gdn_chunk | void at::native::elementwise_kernel<128, 4, at::native::gpu_kernel_impl_nocast<at::native::direc",
+     0.229
+    ],
+    [
+     "S:add_rms | void at::native::unrolled_elementwise_kernel<at::native::direct_copy_kernel_cuda(at::TensorIterato",
+     0.213
+    ],
+    [
+     "S:gdn_chunk | chunk_fwd_kernel_o",
+     0.212
+    ],
+    [
+     "S:gdn_chunk | chunk_gated_delta_rule_fwd_kernel_h_blockdim64",
+     0.208
+    ],
+    [
+     "S:add_rms | void at::native::vectorized_elementwise_kernel<4, at::native::CUDAFunctor_add<c10::BFloat16>, std:",
+     0.185
+    ],
+    [
+     "S:gdn_conv | causal_conv1d_fwd_kernel",
+     0.184
+    ],
+    [
+     "S:attn_sdpa | void pytorch_flash::flash_fwd_splitkv_kernel<Flash_fwd_kernel_traits<256, 64, 64, 4, false, fals",
+     0.165
+    ],
+    [
+     "S:gdn_gnorm | void at::native::unrolled_elementwise_kernel<at::native::BinaryFunctor<float, float, float, at::",
+     0.153
+    ],
+    [
+     "S:add_rms | void at::native::vectorized_elementwise_kernel<4, at::native::(anonymous namespace)::pow_tensor_sc",
+     0.152
+    ],
+    [
+     "S:add_rms | void at::native::vectorized_elementwise_kernel<4, at::native::bfloat16_copy_kernel_cuda(at::Tensor",
+     0.142
+    ],
+    [
+     "S:gdn_gnorm | void at::native::elementwise_kernel<128, 4, at::native::gpu_kernel_impl_nocast<at::native::direc",
+     0.13
+    ],
+    [
+     "S:gdn_chunk | recompute_w_u_fwd_kernel",
+     0.129
+    ],
+    [
+     "S:add_rms | void at::native::vectorized_elementwise_kernel<4, at::native::CUDAFunctorOnSelf_add<float>, std::a",
+     0.128
+    ],
+    [
+     "S:attn_prep | void at::native::elementwise_kernel<128, 4, at::native::gpu_kernel_impl_nocast<at::native::Binar",
+     0.119
+    ],
+    [
+     "S:gdn_chunk | l2norm_fwd_kernel",
+     0.103
+    ],
+    [
+     "S:attn_sdpa | void pytorch_flash::flash_fwd_splitkv_combine_kernel<Flash_fwd_kernel_traits<256, 64, 64, 4, fal",
+     0.091
+    ],
+    [
+     "S:gdn_gnorm | void at::native::vectorized_elementwise_kernel<4, at::native::bfloat16_copy_kernel_cuda(at::Tens",
+     0.087
+    ],
+    [
+     "S:gdn_gnorm | void at::native::reduce_kernel<512, 1, at::native::ReduceOp<float, at::native::MeanOps<float, fl",
+     0.079
+    ],
+    [
+     "S:gdn_gnorm | void at::native::elementwise_kernel<128, 4, at::native::gpu_kernel_impl_nocast<at::native::Binar",
+     0.076
+    ]
+   ]
+  },
+  "waves": {
+   "n": 1469,
+   "kernels_with_fewer_blocks_than_SMs": 617,
+   "their_ms": 8.69
+  },
+  "wall": {
+   "median": 19.44,
+   "p95": 19.46,
+   "n": 20
+  },
+  "bare_gemm": {
+   "G:in_gdn": {
+    "us": 192.9,
+    "tflops": 44.7
+   },
+   "G:in_attn": {
+    "us": 154.3,
+    "tflops": 34.8
+   },
+   "G:out": {
+    "us": 72.1,
+    "tflops": 29.8
+   },
+   "G:gate_up": {
+    "us": 273.2,
+    "tflops": 47.2
+   },
+   "G:down": {
+    "us": 149.5,
+    "tflops": 43.1
+   },
+   "isolated_sum_ms": 16.27,
+   "isolated_tflops": 43.2,
+   "graphed_skeleton_ms": 13.46,
+   "graphed_skeleton_tflops": 52.2
+  },
+  "model_tflops_wall": 36.1,
+  "frac_of_bare_skeleton": 0.692
+ },
+ "base_T1000": {
+  "stage_eager": {
+   "stages": {
+    "G:gate_up": {
+     "ms": 19.693,
+     "n": 24,
+     "n_lt_sm": 0,
+     "ms_lt_sm": 0.0
+    },
+    "G:in_gdn": {
+     "ms": 11.786,
+     "n": 18,
+     "n_lt_sm": 0,
+     "ms_lt_sm": 0.0
+    },
+    "S:add_rms": {
+     "ms": 9.638,
+     "n": 480,
+     "n_lt_sm": 192,
+     "ms_lt_sm": 1.12
+    },
+    "G:down": {
+     "ms": 9.626,
+     "n": 24,
+     "n_lt_sm": 0,
+     "ms_lt_sm": 0.0
+    },
+    "S:gdn_gnorm": {
+     "ms": 5.641,
+     "n": 234,
+     "n_lt_sm": 36,
+     "ms_lt_sm": 0.066
+    },
+    "S:gdn_chunk": {
+     "ms": 5.244,
+     "n": 198,
+     "n_lt_sm": 18,
+     "ms_lt_sm": 0.988
+    },
+    "G:out": {
+     "ms": 3.896,
+     "n": 24,
+     "n_lt_sm": 24,
+     "ms_lt_sm": 3.896
+    },
+    "S:silu_mul": {
+     "ms": 3.341,
+     "n": 48,
+     "n_lt_sm": 0,
+     "ms_lt_sm": 0.0
+    },
+    "G:in_attn": {
+     "ms": 1.979,
+     "n": 6,
+     "n_lt_sm": 0,
+     "ms_lt_sm": 0.0
+    },
+    "S:attn_prep": {
+     "ms": 1.953,
+     "n": 216,
+     "n_lt_sm": 48,
+     "ms_lt_sm": 0.079
+    },
+    "S:gdn_conv": {
+     "ms": 0.969,
+     "n": 18,
+     "n_lt_sm": 0,
+     "ms_lt_sm": 0.0
+    },
+    "S:attn_sdpa": {
+     "ms": 0.888,
+     "n": 6,
+     "n_lt_sm": 0,
+     "ms_lt_sm": 0.0
+    },
+    "S:gdn_glue": {
+     "ms": 0.363,
+     "n": 144,
+     "n_lt_sm": 144,
+     "ms_lt_sm": 0.363
+    },
+    "S:embed_rope": {
+     "ms": 0.209,
+     "n": 17,
+     "n_lt_sm": 9,
+     "ms_lt_sm": 0.032
+    },
+    "S:attn_gate": {
+     "ms": 0.13,
+     "n": 6,
+     "n_lt_sm": 0,
+     "ms_lt_sm": 0.0
+    }
+   },
+   "gemm": {
+    "G:in_gdn": {
+     "ms": 11.786,
+     "tflops": 51.4
+    },
+    "G:in_attn": {
+     "ms": 1.979,
+     "tflops": 63.6
+    },
+    "G:out": {
+     "ms": 3.896,
+     "tflops": 51.7
+    },
+    "G:gate_up": {
+     "ms": 19.693,
+     "tflops": 61.3
+    },
+    "G:down": {
+     "ms": 9.626,
+     "tflops": 62.7
+    }
+   },
+   "gemm_ms": 46.98,
+   "nongemm_ms": 28.38,
+   "top_kernels": [
+    [
+     "G:gate_up | void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8>(cutlas",
+     19.693
+    ],
+    [
+     "G:in_gdn | void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8>(cutlass",
+     11.786
+    ],
+    [
+     "G:down | ampere_bf16_s1688gemm_bf16_128x128_ldg8_f2f_tn",
+     9.626
+    ],
+    [
+     "G:out | ampere_bf16_s16816gemm_bf16_256x128_ldg8_f2f_stages_32x3_tn",
+     3.896
+    ],
+    [
+     "S:add_rms | void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl_nocast<at::native::BinaryF",
+     3.399
+    ],
+    [
+     "S:silu_mul | void at::native::elementwise_kernel<128, 4, at::native::gpu_kernel_impl_nocast<at::native::Binary",
+     1.987
+    ],
+    [
+     "G:in_attn | void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8>(cutlas",
+     1.979
+    ],
+    [
+     "S:add_rms | void at::native::vectorized_elementwise_kernel<4, at::native::(anonymous namespace)::pow_tensor_sc",
+     1.691
+    ],
+    [
+     "S:silu_mul | void at::native::elementwise_kernel<128, 4, at::native::gpu_kernel_impl_nocast<at::native::(anony",
+     1.354
+    ],
+    [
+     "S:add_rms | void at::native::unrolled_elementwise_kernel<at::native::direct_copy_kernel_cuda(at::TensorIterato",
+     1.234
+    ],
+    [
+     "S:gdn_chunk | void at::native::elementwise_kernel<128, 4, at::native::gpu_kernel_impl_nocast<at::native::direc",
+     1.144
+    ],
+    [
+     "S:add_rms | void at::native::vectorized_elementwise_kernel<4, at::native::bfloat16_copy_kernel_cuda(at::Tensor",
+     1.122
+    ],
+    [
+     "S:gdn_chunk | chunk_fwd_kernel_o",
+     1.116
+    ],
+    [
+     "S:add_rms | void at::native::vectorized_elementwise_kernel<4, at::native::CUDAFunctor_add<c10::BFloat16>, std:",
+     1.071
+    ],
+    [
+     "S:gdn_gnorm | void at::native::unrolled_elementwise_kernel<at::native::direct_copy_kernel_cuda(at::TensorItera",
+     0.997
+    ],
+    [
+     "S:gdn_chunk | chunk_gated_delta_rule_fwd_kernel_h_blockdim64",
+     0.988
+    ],
+    [
+     "S:gdn_conv | causal_conv1d_fwd_kernel",
+     0.969
+    ],
+    [
+     "S:attn_sdpa | void pytorch_flash::flash_fwd_kernel<Flash_fwd_kernel_traits<256, 64, 64, 4, false, false, cutla",
+     0.888
+    ],
+    [
+     "S:gdn_gnorm | void at::native::unrolled_elementwise_kernel<at::native::BinaryFunctor<float, float, float, at::",
+     0.842
+    ],
+    [
+     "S:gdn_gnorm | void at::native::vectorized_elementwise_kernel<4, at::native::bfloat16_copy_kernel_cuda(at::Tens",
+     0.835
+    ],
+    [
+     "S:add_rms | void at::native::reduce_kernel<512, 1, at::native::ReduceOp<float, at::native::MeanOps<float, floa",
+     0.823
+    ],
+    [
+     "S:gdn_chunk | recompute_w_u_fwd_kernel",
+     0.698
+    ],
+    [
+     "S:gdn_gnorm | void at::native::vectorized_elementwise_kernel<4, at::native::(anonymous namespace)::pow_tensor_",
+     0.635
+    ],
+    [
+     "S:gdn_gnorm | void at::native::vectorized_elementwise_kernel<4, at::native::(anonymous namespace)::silu_kernel",
+     0.634
+    ],
+    [
+     "S:gdn_chunk | l2norm_fwd_kernel",
+     0.622
+    ],
+    [
+     "S:gdn_gnorm | void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl_nocast<at::native::Binar",
+     0.586
+    ],
+    [
+     "S:gdn_chunk | chunk_gated_delta_rule_fwd_kkt_solve_kernel",
+     0.544
+    ],
+    [
+     "S:attn_prep | void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl_nocast<at::native::Binar",
+     0.469
+    ],
+    [
+     "S:gdn_gnorm | void at::native::reduce_kernel<512, 1, at::native::ReduceOp<float, at::native::MeanOps<float, fl",
+     0.376
+    ],
+    [
+     "S:gdn_gnorm | void at::native::elementwise_kernel<128, 4, at::native::gpu_kernel_impl_nocast<at::native::direc",
+     0.346
+    ]
+   ]
+  },
+  "graph": {
+   "kernels": 1487,
+   "busy_ms": 74.46,
+   "span_ms": 74.41,
+   "gaps_ms": 0.122,
+   "eager_kernels": 1463,
+   "seq_match": true
+  },
+  "stage_graph": {
+   "stages": {
+    "G:gate_up": {
+     "ms": 19.681,
+     "n": 24,
+     "n_lt_sm": 0,
+     "ms_lt_sm": 0.0
+    },
+    "G:in_gdn": {
+     "ms": 11.782,
+     "n": 18,
+     "n_lt_sm": 0,
+     "ms_lt_sm": 0.0
+    },
+    "G:down": {
+     "ms": 9.629,
+     "n": 24,
+     "n_lt_sm": 0,
+     "ms_lt_sm": 0.0
+    },
+    "S:add_rms": {
+     "ms": 9.296,
+     "n": 480,
+     "n_lt_sm": 192,
+     "ms_lt_sm": 0.967
+    },
+    "S:gdn_gnorm": {
+     "ms": 5.471,
+     "n": 234,
+     "n_lt_sm": 36,
+     "ms_lt_sm": 0.052
+    },
+    "S:gdn_chunk": {
+     "ms": 5.128,
+     "n": 198,
+     "n_lt_sm": 18,
+     "ms_lt_sm": 0.974
+    },
+    "G:out": {
+     "ms": 3.887,
+     "n": 24,
+     "n_lt_sm": 24,
+     "ms_lt_sm": 3.887
+    },
+    "S:silu_mul": {
+     "ms": 3.28,
+     "n": 48,
+     "n_lt_sm": 0,
+     "ms_lt_sm": 0.0
+    },
+    "G:in_attn": {
+     "ms": 1.978,
+     "n": 6,
+     "n_lt_sm": 0,
+     "ms_lt_sm": 0.0
+    },
+    "S:attn_prep": {
+     "ms": 1.84,
+     "n": 216,
+     "n_lt_sm": 48,
+     "ms_lt_sm": 0.069
+    },
+    "S:gdn_conv": {
+     "ms": 0.968,
+     "n": 18,
+     "n_lt_sm": 0,
+     "ms_lt_sm": 0.0
+    },
+    "S:attn_sdpa": {
+     "ms": 0.882,
+     "n": 6,
+     "n_lt_sm": 0,
+     "ms_lt_sm": 0.0
+    },
+    "S:gdn_glue": {
+     "ms": 0.294,
+     "n": 144,
+     "n_lt_sm": 144,
+     "ms_lt_sm": 0.294
+    },
+    "S:embed_rope": {
+     "ms": 0.203,
+     "n": 17,
+     "n_lt_sm": 9,
+     "ms_lt_sm": 0.029
+    },
+    "S:attn_gate": {
+     "ms": 0.127,
+     "n": 6,
+     "n_lt_sm": 0,
+     "ms_lt_sm": 0.0
+    }
+   },
+   "gemm": {
+    "G:in_gdn": {
+     "ms": 11.782,
+     "tflops": 51.5
+    },
+    "G:in_attn": {
+     "ms": 1.978,
+     "tflops": 63.6
+    },
+    "G:out": {
+     "ms": 3.887,
+     "tflops": 51.8
+    },
+    "G:gate_up": {
+     "ms": 19.681,
+     "tflops": 61.4
+    },
+    "G:down": {
+     "ms": 9.629,
+     "tflops": 62.7
+    }
+   },
+   "gemm_ms": 46.96,
+   "nongemm_ms": 27.49,
+   "top_kernels": [
+    [
+     "G:gate_up | void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8>(cutlas",
+     19.681
+    ],
+    [
+     "G:in_gdn | void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8>(cutlass",
+     11.782
+    ],
+    [
+     "G:down | ampere_bf16_s1688gemm_bf16_128x128_ldg8_f2f_tn",
+     9.629
+    ],
+    [
+     "G:out | ampere_bf16_s16816gemm_bf16_256x128_ldg8_f2f_stages_32x3_tn",
+     3.887
+    ],
+    [
+     "S:add_rms | void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl_nocast<at::native::BinaryF",
+     3.342
+    ],
+    [
+     "G:in_attn | void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8>(cutlas",
+     1.978
+    ],
+    [
+     "S:silu_mul | void at::native::elementwise_kernel<128, 4, at::native::gpu_kernel_impl_nocast<at::native::Binary",
+     1.951
+    ],
+    [
+     "S:add_rms | void at::native::vectorized_elementwise_kernel<4, at::native::(anonymous namespace)::pow_tensor_sc",
+     1.646
+    ],
+    [
+     "S:silu_mul | void at::native::elementwise_kernel<128, 4, at::native::gpu_kernel_impl_nocast<at::native::(anony",
+     1.329
+    ],
+    [
+     "S:add_rms | void at::native::unrolled_elementwise_kernel<at::native::direct_copy_kernel_cuda(at::TensorIterato",
+     1.207
+    ],
+    [
+     "S:gdn_chunk | chunk_fwd_kernel_o",
+     1.108
+    ],
+    [
+     "S:add_rms | void at::native::vectorized_elementwise_kernel<4, at::native::bfloat16_copy_kernel_cuda(at::Tensor",
+     1.091
+    ],
+    [
+     "S:gdn_chunk | void at::native::elementwise_kernel<128, 4, at::native::gpu_kernel_impl_nocast<at::native::direc",
+     1.08
+    ],
+    [
+     "S:add_rms | void at::native::vectorized_elementwise_kernel<4, at::native::CUDAFunctor_add<c10::BFloat16>, std:",
+     1.043
+    ],
+    [
+     "S:gdn_gnorm | void at::native::unrolled_elementwise_kernel<at::native::direct_copy_kernel_cuda(at::TensorItera",
+     0.978
+    ],
+    [
+     "S:gdn_chunk | chunk_gated_delta_rule_fwd_kernel_h_blockdim64",
+     0.974
+    ],
+    [
+     "S:gdn_conv | causal_conv1d_fwd_kernel",
+     0.968
+    ],
+    [
+     "S:attn_sdpa | void pytorch_flash::flash_fwd_kernel<Flash_fwd_kernel_traits<256, 64, 64, 4, false, false, cutla",
+     0.882
+    ],
+    [
+     "S:gdn_gnorm | void at::native::unrolled_elementwise_kernel<at::native::BinaryFunctor<float, float, float, at::",
+     0.832
+    ],
+    [
+     "S:gdn_gnorm | void at::native::vectorized_elementwise_kernel<4, at::native::bfloat16_copy_kernel_cuda(at::Tens",
+     0.808
+    ],
+    [
+     "S:add_rms | void at::native::reduce_kernel<512, 1, at::native::ReduceOp<float, at::native::MeanOps<float, floa",
+     0.738
+    ],
+    [
+     "S:gdn_chunk | recompute_w_u_fwd_kernel",
+     0.695
+    ],
+    [
+     "S:gdn_gnorm | void at::native::vectorized_elementwise_kernel<4, at::native::(anonymous namespace)::silu_kernel",
+     0.617
+    ],
+    [
+     "S:gdn_gnorm | void at::native::vectorized_elementwise_kernel<4, at::native::(anonymous namespace)::pow_tensor_",
+     0.614
+    ],
+    [
+     "S:gdn_chunk | l2norm_fwd_kernel",
+     0.614
+    ],
+    [
+     "S:gdn_gnorm | void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl_nocast<at::native::Binar",
+     0.581
+    ],
+    [
+     "S:gdn_chunk | chunk_gated_delta_rule_fwd_kkt_solve_kernel",
+     0.537
+    ],
+    [
+     "S:attn_prep | void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl_nocast<at::native::Binar",
+     0.454
+    ],
+    [
+     "S:gdn_gnorm | void at::native::reduce_kernel<512, 1, at::native::ReduceOp<float, at::native::MeanOps<float, fl",
+     0.352
+    ],
+    [
+     "S:gdn_gnorm | void at::native::elementwise_kernel<128, 4, at::native::gpu_kernel_impl_nocast<at::native::direc",
+     0.325
+    ]
+   ]
+  },
+  "waves": {
+   "n": 1463,
+   "kernels_with_fewer_blocks_than_SMs": 471,
+   "their_ms": 6.27
+  },
+  "wall": {
+   "median": 74.18,
+   "p95": 74.2,
+   "n": 20
+  },
+  "bare_gemm": {
+   "G:in_gdn": {
+    "us": 684.1,
+    "tflops": 49.2
+   },
+   "G:in_attn": {
+    "us": 357.4,
+    "tflops": 58.7
+   },
+   "G:out": {
+    "us": 189.3,
+    "tflops": 44.3
+   },
+   "G:gate_up": {
+    "us": 850.8,
+    "tflops": 59.2
+   },
+   "G:down": {
+    "us": 436.6,
+    "tflops": 57.6
+   },
+   "isolated_sum_ms": 49.9,
+   "isolated_tflops": 55.0,
+   "graphed_skeleton_ms": 46.71,
+   "graphed_skeleton_tflops": 58.8
+  },
+  "model_tflops_wall": 37.0,
+  "frac_of_bare_skeleton": 0.63
+ },
+ "base_T4000": {
+  "stage_eager": {
+   "stages": {
+    "G:gate_up": {
+     "ms": 77.059,
+     "n": 24,
+     "n_lt_sm": 0,
+     "ms_lt_sm": 0.0
+    },
+    "G:down": {
+     "ms": 45.053,
+     "n": 24,
+     "n_lt_sm": 0,
+     "ms_lt_sm": 0.0
+    },
+    "S:add_rms": {
+     "ms": 38.239,
+     "n": 480,
+     "n_lt_sm": 144,
+     "ms_lt_sm": 0.296
+    },
+    "G:in_gdn": {
+     "ms": 38.125,
+     "n": 18,
+     "n_lt_sm": 0,
+     "ms_lt_sm": 0.0
+    },
+    "S:gdn_gnorm": {
+     "ms": 21.91,
+     "n": 234,
+     "n_lt_sm": 36,
+     "ms_lt_sm": 0.081
+    },
+    "S:gdn_chunk": {
+     "ms": 19.779,
+     "n": 198,
+     "n_lt_sm": 18,
+     "ms_lt_sm": 3.725
+    },
+    "G:out": {
+     "ms": 15.654,
+     "n": 24,
+     "n_lt_sm": 0,
+     "ms_lt_sm": 0.0
+    },
+    "S:silu_mul": {
+     "ms": 12.616,
+     "n": 48,
+     "n_lt_sm": 0,
+     "ms_lt_sm": 0.0
+    },
+    "S:attn_sdpa": {
+     "ms": 8.008,
+     "n": 6,
+     "n_lt_sm": 0,
+     "ms_lt_sm": 0.0
+    },
+    "G:in_attn": {
+     "ms": 7.837,
+     "n": 6,
+     "n_lt_sm": 0,
+     "ms_lt_sm": 0.0
+    },
+    "S:attn_prep": {
+     "ms": 7.478,
+     "n": 216,
+     "n_lt_sm": 36,
+     "ms_lt_sm": 0.073
+    },
+    "S:gdn_conv": {
+     "ms": 3.647,
+     "n": 18,
+     "n_lt_sm": 0,
+     "ms_lt_sm": 0.0
+    },
+    "S:embed_rope": {
+     "ms": 0.784,
+     "n": 17,
+     "n_lt_sm": 4,
+     "ms_lt_sm": 0.008
+    },
+    "S:attn_gate": {
+     "ms": 0.605,
+     "n": 6,
+     "n_lt_sm": 0,
+     "ms_lt_sm": 0.0
+    },
+    "S:gdn_glue": {
+     "ms": 0.376,
+     "n": 144,
+     "n_lt_sm": 72,
+     "ms_lt_sm": 0.145
+    }
+   },
+   "gemm": {
+    "G:in_gdn": {
+     "ms": 38.125,
+     "tflops": 63.6
+    },
+    "G:in_attn": {
+     "ms": 7.837,
+     "tflops": 64.2
+    },
+    "G:out": {
+     "ms": 15.654,
+     "tflops": 51.4
+    },
+    "G:gate_up": {
+     "ms": 77.059,
+     "tflops": 62.7
+    },
+    "G:down": {
+     "ms": 45.053,
+     "tflops": 53.6
+    }
+   },
+   "gemm_ms": 183.73,
+   "nongemm_ms": 113.44,
+   "top_kernels": [
+    [
+     "G:gate_up | void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8>(cutlas",
+     77.059
+    ],
+    [
+     "G:down | void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8>(cutlass_8",
+     45.053
+    ],
+    [
+     "G:in_gdn | void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_128x256_32x3_tn_align8>(cutlass",
+     38.125
+    ],
+    [
+     "G:out | void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8>(cutlass_80",
+     15.654
+    ],
+    [
+     "S:add_rms | void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl_nocast<at::native::BinaryF",
+     12.987
+    ],
+    [
+     "S:attn_sdpa | void pytorch_flash::flash_fwd_kernel<Flash_fwd_kernel_traits<256, 64, 64, 4, false, false, cutla",
+     8.008
+    ],
+    [
+     "G:in_attn | ampere_bf16_s16816gemm_bf16_256x128_ldg8_f2f_stages_32x3_tn",
+     7.837
+    ],
+    [
+     "S:silu_mul | void at::native::elementwise_kernel<128, 4, at::native::gpu_kernel_impl_nocast<at::native::Binary",
+     7.595
+    ],
+    [
+     "S:add_rms | void at::native::vectorized_elementwise_kernel<4, at::native::(anonymous namespace)::pow_tensor_sc",
+     6.625
+    ],
+    [
+     "S:silu_mul | void at::native::elementwise_kernel<128, 4, at::native::gpu_kernel_impl_nocast<at::native::(anony",
+     5.021
+    ],
+    [
+     "S:add_rms | void at::native::vectorized_elementwise_kernel<4, at::native::bfloat16_copy_kernel_cuda(at::Tensor",
+     4.956
+    ],
+    [
+     "S:add_rms | void at::native::unrolled_elementwise_kernel<at::native::direct_copy_kernel_cuda(at::TensorIterato",
+     4.909
+    ],
+    [
+     "S:add_rms | void at::native::vectorized_elementwise_kernel<4, at::native::CUDAFunctor_add<c10::BFloat16>, std:",
+     4.682
+    ],
+    [
+     "S:gdn_chunk | chunk_fwd_kernel_o",
+     4.086
+    ],
+    [
+     "S:gdn_chunk | void at::native::elementwise_kernel<128, 4, at::native::gpu_kernel_impl_nocast<at::native::direc",
+     3.935
+    ],
+    [
+     "S:add_rms | void at::native::reduce_kernel<512, 1, at::native::ReduceOp<float, at::native::MeanOps<float, floa",
+     3.784
+    ],
+    [
+     "S:gdn_chunk | chunk_gated_delta_rule_fwd_kernel_h_blockdim64",
+     3.725
+    ],
+    [
+     "S:gdn_gnorm | void at::native::vectorized_elementwise_kernel<4, at::native::bfloat16_copy_kernel_cuda(at::Tens",
+     3.722
+    ],
+    [
+     "S:gdn_gnorm | void at::native::unrolled_elementwise_kernel<at::native::direct_copy_kernel_cuda(at::TensorItera",
+     3.683
+    ],
+    [
+     "S:gdn_conv | causal_conv1d_fwd_kernel",
+     3.647
+    ],
+    [
+     "S:gdn_gnorm | void at::native::unrolled_elementwise_kernel<at::native::BinaryFunctor<float, float, float, at::",
+     3.149
+    ],
+    [
+     "S:gdn_chunk | recompute_w_u_fwd_kernel",
+     3.005
+    ],
+    [
+     "S:gdn_gnorm | void at::native::vectorized_elementwise_kernel<4, at::native::(anonymous namespace)::pow_tensor_",
+     2.483
+    ],
+    [
+     "S:gdn_gnorm | void at::native::vectorized_elementwise_kernel<4, at::native::(anonymous namespace)::silu_kernel",
+     2.479
+    ],
+    [
+     "S:gdn_chunk | l2norm_fwd_kernel",
+     2.474
+    ],
+    [
+     "S:gdn_gnorm | void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl_nocast<at::native::Binar",
+     2.402
+    ],
+    [
+     "S:gdn_chunk | chunk_gated_delta_rule_fwd_kkt_solve_kernel",
+     2.166
+    ],
+    [
+     "S:attn_prep | void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl_nocast<at::native::Binar",
+     2.046
+    ],
+    [
+     "S:gdn_gnorm | void at::native::elementwise_kernel<128, 4, at::native::gpu_kernel_impl_nocast<at::native::direc",
+     1.308
+    ],
+    [
+     "S:gdn_gnorm | void at::native::reduce_kernel<512, 1, at::native::ReduceOp<float, at::native::MeanOps<float, fl",
+     1.302
+    ]
+   ]
+  },
+  "graph": {
+   "kernels": 1463,
+   "busy_ms": 296.14,
+   "span_ms": 296.01,
+   "gaps_ms": 0.02,
+   "eager_kernels": 1463,
+   "seq_match": true
+  },
+  "stage_graph": {
+   "stages": {
+    "G:gate_up": {
+     "ms": 77.043,
+     "n": 24,
+     "n_lt_sm": 0,
+     "ms_lt_sm": 0.0
+    },
+    "G:down": {
+     "ms": 45.019,
+     "n": 24,
+     "n_lt_sm": 0,
+     "ms_lt_sm": 0.0
+    },
+    "G:in_gdn": {
+     "ms": 38.096,
+     "n": 18,
+     "n_lt_sm": 0,
+     "ms_lt_sm": 0.0
+    },
+    "S:add_rms": {
+     "ms": 37.92,
+     "n": 480,
+     "n_lt_sm": 144,
+     "ms_lt_sm": 0.225
+    },
+    "S:gdn_gnorm": {
+     "ms": 21.705,
+     "n": 234,
+     "n_lt_sm": 36,
+     "ms_lt_sm": 0.062
+    },
+    "S:gdn_chunk": {
+     "ms": 19.665,
+     "n": 198,
+     "n_lt_sm": 18,
+     "ms_lt_sm": 3.719
+    },
+    "G:out": {
+     "ms": 15.635,
+     "n": 24,
+     "n_lt_sm": 0,
+     "ms_lt_sm": 0.0
+    },
+    "S:silu_mul": {
+     "ms": 12.586,
+     "n": 48,
+     "n_lt_sm": 0,
+     "ms_lt_sm": 0.0
+    },
+    "S:attn_sdpa": {
+     "ms": 7.992,
+     "n": 6,
+     "n_lt_sm": 0,
+     "ms_lt_sm": 0.0
+    },
+    "G:in_attn": {
+     "ms": 7.829,
+     "n": 6,
+     "n_lt_sm": 0,
+     "ms_lt_sm": 0.0
+    },
+    "S:attn_prep": {
+     "ms": 7.327,
+     "n": 216,
+     "n_lt_sm": 36,
+     "ms_lt_sm": 0.055
+    },
+    "S:gdn_conv": {
+     "ms": 3.648,
+     "n": 18,
+     "n_lt_sm": 0,
+     "ms_lt_sm": 0.0
+    },
+    "S:embed_rope": {
+     "ms": 0.784,
+     "n": 17,
+     "n_lt_sm": 4,
+     "ms_lt_sm": 0.006
+    },
+    "S:attn_gate": {
+     "ms": 0.601,
+     "n": 6,
+     "n_lt_sm": 0,
+     "ms_lt_sm": 0.0
+    },
+    "S:gdn_glue": {
+     "ms": 0.31,
+     "n": 144,
+     "n_lt_sm": 72,
+     "ms_lt_sm": 0.125
+    }
+   },
+   "gemm": {
+    "G:in_gdn": {
+     "ms": 38.096,
+     "tflops": 63.7
+    },
+    "G:in_attn": {
+     "ms": 7.829,
+     "tflops": 64.3
+    },
+    "G:out": {
+     "ms": 15.635,
+     "tflops": 51.5
+    },
+    "G:gate_up": {
+     "ms": 77.043,
+     "tflops": 62.7
+    },
+    "G:down": {
+     "ms": 45.019,
+     "tflops": 53.7
+    }
+   },
+   "gemm_ms": 183.62,
+   "nongemm_ms": 112.54,
+   "top_kernels": [
+    [
+     "G:gate_up | void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8>(cutlas",
+     77.043
+    ],
+    [
+     "G:down | void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8>(cutlass_8",
+     45.019
+    ],
+    [
+     "G:in_gdn | void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_128x256_32x3_tn_align8>(cutlass",
+     38.096
+    ],
+    [
+     "G:out | void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8>(cutlass_80",
+     15.635
+    ],
+    [
+     "S:add_rms | void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl_nocast<at::native::BinaryF",
+     12.937
+    ],
+    [
+     "S:attn_sdpa | void pytorch_flash::flash_fwd_kernel<Flash_fwd_kernel_traits<256, 64, 64, 4, false, false, cutla",
+     7.992
+    ],
+    [
+     "G:in_attn | ampere_bf16_s16816gemm_bf16_256x128_ldg8_f2f_stages_32x3_tn",
+     7.829
+    ],
+    [
+     "S:silu_mul | void at::native::elementwise_kernel<128, 4, at::native::gpu_kernel_impl_nocast<at::native::Binary",
+     7.599
+    ],
+    [
+     "S:add_rms | void at::native::vectorized_elementwise_kernel<4, at::native::(anonymous namespace)::pow_tensor_sc",
+     6.597
+    ],
+    [
+     "S:silu_mul | void at::native::elementwise_kernel<128, 4, at::native::gpu_kernel_impl_nocast<at::native::(anony",
+     4.987
+    ],
+    [
+     "S:add_rms | void at::native::vectorized_elementwise_kernel<4, at::native::bfloat16_copy_kernel_cuda(at::Tensor",
+     4.932
+    ],
+    [
+     "S:add_rms | void at::native::unrolled_elementwise_kernel<at::native::direct_copy_kernel_cuda(at::TensorIterato",
+     4.88
+    ],
+    [
+     "S:add_rms | void at::native::vectorized_elementwise_kernel<4, at::native::CUDAFunctor_add<c10::BFloat16>, std:",
+     4.647
+    ],
+    [
+     "S:gdn_chunk | chunk_fwd_kernel_o",
+     4.082
+    ],
+    [
+     "S:gdn_chunk | void at::native::elementwise_kernel<128, 4, at::native::gpu_kernel_impl_nocast<at::native::direc",
+     3.883
+    ],
+    [
+     "S:gdn_chunk | chunk_gated_delta_rule_fwd_kernel_h_blockdim64",
+     3.719
+    ],
+    [
+     "S:add_rms | void at::native::reduce_kernel<512, 1, at::native::ReduceOp<float, at::native::MeanOps<float, floa",
+     3.702
+    ],
+    [
+     "S:gdn_gnorm | void at::native::vectorized_elementwise_kernel<4, at::native::bfloat16_copy_kernel_cuda(at::Tens",
+     3.685
+    ],
+    [
+     "S:gdn_gnorm | void at::native::unrolled_elementwise_kernel<at::native::direct_copy_kernel_cuda(at::TensorItera",
+     3.664
+    ],
+    [
+     "S:gdn_conv | causal_conv1d_fwd_kernel",
+     3.648
+    ],
+    [
+     "S:gdn_gnorm | void at::native::unrolled_elementwise_kernel<at::native::BinaryFunctor<float, float, float, at::",
+     3.126
+    ],
+    [
+     "S:gdn_chunk | recompute_w_u_fwd_kernel",
+     2.992
+    ],
+    [
+     "S:gdn_gnorm | void at::native::vectorized_elementwise_kernel<4, at::native::(anonymous namespace)::silu_kernel",
+     2.475
+    ],
+    [
+     "S:gdn_gnorm | void at::native::vectorized_elementwise_kernel<4, at::native::(anonymous namespace)::pow_tensor_",
+     2.472
+    ],
+    [
+     "S:gdn_chunk | l2norm_fwd_kernel",
+     2.459
+    ],
+    [
+     "S:gdn_gnorm | void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl_nocast<at::native::Binar",
+     2.391
+    ],
+    [
+     "S:gdn_chunk | chunk_gated_delta_rule_fwd_kkt_solve_kernel",
+     2.152
+    ],
+    [
+     "S:attn_prep | void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl_nocast<at::native::Binar",
+     2.033
+    ],
+    [
+     "S:gdn_gnorm | void at::native::elementwise_kernel<128, 4, at::native::gpu_kernel_impl_nocast<at::native::direc",
+     1.28
+    ],
+    [
+     "S:gdn_gnorm | void at::native::elementwise_kernel<128, 4, at::native::gpu_kernel_impl_nocast<at::native::Binar",
+     1.278
+    ]
+   ]
+  },
+  "waves": {
+   "n": 1463,
+   "kernels_with_fewer_blocks_than_SMs": 310,
+   "their_ms": 4.19
+  },
+  "wall": {
+   "median": 296.17,
+   "p95": 296.24,
+   "n": 20
+  },
+  "bare_gemm": {
+   "G:in_gdn": {
+    "us": 2142.6,
+    "tflops": 62.9
+   },
+   "G:in_attn": {
+    "us": 1337.4,
+    "tflops": 62.7
+   },
+   "G:out": {
+    "us": 678.9,
+    "tflops": 49.4
+   },
+   "G:gate_up": {
+    "us": 3243.3,
+    "tflops": 62.1
+   },
+   "G:down": {
+    "us": 1908.1,
+    "tflops": 52.8
+   },
+   "isolated_sum_ms": 186.52,
+   "isolated_tflops": 58.9,
+   "graphed_skeleton_ms": 183.22,
+   "graphed_skeleton_tflops": 59.9
+  },
+  "model_tflops_wall": 37.1,
+  "frac_of_bare_skeleton": 0.619
+ }
+}

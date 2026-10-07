@@ -1,0 +1,161 @@
+{
+ "native_vs_teacher": {
+  "agree": 40,
+  "n": 40,
+  "max_dp": 0.006323814392089844,
+  "agree_evalkit_refs": 40
+ },
+ "seg": {
+  "mismatch": 0,
+  "n": 750,
+  "u_ne": {
+   "(4, 4)": 750
+  },
+  "kinds_tokens": {
+   "doc": 1100784,
+   "tool": 309417,
+   "asst": 289726,
+   "call": 109063,
+   "user": 105095,
+   "note": 87219,
+   "hdr:PROPOSED MESSAGE": 86408,
+   "hdr:CALLS MADE SO FAR": 83213,
+   "omit": 68386,
+   "notshown": 65160,
+   "hdr:DOCUMENTS THE ASSISTANT ALREADY HAS": 43998,
+   "para": 43628,
+   "frame": 23662,
+   "hdr:TOOL JUST UNLOCKED": 11055,
+   "hdr:CUSTOMER'S NEWEST MESSAGE": 6905,
+   "hdr:PROPOSED TOOL CALL": 6035,
+   "hdr:CONVERSATION": 2406,
+   "hdr:KNOWLEDGE-BASE SEARCH JUST RUN": 1995,
+   "hdr:CUSTOMER RECORD THE ASSISTANT LOOKED UP": 1174,
+   "search": 1107,
+   "hdr:ASSISTANT'S PROPOSED MESSAGE": 1034,
+   "hdr:CONVERSATION SO FAR": 832,
+   "hdr:DOCUMENTS RETRIEVED THAT MENTION THE TOO": 602,
+   "json": 457,
+   "hdr:THE ASSISTANT'S TRANSFER": 368,
+   "hdr:TOOL RESULT": 185,
+   "hdr:USER'S NEW MESSAGE": 156
+  },
+  "per": {
+   "REAL-agree|nat": {
+    "n": 150,
+    "mean_tok": 1976.8466666666666,
+    "mean_seg": 10.926666666666666,
+    "iso_share": 0.9959531509778199,
+    "mean_seg_len": 180.18730933496033
+   },
+   "REAL-agree|sec": {
+    "n": 150,
+    "mean_tok": 1976.8466666666666,
+    "mean_seg": 7.133333333333334,
+    "iso_share": 0.9959531509778199,
+    "mean_seg_len": 276.00654205607475
+   },
+   "REAL-agree|const": {
+    "n": 150,
+    "mean_tok": 1976.8466666666666,
+    "mean_seg": 3.9266666666666667,
+    "iso_share": 0.6008120677037841,
+    "mean_seg_len": 302.4736842105263
+   },
+   "LONG|nat": {
+    "n": 150,
+    "mean_tok": 5237.973333333333,
+    "mean_seg": 30.113333333333333,
+    "iso_share": 0.9984726917280984,
+    "mean_seg_len": 173.67633384990037
+   },
+   "LONG|sec": {
+    "n": 150,
+    "mean_tok": 5237.973333333333,
+    "mean_seg": 13.493333333333334,
+    "iso_share": 0.9984726917280984,
+    "mean_seg_len": 387.59683794466406
+   },
+   "LONG|const": {
+    "n": 150,
+    "mean_tok": 5237.973333333333,
+    "mean_seg": 8.94,
+    "iso_share": 0.5714831181525679,
+    "mean_seg_len": 334.83370618941086
+   },
+   "CF|nat": {
+    "n": 150,
+    "mean_tok": 5842.18,
+    "mean_seg": 35.906666666666666,
+    "iso_share": 0.9986306481484651,
+    "mean_seg_len": 162.4818046787969
+   },
+   "CF|sec": {
+    "n": 150,
+    "mean_tok": 5842.18,
+    "mean_seg": 14.066666666666666,
+    "iso_share": 0.9986306481484651,
+    "mean_seg_len": 414.75213270142183
+   },
+   "CF|const": {
+    "n": 150,
+    "mean_tok": 5842.18,
+    "mean_seg": 9.133333333333333,
+    "iso_share": 0.4793233576050949,
+    "mean_seg_len": 306.6014598540146
+   },
+   "CF-probe|nat": {
+    "n": 150,
+    "mean_tok": 3014.9,
+    "mean_seg": 25.653333333333332,
+    "iso_share": 0.9973465123221334,
+    "mean_seg_len": 117.21283783783784
+   },
+   "CF-probe|sec": {
+    "n": 150,
+    "mean_tok": 3014.9,
+    "mean_seg": 8.973333333333333,
+    "iso_share": 0.9973465123221334,
+    "mean_seg_len": 335.092867756315
+   },
+   "CF-probe|const": {
+    "n": 150,
+    "mean_tok": 3014.9,
+    "mean_seg": 4.32,
+    "iso_share": 0.31132044180569834,
+    "mean_seg_len": 217.2685185185185
+   },
+   "JB-all|nat": {
+    "n": 150,
+    "mean_tok": 301.9,
+    "mean_seg": 2.62,
+    "iso_share": 0.9735011593242796,
+    "mean_seg_len": 112.17557251908397
+   },
+   "JB-all|sec": {
+    "n": 150,
+    "mean_tok": 301.9,
+    "mean_seg": 1.0,
+    "iso_share": 0.9735011593242796,
+    "mean_seg_len": 293.9
+   },
+   "JB-all|const": {
+    "n": 150,
+    "mean_tok": 301.9,
+    "mean_seg": 0.0,
+    "iso_share": 0.0,
+    "mean_seg_len": 0.0
+   }
+  }
+ },
+ "composition": {
+  "rel_err_affine_vs_scan": 0.0011637316783890128,
+  "rel_err_sum_vs_scan": 3.9018146991729736
+ },
+ "isolation": {
+  "j_last": 6,
+  "j_other": 0,
+  "max_change_other_segment_rows": 0.0,
+  "max_change_perturbed_segment_rows": 16.5
+ }
+}

@@ -1,0 +1,22 @@
+{
+ "lean_compile_graph_q1_t64": {
+  "median": 69.11,
+  "p95": 70.64,
+  "min": 58.1
+ },
+ "lean_compile_graph_q1_t1000": {
+  "median": 310.28,
+  "p95": 329.65,
+  "min": 295.54
+ },
+ "lean_eager_q1_t64": {
+  "median": 76.63,
+  "p95": 79.46,
+  "min": 68.41
+ },
+ "lean_eager_q1_t1000": {
+  "median": 298.26,
+  "p95": 318.16,
+  "min": 277.54
+ }
+}

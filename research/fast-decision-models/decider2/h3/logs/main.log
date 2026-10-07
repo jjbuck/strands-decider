@@ -1,0 +1,45 @@
+05:29:19 step1 done
+05:29:19 ev --cfgs bf16,w4a4,w4a4r,nvfp4 --sub dev --tag hobson
+06:24:41 main3 start
+06:24:41 ev --cfgs bf16,w4a4,w4a4r,nvfp4 --sub dev --tag hobson
+06:24:54 ev done --cfgs bf16,w4a4,w4a4r,nvfp4 --sub dev --tag hobson
+06:24:54 train v1
+06:40:06 train done v1
+06:40:06 ev --ckpt ck/v1/final.pt --cfgs bf16,w4a4,w4a4r,nvfp4 --sub dev --tag v1
+07:15:04 main4 start
+07:15:04 ev --cfgs bf16,w4a4,w4a4r,nvfp4 --sub dev --tag hobson
+07:15:17 ev done --cfgs bf16,w4a4,w4a4r,nvfp4 --sub dev --tag hobson
+07:15:17 ev --ckpt ck/v1/final.pt --cfgs bf16,w4a4,w4a4r,nvfp4 --sub dev --tag v1 --merge
+07:15:29 ev done --ckpt ck/v1/final.pt --cfgs bf16,w4a4,w4a4r,nvfp4 --sub dev --tag v1 --merge
+07:15:29 train v2
+07:30:45 train done v2
+07:30:45 ev --ckpt ck/v2/final.pt --cfgs bf16,w4a4,w4a4r,nvfp4 --sub dev --tag v2
+08:31:38 main5 start
+08:31:38 ev --ckpt ck/v2/final.pt --cfgs bf16,w4a4,w4a4r,nvfp4 --sub dev --tag v2
+08:31:51 ev done --ckpt ck/v2/final.pt --cfgs bf16,w4a4,w4a4r,nvfp4 --sub dev --tag v2
+08:31:51 train qat
+09:17:19 main7 start
+09:17:19 ev --ckpt ck/qat/final.pt --cfgs w4a4,bf16 --sub dev --tag qat
+09:31:00 ev done --ckpt ck/qat/final.pt --cfgs w4a4,bf16 --sub dev --tag qat
+09:31:00 train qatnv
+10:09:21 train done qatnv
+10:09:21 ev --ckpt ck/qatnv/final.pt --cfgs nvfp4,bf16 --sub dev --tag qatnv
+10:25:25 ev done --ckpt ck/qatnv/final.pt --cfgs nvfp4,bf16 --sub dev --tag qatnv
+10:25:25 ev --cfgs bf16,nvfp4 --sub long --tag hobson
+10:29:21 ev done --cfgs bf16,nvfp4 --sub long --tag hobson
+10:29:21 ev --ckpt ck/v1/final.pt --cfgs bf16,nvfp4 --sub long --tag v1 --merge
+10:33:17 ev done --ckpt ck/v1/final.pt --cfgs bf16,nvfp4 --sub long --tag v1 --merge
+10:33:17 ev --cfgs nvfp4r --sub dev --tag hobson
+10:46:14 ev done --cfgs nvfp4r --sub dev --tag hobson
+10:46:14 train v1x2
+11:15:32 train done v1x2
+11:15:32 ev --ckpt ck/v1x2/final.pt --cfgs bf16,nvfp4 --sub dev --tag v1x2
+11:31:37 ev done --ckpt ck/v1x2/final.pt --cfgs bf16,nvfp4 --sub dev --tag v1x2
+11:31:37 main7 done
+11:31:54 ev --ckpt ck/qatnv/final.pt --cfgs nvfp4-qb16 --sub dev --tag qatnv
+11:42:53 ev done --ckpt ck/qatnv/final.pt --cfgs nvfp4-qb16 --sub dev --tag qatnv
+11:42:53 ev --ckpt ck/v1/final.pt --cfgs nvfp4-qb16 --sub dev --tag v1 --merge
+11:53:43 ev done --ckpt ck/v1/final.pt --cfgs nvfp4-qb16 --sub dev --tag v1 --merge
+11:53:43 ev --ckpt ck/v2/final.pt --cfgs w4a4r-qb16 --sub dev --tag v2
+12:04:51 ev done --ckpt ck/v2/final.pt --cfgs w4a4r-qb16 --sub dev --tag v2
+12:04:51 tail2 done

@@ -1,0 +1,14 @@
+{
+ "name": "S125_slot",
+ "scale": "S125",
+ "arm": "slot",
+ "steps": 4136,
+ "tokens": 135528448,
+ "train_pflops": 179.9635986158715,
+ "val_loss": 3.760089874267578,
+ "val_last_block": 3.727964401245117,
+ "params": 189839680,
+ "nonemb": 156307456,
+ "elapsed_min": 69.40690835714341,
+ "infer_gflop_1000": 89.314820096
+}

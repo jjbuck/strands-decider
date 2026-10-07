@@ -1,0 +1,107 @@
+{
+ "qad_t0M.jsonl": {
+  "real_flips": 0.06555863342566948,
+  "real_tv": 0.0620804866509213,
+  "agree_sd": 0.9017341040462428,
+  "mcnemar": {
+   "lost": 66,
+   "gained": 1,
+   "n": 1083,
+   "p": 0.0
+  },
+  "cfp_fgh": 0.6285714285714286,
+  "cfp_flip": 0.275,
+  "n_real": null,
+  "cov": 1.0
+ },
+ "qad_t10M.jsonl": {
+  "real_flips": 0.07017543859649122,
+  "real_tv": 0.058910795373702765,
+  "agree_sd": 0.8815028901734104,
+  "mcnemar": {
+   "lost": 75,
+   "gained": 5,
+   "n": 1083,
+   "p": 0.0
+  },
+  "cfp_fgh": 0.6666666666666666,
+  "cfp_flip": 0.3125,
+  "n_real": null,
+  "cov": 1.0
+ },
+ "qad_t20M.jsonl": {
+  "real_flips": 0.06648199445983383,
+  "real_tv": 0.05583138730321316,
+  "agree_sd": 0.8959537572254336,
+  "mcnemar": {
+   "lost": 70,
+   "gained": 4,
+   "n": 1083,
+   "p": 0.0
+  },
+  "cfp_fgh": 0.6285714285714286,
+  "cfp_flip": 0.3,
+  "n_real": null,
+  "cov": 1.0
+ },
+ "qadw4q8_t0M.jsonl": {
+  "real_flips": 0.03508771929824561,
+  "real_tv": 0.02964824909902904,
+  "agree_sd": 0.9335260115606936,
+  "mcnemar": {
+   "lost": 36,
+   "gained": 4,
+   "n": 1083,
+   "p": 0.0
+  },
+  "cfp_fgh": 0.6857142857142857,
+  "cfp_flip": 0.303125,
+  "n_real": null,
+  "cov": 1.0
+ },
+ "qadw4q8_t4M.jsonl": {
+  "real_flips": 0.03693444136657431,
+  "real_tv": 0.028242617799560207,
+  "agree_sd": 0.9393063583815029,
+  "mcnemar": {
+   "lost": 34,
+   "gained": 0,
+   "n": 1083,
+   "p": 0.0
+  },
+  "cfp_fgh": 0.7142857142857143,
+  "cfp_flip": 0.290625,
+  "n_real": null,
+  "cov": 1.0
+ },
+ "qadw4q8_t8M.jsonl": {
+  "real_flips": 0.03508771929824561,
+  "real_tv": 0.028482680646549997,
+  "agree_sd": 0.9364161849710982,
+  "mcnemar": {
+   "lost": 33,
+   "gained": 1,
+   "n": 1083,
+   "p": 0.0
+  },
+  "cfp_fgh": 0.7238095238095238,
+  "cfp_flip": 0.2875,
+  "n_real": null,
+  "cov": 1.0
+ },
+ "qadw4q8_t12M.jsonl": {
+  "real_flips": 0.03324099722991691,
+  "real_tv": 0.02812026675662499,
+  "agree_sd": 0.9421965317919075,
+  "mcnemar": {
+   "lost": 33,
+   "gained": 3,
+   "n": 1083,
+   "p": 0.0
+  },
+  "cfp_fgh": 0.7142857142857143,
+  "cfp_flip": 0.296875,
+  "n_real": null,
+  "cov": 1.0
+ }
+}

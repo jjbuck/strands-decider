@@ -1,0 +1,30 @@
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 3881.44it/s]
+cfg {'Win_g': (8, 8), 'Win_a': (8, 8), 'Wo_g': (8, 8), 'Wo_a': (8, 8), 'Wgu': (8, 8), 'Wd': (8, 8)} aclip 1.0 R rot/R1_l1.pt w gptq
+gptq calibration 128 seqs 247358 tokens
+gptq layer 0 done 20 s
+gptq layer 1 done 40 s
+gptq layer 2 done 60 s
+gptq layer 3 done 79 s
+gptq layer 4 done 100 s
+gptq layer 5 done 120 s
+gptq layer 6 done 141 s
+gptq layer 7 done 160 s
+gptq layer 8 done 180 s
+gptq layer 9 done 200 s
+gptq layer 10 done 221 s
+gptq layer 11 done 240 s
+gptq layer 12 done 260 s
+gptq layer 13 done 281 s
+gptq layer 14 done 301 s
+gptq layer 15 done 320 s
+gptq layer 16 done 340 s
+gptq layer 17 done 361 s
+gptq layer 18 done 381 s
+gptq layer 19 done 400 s
+gptq layer 20 done 421 s
+gptq layer 21 done 441 s
+gptq layer 22 done 461 s
+gptq layer 23 done 480 s
+built 488 s
+DEV {"name": "l1_gptq_w8a8", "R": "rot/R1_l1.pt", "w": "gptq", "map": "", "kron": "", "cfg": {"Win_g": [8, 8], "Win_a": [8, 8], "Wo_g": [8, 8], "Wo_a": [8, 8], "Wgu": [8, 8], "Wd": [8, 8]}, "aclip": 1.0, "ba_hp": true, "flips": 0, "n": 240, "flip_rate": 0.0, "tv": 0.0069, "kl": 0.0002, "s": 677}
+saved q/l1_gptq_w8a8.pt

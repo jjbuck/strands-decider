@@ -1,0 +1,36 @@
+questions 3227
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 4001.16it/s]
+dense 99/3227 JB-all T=105 5s mem 5.7G
+dense 199/3227 JB-all T=235 33s mem 6.4G
+dense 299/3227 REAL-agree T=1735 64s mem 6.4G
+dense 399/3227 REAL-agree T=3962 103s mem 6.4G
+dense 499/3227 REAL-agree T=1980 141s mem 6.5G
+dense 599/3227 REAL-agree T=2014 198s mem 6.5G
+dense 699/3227 REAL-agree T=1806 241s mem 6.6G
+dense 799/3227 REAL-agree T=1886 282s mem 6.6G
+dense 899/3227 REAL-agree T=1139 333s mem 6.7G
+dense 999/3227 REAL-agree T=2594 386s mem 6.7G
+dense 1099/3227 REAL-agree T=3179 429s mem 6.7G
+dense 1199/3227 REAL-agree T=3496 467s mem 6.7G
+dense 1299/3227 REAL-agree T=2181 514s mem 6.7G
+dense 1399/3227 LONG T=6476 622s mem 7.1G
+dense 1499/3227 LONG T=6138 726s mem 7.1G
+dense 1599/3227 LONG T=4734 815s mem 7.1G
+dense 1699/3227 LONG T=4298 900s mem 7.1G
+dense 1799/3227 CF T=5163 990s mem 7.1G
+dense 1899/3227 CF T=6393 1087s mem 7.1G
+dense 1999/3227 CF T=2985 1143s mem 7.1G
+dense 2099/3227 CF T=3295 1195s mem 7.1G
+dense 2199/3227 CF T=270 1229s mem 7.1G
+dense 2299/3227 CF T=2801 1258s mem 7.1G
+dense 2399/3227 CF T=2618 1288s mem 7.1G
+dense 2499/3227 CF T=2415 1314s mem 7.1G
+dense 2599/3227 CF-probe T=3930 1360s mem 7.1G
+dense 2699/3227 CF-probe T=4240 1416s mem 7.1G
+dense 2799/3227 CF-probe T=2752 1469s mem 7.1G
+dense 2899/3227 CF-probe T=1733 1519s mem 7.1G
+dense 2999/3227 CF-probe T=3275 1566s mem 7.1G
+dense 3099/3227 CF-probe T=2725 1613s mem 7.1G
+dense 3199/3227 CF-probe T=1403 1649s mem 7.1G
+config done dense 1659s
+done 1659s

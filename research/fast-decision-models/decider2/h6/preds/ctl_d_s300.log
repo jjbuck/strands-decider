@@ -1,0 +1,20 @@
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 3758.19it/s]
+mem before build 3.78
+trained head loaded
+mem after build 3.89
+model built bf16 schema lora_d_ctl_s300.pt rot ba16 False aclip4 0.9
+questions 2756 groups 473
+204 23s
+448 153s
+607 196s
+842 257s
+1002 298s
+1252 363s
+1402 411s
+1676 466s
+1978 558s
+2116 590s
+2200 624s
+2400 701s
+2600 772s
+done 2756 813s

@@ -1,0 +1,10 @@
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 3996.73it/s]
+mode causal rev [] attn_nc False
+questions 2756 todo 2756
+prepped 2756 13s
+501 2756 35s
+1002 2756 102s
+1503 2756 192s
+2003 2756 308s
+2500 2756 449s
+done 2756 564s

@@ -1,0 +1,196 @@
+panel,id,name,state_tokens,ms,source
+Precision and early exit,hobson,"hobson-v19, bf16: the baseline",16,15.53,j15/res/res_bench.jsonl
+Precision and early exit,hobson,"hobson-v19, bf16: the baseline",32,15.551,j15/res/res_bench.jsonl
+Precision and early exit,hobson,"hobson-v19, bf16: the baseline",64,15.682,j15/res/res_bench.jsonl
+Precision and early exit,hobson,"hobson-v19, bf16: the baseline",128,16.052,j15/res/res_bench.jsonl
+Precision and early exit,hobson,"hobson-v19, bf16: the baseline",256,25.496,j15/res/res_bench.jsonl
+Precision and early exit,hobson,"hobson-v19, bf16: the baseline",400,36.936,j15/res/res_bench.jsonl
+Precision and early exit,hobson,"hobson-v19, bf16: the baseline",600,43.951,j15/res/res_bench.jsonl
+Precision and early exit,hobson,"hobson-v19, bf16: the baseline",1000,57.1,j15/res/res_bench.jsonl
+Precision and early exit,hobson,"hobson-v19, bf16: the baseline",1500,87.991,j15/res/res_bench.jsonl
+Precision and early exit,hobson,"hobson-v19, bf16: the baseline",2000,107.63,j15/res/res_bench.jsonl
+Precision and early exit,hobson,"hobson-v19, bf16: the baseline",3000,151.6,j15/res/res_bench.jsonl
+Precision and early exit,hobson,"hobson-v19, bf16: the baseline",4000,203.518,j15/res/res_bench.jsonl
+Precision and early exit,hobson,"hobson-v19, bf16: the baseline",6000,298.796,j15/res/res_bench.jsonl
+Precision and early exit,hobson,"hobson-v19, bf16: the baseline",9000,458.209,j15/res/res_bench.jsonl
+Precision and early exit,P1,"W8A8 + rotation + GPTQ, 8 GEMMs bf16",16,8.201,j15/res/res_bench.jsonl
+Precision and early exit,P1,"W8A8 + rotation + GPTQ, 8 GEMMs bf16",32,8.266,j15/res/res_bench.jsonl
+Precision and early exit,P1,"W8A8 + rotation + GPTQ, 8 GEMMs bf16",64,8.422,j15/res/res_bench.jsonl
+Precision and early exit,P1,"W8A8 + rotation + GPTQ, 8 GEMMs bf16",128,9.708,j15/res/res_bench.jsonl
+Precision and early exit,P1,"W8A8 + rotation + GPTQ, 8 GEMMs bf16",256,14.361,j15/res/res_bench.jsonl
+Precision and early exit,P1,"W8A8 + rotation + GPTQ, 8 GEMMs bf16",400,18.668,j15/res/res_bench.jsonl
+Precision and early exit,P1,"W8A8 + rotation + GPTQ, 8 GEMMs bf16",600,25.739,j15/res/res_bench.jsonl
+Precision and early exit,P1,"W8A8 + rotation + GPTQ, 8 GEMMs bf16",1000,36.317,j15/res/res_bench.jsonl
+Precision and early exit,P1,"W8A8 + rotation + GPTQ, 8 GEMMs bf16",1500,53.117,j15/res/res_bench.jsonl
+Precision and early exit,P1,"W8A8 + rotation + GPTQ, 8 GEMMs bf16",2000,67.226,j15/res/res_bench.jsonl
+Precision and early exit,P1,"W8A8 + rotation + GPTQ, 8 GEMMs bf16",3000,104.583,j15/res/res_bench.jsonl
+Precision and early exit,P1,"W8A8 + rotation + GPTQ, 8 GEMMs bf16",4000,142.104,j15/res/res_bench.jsonl
+Precision and early exit,P1,"W8A8 + rotation + GPTQ, 8 GEMMs bf16",6000,211.428,j15/res/res_bench.jsonl
+Precision and early exit,P1,"W8A8 + rotation + GPTQ, 8 GEMMs bf16",9000,337.082,j15/res/res_bench.jsonl
+Precision and early exit,P2,W4A4 + rotation + GPTQ,16,5.781,j15/res/res_bench.jsonl
+Precision and early exit,P2,W4A4 + rotation + GPTQ,32,5.818,j15/res/res_bench.jsonl
+Precision and early exit,P2,W4A4 + rotation + GPTQ,64,5.951,j15/res/res_bench.jsonl
+Precision and early exit,P2,W4A4 + rotation + GPTQ,128,6.727,j15/res/res_bench.jsonl
+Precision and early exit,P2,W4A4 + rotation + GPTQ,256,9.648,j15/res/res_bench.jsonl
+Precision and early exit,P2,W4A4 + rotation + GPTQ,400,12.205,j15/res/res_bench.jsonl
+Precision and early exit,P2,W4A4 + rotation + GPTQ,600,16.481,j15/res/res_bench.jsonl
+Precision and early exit,P2,W4A4 + rotation + GPTQ,1000,23.418,j15/res/res_bench.jsonl
+Precision and early exit,P2,W4A4 + rotation + GPTQ,1500,33.646,j15/res/res_bench.jsonl
+Precision and early exit,P2,W4A4 + rotation + GPTQ,2000,42.813,j15/res/res_bench.jsonl
+Precision and early exit,P2,W4A4 + rotation + GPTQ,3000,62.657,j15/res/res_bench.jsonl
+Precision and early exit,P2,W4A4 + rotation + GPTQ,4000,84.571,j15/res/res_bench.jsonl
+Precision and early exit,P2,W4A4 + rotation + GPTQ,6000,137.034,j15/res/res_bench.jsonl
+Precision and early exit,P2,W4A4 + rotation + GPTQ,9000,220.013,j15/res/res_bench.jsonl
+Precision and early exit,R1,W8A8 + always exit at layer 16,16,5.499,j15/res/res_bench.jsonl
+Precision and early exit,R1,W8A8 + always exit at layer 16,32,5.517,j15/res/res_bench.jsonl
+Precision and early exit,R1,W8A8 + always exit at layer 16,64,5.623,j15/res/res_bench.jsonl
+Precision and early exit,R1,W8A8 + always exit at layer 16,128,6.508,j15/res/res_bench.jsonl
+Precision and early exit,R1,W8A8 + always exit at layer 16,256,9.621,j15/res/res_bench.jsonl
+Precision and early exit,R1,W8A8 + always exit at layer 16,400,12.304,j15/res/res_bench.jsonl
+Precision and early exit,R1,W8A8 + always exit at layer 16,600,17.101,j15/res/res_bench.jsonl
+Precision and early exit,R1,W8A8 + always exit at layer 16,1000,24.079,j15/res/res_bench.jsonl
+Precision and early exit,R1,W8A8 + always exit at layer 16,1500,35.383,j15/res/res_bench.jsonl
+Precision and early exit,R1,W8A8 + always exit at layer 16,2000,44.941,j15/res/res_bench.jsonl
+Precision and early exit,R1,W8A8 + always exit at layer 16,3000,69.519,j15/res/res_bench.jsonl
+Precision and early exit,R1,W8A8 + always exit at layer 16,4000,94.505,j15/res/res_bench.jsonl
+Precision and early exit,R1,W8A8 + always exit at layer 16,6000,140.786,j15/res/res_bench.jsonl
+Precision and early exit,R1,W8A8 + always exit at layer 16,9000,224.529,j15/res/res_bench.jsonl
+Fewer rows or layers,hobson,"hobson-v19, bf16: the baseline",16,15.53,j15/res/res_bench.jsonl
+Fewer rows or layers,hobson,"hobson-v19, bf16: the baseline",32,15.551,j15/res/res_bench.jsonl
+Fewer rows or layers,hobson,"hobson-v19, bf16: the baseline",64,15.682,j15/res/res_bench.jsonl
+Fewer rows or layers,hobson,"hobson-v19, bf16: the baseline",128,16.052,j15/res/res_bench.jsonl
+Fewer rows or layers,hobson,"hobson-v19, bf16: the baseline",256,25.496,j15/res/res_bench.jsonl
+Fewer rows or layers,hobson,"hobson-v19, bf16: the baseline",400,36.936,j15/res/res_bench.jsonl
+Fewer rows or layers,hobson,"hobson-v19, bf16: the baseline",600,43.951,j15/res/res_bench.jsonl
+Fewer rows or layers,hobson,"hobson-v19, bf16: the baseline",1000,57.1,j15/res/res_bench.jsonl
+Fewer rows or layers,hobson,"hobson-v19, bf16: the baseline",1500,87.991,j15/res/res_bench.jsonl
+Fewer rows or layers,hobson,"hobson-v19, bf16: the baseline",2000,107.63,j15/res/res_bench.jsonl
+Fewer rows or layers,hobson,"hobson-v19, bf16: the baseline",3000,151.6,j15/res/res_bench.jsonl
+Fewer rows or layers,hobson,"hobson-v19, bf16: the baseline",4000,203.518,j15/res/res_bench.jsonl
+Fewer rows or layers,hobson,"hobson-v19, bf16: the baseline",6000,298.796,j15/res/res_bench.jsonl
+Fewer rows or layers,hobson,"hobson-v19, bf16: the baseline",9000,458.209,j15/res/res_bench.jsonl
+Fewer rows or layers,R2a,depth split DT-A8: state rows 8 of 24 layers,64,18.2,j3/DRAFT_REPORT.md
+Fewer rows or layers,R2a,depth split DT-A8: state rows 8 of 24 layers,128,18.3,j3/DRAFT_REPORT.md
+Fewer rows or layers,R2a,depth split DT-A8: state rows 8 of 24 layers,256,20.0,j3/DRAFT_REPORT.md
+Fewer rows or layers,R2a,depth split DT-A8: state rows 8 of 24 layers,400,25.5,j3/DRAFT_REPORT.md
+Fewer rows or layers,R2a,depth split DT-A8: state rows 8 of 24 layers,1000,33.0,j3/DRAFT_REPORT.md
+Fewer rows or layers,R2a,depth split DT-A8: state rows 8 of 24 layers,4000,85.3,j3/DRAFT_REPORT.md
+Fewer rows or layers,A6,precompiled deployment documents + compile adapter (J9 s400),64,9.7,j9/DRAFT_REPORT.md
+Fewer rows or layers,A6,precompiled deployment documents + compile adapter (J9 s400),128,15.8,j9/DRAFT_REPORT.md
+Fewer rows or layers,A6,precompiled deployment documents + compile adapter (J9 s400),256,17.3,j9/DRAFT_REPORT.md
+Fewer rows or layers,A6,precompiled deployment documents + compile adapter (J9 s400),400,24.2,j9/DRAFT_REPORT.md
+Fewer rows or layers,A6,precompiled deployment documents + compile adapter (J9 s400),1000,39.2,j9/DRAFT_REPORT.md
+Fewer rows or layers,A6,precompiled deployment documents + compile adapter (J9 s400),4000,102.8,j9/DRAFT_REPORT.md
+Fewer rows or layers,A7,"64k super-token vocabulary, 1,100 updates (J7 TL)",64,9.53,j7/DRAFT_REPORT.md
+Fewer rows or layers,A7,"64k super-token vocabulary, 1,100 updates (J7 TL)",128,9.74,j7/DRAFT_REPORT.md
+Fewer rows or layers,A7,"64k super-token vocabulary, 1,100 updates (J7 TL)",256,15.24,j7/DRAFT_REPORT.md
+Fewer rows or layers,A7,"64k super-token vocabulary, 1,100 updates (J7 TL)",400,15.53,j7/DRAFT_REPORT.md
+Fewer rows or layers,A7,"64k super-token vocabulary, 1,100 updates (J7 TL)",1000,27.82,j7/DRAFT_REPORT.md
+Fewer rows or layers,A7,"64k super-token vocabulary, 1,100 updates (J7 TL)",4000,92.5,j7/DRAFT_REPORT.md
+Other architectures,hobson,"hobson-v19, bf16: the baseline",16,15.53,j15/res/res_bench.jsonl
+Other architectures,hobson,"hobson-v19, bf16: the baseline",32,15.551,j15/res/res_bench.jsonl
+Other architectures,hobson,"hobson-v19, bf16: the baseline",64,15.682,j15/res/res_bench.jsonl
+Other architectures,hobson,"hobson-v19, bf16: the baseline",128,16.052,j15/res/res_bench.jsonl
+Other architectures,hobson,"hobson-v19, bf16: the baseline",256,25.496,j15/res/res_bench.jsonl
+Other architectures,hobson,"hobson-v19, bf16: the baseline",400,36.936,j15/res/res_bench.jsonl
+Other architectures,hobson,"hobson-v19, bf16: the baseline",600,43.951,j15/res/res_bench.jsonl
+Other architectures,hobson,"hobson-v19, bf16: the baseline",1000,57.1,j15/res/res_bench.jsonl
+Other architectures,hobson,"hobson-v19, bf16: the baseline",1500,87.991,j15/res/res_bench.jsonl
+Other architectures,hobson,"hobson-v19, bf16: the baseline",2000,107.63,j15/res/res_bench.jsonl
+Other architectures,hobson,"hobson-v19, bf16: the baseline",3000,151.6,j15/res/res_bench.jsonl
+Other architectures,hobson,"hobson-v19, bf16: the baseline",4000,203.518,j15/res/res_bench.jsonl
+Other architectures,hobson,"hobson-v19, bf16: the baseline",6000,298.796,j15/res/res_bench.jsonl
+Other architectures,hobson,"hobson-v19, bf16: the baseline",9000,458.209,j15/res/res_bench.jsonl
+Other architectures,A1,"T5Gemma 2B encoder, masked state cache (e1b)",64,15.5,j1/DRAFT_REPORT.md
+Other architectures,A1,"T5Gemma 2B encoder, masked state cache (e1b)",128,19.0,j1/DRAFT_REPORT.md
+Other architectures,A1,"T5Gemma 2B encoder, masked state cache (e1b)",256,27.8,j1/DRAFT_REPORT.md
+Other architectures,A1,"T5Gemma 2B encoder, masked state cache (e1b)",400,36.7,j1/DRAFT_REPORT.md
+Other architectures,A1,"T5Gemma 2B encoder, masked state cache (e1b)",1000,85.8,j1/DRAFT_REPORT.md
+Other architectures,A1,"T5Gemma 2B encoder, masked state cache (e1b)",2000,159.8,j1/DRAFT_REPORT.md
+Other architectures,A1,"T5Gemma 2B encoder, masked state cache (e1b)",4000,330.2,j1/DRAFT_REPORT.md
+Other architectures,A2,"bidirectional GDN, masked state cache",64,17.1,j2/DRAFT_REPORT.md
+Other architectures,A2,"bidirectional GDN, masked state cache",128,17.9,j2/DRAFT_REPORT.md
+Other architectures,A2,"bidirectional GDN, masked state cache",256,28.0,j2/DRAFT_REPORT.md
+Other architectures,A2,"bidirectional GDN, masked state cache",400,36.4,j2/DRAFT_REPORT.md
+Other architectures,A2,"bidirectional GDN, masked state cache",1000,64.8,j2/DRAFT_REPORT.md
+Other architectures,A2,"bidirectional GDN, masked state cache",4000,243.6,j2/DRAFT_REPORT.md
+Other architectures,P9,"natively ternary BitNet 2B, W1.58A8",64,10.6,j10/DRAFT_REPORT.md
+Other architectures,P9,"natively ternary BitNet 2B, W1.58A8",128,12.0,j10/DRAFT_REPORT.md
+Other architectures,P9,"natively ternary BitNet 2B, W1.58A8",256,18.1,j10/DRAFT_REPORT.md
+Other architectures,P9,"natively ternary BitNet 2B, W1.58A8",400,21.1,j10/DRAFT_REPORT.md
+Other architectures,P9,"natively ternary BitNet 2B, W1.58A8",1000,48.3,j10/DRAFT_REPORT.md
+Other architectures,P9,"natively ternary BitNet 2B, W1.58A8",4000,206.1,j10/DRAFT_REPORT.md
+"Other hardware, smaller models",hobson,"hobson-v19, bf16: the baseline",16,15.53,j15/res/res_bench.jsonl
+"Other hardware, smaller models",hobson,"hobson-v19, bf16: the baseline",32,15.551,j15/res/res_bench.jsonl
+"Other hardware, smaller models",hobson,"hobson-v19, bf16: the baseline",64,15.682,j15/res/res_bench.jsonl
+"Other hardware, smaller models",hobson,"hobson-v19, bf16: the baseline",128,16.052,j15/res/res_bench.jsonl
+"Other hardware, smaller models",hobson,"hobson-v19, bf16: the baseline",256,25.496,j15/res/res_bench.jsonl
+"Other hardware, smaller models",hobson,"hobson-v19, bf16: the baseline",400,36.936,j15/res/res_bench.jsonl
+"Other hardware, smaller models",hobson,"hobson-v19, bf16: the baseline",600,43.951,j15/res/res_bench.jsonl
+"Other hardware, smaller models",hobson,"hobson-v19, bf16: the baseline",1000,57.1,j15/res/res_bench.jsonl
+"Other hardware, smaller models",hobson,"hobson-v19, bf16: the baseline",1500,87.991,j15/res/res_bench.jsonl
+"Other hardware, smaller models",hobson,"hobson-v19, bf16: the baseline",2000,107.63,j15/res/res_bench.jsonl
+"Other hardware, smaller models",hobson,"hobson-v19, bf16: the baseline",3000,151.6,j15/res/res_bench.jsonl
+"Other hardware, smaller models",hobson,"hobson-v19, bf16: the baseline",4000,203.518,j15/res/res_bench.jsonl
+"Other hardware, smaller models",hobson,"hobson-v19, bf16: the baseline",6000,298.796,j15/res/res_bench.jsonl
+"Other hardware, smaller models",hobson,"hobson-v19, bf16: the baseline",9000,458.209,j15/res/res_bench.jsonl
+"Other hardware, smaller models",HW3,"hobson on Inferentia2, pipelined NKI GDN kernel (N1)",64,32.6,n1/DRAFT_REPORT.md
+"Other hardware, smaller models",HW3,"hobson on Inferentia2, pipelined NKI GDN kernel (N1)",256,42.0,n1/DRAFT_REPORT.md
+"Other hardware, smaller models",HW3,"hobson on Inferentia2, pipelined NKI GDN kernel (N1)",1000,132.1,n1/DRAFT_REPORT.md
+"Other hardware, smaller models",HW3,"hobson on Inferentia2, pipelined NKI GDN kernel (N1)",4000,653.6,n1/DRAFT_REPORT.md
+"Other hardware, smaller models",R10a,"hobson's first 12 layers, distilled (control)",256,8.14,F7_REPORT.md
+"Other hardware, smaller models",R10a,"hobson's first 12 layers, distilled (control)",1000,26.59,F7_REPORT.md
+"Other hardware, smaller models",R10a,"hobson's first 12 layers, distilled (control)",4000,101.04,F7_REPORT.md
+"Other hardware, smaller models",A11,"slot model, 114M from scratch (J11 M_slot)",64,2.22,j11/DRAFT_REPORT.md
+"Other hardware, smaller models",A11,"slot model, 114M from scratch (J11 M_slot)",256,2.77,j11/DRAFT_REPORT.md
+"Other hardware, smaller models",A11,"slot model, 114M from scratch (J11 M_slot)",1000,5.53,j11/DRAFT_REPORT.md
+"Other hardware, smaller models",A11,"slot model, 114M from scratch (J11 M_slot)",4000,20.4,j11/DRAFT_REPORT.md
+"Other hardware, smaller models",A11,"slot model, 114M from scratch (J11 M_slot)",8000,46.4,j11/DRAFT_REPORT.md
+4-bit mixes (Oct 6-7),hobson,"hobson-v19, bf16: the baseline",16,15.53,j15/res/res_bench.jsonl
+4-bit mixes (Oct 6-7),hobson,"hobson-v19, bf16: the baseline",32,15.551,j15/res/res_bench.jsonl
+4-bit mixes (Oct 6-7),hobson,"hobson-v19, bf16: the baseline",64,15.682,j15/res/res_bench.jsonl
+4-bit mixes (Oct 6-7),hobson,"hobson-v19, bf16: the baseline",128,16.052,j15/res/res_bench.jsonl
+4-bit mixes (Oct 6-7),hobson,"hobson-v19, bf16: the baseline",256,25.496,j15/res/res_bench.jsonl
+4-bit mixes (Oct 6-7),hobson,"hobson-v19, bf16: the baseline",400,36.936,j15/res/res_bench.jsonl
+4-bit mixes (Oct 6-7),hobson,"hobson-v19, bf16: the baseline",600,43.951,j15/res/res_bench.jsonl
+4-bit mixes (Oct 6-7),hobson,"hobson-v19, bf16: the baseline",1000,57.1,j15/res/res_bench.jsonl
+4-bit mixes (Oct 6-7),hobson,"hobson-v19, bf16: the baseline",1500,87.991,j15/res/res_bench.jsonl
+4-bit mixes (Oct 6-7),hobson,"hobson-v19, bf16: the baseline",2000,107.63,j15/res/res_bench.jsonl
+4-bit mixes (Oct 6-7),hobson,"hobson-v19, bf16: the baseline",3000,151.6,j15/res/res_bench.jsonl
+4-bit mixes (Oct 6-7),hobson,"hobson-v19, bf16: the baseline",4000,203.518,j15/res/res_bench.jsonl
+4-bit mixes (Oct 6-7),hobson,"hobson-v19, bf16: the baseline",6000,298.796,j15/res/res_bench.jsonl
+4-bit mixes (Oct 6-7),hobson,"hobson-v19, bf16: the baseline",9000,458.209,j15/res/res_bench.jsonl
+4-bit mixes (Oct 6-7),P10,"row role: state rows W4A4, question rows W8A8 (Q2 deployed kernels)",64,8.83,q2/DRAFT_REPORT.md
+4-bit mixes (Oct 6-7),P10,"row role: state rows W4A4, question rows W8A8 (Q2 deployed kernels)",256,11.61,q2/DRAFT_REPORT.md
+4-bit mixes (Oct 6-7),P10,"row role: state rows W4A4, question rows W8A8 (Q2 deployed kernels)",1000,26.34,q2/DRAFT_REPORT.md
+4-bit mixes (Oct 6-7),P10,"row role: state rows W4A4, question rows W8A8 (Q2 deployed kernels)",4000,88.75,q2/DRAFT_REPORT.md
+4-bit mixes (Oct 6-7),P11,"k64rr: 64 most sensitive GEMMs W8A8, other 32 row role (Q2 deployed kernels)",64,8.5,q2/DRAFT_REPORT.md
+4-bit mixes (Oct 6-7),P11,"k64rr: 64 most sensitive GEMMs W8A8, other 32 row role (Q2 deployed kernels)",256,13.42,q2/DRAFT_REPORT.md
+4-bit mixes (Oct 6-7),P11,"k64rr: 64 most sensitive GEMMs W8A8, other 32 row role (Q2 deployed kernels)",1000,31.89,q2/DRAFT_REPORT.md
+4-bit mixes (Oct 6-7),P11,"k64rr: 64 most sensitive GEMMs W8A8, other 32 row role (Q2 deployed kernels)",4000,119.81,q2/DRAFT_REPORT.md
+Decision-native layouts (Oct 6-7),hobson,"hobson-v19, bf16: the baseline",16,15.53,j15/res/res_bench.jsonl
+Decision-native layouts (Oct 6-7),hobson,"hobson-v19, bf16: the baseline",32,15.551,j15/res/res_bench.jsonl
+Decision-native layouts (Oct 6-7),hobson,"hobson-v19, bf16: the baseline",64,15.682,j15/res/res_bench.jsonl
+Decision-native layouts (Oct 6-7),hobson,"hobson-v19, bf16: the baseline",128,16.052,j15/res/res_bench.jsonl
+Decision-native layouts (Oct 6-7),hobson,"hobson-v19, bf16: the baseline",256,25.496,j15/res/res_bench.jsonl
+Decision-native layouts (Oct 6-7),hobson,"hobson-v19, bf16: the baseline",400,36.936,j15/res/res_bench.jsonl
+Decision-native layouts (Oct 6-7),hobson,"hobson-v19, bf16: the baseline",600,43.951,j15/res/res_bench.jsonl
+Decision-native layouts (Oct 6-7),hobson,"hobson-v19, bf16: the baseline",1000,57.1,j15/res/res_bench.jsonl
+Decision-native layouts (Oct 6-7),hobson,"hobson-v19, bf16: the baseline",1500,87.991,j15/res/res_bench.jsonl
+Decision-native layouts (Oct 6-7),hobson,"hobson-v19, bf16: the baseline",2000,107.63,j15/res/res_bench.jsonl
+Decision-native layouts (Oct 6-7),hobson,"hobson-v19, bf16: the baseline",3000,151.6,j15/res/res_bench.jsonl
+Decision-native layouts (Oct 6-7),hobson,"hobson-v19, bf16: the baseline",4000,203.518,j15/res/res_bench.jsonl
+Decision-native layouts (Oct 6-7),hobson,"hobson-v19, bf16: the baseline",6000,298.796,j15/res/res_bench.jsonl
+Decision-native layouts (Oct 6-7),hobson,"hobson-v19, bf16: the baseline",9000,458.209,j15/res/res_bench.jsonl
+Decision-native layouts (Oct 6-7),M2x,"segment-isolated state, depth 12, nothing compiled",64,18.0,"m2/NOTES.md (lat_grid_qf.json, fused question pass)"
+Decision-native layouts (Oct 6-7),M2x,"segment-isolated state, depth 12, nothing compiled",256,22.1,"m2/NOTES.md (lat_grid_qf.json, fused question pass)"
+Decision-native layouts (Oct 6-7),M2x,"segment-isolated state, depth 12, nothing compiled",1000,49.4,"m2/NOTES.md (lat_grid_qf.json, fused question pass)"
+Decision-native layouts (Oct 6-7),M2x,"segment-isolated state, depth 12, nothing compiled",4000,156.3,"m2/NOTES.md (lat_grid_qf.json, fused question pass)"
+Decision-native layouts (Oct 6-7),M2y,"constants isolated, depth 12, nothing compiled",64,17.3,m2/NOTES.md (lat_grid_C_qf.json)
+Decision-native layouts (Oct 6-7),M2y,"constants isolated, depth 12, nothing compiled",256,21.1,m2/NOTES.md (lat_grid_C_qf.json)
+Decision-native layouts (Oct 6-7),M2y,"constants isolated, depth 12, nothing compiled",1000,46.3,m2/NOTES.md (lat_grid_C_qf.json)
+Decision-native layouts (Oct 6-7),M2y,"constants isolated, depth 12, nothing compiled",4000,148.4,m2/NOTES.md (lat_grid_C_qf.json)
+Decision-native layouts (Oct 6-7),M2z,"segment-isolated state, depth 8, nothing compiled",64,16.4,"m2/NOTES.md (lat_grid_qf.json, fused question pass)"
+Decision-native layouts (Oct 6-7),M2z,"segment-isolated state, depth 8, nothing compiled",256,19.7,"m2/NOTES.md (lat_grid_qf.json, fused question pass)"
+Decision-native layouts (Oct 6-7),M2z,"segment-isolated state, depth 8, nothing compiled",1000,41.6,"m2/NOTES.md (lat_grid_qf.json, fused question pass)"
+Decision-native layouts (Oct 6-7),M2z,"segment-isolated state, depth 8, nothing compiled",4000,128.2,"m2/NOTES.md (lat_grid_qf.json, fused question pass)"

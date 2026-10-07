@@ -1,0 +1,29 @@
+== ft_S60_dense_noinit init none cfg Cfg({'scale': 'S60', 'arm': 'dense', 'd': 768, 'L': 9, 'H': 12, 'Hkv': 2, 'hd': 64, 'ffn': 2304, 'mon_ffn': 8704, 'kind': 'dense', 'nb': 0})
+step 100 probe 0.8749 squad 1.7092 67s
+step 200 probe 0.7855 squad 1.5044 104s
+step 300 probe 0.7413 squad 1.4910 142s
+step 400 probe 0.7433 squad 1.4449 179s
+step 500 probe 0.7034 squad 1.4214 217s
+step 600 probe 0.7216 squad 1.4053 254s
+step 700 probe 0.7029 squad 1.4226 292s
+step 800 probe 0.6952 squad 1.4023 330s
+EVAL step 800: probe acc 0.500 flip 0.000 distract-flip 0.000 | squad acc 0.262 (n 600) | official CF-probe (fits 1k) acc 0.500 flip 0.000 n_pairs 21 | by kind {'amount_vs_limit': 0.0, 'amount_vs_limit_distract': 0.0, 'date_order': 0.0, 'date_order_distract': 0.0, 'id_match': 0.0, 'id_match_distract': 0.0, 'status_equal': 0.0, 'status_equal_distract': 0.0}
+step 900 probe 0.6987 squad 1.3996 394s
+step 1000 probe 0.6943 squad 1.3984 432s
+step 1100 probe 0.7087 squad 1.3977 470s
+step 1200 probe 0.6955 squad 1.3977 507s
+step 1300 probe 0.6962 squad 1.3925 545s
+step 1400 probe 0.6966 squad 1.3966 582s
+step 1500 probe 0.6979 squad 1.3950 620s
+step 1600 probe 0.6942 squad 1.3940 658s
+EVAL step 1600: probe acc 0.500 flip 0.000 distract-flip 0.000 | squad acc 0.250 (n 600) | official CF-probe (fits 1k) acc 0.500 flip 0.000 n_pairs 21 | by kind {'amount_vs_limit': 0.0, 'amount_vs_limit_distract': 0.0, 'date_order': 0.0, 'date_order_distract': 0.0, 'id_match': 0.0, 'id_match_distract': 0.0, 'status_equal': 0.0, 'status_equal_distract': 0.0}
+step 1700 probe 0.6955 squad 1.3912 705s
+step 1800 probe 0.6940 squad 1.3928 743s
+step 1900 probe 0.6945 squad 1.3909 780s
+step 2000 probe 0.6943 squad 1.3827 818s
+step 2100 probe 0.6940 squad 1.3927 846s
+step 2200 probe 0.6954 squad 1.3894 872s
+step 2300 probe 0.6962 squad 1.3864 910s
+step 2400 probe 0.6944 squad 1.3893 947s
+EVAL step 2400: probe acc 0.500 flip 0.000 distract-flip 0.000 | squad acc 0.229 (n 1500) | official CF-probe (fits 1k) acc 0.500 flip 0.000 n_pairs 21 | by kind {'amount_vs_limit': 0.0, 'amount_vs_limit_distract': 0.0, 'date_order': 0.0, 'date_order_distract': 0.0, 'id_match': 0.0, 'id_match_distract': 0.0, 'status_equal': 0.0, 'status_equal_distract': 0.0}
+DONE ft_S60_dense_noinit 16.1 min

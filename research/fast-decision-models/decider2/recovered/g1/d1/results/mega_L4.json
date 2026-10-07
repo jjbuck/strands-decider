@@ -1,0 +1,128 @@
+{
+ "T256_L4_g160_G1": {
+  "seq": {
+   "median": 1.945,
+   "p95": 1.947
+  },
+  "pers": {
+   "median": 1.977,
+   "p95": 1.985
+  },
+  "rel_err": 0.000863,
+  "seq_tflops": 39.7,
+  "pers_tflops": 39.1,
+  "speedup": 0.9838
+ },
+ "T256_L4_g160_G2": {
+  "seq": {
+   "median": 1.945,
+   "p95": 1.947
+  },
+  "pers": {
+   "median": 1.932,
+   "p95": 1.936
+  },
+  "rel_err": 0.000822,
+  "seq_tflops": 39.7,
+  "pers_tflops": 40.0,
+  "speedup": 1.0067
+ },
+ "T256_L4_g160_G8": {
+  "seq": {
+   "median": 1.945,
+   "p95": 1.951
+  },
+  "pers": {
+   "median": 1.932,
+   "p95": 1.934
+  },
+  "rel_err": 0.000676,
+  "seq_tflops": 39.7,
+  "pers_tflops": 40.0,
+  "speedup": 1.0067
+ },
+ "T1000_L4_g160_G1": {
+  "seq": {
+   "median": 5.117,
+   "p95": 5.12
+  },
+  "pers": {
+   "median": 5.885,
+   "p95": 6.01
+  },
+  "rel_err": 0.000609,
+  "seq_tflops": 59.0,
+  "pers_tflops": 51.3,
+  "speedup": 0.8695
+ },
+ "T1000_L4_g160_G2": {
+  "seq": {
+   "median": 5.118,
+   "p95": 5.12
+  },
+  "pers": {
+   "median": 5.618,
+   "p95": 6.016
+  },
+  "rel_err": 0.000701,
+  "seq_tflops": 59.0,
+  "pers_tflops": 53.8,
+  "speedup": 0.911
+ },
+ "T1000_L4_g160_G8": {
+  "seq": {
+   "median": 5.127,
+   "p95": 5.129
+  },
+  "pers": {
+   "median": 5.097,
+   "p95": 5.348
+  },
+  "rel_err": 0.000782,
+  "seq_tflops": 58.9,
+  "pers_tflops": 59.2,
+  "speedup": 1.0059
+ },
+ "T4000_L4_g160_G1": {
+  "seq": {
+   "median": 19.102,
+   "p95": 19.143
+  },
+  "pers": {
+   "median": 23.934,
+   "p95": 24.168
+  },
+  "rel_err": 0.00072,
+  "seq_tflops": 63.2,
+  "pers_tflops": 50.5,
+  "speedup": 0.7981
+ },
+ "T4000_L4_g160_G2": {
+  "seq": {
+   "median": 19.107,
+   "p95": 19.147
+  },
+  "pers": {
+   "median": 20.029,
+   "p95": 20.35
+  },
+  "rel_err": 0.000677,
+  "seq_tflops": 63.2,
+  "pers_tflops": 60.3,
+  "speedup": 0.954
+ },
+ "T4000_L4_g160_G8": {
+  "seq": {
+   "median": 19.107,
+   "p95": 19.161
+  },
+  "pers": {
+   "median": 21.767,
+   "p95": 21.955
+  },
+  "rel_err": 0.00066,
+  "seq_tflops": 63.2,
+  "pers_tflops": 55.5,
+  "speedup": 0.8778
+ }
+}

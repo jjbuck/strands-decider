@@ -1,0 +1,44 @@
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 3801.23it/s]
+configs ['w8a8,gptq8,map=precmap_w8a8_b8.json', 'w8a8,gptq8,map=precmap_w8a8_b16.json']
+w8a8,gptq8,map=precmap_w8a8_b8.json 49/1511 REAL-agree T=1890 77s mem 8.3G
+w8a8,gptq8,map=precmap_w8a8_b8.json 99/1511 REAL-agree T=1970 111s mem 8.3G
+w8a8,gptq8,map=precmap_w8a8_b8.json 149/1511 REAL-agree T=1729 140s mem 8.3G
+w8a8,gptq8,map=precmap_w8a8_b8.json 199/1511 REAL-agree T=1704 171s mem 8.3G
+w8a8,gptq8,map=precmap_w8a8_b8.json 249/1511 REAL-agree T=3498 204s mem 8.3G
+w8a8,gptq8,map=precmap_w8a8_b8.json 299/1511 REAL-agree T=3781 233s mem 8.3G
+w8a8,gptq8,map=precmap_w8a8_b8.json 349/1511 REAL-agree T=2971 268s mem 8.3G
+w8a8,gptq8,map=precmap_w8a8_b8.json 399/1511 REAL-agree T=1974 298s mem 8.3G
+w8a8,gptq8,map=precmap_w8a8_b8.json 449/1511 REAL-agree T=1849 331s mem 8.3G
+w8a8,gptq8,map=precmap_w8a8_b8.json 499/1511 REAL-agree T=3793 374s mem 8.3G
+w8a8,gptq8,map=precmap_w8a8_b8.json 549/1511 REAL-agree T=2009 413s mem 8.3G
+w8a8,gptq8,map=precmap_w8a8_b8.json 599/1511 REAL-agree T=1811 442s mem 8.3G
+w8a8,gptq8,map=precmap_w8a8_b8.json 649/1511 REAL-agree T=2500 478s mem 8.3G
+w8a8,gptq8,map=precmap_w8a8_b8.json 699/1511 REAL-agree T=4818 524s mem 8.3G
+w8a8,gptq8,map=precmap_w8a8_b8.json 749/1511 REAL-agree T=2896 565s mem 8.3G
+w8a8,gptq8,map=precmap_w8a8_b8.json 799/1511 REAL-agree T=1684 606s mem 8.3G
+w8a8,gptq8,map=precmap_w8a8_b8.json 849/1511 REAL-agree T=2761 643s mem 8.3G
+w8a8,gptq8,map=precmap_w8a8_b8.json 899/1511 REAL-agree T=1249 672s mem 8.3G
+w8a8,gptq8,map=precmap_w8a8_b8.json 949/1511 REAL-agree T=3039 698s mem 8.3G
+w8a8,gptq8,map=precmap_w8a8_b8.json 999/1511 REAL-agree T=3295 744s mem 8.3G
+w8a8,gptq8,map=precmap_w8a8_b8.json 1049/1511 REAL-agree T=316 777s mem 8.3G
+w8a8,gptq8,map=precmap_w8a8_b8.json 1099/1511 CF T=3076 821s mem 8.5G
+w8a8,gptq8,map=precmap_w8a8_b8.json 1149/1511 CF T=3151 858s mem 8.5G
+w8a8,gptq8,map=precmap_w8a8_b8.json 1199/1511 CF T=2993 881s mem 8.5G
+w8a8,gptq8,map=precmap_w8a8_b8.json 1249/1511 CF T=633 906s mem 8.5G
+w8a8,gptq8,map=precmap_w8a8_b8.json 1299/1511 CF T=2455 929s mem 8.5G
+w8a8,gptq8,map=precmap_w8a8_b8.json 1349/1511 CF-probe T=3774 967s mem 8.5G
+w8a8,gptq8,map=precmap_w8a8_b8.json 1399/1511 CF-probe T=1776 1009s mem 8.5G
+w8a8,gptq8,map=precmap_w8a8_b8.json 1449/1511 CF-probe T=2621 1034s mem 8.5G
+w8a8,gptq8,map=precmap_w8a8_b8.json 1499/1511 CF-probe T=1403 1056s mem 8.5G
+config done w8a8,gptq8,map=precmap_w8a8_b8.json 1060s
+w8a8,gptq8,map=precmap_w8a8_b16.json 38/1511 REAL-agree T=1907 1133s mem 8.5G
+w8a8,gptq8,map=precmap_w8a8_b16.json 88/1511 REAL-agree T=2129 1168s mem 8.5G
+w8a8,gptq8,map=precmap_w8a8_b16.json 138/1511 REAL-agree T=1675 1207s mem 8.5G
+w8a8,gptq8,map=precmap_w8a8_b16.json 188/1511 REAL-agree T=1811 1244s mem 8.5G
+w8a8,gptq8,map=precmap_w8a8_b16.json 238/1511 REAL-agree T=3890 1281s mem 8.5G
+w8a8,gptq8,map=precmap_w8a8_b16.json 288/1511 REAL-agree T=1719 1317s mem 8.5G
+w8a8,gptq8,map=precmap_w8a8_b16.json 338/1511 REAL-agree T=3046 1359s mem 8.5G
+w8a8,gptq8,map=precmap_w8a8_b16.json 388/1511 REAL-agree T=1934 1397s mem 8.5G
+w8a8,gptq8,map=precmap_w8a8_b16.json 438/1511 REAL-agree T=4783 1439s mem 8.5G
+w8a8,gptq8,map=precmap_w8a8_b16.json 488/1511 REAL-agree T=1607 1480s mem 8.5G
+Terminated

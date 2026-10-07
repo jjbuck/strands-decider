@@ -1,0 +1,33 @@
+pool 10491 dev 120 dev tasks 18 v5 12557
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 4080.06it/s]
+DEV {"n": 378, "n_sd": 107, "agree": 0.7248677248677249, "agree_sd": 0.028037383177570093, "tv": 0.22622060395343593, "sd_proc": 0.0, "n_proc": 48, "sd_other": 0.05084745762711865, "step": 0, "t": 118.42582416534424}
+/home/ubuntu/work/j14/j14train.py:131: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /__w/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:820.)
+  return w * (kl + a.w_hid * hid), float(kl), float(hid)
+step 10 kl 0.2662 hid 0.0561 lr 5.00e-05 63s mem 7.5GB
+step 20 kl 0.1606 hid 0.0642 lr 9.98e-05 117s mem 7.5GB
+step 30 kl 0.1854 hid 0.0614 lr 9.95e-05 170s mem 7.5GB
+step 40 kl 0.2395 hid 0.0647 lr 9.91e-05 220s mem 7.5GB
+step 50 kl 0.2389 hid 0.0677 lr 9.85e-05 266s mem 7.5GB
+DEV {"n": 378, "n_sd": 107, "agree": 0.8544973544973545, "agree_sd": 0.5514018691588785, "tv": 0.14443475410598453, "sd_proc": 0.22916666666666666, "n_proc": 48, "sd_other": 0.8135593220338984, "step": 50, "t": 69.0128755569458}
+new best 50
+step 60 kl 0.1521 hid 0.0563 lr 9.79e-05 388s mem 7.5GB
+step 70 kl 0.1676 hid 0.0537 lr 9.71e-05 438s mem 7.5GB
+step 80 kl 0.1104 hid 0.0491 lr 9.62e-05 490s mem 7.5GB
+step 90 kl 0.1504 hid 0.0607 lr 9.52e-05 544s mem 7.5GB
+step 100 kl 0.1720 hid 0.0566 lr 9.41e-05 595s mem 7.5GB
+DEV {"n": 378, "n_sd": 107, "agree": 0.91005291005291, "agree_sd": 0.7102803738317757, "tv": 0.11802192929659099, "sd_proc": 0.5208333333333334, "n_proc": 48, "sd_other": 0.864406779661017, "step": 100, "t": 69.45514607429504}
+new best 100
+step 110 kl 0.1532 hid 0.0509 lr 9.29e-05 729s mem 7.5GB
+step 120 kl 0.0887 hid 0.0426 lr 9.15e-05 786s mem 7.5GB
+step 130 kl 0.1079 hid 0.0444 lr 9.01e-05 843s mem 7.5GB
+step 140 kl 0.1304 hid 0.0487 lr 8.86e-05 905s mem 7.5GB
+step 150 kl 0.0821 hid 0.0402 lr 8.70e-05 956s mem 7.5GB
+DEV {"n": 378, "n_sd": 107, "agree": 0.8809523809523809, "agree_sd": 0.8130841121495327, "tv": 0.11545634765434203, "sd_proc": 0.6875, "n_proc": 48, "sd_other": 0.9152542372881356, "step": 150, "t": 69.205557346344}
+new best 150
+step 160 kl 0.0902 hid 0.0412 lr 8.53e-05 1083s mem 7.5GB
+step 170 kl 0.1294 hid 0.0434 lr 8.35e-05 1133s mem 7.5GB
+step 180 kl 0.0884 hid 0.0459 lr 8.16e-05 1187s mem 7.5GB
+step 190 kl 0.1205 hid 0.0436 lr 7.97e-05 1242s mem 7.5GB
+step 200 kl 0.1032 hid 0.0469 lr 7.77e-05 1291s mem 7.5GB
+DEV {"n": 378, "n_sd": 107, "agree": 0.8888888888888888, "agree_sd": 0.6822429906542056, "tv": 0.1110638651218285, "sd_proc": 0.4583333333333333, "n_proc": 48, "sd_other": 0.864406779661017, "step": 200, "t": 69.02739024162292}

@@ -1,0 +1,86 @@
+{
+ "bf16_gate_up_M16": {
+  "us": 120.0,
+  "tflops": 6.7
+ },
+ "bf16_gate_up_M64": {
+  "us": 140.0,
+  "tflops": 23.0
+ },
+ "bf16_gate_up_M256": {
+  "us": 240.0,
+  "tflops": 53.7
+ },
+ "bf16_gate_up_M512": {
+  "us": 400.0,
+  "tflops": 64.4
+ },
+ "bf16_gate_up_M1024": {
+  "us": 820.0,
+  "tflops": 62.9
+ },
+ "bf16_gate_up_M2048": {
+  "us": 1640.0,
+  "tflops": 62.9
+ },
+ "bf16_gate_up_M4096": {
+  "us": 17070.0,
+  "tflops": 12.1
+ },
+ "bf16_down_M16": {
+  "us": 70.0,
+  "tflops": 5.8
+ },
+ "bf16_down_M64": {
+  "us": 70.0,
+  "tflops": 23.0
+ },
+ "bf16_down_M256": {
+  "us": 120.0,
+  "tflops": 53.7
+ },
+ "bf16_down_M512": {
+  "us": 240.0,
+  "tflops": 53.7
+ },
+ "bf16_down_M1024": {
+  "us": 400.0,
+  "tflops": 64.4
+ },
+ "bf16_down_M2048": {
+  "us": 940.0,
+  "tflops": 54.8
+ },
+ "bf16_down_M4096": {
+  "us": 1880.0,
+  "tflops": 54.8
+ },
+ "bf16_gdn_in_M16": {
+  "us": 90.0,
+  "tflops": 6.0
+ },
+ "bf16_gdn_in_M64": {
+  "us": 90.0,
+  "tflops": 24.0
+ },
+ "bf16_gdn_in_M256": {
+  "us": 160.0,
+  "tflops": 53.9
+ },
+ "bf16_gdn_in_M512": {
+  "us": 330.0,
+  "tflops": 52.3
+ },
+ "bf16_gdn_in_M1024": {
+  "us": 650.0,
+  "tflops": 53.1
+ },
+ "bf16_gdn_in_M2048": {
+  "us": 1140.0,
+  "tflops": 60.5
+ },
+ "bf16_gdn_in_M4096": {
+  "us": 15840.0,
+  "tflops": 8.7
+ }
+}

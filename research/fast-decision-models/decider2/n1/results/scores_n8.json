@@ -1,0 +1,194 @@
+{
+ "~/decider2/n1/results/npreds_n8.jsonl": {
+  "vs_hobson_all": {
+   "n": 837,
+   "agree": 0.994,
+   "flips": 5,
+   "tv": 0.00272,
+   "max_abs_dp": 0.0234
+  },
+  "flip_examples": [
+   [
+    "hard-sol-c-judge_hard-05",
+    "q",
+    0.507
+   ],
+   [
+    "48002e285dc63a5d",
+    "UserAskedForHuman",
+    0.501
+   ],
+   [
+    "hard-opus-a-long_policy-01",
+    "q",
+    0.358
+   ],
+   [
+    "eb463c3f0eb76a8a",
+    "wants_change",
+    0.504
+   ],
+   [
+    "46842984230f9730",
+    "probe",
+    0.5
+   ]
+  ],
+  "JB-all": {
+   "n_q": 231,
+   "coverage": 1.0,
+   "acc": 0.7316,
+   "n_acc": 231,
+   "agree": 0.9913,
+   "tv": 0.0027,
+   "kl": 0.0,
+   "agree_sd": 1.0,
+   "n_sd": 141
+  },
+  "JB-all_hobson_same": {
+   "n_q": 231,
+   "coverage": 1.0,
+   "acc": 0.7229,
+   "n_acc": 231,
+   "agree": 1.0,
+   "tv": 0.0,
+   "kl": 0.0,
+   "agree_sd": 1.0,
+   "n_sd": 141
+  },
+  "JB-hard": {
+   "n_q": 130,
+   "coverage": 1.0,
+   "acc": 0.5385,
+   "n_acc": 130,
+   "agree": 0.9846,
+   "tv": 0.0037,
+   "kl": 0.0001,
+   "agree_sd": 1.0,
+   "n_sd": 69
+  },
+  "JB-hard_hobson_same": {
+   "n_q": 130,
+   "coverage": 1.0,
+   "acc": 0.5231,
+   "n_acc": 130,
+   "agree": 1.0,
+   "tv": 0.0,
+   "kl": 0.0,
+   "agree_sd": 1.0,
+   "n_sd": 69
+  },
+  "REAL-agree": {
+   "n_q": 1083,
+   "coverage": 0.253,
+   "agree": 0.9964,
+   "tv": 0.0023,
+   "kl": 0.0,
+   "agree_sd": 0.9873,
+   "n_sd": 79
+  },
+  "REAL-agree_hobson_same": {
+   "n_q": 1083,
+   "coverage": 1.0,
+   "agree": 1.0,
+   "tv": 0.0,
+   "kl": 0.0,
+   "agree_sd": 1.0,
+   "n_sd": 346
+  },
+  "CF": {
+   "n_pairs": 90,
+   "acc": 0.6333,
+   "flip": 0.3444,
+   "flip_any": 0.4,
+   "dir": 0.9667,
+   "dmean": 0.1965,
+   "flip_rel": 1.0333,
+   "dmean_rel": 0.9987,
+   "flip_given_hobson": 1.0,
+   "agree": 0.9944,
+   "tv": 0.0028
+  },
+  "CF_hobson_same": {
+   "n_pairs": 406,
+   "acc": 0.5936,
+   "flip": 0.2685,
+   "flip_any": 0.3054,
+   "dir": 0.9483,
+   "dmean": 0.1701,
+   "flip_rel": 1.0,
+   "dmean_rel": 1.0,
+   "flip_given_hobson": 1.0,
+   "agree": 1.0,
+   "tv": 0.0
+  },
+  "CF-probe": {
+   "n_pairs": 76,
+   "acc": 0.6842,
+   "flip": 0.3684,
+   "flip_any": 0.3684,
+   "dir": 0.9342,
+   "dmean": 0.1787,
+   "flip_rel": 0.9655,
+   "dmean_rel": 0.9988,
+   "flip_given_hobson": 0.9655,
+   "agree": 0.9934,
+   "tv": 0.0034
+  },
+  "CF-probe_hobson_same": {
+   "n_pairs": 320,
+   "acc": 0.6531,
+   "flip": 0.3281,
+   "flip_any": 0.35,
+   "dir": 0.8844,
+   "dmean": 0.1522,
+   "flip_rel": 1.0,
+   "dmean_rel": 1.0,
+   "flip_given_hobson": 1.0,
+   "agree": 1.0,
+   "tv": 0.0
+  },
+  "REAL-label": {
+   "n_q": 400,
+   "coverage": 0.275,
+   "acc": 0.7455,
+   "n_acc": 110,
+   "acc_consensus": 0.7664,
+   "n_consensus": 107,
+   "acc_hobson_same": 0.7364,
+   "agree": 0.9909,
+   "tv": 0.002,
+   "kl": 0.0,
+   "agree_sd": 0.9706,
+   "n_sd": 34
+  },
+  "REAL-label_hobson_same": {
+   "n_q": 400,
+   "coverage": 1.0,
+   "acc": 0.785,
+   "n_acc": 400,
+   "acc_consensus": 0.8179,
+   "n_consensus": 368,
+   "agree": 1.0,
+   "tv": 0.0,
+   "kl": 0.0,
+   "agree_sd": 1.0,
+   "n_sd": 109
+  },
+  "SHUF": {
+   "n_pairs": 20,
+   "change": 0.5,
+   "both_right": 0.5
+  },
+  "SHUF_hobson_same": {
+   "n_pairs": 387,
+   "change": 0.3385,
+   "both_right": 0.2455
+  },
+  "JB-hard_mcnemar": {
+   "model_only": 2,
+   "hobson_only": 0,
+   "p": 0.5
+  }
+ }
+}

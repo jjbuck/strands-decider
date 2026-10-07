@@ -1,0 +1,43 @@
+125 2048 6144 splits 2 cfg 0 s8 eq True s4 eq True sem clean True
+125 2048 6144 splits 2 cfg 3 s8 eq True s4 eq True sem clean True
+125 2048 6144 splits 2 cfg 4 s8 eq True s4 eq True sem clean True
+125 2048 6144 splits 3 cfg 0 s8 eq True s4 eq True sem clean True
+125 2048 6144 splits 3 cfg 3 s8 eq True s4 eq True sem clean True
+125 2048 6144 splits 3 cfg 4 s8 eq True s4 eq True sem clean True
+125 2048 6144 splits 4 cfg 0 s8 eq True s4 eq True sem clean True
+125 2048 6144 splits 4 cfg 3 s8 eq True s4 eq True sem clean True
+125 2048 6144 splits 4 cfg 4 s8 eq True s4 eq True sem clean True
+125 2048 2048 splits 2 cfg 0 s8 eq True s4 eq True sem clean True
+125 2048 2048 splits 2 cfg 3 s8 eq True s4 eq True sem clean True
+125 2048 2048 splits 2 cfg 4 s8 eq True s4 eq True sem clean True
+125 2048 2048 splits 3 cfg 0 s8 eq True s4 eq True sem clean True
+125 2048 2048 splits 3 cfg 3 s8 eq True s4 eq True sem clean True
+125 2048 2048 splits 3 cfg 4 s8 eq True s4 eq True sem clean True
+125 2048 2048 splits 4 cfg 0 s8 eq True s4 eq True sem clean True
+125 2048 2048 splits 4 cfg 3 s8 eq True s4 eq True sem clean True
+125 2048 2048 splits 4 cfg 4 s8 eq True s4 eq True sem clean True
+77 520 1024 splits 2 cfg 0 s8 eq True s4 eq True sem clean True
+77 520 1024 splits 2 cfg 3 s8 eq True s4 eq True sem clean True
+77 520 1024 splits 2 cfg 4 s8 eq True s4 eq True sem clean True
+77 520 1024 splits 3 cfg 0 s8 eq True s4 eq True sem clean True
+77 520 1024 splits 3 cfg 3 s8 eq True s4 eq True sem clean True
+77 520 1024 splits 3 cfg 4 s8 eq True s4 eq True sem clean True
+77 520 1024 splits 4 cfg 0 s8 eq True s4 eq True sem clean True
+77 520 1024 splits 4 cfg 3 s8 eq True s4 eq True sem clean True
+77 520 1024 splits 4 cfg 4 s8 eq True s4 eq True sem clean True
+300 12288 2048 splits 2 cfg 0 s8 eq True s4 eq True sem clean True
+300 12288 2048 splits 2 cfg 3 s8 eq True s4 eq True sem clean True
+300 12288 2048 splits 2 cfg 4 s8 eq True s4 eq True sem clean True
+300 12288 2048 splits 3 cfg 0 s8 eq True s4 eq True sem clean True
+300 12288 2048 splits 3 cfg 3 s8 eq True s4 eq True sem clean True
+300 12288 2048 splits 3 cfg 4 s8 eq True s4 eq True sem clean True
+300 12288 2048 splits 4 cfg 0 s8 eq True s4 eq True sem clean True
+300 12288 2048 splits 4 cfg 3 s8 eq True s4 eq True sem clean True
+300 12288 2048 splits 4 cfg 4 s8 eq True s4 eq True sem clean True
+SPLITK ALL OK
+gdn_in {"1": [9, [51.87, 52.02]], "2": [7, [88.12, 88.27]], "4": [3, [134.2, 134.5]], "cut": [1, [49.97, 50.02]]}
+attn_in {"1": [4, [33.33, 33.43]], "2": [9, [47.77, 47.87]], "4": [5, [81.46, 81.92]], "cut": [3, [30.72, 30.77]]}
+out {"1": [6, [18.33, 18.38]], "2": [4, [27.85, 27.9]], "4": [4, [34.05, 34.41]], "cut": [3, [22.84, 22.89]]}
+gate_up {"1": [4, [80.18, 80.49]], "2": [4, [139.42, 139.47]], "4": [4, [213.86, 214.12]], "cut": [3, [75.57, 75.72]]}
+down {"1": [6, [44.39, 44.44]], "2": [6, [52.53, 52.63]], "4": [9, [57.91, 58.01]], "cut": [3, [62.67, 62.72]]}
+question-row int8 GEMMs, 125 rows, sum over 96 GEMMs (ms, graph): {1: 4.56, 2: 7.15, 4: 10.24, 'best': 4.56, 'cut': 4.95}

@@ -1,0 +1,37 @@
+{'dense': 1511, 'w8a8': 1511, 'w8a8,gptq8': 1511, 'w16a16': 1067}
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 4015.54it/s]
+configs ['dense']
+dense 1132/3126 CF T=6175 52s mem 7.0G
+dense 1182/3126 CF T=4440 102s mem 7.0G
+dense 1234/3126 CF T=1470 145s mem 7.0G
+dense 1284/3126 CF T=981 156s mem 7.0G
+dense 1340/3126 CF T=2500 175s mem 7.0G
+dense 1442/3126 CF T=1532 192s mem 7.0G
+dense 1494/3126 CF T=1910 203s mem 7.0G
+dense 1596/3126 CF T=963 215s mem 7.0G
+dense 1690/3126 CF T=2714 233s mem 7.0G
+dense 1744/3126 CF T=1445 245s mem 7.0G
+dense 1850/3126 CF T=2888 266s mem 7.0G
+dense 1906/3126 CF-probe T=2716 290s mem 7.0G
+dense 1976/3126 CF-probe T=3955 318s mem 7.0G
+dense 2042/3126 CF-probe T=4325 346s mem 7.0G
+dense 2106/3126 CF-probe T=3450 372s mem 7.0G
+dense 2180/3126 CF-probe T=3395 395s mem 7.0G
+dense 2254/3126 CF-probe T=1606 419s mem 7.0G
+dense 2324/3126 CF-probe T=3180 443s mem 7.0G
+dense 2410/3126 CF-probe T=2818 467s mem 7.0G
+dense 2504/3126 CF-probe T=2990 486s mem 7.0G
+dense 2560/3126 JB-hard T=406 497s mem 7.0G
+dense 2610/3126 JB-hard T=2765 509s mem 7.0G
+dense 2660/3126 LONG T=6727 524s mem 7.0G
+dense 2710/3126 LONG T=6879 574s mem 7.1G
+dense 2760/3126 LONG T=6581 627s mem 7.1G
+dense 2810/3126 LONG T=6298 677s mem 7.1G
+dense 2860/3126 LONG T=5371 726s mem 7.1G
+dense 2910/3126 LONG T=4545 769s mem 7.1G
+dense 2960/3126 LONG T=5789 812s mem 7.1G
+dense 3010/3126 LONG T=5689 853s mem 7.1G
+dense 3060/3126 LONG T=4657 885s mem 7.1G
+dense 3110/3126 LONG T=4261 914s mem 7.1G
+config done dense 930s
+done 930s

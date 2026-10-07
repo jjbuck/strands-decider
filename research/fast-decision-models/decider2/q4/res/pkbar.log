@@ -1,0 +1,4 @@
+{"lib": "libq4pk.so", "cfg": 0, "barriers": 95, "us": [217.1, 221.2]}
+{"lib": "libq4pk.so", "cfg": 3, "barriers": 95, "us": [217.1, 219.1]}
+{"lib": "libq4pk2.so", "cfg": 0, "barriers": 95, "us": [218.1, 221.2]}
+{"lib": "libq4pk2.so", "cfg": 3, "barriers": 95, "us": [218.1, 221.2]}

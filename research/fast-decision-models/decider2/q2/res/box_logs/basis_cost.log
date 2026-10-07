@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/home/ubuntu/work/q2/basis_cost.py", line 11, in <module>
+    r = dict(bf16=gtm(lambda i: torch.mm(x[i % 3], U)), int8=gtm(lambda i: torch._int_mm(x8[i % 3], U8)))
+                                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/work/q2/bench_pro.py", line 105, in gtm
+    for i in range(3): fn(i)
+                       ^^^^^
+  File "/home/ubuntu/work/q2/basis_cost.py", line 11, in <lambda>
+    r = dict(bf16=gtm(lambda i: torch.mm(x[i % 3], U)), int8=gtm(lambda i: torch._int_mm(x8[i % 3], U8)))
+                                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: CUDA error: CUBLAS_STATUS_NOT_SUPPORTED when calling cublasLtMatmul with transpose_mat1 0 transpose_mat2 0 m 2048 n 1125 k 2048 mat1_ld 2048 mat2_ld 2048 result_ld 2048 abType 3 cType 10 computeType 72 scaleType 10

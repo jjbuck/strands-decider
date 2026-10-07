@@ -1,0 +1,179 @@
+=== 21:56:01 grid
+{"key": "bf16|16|full", "prec": "bf16", "T": 16, "mode": "full", "rows": 141, "wall": {"median": 15.53, "p95": 15.533, "n": 20}, "kern": null, "mem_gb": 9.02}
+{"key": "bf16|32|full", "prec": "bf16", "T": 32, "mode": "full", "rows": 157, "wall": {"median": 15.551, "p95": 15.556, "n": 20}, "kern": null, "mem_gb": 8.9}
+{"key": "bf16|64|full", "prec": "bf16", "T": 64, "mode": "full", "rows": 189, "wall": {"median": 15.682, "p95": 15.697, "n": 20}, "kern": null, "mem_gb": 8.91}
+{"key": "bf16|128|full", "prec": "bf16", "T": 128, "mode": "full", "rows": 253, "wall": {"median": 16.052, "p95": 16.058, "n": 20}, "kern": null, "mem_gb": 8.93}
+USDT:2026-10-06 21:56:14 14316:14316 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-06 21:56:14 14316:14316 SyncActivityProfilerHandler.cpp:46] profiler_stop
+{"key": "bf16|256|full", "prec": "bf16", "T": 256, "mode": "full", "rows": 381, "wall": {"median": 25.496, "p95": 25.503, "n": 20}, "kern": {"other": 0.286, "gemm": 22.941, "glue": 0.595, "gdn_core": 1.446, "attn": 0.31, "kernels": 396, "busy": 25.578, "nongemm": 2.637}, "mem_gb": 8.95}
+{"key": "bf16|400|full", "prec": "bf16", "T": 400, "mode": "full", "rows": 525, "wall": {"median": 36.936, "p95": 36.946, "n": 20}, "kern": null, "mem_gb": 8.97}
+{"key": "bf16|600|full", "prec": "bf16", "T": 600, "mode": "full", "rows": 725, "wall": {"median": 43.951, "p95": 43.965, "n": 20}, "kern": null, "mem_gb": 9.0}
+USDT:2026-10-06 21:56:18 14316:14316 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-06 21:56:18 14316:14316 SyncActivityProfilerHandler.cpp:46] profiler_stop
+{"key": "bf16|1000|full", "prec": "bf16", "T": 1000, "mode": "full", "rows": 1125, "wall": {"median": 57.1, "p95": 57.115, "n": 20}, "kern": {"other": 0.51, "gemm": 49.899, "glue": 1.879, "gdn_core": 3.665, "attn": 1.027, "kernels": 390, "busy": 56.981, "nongemm": 7.082}, "mem_gb": 9.04}
+{"key": "bf16|1500|full", "prec": "bf16", "T": 1500, "mode": "full", "rows": 1625, "wall": {"median": 87.991, "p95": 88.003, "n": 20}, "kern": null, "mem_gb": 9.1}
+{"key": "bf16|2000|full", "prec": "bf16", "T": 2000, "mode": "full", "rows": 2125, "wall": {"median": 107.63, "p95": 107.647, "n": 20}, "kern": null, "mem_gb": 9.15}
+{"key": "bf16|3000|full", "prec": "bf16", "T": 3000, "mode": "full", "rows": 3125, "wall": {"median": 151.6, "p95": 151.633, "n": 20}, "kern": null, "mem_gb": 9.24}
+USDT:2026-10-06 21:56:33 14316:14316 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-06 21:56:33 14316:14316 SyncActivityProfilerHandler.cpp:46] profiler_stop
+{"key": "bf16|4000|full", "prec": "bf16", "T": 4000, "mode": "full", "rows": 4125, "wall": {"median": 203.518, "p95": 203.566, "n": 20}, "kern": {"other": 1.391, "gemm": 173.569, "glue": 7.36, "gdn_core": 12.606, "attn": 8.436, "kernels": 390, "busy": 203.362, "nongemm": 29.793}, "mem_gb": 9.34}
+{"key": "bf16|6000|full", "prec": "bf16", "T": 6000, "mode": "full", "rows": 6125, "wall": {"median": 298.796, "p95": 298.944, "n": 20}, "kern": null, "mem_gb": 9.53}
+{"key": "bf16|9000|full", "prec": "bf16", "T": 9000, "mode": "full", "rows": 9125, "wall": {"median": 458.209, "p95": 458.308, "n": 20}, "kern": null, "mem_gb": 9.81}
+{"key": "b8|16|full", "prec": "b8", "T": 16, "mode": "full", "rows": 141, "wall": {"median": 8.201, "p95": 8.208, "n": 20}, "kern": null, "mem_gb": 17.0}
+{"key": "b8|32|full", "prec": "b8", "T": 32, "mode": "full", "rows": 157, "wall": {"median": 8.266, "p95": 8.278, "n": 20}, "kern": null, "mem_gb": 11.35}
+{"key": "b8|64|full", "prec": "b8", "T": 64, "mode": "full", "rows": 189, "wall": {"median": 8.422, "p95": 8.464, "n": 20}, "kern": null, "mem_gb": 11.36}
+{"key": "b8|128|full", "prec": "b8", "T": 128, "mode": "full", "rows": 253, "wall": {"median": 9.708, "p95": 9.743, "n": 20}, "kern": null, "mem_gb": 11.37}
+USDT:2026-10-06 21:57:09 14358:14358 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-06 21:57:09 14358:14358 SyncActivityProfilerHandler.cpp:46] profiler_stop
+{"key": "b8|256|full", "prec": "b8", "T": 256, "mode": "full", "rows": 381, "wall": {"median": 14.361, "p95": 14.372, "n": 20}, "kern": {"other": 0.192, "glue": 2.002, "gemm": 10.457, "gdn_core": 1.447, "attn": 0.313, "kernels": 426, "busy": 14.411, "nongemm": 3.954}, "mem_gb": 11.39}
+{"key": "b8|400|full", "prec": "b8", "T": 400, "mode": "full", "rows": 525, "wall": {"median": 18.668, "p95": 18.679, "n": 20}, "kern": null, "mem_gb": 11.42}
+{"key": "b8|600|full", "prec": "b8", "T": 600, "mode": "full", "rows": 725, "wall": {"median": 25.739, "p95": 25.752, "n": 20}, "kern": null, "mem_gb": 11.44}
+USDT:2026-10-06 21:57:12 14358:14358 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-06 21:57:12 14358:14358 SyncActivityProfilerHandler.cpp:46] profiler_stop
+{"key": "b8|1000|full", "prec": "b8", "T": 1000, "mode": "full", "rows": 1125, "wall": {"median": 36.317, "p95": 36.338, "n": 20}, "kern": {"other": 0.248, "glue": 5.456, "gemm": 25.803, "gdn_core": 3.668, "attn": 1.03, "kernels": 412, "busy": 36.205, "nongemm": 10.402}, "mem_gb": 11.49}
+{"key": "b8|1500|full", "prec": "b8", "T": 1500, "mode": "full", "rows": 1625, "wall": {"median": 53.117, "p95": 53.129, "n": 20}, "kern": null, "mem_gb": 11.55}
+{"key": "b8|2000|full", "prec": "b8", "T": 2000, "mode": "full", "rows": 2125, "wall": {"median": 67.226, "p95": 67.95, "n": 20}, "kern": null, "mem_gb": 11.6}
+{"key": "b8|3000|full", "prec": "b8", "T": 3000, "mode": "full", "rows": 3125, "wall": {"median": 104.583, "p95": 104.603, "n": 20}, "kern": null, "mem_gb": 11.71}
+USDT:2026-10-06 21:57:22 14358:14358 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-06 21:57:22 14358:14358 SyncActivityProfilerHandler.cpp:46] profiler_stop
+{"key": "b8|4000|full", "prec": "b8", "T": 4000, "mode": "full", "rows": 4125, "wall": {"median": 142.104, "p95": 142.126, "n": 20}, "kern": {"other": 0.552, "glue": 18.821, "gemm": 101.724, "gdn_core": 12.595, "attn": 8.439, "kernels": 412, "busy": 142.132, "nongemm": 40.408}, "mem_gb": 11.81}
+{"key": "b8|6000|full", "prec": "b8", "T": 6000, "mode": "full", "rows": 6125, "wall": {"median": 211.428, "p95": 211.604, "n": 20}, "kern": null, "mem_gb": 12.01}
+{"key": "b8|9000|full", "prec": "b8", "T": 9000, "mode": "full", "rows": 9125, "wall": {"median": 337.082, "p95": 337.148, "n": 20}, "kern": null, "mem_gb": 12.31}
+{"key": "w4a4|16|full", "prec": "w4a4", "T": 16, "mode": "full", "rows": 141, "wall": {"median": 5.781, "p95": 5.794, "n": 20}, "kern": null, "mem_gb": 17.12}
+{"key": "w4a4|32|full", "prec": "w4a4", "T": 32, "mode": "full", "rows": 157, "wall": {"median": 5.818, "p95": 5.833, "n": 20}, "kern": null, "mem_gb": 10.74}
+{"key": "w4a4|64|full", "prec": "w4a4", "T": 64, "mode": "full", "rows": 189, "wall": {"median": 5.951, "p95": 5.963, "n": 20}, "kern": null, "mem_gb": 10.75}
+{"key": "w4a4|128|full", "prec": "w4a4", "T": 128, "mode": "full", "rows": 253, "wall": {"median": 6.727, "p95": 6.747, "n": 20}, "kern": null, "mem_gb": 10.76}
+USDT:2026-10-06 21:57:40 14358:14358 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-06 21:57:40 14358:14358 SyncActivityProfilerHandler.cpp:46] profiler_stop
+{"key": "w4a4|256|full", "prec": "w4a4", "T": 256, "mode": "full", "rows": 381, "wall": {"median": 9.648, "p95": 9.662, "n": 20}, "kern": {"other": 0.189, "glue": 2.071, "gemm": 5.507, "gdn_core": 1.447, "attn": 0.313, "kernels": 418, "busy": 9.527, "nongemm": 4.02}, "mem_gb": 10.78}
+{"key": "w4a4|400|full", "prec": "w4a4", "T": 400, "mode": "full", "rows": 525, "wall": {"median": 12.205, "p95": 12.219, "n": 20}, "kern": null, "mem_gb": 10.8}
+{"key": "w4a4|600|full", "prec": "w4a4", "T": 600, "mode": "full", "rows": 725, "wall": {"median": 16.481, "p95": 16.497, "n": 20}, "kern": null, "mem_gb": 10.83}
+USDT:2026-10-06 21:57:42 14358:14358 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-06 21:57:42 14358:14358 SyncActivityProfilerHandler.cpp:46] profiler_stop
+{"key": "w4a4|1000|full", "prec": "w4a4", "T": 1000, "mode": "full", "rows": 1125, "wall": {"median": 23.418, "p95": 23.437, "n": 20}, "kern": {"other": 0.246, "glue": 5.382, "gemm": 12.995, "gdn_core": 3.668, "attn": 1.028, "kernels": 412, "busy": 23.318, "nongemm": 10.323}, "mem_gb": 10.88}
+{"key": "w4a4|1500|full", "prec": "w4a4", "T": 1500, "mode": "full", "rows": 1625, "wall": {"median": 33.646, "p95": 33.658, "n": 20}, "kern": null, "mem_gb": 10.93}
+{"key": "w4a4|2000|full", "prec": "w4a4", "T": 2000, "mode": "full", "rows": 2125, "wall": {"median": 42.813, "p95": 42.83, "n": 20}, "kern": null, "mem_gb": 10.98}
+{"key": "w4a4|3000|full", "prec": "w4a4", "T": 3000, "mode": "full", "rows": 3125, "wall": {"median": 62.657, "p95": 62.672, "n": 20}, "kern": null, "mem_gb": 11.08}
+USDT:2026-10-06 21:57:48 14358:14358 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-06 21:57:48 14358:14358 SyncActivityProfilerHandler.cpp:46] profiler_stop
+{"key": "w4a4|4000|full", "prec": "w4a4", "T": 4000, "mode": "full", "rows": 4125, "wall": {"median": 84.571, "p95": 84.594, "n": 20}, "kern": {"other": 0.547, "glue": 18.297, "gemm": 44.622, "gdn_core": 12.595, "attn": 8.439, "kernels": 412, "busy": 84.499, "nongemm": 39.877}, "mem_gb": 11.18}
+{"key": "w4a4|6000|full", "prec": "w4a4", "T": 6000, "mode": "full", "rows": 6125, "wall": {"median": 137.034, "p95": 137.176, "n": 20}, "kern": null, "mem_gb": 11.37}
+{"key": "w4a4|9000|full", "prec": "w4a4", "T": 9000, "mode": "full", "rows": 9125, "wall": {"median": 220.013, "p95": 220.169, "n": 20}, "kern": null, "mem_gb": 11.66}
+{"key": "k48|16|full", "prec": "k48", "T": 16, "mode": "full", "rows": 141, "wall": {"median": 6.96, "p95": 6.976, "n": 20}, "kern": null, "mem_gb": 17.24}
+{"key": "k48|32|full", "prec": "k48", "T": 32, "mode": "full", "rows": 157, "wall": {"median": 6.988, "p95": 6.997, "n": 20}, "kern": null, "mem_gb": 11.17}
+{"key": "k48|64|full", "prec": "k48", "T": 64, "mode": "full", "rows": 189, "wall": {"median": 7.122, "p95": 7.138, "n": 20}, "kern": null, "mem_gb": 11.18}
+{"key": "k48|128|full", "prec": "k48", "T": 128, "mode": "full", "rows": 253, "wall": {"median": 8.155, "p95": 8.167, "n": 20}, "kern": null, "mem_gb": 11.19}
+USDT:2026-10-06 21:58:01 14358:14358 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-06 21:58:01 14358:14358 SyncActivityProfilerHandler.cpp:46] profiler_stop
+{"key": "k48|256|full", "prec": "k48", "T": 256, "mode": "full", "rows": 381, "wall": {"median": 11.901, "p95": 11.916, "n": 20}, "kern": {"other": 0.187, "glue": 2.068, "gemm": 7.763, "gdn_core": 1.451, "attn": 0.316, "kernels": 418, "busy": 11.785, "nongemm": 4.022}, "mem_gb": 11.21}
+{"key": "k48|400|full", "prec": "k48", "T": 400, "mode": "full", "rows": 525, "wall": {"median": 15.093, "p95": 15.104, "n": 20}, "kern": null, "mem_gb": 11.22}
+{"key": "k48|600|full", "prec": "k48", "T": 600, "mode": "full", "rows": 725, "wall": {"median": 20.515, "p95": 20.602, "n": 20}, "kern": null, "mem_gb": 11.24}
+USDT:2026-10-06 21:58:03 14358:14358 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-06 21:58:03 14358:14358 SyncActivityProfilerHandler.cpp:46] profiler_stop
+{"key": "k48|1000|full", "prec": "k48", "T": 1000, "mode": "full", "rows": 1125, "wall": {"median": 29.18, "p95": 29.197, "n": 20}, "kern": {"other": 0.248, "glue": 5.477, "gemm": 18.654, "gdn_core": 3.665, "attn": 1.029, "kernels": 412, "busy": 29.072, "nongemm": 10.418}, "mem_gb": 11.27}
+{"key": "k48|1500|full", "prec": "k48", "T": 1500, "mode": "full", "rows": 1625, "wall": {"median": 42.005, "p95": 42.029, "n": 20}, "kern": null, "mem_gb": 11.32}
+{"key": "k48|2000|full", "prec": "k48", "T": 2000, "mode": "full", "rows": 2125, "wall": {"median": 53.592, "p95": 53.94, "n": 20}, "kern": null, "mem_gb": 11.37}
+{"key": "k48|3000|full", "prec": "k48", "T": 3000, "mode": "full", "rows": 3125, "wall": {"median": 81.459, "p95": 82.156, "n": 20}, "kern": null, "mem_gb": 11.46}
+USDT:2026-10-06 21:58:11 14358:14358 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-06 21:58:11 14358:14358 SyncActivityProfilerHandler.cpp:46] profiler_stop
+{"key": "k48|4000|full", "prec": "k48", "T": 4000, "mode": "full", "rows": 4125, "wall": {"median": 109.814, "p95": 109.837, "n": 20}, "kern": {"other": 0.548, "glue": 18.506, "gemm": 69.73, "gdn_core": 12.594, "attn": 8.439, "kernels": 412, "busy": 109.817, "nongemm": 40.087}, "mem_gb": 11.55}
+{"key": "k48|6000|full", "prec": "k48", "T": 6000, "mode": "full", "rows": 6125, "wall": {"median": 169.848, "p95": 170.134, "n": 20}, "kern": null, "mem_gb": 11.74}
+{"key": "k48|9000|full", "prec": "k48", "T": 9000, "mode": "full", "rows": 9125, "wall": {"median": 272.111, "p95": 272.242, "n": 20}, "kern": null, "mem_gb": 12.02}
+{"key": "k64|16|full", "prec": "k64", "T": 16, "mode": "full", "rows": 141, "wall": {"median": 7.332, "p95": 7.341, "n": 20}, "kern": null, "mem_gb": 17.27}
+{"key": "k64|32|full", "prec": "k64", "T": 32, "mode": "full", "rows": 157, "wall": {"median": 7.375, "p95": 7.388, "n": 20}, "kern": null, "mem_gb": 11.29}
+{"key": "k64|64|full", "prec": "k64", "T": 64, "mode": "full", "rows": 189, "wall": {"median": 7.509, "p95": 7.523, "n": 20}, "kern": null, "mem_gb": 11.29}
+{"key": "k64|128|full", "prec": "k64", "T": 128, "mode": "full", "rows": 253, "wall": {"median": 8.616, "p95": 8.636, "n": 20}, "kern": null, "mem_gb": 11.29}
+USDT:2026-10-06 21:58:26 14358:14358 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-06 21:58:26 14358:14358 SyncActivityProfilerHandler.cpp:46] profiler_stop
+{"key": "k64|256|full", "prec": "k64", "T": 256, "mode": "full", "rows": 381, "wall": {"median": 12.623, "p95": 12.64, "n": 20}, "kern": {"other": 0.188, "glue": 2.059, "gemm": 8.491, "gdn_core": 1.452, "attn": 0.316, "kernels": 418, "busy": 12.506, "nongemm": 4.015}, "mem_gb": 11.31}
+{"key": "k64|400|full", "prec": "k64", "T": 400, "mode": "full", "rows": 525, "wall": {"median": 16.028, "p95": 16.041, "n": 20}, "kern": null, "mem_gb": 11.32}
+{"key": "k64|600|full", "prec": "k64", "T": 600, "mode": "full", "rows": 725, "wall": {"median": 21.789, "p95": 21.803, "n": 20}, "kern": null, "mem_gb": 11.34}
+USDT:2026-10-06 21:58:28 14358:14358 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-06 21:58:28 14358:14358 SyncActivityProfilerHandler.cpp:46] profiler_stop
+{"key": "k64|1000|full", "prec": "k64", "T": 1000, "mode": "full", "rows": 1125, "wall": {"median": 31.002, "p95": 31.029, "n": 20}, "kern": {"other": 0.245, "glue": 5.493, "gemm": 20.454, "gdn_core": 3.67, "attn": 1.029, "kernels": 412, "busy": 30.891, "nongemm": 10.437}, "mem_gb": 11.38}
+{"key": "k64|1500|full", "prec": "k64", "T": 1500, "mode": "full", "rows": 1625, "wall": {"median": 45.036, "p95": 45.059, "n": 20}, "kern": null, "mem_gb": 11.43}
+{"key": "k64|2000|full", "prec": "k64", "T": 2000, "mode": "full", "rows": 2125, "wall": {"median": 57.356, "p95": 57.954, "n": 20}, "kern": null, "mem_gb": 11.47}
+{"key": "k64|3000|full", "prec": "k64", "T": 3000, "mode": "full", "rows": 3125, "wall": {"median": 87.372, "p95": 87.395, "n": 20}, "kern": null, "mem_gb": 11.56}
+USDT:2026-10-06 21:58:37 14358:14358 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-06 21:58:38 14358:14358 SyncActivityProfilerHandler.cpp:46] profiler_stop
+{"key": "k64|4000|full", "prec": "k64", "T": 4000, "mode": "full", "rows": 4125, "wall": {"median": 117.85, "p95": 117.877, "n": 20}, "kern": {"other": 0.547, "glue": 18.594, "gemm": 77.664, "gdn_core": 12.597, "attn": 8.438, "kernels": 412, "busy": 117.84, "nongemm": 40.176}, "mem_gb": 11.65}
+{"key": "k64|6000|full", "prec": "k64", "T": 6000, "mode": "full", "rows": 6125, "wall": {"median": 180.256, "p95": 180.339, "n": 20}, "kern": null, "mem_gb": 11.84}
+{"key": "k64|9000|full", "prec": "k64", "T": 9000, "mode": "full", "rows": 9125, "wall": {"median": 288.638, "p95": 288.692, "n": 20}, "kern": null, "mem_gb": 12.12}
+{"key": "b8|32|pre:4", "prec": "b8", "T": 32, "mode": "pre:4", "rows": 157, "wall": {"median": 1.448, "p95": 1.451, "n": 20}, "kern": null, "mem_gb": 17.0}
+{"key": "b8|32|pre:6", "prec": "b8", "T": 32, "mode": "pre:6", "rows": 157, "wall": {"median": 2.148, "p95": 2.154, "n": 20}, "kern": null, "mem_gb": 11.35}
+{"key": "b8|32|pre:8", "prec": "b8", "T": 32, "mode": "pre:8", "rows": 157, "wall": {"median": 2.798, "p95": 2.806, "n": 20}, "kern": null, "mem_gb": 11.36}
+{"key": "b8|32|pre:10", "prec": "b8", "T": 32, "mode": "pre:10", "rows": 157, "wall": {"median": 3.512, "p95": 3.516, "n": 20}, "kern": null, "mem_gb": 11.36}
+{"key": "b8|32|pre:12", "prec": "b8", "T": 32, "mode": "pre:12", "rows": 157, "wall": {"median": 4.174, "p95": 4.186, "n": 20}, "kern": null, "mem_gb": 11.37}
+{"key": "b8|32|pre:14", "prec": "b8", "T": 32, "mode": "pre:14", "rows": 157, "wall": {"median": 4.892, "p95": 4.902, "n": 20}, "kern": null, "mem_gb": 11.38}
+{"key": "b8|32|pre:16", "prec": "b8", "T": 32, "mode": "pre:16", "rows": 157, "wall": {"median": 5.517, "p95": 5.523, "n": 20}, "kern": null, "mem_gb": 11.39}
+{"key": "b8|32|pre:18", "prec": "b8", "T": 32, "mode": "pre:18", "rows": 157, "wall": {"median": 6.218, "p95": 6.222, "n": 20}, "kern": null, "mem_gb": 11.4}
+{"key": "b8|32|pre:20", "prec": "b8", "T": 32, "mode": "pre:20", "rows": 157, "wall": {"median": 6.852, "p95": 6.857, "n": 20}, "kern": null, "mem_gb": 11.41}
+{"key": "b8|32|post:8", "prec": "b8", "T": 32, "mode": "post:8", "rows": 157, "wall": {"median": 5.553, "p95": 5.56, "n": 20}, "kern": null, "mem_gb": 11.42}
+{"key": "b8|32|post:12", "prec": "b8", "T": 32, "mode": "post:12", "rows": 157, "wall": {"median": 4.181, "p95": 4.184, "n": 20}, "kern": null, "mem_gb": 11.42}
+{"key": "b8|128|pre:4", "prec": "b8", "T": 128, "mode": "pre:4", "rows": 253, "wall": {"median": 1.697, "p95": 1.706, "n": 20}, "kern": null, "mem_gb": 11.44}
+{"key": "b8|128|pre:6", "prec": "b8", "T": 128, "mode": "pre:6", "rows": 253, "wall": {"median": 2.527, "p95": 2.535, "n": 20}, "kern": null, "mem_gb": 11.45}
+{"key": "b8|128|pre:8", "prec": "b8", "T": 128, "mode": "pre:8", "rows": 253, "wall": {"median": 3.294, "p95": 3.298, "n": 20}, "kern": null, "mem_gb": 11.46}
+{"key": "b8|128|pre:10", "prec": "b8", "T": 128, "mode": "pre:10", "rows": 253, "wall": {"median": 4.137, "p95": 4.146, "n": 20}, "kern": null, "mem_gb": 11.47}
+{"key": "b8|128|pre:12", "prec": "b8", "T": 128, "mode": "pre:12", "rows": 253, "wall": {"median": 4.92, "p95": 4.927, "n": 20}, "kern": null, "mem_gb": 11.48}
+{"key": "b8|128|pre:14", "prec": "b8", "T": 128, "mode": "pre:14", "rows": 253, "wall": {"median": 5.761, "p95": 5.767, "n": 20}, "kern": null, "mem_gb": 11.48}
+{"key": "b8|128|pre:16", "prec": "b8", "T": 128, "mode": "pre:16", "rows": 253, "wall": {"median": 6.508, "p95": 6.513, "n": 20}, "kern": null, "mem_gb": 11.49}
+{"key": "b8|128|pre:18", "prec": "b8", "T": 128, "mode": "pre:18", "rows": 253, "wall": {"median": 7.339, "p95": 7.342, "n": 20}, "kern": null, "mem_gb": 11.5}
+{"key": "b8|128|pre:20", "prec": "b8", "T": 128, "mode": "pre:20", "rows": 253, "wall": {"median": 8.087, "p95": 8.094, "n": 20}, "kern": null, "mem_gb": 11.51}
+{"key": "b8|128|post:8", "prec": "b8", "T": 128, "mode": "post:8", "rows": 253, "wall": {"median": 6.534, "p95": 6.538, "n": 20}, "kern": null, "mem_gb": 11.52}
+{"key": "b8|128|post:12", "prec": "b8", "T": 128, "mode": "post:12", "rows": 253, "wall": {"median": 4.907, "p95": 4.918, "n": 20}, "kern": null, "mem_gb": 11.53}
+{"key": "b8|400|pre:4", "prec": "b8", "T": 400, "mode": "pre:4", "rows": 525, "wall": {"median": 3.147, "p95": 3.154, "n": 20}, "kern": null, "mem_gb": 11.56}
+{"key": "b8|400|pre:6", "prec": "b8", "T": 400, "mode": "pre:6", "rows": 525, "wall": {"median": 4.71, "p95": 4.718, "n": 20}, "kern": null, "mem_gb": 11.57}
+{"key": "b8|400|pre:8", "prec": "b8", "T": 400, "mode": "pre:8", "rows": 525, "wall": {"median": 6.185, "p95": 6.19, "n": 20}, "kern": null, "mem_gb": 11.58}
+{"key": "b8|400|pre:10", "prec": "b8", "T": 400, "mode": "pre:10", "rows": 525, "wall": {"median": 7.771, "p95": 7.779, "n": 20}, "kern": null, "mem_gb": 11.59}
+{"key": "b8|400|pre:12", "prec": "b8", "T": 400, "mode": "pre:12", "rows": 525, "wall": {"median": 9.27, "p95": 9.278, "n": 20}, "kern": null, "mem_gb": 11.6}
+{"key": "b8|400|pre:14", "prec": "b8", "T": 400, "mode": "pre:14", "rows": 525, "wall": {"median": 10.866, "p95": 10.876, "n": 20}, "kern": null, "mem_gb": 11.6}
+{"key": "b8|400|pre:16", "prec": "b8", "T": 400, "mode": "pre:16", "rows": 525, "wall": {"median": 12.304, "p95": 12.316, "n": 20}, "kern": null, "mem_gb": 11.61}
+{"key": "b8|400|pre:18", "prec": "b8", "T": 400, "mode": "pre:18", "rows": 525, "wall": {"median": 13.865, "p95": 13.878, "n": 20}, "kern": null, "mem_gb": 11.62}
+{"key": "b8|400|pre:20", "prec": "b8", "T": 400, "mode": "pre:20", "rows": 525, "wall": {"median": 15.317, "p95": 15.327, "n": 20}, "kern": null, "mem_gb": 11.63}
+{"key": "b8|400|post:8", "prec": "b8", "T": 400, "mode": "post:8", "rows": 525, "wall": {"median": 12.394, "p95": 12.406, "n": 20}, "kern": null, "mem_gb": 11.63}
+{"key": "b8|400|post:12", "prec": "b8", "T": 400, "mode": "post:12", "rows": 525, "wall": {"median": 9.292, "p95": 9.302, "n": 20}, "kern": null, "mem_gb": 11.63}
+{"key": "b8|1000|pre:4", "prec": "b8", "T": 1000, "mode": "pre:4", "rows": 1125, "wall": {"median": 6.084, "p95": 6.09, "n": 20}, "kern": null, "mem_gb": 11.68}
+{"key": "b8|1000|pre:6", "prec": "b8", "T": 1000, "mode": "pre:6", "rows": 1125, "wall": {"median": 9.121, "p95": 9.133, "n": 20}, "kern": null, "mem_gb": 11.68}
+{"key": "b8|1000|pre:8", "prec": "b8", "T": 1000, "mode": "pre:8", "rows": 1125, "wall": {"median": 12.035, "p95": 12.044, "n": 20}, "kern": null, "mem_gb": 11.68}
+{"key": "b8|1000|pre:10", "prec": "b8", "T": 1000, "mode": "pre:10", "rows": 1125, "wall": {"median": 15.146, "p95": 15.153, "n": 20}, "kern": null, "mem_gb": 11.69}
+{"key": "b8|1000|pre:12", "prec": "b8", "T": 1000, "mode": "pre:12", "rows": 1125, "wall": {"median": 18.129, "p95": 18.145, "n": 20}, "kern": null, "mem_gb": 11.69}
+{"key": "b8|1000|pre:14", "prec": "b8", "T": 1000, "mode": "pre:14", "rows": 1125, "wall": {"median": 21.242, "p95": 21.252, "n": 20}, "kern": null, "mem_gb": 11.69}
+{"key": "b8|1000|pre:16", "prec": "b8", "T": 1000, "mode": "pre:16", "rows": 1125, "wall": {"median": 24.079, "p95": 24.087, "n": 20}, "kern": null, "mem_gb": 11.69}
+{"key": "b8|1000|pre:18", "prec": "b8", "T": 1000, "mode": "pre:18", "rows": 1125, "wall": {"median": 27.115, "p95": 27.123, "n": 20}, "kern": null, "mem_gb": 11.69}
+{"key": "b8|1000|pre:20", "prec": "b8", "T": 1000, "mode": "pre:20", "rows": 1125, "wall": {"median": 29.951, "p95": 29.961, "n": 20}, "kern": null, "mem_gb": 11.69}
+{"key": "b8|1000|post:8", "prec": "b8", "T": 1000, "mode": "post:8", "rows": 1125, "wall": {"median": 24.215, "p95": 24.221, "n": 20}, "kern": null, "mem_gb": 11.69}
+{"key": "b8|1000|post:12", "prec": "b8", "T": 1000, "mode": "post:12", "rows": 1125, "wall": {"median": 18.132, "p95": 18.145, "n": 20}, "kern": null, "mem_gb": 11.68}
+{"key": "b8|2000|pre:4", "prec": "b8", "T": 2000, "mode": "pre:4", "rows": 2125, "wall": {"median": 11.198, "p95": 11.208, "n": 20}, "kern": null, "mem_gb": 11.78}
+{"key": "b8|2000|pre:6", "prec": "b8", "T": 2000, "mode": "pre:6", "rows": 2125, "wall": {"median": 16.727, "p95": 16.737, "n": 20}, "kern": null, "mem_gb": 11.78}
+{"key": "b8|2000|pre:8", "prec": "b8", "T": 2000, "mode": "pre:8", "rows": 2125, "wall": {"median": 22.236, "p95": 22.382, "n": 20}, "kern": null, "mem_gb": 11.78}
+{"key": "b8|2000|pre:10", "prec": "b8", "T": 2000, "mode": "pre:10", "rows": 2125, "wall": {"median": 27.951, "p95": 28.231, "n": 20}, "kern": null, "mem_gb": 11.78}
+{"key": "b8|2000|pre:12", "prec": "b8", "T": 2000, "mode": "pre:12", "rows": 2125, "wall": {"median": 33.627, "p95": 33.638, "n": 20}, "kern": null, "mem_gb": 11.78}
+{"key": "b8|2000|pre:14", "prec": "b8", "T": 2000, "mode": "pre:14", "rows": 2125, "wall": {"median": 39.36, "p95": 39.599, "n": 20}, "kern": null, "mem_gb": 11.78}
+{"key": "b8|2000|pre:16", "prec": "b8", "T": 2000, "mode": "pre:16", "rows": 2125, "wall": {"median": 44.941, "p95": 45.173, "n": 20}, "kern": null, "mem_gb": 11.78}
+{"key": "b8|2000|pre:18", "prec": "b8", "T": 2000, "mode": "pre:18", "rows": 2125, "wall": {"median": 50.485, "p95": 51.229, "n": 20}, "kern": null, "mem_gb": 11.78}
+{"key": "b8|2000|pre:20", "prec": "b8", "T": 2000, "mode": "pre:20", "rows": 2125, "wall": {"median": 55.875, "p95": 56.128, "n": 20}, "kern": null, "mem_gb": 11.78}
+{"key": "b8|2000|post:8", "prec": "b8", "T": 2000, "mode": "post:8", "rows": 2125, "wall": {"median": 45.104, "p95": 45.855, "n": 20}, "kern": null, "mem_gb": 11.78}
+{"key": "b8|2000|post:12", "prec": "b8", "T": 2000, "mode": "post:12", "rows": 2125, "wall": {"median": 33.7, "p95": 33.892, "n": 20}, "kern": null, "mem_gb": 11.78}
+{"key": "b8|4000|pre:4", "prec": "b8", "T": 4000, "mode": "pre:4", "rows": 4125, "wall": {"median": 23.615, "p95": 23.776, "n": 20}, "kern": null, "mem_gb": 11.96}
+{"key": "b8|4000|pre:6", "prec": "b8", "T": 4000, "mode": "pre:6", "rows": 4125, "wall": {"median": 35.072, "p95": 35.083, "n": 20}, "kern": null, "mem_gb": 11.96}
+{"key": "b8|4000|pre:8", "prec": "b8", "T": 4000, "mode": "pre:8", "rows": 4125, "wall": {"median": 47.015, "p95": 47.024, "n": 20}, "kern": null, "mem_gb": 11.96}
+{"key": "b8|4000|pre:10", "prec": "b8", "T": 4000, "mode": "pre:10", "rows": 4125, "wall": {"median": 58.835, "p95": 58.856, "n": 20}, "kern": null, "mem_gb": 11.97}
+{"key": "b8|4000|pre:12", "prec": "b8", "T": 4000, "mode": "pre:12", "rows": 4125, "wall": {"median": 71.119, "p95": 71.129, "n": 20}, "kern": null, "mem_gb": 11.97}
+{"key": "b8|4000|pre:14", "prec": "b8", "T": 4000, "mode": "pre:14", "rows": 4125, "wall": {"median": 82.9, "p95": 82.918, "n": 20}, "kern": null, "mem_gb": 11.97}
+{"key": "b8|4000|pre:16", "prec": "b8", "T": 4000, "mode": "pre:16", "rows": 4125, "wall": {"median": 94.505, "p95": 94.527, "n": 20}, "kern": null, "mem_gb": 11.97}
+{"key": "b8|4000|pre:18", "prec": "b8", "T": 4000, "mode": "pre:18", "rows": 4125, "wall": {"median": 105.914, "p95": 105.965, "n": 20}, "kern": null, "mem_gb": 11.97}
+{"key": "b8|4000|pre:20", "prec": "b8", "T": 4000, "mode": "pre:20", "rows": 4125, "wall": {"median": 117.486, "p95": 117.508, "n": 20}, "kern": null, "mem_gb": 11.97}
+{"key": "b8|4000|post:8", "prec": "b8", "T": 4000, "mode": "post:8", "rows": 4125, "wall": {"median": 95.106, "p95": 95.123, "n": 20}, "kern": null, "mem_gb": 11.97}
+{"key": "b8|4000|post:12", "prec": "b8", "T": 4000, "mode": "post:12", "rows": 4125, "wall": {"median": 71.026, "p95": 71.042, "n": 20}, "kern": null, "mem_gb": 11.96}
+{"key": "b8|9000|pre:4", "prec": "b8", "T": 9000, "mode": "pre:4", "rows": 9125, "wall": {"median": 56.158, "p95": 56.197, "n": 20}, "kern": null, "mem_gb": 12.43}
+{"key": "b8|9000|pre:6", "prec": "b8", "T": 9000, "mode": "pre:6", "rows": 9125, "wall": {"median": 82.02, "p95": 82.065, "n": 20}, "kern": null, "mem_gb": 12.43}
+{"key": "b8|9000|pre:8", "prec": "b8", "T": 9000, "mode": "pre:8", "rows": 9125, "wall": {"median": 111.825, "p95": 111.876, "n": 20}, "kern": null, "mem_gb": 12.43}
+{"key": "b8|9000|pre:10", "prec": "b8", "T": 9000, "mode": "pre:10", "rows": 9125, "wall": {"median": 138.392, "p95": 138.491, "n": 20}, "kern": null, "mem_gb": 12.45}
+{"key": "b8|9000|pre:12", "prec": "b8", "T": 9000, "mode": "pre:12", "rows": 9125, "wall": {"median": 168.793, "p95": 168.847, "n": 20}, "kern": null, "mem_gb": 12.45}
+{"key": "b8|9000|pre:14", "prec": "b8", "T": 9000, "mode": "pre:14", "rows": 9125, "wall": {"median": 195.276, "p95": 195.345, "n": 20}, "kern": null, "mem_gb": 12.45}
+{"key": "b8|9000|pre:16", "prec": "b8", "T": 9000, "mode": "pre:16", "rows": 9125, "wall": {"median": 224.529, "p95": 224.593, "n": 20}, "kern": null, "mem_gb": 12.45}
+{"key": "b8|9000|pre:18", "prec": "b8", "T": 9000, "mode": "pre:18", "rows": 9125, "wall": {"median": 250.414, "p95": 250.516, "n": 20}, "kern": null, "mem_gb": 12.45}
+{"key": "b8|9000|pre:20", "prec": "b8", "T": 9000, "mode": "pre:20", "rows": 9125, "wall": {"median": 279.599, "p95": 279.689, "n": 20}, "kern": null, "mem_gb": 12.45}
+{"key": "b8|9000|post:8", "prec": "b8", "T": 9000, "mode": "post:8", "rows": 9125, "wall": {"median": 225.712, "p95": 225.754, "n": 20}, "kern": null, "mem_gb": 12.45}
+{"key": "b8|9000|post:12", "prec": "b8", "T": 9000, "mode": "post:12", "rows": 9125, "wall": {"median": 168.745, "p95": 168.86, "n": 20}, "kern": null, "mem_gb": 12.43}
+CHAIN3_DONE 22:00:42

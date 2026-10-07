@@ -1,0 +1,22 @@
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 3986.61it/s]
+mem before build 3.78
+mem after build 4.79
+model built map:~/work/h2/precmap_w4a4_k48.json plainqb  rot
+questions 3227 groups 3227
+200 17s
+400 45s
+600 80s
+800 123s
+1000 177s
+1200 193s
+1400 238s
+1600 319s
+1800 398s
+2000 462s
+2200 499s
+2400 525s
+2600 563s
+2800 607s
+3000 645s
+3200 677s
+done 3227 681s

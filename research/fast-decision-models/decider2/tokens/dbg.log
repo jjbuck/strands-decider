@@ -1,0 +1,3 @@
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 5303.75it/s]
+inference params 326 ['torso.embed_tokens.weight', 'torso.layers.0.linear_attn.dt_bias', 'torso.layers.0.linear_attn.A_log', 'torso.layers.0.linear_attn.conv1d.weight', 'torso.layers.0.linear_attn.norm.weight']
+inference buffers [('torso.rotary_emb.inv_freq', (32,)), ('torso.rotary_emb.original_inv_freq', (32,))]

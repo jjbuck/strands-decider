@@ -1,0 +1,24 @@
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 4290.82it/s]
+quantized linears 186
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+hob w4g64 100 2003 31s
+hob w4g64 200 2003 77s
+hob w4g64 300 2003 102s
+hob w4g64 400 2003 119s
+hob w4g64 500 2003 142s
+hob w4g64 600 2003 173s
+hob w4g64 700 2003 223s
+hob w4g64 800 2003 244s
+hob w4g64 900 2003 268s
+hob w4g64 1000 2003 282s
+hob w4g64 1100 2003 298s
+hob w4g64 1200 2003 312s
+hob w4g64 1300 2003 325s
+hob w4g64 1400 2003 349s
+hob w4g64 1500 2003 376s
+hob w4g64 1600 2003 401s
+hob w4g64 1700 2003 425s
+hob w4g64 1800 2003 447s
+hob w4g64 1900 2003 468s
+hob w4g64 2000 2003 485s
+done hob w4g64 2003 485s

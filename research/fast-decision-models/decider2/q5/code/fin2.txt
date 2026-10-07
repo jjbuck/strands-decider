@@ -1,0 +1,3 @@
+while [ ! -f ~/work/q5/LATE_DEV_DONE ]; do sleep 20; done
+Q5_MEMFRAC=0.42 python q5kit.py --cfgs cfgs_q5.json --tags nr.G12-23.dsalc.f0.75.gen2 --out ~/work/q5/preds/nr_G12-23_dsalc_f075_gen2.json --start 12
+touch ~/work/q5/FIN2_DONE

@@ -1,0 +1,4 @@
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 3877.50it/s]
+ruletaker_d3 {'hobson': 0.86, 'k8': 0.653, 'k12': 0.807, 'n': 150, 'mean_segments': 1.0}
+ruletaker_d5 {'hobson': 0.72, 'k8': 0.56, 'k12': 0.62, 'n': 150, 'mean_segments': 1.0}
+ruletaker_natlang {'hobson': 0.78, 'k8': 0.607, 'k12': 0.693, 'n': 150, 'mean_segments': 1.0}

@@ -1,0 +1,37 @@
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 3840.68it/s]
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+<class 'peft.peft_model.PeftModelForFeatureExtraction'>
+params (incl lora) 1898.644288
+stock tokens=64 q=1 {'median': 67.5, 'p95': 70.12, 'min': 67.17}
+stock tokens=1000 q=1 {'median': 148.7, 'p95': 148.85, 'min': 148.63}
+USDT:2026-10-05 03:48:52 87769:87769 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-05 03:48:52 87769:87769 SyncActivityProfilerHandler.cpp:46] profiler_stop
+wall ms 122.98594499952742
+cuda kernels launched: 3054 sum kernel time ms: 23.964871999999637
+  ampere_bf16_s1688gemm_bf16_256x64_sliced1x2_ldg8_f2f_tn                n=   66 total=6.01ms
+  ampere_bf16_s16816gemm_bf16_128x64_ldg8_f2f_stages_64x3_tn             n=   24 total=2.41ms
+  ampere_bf16_s16816gemm_bf16_128x64_ldg8_f2f_stages_64x4_tn             n=   42 total=1.86ms
+  void at::native::unrolled_elementwise_kernel<at::native::CUDAFunctor_a n=  186 total=1.63ms
+  void at::native::unrolled_elementwise_kernel<at::native::direct_copy_k n=  376 total=1.49ms
+  ampere_sgemm_32x32_sliced1x4_tn                                        n=  186 total=1.38ms
+  ampere_sgemm_128x32_tn                                                 n=  174 total=1.09ms
+  void at::native::vectorized_elementwise_kernel<4, at::native::AUnaryFu n=  189 total=0.93ms
+  void at::native::vectorized_elementwise_kernel<4, at::native::bfloat16 n=  285 total=0.69ms
+  void at::native::elementwise_kernel<128, 4, at::native::gpu_kernel_imp n=   84 total=0.65ms
+  void at::native::(anonymous namespace)::conv_depthwise2d_forward_kerne n=   18 total=0.53ms
+  void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_imp n=  158 total=0.50ms
+top CPU ops by self time
+  cudaLaunchKernel                                             n= 2614 self_cpu=19.27ms
+  ChunkGatedDeltaRuleFunction                                  n=   18 self_cpu=13.28ms
+  aten::mm                                                     n=  558 self_cpu=11.61ms
+  aten::copy_                                                  n=  767 self_cpu=5.27ms
+  aten::empty_strided                                          n=  790 self_cpu=5.00ms
+  aten::mul                                                    n=  437 self_cpu=4.81ms
+  aten::add                                                    n=  405 self_cpu=4.01ms
+  aten::matmul                                                 n=  560 self_cpu=3.26ms
+  aten::_to_copy                                               n=  676 self_cpu=2.51ms
+  Activity Buffer Request                                      n=    1 self_cpu=2.00ms
+  aten::empty                                                  n=  245 self_cpu=1.48ms
+  aten::linear                                                 n=  560 self_cpu=1.28ms
+merged tokens=64 q=1 {'median': 54.16, 'p95': 54.29, 'min': 53.69}
+merged tokens=1000 q=1 {'median': 98.19, 'p95': 98.36, 'min': 98.12}

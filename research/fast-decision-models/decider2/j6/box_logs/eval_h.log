@@ -1,0 +1,14 @@
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 3847.20it/s]
+200 2421 29s compile 5s for 98 specs
+400 2421 65s compile 7s for 130 specs
+600 2421 104s compile 8s for 151 specs
+800 2421 145s compile 8s for 153 specs
+1000 2421 215s compile 8s for 154 specs
+1200 2421 276s compile 8s for 154 specs
+1400 2421 315s compile 8s for 154 specs
+1600 2421 347s compile 8s for 154 specs
+1800 2421 380s compile 9s for 164 specs
+2000 2421 431s compile 13s for 264 specs
+2200 2421 478s compile 18s for 364 specs
+2400 2421 521s compile 23s for 464 specs
+done 2421 525.3197617530823 specs compiled 474

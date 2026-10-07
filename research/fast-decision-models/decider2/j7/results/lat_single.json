@@ -1,0 +1,312 @@
+{
+ "meta": {
+  "gpu": "NVIDIA A10G",
+  "reps": 20,
+  "torch": "2.14.1+cu130",
+  "ratio": {
+   "16k": 1.95,
+   "64k": 2.41
+  },
+  "note": "hobson-v19 weights; fused TTL runtime; plain layout"
+ },
+ "T64_Q1s_qwen": {
+  "median": 15.24,
+  "p95": 15.25,
+  "min": 15.24,
+  "n": 20,
+  "state_rows": 64,
+  "q_rows": [
+   93
+  ]
+ },
+ "T64_Q1s_qwen+chan": {
+  "median": 15.29,
+  "p95": 15.3,
+  "min": 15.28,
+  "n": 20,
+  "state_rows": 64,
+  "q_rows": [
+   93
+  ]
+ },
+ "T64_Q1s_16k": {
+  "median": 9.33,
+  "p95": 9.34,
+  "min": 9.32,
+  "n": 20,
+  "state_rows": 33,
+  "q_rows": [
+   78
+  ]
+ },
+ "T64_Q1s_64k": {
+  "median": 9.53,
+  "p95": 9.54,
+  "min": 9.53,
+  "n": 20,
+  "state_rows": 27,
+  "q_rows": [
+   47
+  ]
+ },
+ "T64_Q1s_64k+chan": {
+  "median": 9.58,
+  "p95": 9.59,
+  "min": 9.57,
+  "n": 20,
+  "state_rows": 27,
+  "q_rows": [
+   47
+  ]
+ },
+ "T128_Q1s_qwen": {
+  "median": 15.56,
+  "p95": 15.57,
+  "min": 15.55,
+  "n": 20,
+  "state_rows": 128,
+  "q_rows": [
+   93
+  ]
+ },
+ "T128_Q1s_qwen+chan": {
+  "median": 15.6,
+  "p95": 15.61,
+  "min": 15.6,
+  "n": 20,
+  "state_rows": 128,
+  "q_rows": [
+   93
+  ]
+ },
+ "T128_Q1s_16k": {
+  "median": 14.7,
+  "p95": 14.7,
+  "min": 14.68,
+  "n": 20,
+  "state_rows": 66,
+  "q_rows": [
+   78
+  ]
+ },
+ "T128_Q1s_64k": {
+  "median": 9.74,
+  "p95": 9.75,
+  "min": 9.73,
+  "n": 20,
+  "state_rows": 53,
+  "q_rows": [
+   47
+  ]
+ },
+ "T128_Q1s_64k+chan": {
+  "median": 9.79,
+  "p95": 9.8,
+  "min": 9.79,
+  "n": 20,
+  "state_rows": 53,
+  "q_rows": [
+   47
+  ]
+ },
+ "T256_Q1s_qwen": {
+  "median": 22.84,
+  "p95": 22.85,
+  "min": 22.72,
+  "n": 20,
+  "state_rows": 256,
+  "q_rows": [
+   93
+  ]
+ },
+ "T256_Q1s_qwen+chan": {
+  "median": 22.9,
+  "p95": 22.91,
+  "min": 22.8,
+  "n": 20,
+  "state_rows": 256,
+  "q_rows": [
+   93
+  ]
+ },
+ "T256_Q1s_16k": {
+  "median": 15.51,
+  "p95": 15.53,
+  "min": 15.5,
+  "n": 20,
+  "state_rows": 131,
+  "q_rows": [
+   78
+  ]
+ },
+ "T256_Q1s_64k": {
+  "median": 15.24,
+  "p95": 15.26,
+  "min": 15.23,
+  "n": 20,
+  "state_rows": 106,
+  "q_rows": [
+   47
+  ]
+ },
+ "T256_Q1s_64k+chan": {
+  "median": 15.28,
+  "p95": 15.28,
+  "min": 15.27,
+  "n": 20,
+  "state_rows": 106,
+  "q_rows": [
+   47
+  ]
+ },
+ "T400_Q1s_qwen": {
+  "median": 28.14,
+  "p95": 28.15,
+  "min": 28.05,
+  "n": 20,
+  "state_rows": 400,
+  "q_rows": [
+   93
+  ]
+ },
+ "T400_Q1s_qwen+chan": {
+  "median": 28.22,
+  "p95": 28.23,
+  "min": 28.15,
+  "n": 20,
+  "state_rows": 400,
+  "q_rows": [
+   93
+  ]
+ },
+ "T400_Q1s_16k": {
+  "median": 22.33,
+  "p95": 22.34,
+  "min": 22.33,
+  "n": 20,
+  "state_rows": 205,
+  "q_rows": [
+   78
+  ]
+ },
+ "T400_Q1s_64k": {
+  "median": 15.53,
+  "p95": 15.54,
+  "min": 15.53,
+  "n": 20,
+  "state_rows": 166,
+  "q_rows": [
+   47
+  ]
+ },
+ "T400_Q1s_64k+chan": {
+  "median": 15.58,
+  "p95": 15.59,
+  "min": 15.47,
+  "n": 20,
+  "state_rows": 166,
+  "q_rows": [
+   47
+  ]
+ },
+ "T1000_Q1s_qwen": {
+  "median": 57.06,
+  "p95": 57.07,
+  "min": 57.04,
+  "n": 20,
+  "state_rows": 1000,
+  "q_rows": [
+   93
+  ]
+ },
+ "T1000_Q1s_qwen+chan": {
+  "median": 57.35,
+  "p95": 57.36,
+  "min": 57.34,
+  "n": 20,
+  "state_rows": 1000,
+  "q_rows": [
+   93
+  ]
+ },
+ "T1000_Q1s_16k": {
+  "median": 37.36,
+  "p95": 37.37,
+  "min": 37.34,
+  "n": 20,
+  "state_rows": 513,
+  "q_rows": [
+   78
+  ]
+ },
+ "T1000_Q1s_64k": {
+  "median": 27.82,
+  "p95": 27.83,
+  "min": 27.81,
+  "n": 20,
+  "state_rows": 415,
+  "q_rows": [
+   47
+  ]
+ },
+ "T1000_Q1s_64k+chan": {
+  "median": 27.89,
+  "p95": 27.9,
+  "min": 27.88,
+  "n": 20,
+  "state_rows": 415,
+  "q_rows": [
+   47
+  ]
+ },
+ "T4000_Q1s_qwen": {
+  "median": 201.17,
+  "p95": 201.21,
+  "min": 201.12,
+  "n": 20,
+  "state_rows": 4000,
+  "q_rows": [
+   93
+  ]
+ },
+ "T4000_Q1s_qwen+chan": {
+  "median": 202.47,
+  "p95": 202.52,
+  "min": 202.41,
+  "n": 20,
+  "state_rows": 4000,
+  "q_rows": [
+   93
+  ]
+ },
+ "T4000_Q1s_16k": {
+  "median": 108.46,
+  "p95": 108.49,
+  "min": 108.43,
+  "n": 20,
+  "state_rows": 2051,
+  "q_rows": [
+   78
+  ]
+ },
+ "T4000_Q1s_64k": {
+  "median": 92.5,
+  "p95": 92.52,
+  "min": 92.49,
+  "n": 20,
+  "state_rows": 1660,
+  "q_rows": [
+   47
+  ]
+ },
+ "T4000_Q1s_64k+chan": {
+  "median": 93.06,
+  "p95": 93.07,
+  "min": 93.05,
+  "n": 20,
+  "state_rows": 1660,
+  "q_rows": [
+   47
+  ]
+ }
+}

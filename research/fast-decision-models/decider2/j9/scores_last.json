@@ -1,0 +1,61 @@
+{
+ "d_Rx.json": {
+  "REAL-agree": {
+   "agree": 0.9722991689750693,
+   "agree_sd": 0.9473684210526315,
+   "tv": 0.0391982917520078,
+   "coverage": 0.3333333333333333,
+   "hobson": {
+    "agree": 1.0,
+    "agree_sd": 1.0,
+    "tv": 0.0,
+    "coverage": 1.0
+   }
+  },
+  "LONG": {
+   "agree": 0.9245283018867925,
+   "agree_sd": 0.8301886792452831,
+   "tv": 0.06242278466075548,
+   "coverage": 0.3375796178343949,
+   "hobson": {
+    "agree": 1.0,
+    "agree_sd": 1.0,
+    "tv": 0.0,
+    "coverage": 1.0
+   }
+  },
+  "CF": {
+   "hobson": {
+    "acc": 0.5935960591133005,
+    "flip": 0.2684729064039409,
+    "flip_given_hobson": 1.0,
+    "dir": 0.9482758620689655
+   }
+  },
+  "CF-probe": {
+   "hobson": {
+    "acc": 0.653125,
+    "flip": 0.328125,
+    "flip_given_hobson": 1.0,
+    "dir": 0.884375
+   }
+  },
+  "SHUF": {
+   "change": NaN,
+   "both_right": NaN,
+   "hobson": {
+    "change": 0.3385012919896641,
+    "both_right": 0.2454780361757106
+   }
+  },
+  "REAL-label": {
+   "acc": 0.7709923664122137,
+   "acc_hobson_same": 0.7557251908396947,
+   "coverage": 0.3275,
+   "hobson": {
+    "acc": 0.785,
+    "coverage": 1.0
+   }
+  }
+ }
+}

@@ -1,0 +1,77 @@
++ cd /home/ubuntu/work/q3
++ source /home/ubuntu/venv/bin/activate
+++ deactivate nondestructive
+++ '[' -n '' ']'
+++ '[' -n '' ']'
+++ hash -r
+++ '[' -n '' ']'
+++ unset VIRTUAL_ENV
+++ unset VIRTUAL_ENV_PROMPT
+++ '[' '!' nondestructive = nondestructive ']'
+++ case "$(uname)" in
++++ uname
+++ export VIRTUAL_ENV=/home/ubuntu/venv
+++ VIRTUAL_ENV=/home/ubuntu/venv
+++ _OLD_VIRTUAL_PATH=/home/ubuntu/venv/bin:/usr/local/cuda/bin:/usr/local/cuda/include:/opt/amazon/openmpi/bin:/opt/amazon/efa/bin:/usr/local/cuda/bin:/usr/local/cuda/include:/usr/local/cuda/bin:/usr/local/cuda/include:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+++ PATH=/home/ubuntu/venv/bin:/home/ubuntu/venv/bin:/usr/local/cuda/bin:/usr/local/cuda/include:/opt/amazon/openmpi/bin:/opt/amazon/efa/bin:/usr/local/cuda/bin:/usr/local/cuda/include:/usr/local/cuda/bin:/usr/local/cuda/include:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+++ export PATH
+++ VIRTUAL_ENV_PROMPT='(venv) '
+++ export VIRTUAL_ENV_PROMPT
+++ '[' -n '' ']'
+++ '[' -z '' ']'
+++ _OLD_VIRTUAL_PS1=
+++ PS1='((venv) ) '
+++ export PS1
+++ hash -r
++ CK=/home/ubuntu/work/q3/ck_qad
++ python q3export.py gptq codes_gptq.pt ck_scale/best.pt codes_b41a.pt
+exported gptq -> codes_gptq.pt
+exported ck_scale/best.pt -> codes_b41a.pt
+++ ls /home/ubuntu/work/q3/ck_qad/t0M.pt /home/ubuntu/work/q3/ck_qad/t10M.pt /home/ubuntu/work/q3/ck_qad/t20M.pt
+++ grep -v t0M
++ for f in $(ls $CK/t*M.pt | grep -v t0M) $CK/best.pt
+++ basename /home/ubuntu/work/q3/ck_qad/t10M.pt .pt
++ b=t10M
++ '[' -f codes_qad_t10M.pt ']'
++ python q3export.py /home/ubuntu/work/q3/ck_qad/t10M.pt codes_qad_t10M.pt
+exported /home/ubuntu/work/q3/ck_qad/t10M.pt -> codes_qad_t10M.pt
++ for f in $(ls $CK/t*M.pt | grep -v t0M) $CK/best.pt
+++ basename /home/ubuntu/work/q3/ck_qad/t20M.pt .pt
++ b=t20M
++ '[' -f codes_qad_t20M.pt ']'
++ python q3export.py /home/ubuntu/work/q3/ck_qad/t20M.pt codes_qad_t20M.pt
+exported /home/ubuntu/work/q3/ck_qad/t20M.pt -> codes_qad_t20M.pt
++ for f in $(ls $CK/t*M.pt | grep -v t0M) $CK/best.pt
+++ basename /home/ubuntu/work/q3/ck_qad/best.pt .pt
++ b=best
++ '[' -f codes_qad_best.pt ']'
++ python q3export.py /home/ubuntu/work/q3/ck_qad/best.pt codes_qad_best.pt
+exported /home/ubuntu/work/q3/ck_qad/best.pt -> codes_qad_best.pt
++ cd /home/ubuntu/work/h2
++ python evalrun.py bf16 all _q3
+++ ls /home/ubuntu/work/q3/codes_qad_t10M.pt /home/ubuntu/work/q3/codes_qad_t20M.pt
+++ sort -V
++ for c in ~/work/q3/codes_gptq.pt ~/work/q3/codes_b41a.pt $(ls ~/work/q3/codes_qad_t*M.pt | sort -V)
++ CODES=/home/ubuntu/work/q3/codes_gptq.pt
++ python evalrun.py w4a4 all _q3
+++ basename /home/ubuntu/work/q3/codes_gptq.pt .pt
++ for c in ~/work/q3/codes_gptq.pt ~/work/q3/codes_b41a.pt $(ls ~/work/q3/codes_qad_t*M.pt | sort -V)
++ CODES=/home/ubuntu/work/q3/codes_b41a.pt
++ python evalrun.py w4a4 all _q3
+++ basename /home/ubuntu/work/q3/codes_b41a.pt .pt
++ for c in ~/work/q3/codes_gptq.pt ~/work/q3/codes_b41a.pt $(ls ~/work/q3/codes_qad_t*M.pt | sort -V)
++ CODES=/home/ubuntu/work/q3/codes_qad_t10M.pt
++ python evalrun.py w4a4 all _q3
+++ basename /home/ubuntu/work/q3/codes_qad_t10M.pt .pt
++ for c in ~/work/q3/codes_gptq.pt ~/work/q3/codes_b41a.pt $(ls ~/work/q3/codes_qad_t*M.pt | sort -V)
++ CODES=/home/ubuntu/work/q3/codes_qad_t20M.pt
++ python evalrun.py w4a4 all _q3
+++ basename /home/ubuntu/work/q3/codes_qad_t20M.pt .pt
++ ls -la /home/ubuntu/work/h2/preds_bf16_q3.jsonl /home/ubuntu/work/h2/preds_w4a4_codes_b41a_q3.jsonl /home/ubuntu/work/h2/preds_w4a4_codes_gptq_q3.jsonl /home/ubuntu/work/h2/preds_w4a4_codes_qad_t10M_q3.jsonl /home/ubuntu/work/h2/preds_w4a4_codes_qad_t20M_q3.jsonl
+-rw-rw-r-- 1 ubuntu ubuntu 1208239 Oct  7 08:37 /home/ubuntu/work/h2/preds_bf16_q3.jsonl
+-rw-rw-r-- 1 ubuntu ubuntu 1207233 Oct  7 08:45 /home/ubuntu/work/h2/preds_w4a4_codes_b41a_q3.jsonl
+-rw-rw-r-- 1 ubuntu ubuntu 1206368 Oct  7 08:41 /home/ubuntu/work/h2/preds_w4a4_codes_gptq_q3.jsonl
+-rw-rw-r-- 1 ubuntu ubuntu 1206999 Oct  7 08:50 /home/ubuntu/work/h2/preds_w4a4_codes_qad_t10M_q3.jsonl
+-rw-rw-r-- 1 ubuntu ubuntu 1207100 Oct  7 08:54 /home/ubuntu/work/h2/preds_w4a4_codes_qad_t20M_q3.jsonl
++ echo FINAL_SCORING_DONE
+FINAL_SCORING_DONE

@@ -1,0 +1,26 @@
+{
+ "0.8b_T64": {
+  "kernels": 1511,
+  "busy_ms": 6.5,
+  "gaps_ms": 0.08,
+  "est_ms": 6.59,
+  "span_min_ms": 33.01,
+  "span_med_ms": 41.57
+ },
+ "0.8b_T1000": {
+  "kernels": 1511,
+  "busy_ms": 89.24,
+  "gaps_ms": 0.2,
+  "est_ms": 89.44,
+  "span_min_ms": 241.15,
+  "span_med_ms": 256.14
+ },
+ "0.8b_T2000": {
+  "kernels": 1511,
+  "busy_ms": 132.68,
+  "gaps_ms": 0.19,
+  "est_ms": 132.87,
+  "span_min_ms": 489.29,
+  "span_med_ms": 588.88
+ }
+}

@@ -1,0 +1,319 @@
+--- M 77 N 256 K 256
+s4                     cfg0: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s8                     cfg0: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+bf16(f32 out)          cfg0: max|d| 2.289e-05 rel 3.23e-07 mismatches 17715 -> OK
+s4+bf16 tail           cfg0: max|d| 1.907e-06 rel 1.68e-07 mismatches 12392 -> OK
+s4+s8 tail             cfg0: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 g64                 cfg0: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 g128                cfg0: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 skip                cfg0: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 swiglu              cfg0: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 fp16a               cfg0: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4                     cfg1: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s8                     cfg1: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+bf16(f32 out)          cfg1: max|d| 2.289e-05 rel 3.23e-07 mismatches 17715 -> OK
+s4+bf16 tail           cfg1: max|d| 1.907e-06 rel 1.68e-07 mismatches 12392 -> OK
+s4+s8 tail             cfg1: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 g64                 cfg1: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 g128                cfg1: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 skip                cfg1: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 swiglu              cfg1: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 fp16a               cfg1: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4                     cfg2: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s8                     cfg2: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+bf16(f32 out)          cfg2: max|d| 2.289e-05 rel 3.23e-07 mismatches 17715 -> OK
+s4+bf16 tail           cfg2: max|d| 1.907e-06 rel 1.68e-07 mismatches 12392 -> OK
+s4_ts8 2 q2_gemm s4_ts8 cfg2 rc 2
+s4 g64                 cfg2: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 g128                cfg2: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 swiglu              cfg2: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 fp16a               cfg2: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4                     cfg3: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s8                     cfg3: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+bf16(f32 out)          cfg3: max|d| 2.289e-05 rel 3.23e-07 mismatches 17715 -> OK
+s4+bf16 tail           cfg3: max|d| 1.907e-06 rel 1.68e-07 mismatches 12392 -> OK
+s4+s8 tail             cfg3: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 g64                 cfg3: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 g128                cfg3: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 skip                cfg3: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 swiglu              cfg3: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 fp16a               cfg3: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4                     cfg4: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s8                     cfg4: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+bf16(f32 out)          cfg4: max|d| 2.289e-05 rel 3.23e-07 mismatches 17715 -> OK
+s4+bf16 tail           cfg4: max|d| 1.907e-06 rel 1.68e-07 mismatches 12392 -> OK
+s4+s8 tail             cfg4: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 g64                 cfg4: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 g128                cfg4: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 skip                cfg4: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 swiglu              cfg4: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 fp16a               cfg4: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4                     cfg5: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s8                     cfg5: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+bf16(f32 out)          cfg5: max|d| 2.289e-05 rel 3.23e-07 mismatches 17715 -> OK
+s4+bf16 tail           cfg5: max|d| 1.907e-06 rel 1.68e-07 mismatches 12392 -> OK
+s4+s8 tail             cfg5: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 g64                 cfg5: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 g128                cfg5: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 skip                cfg5: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 swiglu              cfg5: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 fp16a               cfg5: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4                     cfg6: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s8                     cfg6: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+bf16(f32 out)          cfg6: max|d| 2.289e-05 rel 3.23e-07 mismatches 17715 -> OK
+s4+bf16 tail           cfg6: max|d| 1.907e-06 rel 1.68e-07 mismatches 12392 -> OK
+s4_ts8 6 q2_gemm s4_ts8 cfg6 rc 2
+s4 g64                 cfg6: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 g128                cfg6: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 swiglu              cfg6: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 fp16a               cfg6: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4                     cfg7: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s8                     cfg7: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+bf16(f32 out)          cfg7: max|d| 2.289e-05 rel 3.23e-07 mismatches 17715 -> OK
+s4+bf16 tail           cfg7: max|d| 1.907e-06 rel 1.68e-07 mismatches 12392 -> OK
+s4+s8 tail             cfg7: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 g64                 cfg7: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 g128                cfg7: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 swiglu              cfg7: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 fp16a               cfg7: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4                     cfg8: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s8                     cfg8: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+bf16(f32 out)          cfg8: max|d| 2.289e-05 rel 3.23e-07 mismatches 17715 -> OK
+s4+bf16 tail           cfg8: max|d| 1.907e-06 rel 1.68e-07 mismatches 12392 -> OK
+s4_ts8 8 q2_gemm s4_ts8 cfg8 rc 2
+s4 g64                 cfg8: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 g128                cfg8: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 swiglu              cfg8: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 fp16a               cfg8: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4                     cfg9: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s8                     cfg9: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+bf16(f32 out)          cfg9: max|d| 2.289e-05 rel 3.23e-07 mismatches 17715 -> OK
+s4+bf16 tail           cfg9: max|d| 1.907e-06 rel 1.68e-07 mismatches 12392 -> OK
+s4_ts8 9 q2_gemm s4_ts8 cfg9 rc 2
+s4 g64                 cfg9: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 g128                cfg9: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 swiglu              cfg9: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 fp16a               cfg9: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+rowrole s4|s8          cfg0: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+rowrole s4|s8          cfg1: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+rowrole s4|s8          cfg2: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+rowrole s4|s8          cfg3: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+rowrole s4|s8          cfg4: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+rowrole s4|s8          cfg5: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+rowrole s4|s8          cfg6: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+rowrole s4|s8          cfg7: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+rowrole s4|s8          cfg8: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+rowrole s4|s8          cfg9: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+--- M 300 N 520 K 384
+s4                     cfg0: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s8                     cfg0: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+bf16(f32 out)          cfg0: max|d| 6.866e-05 rel 7.65e-07 mismatches 147033 -> OK
+s4+bf16 tail           cfg0: max|d| 3.815e-06 rel 2.23e-07 mismatches 98041 -> OK
+s4+s8 tail             cfg0: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 g64                 cfg0: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 g128                cfg0: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 skip                cfg0: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 swiglu              cfg0: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 fp16a               cfg0: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4                     cfg1: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s8                     cfg1: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+bf16(f32 out)          cfg1: max|d| 6.866e-05 rel 7.65e-07 mismatches 147033 -> OK
+s4+bf16 tail           cfg1: max|d| 3.815e-06 rel 2.23e-07 mismatches 98041 -> OK
+s4+s8 tail             cfg1: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 g64                 cfg1: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 g128                cfg1: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 skip                cfg1: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 swiglu              cfg1: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 fp16a               cfg1: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4                     cfg2: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s8                     cfg2: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+bf16(f32 out)          cfg2: max|d| 6.866e-05 rel 7.65e-07 mismatches 147033 -> OK
+s4+bf16 tail           cfg2: max|d| 3.815e-06 rel 2.23e-07 mismatches 98041 -> OK
+s4_ts8 2 q2_gemm s4_ts8 cfg2 rc 2
+s4 g64                 cfg2: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 g128                cfg2: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 swiglu              cfg2: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 fp16a               cfg2: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4                     cfg3: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s8                     cfg3: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+bf16(f32 out)          cfg3: max|d| 6.866e-05 rel 7.65e-07 mismatches 147033 -> OK
+s4+bf16 tail           cfg3: max|d| 3.815e-06 rel 2.23e-07 mismatches 98041 -> OK
+s4+s8 tail             cfg3: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 g64                 cfg3: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 g128                cfg3: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 skip                cfg3: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 swiglu              cfg3: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 fp16a               cfg3: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4                     cfg4: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s8                     cfg4: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+bf16(f32 out)          cfg4: max|d| 6.866e-05 rel 7.65e-07 mismatches 147033 -> OK
+s4+bf16 tail           cfg4: max|d| 3.815e-06 rel 2.23e-07 mismatches 98041 -> OK
+s4+s8 tail             cfg4: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 g64                 cfg4: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 g128                cfg4: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 skip                cfg4: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 swiglu              cfg4: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 fp16a               cfg4: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4                     cfg5: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s8                     cfg5: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+bf16(f32 out)          cfg5: max|d| 6.866e-05 rel 7.65e-07 mismatches 147033 -> OK
+s4+bf16 tail           cfg5: max|d| 3.815e-06 rel 2.23e-07 mismatches 98041 -> OK
+s4+s8 tail             cfg5: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 g64                 cfg5: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 g128                cfg5: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 skip                cfg5: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 swiglu              cfg5: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 fp16a               cfg5: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4                     cfg6: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s8                     cfg6: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+bf16(f32 out)          cfg6: max|d| 6.866e-05 rel 7.65e-07 mismatches 147033 -> OK
+s4+bf16 tail           cfg6: max|d| 3.815e-06 rel 2.23e-07 mismatches 98041 -> OK
+s4_ts8 6 q2_gemm s4_ts8 cfg6 rc 2
+s4 g64                 cfg6: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 g128                cfg6: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 swiglu              cfg6: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 fp16a               cfg6: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4                     cfg7: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s8                     cfg7: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+bf16(f32 out)          cfg7: max|d| 6.866e-05 rel 7.65e-07 mismatches 147033 -> OK
+s4+bf16 tail           cfg7: max|d| 3.815e-06 rel 2.23e-07 mismatches 98041 -> OK
+s4+s8 tail             cfg7: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 g64                 cfg7: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 g128                cfg7: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 swiglu              cfg7: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 fp16a               cfg7: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4                     cfg8: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s8                     cfg8: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+bf16(f32 out)          cfg8: max|d| 6.866e-05 rel 7.65e-07 mismatches 147033 -> OK
+s4+bf16 tail           cfg8: max|d| 3.815e-06 rel 2.23e-07 mismatches 98041 -> OK
+s4_ts8 8 q2_gemm s4_ts8 cfg8 rc 2
+s4 g64                 cfg8: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 g128                cfg8: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 swiglu              cfg8: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 fp16a               cfg8: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4                     cfg9: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s8                     cfg9: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+bf16(f32 out)          cfg9: max|d| 6.866e-05 rel 7.65e-07 mismatches 147033 -> OK
+s4+bf16 tail           cfg9: max|d| 3.815e-06 rel 2.23e-07 mismatches 98041 -> OK
+s4_ts8 9 q2_gemm s4_ts8 cfg9 rc 2
+s4 g64                 cfg9: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 g128                cfg9: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 swiglu              cfg9: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 fp16a               cfg9: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+rowrole s4|s8          cfg0: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+rowrole s4|s8          cfg1: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+rowrole s4|s8          cfg2: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+rowrole s4|s8          cfg3: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+rowrole s4|s8          cfg4: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+rowrole s4|s8          cfg5: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+rowrole s4|s8          cfg6: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+rowrole s4|s8          cfg7: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+rowrole s4|s8          cfg8: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+rowrole s4|s8          cfg9: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+--- M 1125 N 2048 K 2048
+s4                     cfg0: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s8                     cfg0: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+bf16(f32 out)          cfg0: max|d| 8.392e-04 rel 3.84e-06 mismatches 2286960 -> OK
+s4+bf16 tail           cfg0: max|d| 1.526e-05 rel 4.03e-07 mismatches 1500782 -> OK
+s4+s8 tail             cfg0: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 g64                 cfg0: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 g128                cfg0: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 skip                cfg0: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 swiglu              cfg0: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 fp16a               cfg0: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4                     cfg1: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s8                     cfg1: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+bf16(f32 out)          cfg1: max|d| 8.392e-04 rel 3.84e-06 mismatches 2286960 -> OK
+s4+bf16 tail           cfg1: max|d| 1.526e-05 rel 4.03e-07 mismatches 1500782 -> OK
+s4+s8 tail             cfg1: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 g64                 cfg1: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 g128                cfg1: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 skip                cfg1: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 swiglu              cfg1: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 fp16a               cfg1: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4                     cfg2: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s8                     cfg2: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+bf16(f32 out)          cfg2: max|d| 8.392e-04 rel 3.84e-06 mismatches 2286960 -> OK
+s4+bf16 tail           cfg2: max|d| 1.526e-05 rel 4.03e-07 mismatches 1500782 -> OK
+s4_ts8 2 q2_gemm s4_ts8 cfg2 rc 2
+s4 g64                 cfg2: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 g128                cfg2: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 swiglu              cfg2: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 fp16a               cfg2: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4                     cfg3: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s8                     cfg3: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+bf16(f32 out)          cfg3: max|d| 8.392e-04 rel 3.84e-06 mismatches 2286960 -> OK
+s4+bf16 tail           cfg3: max|d| 1.526e-05 rel 4.03e-07 mismatches 1500782 -> OK
+s4+s8 tail             cfg3: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 g64                 cfg3: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 g128                cfg3: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 skip                cfg3: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 swiglu              cfg3: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 fp16a               cfg3: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4                     cfg4: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s8                     cfg4: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+bf16(f32 out)          cfg4: max|d| 8.392e-04 rel 3.84e-06 mismatches 2286960 -> OK
+s4+bf16 tail           cfg4: max|d| 1.526e-05 rel 4.03e-07 mismatches 1500782 -> OK
+s4+s8 tail             cfg4: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 g64                 cfg4: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 g128                cfg4: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 skip                cfg4: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 swiglu              cfg4: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 fp16a               cfg4: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4                     cfg5: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s8                     cfg5: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+bf16(f32 out)          cfg5: max|d| 8.392e-04 rel 3.84e-06 mismatches 2286960 -> OK
+s4+bf16 tail           cfg5: max|d| 1.526e-05 rel 4.03e-07 mismatches 1500782 -> OK
+s4+s8 tail             cfg5: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 g64                 cfg5: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 g128                cfg5: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 skip                cfg5: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 swiglu              cfg5: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 fp16a               cfg5: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4                     cfg6: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s8                     cfg6: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+bf16(f32 out)          cfg6: max|d| 8.392e-04 rel 3.84e-06 mismatches 2286960 -> OK
+s4+bf16 tail           cfg6: max|d| 1.526e-05 rel 4.03e-07 mismatches 1500782 -> OK
+s4_ts8 6 q2_gemm s4_ts8 cfg6 rc 2
+s4 g64                 cfg6: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 g128                cfg6: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 swiglu              cfg6: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 fp16a               cfg6: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4                     cfg7: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s8                     cfg7: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+bf16(f32 out)          cfg7: max|d| 8.392e-04 rel 3.84e-06 mismatches 2286960 -> OK
+s4+bf16 tail           cfg7: max|d| 1.526e-05 rel 4.03e-07 mismatches 1500782 -> OK
+s4+s8 tail             cfg7: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 g64                 cfg7: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 g128                cfg7: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 swiglu              cfg7: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 fp16a               cfg7: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4                     cfg8: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s8                     cfg8: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+bf16(f32 out)          cfg8: max|d| 8.392e-04 rel 3.84e-06 mismatches 2286960 -> OK
+s4+bf16 tail           cfg8: max|d| 1.526e-05 rel 4.03e-07 mismatches 1500782 -> OK
+s4_ts8 8 q2_gemm s4_ts8 cfg8 rc 2
+s4 g64                 cfg8: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 g128                cfg8: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 swiglu              cfg8: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 fp16a               cfg8: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4                     cfg9: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s8                     cfg9: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+bf16(f32 out)          cfg9: max|d| 8.392e-04 rel 3.84e-06 mismatches 2286960 -> OK
+s4+bf16 tail           cfg9: max|d| 1.526e-05 rel 4.03e-07 mismatches 1500782 -> OK
+s4_ts8 9 q2_gemm s4_ts8 cfg9 rc 2
+s4 g64                 cfg9: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 g128                cfg9: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 swiglu              cfg9: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+s4 fp16a               cfg9: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+rowrole s4|s8          cfg0: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+rowrole s4|s8          cfg1: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+rowrole s4|s8          cfg2: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+rowrole s4|s8          cfg3: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+rowrole s4|s8          cfg4: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+rowrole s4|s8          cfg5: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+rowrole s4|s8          cfg6: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+rowrole s4|s8          cfg7: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+rowrole s4|s8          cfg8: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+rowrole s4|s8          cfg9: max|d| 0.000e+00 rel 0.00e+00 mismatches 0 -> OK
+ALL OK

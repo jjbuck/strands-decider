@@ -1,0 +1,10 @@
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 4170.16it/s]
+USDT:2026-10-06 18:23:38 19814:19814 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-06 18:23:38 19814:19814 SyncActivityProfilerHandler.cpp:46] profiler_stop
+{"key": "bf16|1000|jb1|plain", "rows": 1108, "wall": {"median": 56.881, "p95": 56.894, "n": 20}} {"other": 0.52, "gemm": 49.838, "glue": 1.834, "gdn_core": 3.714, "attn": 1.025, "counts": {"other": 153, "gemm": 100, "glue": 48, "gdn_core": 90, "attn": 6}, "kernels": 397, "busy": 56.931, "span": 56.906, "gaps": 0.009, "nongemm": 7.093}
+USDT:2026-10-06 18:23:41 19814:19814 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-06 18:23:41 19814:19814 SyncActivityProfilerHandler.cpp:46] profiler_stop
+{"key": "j5_j5:bf16|1000|jb1|plain", "rows": 1108, "wall": {"median": 59.581, "p95": 59.595, "n": 20}} {"other": 0.527, "gemm": 51.903, "glue": 1.854, "gdn_core": 3.731, "attn": 1.052, "counts": {"other": 153, "gemm": 100, "glue": 48, "gdn_core": 90, "attn": 6}, "kernels": 397, "busy": 59.067, "span": 59.041, "gaps": 0.009, "nongemm": 7.164}
+USDT:2026-10-06 18:23:44 19814:19814 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-06 18:23:44 19814:19814 SyncActivityProfilerHandler.cpp:46] profiler_stop
+{"key": "j5_precmap_w8a8_b8:w8a8|1000|jb1|plain", "rows": 1108, "wall": {"median": 36.106, "p95": 36.365, "n": 20}} {"other": 0.285, "glue": 5.447, "gemm": 25.589, "gdn_core": 3.723, "attn": 1.033, "counts": {"other": 125, "glue": 121, "gemm": 104, "gdn_core": 90, "attn": 6}, "kernels": 446, "busy": 36.078, "span": 36.145, "gaps": 0.102, "nongemm": 10.489}

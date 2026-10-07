@@ -1,0 +1,35 @@
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 4008.92it/s]
+configs ['w4a8,gptq,qb16', 'w4a4,gptq,ba16,clip=0.85,map=precmap_w4a4_k48.json,qb16']
+w4a8,gptq,qb16 49/774 REAL-agree T=2160 99s mem 8.2G
+w4a8,gptq,qb16 99/774 REAL-agree T=1728 144s mem 8.2G
+w4a8,gptq,qb16 149/774 REAL-agree T=3010 190s mem 8.2G
+w4a8,gptq,qb16 199/774 REAL-agree T=1651 232s mem 8.2G
+w4a8,gptq,qb16 249/774 REAL-agree T=995 275s mem 8.2G
+w4a8,gptq,qb16 299/774 REAL-agree T=3869 320s mem 8.2G
+w4a8,gptq,qb16 349/774 CF T=2922 367s mem 8.6G
+w4a8,gptq,qb16 399/774 CF T=2187 423s mem 8.6G
+w4a8,gptq,qb16 449/774 CF T=2782 463s mem 8.6G
+w4a8,gptq,qb16 499/774 CF T=2390 488s mem 8.6G
+w4a8,gptq,qb16 549/774 CF T=2714 519s mem 8.6G
+w4a8,gptq,qb16 599/774 CF-probe T=2683 569s mem 8.6G
+w4a8,gptq,qb16 649/774 CF-probe T=3304 617s mem 8.6G
+w4a8,gptq,qb16 699/774 CF-probe T=2678 652s mem 8.6G
+w4a8,gptq,qb16 749/774 CF-probe T=985 686s mem 8.6G
+config done w4a8,gptq,qb16 700s
+w4a4,gptq,ba16,clip=0.85,map=precmap_w4a4_k48.json,qb16 25/774 REAL-agree T=2069 751s mem 8.6G
+w4a4,gptq,ba16,clip=0.85,map=precmap_w4a4_k48.json,qb16 75/774 REAL-agree T=2028 796s mem 8.6G
+w4a4,gptq,ba16,clip=0.85,map=precmap_w4a4_k48.json,qb16 125/774 REAL-agree T=1913 842s mem 8.6G
+w4a4,gptq,ba16,clip=0.85,map=precmap_w4a4_k48.json,qb16 175/774 REAL-agree T=1923 887s mem 8.6G
+w4a4,gptq,ba16,clip=0.85,map=precmap_w4a4_k48.json,qb16 225/774 REAL-agree T=2495 928s mem 8.6G
+w4a4,gptq,ba16,clip=0.85,map=precmap_w4a4_k48.json,qb16 275/774 REAL-agree T=4757 972s mem 8.6G
+w4a4,gptq,ba16,clip=0.85,map=precmap_w4a4_k48.json,qb16 325/774 REAL-agree T=2645 1017s mem 8.6G
+w4a4,gptq,ba16,clip=0.85,map=precmap_w4a4_k48.json,qb16 375/774 CF T=2820 1072s mem 8.6G
+w4a4,gptq,ba16,clip=0.85,map=precmap_w4a4_k48.json,qb16 425/774 CF T=2137 1120s mem 8.6G
+w4a4,gptq,ba16,clip=0.85,map=precmap_w4a4_k48.json,qb16 475/774 CF T=2297 1154s mem 8.6G
+w4a4,gptq,ba16,clip=0.85,map=precmap_w4a4_k48.json,qb16 525/774 CF T=2703 1178s mem 8.6G
+w4a4,gptq,ba16,clip=0.85,map=precmap_w4a4_k48.json,qb16 575/774 CF-probe T=4220 1216s mem 8.6G
+w4a4,gptq,ba16,clip=0.85,map=precmap_w4a4_k48.json,qb16 625/774 CF-probe T=3684 1272s mem 8.6G
+w4a4,gptq,ba16,clip=0.85,map=precmap_w4a4_k48.json,qb16 675/774 CF-probe T=3201 1320s mem 8.6G
+w4a4,gptq,ba16,clip=0.85,map=precmap_w4a4_k48.json,qb16 725/774 CF-probe T=988 1340s mem 8.6G
+config done w4a4,gptq,ba16,clip=0.85,map=precmap_w4a4_k48.json,qb16 1354s
+done 1354s

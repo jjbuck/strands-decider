@@ -1,0 +1,20 @@
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 3757.71it/s]
+mem before build 3.78
+trained head loaded
+mem after build 4.9
+model built map:~/work/h2/precmap_w4a4_k48.json plainqb lora_e_qatq_s600.pt rot ba16 False aclip4 0.9
+questions 2756 groups 2756
+200 17s
+400 46s
+600 80s
+800 123s
+1000 179s
+1200 211s
+1400 268s
+1600 321s
+1800 350s
+2000 376s
+2200 423s
+2400 465s
+2600 503s
+done 2756 526s

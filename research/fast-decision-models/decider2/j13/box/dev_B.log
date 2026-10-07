@@ -1,0 +1,50 @@
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 3717.27it/s]
+0 480 REAL-agree 2052 4s 545 tok/s mem 6.7G
+10 480 REAL-agree 2701 50s 680 tok/s mem 7.3G
+20 480 REAL-agree 1728 78s 682 tok/s mem 11.8G
+30 480 REAL-agree 3259 115s 686 tok/s mem 11.8G
+40 480 REAL-agree 1964 152s 685 tok/s mem 11.9G
+50 480 REAL-agree 1811 192s 687 tok/s mem 11.9G
+60 480 REAL-agree 3897 226s 689 tok/s mem 11.9G
+70 480 REAL-agree 1755 260s 689 tok/s mem 11.9G
+80 480 REAL-agree 1712 301s 687 tok/s mem 11.9G
+90 480 REAL-agree 2666 334s 685 tok/s mem 11.9G
+100 480 LONG 6158 377s 686 tok/s mem 11.9G
+110 480 LONG 5217 454s 690 tok/s mem 11.9G
+120 480 LONG 5024 538s 693 tok/s mem 11.9G
+130 480 CF 2600 615s 696 tok/s mem 11.9G
+140 480 CF 2435 646s 696 tok/s mem 11.9G
+150 480 CF 3045 673s 696 tok/s mem 11.9G
+160 480 CF 859 709s 696 tok/s mem 11.9G
+170 480 CF 1565 730s 694 tok/s mem 11.9G
+180 480 CF 1709 762s 694 tok/s mem 11.9G
+190 480 CF 700 776s 692 tok/s mem 11.9G
+200 480 CF 242 802s 691 tok/s mem 11.9G
+210 480 CF 3049 848s 691 tok/s mem 11.9G
+220 480 CF 2888 901s 692 tok/s mem 11.9G
+230 480 CF 2734 929s 691 tok/s mem 11.9G
+240 480 CF 233 973s 691 tok/s mem 11.9G
+250 480 CF-probe 1442 996s 690 tok/s mem 11.9G
+260 480 CF-probe 2814 1031s 690 tok/s mem 11.9G
+270 480 CF-probe 1100 1063s 690 tok/s mem 11.9G
+280 480 CF-probe 3914 1100s 691 tok/s mem 11.9G
+290 480 CF-probe 4220 1135s 691 tok/s mem 11.9G
+300 480 CF-probe 990 1171s 692 tok/s mem 11.9G
+310 480 CF-probe 3128 1199s 692 tok/s mem 11.9G
+320 480 CF-probe 4071 1237s 692 tok/s mem 11.9G
+330 480 CF-probe 841 1272s 692 tok/s mem 11.9G
+340 480 CF-probe 460 1303s 692 tok/s mem 11.9G
+350 480 JB-all 125 1333s 692 tok/s mem 11.9G
+360 480 JB-all 128 1342s 688 tok/s mem 11.9G
+370 480 JB-all 100 1351s 684 tok/s mem 11.9G
+380 480 JB-all 2363 1381s 683 tok/s mem 11.9G
+390 480 JB-all 607 1395s 683 tok/s mem 11.9G
+400 480 JB-all 2603 1414s 682 tok/s mem 11.9G
+410 480 JB-all 805 1433s 682 tok/s mem 11.9G
+420 480 JB-all 3414 1470s 682 tok/s mem 11.9G
+430 480 JB-all 303 1482s 681 tok/s mem 11.9G
+440 480 JB-all 2706 1512s 681 tok/s mem 11.9G
+450 480 JB-all 309 1524s 679 tok/s mem 11.9G
+460 480 JB-all 2557 1542s 677 tok/s mem 11.9G
+470 480 JB-all 367 1555s 675 tok/s mem 11.9G
+done

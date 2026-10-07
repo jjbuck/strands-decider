@@ -1,0 +1,161 @@
+{
+ "dense": {
+  "REAL": {
+   "coverage": 0.0840258541089566,
+   "agree": 1.0,
+   "agree_sd": 1.0,
+   "n_sd": 91,
+   "tv": 0.0038414718314762294
+  },
+  "REAL-label": {
+   "acc": 0.7777777777777778,
+   "acc_hobson_same": 0.7777777777777778,
+   "n_acc": 27
+  },
+  "LONG": {
+   "coverage": 0.0,
+   "agree": null,
+   "agree_sd": null,
+   "n_sd": null,
+   "tv": null
+  },
+  "CF": {
+   "n_pairs": 0,
+   "acc": null,
+   "flip": null,
+   "flip_rel": null,
+   "flip_given_hobson": null,
+   "dir": null,
+   "dmean_rel": null,
+   "agree": null,
+   "tv": null
+  },
+  "CF-probe": {
+   "n_pairs": 105,
+   "acc": 0.9857142857142858,
+   "flip": 0.9714285714285714,
+   "flip_rel": 0.9714285714285714,
+   "flip_given_hobson": 0.9714285714285714,
+   "dir": 1.0,
+   "dmean_rel": 0.9993890051133204,
+   "agree": 0.9857142857142858,
+   "tv": 0.0030527072298125357
+  },
+  "flops": {
+   "CF-probe": 1.0,
+   "all": 1.0,
+   "REAL-agree": 1.0
+  },
+  "vs_dense": {
+   "agree": 1.0,
+   "tv": 0.0,
+   "n": 91
+  }
+ },
+ "thin@10r128": {
+  "REAL": {
+   "coverage": 0.0840258541089566,
+   "agree": 0.9230769230769231,
+   "agree_sd": 0.9230769230769231,
+   "n_sd": 91,
+   "tv": 0.06327041925734367
+  },
+  "REAL-label": {
+   "acc": 0.7777777777777778,
+   "acc_hobson_same": 0.7777777777777778,
+   "n_acc": 27
+  },
+  "LONG": {
+   "coverage": 0.0,
+   "agree": null,
+   "agree_sd": null,
+   "n_sd": null,
+   "tv": null
+  },
+  "CF": {
+   "n_pairs": 0,
+   "acc": null,
+   "flip": null,
+   "flip_rel": null,
+   "flip_given_hobson": null,
+   "dir": null,
+   "dmean_rel": null,
+   "agree": null,
+   "tv": null
+  },
+  "CF-probe": {
+   "n_pairs": 105,
+   "acc": 0.819047619047619,
+   "flip": 0.638095238095238,
+   "flip_rel": 0.638095238095238,
+   "flip_given_hobson": 0.638095238095238,
+   "dir": 0.9523809523809523,
+   "dmean_rel": 0.8350880186896221,
+   "agree": 0.819047619047619,
+   "tv": 0.05461184438664841
+  },
+  "flops": {
+   "CF-probe": 0.4912,
+   "all": 0.5088,
+   "REAL-agree": 0.5513
+  },
+  "vs_dense": {
+   "agree": 0.9230769230769231,
+   "tv": 0.06236572443835082,
+   "n": 91
+  }
+ },
+ "thin@11r128": {
+  "REAL": {
+   "coverage": 0.0840258541089566,
+   "agree": 0.9010989010989011,
+   "agree_sd": 0.9010989010989011,
+   "n_sd": 91,
+   "tv": 0.059745943991263005
+  },
+  "REAL-label": {
+   "acc": 0.7777777777777778,
+   "acc_hobson_same": 0.7777777777777778,
+   "n_acc": 27
+  },
+  "LONG": {
+   "coverage": 0.0,
+   "agree": null,
+   "agree_sd": null,
+   "n_sd": null,
+   "tv": null
+  },
+  "CF": {
+   "n_pairs": 0,
+   "acc": null,
+   "flip": null,
+   "flip_rel": null,
+   "flip_given_hobson": null,
+   "dir": null,
+   "dmean_rel": null,
+   "agree": null,
+   "tv": null
+  },
+  "CF-probe": {
+   "n_pairs": 105,
+   "acc": 0.8809523809523809,
+   "flip": 0.7619047619047619,
+   "flip_rel": 0.7619047619047619,
+   "flip_given_hobson": 0.7619047619047619,
+   "dir": 1.0,
+   "dmean_rel": 0.8726412348220877,
+   "agree": 0.8809523809523809,
+   "tv": 0.04608689776452926
+  },
+  "flops": {
+   "CF-probe": 0.5287,
+   "all": 0.5451,
+   "REAL-agree": 0.5844
+  },
+  "vs_dense": {
+   "agree": 0.9010989010989011,
+   "tv": 0.05859198559945236,
+   "n": 91
+  }
+ }
+}

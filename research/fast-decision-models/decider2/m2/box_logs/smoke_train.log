@@ -1,0 +1,14 @@
+pool 11355 dev 4 cf pairs 2217 v5 100449 cfg gran=nat;iso=all;comp=docfirst
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 3869.93it/s]
+trainable 37.3 M (new 0.0 M)
+devref built 18
+DEV {"upd": 0, "k": 8, "tok": 0, "hours": 0.0, "dev_n": 18, "dev_agree": 0.8889, "dev_agree_sd": 0.6667, "dev_n_sd": 3, "dev_tv": 0.0814}
+DEV {"upd": 0, "k": 12, "tok": 0, "hours": 0.0, "dev_n": 18, "dev_agree": 0.8889, "dev_agree_sd": 0.6667, "dev_n_sd": 3, "dev_tv": 0.0548}
+/home/ubuntu/work/m2/m2train.py:193: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /__w/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:820.)
+  loss = loss + a.w_hid * hd; lsum[f'hid{kk}'] += float(hd); lcnt[f'hid{kk}'] += 1
+{"upd": 1, "t": 151, "tok": 11876, "tok_s": 79, "mem": 7.5, "lr": 5.500000000000001e-06, "acc_cf": 0.5, "agree12_cf": 1.0, "agree12_real": 1.0, "agree8_cf": 1.0, "ce_cf": 1.0489, "hid12": 0.0476, "hid8": 0.0534, "kl_cf": 0.0204, "kl_real": 0.1098}
+saved 2
+DEV {"upd": 2, "k": 8, "tok": 18243, "hours": 0.047, "dev_n": 18, "dev_agree": 0.9444, "dev_agree_sd": 1.0, "dev_n_sd": 3, "dev_tv": 0.0846}
+DEV {"upd": 2, "k": 12, "tok": 18243, "hours": 0.047, "dev_n": 18, "dev_agree": 0.8889, "dev_agree_sd": 0.6667, "dev_n_sd": 3, "dev_tv": 0.0562}
+done 170.15141534805298

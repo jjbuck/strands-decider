@@ -1,0 +1,55 @@
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 3944.68it/s]
+mode causal rev [] attn_nc False
+/home/ubuntu/work/j2/j2train.py:88: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /__w/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:820.)
+  acc['loss'] += float(loss); acc['n'] += 1
+{"phase": "mntp", "step": 10, "loss": 7.1329, "t": 57, "gam": {}, "lam": {}, "mem": 12.8}
+{"phase": "mntp", "step": 20, "loss": 3.531, "t": 115, "gam": {}, "lam": {}, "mem": 12.8}
+{"phase": "mntp", "step": 30, "loss": 2.4708, "t": 168, "gam": {}, "lam": {}, "mem": 12.8}
+{"phase": "mntp", "step": 40, "loss": 2.2103, "t": 222, "gam": {}, "lam": {}, "mem": 12.8}
+{"phase": "mntp", "step": 50, "loss": 2.207, "t": 279, "gam": {}, "lam": {}, "mem": 12.8}
+{"phase": "mntp", "step": 60, "loss": 2.0987, "t": 335, "gam": {}, "lam": {}, "mem": 12.8}
+{"phase": "mntp", "step": 70, "loss": 2.0247, "t": 389, "gam": {}, "lam": {}, "mem": 12.8}
+{"phase": "mntp", "step": 80, "loss": 1.8806, "t": 445, "gam": {}, "lam": {}, "mem": 12.8}
+{"phase": "mntp", "step": 90, "loss": 1.7476, "t": 501, "gam": {}, "lam": {}, "mem": 12.8}
+{"phase": "mntp", "step": 100, "loss": 1.8106, "t": 556, "gam": {}, "lam": {}, "mem": 12.8}
+{"phase": "mntp", "step": 110, "loss": 1.6819, "t": 611, "gam": {}, "lam": {}, "mem": 12.8}
+{"phase": "mntp", "step": 120, "loss": 1.7607, "t": 668, "gam": {}, "lam": {}, "mem": 12.8}
+{"phase": "mntp", "step": 130, "loss": 1.7842, "t": 725, "gam": {}, "lam": {}, "mem": 12.8}
+{"phase": "mntp", "step": 140, "loss": 1.7246, "t": 779, "gam": {}, "lam": {}, "mem": 12.8}
+{"phase": "mntp", "step": 150, "loss": 1.7278, "t": 834, "gam": {}, "lam": {}, "mem": 12.8}
+{"phase": "mntp", "step": 160, "loss": 1.7755, "t": 890, "gam": {}, "lam": {}, "mem": 12.8}
+{"phase": "mntp", "step": 170, "loss": 1.6512, "t": 947, "gam": {}, "lam": {}, "mem": 12.8}
+{"phase": "mntp", "step": 180, "loss": 1.7455, "t": 1002, "gam": {}, "lam": {}, "mem": 12.8}
+{"phase": "mntp", "step": 190, "loss": 1.7092, "t": 1059, "gam": {}, "lam": {}, "mem": 12.8}
+{"phase": "mntp", "step": 200, "loss": 1.674, "t": 1116, "gam": {}, "lam": {}, "mem": 12.8}
+ft rows 8960 steps 280 tokens 4601852
+{"phase": "ft", "step": 10, "t": 96, "tok_s": 1515, "lr": 9.968561049466214e-05, "mem": 12.8, "ce_v5": 0.503, "acc_v5": 0.8735, "kl_v5": 0.0918, "agree_v5": 0.8972, "ce_syn": 0.5521, "acc_syn": 0.7632, "kl_syn": 0.1758, "agree_syn": 0.8684, "kl_real": 0.2365, "agree_real": 0.8276}
+{"phase": "ft", "step": 20, "t": 269, "tok_s": 1528, "lr": 9.874639560909117e-05, "mem": 12.8, "ce_v5": 0.3641, "acc_v5": 0.8774, "kl_v5": 0.0486, "agree_v5": 0.8868, "ce_syn": 0.2907, "acc_syn": 0.931, "kl_syn": 0.0475, "agree_syn": 1.0, "kl_real": 0.2605, "agree_real": 0.8734}
+{"phase": "ft", "step": 30, "t": 310, "tok_s": 1498, "lr": 9.719416651541839e-05, "mem": 12.8, "ce_v5": 0.3227, "acc_v5": 0.886, "kl_v5": 0.0374, "agree_v5": 0.9479, "ce_syn": 0.1609, "acc_syn": 1.0, "kl_syn": 0.0365, "agree_syn": 0.8333, "kl_real": 0.0052, "agree_real": 1.0}
+{"phase": "ft", "step": 40, "t": 376, "tok_s": 1681, "lr": 9.504844339512095e-05, "mem": 12.8, "ce_syn": 0.6393, "acc_syn": 0.7333, "kl_syn": 0.1657, "agree_syn": 0.8333, "ce_v5": 0.329, "acc_v5": 0.892, "kl_v5": 0.0267, "agree_v5": 0.952, "kl_real": 0.3067, "agree_real": 0.8}
+{"phase": "ft", "step": 50, "t": 423, "tok_s": 1800, "lr": 9.233620996141421e-05, "mem": 12.8, "kl_real": 0.0582, "agree_real": 0.9286, "ce_syn": 0.3662, "acc_syn": 0.8824, "kl_syn": 0.0449, "agree_syn": 0.8824, "ce_v5": 0.2643, "acc_v5": 0.9147, "kl_v5": 0.032, "agree_v5": 0.9651}
+{"phase": "ft", "step": 60, "t": 535, "tok_s": 1730, "lr": 8.90915741234015e-05, "mem": 12.8, "ce_syn": 0.2901, "acc_syn": 0.9565, "kl_syn": 0.0312, "agree_syn": 1.0, "kl_real": 0.0956, "agree_real": 0.9118, "ce_v5": 0.3447, "acc_v5": 0.8745, "kl_v5": 0.0315, "agree_v5": 0.9392}
+{"phase": "ft", "step": 70, "t": 641, "tok_s": 1686, "lr": 8.535533905932738e-05, "mem": 12.8, "ce_v5": 0.3932, "acc_v5": 0.8477, "kl_v5": 0.0394, "agree_v5": 0.9424, "ce_syn": 0.2278, "acc_syn": 0.9211, "kl_syn": 0.0438, "agree_syn": 0.8947, "kl_real": 0.0473, "agree_real": 0.9231}
+{"phase": "ft", "step": 80, "t": 769, "tok_s": 1651, "lr": 8.117449009293668e-05, "mem": 12.8, "ce_v5": 0.4114, "acc_v5": 0.8415, "kl_v5": 0.0315, "agree_v5": 0.9593, "ce_syn": 0.2392, "acc_syn": 0.9444, "kl_syn": 0.0198, "agree_syn": 1.0, "kl_real": 0.0702, "agree_real": 0.8947}
+{"phase": "ft", "step": 90, "t": 867, "tok_s": 1628, "lr": 7.660160382576683e-05, "mem": 12.8, "ce_v5": 0.3055, "acc_v5": 0.883, "kl_v5": 0.0251, "agree_v5": 0.961, "kl_real": 0.2369, "agree_real": 0.5758, "ce_syn": 0.4568, "acc_syn": 0.8, "kl_syn": 0.2724, "agree_syn": 0.8}
+{"phase": "ft", "step": 100, "t": 1056, "tok_s": 1604, "lr": 7.169418695587791e-05, "mem": 12.8, "ce_v5": 0.4639, "acc_v5": 0.8256, "kl_v5": 0.0304, "agree_v5": 0.9128, "ce_syn": 0.2338, "acc_syn": 0.9464, "kl_syn": 0.039, "agree_syn": 0.9821, "kl_real": 0.0843, "agree_real": 0.7971}
+{"phase": "ft", "step": 110, "t": 1102, "tok_s": 1592, "lr": 6.651395309775837e-05, "mem": 12.8, "ce_v5": 0.358, "acc_v5": 0.8595, "kl_v5": 0.0288, "agree_v5": 0.9365, "ce_syn": 0.4336, "acc_syn": 0.8, "kl_syn": 0.0272, "agree_syn": 0.8667, "kl_real": 0.0547, "agree_real": 1.0}
+{"phase": "ft", "step": 120, "t": 1244, "tok_s": 1580, "lr": 6.112604669781572e-05, "mem": 12.8, "ce_syn": 0.4636, "acc_syn": 0.7576, "kl_syn": 0.04, "agree_syn": 0.9394, "kl_real": 0.0616, "agree_real": 0.9231, "ce_v5": 0.3925, "acc_v5": 0.8596, "kl_v5": 0.0272, "agree_v5": 0.9532}
+{"phase": "ft", "step": 130, "t": 1335, "tok_s": 1571, "lr": 5.559822380516539e-05, "mem": 12.8, "ce_v5": 0.3442, "acc_v5": 0.8911, "kl_v5": 0.0305, "agree_v5": 0.9533, "ce_syn": 0.348, "acc_syn": 0.8649, "kl_syn": 0.0312, "agree_syn": 0.9459, "kl_real": 0.012, "agree_real": 1.0}
+{"phase": "ft", "step": 140, "t": 1427, "tok_s": 1562, "lr": 5e-05, "mem": 12.8, "ce_v5": 0.3314, "acc_v5": 0.8715, "kl_v5": 0.0325, "agree_v5": 0.9688, "kl_real": 0.0416, "agree_real": 0.9062}
+{"phase": "ft", "step": 150, "t": 1501, "tok_s": 1555, "lr": 4.4401776194834613e-05, "mem": 12.8, "ce_v5": 0.3413, "acc_v5": 0.8655, "kl_v5": 0.0203, "agree_v5": 0.9382, "ce_syn": 0.2447, "acc_syn": 0.9231, "kl_syn": 0.0153, "agree_syn": 0.9231, "kl_real": 0.0075, "agree_real": 1.0}
+{"phase": "ft", "step": 160, "t": 1679, "tok_s": 1547, "lr": 3.887395330218429e-05, "mem": 12.8, "ce_syn": 0.3318, "acc_syn": 0.878, "kl_syn": 0.0342, "agree_syn": 0.9268, "kl_real": 0.0357, "agree_real": 0.9444, "ce_v5": 0.2987, "acc_v5": 0.9227, "kl_v5": 0.0283, "agree_v5": 0.9807}
+{"phase": "ft", "step": 170, "t": 1766, "tok_s": 1597, "lr": 3.3486046902241664e-05, "mem": 12.8, "ce_v5": 0.2905, "acc_v5": 0.9023, "kl_v5": 0.0116, "agree_v5": 0.9442, "ce_syn": 0.3373, "acc_syn": 0.8667, "kl_syn": 0.0188, "agree_syn": 1.0, "kl_real": 0.0241, "agree_real": 0.9333}
+{"phase": "ft", "step": 180, "t": 1796, "tok_s": 1626, "lr": 2.8305813044122097e-05, "mem": 12.8, "ce_v5": 0.3772, "acc_v5": 0.8671, "kl_v5": 0.0282, "agree_v5": 0.9336, "ce_syn": 0.2144, "acc_syn": 1.0, "kl_syn": 0.053, "agree_syn": 1.0, "kl_real": 0.0114, "agree_real": 1.0}
+{"phase": "ft", "step": 190, "t": 1849, "tok_s": 1674, "lr": 2.3398396174233178e-05, "mem": 12.8, "ce_v5": 0.3638, "acc_v5": 0.8606, "kl_v5": 0.03, "agree_v5": 0.9323, "ce_syn": 0.1605, "acc_syn": 0.9677, "kl_syn": 0.0478, "agree_syn": 0.9355, "kl_real": 0.0229, "agree_real": 1.0}
+{"phase": "ft", "step": 200, "t": 1878, "tok_s": 1700, "lr": 1.8825509907063327e-05, "mem": 12.8, "ce_v5": 0.2424, "acc_v5": 0.8989, "kl_v5": 0.0196, "agree_v5": 0.9531, "ce_syn": 0.2784, "acc_syn": 0.9394, "kl_syn": 0.0312, "agree_syn": 0.9697, "kl_real": 0.005, "agree_real": 1.0}
+{"phase": "ft", "step": 210, "t": 1939, "tok_s": 1750, "lr": 1.4644660940672627e-05, "mem": 12.8, "kl_real": 0.0198, "agree_real": 0.9821, "ce_v5": 0.434, "acc_v5": 0.8143, "kl_v5": 0.0266, "agree_v5": 0.9409, "ce_syn": 0.3365, "acc_syn": 0.8519, "kl_syn": 0.0308, "agree_syn": 1.0}
+{"phase": "ft", "step": 220, "t": 2012, "tok_s": 1809, "lr": 1.090842587659851e-05, "mem": 12.8, "ce_v5": 0.3173, "acc_v5": 0.8657, "kl_v5": 0.025, "agree_v5": 0.9398, "ce_syn": 0.148, "acc_syn": 0.9762, "kl_syn": 0.0239, "agree_syn": 0.9762, "kl_real": 0.0128, "agree_real": 0.9355}
+{"phase": "ft", "step": 230, "t": 2045, "tok_s": 1833, "lr": 7.663790038585793e-06, "mem": 12.8, "ce_v5": 0.2697, "acc_v5": 0.9088, "kl_v5": 0.0251, "agree_v5": 0.9891, "ce_syn": 0.2206, "acc_syn": 0.9412, "kl_syn": 0.0239, "agree_syn": 0.9706, "kl_real": 0.0077, "agree_real": 1.0}
+{"phase": "ft", "step": 240, "t": 2103, "tok_s": 1875, "lr": 4.951556604879048e-06, "mem": 12.8, "ce_v5": 0.2864, "acc_v5": 0.8789, "kl_v5": 0.021, "agree_v5": 0.9766, "kl_real": 0.0224, "agree_real": 0.875, "ce_syn": 0.3639, "acc_syn": 0.875, "kl_syn": 0.0413, "agree_syn": 0.875}
+{"phase": "ft", "step": 250, "t": 2163, "tok_s": 1916, "lr": 2.8058334845816213e-06, "mem": 12.8, "ce_v5": 0.2796, "acc_v5": 0.9241, "kl_v5": 0.0184, "agree_v5": 0.962, "kl_real": 0.0201, "agree_real": 0.9298, "ce_syn": 0.2786, "acc_syn": 0.8846, "kl_syn": 0.0277, "agree_syn": 1.0}
+{"phase": "ft", "step": 260, "t": 2216, "tok_s": 1950, "lr": 1.2536043909088191e-06, "mem": 12.8, "ce_v5": 0.3348, "acc_v5": 0.8745, "kl_v5": 0.0312, "agree_v5": 0.9725, "ce_syn": 0.136, "acc_syn": 1.0, "kl_syn": 0.0503, "agree_syn": 0.9655, "kl_real": 0.014, "agree_real": 0.9167}
+{"phase": "ft", "step": 270, "t": 2246, "tok_s": 1968, "lr": 3.143895053378698e-07, "mem": 12.8, "ce_v5": 0.2763, "acc_v5": 0.9004, "kl_v5": 0.0202, "agree_v5": 0.9751, "ce_syn": 0.3439, "acc_syn": 0.8696, "kl_syn": 0.0162, "agree_syn": 0.9565, "kl_real": 0.0034, "agree_real": 1.0}
+{"phase": "ft", "step": 280, "t": 2301, "tok_s": 2000, "lr": 0.0, "mem": 12.8, "ce_v5": 0.285, "acc_v5": 0.9103, "kl_v5": 0.0185, "agree_v5": 0.9872, "ce_syn": 0.3302, "acc_syn": 0.825, "kl_syn": 0.0248, "agree_syn": 0.95, "kl_real": 0.0063, "agree_real": 0.9783}
+done 2301.493752002716

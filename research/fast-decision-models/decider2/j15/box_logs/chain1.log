@@ -1,0 +1,245 @@
+=== 20:37:24 preds/b8_eval.jsonl --prec map:~/work/h1/precmap_w8a8_b8.json:w8a8 --codes w8=~/work/h2/codes_gptq_w8.pt,w4=~/work/h2/codes_gptq_w4.pt --suites JB-all,REAL-agree,LONG,CF,CF-probe --taps 4,6,8,10,12,14,16,18,20
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 4008.80it/s]
+built map:~/work/h1/precmap_w8a8_b8.json:w8a8 rot mem 8.15
+questions 3227 done 0 taps (4, 6, 8, 10, 12, 14, 16, 18, 20)
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 200 8s
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 400 23s
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 600 40s
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 800 57s
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 1000 79s
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 1200 96s
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 1400 129s
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 1600 174s
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 1800 214s
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 2000 251s
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 2200 271s
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 2400 284s
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 2600 300s
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 2800 324s
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 3000 345s
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 3200 362s
+done map:~/work/h1/precmap_w8a8_b8.json:w8a8 3227 364s
+=== 20:43:43 preds/w4a4_eval.jsonl --prec w4a4 --codes w8=~/work/h2/codes_gptq_w8.pt,w4=~/work/h2/codes_gptq_w4.pt --suites JB-all,REAL-agree,LONG,CF,CF-probe --taps 24
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 4249.06it/s]
+built w4a4 rot mem 7.43
+questions 3227 done 0 taps (24,)
+w4a4 200 7s
+w4a4 400 16s
+w4a4 600 27s
+w4a4 800 39s
+w4a4 1000 52s
+w4a4 1200 64s
+w4a4 1400 85s
+w4a4 1600 115s
+w4a4 1800 141s
+w4a4 2000 166s
+w4a4 2200 178s
+w4a4 2400 187s
+w4a4 2600 197s
+w4a4 2800 212s
+w4a4 3000 226s
+w4a4 3200 237s
+done w4a4 3227 238s
+=== 20:47:55 preds/b8_dev.jsonl --prec map:~/work/h1/precmap_w8a8_b8.json:w8a8 --codes w8=~/work/h2/codes_gptq_w8.pt,w4=~/work/h2/codes_gptq_w4.pt --suites DEV --taps 4,6,8,10,12,14,16,18,20
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 4154.34it/s]
+built map:~/work/h1/precmap_w8a8_b8.json:w8a8 rot mem 8.15
+questions 1736 done 0 taps (4, 6, 8, 10, 12, 14, 16, 18, 20)
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 200 19s
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 400 38s
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 600 57s
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 800 73s
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 1000 90s
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 1200 119s
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 1400 168s
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 1600 214s
+done map:~/work/h1/precmap_w8a8_b8.json:w8a8 1736 246s
+=== 20:52:15 preds/w4a4_dev.jsonl --prec w4a4 --codes w8=~/work/h2/codes_gptq_w8.pt,w4=~/work/h2/codes_gptq_w4.pt --suites DEV --taps 24
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 3734.55it/s]
+built w4a4 rot mem 7.43
+questions 1736 done 0 taps (24,)
+w4a4 200 12s
+w4a4 400 25s
+w4a4 600 37s
+w4a4 800 47s
+w4a4 1000 58s
+w4a4 1200 77s
+w4a4 1400 109s
+w4a4 1600 140s
+done w4a4 1736 162s
+=== 20:55:11 preds/b8_exit.jsonl --prec map:~/work/h1/precmap_w8a8_b8.json:w8a8 --codes w8=~/work/h2/codes_gptq_w8.pt,w4=~/work/h2/codes_gptq_w4.pt --suites EXIT --taps 4,6,8,10,12,14,16,18,20
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 4121.58it/s]
+built map:~/work/h1/precmap_w8a8_b8.json:w8a8 rot mem 8.15
+questions 4205 done 0 taps (4, 6, 8, 10, 12, 14, 16, 18, 20)
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 200 19s
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 400 37s
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 600 55s
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 800 73s
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 1000 91s
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 1200 109s
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 1400 126s
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 1600 145s
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 1800 163s
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 2000 181s
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 2200 199s
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 2400 215s
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 2600 232s
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 2800 251s
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 3000 269s
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 3200 311s
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 3400 357s
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 3600 403s
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 3800 448s
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 4000 500s
+map:~/work/h1/precmap_w8a8_b8.json:w8a8 4200 554s
+done map:~/work/h1/precmap_w8a8_b8.json:w8a8 4205 555s
+=== 21:04:40 preds/w4a4_exit.jsonl --prec w4a4 --codes w8=~/work/h2/codes_gptq_w8.pt,w4=~/work/h2/codes_gptq_w4.pt --suites EXIT --taps 24
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 3625.80it/s]
+built w4a4 rot mem 7.43
+questions 4205 done 0 taps (24,)
+w4a4 200 14s
+w4a4 400 28s
+w4a4 600 42s
+w4a4 800 55s
+w4a4 1000 69s
+w4a4 1200 83s
+w4a4 1400 94s
+w4a4 1600 106s
+w4a4 1800 118s
+w4a4 2000 129s
+w4a4 2200 141s
+w4a4 2400 153s
+w4a4 2600 166s
+w4a4 2800 180s
+w4a4 3000 194s
+w4a4 3200 227s
+w4a4 3400 262s
+w4a4 3600 298s
+w4a4 3800 332s
+w4a4 4000 368s
+w4a4 4200 405s
+done w4a4 4205 406s
+=== 21:11:42 preds/k48_eval.jsonl --prec map:~/work/h1/precmap_w4a4_k48.json:w4a4 --codes w8=~/work/h2/codes_gptq_w8.pt,w4=~/work/h2/codes_gptq_w4.pt --suites JB-all,REAL-agree,LONG,CF,CF-probe
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 3861.40it/s]
+built map:~/work/h1/precmap_w4a4_k48.json:w4a4 rot mem 7.75
+questions 3227 done 0 taps ()
+map:~/work/h1/precmap_w4a4_k48.json:w4a4 200 7s
+map:~/work/h1/precmap_w4a4_k48.json:w4a4 400 21s
+map:~/work/h1/precmap_w4a4_k48.json:w4a4 600 36s
+map:~/work/h1/precmap_w4a4_k48.json:w4a4 800 53s
+map:~/work/h1/precmap_w4a4_k48.json:w4a4 1000 72s
+map:~/work/h1/precmap_w4a4_k48.json:w4a4 1200 88s
+map:~/work/h1/precmap_w4a4_k48.json:w4a4 1400 118s
+map:~/work/h1/precmap_w4a4_k48.json:w4a4 1600 163s
+map:~/work/h1/precmap_w4a4_k48.json:w4a4 1800 199s
+map:~/work/h1/precmap_w4a4_k48.json:w4a4 2000 234s
+map:~/work/h1/precmap_w4a4_k48.json:w4a4 2200 251s
+map:~/work/h1/precmap_w4a4_k48.json:w4a4 2400 264s
+map:~/work/h1/precmap_w4a4_k48.json:w4a4 2600 278s
+map:~/work/h1/precmap_w4a4_k48.json:w4a4 2800 300s
+map:~/work/h1/precmap_w4a4_k48.json:w4a4 3000 319s
+map:~/work/h1/precmap_w4a4_k48.json:w4a4 3200 335s
+done map:~/work/h1/precmap_w4a4_k48.json:w4a4 3227 337s
+=== 21:17:34 preds/k48_dev.jsonl --prec map:~/work/h1/precmap_w4a4_k48.json:w4a4 --codes w8=~/work/h2/codes_gptq_w8.pt,w4=~/work/h2/codes_gptq_w4.pt --suites DEV
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 4440.93it/s]
+built map:~/work/h1/precmap_w4a4_k48.json:w4a4 rot mem 7.75
+questions 1736 done 0 taps ()
+map:~/work/h1/precmap_w4a4_k48.json:w4a4 200 17s
+map:~/work/h1/precmap_w4a4_k48.json:w4a4 400 35s
+map:~/work/h1/precmap_w4a4_k48.json:w4a4 600 52s
+map:~/work/h1/precmap_w4a4_k48.json:w4a4 800 67s
+map:~/work/h1/precmap_w4a4_k48.json:w4a4 1000 83s
+map:~/work/h1/precmap_w4a4_k48.json:w4a4 1200 110s
+map:~/work/h1/precmap_w4a4_k48.json:w4a4 1400 154s
+map:~/work/h1/precmap_w4a4_k48.json:w4a4 1600 197s
+done map:~/work/h1/precmap_w4a4_k48.json:w4a4 1736 227s
+=== 21:21:36 preds/bf16_eval.jsonl --prec bf16 --suites JB-all,REAL-agree,LONG,CF,CF-probe
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 4042.95it/s]
+built bf16 fold mem 8.87
+questions 3227 done 0 taps ()
+bf16 200 24s
+bf16 400 49s
+bf16 600 78s
+bf16 800 109s
+bf16 1000 144s
+bf16 1200 173s
+bf16 1400 224s
+bf16 1600 296s
+bf16 1800 361s
+bf16 2000 420s
+bf16 2200 452s
+bf16 2400 473s
+bf16 2600 499s
+bf16 2800 539s
+bf16 3000 574s
+bf16 3200 603s
+done bf16 3227 607s
+=== 21:31:56 preds/bf16_dev.jsonl --prec bf16 --suites DEV
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 3835.24it/s]
+built bf16 fold mem 8.87
+questions 1736 done 0 taps ()
+bf16 200 32s
+bf16 400 64s
+bf16 600 95s
+bf16 800 122s
+bf16 1000 152s
+bf16 1200 198s
+bf16 1400 273s
+bf16 1600 345s
+done bf16 1736 395s
+=== 21:38:44 k64qb
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 4012.57it/s]
+mem before build 3.78
+mem after build 4.9
+model built map:~/work/h6/precmap_w4a4_k64.json:w4a4 plainqb  rot ba16 True aclip4 0.9
+questions 3227 groups 3227
+200 17s
+400 33s
+600 52s
+800 76s
+1000 107s
+1200 126s
+1400 159s
+1600 206s
+1800 250s
+2000 288s
+2200 310s
+2400 326s
+2600 348s
+2800 373s
+3000 395s
+3200 414s
+done 3227 416s
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 3750.64it/s]
+mem before build 3.78
+mem after build 4.9
+model built map:~/work/h6/precmap_w4a4_k64.json:w4a4 plainqb  rot ba16 True aclip4 0.9
+questions 1736 groups 1736
+200 25s
+400 49s
+600 73s
+800 92s
+1000 112s
+1200 142s
+1400 192s
+1600 240s
+done 1736 273s
+=== 21:51:22 preds/k48_exit.jsonl --prec map:~/work/h1/precmap_w4a4_k48.json:w4a4 --codes w8=~/work/h2/codes_gptq_w8.pt,w4=~/work/h2/codes_gptq_w4.pt --suites EXIT
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 3718.46it/s]
+built map:~/work/h1/precmap_w4a4_k48.json:w4a4 rot mem 7.75
+questions 4205 done 0 taps ()
+map:~/work/h1/precmap_w4a4_k48.json:w4a4 200 17s
+map:~/work/h1/precmap_w4a4_k48.json:w4a4 400 34s
+map:~/work/h1/precmap_w4a4_k48.json:w4a4 600 51s
+map:~/work/h1/precmap_w4a4_k48.json:w4a4 800 65s
+map:~/work/h1/precmap_w4a4_k48.json:w4a4 1000 80s
+map:~/work/h1/precmap_w4a4_k48.json:w4a4 1200 94s
+map:~/work/h1/precmap_w4a4_k48.json:w4a4 1400 107s
+map:~/work/h1/precmap_w4a4_k48.json:w4a4 1600 121s
+map:~/work/h1/precmap_w4a4_k48.json:w4a4 1800 136s
+map:~/work/h1/precmap_w4a4_k48.json:w4a4 2000 150s
+map:~/work/h1/precmap_w4a4_k48.json:w4a4 2200 164s
+map:~/work/h1/precmap_w4a4_k48.json:w4a4 2400 176s
+map:~/work/h1/precmap_w4a4_k48.json:w4a4 2600 190s
+map:~/work/h1/precmap_w4a4_k48.json:w4a4 2800 204s
+map:~/work/h1/precmap_w4a4_k48.json:w4a4 3000 219s
+map:~/work/h1/precmap_w4a4_k48.json:w4a4 3200 253s

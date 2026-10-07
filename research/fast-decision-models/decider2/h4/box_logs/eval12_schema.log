@@ -1,0 +1,35 @@
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 3721.25it/s]
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+schema 100 3227 5s mem 3.8G
+schema 200 3227 16s mem 4.1G
+schema 300 3227 31s mem 4.1G
+schema 400 3227 49s mem 4.1G
+schema 500 3227 68s mem 4.1G
+schema 600 3227 88s mem 4.2G
+schema 700 3227 109s mem 4.3G
+schema 800 3227 129s mem 4.3G
+schema 900 3227 151s mem 4.3G
+schema 1000 3227 177s mem 4.3G
+schema 1100 3227 197s mem 4.3G
+schema 1200 3227 216s mem 4.3G
+schema 1300 3227 238s mem 4.3G
+schema 1400 3227 283s mem 4.5G
+schema 1500 3227 333s mem 4.5G
+schema 1600 3227 376s mem 4.5G
+schema 1700 3227 418s mem 4.5G
+schema 1800 3227 461s mem 4.5G
+schema 1900 3227 511s mem 4.5G
+schema 2000 3227 538s mem 4.5G
+schema 2100 3227 563s mem 4.5G
+schema 2200 3227 580s mem 4.5G
+schema 2300 3227 595s mem 4.5G
+schema 2400 3227 610s mem 4.5G
+schema 2500 3227 622s mem 4.5G
+schema 2600 3227 645s mem 4.5G
+schema 2700 3227 672s mem 4.5G
+schema 2800 3227 697s mem 4.5G
+schema 2900 3227 721s mem 4.5G
+schema 3000 3227 744s mem 4.5G
+schema 3100 3227 766s mem 4.5G
+schema 3200 3227 783s mem 4.5G
+done schema 3227 788s

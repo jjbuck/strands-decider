@@ -1,0 +1,516 @@
+{
+ "JB-hard": {
+  "n_q": 130,
+  "coverage": 1.0,
+  "acc": 0.5153846153846153,
+  "n_acc": 130,
+  "agree": 0.8384615384615385,
+  "tv": 0.110822903583345,
+  "kl": 0.0512670608450455,
+  "agree_sd": 0.855072463768116,
+  "n_sd": 69
+ },
+ "JB-hard_hobson": {
+  "n_q": 130,
+  "coverage": 1.0,
+  "acc": 0.5230769230769231,
+  "n_acc": 130,
+  "agree": 1.0,
+  "tv": 0.0,
+  "kl": 0.0,
+  "agree_sd": 1.0,
+  "n_sd": 69
+ },
+ "JB-long": {
+  "n_q": 77,
+  "coverage": 1.0,
+  "acc": 0.4155844155844156,
+  "n_acc": 77,
+  "agree": 0.7792207792207793,
+  "tv": 0.1125667097668991,
+  "kl": 0.04890217398324402,
+  "agree_sd": 0.75,
+  "n_sd": 40
+ },
+ "JB-long_hobson": {
+  "n_q": 77,
+  "coverage": 1.0,
+  "acc": 0.4025974025974026,
+  "n_acc": 77,
+  "agree": 1.0,
+  "tv": 0.0,
+  "kl": 0.0,
+  "agree_sd": 1.0,
+  "n_sd": 40
+ },
+ "JB-all": {
+  "n_q": 231,
+  "coverage": 1.0,
+  "acc": 0.7142857142857143,
+  "n_acc": 231,
+  "agree": 0.9047619047619048,
+  "tv": 0.07934124398305248,
+  "kl": 0.03482727611622429,
+  "agree_sd": 0.9219858156028369,
+  "n_sd": 141
+ },
+ "JB-all_hobson": {
+  "n_q": 231,
+  "coverage": 1.0,
+  "acc": 0.7229437229437229,
+  "n_acc": 231,
+  "agree": 1.0,
+  "tv": 0.0,
+  "kl": 0.0,
+  "agree_sd": 1.0,
+  "n_sd": 141
+ },
+ "REAL-agree": {
+  "n_q": 1083,
+  "coverage": 1.0,
+  "agree": 0.9335180055401662,
+  "tv": 0.05131998071202207,
+  "kl": 0.016816944347273963,
+  "agree_sd": 0.8930635838150289,
+  "n_sd": 346
+ },
+ "REAL-agree_hobson": {
+  "n_q": 1083,
+  "coverage": 1.0,
+  "agree": 1.0,
+  "tv": 0.0,
+  "kl": 0.0,
+  "agree_sd": 1.0,
+  "n_sd": 346
+ },
+ "LONG": {
+  "n_q": 471,
+  "coverage": 1.0,
+  "agree": 0.9554140127388535,
+  "tv": 0.0517192948583816,
+  "kl": 0.017542415892949987,
+  "agree_sd": 0.9151515151515152,
+  "n_sd": 165
+ },
+ "LONG_hobson": {
+  "n_q": 471,
+  "coverage": 1.0,
+  "agree": 1.0,
+  "tv": 0.0,
+  "kl": 0.0,
+  "agree_sd": 1.0,
+  "n_sd": 165
+ },
+ "CF": {
+  "n_pairs": 406,
+  "acc": 0.6958128078817734,
+  "flip": 0.46551724137931033,
+  "flip_any": 0.5,
+  "dir": 0.9852216748768473,
+  "dmean": 0.2644542688077386,
+  "flip_rel": 1.7339449541284402,
+  "dmean_rel": 1.55514344856248,
+  "flip_given_hobson": 0.8899082568807339,
+  "agree": 0.8354114713216958,
+  "tv": 0.08967760565642281
+ },
+ "CF_hobson": {
+  "n_pairs": 406,
+  "acc": 0.5935960591133005,
+  "flip": 0.2684729064039409,
+  "flip_any": 0.3054187192118227,
+  "dir": 0.9482758620689655,
+  "dmean": 0.17005136667758258,
+  "flip_rel": 1.0,
+  "dmean_rel": 1.0,
+  "flip_given_hobson": 1.0,
+  "agree": 1.0,
+  "tv": 0.0
+ },
+ "CF-probe": {
+  "n_pairs": 320,
+  "acc": 0.9953125,
+  "flip": 0.990625,
+  "flip_any": 0.990625,
+  "dir": 0.996875,
+  "dmean": 0.7569270223180307,
+  "flip_rel": 3.019047619047619,
+  "dmean_rel": 4.971704084770619,
+  "flip_given_hobson": 1.0,
+  "agree": 0.6546875,
+  "tv": 0.305003413559655
+ },
+ "CF-probe_hobson": {
+  "n_pairs": 320,
+  "acc": 0.653125,
+  "flip": 0.328125,
+  "flip_any": 0.35,
+  "dir": 0.884375,
+  "dmean": 0.15224699809400527,
+  "flip_rel": 1.0,
+  "dmean_rel": 1.0,
+  "flip_given_hobson": 1.0,
+  "agree": 1.0,
+  "tv": 0.0
+ },
+ "SHUF": {
+  "n_pairs": 387,
+  "change": 0.5452196382428941,
+  "both_right": 0.45219638242894056
+ },
+ "SHUF_hobson": {
+  "n_pairs": 387,
+  "change": 0.3385012919896641,
+  "both_right": 0.2454780361757106
+ },
+ "REAL-label": {
+  "n_q": 400,
+  "coverage": 1.0,
+  "acc": 0.7525,
+  "n_acc": 400,
+  "acc_consensus": 0.7907608695652174,
+  "n_consensus": 368,
+  "agree": 0.9275,
+  "tv": 0.047065651938153756,
+  "kl": 0.014098388954470808,
+  "agree_sd": 0.8899082568807339,
+  "n_sd": 109
+ },
+ "REAL-label_hobson": {
+  "n_q": 400,
+  "coverage": 1.0,
+  "acc": 0.785,
+  "n_acc": 400,
+  "acc_consensus": 0.8179347826086957,
+  "n_consensus": 368,
+  "agree": 1.0,
+  "tv": 0.0,
+  "kl": 0.0,
+  "agree_sd": 1.0,
+  "n_sd": 109
+ },
+ "mcnemar_JB-all": {
+  "n": 231,
+  "acc": 0.7142857142857143,
+  "acc_hobson": 0.7229437229437229,
+  "model_only": 7,
+  "hobson_only": 9,
+  "p": 0.803619384765625,
+  "fam": {
+   "adequacy": {
+    "n": 12,
+    "model": 8,
+    "hobson": 10
+   },
+   "adversarial": {
+    "n": 6,
+    "model": 4,
+    "hobson": 3
+   },
+   "ambiguous": {
+    "n": 7,
+    "model": 5,
+    "hobson": 5
+   },
+   "extraction": {
+    "n": 24,
+    "model": 23,
+    "hobson": 24
+   },
+   "fact": {
+    "n": 12,
+    "model": 12,
+    "hobson": 12
+   },
+   "intent": {
+    "n": 24,
+    "model": 23,
+    "hobson": 23
+   },
+   "judge_hard": {
+    "n": 17,
+    "model": 9,
+    "hobson": 9
+   },
+   "long_policy": {
+    "n": 19,
+    "model": 7,
+    "hobson": 7
+   },
+   "multi_hop": {
+    "n": 18,
+    "model": 7,
+    "hobson": 8
+   },
+   "ordinal": {
+    "n": 12,
+    "model": 12,
+    "hobson": 12
+   },
+   "policy": {
+    "n": 12,
+    "model": 9,
+    "hobson": 9
+   },
+   "probability": {
+    "n": 10,
+    "model": 5,
+    "hobson": 3
+   },
+   "routing": {
+    "n": 12,
+    "model": 11,
+    "hobson": 11
+   },
+   "routing_hard": {
+    "n": 5,
+    "model": 5,
+    "hobson": 5
+   },
+   "temporal_numeric": {
+    "n": 15,
+    "model": 3,
+    "hobson": 3
+   },
+   "tool_selection": {
+    "n": 12,
+    "model": 12,
+    "hobson": 12
+   },
+   "tradeoff": {
+    "n": 6,
+    "model": 3,
+    "hobson": 4
+   },
+   "trap": {
+    "n": 8,
+    "model": 7,
+    "hobson": 7
+   }
+  }
+ },
+ "mcnemar_JB-hard": {
+  "n": 130,
+  "acc": 0.5153846153846153,
+  "acc_hobson": 0.5230769230769231,
+  "model_only": 7,
+  "hobson_only": 8,
+  "p": 1.0,
+  "fam": {
+   "adequacy": {
+    "n": 12,
+    "model": 8,
+    "hobson": 10
+   },
+   "adversarial": {
+    "n": 6,
+    "model": 4,
+    "hobson": 3
+   },
+   "ambiguous": {
+    "n": 7,
+    "model": 5,
+    "hobson": 5
+   },
+   "judge_hard": {
+    "n": 17,
+    "model": 9,
+    "hobson": 9
+   },
+   "long_policy": {
+    "n": 19,
+    "model": 7,
+    "hobson": 7
+   },
+   "multi_hop": {
+    "n": 18,
+    "model": 7,
+    "hobson": 8
+   },
+   "policy": {
+    "n": 12,
+    "model": 9,
+    "hobson": 9
+   },
+   "probability": {
+    "n": 10,
+    "model": 5,
+    "hobson": 3
+   },
+   "temporal_numeric": {
+    "n": 15,
+    "model": 3,
+    "hobson": 3
+   },
+   "tradeoff": {
+    "n": 6,
+    "model": 3,
+    "hobson": 4
+   },
+   "trap": {
+    "n": 8,
+    "model": 7,
+    "hobson": 7
+   }
+  }
+ },
+ "brier_JB-all": {
+  "n": 231,
+  "brier": 0.35347484754598546,
+  "brier_hobson": 0.34785219750374335,
+  "ece": 0.0565866003562878
+ },
+ "brier_REAL-label": {
+  "n": 400,
+  "brier": 0.3654186835771017,
+  "brier_hobson": 0.3472647106355403,
+  "ece": 0.04129371929913759
+ },
+ "brier_CF": {
+  "n": 802,
+  "brier": 0.41712149885096894,
+  "brier_hobson": 0.5264384664848429,
+  "ece": 0.09648307392424779
+ },
+ "brier_CF-probe": {
+  "n": 640,
+  "brier": 0.04593326321401283,
+  "brier_hobson": 0.40976958457413054,
+  "ece": 0.11604664912447334
+ },
+ "bd_CF_kind": {
+  "amount_insert": {
+   "n": 90,
+   "model": 0.7111111111111111,
+   "hobson": 0.1
+  },
+  "human_insert": {
+   "n": 156,
+   "model": 0.42948717948717946,
+   "hobson": 0.34615384615384615
+  },
+  "id_add_second": {
+   "n": 5,
+   "model": 0.0,
+   "hobson": 0.0
+  },
+  "id_digit_existing": {
+   "n": 26,
+   "model": 0.3076923076923077,
+   "hobson": 0.0
+  },
+  "id_digit_inserted": {
+   "n": 10,
+   "model": 0.1,
+   "hobson": 0.0
+  },
+  "id_remove_one": {
+   "n": 10,
+   "model": 0.0,
+   "hobson": 0.0
+  },
+  "insists_3v4": {
+   "n": 20,
+   "model": 0.05,
+   "hobson": 0.05
+  },
+  "procedure_intent": {
+   "n": 40,
+   "model": 0.0,
+   "hobson": 0.0
+  },
+  "wrapup_replace": {
+   "n": 49,
+   "model": 0.9795918367346939,
+   "hobson": 0.9183673469387755
+  }
+ },
+ "bd_CF-probe_kind": {
+  "probe_amount_vs_limit": {
+   "n": 43,
+   "model": 0.9767441860465116,
+   "hobson": 0.32558139534883723
+  },
+  "probe_amount_vs_limit_distract": {
+   "n": 38,
+   "model": 1.0,
+   "hobson": 0.23684210526315788
+  },
+  "probe_date_order": {
+   "n": 49,
+   "model": 1.0,
+   "hobson": 0.061224489795918366
+  },
+  "probe_date_order_distract": {
+   "n": 32,
+   "model": 0.9375,
+   "hobson": 0.03125
+  },
+  "probe_id_match": {
+   "n": 37,
+   "model": 1.0,
+   "hobson": 0.5405405405405406
+  },
+  "probe_id_match_distract": {
+   "n": 42,
+   "model": 1.0,
+   "hobson": 0.38095238095238093
+  },
+  "probe_status_equal": {
+   "n": 35,
+   "model": 1.0,
+   "hobson": 0.8857142857142857
+  },
+  "probe_status_equal_distract": {
+   "n": 44,
+   "model": 1.0,
+   "hobson": 0.25
+  }
+ },
+ "bd_CF_len": {
+  "state 2-4k": {
+   "n": 159,
+   "model": 0.5283018867924528,
+   "hobson": 0.389937106918239
+  },
+  "state<2k": {
+   "n": 171,
+   "model": 0.5964912280701754,
+   "hobson": 0.26900584795321636
+  },
+  "state>=4k": {
+   "n": 76,
+   "model": 0.039473684210526314,
+   "hobson": 0.013157894736842105
+  }
+ },
+ "bd_CF_pos": {
+  "pos<0.5": {
+   "n": 172,
+   "model": 0.26744186046511625,
+   "hobson": 0.1686046511627907
+  },
+  "pos>=0.5": {
+   "n": 234,
+   "model": 0.6111111111111112,
+   "hobson": 0.3418803418803419
+  }
+ },
+ "bd_CF-probe_domain": {
+  "airline": {
+   "n": 80,
+   "model": 0.9875,
+   "hobson": 0.4375
+  },
+  "banking_knowledge": {
+   "n": 130,
+   "model": 1.0,
+   "hobson": 0.27692307692307694
+  },
+  "retail": {
+   "n": 110,
+   "model": 0.9818181818181818,
+   "hobson": 0.3090909090909091
+  }
+ }
+}

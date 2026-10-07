@@ -1,0 +1,50 @@
+{
+ "amount_vs_limit_distract": {
+  "located": 0.631578947368421,
+  "best_pab": 0.9854818930228552,
+  "hit": 1.0,
+  "n": 76
+ },
+ "date_order": {
+  "located": 0.6938775510204082,
+  "best_pab": 0.9999999824692222,
+  "hit": 1.0,
+  "n": 98
+ },
+ "status_equal": {
+  "located": 0.6,
+  "best_pab": 0.9999834511961255,
+  "hit": 1.0,
+  "n": 70
+ },
+ "id_match": {
+  "located": 0.6756756756756757,
+  "best_pab": 0.42887807203743195,
+  "hit": 0.44,
+  "n": 74
+ },
+ "amount_vs_limit": {
+  "located": 0.6744186046511628,
+  "best_pab": 0.9970222064133348,
+  "hit": 1.0,
+  "n": 86
+ },
+ "status_equal_distract": {
+  "located": 0.7045454545454546,
+  "best_pab": 0.9995987213427021,
+  "hit": 1.0,
+  "n": 88
+ },
+ "date_order_distract": {
+  "located": 0.59375,
+  "best_pab": 0.9993417200289274,
+  "hit": 1.0,
+  "n": 64
+ },
+ "id_match_distract": {
+  "located": 0.6428571428571429,
+  "best_pab": 0.3416957247909512,
+  "hit": 0.35185185185185186,
+  "n": 84
+ }
+}

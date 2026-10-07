@@ -1,0 +1,230 @@
+{
+ "TV64k": {
+  "JB-all": {
+   "n": 231,
+   "acc": 0.697,
+   "hobson_acc": 0.7229,
+   "mcnemar": {
+    "model_only": 9,
+    "hobson_only": 15,
+    "p": 0.3075
+   },
+   "brier": 0.3854,
+   "hobson_brier": 0.3479,
+   "ece": 0.0799,
+   "hobson_ece": 0.0483
+  },
+  "JB-hard": {
+   "n": 130,
+   "acc": 0.5,
+   "hobson_acc": 0.5231,
+   "mcnemar": {
+    "model_only": 9,
+    "hobson_only": 12,
+    "p": 0.6636
+   },
+   "brier": 0.582,
+   "hobson_brier": 0.5572,
+   "ece": 0.13,
+   "hobson_ece": 0.1352
+  },
+  "REAL-label": {
+   "n": 400,
+   "acc": 0.75,
+   "hobson_acc": 0.785,
+   "mcnemar": {
+    "model_only": 9,
+    "hobson_only": 23,
+    "p": 0.0201
+   },
+   "brier": 0.3894,
+   "hobson_brier": 0.3473,
+   "ece": 0.1079,
+   "hobson_ece": 0.1156,
+   "by_len": {
+    "state<2k": {
+     "n": 224,
+     "acc": 0.763,
+     "hobson": 0.79
+    },
+    "state>=2k": {
+     "n": 176,
+     "acc": 0.733,
+     "hobson": 0.778
+    }
+   }
+  },
+  "REAL-agree": {
+   "n_q": 1083,
+   "coverage": 1.0,
+   "agree": 0.903,
+   "tv": 0.0873,
+   "kl": 0.0582,
+   "agree_sd": 0.8064,
+   "n_sd": 346
+  },
+  "LONG": {
+   "n_q": 471,
+   "coverage": 1.0,
+   "agree": 0.9278,
+   "tv": 0.0957,
+   "kl": 0.0664,
+   "agree_sd": 0.8424,
+   "n_sd": 165
+  },
+  "JB-long": {
+   "n_q": 77,
+   "coverage": 1.0,
+   "acc": 0.3636,
+   "n_acc": 77,
+   "agree": 0.8052,
+   "tv": 0.1475,
+   "kl": 0.0809,
+   "agree_sd": 0.825,
+   "n_sd": 40
+  },
+  "CF": {
+   "n_pairs": 406,
+   "acc": 0.5751,
+   "flip": 0.2488,
+   "flip_any": 0.2562,
+   "dir": 0.936,
+   "dmean": 0.151,
+   "flip_rel": 0.9266,
+   "dmean_rel": 0.8881,
+   "flip_given_hobson": 0.4862,
+   "agree": 0.8267,
+   "tv": 0.0958,
+   "mcnemar_pairs": {
+    "model_only": 48,
+    "hobson_only": 56,
+    "p": 0.4926
+   },
+   "by_kind": {
+    "amount_insert": {
+     "n": 90,
+     "model": 0.589,
+     "hobson": 0.1
+    },
+    "human_insert": {
+     "n": 156,
+     "model": 0.032,
+     "hobson": 0.346
+    },
+    "identity(id_add_second)": {
+     "n": 5,
+     "model": 0.0,
+     "hobson": 0.0
+    },
+    "identity(id_digit_existing)": {
+     "n": 26,
+     "model": 0.0,
+     "hobson": 0.0
+    },
+    "identity(id_digit_inserted)": {
+     "n": 10,
+     "model": 0.0,
+     "hobson": 0.0
+    },
+    "identity(id_remove_one)": {
+     "n": 10,
+     "model": 0.0,
+     "hobson": 0.0
+    },
+    "identity_all": {
+     "n": 51,
+     "model": 0.0,
+     "hobson": 0.0
+    },
+    "insists_3v4": {
+     "n": 20,
+     "model": 0.0,
+     "hobson": 0.05
+    },
+    "procedure_intent": {
+     "n": 40,
+     "model": 0.0,
+     "hobson": 0.0
+    },
+    "wrapup_replace": {
+     "n": 49,
+     "model": 0.878,
+     "hobson": 0.918
+    }
+   },
+   "brier": 0.5509,
+   "hobson_brier": 0.5264,
+   "ece": 0.1339,
+   "hobson_ece": 0.1144
+  },
+  "CF-probe": {
+   "n_pairs": 320,
+   "acc": 0.8172,
+   "flip": 0.6375,
+   "flip_any": 0.6406,
+   "dir": 0.9531,
+   "dmean": 0.3139,
+   "flip_rel": 1.9429,
+   "dmean_rel": 2.0615,
+   "flip_given_hobson": 0.9143,
+   "agree": 0.7734,
+   "tv": 0.1146,
+   "mcnemar_pairs": {
+    "model_only": 108,
+    "hobson_only": 9,
+    "p": 0.0
+   },
+   "by_kind": {
+    "probe_amount_vs_limit": {
+     "n": 43,
+     "model": 0.442,
+     "hobson": 0.326
+    },
+    "probe_amount_vs_limit_distract": {
+     "n": 38,
+     "model": 0.474,
+     "hobson": 0.237
+    },
+    "probe_date_order": {
+     "n": 49,
+     "model": 0.122,
+     "hobson": 0.061
+    },
+    "probe_date_order_distract": {
+     "n": 32,
+     "model": 0.156,
+     "hobson": 0.031
+    },
+    "probe_id_match": {
+     "n": 37,
+     "model": 1.0,
+     "hobson": 0.541
+    },
+    "probe_id_match_distract": {
+     "n": 42,
+     "model": 0.976,
+     "hobson": 0.381
+    },
+    "probe_status_equal": {
+     "n": 35,
+     "model": 1.0,
+     "hobson": 0.886
+    },
+    "probe_status_equal_distract": {
+     "n": 44,
+     "model": 0.977,
+     "hobson": 0.25
+    }
+   },
+   "brier": 0.2756,
+   "hobson_brier": 0.4098,
+   "ece": 0.1341,
+   "hobson_ece": 0.0832
+  },
+  "SHUF": {
+   "n_pairs": 387,
+   "change": 0.2739,
+   "both_right": 0.2171
+  }
+ }
+}

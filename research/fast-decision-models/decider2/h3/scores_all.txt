@@ -1,0 +1,223 @@
+### hobson :: bf16 :: dev (items 1119)
+   REAL-agree: flips 6/1083=0.55% tv 0.0032 agree_sd 0.997(346)
+   CF: fgh 1.000(109) flip 1.000 rel 1.000 dir 1.000 [pairs 109]
+   CF-probe: fgh 0.952(105) flip 0.952 rel 0.952 dir 1.000 [pairs 105]
+   JB-hard: acc 0.538 (hob 0.523) agree 0.985 mcnemar {'n': 130, 'gain': 2, 'loss': 0, 'p': 0.5}
+   JB-long: acc 0.429 agree 0.974
+   SHUF: change 1.000 both_right 1.000 hob_change 0.339 hob_both 0.245 n 46
+   REAL-label: acc 0.782 hobson 0.785 n 400
+### hobson :: bf16 :: long (items 123)
+   LONG: flips 2/165=1.21% tv 0.0043 agree_sd 0.988(165)
+### hobson :: nvfp4-qb16 :: dev (items 1119)
+   REAL-agree: flips 45/1083=4.16% tv 0.0310 agree_sd 0.954(346) | vs dense 47/1083=4.34%
+   CF: fgh 0.807(109) flip 0.807 rel 0.807 dir 1.000 [pairs 109] | fgh_vs_dense 0.807
+   CF-probe: fgh 0.781(105) flip 0.781 rel 0.781 dir 0.981 [pairs 105] | fgh_vs_dense 0.800
+   JB-hard: acc 0.508 (hob 0.523) agree 0.892 mcnemar {'n': 130, 'gain': 5, 'loss': 7, 'p': 0.774}
+   JB-long: acc 0.416 agree 0.857
+   SHUF: change 0.804 both_right 0.804 hob_change 0.339 hob_both 0.245 n 46
+   REAL-label: acc 0.780 hobson 0.785 n 400
+### hobson :: nvfp4 :: dev (items 1119)
+   REAL-agree: flips 99/1083=9.14% tv 0.0683 agree_sd 0.884(346) | vs dense 101/1083=9.33%
+   CF: fgh 0.697(109) flip 0.697 rel 0.697 dir 0.982 [pairs 109] | fgh_vs_dense 0.697
+   CF-probe: fgh 0.705(105) flip 0.705 rel 0.705 dir 0.924 [pairs 105] | fgh_vs_dense 0.730
+   JB-hard: acc 0.492 (hob 0.523) agree 0.885 mcnemar {'n': 130, 'gain': 5, 'loss': 9, 'p': 0.424}
+   JB-long: acc 0.403 agree 0.857
+   SHUF: change 0.674 both_right 0.674 hob_change 0.339 hob_both 0.245 n 46
+   REAL-label: acc 0.777 hobson 0.785 n 400
+### hobson :: nvfp4 :: long (items 123)
+   LONG: flips 21/165=12.73% tv 0.0779 agree_sd 0.873(165) | vs dense 21/165=12.73%
+### hobson :: nvfp4r-qb16 :: dev (items 1119)
+   REAL-agree: flips 48/1083=4.43% tv 0.0364 agree_sd 0.948(346) | vs dense 42/1083=3.88%
+   CF: fgh 0.780(109) flip 0.780 rel 0.780 dir 1.000 [pairs 109] | fgh_vs_dense 0.780
+   CF-probe: fgh 0.743(105) flip 0.743 rel 0.743 dir 0.971 [pairs 105] | fgh_vs_dense 0.750
+   JB-hard: acc 0.508 (hob 0.523) agree 0.885 mcnemar {'n': 130, 'gain': 5, 'loss': 7, 'p': 0.774}
+   JB-long: acc 0.429 agree 0.857
+   SHUF: change 0.870 both_right 0.870 hob_change 0.339 hob_both 0.245 n 46
+   REAL-label: acc 0.775 hobson 0.785 n 400
+### hobson :: nvfp4r :: dev (items 1119)
+   REAL-agree: flips 97/1083=8.96% tv 0.0766 agree_sd 0.855(346) | vs dense 99/1083=9.14%
+   CF: fgh 0.752(109) flip 0.752 rel 0.752 dir 0.991 [pairs 109] | fgh_vs_dense 0.752
+   CF-probe: fgh 0.648(105) flip 0.648 rel 0.648 dir 0.895 [pairs 105] | fgh_vs_dense 0.670
+   JB-hard: acc 0.477 (hob 0.523) agree 0.777 mcnemar {'n': 130, 'gain': 9, 'loss': 15, 'p': 0.307}
+   JB-long: acc 0.390 agree 0.714
+   SHUF: change 0.783 both_right 0.783 hob_change 0.339 hob_both 0.245 n 46
+   REAL-label: acc 0.743 hobson 0.785 n 400
+### hobson :: w4a4 :: dev (items 1119)
+   REAL-agree: flips 646/1083=59.65% tv 0.3509 agree_sd 0.373(346) | vs dense 645/1083=59.56%
+   CF: fgh 0.239(109) flip 0.239 rel 0.239 dir 0.505 [pairs 109] | fgh_vs_dense 0.239
+   CF-probe: fgh 0.210(105) flip 0.210 rel 0.210 dir 0.438 [pairs 105] | fgh_vs_dense 0.220
+   JB-hard: acc 0.415 (hob 0.523) agree 0.431 mcnemar {'n': 130, 'gain': 20, 'loss': 34, 'p': 0.076}
+   JB-long: acc 0.325 agree 0.299
+   SHUF: change 0.500 both_right 0.174 hob_change 0.339 hob_both 0.245 n 46
+   REAL-label: acc 0.458 hobson 0.785 n 400
+### hobson :: w4a4r-qb16 :: dev (items 1119)
+   REAL-agree: flips 76/1083=7.02% tv 0.0532 agree_sd 0.850(346) | vs dense 76/1083=7.02%
+   CF: fgh 0.789(109) flip 0.789 rel 0.789 dir 1.000 [pairs 109] | fgh_vs_dense 0.789
+   CF-probe: fgh 0.667(105) flip 0.667 rel 0.667 dir 0.962 [pairs 105] | fgh_vs_dense 0.680
+   JB-hard: acc 0.508 (hob 0.523) agree 0.762 mcnemar {'n': 130, 'gain': 12, 'loss': 14, 'p': 0.845}
+   JB-long: acc 0.416 agree 0.740
+   SHUF: change 0.848 both_right 0.848 hob_change 0.339 hob_both 0.245 n 46
+   REAL-label: acc 0.765 hobson 0.785 n 400
+### hobson :: w4a4r :: dev (items 1119)
+   REAL-agree: flips 172/1083=15.88% tv 0.1360 agree_sd 0.682(346) | vs dense 172/1083=15.88%
+   CF: fgh 0.550(109) flip 0.550 rel 0.550 dir 0.945 [pairs 109] | fgh_vs_dense 0.550
+   CF-probe: fgh 0.448(105) flip 0.448 rel 0.448 dir 0.838 [pairs 105] | fgh_vs_dense 0.460
+   JB-hard: acc 0.446 (hob 0.523) agree 0.669 mcnemar {'n': 130, 'gain': 12, 'loss': 22, 'p': 0.121}
+   JB-long: acc 0.377 agree 0.610
+   SHUF: change 0.478 both_right 0.478 hob_change 0.339 hob_both 0.245 n 46
+   REAL-label: acc 0.735 hobson 0.785 n 400
+### qat :: bf16 :: dev (items 1119)
+   REAL-agree: flips 364/1083=33.61% tv 0.3069 agree_sd 0.483(346) | vs dense 366/1083=33.80%
+   CF: fgh 0.018(109) flip 0.018 rel 0.018 dir 0.881 [pairs 109] | fgh_vs_dense 0.018
+   CF-probe: fgh 0.000(105) flip 0.000 rel 0.000 dir 0.733 [pairs 105] | fgh_vs_dense 0.000
+   JB-hard: acc 0.423 (hob 0.523) agree 0.554 mcnemar {'n': 130, 'gain': 16, 'loss': 29, 'p': 0.072}
+   JB-long: acc 0.416 agree 0.455
+   SHUF: change 0.043 both_right 0.043 hob_change 0.339 hob_both 0.245 n 46
+   REAL-label: acc 0.610 hobson 0.785 n 400
+### qat :: w4a4 :: dev (items 1119)
+   REAL-agree: flips 519/1083=47.92% tv 0.2961 agree_sd 0.402(346) | vs dense 521/1083=48.11%
+   CF: fgh 0.211(109) flip 0.211 rel 0.211 dir 0.477 [pairs 109] | fgh_vs_dense 0.211
+   CF-probe: fgh 0.190(105) flip 0.190 rel 0.190 dir 0.505 [pairs 105] | fgh_vs_dense 0.200
+   JB-hard: acc 0.308 (hob 0.523) agree 0.300 mcnemar {'n': 130, 'gain': 22, 'loss': 50, 'p': 0.001}
+   JB-long: acc 0.260 agree 0.312
+   SHUF: change 0.413 both_right 0.130 hob_change 0.339 hob_both 0.245 n 46
+   REAL-label: acc 0.512 hobson 0.785 n 400
+   vs own bf16: REAL-agree flips 41.37% (n 1083) CF fgh 0.500 CF-probe fgh nan
+### qatnv :: bf16 :: dev (items 1119)
+   REAL-agree: flips 66/1083=6.09% tv 0.0528 agree_sd 0.908(346) | vs dense 64/1083=5.91%
+   CF: fgh 0.706(109) flip 0.706 rel 0.706 dir 1.000 [pairs 109] | fgh_vs_dense 0.706
+   CF-probe: fgh 0.819(105) flip 0.819 rel 0.819 dir 1.000 [pairs 105] | fgh_vs_dense 0.830
+   JB-hard: acc 0.508 (hob 0.523) agree 0.915 mcnemar {'n': 130, 'gain': 4, 'loss': 6, 'p': 0.754}
+   JB-long: acc 0.403 agree 0.883
+   SHUF: change 0.652 both_right 0.652 hob_change 0.339 hob_both 0.245 n 46
+   REAL-label: acc 0.792 hobson 0.785 n 400
+### qatnv :: nvfp4-qb16 :: dev (items 1119)
+   REAL-agree: flips 66/1083=6.09% tv 0.0541 agree_sd 0.913(346) | vs dense 64/1083=5.91%
+   CF: fgh 0.615(109) flip 0.615 rel 0.615 dir 1.000 [pairs 109] | fgh_vs_dense 0.615
+   CF-probe: fgh 0.733(105) flip 0.733 rel 0.733 dir 0.990 [pairs 105] | fgh_vs_dense 0.760
+   JB-hard: acc 0.508 (hob 0.523) agree 0.869 mcnemar {'n': 130, 'gain': 7, 'loss': 9, 'p': 0.804}
+   JB-long: acc 0.416 agree 0.844
+   SHUF: change 0.543 both_right 0.543 hob_change 0.339 hob_both 0.245 n 46
+   REAL-label: acc 0.792 hobson 0.785 n 400
+   vs own bf16: REAL-agree flips 2.03% (n 1083) CF fgh 0.831 CF-probe fgh 0.849
+### qatnv :: nvfp4 :: dev (items 1119)
+   REAL-agree: flips 78/1083=7.20% tv 0.0592 agree_sd 0.899(346) | vs dense 76/1083=7.02%
+   CF: fgh 0.596(109) flip 0.596 rel 0.596 dir 1.000 [pairs 109] | fgh_vs_dense 0.596
+   CF-probe: fgh 0.733(105) flip 0.733 rel 0.733 dir 0.914 [pairs 105] | fgh_vs_dense 0.740
+   JB-hard: acc 0.469 (hob 0.523) agree 0.862 mcnemar {'n': 130, 'gain': 5, 'loss': 12, 'p': 0.143}
+   JB-long: acc 0.390 agree 0.870
+   SHUF: change 0.587 both_right 0.587 hob_change 0.339 hob_both 0.245 n 46
+   REAL-label: acc 0.770 hobson 0.785 n 400
+   vs own bf16: REAL-agree flips 5.45% (n 1083) CF fgh 0.779 CF-probe fgh 0.826
+### v1 :: bf16 :: dev (items 1119)
+   REAL-agree: flips 54/1083=4.99% tv 0.0490 agree_sd 0.902(346) | vs dense 54/1083=4.99%
+   CF: fgh 0.817(109) flip 0.817 rel 0.817 dir 1.000 [pairs 109] | fgh_vs_dense 0.817
+   CF-probe: fgh 0.810(105) flip 0.810 rel 0.810 dir 1.000 [pairs 105] | fgh_vs_dense 0.820
+   JB-hard: acc 0.515 (hob 0.523) agree 0.969 mcnemar {'n': 130, 'gain': 1, 'loss': 2, 'p': 1.0}
+   JB-long: acc 0.390 agree 0.948
+   SHUF: change 0.783 both_right 0.783 hob_change 0.339 hob_both 0.245 n 46
+   REAL-label: acc 0.780 hobson 0.785 n 400
+### v1 :: bf16 :: long (items 123)
+   LONG: flips 21/165=12.73% tv 0.0798 agree_sd 0.873(165) | vs dense 19/165=11.52%
+### v1 :: nvfp4-qb16 :: dev (items 1119)
+   REAL-agree: flips 70/1083=6.46% tv 0.0545 agree_sd 0.879(346) | vs dense 68/1083=6.28%
+   CF: fgh 0.679(109) flip 0.679 rel 0.679 dir 1.000 [pairs 109] | fgh_vs_dense 0.679
+   CF-probe: fgh 0.752(105) flip 0.752 rel 0.752 dir 0.981 [pairs 105] | fgh_vs_dense 0.770
+   JB-hard: acc 0.546 (hob 0.523) agree 0.877 mcnemar {'n': 130, 'gain': 8, 'loss': 5, 'p': 0.581}
+   JB-long: acc 0.455 agree 0.844
+   SHUF: change 0.674 both_right 0.674 hob_change 0.339 hob_both 0.245 n 46
+   REAL-label: acc 0.762 hobson 0.785 n 400
+   vs own bf16: REAL-agree flips 2.59% (n 1083) CF fgh 0.820 CF-probe fgh 0.871
+### v1 :: nvfp4 :: dev (items 1119)
+   REAL-agree: flips 97/1083=8.96% tv 0.0738 agree_sd 0.847(346) | vs dense 95/1083=8.77%
+   CF: fgh 0.651(109) flip 0.651 rel 0.651 dir 0.963 [pairs 109] | fgh_vs_dense 0.651
+   CF-probe: fgh 0.695(105) flip 0.695 rel 0.695 dir 0.971 [pairs 105] | fgh_vs_dense 0.720
+   JB-hard: acc 0.515 (hob 0.523) agree 0.846 mcnemar {'n': 130, 'gain': 7, 'loss': 8, 'p': 1.0}
+   JB-long: acc 0.442 agree 0.792
+   SHUF: change 0.674 both_right 0.674 hob_change 0.339 hob_both 0.245 n 46
+   REAL-label: acc 0.765 hobson 0.785 n 400
+   vs own bf16: REAL-agree flips 5.45% (n 1083) CF fgh 0.753 CF-probe fgh 0.765
+### v1 :: nvfp4 :: long (items 123)
+   LONG: flips 24/165=14.55% tv 0.1112 agree_sd 0.855(165) | vs dense 22/165=13.33%
+   vs own bf16: LONG flips 4.85% (n 165)
+### v1 :: w4a4 :: dev (items 1119)
+   REAL-agree: flips 604/1083=55.77% tv 0.3372 agree_sd 0.416(346) | vs dense 605/1083=55.86%
+   CF: fgh 0.202(109) flip 0.202 rel 0.202 dir 0.367 [pairs 109] | fgh_vs_dense 0.202
+   CF-probe: fgh 0.238(105) flip 0.238 rel 0.238 dir 0.514 [pairs 105] | fgh_vs_dense 0.240
+   JB-hard: acc 0.469 (hob 0.523) agree 0.362 mcnemar {'n': 130, 'gain': 28, 'loss': 35, 'p': 0.45}
+   JB-long: acc 0.390 agree 0.260
+   SHUF: change 0.348 both_right 0.109 hob_change 0.339 hob_both 0.245 n 46
+   REAL-label: acc 0.430 hobson 0.785 n 400
+   vs own bf16: REAL-agree flips 56.05% (n 1083) CF fgh 0.236 CF-probe fgh 0.259
+### v1 :: w4a4r :: dev (items 1119)
+   REAL-agree: flips 154/1083=14.22% tv 0.1310 agree_sd 0.688(346) | vs dense 160/1083=14.77%
+   CF: fgh 0.606(109) flip 0.606 rel 0.606 dir 0.982 [pairs 109] | fgh_vs_dense 0.606
+   CF-probe: fgh 0.486(105) flip 0.486 rel 0.486 dir 0.876 [pairs 105] | fgh_vs_dense 0.510
+   JB-hard: acc 0.477 (hob 0.523) agree 0.692 mcnemar {'n': 130, 'gain': 14, 'loss': 20, 'p': 0.392}
+   JB-long: acc 0.390 agree 0.623
+   SHUF: change 0.543 both_right 0.543 hob_change 0.339 hob_both 0.245 n 46
+   REAL-label: acc 0.748 hobson 0.785 n 400
+   vs own bf16: REAL-agree flips 11.91% (n 1083) CF fgh 0.674 CF-probe fgh 0.565
+### v1unm :: bf16 :: real (items 100)
+   REAL-agree: flips 13/400=3.25% tv 0.0319 agree_sd 0.933(105)
+### v1x2 :: bf16 :: dev (items 1119)
+   REAL-agree: flips 57/1083=5.26% tv 0.0409 agree_sd 0.890(346) | vs dense 53/1083=4.89%
+   CF: fgh 0.596(109) flip 0.596 rel 0.596 dir 1.000 [pairs 109] | fgh_vs_dense 0.596
+   CF-probe: fgh 0.848(105) flip 0.848 rel 0.848 dir 1.000 [pairs 105] | fgh_vs_dense 0.870
+   JB-hard: acc 0.515 (hob 0.523) agree 0.938 mcnemar {'n': 130, 'gain': 3, 'loss': 4, 'p': 1.0}
+   JB-long: acc 0.416 agree 0.922
+   SHUF: change 0.522 both_right 0.522 hob_change 0.339 hob_both 0.245 n 46
+   REAL-label: acc 0.777 hobson 0.785 n 400
+### v1x2 :: nvfp4 :: dev (items 1119)
+   REAL-agree: flips 75/1083=6.93% tv 0.0631 agree_sd 0.870(346) | vs dense 77/1083=7.11%
+   CF: fgh 0.550(109) flip 0.550 rel 0.550 dir 1.000 [pairs 109] | fgh_vs_dense 0.550
+   CF-probe: fgh 0.733(105) flip 0.733 rel 0.733 dir 0.971 [pairs 105] | fgh_vs_dense 0.770
+   JB-hard: acc 0.523 (hob 0.523) agree 0.838 mcnemar {'n': 130, 'gain': 8, 'loss': 8, 'p': 1.0}
+   JB-long: acc 0.429 agree 0.779
+   SHUF: change 0.435 both_right 0.435 hob_change 0.339 hob_both 0.245 n 46
+   REAL-label: acc 0.782 hobson 0.785 n 400
+   vs own bf16: REAL-agree flips 4.89% (n 1083) CF fgh 0.831 CF-probe fgh 0.809
+### v2 :: bf16 :: dev (items 1119)
+   REAL-agree: flips 82/1083=7.57% tv 0.0592 agree_sd 0.855(346) | vs dense 84/1083=7.76%
+   CF: fgh 0.780(109) flip 0.780 rel 0.780 dir 0.991 [pairs 109] | fgh_vs_dense 0.780
+   CF-probe: fgh 0.724(105) flip 0.724 rel 0.724 dir 0.981 [pairs 105] | fgh_vs_dense 0.740
+   JB-hard: acc 0.492 (hob 0.523) agree 0.831 mcnemar {'n': 130, 'gain': 7, 'loss': 11, 'p': 0.481}
+   JB-long: acc 0.429 agree 0.792
+   SHUF: change 0.804 both_right 0.804 hob_change 0.339 hob_both 0.245 n 46
+   REAL-label: acc 0.760 hobson 0.785 n 400
+### v2 :: nvfp4 :: dev (items 1119)
+   REAL-agree: flips 111/1083=10.25% tv 0.0757 agree_sd 0.801(346) | vs dense 111/1083=10.25%
+   CF: fgh 0.459(109) flip 0.459 rel 0.459 dir 0.954 [pairs 109] | fgh_vs_dense 0.459
+   CF-probe: fgh 0.648(105) flip 0.648 rel 0.648 dir 0.924 [pairs 105] | fgh_vs_dense 0.650
+   JB-hard: acc 0.492 (hob 0.523) agree 0.762 mcnemar {'n': 130, 'gain': 11, 'loss': 15, 'p': 0.557}
+   JB-long: acc 0.403 agree 0.727
+   SHUF: change 0.413 both_right 0.413 hob_change 0.339 hob_both 0.245 n 46
+   REAL-label: acc 0.767 hobson 0.785 n 400
+   vs own bf16: REAL-agree flips 4.34% (n 1083) CF fgh 0.576 CF-probe fgh 0.816
+### v2 :: w4a4 :: dev (items 1119)
+   REAL-agree: flips 646/1083=59.65% tv 0.3419 agree_sd 0.347(346) | vs dense 649/1083=59.93%
+   CF: fgh 0.303(109) flip 0.303 rel 0.303 dir 0.514 [pairs 109] | fgh_vs_dense 0.303
+   CF-probe: fgh 0.229(105) flip 0.229 rel 0.229 dir 0.467 [pairs 105] | fgh_vs_dense 0.220
+   JB-hard: acc 0.346 (hob 0.523) agree 0.315 mcnemar {'n': 130, 'gain': 24, 'loss': 47, 'p': 0.009}
+   JB-long: acc 0.312 agree 0.273
+   SHUF: change 0.457 both_right 0.304 hob_change 0.339 hob_both 0.245 n 46
+   REAL-label: acc 0.403 hobson 0.785 n 400
+   vs own bf16: REAL-agree flips 59.56% (n 1083) CF fgh 0.282 CF-probe fgh 0.237
+### v2 :: w4a4r-qb16 :: dev (items 1119)
+   REAL-agree: flips 103/1083=9.51% tv 0.0706 agree_sd 0.815(346) | vs dense 103/1083=9.51%
+   CF: fgh 0.752(109) flip 0.752 rel 0.752 dir 1.000 [pairs 109] | fgh_vs_dense 0.752
+   CF-probe: fgh 0.667(105) flip 0.667 rel 0.667 dir 0.914 [pairs 105] | fgh_vs_dense 0.680
+   JB-hard: acc 0.485 (hob 0.523) agree 0.777 mcnemar {'n': 130, 'gain': 10, 'loss': 15, 'p': 0.424}
+   JB-long: acc 0.390 agree 0.753
+   SHUF: change 0.870 both_right 0.870 hob_change 0.339 hob_both 0.245 n 46
+   REAL-label: acc 0.752 hobson 0.785 n 400
+   vs own bf16: REAL-agree flips 3.60% (n 1083) CF fgh 0.906 CF-probe fgh 0.789
+### v2 :: w4a4r :: dev (items 1119)
+   REAL-agree: flips 135/1083=12.47% tv 0.1083 agree_sd 0.679(346) | vs dense 137/1083=12.65%
+   CF: fgh 0.459(109) flip 0.459 rel 0.459 dir 0.954 [pairs 109] | fgh_vs_dense 0.459
+   CF-probe: fgh 0.486(105) flip 0.486 rel 0.486 dir 0.905 [pairs 105] | fgh_vs_dense 0.500
+   JB-hard: acc 0.446 (hob 0.523) agree 0.754 mcnemar {'n': 130, 'gain': 8, 'loss': 18, 'p': 0.076}
+   JB-long: acc 0.312 agree 0.701
+   SHUF: change 0.435 both_right 0.435 hob_change 0.339 hob_both 0.245 n 46
+   REAL-label: acc 0.757 hobson 0.785 n 400
+   vs own bf16: REAL-agree flips 9.70% (n 1083) CF fgh 0.565 CF-probe fgh 0.605

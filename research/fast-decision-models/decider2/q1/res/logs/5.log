@@ -1,0 +1,13 @@
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 3954.34it/s]
+dev items 300
+/home/ubuntu/work/q1/q1fo.py:64: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /__w/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:820.)
+  m0 = float(lg[t1] - lg[t2]); wF = float(p[t1] * p[t2])
+Traceback (most recent call last):
+  File "/home/ubuntu/work/q1/q1fo.py", line 84, in <module>
+    per_layer = [sum(float(A_[(i, k)].sum()) for k in QL.GEMMS) for i in range(24)]
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/work/q1/q1fo.py", line 84, in <genexpr>
+    per_layer = [sum(float(A_[(i, k)].sum()) for k in QL.GEMMS) for i in range(24)]
+                           ~~^^^^^^^^
+KeyError: (0, 'Win')

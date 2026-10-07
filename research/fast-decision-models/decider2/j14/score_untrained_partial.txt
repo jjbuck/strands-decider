@@ -1,0 +1,14 @@
+all:replay             nq=777 live/q=336.0/336 REAL-agree.agree=0.996 REAL-agree.agree_sd=1.000 REAL-agree.tv=0.003 REAL-label.acc=0.716 REAL-label.p=1.000
+     sd by q: {'REAL-agree': {'other': '1.000/130', 'proc': '1.000/107'}, 'LONG': {}}
+oa+sfx+ok4:replay      nq=777 live/q=49.1/336 REAL-agree.agree=0.743 REAL-agree.agree_sd=0.156 REAL-agree.tv=0.229 REAL-label.acc=0.664 REAL-label.p=0.066
+     sd by q: {'REAL-agree': {'other': '0.269/130', 'proc': '0.019/107'}, 'LONG': {}}
+oa+sfx:replay          nq=777 live/q=21.3/336 REAL-agree.agree=0.716 REAL-agree.agree_sd=0.068 REAL-agree.tv=0.244 REAL-label.acc=0.644 REAL-label.p=0.018
+     sd by q: {'REAL-agree': {'other': '0.123/130', 'proc': '0.000/107'}, 'LONG': {}}
+oa+sfx:skip            nq=777 live/q=21.3/336 REAL-agree.agree=0.613 REAL-agree.agree_sd=0.388 REAL-agree.tv=0.330 REAL-label.acc=0.568 REAL-label.p=0.000
+     sd by q: {'REAL-agree': {'other': '0.662/130', 'proc': '0.056/107'}, 'LONG': {}}
+oa:replay              nq=777 live/q=10.3/336 REAL-agree.agree=0.716 REAL-agree.agree_sd=0.068 REAL-agree.tv=0.244 REAL-label.acc=0.644 REAL-label.p=0.018
+     sd by q: {'REAL-agree': {'other': '0.123/130', 'proc': '0.000/107'}, 'LONG': {}}
+ob+q16:replay          nq=777 live/q=287.0/336 REAL-agree.agree=0.873 REAL-agree.agree_sd=0.671 REAL-agree.tv=0.088 REAL-label.acc=0.664 REAL-label.p=0.015
+     sd by q: {'REAL-agree': {'other': '0.585/130', 'proc': '0.776/107'}, 'LONG': {}}
+ob:replay              nq=777 live/q=271.0/336 REAL-agree.agree=0.861 REAL-agree.agree_sd=0.641 REAL-agree.tv=0.113 REAL-label.acc=0.660 REAL-label.p=0.013
+     sd by q: {'REAL-agree': {'other': '0.523/130', 'proc': '0.785/107'}, 'LONG': {}}

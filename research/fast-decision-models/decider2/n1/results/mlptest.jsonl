@@ -1,0 +1,2 @@
+{"T": 256, "nki": {"compile_s": 8, "median_ms": 0.784, "max_abs_err": 6.331640243530273, "rel_to_absmax": 1.4813735485076904}, "xla": {"compile_s": 7, "median_ms": 0.831, "max_abs_err": 0.016475677490234375, "rel_to_absmax": 0.003854709444567561}}
+{"T": 1152, "nki": {"compile_s": 9, "median_ms": 2.765, "max_abs_err": 0.01788949966430664, "rel_to_absmax": 0.0036328069400042295}, "xla": {"compile_s": 9, "median_ms": 3.186, "max_abs_err": 0.017438650131225586, "rel_to_absmax": 0.003541253274306655}}

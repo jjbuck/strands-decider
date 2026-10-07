@@ -1,0 +1,12 @@
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 4187.73it/s]
+2b host prep (render+tokenize+offsets) ms 128 0.724
+2b tokenize state only (no offsets) ms 128 0.324
+2b packed q=4 tokens=128 {'median': 262.2, 'p95': 249.43, 'min': 249.43, 'gpu_replay_median': 246.64}
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+2b hf_graph_rows q=4 tokens=128 {'median': 439.64, 'p95': 423.88, 'min': 423.88, 'gpu_replay_median': 422.47}
+2b throughput L=128 B=1: 47.25 ms  21.2 req/s  2709 tok/s
+2b throughput L=128 B=2: 81.66 ms  24.5 req/s  3135 tok/s
+2b throughput L=128 B=4: 156.01 ms  25.6 req/s  3282 tok/s
+2b throughput L=128 B=8: 383.39 ms  20.9 req/s  2671 tok/s
+2b throughput L=128 B=16: 937.40 ms  17.1 req/s  2185 tok/s
+2b throughput L=128 B=32: 1328.41 ms  24.1 req/s  3083 tok/s

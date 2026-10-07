@@ -1,0 +1,9 @@
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 10471.20it/s]
+trainable 16819200
+train 280 hold 3 jev long 3
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+EVAL before {"real|k7dead": {"agree": 0.6666666666666666, "kl": 0.02379593315223853}, "jev|k7dead": {"agree": 0.0, "kl": 0.5126790801684061, "acc": 0.0, "base_acc": 0.6666666666666666}, "real|k11dead": {"agree": 0.6666666666666666, "kl": 0.007605997302259008}, "jev|k11dead": {"agree": 1.0, "kl": 0.004890188109129667, "acc": 0.6666666666666666, "base_acc": 0.6666666666666666}, "real|k3q25_k7dead": {"agree": 0.6666666666666666, "kl": 0.02128668377796809}, "jev|k3q25_k7dead": {"agree": 0.3333333333333333, "kl": 0.4169742539525032, "acc": 0.3333333333333333, "base_acc": 0.6666666666666666}, "real|k3q50_k7q12_k11dead": {"agree": 0.6666666666666666, "kl": 0.024678088103731472}, "jev|k3q50_k7q12_k11dead": {"agree": 0.6666666666666666, "kl": 0.1443944051861763, "acc": 0.3333333333333333, "base_acc": 0.6666666666666666}, "real|k3dead": {"agree": 0.3333333333333333, "kl": 0.3617873741313815}, "jev|k3dead": {"agree": 0.0, "kl": 0.8362464308738708, "acc": 0.0, "base_acc": 0.6666666666666666}}
+eval secs 70.91384482383728
+/home/ubuntu/work/tokens/heal.py:113: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /__w/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:820.)
+  loss.backward(); losses.append(float(loss)*accum)

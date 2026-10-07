@@ -1,0 +1,18 @@
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 3885.06it/s]
+dev items 300
+/home/ubuntu/work/q1/q1fo.py:64: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /__w/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:820.)
+  m0 = float(lg[t1] - lg[t2]); wF = float(p[t1] * p[t2])
+w4q8 25/300 T=1954 36s flips 0 corr(pred,dm) 0.344 slope 0.434 mem 19.0G
+w4q8 50/300 T=1829 71s flips 1 corr(pred,dm) 0.382 slope 0.451 mem 20.0G
+w4q8 75/300 T=1808 105s flips 3 corr(pred,dm) 0.327 slope 0.401 mem 20.0G
+w4q8 100/300 T=1768 139s flips 3 corr(pred,dm) 0.323 slope 0.385 mem 20.0G
+w4q8 125/300 T=1728 171s flips 4 corr(pred,dm) 0.309 slope 0.383 mem 20.0G
+w4q8 150/300 T=1770 206s flips 4 corr(pred,dm) 0.279 slope 0.337 mem 20.0G
+w4q8 175/300 T=2265 242s flips 4 corr(pred,dm) 0.304 slope 0.361 mem 20.0G
+w4q8 200/300 T=258 276s flips 4 corr(pred,dm) 0.305 slope 0.369 mem 20.0G
+w4q8 225/300 T=2096 310s flips 4 corr(pred,dm) 0.265 slope 0.311 mem 20.0G
+w4q8 250/300 T=1643 343s flips 5 corr(pred,dm) 0.291 slope 0.340 mem 20.0G
+w4q8 275/300 T=236 376s flips 6 corr(pred,dm) 0.268 slope 0.313 mem 20.0G
+w4q8 300/300 T=2060 409s flips 7 corr(pred,dm) 0.251 slope 0.297 mem 20.1G
+done w4q8 425s

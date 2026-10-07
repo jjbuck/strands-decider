@@ -1,0 +1,29 @@
+== ft_S60_mudd init S60_mudd cfg Cfg({'scale': 'S60', 'arm': 'mudd', 'd': 768, 'L': 9, 'H': 12, 'Hkv': 2, 'hd': 64, 'ffn': 2304, 'mon_ffn': 8704, 'kind': 'mudd', 'nb': 0})
+step 100 probe 0.7472 squad 1.4953 26s
+step 200 probe 0.7266 squad 1.4469 48s
+step 300 probe 0.7197 squad 1.4131 69s
+step 400 probe 0.7645 squad 1.4326 91s
+step 500 probe 0.7168 squad 1.4137 113s
+step 600 probe 0.7046 squad 1.4161 135s
+step 700 probe 0.7033 squad 1.4148 157s
+step 800 probe 0.7069 squad 1.4141 179s
+EVAL step 800: probe acc 0.500 flip 0.000 distract-flip 0.000 | squad acc 0.235 (n 600) | official CF-probe (fits 1k) acc 0.500 flip 0.000 n_pairs 21 | by kind {'amount_vs_limit': 0.0, 'amount_vs_limit_distract': 0.0, 'date_order': 0.0, 'date_order_distract': 0.0, 'id_match': 0.0, 'id_match_distract': 0.0, 'status_equal': 0.0, 'status_equal_distract': 0.0}
+step 900 probe 0.7745 squad 1.4151 212s
+step 1000 probe 0.6985 squad 1.4001 234s
+step 1100 probe 0.6976 squad 1.4055 256s
+step 1200 probe 0.7095 squad 1.4043 278s
+step 1300 probe 0.6999 squad 1.4037 300s
+step 1400 probe 0.6988 squad 1.3975 322s
+step 1500 probe 0.7001 squad 1.3957 343s
+step 1600 probe 0.6989 squad 1.3940 365s
+EVAL step 1600: probe acc 0.500 flip 0.000 distract-flip 0.000 | squad acc 0.250 (n 600) | official CF-probe (fits 1k) acc 0.500 flip 0.000 n_pairs 21 | by kind {'amount_vs_limit': 0.0, 'amount_vs_limit_distract': 0.0, 'date_order': 0.0, 'date_order_distract': 0.0, 'id_match': 0.0, 'id_match_distract': 0.0, 'status_equal': 0.0, 'status_equal_distract': 0.0}
+step 1700 probe 0.6968 squad 1.3941 393s
+step 1800 probe 0.6973 squad 1.3875 415s
+step 1900 probe 0.6942 squad 1.3924 437s
+step 2000 probe 0.6947 squad 1.3897 459s
+step 2100 probe 0.6929 squad 1.3869 481s
+step 2200 probe 0.6957 squad 1.3895 503s
+step 2300 probe 0.6940 squad 1.3873 524s
+step 2400 probe 0.6944 squad 1.3861 546s
+EVAL step 2400: probe acc 0.500 flip 0.000 distract-flip 0.000 | squad acc 0.252 (n 1500) | official CF-probe (fits 1k) acc 0.500 flip 0.000 n_pairs 21 | by kind {'amount_vs_limit': 0.0, 'amount_vs_limit_distract': 0.0, 'date_order': 0.0, 'date_order_distract': 0.0, 'id_match': 0.0, 'id_match_distract': 0.0, 'status_equal': 0.0, 'status_equal_distract': 0.0}
+DONE ft_S60_mudd 9.3 min

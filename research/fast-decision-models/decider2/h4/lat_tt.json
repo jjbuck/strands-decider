@@ -1,0 +1,393 @@
+{
+ "meta": {
+  "gpu": "NVIDIA A10G",
+  "reps": 20,
+  "torch": "2.14.1+cu130"
+ },
+ "fwd_T256": {
+  "median": 15.75,
+  "p95": 15.76,
+  "min": 15.74,
+  "n": 20
+ },
+ "fwd_T1000": {
+  "median": 52.69,
+  "p95": 52.71,
+  "min": 52.68,
+  "n": 20
+ },
+ "fwd_T4000": {
+  "median": 200.48,
+  "p95": 200.5,
+  "min": 200.44,
+  "n": 20
+ },
+ "sweep_T256": {
+  "median": 15.74,
+  "p95": 15.75,
+  "min": 15.73,
+  "n": 20
+ },
+ "sweep_T260": {
+  "median": 22.26,
+  "p95": 22.27,
+  "min": 22.25,
+  "n": 20
+ },
+ "sweep_T280": {
+  "median": 22.31,
+  "p95": 22.32,
+  "min": 22.29,
+  "n": 20
+ },
+ "sweep_T320": {
+  "median": 22.59,
+  "p95": 22.6,
+  "min": 22.58,
+  "n": 20
+ },
+ "sweep_T335": {
+  "median": 22.9,
+  "p95": 22.91,
+  "min": 22.89,
+  "n": 20
+ },
+ "sweep_T352": {
+  "median": 22.86,
+  "p95": 22.87,
+  "min": 22.85,
+  "n": 20
+ },
+ "sweep_T384": {
+  "median": 25.04,
+  "p95": 25.05,
+  "min": 25.03,
+  "n": 20
+ },
+ "sweep_T448": {
+  "median": 28.0,
+  "p95": 28.02,
+  "min": 27.99,
+  "n": 20
+ },
+ "sweep_T512": {
+  "median": 32.97,
+  "p95": 32.99,
+  "min": 32.96,
+  "n": 20
+ },
+ "sweep_T1004": {
+  "median": 52.73,
+  "p95": 52.74,
+  "min": 52.64,
+  "n": 20
+ },
+ "sweep_T1024": {
+  "median": 52.87,
+  "p95": 52.88,
+  "min": 52.78,
+  "n": 20
+ },
+ "sweep_T1096": {
+  "median": 57.05,
+  "p95": 57.07,
+  "min": 57.03,
+  "n": 20
+ },
+ "Q1_tokens": {
+  "question_tokens_state_first": 76,
+  "schema_prefix": 75,
+  "slot_tokens": 4
+ },
+ "Q1_T256_statefirst": {
+  "median": 22.88,
+  "p95": 22.89,
+  "min": 22.87,
+  "n": 20,
+  "L": 335
+ },
+ "Q1_T256_schema_nocache": {
+  "median": 22.89,
+  "p95": 22.9,
+  "min": 22.88,
+  "n": 20,
+  "L": 335
+ },
+ "Q1_T256_schema_cached": {
+  "median": 22.67,
+  "p95": 22.67,
+  "min": 22.66,
+  "n": 20,
+  "L": 260,
+  "prefix": 75,
+  "prefix_once_ms": 26.35
+ },
+ "Q1_T1000_statefirst": {
+  "median": 56.83,
+  "p95": 56.85,
+  "min": 56.82,
+  "n": 20,
+  "L": 1079
+ },
+ "Q1_T1000_schema_nocache": {
+  "median": 56.84,
+  "p95": 56.85,
+  "min": 56.81,
+  "n": 20,
+  "L": 1079
+ },
+ "Q1_T1000_schema_cached": {
+  "median": 53.74,
+  "p95": 53.75,
+  "min": 53.72,
+  "n": 20,
+  "L": 1004,
+  "prefix": 75,
+  "prefix_once_ms": 24.05
+ },
+ "Q1_T4000_statefirst": {
+  "median": 201.24,
+  "p95": 201.29,
+  "min": 201.2,
+  "n": 20,
+  "L": 4079
+ },
+ "Q1_T4000_schema_nocache": {
+  "median": 201.23,
+  "p95": 201.28,
+  "min": 201.19,
+  "n": 20,
+  "L": 4079
+ },
+ "Q1_T4000_schema_cached": {
+  "median": 204.02,
+  "p95": 204.1,
+  "min": 203.98,
+  "n": 20,
+  "L": 4004,
+  "prefix": 75,
+  "prefix_once_ms": 25.29
+ },
+ "Q4_tokens": {
+  "question_tokens_state_first": 312,
+  "schema_prefix": 291,
+  "slot_tokens": 24
+ },
+ "Q4_T256_statefirst": {
+  "median": 37.15,
+  "p95": 37.16,
+  "min": 37.14,
+  "n": 20,
+  "L": 571
+ },
+ "Q4_T256_schema_nocache": {
+  "median": 37.15,
+  "p95": 37.15,
+  "min": 37.13,
+  "n": 20,
+  "L": 571
+ },
+ "Q4_T256_schema_cached": {
+  "median": 22.86,
+  "p95": 22.87,
+  "min": 22.85,
+  "n": 20,
+  "L": 280,
+  "prefix": 291,
+  "prefix_once_ms": 25.05
+ },
+ "Q4_T1000_statefirst": {
+  "median": 79.41,
+  "p95": 79.42,
+  "min": 79.4,
+  "n": 20,
+  "L": 1315
+ },
+ "Q4_T1000_schema_nocache": {
+  "median": 79.4,
+  "p95": 79.41,
+  "min": 79.38,
+  "n": 20,
+  "L": 1315
+ },
+ "Q4_T1000_schema_cached": {
+  "median": 54.14,
+  "p95": 54.15,
+  "min": 54.13,
+  "n": 20,
+  "L": 1024,
+  "prefix": 291,
+  "prefix_once_ms": 25.06
+ },
+ "Q4_T4000_statefirst": {
+  "median": 210.47,
+  "p95": 210.51,
+  "min": 210.44,
+  "n": 20,
+  "L": 4315
+ },
+ "Q4_T4000_schema_nocache": {
+  "median": 210.46,
+  "p95": 210.52,
+  "min": 210.42,
+  "n": 20,
+  "L": 4315
+ },
+ "Q4_T4000_schema_cached": {
+  "median": 204.86,
+  "p95": 204.95,
+  "min": 204.79,
+  "n": 20,
+  "L": 4024,
+  "prefix": 291,
+  "prefix_once_ms": 25.42
+ },
+ "Q15_tokens": {
+  "question_tokens_state_first": 1564,
+  "schema_prefix": 1471,
+  "slot_tokens": 96
+ },
+ "Q15_T256_statefirst": {
+  "median": 97.19,
+  "p95": 97.21,
+  "min": 97.17,
+  "n": 20,
+  "L": 1823
+ },
+ "Q15_T256_schema_nocache": {
+  "median": 97.19,
+  "p95": 97.2,
+  "min": 97.17,
+  "n": 20,
+  "L": 1823
+ },
+ "Q15_T256_schema_cached": {
+  "median": 23.98,
+  "p95": 23.99,
+  "min": 23.96,
+  "n": 20,
+  "L": 352,
+  "prefix": 1471,
+  "prefix_once_ms": 86.54
+ },
+ "Q15_T1000_statefirst": {
+  "median": 135.46,
+  "p95": 135.49,
+  "min": 135.44,
+  "n": 20,
+  "L": 2567
+ },
+ "Q15_T1000_schema_nocache": {
+  "median": 135.47,
+  "p95": 135.49,
+  "min": 135.44,
+  "n": 20,
+  "L": 2567
+ },
+ "Q15_T1000_schema_cached": {
+  "median": 59.79,
+  "p95": 59.81,
+  "min": 59.77,
+  "n": 20,
+  "L": 1096,
+  "prefix": 1471,
+  "prefix_once_ms": 86.77
+ },
+ "Q15_T4000_statefirst": {
+  "median": 273.51,
+  "p95": 273.58,
+  "min": 273.43,
+  "n": 20,
+  "L": 5567
+ },
+ "Q15_T4000_schema_nocache": {
+  "median": 273.53,
+  "p95": 273.62,
+  "min": 273.46,
+  "n": 20,
+  "L": 5567
+ },
+ "Q15_T4000_schema_cached": {
+  "median": 209.73,
+  "p95": 209.75,
+  "min": 209.64,
+  "n": 20,
+  "L": 4096,
+  "prefix": 1471,
+  "prefix_once_ms": 86.77
+ },
+ "Q1proc_tokens": {
+  "question_tokens_state_first": 1493,
+  "schema_prefix": 1492,
+  "slot_tokens": 4
+ },
+ "Q1proc_T256_statefirst": {
+  "median": 92.96,
+  "p95": 92.97,
+  "min": 92.94,
+  "n": 20,
+  "L": 1752
+ },
+ "Q1proc_T256_schema_nocache": {
+  "median": 92.97,
+  "p95": 92.98,
+  "min": 92.95,
+  "n": 20,
+  "L": 1752
+ },
+ "Q1proc_T256_schema_cached": {
+  "median": 23.16,
+  "p95": 23.17,
+  "min": 23.15,
+  "n": 20,
+  "L": 260,
+  "prefix": 1492,
+  "prefix_once_ms": 86.86
+ },
+ "Q1proc_T1000_statefirst": {
+  "median": 121.6,
+  "p95": 121.62,
+  "min": 121.59,
+  "n": 20,
+  "L": 2496
+ },
+ "Q1proc_T1000_schema_nocache": {
+  "median": 121.62,
+  "p95": 121.63,
+  "min": 121.59,
+  "n": 20,
+  "L": 2496
+ },
+ "Q1proc_T1000_schema_cached": {
+  "median": 55.28,
+  "p95": 55.3,
+  "min": 55.26,
+  "n": 20,
+  "L": 1004,
+  "prefix": 1492,
+  "prefix_once_ms": 87.1
+ },
+ "Q1proc_T4000_statefirst": {
+  "median": 269.58,
+  "p95": 269.68,
+  "min": 269.51,
+  "n": 20,
+  "L": 5496
+ },
+ "Q1proc_T4000_schema_nocache": {
+  "median": 269.56,
+  "p95": 269.76,
+  "min": 269.51,
+  "n": 20,
+  "L": 5496
+ },
+ "Q1proc_T4000_schema_cached": {
+  "median": 208.93,
+  "p95": 208.96,
+  "min": 208.85,
+  "n": 20,
+  "L": 4004,
+  "prefix": 1492,
+  "prefix_once_ms": 87.13
+ }
+}

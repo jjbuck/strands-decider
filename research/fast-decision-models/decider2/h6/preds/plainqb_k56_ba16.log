@@ -1,0 +1,22 @@
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 4222.97it/s]
+mem before build 3.78
+mem after build 4.84
+model built map:~/work/h6/precmap_w4a4_k56.json plainqb  rot ba16 True aclip4 0.9
+questions 3227 groups 3227
+200 12s
+400 26s
+600 42s
+800 62s
+1000 88s
+1200 104s
+1400 131s
+1600 171s
+1800 208s
+2000 240s
+2200 258s
+2400 272s
+2600 291s
+2800 312s
+3000 330s
+3200 346s
+done 3227 348s
