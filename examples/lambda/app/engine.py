@@ -98,8 +98,18 @@ class _Shim:
 
 
 class DeciderEngine:
-    def __init__(self, lib_path: str, gguf_path: str, assets_dir: str, threads: int):
+    def __init__(
+        self,
+        lib_path: str,
+        gguf_path: str,
+        assets_dir: str,
+        threads: int,
+        max_request_tokens: int | None = None,
+    ):
         self.shim = _Shim(lib_path, gguf_path, threads)
+        # Total tokens one request may forward (the state once, plus every question).
+        # Time grows with it and the function has a timeout; None: no limit.
+        self.max_request_tokens = max_request_tokens
         self.n_embd = self.shim.n_embd
         self.tok = Tokenizer.from_file(os.path.join(assets_dir, "tokenizer.json"))
         # Count untruncated tokens and reject over-length prompts: the tokenizer's own
@@ -185,6 +195,16 @@ class DeciderEngine:
                 f"{n_tokens - self.max_tokens} tokens."
             )
 
+    def _check_budget(self, n_state: int, q_lens: list[int]) -> None:
+        n_total = n_state + sum(q_lens)
+        if self.max_request_tokens and n_total > self.max_request_tokens:
+            raise ValueError(
+                f"request is {n_total} tokens (state {n_state} + {len(q_lens)} questions "
+                f"{sum(q_lens)}); this deployment takes at most {self.max_request_tokens} "
+                f"per request (MAX_REQUEST_TOKENS). Split the questions across requests: "
+                f"each pays the state's {n_state} tokens again."
+            )
+
     # ------------------------------------------------------------- evaluate
     def evaluate(self, payload: dict, model_name: str) -> dict:
         req = SystemOneRequest.model_validate(payload)
@@ -197,6 +217,7 @@ class DeciderEngine:
         s_ids = self.tok.encode(state_text, add_special_tokens=False).ids
         q_encs = [self.tok.encode(rq.text, add_special_tokens=False) for rq in rqs]
         self._check_length(len(s_ids) + max(len(q.ids) for q in q_encs))
+        self._check_budget(len(s_ids), [len(q.ids) for q in q_encs])
 
         # Sharing the state is exact only if tokenizing state and question separately
         # gives the same ids as tokenizing them together. If any question breaks that,

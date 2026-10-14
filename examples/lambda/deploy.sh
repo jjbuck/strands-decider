@@ -5,12 +5,23 @@
 #
 # Uses the AWS CLI's usual credentials and region (AWS_PROFILE, AWS_REGION). The
 # bucket must exist in that region. Optional: STACK (default strands-decider-lambda),
-# PREFIX (S3 key prefix, default strands-decider-lambda).
+# PREFIX (S3 key prefix, default strands-decider-lambda), SNAPSTART (on or off, default on).
+#
+#   SNAPSTART=on   a new execution environment restores from a snapshot in about 4 s, and the
+#                  snapshot cache is billed for as long as the version exists, about $40 a
+#                  month at 10 GB
+#   SNAPSTART=off  nothing is billed while idle, and a new execution environment downloads and
+#                  loads the model before its first request, about 30 s
 set -euo pipefail
 cd "$(dirname "$0")"
 : "${BUCKET:?set BUCKET to an S3 bucket in the deploy region}"
 STACK=${STACK:-strands-decider-lambda}
 PREFIX=${PREFIX:-strands-decider-lambda}
+case "${SNAPSTART:-on}" in
+  on) SNAPSTART_APPLY_ON=PublishedVersions ;;
+  off) SNAPSTART_APPLY_ON=None ;;
+  *) echo "SNAPSTART must be on or off, not '$SNAPSTART'"; exit 1 ;;
+esac
 
 GGUF=build/model/decider-q8_0.gguf
 ZIP=build/function.zip
@@ -32,9 +43,20 @@ fi
 echo ">> uploading the code -> s3://$BUCKET/$CODE_KEY"
 aws s3 cp "$ZIP" "s3://$BUCKET/$CODE_KEY" --only-show-errors
 
-echo ">> deploying $STACK (publishing a SnapStart version runs the full init once; a few minutes)"
+echo ">> deploying $STACK, SnapStart ${SNAPSTART:-on} (publishing a SnapStart version runs the full init once; a few minutes)"
 aws cloudformation deploy --stack-name "$STACK" --template-file template.yaml \
   --capabilities CAPABILITY_IAM CAPABILITY_AUTO_EXPAND \
-  --parameter-overrides ModelBucket="$BUCKET" ModelKey="$MODEL_KEY" CodeKey="$CODE_KEY"
+  --parameter-overrides ModelBucket="$BUCKET" ModelKey="$MODEL_KEY" CodeKey="$CODE_KEY" \
+    SnapStart="$SNAPSTART_APPLY_ON"
+
+# Every deploy publishes a version, and Lambda bills each SnapStart version's snapshot
+# cache for as long as the version exists (Python snapshots do not expire). Delete the
+# versions the alias has moved off; the Function URL serves the alias.
+LIVE=$(aws lambda get-alias --function-name "$STACK" --name live --query FunctionVersion --output text)
+for v in $(aws lambda list-versions-by-function --function-name "$STACK" \
+  --query "Versions[?Version!='\$LATEST' && Version!='$LIVE'].Version" --output text); do
+  echo ">> deleting superseded version $v (live is $LIVE)"
+  aws lambda delete-function --function-name "$STACK" --qualifier "$v"
+done
 aws cloudformation describe-stacks --stack-name "$STACK" --query 'Stacks[0].Outputs' --output table
 echo "Try it: python examples/lambda/client.py --stack $STACK ask"

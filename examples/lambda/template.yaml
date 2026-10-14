@@ -15,6 +15,14 @@ Parameters:
   CodeKey:
     Type: String
     Description: S3 key of the function zip
+  SnapStart:
+    Type: String
+    Default: PublishedVersions
+    AllowedValues: [PublishedVersions, None]
+    Description: >
+      PublishedVersions restores new environments from a snapshot in about 4 s, and bills
+      the snapshot cache while the version exists. None costs nothing idle, and a new
+      environment loads the model in about 30 s.
 
 Resources:
   DeciderFunction:
@@ -33,7 +41,7 @@ Resources:
       AutoPublishAlias: live
       AutoPublishAliasAllProperties: true
       SnapStart:
-        ApplyOn: PublishedVersions
+        ApplyOn: !Ref SnapStart
       Policies:
         - S3ReadPolicy:
             BucketName: !Ref ModelBucket
@@ -41,6 +49,8 @@ Resources:
         Variables:
           MODEL_BUCKET: !Ref ModelBucket
           MODEL_KEY: !Ref ModelKey
+          # Requests over this many tokens (state + all questions) get a 422; 0: no limit.
+          MAX_REQUEST_TOKENS: '24576'
           AWS_LAMBDA_EXEC_WRAPPER: /opt/bootstrap
           AWS_LWA_READINESS_CHECK_PATH: /health
           AWS_LWA_INVOKE_MODE: BUFFERED
