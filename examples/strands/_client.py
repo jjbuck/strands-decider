@@ -4,6 +4,11 @@ Deliberately `urllib` rather than a client library: these examples should need n
 beyond `strands-agents`, so that a reader can drop one into their own project without
 first agreeing to a dependency.
 
+**AWS Lambda.** A URL that is a Lambda Function URL (`https://<id>.lambda-url.<region>.on.aws`,
+as examples/lambda deploys) takes only SigV4-signed requests, so requests to one are signed
+with botocore and the usual AWS credentials. botocore comes with `strands-agents`, through
+boto3; nothing else is signed.
+
 Synchronous on purpose too. Strands calls a handler method that is a plain `def`
 directly, so a blocking request is the simplest thing that works -- and it keeps requests
 to the server strictly sequential, which is how it is best driven: one request at a time.
@@ -19,6 +24,7 @@ from __future__ import annotations
 import json
 import os
 import urllib.error
+import urllib.parse
 import urllib.request
 from collections.abc import Mapping
 from typing import Any
@@ -98,6 +104,26 @@ class Decider:
 
     # ---- asking ----------------------------------------------------------
 
+    def _headers(self, method: str, url: str, body: bytes | None) -> dict[str, str]:
+        """JSON headers, SigV4-signed when `url` is a Lambda Function URL (IAM auth)."""
+        headers = {"content-type": "application/json"}
+        host = urllib.parse.urlparse(url).hostname or ""
+        if not (host.endswith(".on.aws") and ".lambda-url." in host):
+            return headers
+        import botocore.session
+        from botocore.auth import SigV4Auth
+        from botocore.awsrequest import AWSRequest
+
+        credentials = botocore.session.get_session().get_credentials()
+        if credentials is None:
+            raise ServerUnavailable(
+                f"{self.url} is a Lambda Function URL; signing needs AWS credentials"
+            )
+        region = host.split(".lambda-url.", 1)[1].split(".", 1)[0]
+        request = AWSRequest(method=method, url=url, data=body, headers=headers)
+        SigV4Auth(credentials.get_frozen_credentials(), "lambda", region).add_auth(request)
+        return dict(request.headers)
+
     def _unavailable(self, exc: Exception) -> ServerUnavailable:
         return ServerUnavailable(
             f"no {NAME} at {self.url} ({exc}). Start one with:\n    {SERVE_HINT}"
@@ -108,9 +134,8 @@ class Decider:
         body = json.dumps(
             {"state": state, "model": MODEL_ID, "questions": dict(questions)}
         ).encode()
-        request = urllib.request.Request(
-            f"{self.url}/v1/systemone", data=body, headers={"content-type": "application/json"}
-        )
+        url = f"{self.url}/v1/systemone"
+        request = urllib.request.Request(url, data=body, headers=self._headers("POST", url, body))
         try:
             with urllib.request.urlopen(request, timeout=self.timeout) as response:
                 payload = json.loads(response.read())
@@ -123,17 +148,22 @@ class Decider:
 
     def health(self) -> dict[str, Any]:
         """The loaded checkpoint, window and device. Raises if nothing is serving."""
+        url = f"{self.url}/health"
+        request = urllib.request.Request(url, headers=self._headers("GET", url, None))
         try:
-            with urllib.request.urlopen(f"{self.url}/health", timeout=10) as response:
+            # A Lambda environment starting up answers once its model has loaded.
+            with urllib.request.urlopen(request, timeout=self.timeout) as response:
                 return json.loads(response.read())
         except urllib.error.URLError as exc:
             raise self._unavailable(exc) from exc
 
     def banner(self) -> str:
         h = self.health()
+        # `serve` names its checkpoint, base model and device; examples/lambda its model and backend.
+        on = f" on {h['base_model']}" if "base_model" in h else ""
         return (
-            f"{NAME}: {h['checkpoint']} on {h['base_model']} "
-            f"[{h['device']}, window {h['max_length']}] at {self.url}"
+            f"{NAME}: {h.get('checkpoint', h.get('model'))}{on} "
+            f"[{h.get('device', h.get('backend'))}, window {h['max_length']}] at {self.url}"
         )
 
     def __str__(self) -> str:

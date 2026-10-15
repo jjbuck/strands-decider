@@ -43,7 +43,9 @@ class Client:
             o["OutputValue"] for o in outputs if o["OutputKey"] == "FunctionUrl"
         ).rstrip("/")
 
-    def call(self, method: str, path: str, body: dict | None = None) -> tuple[dict, float]:
+    def call(self, method: str, path: str, body: dict | None = None) -> tuple[dict, float, str]:
+        """The response body, the round trip in ms, and the CPU part of the host that served it
+        (0xd0c Graviton2, 0xd40 Graviton3, 0xd4f Graviton4)."""
         from botocore.auth import SigV4Auth
         from botocore.awsrequest import AWSRequest
 
@@ -62,7 +64,8 @@ class Client:
             timeout=900,
         ) as r:
             out = json.loads(r.read())
-        return out, (time.perf_counter() - t0) * 1000
+            cpu_part = r.headers.get("x-decider-cpu-part", "?")
+        return out, (time.perf_counter() - t0) * 1000, cpu_part
 
 
 def main() -> None:
@@ -77,18 +80,18 @@ def main() -> None:
     if args.cmd == "health":
         print(json.dumps(c.call("GET", "/health")[0], indent=2))
     elif args.cmd == "ask":
-        out, ms = c.call("POST", "/v1/systemone", REQUEST)
+        out, ms, cpu_part = c.call("POST", "/v1/systemone", REQUEST)
         print(json.dumps(out, indent=2))
-        print(f"round trip {ms:.0f} ms")
+        print(f"round trip {ms:.0f} ms, cpu_part {cpu_part}")
     else:
         rt, srv = [], []
         for _ in range(args.n):
-            out, ms = c.call("POST", "/v1/systemone", REQUEST)
+            out, ms, cpu_part = c.call("POST", "/v1/systemone", REQUEST)
             rt.append(ms)
             srv.append(out["latency_ms"])
         print(
             f"n={args.n} server median {statistics.median(srv):.0f} ms, "
-            f"round trip median {statistics.median(rt):.0f} ms, cpu_part {out.get('cpu_part')}"
+            f"round trip median {statistics.median(rt):.0f} ms, cpu_part {cpu_part}"
         )
 
 

@@ -14,7 +14,10 @@ HERE=$PWD
 CONTAINER=${CONTAINER:-finch}
 M=build/model
 
-for f in "$M/decider-f16.gguf" "$M/assets/head_config.json" build/llama.cpp/CMakeLists.txt; do
+# A Q8_0 GGUF already there is used as it is; otherwise build quantizes the f16 one.
+[ -e "$M/decider-f16.gguf" ] || [ -e "$M/decider-q8_0.gguf" ] \
+  || { echo "missing $M/decider-f16.gguf -- run: examples/lambda/convert_model.sh"; exit 1; }
+for f in "$M/assets/head_config.json" build/llama.cpp/CMakeLists.txt; do
   [ -e "$f" ] || { echo "missing $f -- run: examples/lambda/convert_model.sh"; exit 1; }
 done
 

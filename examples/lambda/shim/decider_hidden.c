@@ -2,9 +2,9 @@
 //
 // Flat C shim over libllama for the Lambda app. A ctypes-friendly API (no
 // struct-by-value, no header layout to reproduce in Python): load a GGUF once,
-// then decode exact token ids with embeddings=true and pooling NONE, and copy
-// the per-token post-final-norm hidden states into a caller buffer. Those are
-// the torso's last_hidden_state, which the pointer head reads.
+// then decode exact token ids and copy the per-token post-final-norm hidden
+// states into a caller buffer. Those are the torso's last_hidden_state, which
+// the pointer head reads.
 //
 // Built by container_build.sh against the pinned llama.cpp:
 //   gcc -O3 -fPIC -shared -o libdecider_hidden.so decider_hidden.c \
@@ -77,55 +77,11 @@ static int dh_flush(struct llama_context * ctx, struct llama_batch * b, int n_em
     return 0;
 }
 
-// Run one forward pass over `n_tokens` ids and write [n_tokens, n_embd] float32
-// row-major into `out` (caller-allocated). A fresh context is created and freed
-// per call so each request is independent (no KV bleed between requests).
-// The model weights stay resident in the handle across calls.
-// Returns 0 on success, non-zero on failure.
-int dh_forward(void * handle, const int * ids, int n_tokens, float * out) {
-    if (!handle || n_tokens <= 0) return 1;
-    dh_handle * h = (dh_handle *) handle;
-
-    // Decoded DH_UBATCH tokens per llama_decode: every token is an output, and llama
-    // reserves n_vocab floats of logits per output (see dh_forward_shared).
-    const int n_chunk = n_tokens < DH_UBATCH ? n_tokens : DH_UBATCH;
-    struct llama_context_params cparams = llama_context_default_params();
-    cparams.n_ctx           = n_tokens + 8;
-    cparams.n_batch         = n_chunk;
-    cparams.n_ubatch        = n_chunk;
-    cparams.n_threads       = h->n_threads;
-    cparams.n_threads_batch = h->n_threads;
-    cparams.embeddings      = true;
-    cparams.pooling_type    = LLAMA_POOLING_TYPE_NONE;
-    cparams.no_perf         = true;
-
-    struct llama_context * ctx = llama_init_from_model(h->model, cparams);
-    if (!ctx) return 2;
-
-    struct llama_batch batch = llama_batch_init(n_chunk, 0, 1);
-    const int n_embd = h->n_embd;
-    int row = 0, rc = 0;
-    for (int i = 0; i < n_tokens && rc == 0; i++) {
-        int k = batch.n_tokens++;
-        batch.token[k]     = (llama_token) ids[i];
-        batch.pos[k]       = i;
-        batch.n_seq_id[k]  = 1;
-        batch.seq_id[k][0] = 0;
-        batch.logits[k]    = 1;
-        if (batch.n_tokens == n_chunk || i == n_tokens - 1) rc = dh_flush(ctx, &batch, n_embd, out, &row);
-    }
-
-    llama_batch_free(batch);
-    llama_free(ctx);
-    return rc;
-}
-
 // Shared-prefix forward: decode the state prefix ONCE on seq 0, copy its memory
 // (attention KV + linear-attention recurrent state) to one seq per question, then
 // decode every question suffix on its own seq. Writes the hidden states of the
 // SUFFIX tokens only, concatenated in question order, into `out`
 // ([sum(q_lens), n_embd]). The same idea as SystemOneEngine's prefix cache.
-// `sequential` != 0 decodes each question in its own llama_decode calls.
 //
 // Two things bound the memory. llama reserves n_vocab floats of logits for every
 // output token (about 1 MB each for this vocabulary), and with embeddings=true
@@ -135,8 +91,7 @@ int dh_forward(void * handle, const int * ids, int n_tokens, float * out) {
 // re-forked from seq 0 for the next group: llama allows at most 256 seqs, and the
 // KV cells only have to hold the state plus one group's suffixes.
 int dh_forward_shared(void * handle, const int * state_ids, int n_state,
-                      const int * q_ids, const int * q_lens, int n_q,
-                      int sequential, float * out) {
+                      const int * q_ids, const int * q_lens, int n_q, float * out) {
     if (!handle || n_state <= 0 || n_q <= 0) return 1;
     dh_handle * h = (dh_handle *) handle;
     int max_group = 0;
@@ -186,7 +141,6 @@ int dh_forward_shared(void * handle, const int * state_ids, int n_state,
         const int g_end = g + DH_GROUP < n_q ? g + DH_GROUP : n_q;
         for (int s = g; s < g_end; s++) llama_memory_seq_cp(mem, 0, s - g + 1, -1, -1);
         for (int s = g; s < g_end && rc == 0; s++) {
-            if (sequential) rc = dh_flush(ctx, &b, n_embd, out, &row);
             for (int j = 0; j < q_lens[s] && rc == 0; j++) {
                 if (b.n_tokens == DH_UBATCH) rc = dh_flush(ctx, &b, n_embd, out, &row);
                 int k = b.n_tokens++;

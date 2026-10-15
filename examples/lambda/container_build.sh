@@ -33,34 +33,39 @@ if [ ! -f /model/decider-q8_0.gguf ] || [ /model/decider-f16.gguf -nt /model/dec
 fi
 
 echo "=== package ==="
-P=/pkg/app
-rm -rf /pkg && mkdir -p "$P/libs" "$P/assets" "$P/strands_decider"
-cp -P /build/b/bin/*.so* "$P/libs/"
+# The zip's root is the function's /var/task: the handler and its modules at the top, the
+# shared libraries in lib/, which is on the Lambda runtime's LD_LIBRARY_PATH.
+P=/pkg
+rm -rf /pkg && mkdir -p "$P/lib" "$P/assets" "$P/strands_decider"
+cp -P /build/b/bin/*.so* "$P/lib/"
 # The python3.12 runtime has no libgomp, and ggml-cpu is built with OpenMP.
-cp -L /usr/lib64/libgomp.so.1 /usr/lib64/libstdc++.so.6 /usr/lib64/libgcc_s.so.1 "$P/libs/"
-gcc -O3 -fPIC -shared -o "$P/libs/libdecider_hidden.so" /recipe/shim/decider_hidden.c \
-  -I/build/include -I/build/ggml/include -L"$P/libs" -lllama
+cp -L /usr/lib64/libgomp.so.1 /usr/lib64/libstdc++.so.6 /usr/lib64/libgcc_s.so.1 "$P/lib/"
+gcc -O3 -fPIC -shared -o "$P/lib/libdecider_hidden.so" /recipe/shim/decider_hidden.c \
+  -I/build/include -I/build/ggml/include -L"$P/lib" -lllama
 
-cp /recipe/app/main.py /recipe/app/engine.py /recipe/app/loader.py "$P/"
-cp /recipe/app/run.sh /pkg/run.sh && chmod +x /pkg/run.sh
+cp /recipe/app/handler.py /recipe/app/engine.py /recipe/app/loader.py "$P/"
 cp /model/assets/tokenizer.json /model/assets/head.safetensors /model/assets/head_config.json "$P/assets/"
-# The package's prompt rendering and readouts import only pydantic: ship those modules,
-# not the package (which pulls in torch).
-cp /pkgsrc/__init__.py /pkgsrc/schema.py /pkgsrc/prompting.py "$P/strands_decider/"
+# The engine, prompts and readouts import neither torch nor transformers: ship those
+# modules, not the package (which pulls in torch).
+cp /pkgsrc/__init__.py /pkgsrc/schema.py /pkgsrc/prompting.py /pkgsrc/hidden_engine.py \
+  "$P/strands_decider/"
 
 # boto3 is in the Lambda runtime. Pinned to the versions this recipe was tested with.
 python3.12 -m pip install -q --root-user-action=ignore --no-compile --only-binary=:all: --target "$P" \
-  fastapi==0.143.0 pydantic==2.14.0 uvicorn==0.54.0 \
-  numpy==2.5.3 tokenizers==0.23.2 safetensors==0.8.0
+  pydantic==2.14.0 numpy==2.5.3 tokenizers==0.23.2 safetensors==0.8.0
 find "$P" -name __pycache__ -prune -exec rm -rf {} +
 
-for so in "$P"/libs/*.so*; do
+for so in "$P"/lib/*.so*; do
   [ -L "$so" ] && continue
-  if LD_LIBRARY_PATH="$P/libs" ldd "$so" | grep -q "not found"; then
-    echo "FATAL: unresolved libraries in $so"; LD_LIBRARY_PATH="$P/libs" ldd "$so"; exit 1
+  if LD_LIBRARY_PATH="$P/lib" ldd "$so" | grep -q "not found"; then
+    echo "FATAL: unresolved libraries in $so"; LD_LIBRARY_PATH="$P/lib" ldd "$so"; exit 1
   fi
 done
-PYTHONPATH="$P" LD_LIBRARY_PATH="$P/libs" python3.12 -c "import fastapi, uvicorn, engine; print('imports OK')"
+# Importing the handler would load the model; check its imports and syntax instead.
+PYTHONPATH="$P" LD_LIBRARY_PATH="$P/lib" python3.12 -c "
+import ast, engine, loader, pydantic, strands_decider.hidden_engine
+ast.parse(open('$P/handler.py').read())
+print('imports OK')"
 echo "unzipped: $(du -sh /pkg | cut -f1) (Lambda limit 250 MB)"
 
 rm -f /out/function.zip

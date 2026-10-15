@@ -30,5 +30,6 @@ data/raw/
 .env.*
 build/
 dist/
+cdk.out/
 # Runner output written inside the checkout (training/run_recipe.sh RUN_DIR default)
 /runs/
