@@ -49,5 +49,8 @@ The accuracy rows come from the full Decision Index, JEVal, BEV, MJB and JevBenc
 - **SnapStart snapshots per generation.** We observed separate snapshots on Graviton3 and Graviton2 and no illegal instructions. No SnapStart restore landed on Graviton4 in our runs.
 - **SnapStart ephemeral storage.** SnapStart limits ephemeral storage to 512 MB. The memfd loader keeps the weights out of `/tmp`.
 - **Cold start without SnapStart** is bound by Lambda's per-environment network quota (625 Mbit/s by default, quota L-14320ECE). The 2 GB download takes about 25 s whatever the client or S3 storage class.
-- **Known overhead.** PR #77's interface requests a hidden state for every question token, so this adapter marks them all as outputs. That costs a few percent at short prompts; marking only the positions the head reads is in progress.
+- **Two overheads, both fixed in `snapstart/`.**
+  - `app.py` sets `OPENBLAS_NUM_THREADS=1`. Otherwise numpy's OpenBLAS workers busy-wait on the cores llama.cpp needs, which adds about 35 ms per forward.
+  - `engine.py` asks the torso only for the rows the head reads, instead of every question token as PR #77's interface does.
+  - Answers are bit-identical either way.
 - **Placeholders to fill in.** Scripts are as run in our measurements. Bucket names, roles and image URIs are placeholders: set `DECIDER_BUCKET`, `DECIDER_LAMBDA_ROLE_ARN`, `ECR_REPO` and `BASE_IMAGE`.

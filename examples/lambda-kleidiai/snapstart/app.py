@@ -7,9 +7,19 @@ two things around it.
    handler's field, so client/drive.py and bench/lambda_shim.py run unchanged. engine_s is PR #77's latency_ms / 1000
    (engine.evaluate), and cpu is the CPU part of the host serving this request (a SnapStart snapshot restores on any).
 Everything else, including the function-URL routes, the SnapStart load at import and the memfd weights, is PR #77's.
+
+v2b: OPENBLAS_NUM_THREADS defaults to 1, set before numpy loads. numpy's OpenBLAS otherwise starts one worker per
+vCPU for the pointer head's float64 products, and its idle workers busy-wait after every call, on the cores llama.cpp's
+6 OpenMP threads need for the next forward: on Graviton3 at 6 threads that added about 33 ms to every forward of the
+eval mode (0.490 vs 0.456 s p50 at <= 512 tokens, the deployed engine 0.456 s). One BLAS thread costs the head about
+1 ms and gives the same log-probs. An OPENBLAS_NUM_THREADS in the function's environment still wins.
 """
-import engine as _engine
-import handler as _pr77
+import os
+
+os.environ.setdefault("OPENBLAS_NUM_THREADS", "1")
+
+import engine as _engine  # noqa: E402
+import handler as _pr77  # noqa: E402
 
 
 def handler(event, context):

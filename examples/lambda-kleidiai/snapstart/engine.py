@@ -1,6 +1,16 @@
 """Our llama.cpp torso as the backend of PR #77's strands_decider.hidden_engine.HiddenStateEngine (shipped as engine.py).
 
-v2 copy of h2h/snap_engine.py. Drop-in for PR #77's examples/lambda/app/engine.py: same load_engine(lib_path, gguf_path,
+v2b: v2/engine.py (version 3 of strands-decider-2b-v2) with one change, the rows the torso is asked for. PR #77's
+ForwardShared contract returns every question token's hidden state, and HiddenStateEngine then reads only hidden[-1]
+(the `<answer>` token) and the option rows; v2 met the contract by marking every question token as a llama.cpp output,
+and with the prefill patch each marked row costs the last layer and the output norm. Here HeadRowsEngine (a subclass;
+its evaluate is PR #77's, line for line, except the forward call) passes the head's rows to Shim.forward_shared, which
+marks only those: each question's option ends, then its last token, as the deployed engine's pointer gather
+(lcpp_engine._slot_probs_batched / _slot_probs_shared_prefix) marks them. _probs gets the compact rows with the option
+positions renumbered 0..K-1 and the decide row last, so the head, the temperature and the softmax run on the same
+values as before. Called without rows, forward_shared keeps PR #77's contract (every question token).
+
+v2 was a copy of h2h/snap_engine.py. Drop-in for PR #77's examples/lambda/app/engine.py: same load_engine(lib_path, gguf_path,
 assets_dir, threads, **overrides) -> (engine, shim), so its handler.py and loader.py run unchanged. The backend is ours:
 llama.cpp f74e2fa6a with trade/lambda/engine/patch_llama.py, the portable variant set with KleidiAI, and decshim.c
 (lib/libdecshim.so beside the handler's lib/libdecider_hidden.so path, which is not shipped). The shim is built from
@@ -19,8 +29,8 @@ Two weight sets, one code path:
 forward_shared follows lcpp_engine.LlamaCppEngine, so the hidden states are the deployed engine's:
   one question       one forward over state + question (dec_eval), as SystemOneEngine._slot_probs_batched;
   several questions  the shared-state fork (dec_eval_fork): the state once, then up to N_SEQ - 1 questions per fork.
-HiddenStateEngine reads hidden[-1] and the option rows of each question, so every question token is an output here
-(with the prefill patch, outputs only decide which rows the last layer finishes). A fork group is also cut where the
+HiddenStateEngine reads hidden[-1] and the option rows of each question; HeadRowsEngine asks for exactly those (with
+the prefill patch, outputs decide which rows the last layer finishes). A fork group is also cut where the
 state plus its questions would overflow the context (lcpp_engine would refuse such a group; it changes no answer).
 DEC_KV=f32 and flash attention off are decshim's environment settings, as deployed. Shim.hidden(ids, positions) is
 lcpp_engine.Torso.hidden, for the eval mode (eval_np.py).
@@ -37,6 +47,8 @@ from typing import Any
 import numpy as np
 
 from strands_decider.hidden_engine import HiddenStateEngine
+from strands_decider.prompting import option_token_index, render_question, render_state, to_answer
+from strands_decider.schema import SystemOneRequest, SystemOneResponse, Usage
 
 log = logging.getLogger("decider.engine")
 _I32 = ctypes.POINTER(ctypes.c_int32)
@@ -130,45 +142,94 @@ class Shim:
 
     hidden = _eval  # lcpp_engine.Torso.hidden(ids, positions)
 
-    def _fork(self, state: list[int], qs: list[list[int]]) -> np.ndarray:
+    def _fork(self, state: list[int], qs: list[list[int]], rows: list[list[int]]) -> np.ndarray:
+        """State once, then each question from a copy of it: hidden states at each question's (question-relative)
+        rows, concatenated in order."""
         st = np.ascontiguousarray(state, dtype=np.int32)
         qt = np.ascontiguousarray([t for q in qs for t in q], dtype=np.int32)
         ql = np.ascontiguousarray([len(q) for q in qs], dtype=np.int32)
-        op = np.ascontiguousarray([i for q in qs for i in range(len(q))], dtype=np.int32)
+        op = np.ascontiguousarray([p for r in rows for p in r], dtype=np.int32)
+        no = np.ascontiguousarray([len(r) for r in rows], dtype=np.int32)
         out = np.empty((len(op), self.n_embd), dtype=np.float32)
         rc = self.lib.dec_eval_fork(self.h, st.ctypes.data_as(_I32), len(st), qt.ctypes.data_as(_I32),
                                     ql.ctypes.data_as(_I32), len(ql), op.ctypes.data_as(_I32),
-                                    ql.ctypes.data_as(_I32), out.ctypes.data_as(_F32))
+                                    no.ctypes.data_as(_I32), out.ctypes.data_as(_F32))
         if rc != 0:
             raise RuntimeError(f"dec_eval_fork rc={rc}: state {len(st)} tokens, {len(ql)} questions")
         return self._unrotate(out)
 
-    def forward_shared(self, state_ids: list[int], q_ids: list[list[int]]) -> list[np.ndarray]:
-        """Each question's hidden states, [len(q), n_embd], continuing the state."""
+    def forward_shared(self, state_ids: list[int], q_ids: list[list[int]],
+                       rows: list[list[int]] | None = None) -> list[np.ndarray]:
+        """Each question's hidden states continuing the state: at its question-relative `rows` ([len(rows[i]),
+        n_embd]), or at every token without rows ([len(q), n_embd], PR #77's ForwardShared)."""
+        if rows is None:
+            rows = [list(range(len(q))) for q in q_ids]
         n_s = len(state_ids)
         if len(q_ids) == 1:
-            q = q_ids[0]
-            return [self._eval(list(state_ids) + list(q), list(range(n_s, n_s + len(q))))]
+            return [self._eval(list(state_ids) + list(q_ids[0]), [n_s + p for p in rows[0]])]
         out: list[np.ndarray] = []
         g, i = [], 0
         while i <= len(q_ids):
-            fits = i < len(q_ids) and len(g) < self.n_seq - 1 and n_s + sum(map(len, g)) + len(q_ids[i]) <= self.n_ctx
+            fits = i < len(q_ids) and len(g) < self.n_seq - 1 and n_s + sum(len(q_ids[j]) for j in g) + len(
+                q_ids[i]) <= self.n_ctx
             if fits:
-                g.append(q_ids[i])
+                g.append(i)
                 i += 1
                 continue
             if not g:  # one question over the context on its own: the engine's window fitting prevents this
                 raise RuntimeError(f"question {i} does not fit the context with the state")
-            h = self._fork(state_ids, g)
-            out.extend(np.split(h, np.cumsum([len(q) for q in g])[:-1]))
+            h = self._fork(state_ids, [q_ids[j] for j in g], [rows[j] for j in g])
+            out.extend(np.split(h, np.cumsum([len(rows[j]) for j in g])[:-1]))
             g = []
             if i == len(q_ids):
                 break
         return out
 
 
+class HeadRowsEngine(HiddenStateEngine):
+    """HiddenStateEngine whose forward computes only the rows the pointer head reads.
+
+    evaluate is PR #77's HiddenStateEngine.evaluate except for the forward: the torso is asked for each question's
+    option rows and then its last row (`<answer>`), and _probs reads them as rows 0..K-1 and -1 of that compact array,
+    the same values it read from the full one at opos and -1."""
+
+    def evaluate(self, request: SystemOneRequest | Any) -> SystemOneResponse:
+        req = (
+            request
+            if isinstance(request, SystemOneRequest)
+            else SystemOneRequest.model_validate(request)
+        )
+        if req.images:
+            raise ValueError("this engine serves the text model; images are not supported")
+        names = list(req.questions)
+        rendered = [render_question(req.questions[n]) for n in names]
+        s, q, offs = self.fit(render_state(req.state), [rq.text for rq in rendered])
+        n_input = len(s) + sum(len(x) for x in q)
+        if self.cfg.max_request_tokens and n_input > self.cfg.max_request_tokens:
+            raise ValueError(
+                f"request is {n_input} tokens (state {len(s)} + {len(q)} questions "
+                f"{n_input - len(s)}); this deployment takes at most "
+                f"{self.cfg.max_request_tokens} per request. Split the questions across "
+                f"requests: each pays the state's {len(s)} tokens again."
+            )
+        # Before the forward: a question trimmed through its options is refused at once.
+        opos = [option_token_index(o, rq.option_spans, 0) for rq, o in zip(rendered, offs, strict=True)]
+        hidden = self.forward_shared(s, q, [list(p) + [len(x) - 1] for p, x in zip(opos, q, strict=True)])
+        answers = {}
+        for name, rq, h, p in zip(names, rendered, hidden, opos, strict=True):
+            answers[name] = to_answer(
+                rq, self._probs(rq, np.asarray(h, dtype=np.float64), list(range(len(p)))),
+                ordinal_smoothing=self.cfg.ordinal_smoothing,
+            )
+        return SystemOneResponse(
+            model=self.cfg.model_name,
+            answers=answers,
+            usage=Usage(input_tokens=n_input, output_tokens=len(names)),
+        )
+
+
 def load_engine(lib_path: str, gguf_path: str, assets_dir: str, threads: int,
-                **overrides: Any) -> tuple[HiddenStateEngine, Shim]:
+                **overrides: Any) -> tuple[HeadRowsEngine, Shim]:
     """The engine over a loaded GGUF. `overrides` set HiddenEngineConfig fields. lib_path names the handler's shim
     path; ours is libdecshim.so in the same directory."""
     global SHIM
@@ -176,4 +237,4 @@ def load_engine(lib_path: str, gguf_path: str, assets_dir: str, threads: int,
     shim = Shim(os.path.join(os.path.dirname(lib_path), "libdecshim.so"), gguf_path, threads,
                 n_ctx=4224 if n_seq == 1 else 16384, n_seq=n_seq)
     SHIM = shim
-    return HiddenStateEngine.from_assets(assets_dir, shim.forward_shared, **overrides), shim
+    return HeadRowsEngine.from_assets(assets_dir, shim.forward_shared, **overrides), shim
