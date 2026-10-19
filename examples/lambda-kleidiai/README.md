@@ -6,9 +6,9 @@ Measured for `strands-decider-2B-qwen3.5-v1-2610` on arm64 Lambda at 10,240 MB (
 
 | | Released engine (torch fp32) | PR #77 | This recipe |
 |---|---|---|---|
-| Forward at 256 / 1,024 / 4,096 tokens, six Graviton3 cores | 3.71 / 12.8 / 57.8 s | 1.34 / 5.35 / 24.3 s | 0.64 / 2.96 / 20.1 s; 14.6 s at 4,096 with the 512-token micro-batch |
-| Warm round trip, 266-token question, Graviton3 sandbox | | 2.06 s | 0.82 s |
-| Cold start with SnapStart | | 5.8 s | 4.8 s |
+| Forward at 256 / 1,024 / 4,096 tokens, six Graviton3 cores | 3.50 / 12.3 / 54.1 s | 1.33 / 5.33 / 24.1 s | 0.61 / 2.74 / 14.4 s |
+| Warm round trip, 266-token question, Graviton3 sandbox | | 2.06 s | 0.80 s |
+| Cold start with SnapStart | | 5.8 s | 4.85 s |
 | Official Decision Index 0.3 (released engine: 28.48) | 28.48 | | 28.43 |
 | JevBench public set, harness at 1bcc55eb (released: 180/231) | 180 | | 180 |
 
