@@ -1,0 +1,11 @@
+# Lambda MicroVM image for the Strands decider: the portable standard-Lambda image run as an HTTP server
+# (mvm_server.py), with the Hadamard-folded Q8_0 weights baked in so the snapshot holds the loaded model.
+FROM ${BASE_IMAGE}
+COPY model.gguf /opt/model.gguf
+COPY mvm_server.py /var/task/mvm_server.py
+ENV PORT=8080 GGUF=/opt/model.gguf DEC_KV=f32
+EXPOSE 8080
+WORKDIR /var/task
+# Lambda MicroVMs start the container with CMD; an ENTRYPOINT override also clears the inherited CMD.
+ENTRYPOINT []
+CMD ["python3", "/var/task/mvm_server.py"]
