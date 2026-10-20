@@ -4,7 +4,7 @@
 #   AWS_PROFILE=<profile> examples/lambda-kleidiai/baseline/run.sh [RUN_ID]
 #
 # build.sh (pinned weights + zip) -> deploy.py up -> bench.py -> summarize.py. Env knobs (defaults are the
-# published baseline's): REGION=us-east-2 ROUNDS=5 CONCURRENCY=10 WARM=20 PREFIX=lkai-p1 TEARDOWN=versions|all|none.
+# published baseline's): REGION=us-east-2 ROUNDS=5 CONCURRENCY=10 WARM=10 PREFIX=lkai-p1 TEARDOWN=versions|all|none.
 # Results land in baseline/results/<RUN_ID>/; the first run's answers become reference/outputs.json if none exists.
 set -euo pipefail
 HERE=$(cd "$(dirname "$0")" && pwd)
@@ -17,7 +17,7 @@ PY=${PYTHON:-python3}
 "$HERE/build.sh"
 "$PY" "$HERE/deploy.py" up --region "$REGION" --prefix "${PREFIX:-lkai-p1}"
 "$PY" "$HERE/bench.py" --region "$REGION" --rounds "${ROUNDS:-5}" --concurrency "${CONCURRENCY:-10}" \
-  --warm "${WARM:-20}" --out "$OUT"
+  --warm "${WARM:-10}" --out "$OUT"
 REF=$HERE/reference/outputs.json
 if [ -f "$REF" ]; then
   "$PY" "$HERE/summarize.py" "$OUT" --reference "$REF" --meta "$HERE/meta.json"

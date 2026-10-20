@@ -1,6 +1,6 @@
 """Benchmark harness for the lambda-kleidiai baseline. Runs from any machine with credentials for the account.
 
-  python bench.py --build build/ --rounds 5 --concurrency 10 --warm 20 --out results/baseline/<run-id>
+  python bench.py --build build/ --rounds 5 --concurrency 10 --warm 10 --out results/baseline/<run-id>
 
 Reads build/deployment.json (deploy.py) and requests.json. Each round, for both functions (the instrumented arm and
 the REPORT-only arm), in an order that alternates between rounds:
@@ -8,7 +8,8 @@ the REPORT-only arm), in an order that alternates between rounds:
   2. cold     `concurrency` simultaneous invokes of $LATEST: each needs a new on-demand environment
   3. publish  a version from that configuration and wait until its SnapStart snapshot is ready
   4. restore  `concurrency` simultaneous invokes of the new version: each restores a new environment
-  5. warm     `warm` sequential invokes per arm on that version, the two arms alternating request by request
+  5. warm     `warm` passes per arm on that version, each `concurrency` simultaneous invokes of one request (so they
+              reuse every restored environment), the arms alternating pass by pass and the request cycling
   6. delete both versions (a SnapStart version's cache is billed while it exists)
 Cold and restore waves send requests.json's probe request, so first-inference latency is comparable; warm cycles every
 request. Every invocation's expected start class is checked against its REPORT line (Init Duration = cold, Restore
@@ -134,10 +135,12 @@ class Bench:
         self.write(rec)
         return rec
 
-    def wave(self, arm: str, qualifier: str, rnd: int, wave: str) -> list[dict]:
+    def wave(
+        self, arm: str, qualifier: str, rnd: int, wave: str, rid: str | None = None, seq0: int = 0
+    ) -> list[dict]:
         with ThreadPoolExecutor(self.concurrency) as ex:
             futs = [
-                ex.submit(self.invoke, arm, qualifier, self.probe, rnd, wave, i)
+                ex.submit(self.invoke, arm, qualifier, rid or self.probe, rnd, wave, seq0 + i)
                 for i in range(self.concurrency)
             ]
             return [f.result() for f in futs]
@@ -193,7 +196,12 @@ def main() -> None:
     ap.add_argument("--requests", default=os.path.join(HERE, "requests.json"))
     ap.add_argument("--rounds", type=int, default=5)
     ap.add_argument("--concurrency", type=int, default=10)
-    ap.add_argument("--warm", type=int, default=20, help="warm invocations per arm per round")
+    ap.add_argument(
+        "--warm",
+        type=int,
+        default=10,
+        help="warm passes per arm per round (each `concurrency` wide)",
+    )
     ap.add_argument("--region", default="us-east-2")
     ap.add_argument("--profile", default=os.environ.get("AWS_PROFILE"))
     ap.add_argument("--arms", default="inst,rep")
@@ -290,10 +298,12 @@ def main() -> None:
                 flush=True,
             )
         for i in range(a.warm):
+            # One pass = `concurrency` simultaneous invokes per arm, so they land on every environment the restore
+            # wave created (and so on every Graviton generation it drew), not on one reused environment.
             rid = b.order[i % len(b.order)]
             for arm in order if i % 2 == 0 else order[::-1]:
-                b.invoke(arm, pubs[arm]["version"], rid, rnd, "warm", i)
-        print(f"r{rnd} warm: {a.warm} per arm", flush=True)
+                b.wave(arm, pubs[arm]["version"], rnd, "warm", rid=rid, seq0=i * a.concurrency)
+        print(f"r{rnd} warm: {a.warm} passes x {a.concurrency} per arm", flush=True)
         for arm in order:
             b.delete_version(arm, pubs[arm]["version"])
         meta["t_versions_deleted"] = time.time()

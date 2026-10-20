@@ -11,7 +11,7 @@ AWS_PROFILE=<profile> examples/lambda-kleidiai/baseline/run.sh <run-id>
 `run.sh` needs an arm64 Linux host with Docker (a Graviton instance or an arm64 DevSpace) and about 60 GB of disk.
 It runs `build.sh`, `deploy.py up`, `bench.py` and `summarize.py`, then deletes the published versions so the
 SnapStart cache stops billing. The results are in `results/<run-id>/results.json`. Knobs: `REGION` (default
-`us-east-2`), `ROUNDS` (5), `CONCURRENCY` (10), `WARM` (20), `PREFIX` (`lkai-p1`), `TEARDOWN`
+`us-east-2`), `ROUNDS` (5), `CONCURRENCY` (10), `WARM` (10 passes), `PREFIX` (`lkai-p1`), `TEARDOWN`
 (`versions`, `all` or `none`).
 
 ## What the example is (read from `7147a30`)
@@ -82,13 +82,19 @@ Each round runs these steps for both arms. The arm order alternates between roun
 2. **cold**: `CONCURRENCY` simultaneous invokes of `$LATEST`. Each needs a new on-demand environment.
 3. Publish a version from that configuration and wait until its snapshot is ready.
 4. **restore**: `CONCURRENCY` simultaneous invokes of that version. Each restores a new environment.
-5. **warm**: `WARM` sequential invokes per arm on that version, interleaved request by request.
+5. **warm**: `WARM` passes per arm on that version. A pass is `CONCURRENCY` simultaneous invokes of one request,
+   so it reuses every environment the restore wave created, on whatever Graviton generations it drew. The arms
+   alternate pass by pass, and the request cycles through all five.
 6. Delete both versions. A version's SnapStart cache is billed as long as it exists.
 
 The harness checks each invocation's expected class against its REPORT line: `Init Duration` means cold,
 `Restore Duration` means restore, and neither means warm. Mismatches are counted and excluded from the phase
-distributions; they are never relabelled. Cold and restore waves send `requests.json`'s probe request. Warm
-invocations cycle through all five requests.
+distributions; they are never relabelled. Cold and restore waves send `requests.json`'s probe request.
+
+Lambda chooses the Graviton generation per environment, and a forward on Graviton2 takes about 1.7 times as long as
+on Graviton3. Every class therefore also reports `engine_by_cpu_part`, and the instrumentation overhead compares the
+two arms only within a CPU part both landed on (`instrumentation_overhead.<class>.<metric>.by_cpu_part`, pooled by
+sample count). An unmatched comparison would mostly measure the CPU mix.
 
 ## Correctness reference
 
@@ -110,7 +116,7 @@ row per invocation, with the log tail), `logs/` (CloudWatch events for the run's
 - Both functions are reachable only by direct `Invoke` with IAM credentials. They have no Function URL.
 - Committed results never include account IDs or bucket names: `deploy.py` keeps those in `build/deployment.json`,
   which is git-ignored with `build/`.
-- At us-east-2 prices, one default run (5 rounds × 2 arms × (10 cold + 10 restore + 20 warm)) costs about $6.
+- At us-east-2 prices, one default run (5 rounds × 2 arms × (10 cold + 10 restore + 100 warm)) costs about $8.
   Most of that is the 3-hour SnapStart cache minimum on 10 versions and about 100 cold starts that each download
   2 GB. `results.json` → `cost` gives the computed figure for the run. `deploy.py teardown --all` removes
   everything.

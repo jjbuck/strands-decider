@@ -37,10 +37,21 @@ docker run --rm --platform linux/arm64 -e CKPT=$CKPT -e CKPT_REV=$CKPT_REV \
   "$PY_IMAGE" bash /repo/examples/lambda-kleidiai/baseline/weights.sh
 
 echo ">> libraries, shim and function.zip in the Lambda python3.12 image"
+# The zip's inputs: a harness-only change (bench.py, summarize.py, docs) keeps the same zip and deployed code.
+ZIP_INPUTS="examples/lambda-kleidiai/shim examples/lambda-kleidiai/snapstart examples/lambda-kleidiai/llama
+  examples/lambda-kleidiai/baseline/lkai_entry.py examples/lambda-kleidiai/baseline/phases.py
+  examples/lambda-kleidiai/baseline/container_build.sh examples/lambda/app src/strands_decider"
+# shellcheck disable=SC2086
+ZIP_KEY=$( (cd "$REPO" && git ls-files -s -- $ZIP_INPUTS && git diff HEAD -- $ZIP_INPUTS) | sha256sum | cut -c1-16)
+if [ -f "$B/function.zip" ] && [ "$(cat "$B/.zip-inputs" 2>/dev/null)" = "$ZIP_KEY" ]; then
+  echo "   function.zip already built from these inputs ($ZIP_KEY)"
+else
 docker run --rm --platform linux/arm64 --entrypoint bash \
   -v "$B/llama.cpp:/llama:ro" -v "$RECIPE:/recipe:ro" -v "$REPO/examples/lambda:/lambda:ro" \
   -v "$REPO/src/strands_decider:/pkgsrc:ro" -v "$B/model/assets:/assets:ro" -v "$B:/out" \
   "$LAMBDA_IMAGE" /recipe/baseline/container_build.sh
+echo "$ZIP_KEY" > "$B/.zip-inputs"
+fi
 
 G=$B/model/s2b-h512-Q8_0.gguf
 if [ ! -f "$G" ]; then
