@@ -1,0 +1,82 @@
+{
+ "artifacts": {
+  "invocations": "invocations.jsonl"
+ },
+ "changed_variable": {
+  "baseline": "general-purpose",
+  "experiment": "directory",
+  "name": "weights_bucket_type"
+ },
+ "commits": {
+  "baseline": "7147a308205e1e51f8403b321d5d57b367c158d7",
+  "experiment": "7147a308205e1e51f8403b321d5d57b367c158d7",
+  "repo_dirty_at_build": false
+ },
+ "conclusion": "FIXTURE. Failed: every cold start timed out reading weights (AccessDenied on CreateSession).",
+ "conditions": {
+  "arms": [
+   "inst",
+   "rep"
+  ],
+  "concurrency": 10,
+  "request_ids": [
+   "probe",
+   "r1",
+   "r2",
+   "r3",
+   "r4"
+  ],
+  "rounds": 5,
+  "started": "2026-10-20T00:00:00Z",
+  "warm_per_arm_per_round": 20,
+  "weight_fetch": "HEAD + parallel 64 MiB ranged GETs (32 threads) into a memfd"
+ },
+ "correctness": null,
+ "cost": {
+  "billed_duration_s": 18000.0,
+  "total_usd": 3.01
+ },
+ "deployment": {
+  "architecture": "arm64",
+  "az": "not exposed to the function; Lambda chooses per environment",
+  "functions": {
+   "inst": "lkai-p1-inst",
+   "rep": "lkai-p1-rep"
+  },
+  "memory_mb": 10240,
+  "region": "us-east-2",
+  "runtime": "python3.12",
+  "runtime_version_arn": null,
+  "snapstart": {
+   "ApplyOn": "PublishedVersions"
+  }
+ },
+ "errors": {
+  "count": 20,
+  "rows": [
+   {
+    "arm": "inst",
+    "detail": "s3express:CreateSession",
+    "error": "AccessDenied",
+    "round": 1,
+    "wave": "cold"
+   }
+  ]
+ },
+ "experiment_id": "E1-s3-express",
+ "fixture": true,
+ "hypothesis": "FIXTURE. An S3 Express One Zone directory bucket lowers first-byte latency.",
+ "model": {
+  "format": "GGUF Q8_0",
+  "gguf_bytes": 2147483648,
+  "id": "StrandsAgents/strands-decider-2B-qwen3.5-v1-2610",
+  "revision": "216d1ccb"
+ },
+ "phases": {},
+ "reproduce": [
+  "FIXTURE: no command; synthetic data from results/fixtures/make_fixtures.py"
+ ],
+ "run_id": "fixture-failed",
+ "schema": "lkai-result/1",
+ "status": "failed"
+}

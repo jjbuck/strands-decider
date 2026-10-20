@@ -42,6 +42,7 @@ The accuracy rows come from the full Decision Index, JEVal, BEV, MJB and JevBenc
 | `microvm/` | A Lambda MicroVM image (HTTP server with ready and validate hooks) and its in-region client |
 | `bench/` | Forward ladder (`shim_bench.py`), parity against the released engine (`parity_bench.py`, `compare.py`), shared-state fork check (`fork_test.py`), drivers and cold-start tests, and `lambda_shim.py` (serves `/v1/systemone` over a Lambda invoke so the JevBench harness can call the function) |
 | `rotation/` | The rotation-placement study: a QuaRot-style residual fold (`fold_quarot.py`), selective runtime rotation and Python un-rotation. On this model it matches H512 at half the runtime cost but was slightly less accurate at scale, so it is not deployed |
+| `results/` | The experiment results schema (`lkai-result/1`), the publish command (`publish_result.py`) and the dashboard generator. See [`results/README.md`](results/README.md) |
 
 ## Notes and caveats
 

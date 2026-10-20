@@ -1,0 +1,225 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "lkai-result/1",
+  "title": "lambda-kleidiai experiment run (lkai-result/1)",
+  "description": "One file per experiment run, written by baseline/summarize.py and published by results/publish_result.py to results/<experiment_id>/<run_id>/result.json in the results store. lkai_results.py validates this subset of JSON Schema (type, enum, const, required, properties, additionalProperties, items, minItems, minLength, minProperties, pattern, minimum, $ref, anyOf, allOf, if/then) plus the semantic checks listed in results/README.md. Fields not listed here are kept and ignored.",
+  "type": "object",
+  "required": [
+    "schema",
+    "experiment_id",
+    "run_id",
+    "status",
+    "hypothesis",
+    "changed_variable",
+    "commits",
+    "errors",
+    "reproduce",
+    "conclusion"
+  ],
+  "properties": {
+    "schema": {"const": "lkai-result/1"},
+    "experiment_id": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{0,63}$"},
+    "run_id": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{0,127}$"},
+    "status": {
+      "description": "baseline: the pinned reference. improved / no-change / regressed / inconclusive: measured outcome against the baseline. failed: the run did not produce usable measurements; it is still published.",
+      "enum": ["baseline", "improved", "no-change", "regressed", "inconclusive", "failed"]
+    },
+    "fixture": {
+      "description": "true for synthetic example data. The dashboard labels it and leaves it out unless asked.",
+      "type": "boolean"
+    },
+    "primary_arm": {
+      "description": "The arm the overview reports. Default: inst if present, else the first arm.",
+      "type": "string"
+    },
+    "hypothesis": {"type": "string", "minLength": 1},
+    "changed_variable": {
+      "description": "null only for the baseline. A name, or {name, baseline, experiment}.",
+      "anyOf": [
+        {"type": "null"},
+        {"type": "string", "minLength": 1},
+        {
+          "type": "object",
+          "required": ["name"],
+          "properties": {"name": {"type": "string", "minLength": 1}}
+        }
+      ]
+    },
+    "commits": {
+      "type": "object",
+      "required": ["experiment", "baseline"],
+      "properties": {
+        "experiment": {"type": "string", "pattern": "^[0-9a-f]{7,40}$"},
+        "baseline": {"type": "string", "pattern": "^[0-9a-f]{7,40}$"},
+        "repo_dirty_at_build": {"type": "boolean"}
+      }
+    },
+    "deployment": {
+      "type": "object",
+      "required": ["region", "runtime", "architecture", "memory_mb"],
+      "properties": {
+        "region": {"type": "string", "minLength": 1},
+        "runtime": {"type": "string", "minLength": 1},
+        "runtime_version_arn": {"type": ["string", "null"]},
+        "architecture": {"enum": ["arm64", "x86_64"]},
+        "memory_mb": {"type": "integer", "minimum": 128},
+        "az": {"type": ["string", "null"]},
+        "snapstart": {"type": ["object", "null"]},
+        "functions": {"type": "object"}
+      }
+    },
+    "model": {
+      "type": "object",
+      "required": ["id", "format"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "revision": {"type": ["string", "null"]},
+        "format": {"type": "string", "minLength": 1},
+        "gguf_bytes": {"type": "integer", "minimum": 0},
+        "gguf_sha256": {"type": "string"}
+      }
+    },
+    "conditions": {
+      "type": "object",
+      "required": ["rounds", "concurrency"],
+      "properties": {
+        "rounds": {"type": "integer", "minimum": 1},
+        "concurrency": {"type": "integer", "minimum": 1},
+        "request_ids": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "classification": {
+      "type": "object",
+      "required": ["method", "mismatches"],
+      "properties": {
+        "method": {"type": "string"},
+        "mismatches": {"type": "integer", "minimum": 0},
+        "expected_vs_observed": {"type": "object"}
+      }
+    },
+    "phases": {
+      "description": "phases.<arm>.<cold|restore|warm>.<phase> = dist. A phase may also be a map of dists (steady_state_by_request, snapshot_init) or null when not measured.",
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": {"$ref": "#/$defs/startClass"}
+      }
+    },
+    "variance": {"type": "object"},
+    "instrumentation_overhead": {"type": "object"},
+    "errors": {
+      "type": "object",
+      "required": ["count", "rows"],
+      "properties": {
+        "count": {"type": "integer", "minimum": 0},
+        "rows": {"type": "array", "items": {"type": "object"}}
+      }
+    },
+    "cost": {
+      "type": "object",
+      "properties": {
+        "billed_duration_s": {"type": "number", "minimum": 0},
+        "total_usd": {"type": "number", "minimum": 0},
+        "s3_request_usd": {"type": "number", "minimum": 0},
+        "s3_gb_transferred": {"type": "number", "minimum": 0}
+      }
+    },
+    "correctness": {
+      "anyOf": [
+        {"type": "null"},
+        {
+          "type": "object",
+          "required": ["compared", "bit_identical", "choice_flips", "max_abs_delta"],
+          "properties": {
+            "compared": {"type": "integer", "minimum": 0},
+            "bit_identical": {"type": "integer", "minimum": 0},
+            "choice_flips": {"type": "integer", "minimum": 0},
+            "max_abs_delta": {"type": "number", "minimum": 0}
+          }
+        }
+      ]
+    },
+    "profiling_artifacts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name"],
+        "properties": {
+          "name": {"type": "string", "minLength": 1},
+          "path": {"type": "string", "description": "Run-relative path; publish uploads it"},
+          "url": {"type": "string", "description": "An already-durable URL"},
+          "tool": {"type": "string"}
+        }
+      }
+    },
+    "artifacts": {
+      "description": "name -> run-relative path (a file, or a directory ending in /). publish uploads them under the run's own prefix.",
+      "type": "object",
+      "additionalProperties": {"type": "string", "minLength": 1}
+    },
+    "reproduce": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+    "conclusion": {"type": ["string", "null"]},
+    "published": {
+      "description": "Added by publish_result: where this run and its artifacts live.",
+      "type": "object"
+    }
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"status": {"enum": ["improved", "no-change", "regressed", "inconclusive", "baseline"]}}},
+      "then": {
+        "required": ["deployment", "model", "conditions", "classification", "phases", "cost", "correctness", "profiling_artifacts", "artifacts"],
+        "properties": {"phases": {"minProperties": 1}}
+      }
+    },
+    {
+      "if": {"properties": {"status": {"enum": ["improved", "no-change", "regressed", "inconclusive", "failed"]}}},
+      "then": {
+        "properties": {
+          "changed_variable": {"anyOf": [{"type": "string", "minLength": 1}, {"type": "object"}]},
+          "conclusion": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    {
+      "if": {"properties": {"status": {"enum": ["improved", "no-change", "regressed", "inconclusive"]}}},
+      "then": {"properties": {"correctness": {"type": "object"}}}
+    }
+  ],
+  "$defs": {
+    "dist": {
+      "type": "object",
+      "required": ["n", "p50", "p90", "p99", "min", "max"],
+      "properties": {
+        "unit": {"type": "string"},
+        "n": {"type": "integer", "minimum": 1},
+        "p50": {"type": "number"},
+        "p90": {"type": "number"},
+        "p99": {"type": "number"},
+        "min": {"type": "number"},
+        "max": {"type": "number"},
+        "mean": {"type": "number"},
+        "stdev": {"type": "number", "minimum": 0},
+        "histogram": {
+          "type": "object",
+          "required": ["edges", "counts"],
+          "properties": {
+            "edges": {"type": "array", "minItems": 2, "items": {"type": "number"}},
+            "counts": {"type": "array", "minItems": 1, "items": {"type": "integer", "minimum": 0}}
+          }
+        }
+      }
+    },
+    "startClass": {
+      "type": "object",
+      "additionalProperties": {
+        "anyOf": [
+          {"type": "null"},
+          {"type": "integer"},
+          {"$ref": "#/$defs/dist"},
+          {"type": "object", "additionalProperties": {"anyOf": [{"type": "null"}, {"$ref": "#/$defs/dist"}]}}
+        ]
+      }
+    }
+  }
+}
