@@ -48,7 +48,38 @@ def real(res: dict, run_id: str | None = None) -> dict:
     return r
 
 
-# ---------------------------------------------------------------------------- schema + validator
+class FakeMcpProc:
+    def __init__(self, responses: list[dict]):
+        self.responses = responses
+        self.stdin = self
+        self.stdout = self
+        self.returncode = None
+        self.writes: list[dict] = []
+
+    def write(self, data: str) -> None:
+        for line in data.splitlines():
+            if line:
+                self.writes.append(json.loads(line))
+
+    def flush(self) -> None:
+        pass
+
+    def readline(self) -> str:
+        return json.dumps(self.responses.pop(0)) + "\n"
+
+    def fileno(self) -> int:
+        return 0
+
+    def poll(self):
+        return self.returncode
+
+    def terminate(self) -> None:
+        self.returncode = -15
+
+    def wait(self, timeout=None) -> int:
+        return self.returncode or 0
+
+
 
 
 def test_schema_file_is_json_and_names_every_brief_field():
@@ -111,14 +142,17 @@ def test_schema_requires_complete_measurement_contract():
         (lambda r: r["model"].pop("revision"), "missing 'revision'"),
         (lambda r: r["conditions"].pop("request_ids"), "fixed request id"),
         (lambda r: r["conditions"].pop("finished"), "started and finished"),
-        (lambda r: r["phases"]["inst"].pop("warm"), "missing 'warm' start class"),
         (
-            lambda r: r["phases"]["inst"]["cold"].pop("model_ready"),
-            "missing required phase 'model_ready'",
+            lambda r: r["phases"]["inst"].pop("warm"),
+            "phases.inst: missing 'warm' start class",
         ),
         (
-            lambda r: [c.pop("report_max_memory_mb", None) for c in r["phases"]["inst"].values()],
-            "report_max_memory_mb distribution is required",
+            lambda r: r["phases"]["inst"]["cold"].pop("model_ready"),
+            "phases.inst.cold: missing required phase 'model_ready'",
+        ),
+        (
+            lambda r: r["phases"]["inst"]["cold"].pop("report_max_memory_mb"),
+            "phases.inst.cold: report_max_memory_mb MB distribution is required",
         ),
         (lambda r: r["cost"].pop("s3_request_usd"), "missing 's3_request_usd'"),
         (lambda r: r.update(artifacts={}), "needs at least 1"),
@@ -127,6 +161,22 @@ def test_schema_requires_complete_measurement_contract():
         r = copy.deepcopy(base)
         mutate(r)
         assert any(expected in p for p in lr.validate(r)), (expected, lr.validate(r))
+
+
+def test_measurement_contract_is_required_per_arm_and_start_class():
+    r = real(load("fixture-improved"))
+    r["phases"]["other"] = copy.deepcopy(r["phases"]["inst"])
+    del r["phases"]["other"]["restore"]["report_restore_duration"]
+    del r["phases"]["other"]["cold"]["report_max_memory_mb"]
+    problems = lr.validate(r)
+    assert any(
+        "phases.other.restore: missing required phase 'report_restore_duration'" in p
+        for p in problems
+    )
+    assert any(
+        "phases.other.cold: report_max_memory_mb MB distribution is required" in p
+        for p in problems
+    )
 
 
 def test_validator_rejects_non_finite_metrics():
@@ -343,14 +393,120 @@ def test_concurrent_publishers_never_collide(tmp_path):
 def test_publish_command_end_to_end(tmp_path, capsys):
     store, out = str(tmp_path / "store"), str(tmp_path / "out")
     for p in FIXTURES:
-        assert publish_result.main([p, "--store", store, "--out", out]) == 0
+        assert (
+            publish_result.main(
+                [p, "--store", store, "--out", out, "--skip-dashboard-upload"]
+            )
+            == 0
+        )
     assert (
-        publish_result.main([FIXTURES[0], "--store", store, "--out", out]) == 0
+        publish_result.main(
+            [
+                FIXTURES[0],
+                "--store",
+                store,
+                "--out",
+                out,
+                "--skip-dashboard-upload",
+            ]
+        )
+        == 0
     )  # idempotent rerun
-    assert "uploaded 0" in capsys.readouterr().out
+    stdout = capsys.readouterr().out
+    assert "uploaded 0" in stdout
+    assert "dashboard rebuilt from 4 run(s)" in stdout
+    assert "ARTIFACTORY " not in stdout
     assert os.path.isfile(os.path.join(out, "dashboard.html"))
     assert os.path.isfile(os.path.join(out, "index.html"))
     assert len(glob.glob(os.path.join(out, "*", "*.html"))) == len(FIXTURES)
+
+
+def test_publish_dashboard_uses_current_sha_and_verifies_ready(tmp_path, monkeypatch):
+    page = tmp_path / "dashboard.html"
+    page.write_text("<html>dashboard</html>")
+
+    def tool_result(request_id, payload):
+        return {
+            "jsonrpc": "2.0",
+            "id": request_id,
+            "result": {"content": [{"type": "text", "text": json.dumps(payload)}]},
+        }
+
+    proc = FakeMcpProc(
+        [
+            {"jsonrpc": "2.0", "id": 1, "result": {}},
+            tool_result(2, {"artifact": {"sha256": "before"}}),
+            tool_result(3, {"versionNumber": 7}),
+            tool_result(
+                4,
+                {
+                    "artifact": {
+                        "currentVersionNumber": 7,
+                        "sha256": "after",
+                        "status": "READY",
+                    },
+                    "artifactUrl": publish_result.DASHBOARD_URL,
+                },
+            ),
+        ]
+    )
+    monkeypatch.setattr(publish_result.shutil, "which", lambda _: "/bin/artifactory-mcp")
+    monkeypatch.setattr(publish_result.subprocess, "Popen", lambda *args, **kwargs: proc)
+    monkeypatch.setattr(publish_result.select, "select", lambda r, w, x, timeout: (r, w, x))
+
+    receipt = publish_result.publish_dashboard(str(page), "artifact-id")
+    assert receipt == {
+        "artifactId": "artifact-id",
+        "artifactUrl": publish_result.DASHBOARD_URL,
+        "versionNumber": 7,
+        "sha256": "after",
+        "status": "READY",
+    }
+    calls = [row for row in proc.writes if row.get("method") == "tools/call"]
+    assert [row["params"]["name"] for row in calls] == [
+        "get_artifact",
+        "upload_artifact_version",
+        "get_artifact",
+    ]
+    upload = calls[1]["params"]["arguments"]
+    assert upload["expectedCurrentSha256"] == "before"
+    assert upload["filePath"] == str(page)
+    assert upload["waitForReady"] is True
+
+
+def test_publish_command_uploads_dashboard_and_verifies_ready(tmp_path, monkeypatch, capsys):
+    store, out = str(tmp_path / "store"), str(tmp_path / "out")
+    observed = {}
+
+    def publish(path):
+        observed["path"] = path
+        return {
+            "artifactId": publish_result.DASHBOARD_ARTIFACT_ID,
+            "artifactUrl": publish_result.DASHBOARD_URL,
+            "versionNumber": 9,
+            "sha256": "a" * 64,
+            "status": "READY",
+        }
+
+    monkeypatch.setattr(publish_result, "publish_dashboard", publish)
+    assert publish_result.main([FIXTURES[0], "--store", store, "--out", out]) == 0
+    assert observed["path"] == os.path.abspath(os.path.join(out, "dashboard.html"))
+    receipt = json.loads(capsys.readouterr().out.rsplit("ARTIFACTORY ", 1)[1])
+    assert receipt["versionNumber"] == 9
+    assert receipt["status"] == "READY"
+
+
+def test_publish_command_fails_when_dashboard_upload_fails(tmp_path, monkeypatch):
+    def refused(_path):
+        raise publish_result.DashboardPublishError("stale SHA")
+
+    monkeypatch.setattr(publish_result, "publish_dashboard", refused)
+    assert (
+        publish_result.main(
+            [FIXTURES[0], "--store", str(tmp_path / "store"), "--out", str(tmp_path / "out")]
+        )
+        == 4
+    )
 
 
 def test_publish_command_exit_codes(tmp_path):
@@ -365,10 +521,34 @@ def test_publish_command_exit_codes(tmp_path):
     r = real(load("fixture-improved"), "x")
     good.write_text(json.dumps(r))
     store = str(tmp_path / "s")
-    assert publish_result.main([str(good), "--store", store, "--out", str(tmp_path / "o")]) == 0
+    assert (
+        publish_result.main(
+            [
+                str(good),
+                "--store",
+                store,
+                "--out",
+                str(tmp_path / "o"),
+                "--skip-dashboard-upload",
+            ]
+        )
+        == 0
+    )
     r["conclusion"] = "changed"
     good.write_text(json.dumps(r))
-    assert publish_result.main([str(good), "--store", store, "--out", str(tmp_path / "o")]) == 3
+    assert (
+        publish_result.main(
+            [
+                str(good),
+                "--store",
+                store,
+                "--out",
+                str(tmp_path / "o"),
+                "--skip-dashboard-upload",
+            ]
+        )
+        == 3
+    )
 
 
 # ---------------------------------------------------------------------------- rendering

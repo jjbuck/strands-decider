@@ -35,13 +35,15 @@ ID_RE = re.compile(r"^[A-Za-z0-9][A-Za-z0-9._-]*$")
 ACCOUNT_RE = re.compile(r"arn:aws[a-z-]*:[a-z0-9-]*:[a-z0-9-]*:\d{12}:|\b\d{12}\b")
 STATUSES = ("baseline", "improved", "no-change", "regressed", "inconclusive", "failed")
 CLASSES = ("cold", "restore", "warm")
-REQUIRED_PHASES = {
-    "weight_download",
-    "model_load_mmap",
-    "model_ready",
-    "first_request_inference",
-    "steady_state_inference",
-    "report_restore_duration",
+REQUIRED_PHASES_BY_CLASS = {
+    "cold": {
+        "weight_download",
+        "model_load_mmap",
+        "model_ready",
+        "first_request_inference",
+    },
+    "restore": {"report_restore_duration", "first_request_inference"},
+    "warm": {"steady_state_inference"},
 }
 # The overview's headline phase per start class, and the brief's phases in display order.
 HEADLINE = {
@@ -268,37 +270,27 @@ def validate(res: Any, schema: dict | None = None) -> list[str]:
         errs.append("$.changed_variable: a baseline changes nothing (null)")
     if res["status"] != "failed":
         phases = res.get("phases") or {}
-        classes = {
-            cls
-            for arm in phases.values()
-            for cls in arm
-            if cls in CLASSES
-        }
-        for cls in CLASSES:
-            if cls not in classes:
-                errs.append(f"$.phases: missing {cls!r} start class")
-        phase_names = {
-            name
-            for arm in phases.values()
-            for cls in arm.values()
-            for name, value in cls.items()
-            if is_dist(value)
-            or (isinstance(value, dict) and any(is_dist(x) for x in value.values()))
-        }
-        for name in sorted(REQUIRED_PHASES - phase_names):
-            errs.append(f"$.phases: missing required phase {name!r}")
+        for arm_name, arm in phases.items():
+            for cls in CLASSES:
+                start_class = arm.get(cls)
+                if not isinstance(start_class, dict):
+                    errs.append(f"$.phases.{arm_name}: missing {cls!r} start class")
+                    continue
+                for name in sorted(REQUIRED_PHASES_BY_CLASS[cls] - start_class.keys()):
+                    errs.append(
+                        f"$.phases.{arm_name}.{cls}: missing required phase {name!r}"
+                    )
+            cold = arm.get("cold") or {}
+            max_memory = cold.get("report_max_memory_mb")
+            if not (is_dist(max_memory) and max_memory.get("unit") == "MB"):
+                errs.append(
+                    f"$.phases.{arm_name}.cold: report_max_memory_mb MB distribution is required"
+                )
         conditions = res.get("conditions") or {}
         if not conditions.get("request_ids"):
             errs.append("$.conditions.request_ids: needs at least one fixed request id")
         if not conditions.get("started") or not conditions.get("finished"):
             errs.append("$.conditions: started and finished timestamps are required")
-        if not any(
-            is_dist(v) and v.get("unit") == "MB"
-            for arm in phases.values()
-            for cls in arm.values()
-            for v in cls.values()
-        ):
-            errs.append("$.phases: report_max_memory_mb distribution is required")
     for name, p in (res.get("artifacts") or {}).items():
         if not safe_relpath(p):
             errs.append(f"$.artifacts.{name}: {p!r} must be relative to the run directory")

@@ -18,7 +18,7 @@ overview of every experiment against the baseline, plus one detail page per run.
 ```bash
 export LKAI_RESULTS_STORE=s3://strands-decider-lkai-results-apse2
 export LKAI_RESULTS_PROFILE=sauhsoj+playground1-Admin LKAI_RESULTS_REGION=ap-southeast-2
-# LKAI_DASHBOARD_ARTIFACT defaults to the artifact above
+# Requires installed/configured artifactory-mcp; LKAI_DASHBOARD_ARTIFACT defaults to the artifact above.
 
 python examples/lambda-kleidiai/results/publish_result.py <run-dir>/results.json [extra files in <run-dir>...]
 ```
@@ -30,17 +30,15 @@ The command:
    directory) and any extra paths, then `result.json`, all under `runs/<experiment_id>/<run_id>/`;
 3. regenerates `site/` from every `result.json` in the store, and writes the pages to `--out`
    (default `build/lkai-dashboard/`);
-4. prints an `ARTIFACTORY {...}` line naming the dashboard artifact and `dashboard.html`.
+4. uploads `dashboard.html` to the stable Artifactory artifact with current-SHA compare-and-swap and verifies the
+   new version is `READY`.
 
-Then upload the dashboard as a new version of that artifact, through the Artifactory MCP
-(`aim_tool` agent `artifactory`):
-
-1. `get_artifact {artifactId}`, and keep the `sha256` it returns.
-2. `upload_artifact_version {artifactId, filePath: <out>/dashboard.html, expectedCurrentSha256: <sha256>}`.
-
-If step 2 reports a stale SHA, another experiment published first. Run
-`publish_result.py --regenerate-only`, which picks up their run as well, and repeat both steps. Fetch the artifact again
-and check that it is `READY` before you link it.
+The command completes store publication, dashboard regeneration, and Artifactory upload in one invocation. It
+starts the installed `artifactory-mcp` server directly, fetches the current artifact SHA, uploads `dashboard.html`
+with compare-and-swap, waits for `READY`, and re-fetches the artifact to verify the resulting version. This keeps the
+single command idempotent and prevents stale publishers from overwriting a newer dashboard. A stale-SHA refusal means
+another experiment published first: rerun `publish_result.py --regenerate-only` to include that run and retry. Use
+`--skip-dashboard-upload` only for local previews and tests.
 
 P1's `baseline/run.sh` writes `results.json` in this format already (`baseline/summarize.py`). An experiment that has
 its own harness can build the file with `lkai_results.dist()`, which computes the same distribution block.
@@ -89,11 +87,12 @@ Everything the initiative brief asks each experiment to publish. `schema.json` i
 | conclusion | `conclusion`. It is required for every experiment, including failures and null results |
 | reproducible commands | `reproduce[]` |
 
-The validator also requires every non-failed run to carry cold, restore and warm classes; the six requested phase
-families (`weight_download`, `model_load_mmap`, `model_ready`, first and steady-state inference, and restore);
-fixed request IDs and started/finished timestamps; cost totals; max-memory distribution; at least one raw artifact;
-and complete baseline/experiment values for the single changed variable. A run that cannot measure one required
-phase records that phase as `null` instead of silently omitting it.
+The validator also requires each arm to carry cold, restore and warm classes; each class to carry its applicable
+requested phase families (`weight_download`, `model_load_mmap`, `model_ready`, and first inference for cold;
+restore duration and first inference for restore; steady-state inference for warm); fixed request IDs and
+started/finished timestamps; cost totals; a cold max-memory distribution per arm; at least one raw artifact; and
+complete baseline/experiment values for the single changed variable. A run that cannot measure one required phase
+records that phase as `null` instead of silently omitting it.
 
 The schema relaxes latency and deployment requirements for a `failed` run, but it still requires at least one raw
 artifact, a hypothesis, the changed variable, commits, errors, a conclusion and the reproduce commands. Every other
@@ -121,7 +120,8 @@ failure. They show the format and drive the tests. `fixtures/make_fixtures.py` r
 `"fixture": true` and shown with a FIXTURE badge. Fixtures are hidden as soon as the store holds any real run;
 pass `--include-fixtures` to show them anyway.
 
-Until P1's baseline is measured and published, the dashboard shows only these fixtures, under a FIXTURE DATA
+P1's real baseline is published as `P1-baseline/20261020T080835Z`, so the durable dashboard hides fixtures by
+default. Before any real run exists in a fresh/local store, the dashboard shows these fixtures under a FIXTURE DATA
 banner.
 
 ## Access and cost
