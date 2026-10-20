@@ -8,7 +8,7 @@
 # portable KleidiAI libraries (snapstart/build_ours.sh), plus baseline/lkai_entry.py and phases.py. Same flags as the
 # measured recipe; nothing else differs.
 set -euo pipefail
-dnf -q -y install gcc gcc-c++ cmake make binutils zip findutils >/dev/null
+dnf install -y gcc gcc-c++ cmake make binutils zip findutils >/dev/null
 
 rm -rf /b && cp -a /llama /b && cd /b
 COMMON="-DCMAKE_BUILD_TYPE=Release -DLLAMA_CURL=OFF -DBUILD_SHARED_LIBS=ON -DLLAMA_BUILD_TESTS=OFF -DLLAMA_BUILD_EXAMPLES=OFF -DLLAMA_BUILD_SERVER=OFF"
@@ -57,7 +57,9 @@ print('imports OK', numpy.__version__, pydantic.__version__, tokenizers.__versio
 echo "unzipped $(du -sb $P | cut -f1) bytes (Lambda limit 262144000)"
 
 rm -f /out/function.zip
-# Fixed mtimes and sorted names: the same inputs give the same zip bytes, so its sha256 pins the code.
+# Fixed mtimes, modes and sorted names: the same inputs give the same zip bytes, so its sha256 pins the code. The
+# Lambda sandbox user is not root, so every file must be world-readable (head.safetensors is written 0600).
+chmod -R u=rwX,go=rX $P
 find $P -exec touch -h -d '2026-01-01 00:00:00' {} +
 (cd $P && find . -mindepth 1 -printf '%P\n' | LC_ALL=C sort | zip -q -X -y -D /out/function.zip -@)
 gcc --version | head -1 > /out/toolchain.txt
