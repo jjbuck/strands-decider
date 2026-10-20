@@ -111,7 +111,9 @@ row per invocation, with the log tail), `logs/` (CloudWatch events for the run's
 
 ## Baseline results: run `20261020T080835Z`
 
-The run used commit `4412b31`, us-east-2, 5 rounds × 2 arms × (10 cold + 10 restore + 10 warm passes of 10). That
+The run used commit `4412b31`, us-east-2, 5 rounds × 2 arms × (10 cold + 10 restore + 10 warm passes of 10). The
+deployed `function.zip` (sha256 `d148d706…`, in `results/20261020T080835Z/build-manifest.json`) was built at
+`fd96d7f`. Between `fd96d7f` and this commit the zip's inputs changed only by a comment in `container_build.sh`. That
 is 1,200 invocations, with 0 errors and 0 class mismatches. Every answer was bit-identical to the reference for its
 request and CPU part. The table shows the instrumented arm, p50 / p90 / p99 in seconds. Full distributions,
 histograms and the REPORT-only arm are in `results/20261020T080835Z/results.json`.
