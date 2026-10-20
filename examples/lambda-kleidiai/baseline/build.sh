@@ -46,8 +46,11 @@ G=$B/model/s2b-h512-Q8_0.gguf
 if [ ! -f "$G" ]; then
   echo ">> quantize Q8_0"
   docker run --rm --platform linux/arm64 --entrypoint bash -v "$B:/out" "$LAMBDA_IMAGE" -c \
-    "LD_LIBRARY_PATH=/out/quant-lib /out/bin/llama-quantize /out/weights/s2b-h512-f32.gguf /out/model/s2b-h512-Q8_0.gguf.tmp Q8_0 8 | tail -2 && mv /out/model/s2b-h512-Q8_0.gguf.tmp /out/model/s2b-h512-Q8_0.gguf"
+    "LD_LIBRARY_PATH=/out/quant-lib /out/bin/llama-quantize /out/weights/s2b-h512-f32.gguf /out/model/s2b-h512-Q8_0.gguf.tmp Q8_0 8 | tail -2 && mv /out/model/s2b-h512-Q8_0.gguf.tmp /out/model/s2b-h512-Q8_0.gguf && chmod a+r /out/model/s2b-h512-Q8_0.gguf"
 fi
+# Earlier runs of weights.sh may predate its chmod: the manifest step below reads these as the host user.
+docker run --rm --platform linux/arm64 --entrypoint bash -v "$B:/out" "$LAMBDA_IMAGE" -c \
+  "chmod -R a+rX /out/model /out/merge_report.json /out/function.zip /out/toolchain.txt"
 
 echo ">> manifest"
 python3 - "$B" "$REPO" <<EOF

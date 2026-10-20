@@ -32,5 +32,6 @@ mkdir -p $W
 [ -f /work/model/assets/head_config.json ] || python /repo/examples/lambda/prepare_model.py "$CK" --out /work/model
 rm -rf /work/model/merged-hf  # prepare_model's fp16 torso; the GGUF comes from the H512 fold above
 cp $W/merged-2b/merge_report.json /work/merge_report.json
+chmod -R a+rX /work/model /work/merge_report.json /work/weights  # root writes them; the host user hashes them
 ls -la $W/s2b-h512-f32.gguf /work/model/assets
 echo WEIGHTS_DONE
