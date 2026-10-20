@@ -248,12 +248,16 @@ def functions(sess, st: dict) -> None:
             "code_size": c["CodeSize"],
         }
         print("function", name, c["CodeSha256"], c["CodeSize"])
-    pin_runtime(lam, st)
+    pin_runtime(lam, st, logs)
 
 
-def pin_runtime(lam, st: dict) -> None:
-    """Invoke $LATEST once (on-demand: no snapshot) and pin both functions to the runtime version it reports."""
+def pin_runtime(lam, st: dict, logs=None) -> None:
+    """Invoke $LATEST once (on-demand: no snapshot) and pin both functions to the runtime version it ran on.
+
+    The version comes from the log tail, the function configuration (RuntimeVersionConfig) or the INIT_START line
+    in CloudWatch Logs; the 4 KB tail of a cold invoke is usually too short to still hold INIT_START."""
     name = st["functions"]["inst"]["name"]
+    t0 = int(time.time() * 1000) - 5000
     r = lam.invoke(
         FunctionName=name,
         LogType="Tail",
@@ -265,9 +269,21 @@ def pin_runtime(lam, st: dict) -> None:
     body = r["Payload"].read()
     if r.get("FunctionError"):
         sys.exit(f"smoke invoke failed: {body[:600]!r}\n{log[-1500:]}")
+    print("smoke invoke ok:", body[:300].decode(errors="replace"))
     arn = runtime_version_arn(log)
     if not arn:
-        sys.exit("no 'Runtime Version ARN' in the first invocation's log tail; pin it by hand")
+        cfg = lam.get_function_configuration(FunctionName=name)
+        arn = (cfg.get("RuntimeVersionConfig") or {}).get("RuntimeVersionArn")
+    for _ in range(12):
+        if arn or logs is None:
+            break
+        time.sleep(5)
+        ev = logs.filter_log_events(
+            logGroupName=f"/aws/lambda/{name}", startTime=t0, filterPattern='"Runtime Version ARN"'
+        ).get("events", [])
+        arn = next((a for a in (runtime_version_arn(e["message"]) for e in ev) if a), None)
+    if not arn:
+        sys.exit("runtime version not in the log tail, configuration or INIT_START; pin it by hand")
     for f in st["functions"].values():
         lam.put_runtime_management_config(
             FunctionName=f["name"], UpdateRuntimeOn="Manual", RuntimeVersionArn=arn
