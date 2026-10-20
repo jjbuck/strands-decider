@@ -197,6 +197,10 @@ def arm_phases(rows: list[dict], snaps: list[dict]) -> dict:
                     for r in rs
                 ]
             )
+        # Lambda picks the Graviton generation per environment; the engine phases differ ~1.7x between them.
+        d["engine_by_cpu_part"] = by_cpu(
+            rs, lambda r: r["latency_ms"] / 1000 if r.get("latency_ms") is not None else None
+        )
         out[cls] = d
     return out
 
@@ -232,33 +236,94 @@ def round_medians(rows: list[dict]) -> dict:
     return out
 
 
-def overhead(arms: dict) -> dict:
-    """Instrumented minus REPORT-only, per class, on Lambda's own numbers (both arms report them)."""
-    if "inst" not in arms or "rep" not in arms:
-        return {}
-    out = {}
-    pairs = {
-        "cold": ("report_init_duration", "report_duration", "first_request_total"),
-        "restore": ("report_restore_duration", "report_duration", "first_request_total"),
-        "warm": ("report_duration", "steady_state_inference", "client_round_trip"),
+def overhead(rows: list[dict]) -> dict:
+    """Instrumented minus REPORT-only on Lambda's own numbers, matched by CPU part.
+
+    Lambda picks the Graviton generation per environment and a forward is ~1.7x slower on Graviton2 than on
+    Graviton3, so an unmatched comparison mostly measures the CPU mix. Each metric is compared within every CPU part
+    both arms landed on; `pooled` weights those per-part deltas by the smaller arm's sample count."""
+    ok = [r for r in rows if not r["error"] and not r["class_mismatch"]]
+    rep = lambda k: lambda r: r["report"].get(k, 0) / 1000 if k in r["report"] else None  # noqa: E731
+    tot = lambda k: lambda r: (r["report"].get(k, 0) + r["report"].get("Duration", 0)) / 1000  # noqa: E731
+    metrics = {
+        "cold": {
+            "report_init_duration": rep("Init Duration"),
+            "report_duration": rep("Duration"),
+            "first_request_total": tot("Init Duration"),
+        },
+        "restore": {
+            "report_restore_duration": rep("Restore Duration"),
+            "report_duration": rep("Duration"),
+            "first_request_total": tot("Restore Duration"),
+        },
+        "warm": {
+            "report_duration": rep("Duration"),
+            "steady_state_inference": lambda r: (
+                r["latency_ms"] / 1000 if r.get("latency_ms") else None
+            ),
+        },
     }
-    for cls, names in pairs.items():
-        a, b = arms["inst"].get(cls), arms["rep"].get(cls)
-        if not a or not b:
-            continue
-        out[cls] = {}
-        for n in names:
-            if a.get(n) and b.get(n):
-                out[cls][n] = {
-                    "inst_p50": a[n]["p50"],
-                    "rep_p50": b[n]["p50"],
-                    "delta_p50_s": round(a[n]["p50"] - b[n]["p50"], 6),
-                    "delta_pct": round(100 * (a[n]["p50"] - b[n]["p50"]) / b[n]["p50"], 2)
-                    if b[n]["p50"]
-                    else None,
-                    "n": [a[n]["n"], b[n]["n"]],
+    out: dict = {}
+    for cls, ms in metrics.items():
+        rs = [r for r in ok if r["expected_class"] == cls]
+        cpus = sorted(
+            {r.get("cpu_part") for r in rs if r["arm"] == "inst"}
+            & {r.get("cpu_part") for r in rs if r["arm"] == "rep"},
+            key=str,
+        )
+        cls_out: dict = {}
+        for name, f in ms.items():
+            per, wsum, wdelta = {}, 0, 0.0
+            for cpu in cpus:
+                a = [
+                    v
+                    for r in rs
+                    if r["arm"] == "inst" and r.get("cpu_part") == cpu
+                    if (v := f(r)) is not None
+                ]
+                b = [
+                    v
+                    for r in rs
+                    if r["arm"] == "rep" and r.get("cpu_part") == cpu
+                    if (v := f(r)) is not None
+                ]
+                if not a or not b:
+                    continue
+                ma, mb = statistics.median(a), statistics.median(b)
+                per[str(cpu)] = {
+                    "inst_p50": round(ma, 6),
+                    "rep_p50": round(mb, 6),
+                    "delta_p50_s": round(ma - mb, 6),
+                    "delta_pct": round(100 * (ma - mb) / mb, 2) if mb else None,
+                    "n": [len(a), len(b)],
                 }
+                w = min(len(a), len(b))
+                wsum += w
+                wdelta += w * (ma - mb)
+            if per:
+                cls_out[name] = {
+                    "by_cpu_part": per,
+                    "pooled_delta_p50_s": round(wdelta / wsum, 6),
+                    "pooled_weight": wsum,
+                }
+        if cls_out:
+            out[cls] = cls_out
+    unmatched = sorted({f"{r['arm']}:{r['expected_class']}:{r.get('cpu_part')}" for r in ok})
+    out["method"] = (
+        "median(inst) - median(rep) within each CPU part both arms ran on; Lambda REPORT numbers "
+        "and the in-function engine latency, which both arms emit"
+    )
+    out["cells"] = unmatched
     return out
+
+
+def by_cpu(rows: list[dict], f) -> dict:
+    per = defaultdict(list)
+    for r in rows:
+        v = f(r)
+        if v is not None:
+            per[str(r.get("cpu_part"))].append(v)
+    return {k: dist(v) for k, v in sorted(per.items())}
 
 
 def costs(cond: dict, rows: list[dict]) -> dict:
@@ -466,7 +531,7 @@ def summarize(run: str, ref_path: str | None, baseline_commit: str | None, meta:
         },
         "phases": arms,
         "variance": {a: round_medians(by(rows, arm=a)) for a in cond["arms"]},
-        "instrumentation_overhead": overhead(arms),
+        "instrumentation_overhead": overhead(rows),
         "errors": {"count": len(errs), "rows": errs},
         "cost": costs(cond, rows),
         "correctness": None,

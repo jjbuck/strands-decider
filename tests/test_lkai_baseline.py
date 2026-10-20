@@ -424,7 +424,8 @@ def test_summarize_end_to_end(tmp_path):
         res["phases"]["rep"]["cold"].get("weight_download") is None
     )  # REPORT-only arm has no phase records
     ov = res["instrumentation_overhead"]["restore"]["report_duration"]
-    assert ov["delta_p50_s"] == 0.02
+    assert ov["by_cpu_part"]["0xd40"]["delta_p50_s"] == 0.02
+    assert ov["pooled_delta_p50_s"] == 0.02
     assert res["variance"]["inst"]["cold"]["per_round_median_s"] == [40.0, 40.1]
     c = res["cost"]
     assert c["cold_starts"] == 8 and c["restores"] == 8  # the mismatch row has no Restore Duration
@@ -432,6 +433,18 @@ def test_summarize_end_to_end(tmp_path):
     assert c["snapstart_cache_usd"] == round(
         2 * 3 * 3600 * 10 * summarize.PRICES["snapstart_cache_gb_s"], 4
     )
+
+
+def test_overhead_matches_cpu_parts():
+    # inst ran on Graviton2 and 3, rep only on Graviton3: only the 0xd40 cell is compared.
+    rows = [
+        _row("inst", 0, "warm", lat=800.0, cpu="0xd0c"),
+        _row("inst", 0, "warm", lat=470.0, cpu="0xd40"),
+        _row("rep", 0, "warm", lat=460.0, cpu="0xd40"),
+    ]
+    ov = summarize.overhead(rows)["warm"]["steady_state_inference"]
+    assert list(ov["by_cpu_part"]) == ["0xd40"]
+    assert ov["pooled_delta_p50_s"] == pytest.approx(0.01)
 
 
 def test_reference_and_compare():
