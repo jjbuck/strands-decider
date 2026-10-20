@@ -28,7 +28,7 @@ import summarize  # noqa: E402
 def test_parse_report_reads_lambda_fields():
     log = (
         "START RequestId: x Version: 3\n"
-        "LKAI {\"kind\":\"invoke\",\"inv\":{\"n\":1}}\n"
+        'LKAI {"kind":"invoke","inv":{"n":1}}\n'
         "REPORT RequestId: x\tDuration: 812.31 ms\tBilled Duration: 1103 ms\tMemory Size: 10240 MB\t"
         "Max Memory Used: 4321 MB\tRestore Duration: 410.20 ms\tBilled Restore Duration: 290 ms\t\n"
     )
@@ -41,7 +41,7 @@ def test_parse_report_reads_lambda_fields():
 
 
 def test_parse_lkai_skips_garbage_and_finds_prefixed_lines():
-    log = "LKAI {bad json\n2026-10-20T00:00:00Z abc INFO LKAI {\"kind\":\"x\"}\nLKAI not-json\n"
+    log = 'LKAI {bad json\n2026-10-20T00:00:00Z abc INFO LKAI {"kind":"x"}\nLKAI not-json\n'
     assert phases.parse_lkai(log) == [{"kind": "x"}]
 
 
@@ -53,10 +53,14 @@ def test_recorder_phases_with_fake_clock():
         pass
     with rec.phase("a"):  # accumulates
         pass
-    assert rec.init == {"a": 2.75}
+    assert rec.init == {"a": 1.5}  # (1.0 - 0) + (4.0 - 3.5)
     rec.emit("k", x=1)
     assert json.loads(lines[0].removeprefix(phases.PREFIX)) == {
-        "schema": phases.SCHEMA, "kind": "k", "wall_ns": 7, "x": 1}
+        "schema": phases.SCHEMA,
+        "kind": "k",
+        "wall_ns": 7,
+        "x": 1,
+    }
 
 
 def test_first_call_timed_only_times_once():
@@ -70,8 +74,13 @@ def test_first_call_timed_only_times_once():
 
 @pytest.mark.parametrize(
     ("n", "init_type", "restored", "want"),
-    [(1, "on-demand", False, "cold"), (1, "snap-start", True, "restore"), (2, "on-demand", False, "warm"),
-     (5, "snap-start", True, "warm"), (1, "provisioned-concurrency", False, "init-other")],
+    [
+        (1, "on-demand", False, "cold"),
+        (1, "snap-start", True, "restore"),
+        (2, "on-demand", False, "warm"),
+        (5, "snap-start", True, "warm"),
+        (1, "provisioned-concurrency", False, "init-other"),
+    ],
 )
 def test_start_class(n, init_type, restored, want):
     assert phases.start_class(n, init_type, restored) == want
@@ -124,15 +133,17 @@ def _install_fakes(monkeypatch, init_type):
         eng.evaluate({"warm": "up"})
         return eng, 1.5
 
-    fut = Future()
-    fut.set_result(_load())
-    handler._ENGINE = fut
-
     app = types.ModuleType("app")
 
     def app_handler(event, context):
-        eng, _ = handler._ENGINE.result()
-        return {"latency_ms": 12.5, "answers": eng.evaluate(event)["answers"], "usage": {"input_tokens": 9}}
+        import handler as h  # snapstart/app.py imports PR #77's handler at module level
+
+        eng, _ = h._ENGINE.result()
+        return {
+            "latency_ms": 12.5,
+            "answers": eng.evaluate(event)["answers"],
+            "usage": {"input_tokens": 9},
+        }
 
     app.handler = app_handler
 
@@ -190,8 +201,16 @@ def test_entry_instrumented_records_phases_and_preserves_answers(monkeypatch, ca
     assert inv1["env_id"] == recs[1]["env_id"] != recs[0]["env_id"]
     assert inv1["inv"]["engine_s"] == 0.0125
     assert "restore_to_invoke_s" in inv1["inv"]
-    for ph in ("imports", "weight_download", "shim_init", "engine_load", "assets_load", "warmup_inference",
-               "model_ready", "import_total"):
+    for ph in (
+        "imports",
+        "weight_download",
+        "shim_init",
+        "engine_load",
+        "assets_load",
+        "warmup_inference",
+        "model_ready",
+        "import_total",
+    ):
         assert ph in inv1["init"], ph
     assert "init" not in inv2  # init phases ride on the first invocation only
     assert inv1["counters"]["snapstart_hooks"] is True
@@ -231,39 +250,104 @@ def test_pct_and_dist():
     assert summarize.dist([2.0, 2.0])["histogram"] == {"edges": [2.0, 2.0], "counts": [2]}
 
 
-def _row(arm, rnd, wave, *, rt=1.0, lat=500.0, report=None, cpu="0xd40", answers=None, lkai=None, rid="r1"):
-    report = report if report is not None else {"Duration": lat + 10, "Billed Duration": lat + 11,
-                                                 "Max Memory Used": 4000}
+def _row(
+    arm,
+    rnd,
+    wave,
+    *,
+    rt=1.0,
+    lat=500.0,
+    report=None,
+    cpu="0xd40",
+    answers=None,
+    lkai=None,
+    rid="r1",
+):
+    report = (
+        report
+        if report is not None
+        else {"Duration": lat + 10, "Billed Duration": lat + 11, "Max Memory Used": 4000}
+    )
     obs = phases.observed_class(report)
-    return {"arm": arm, "round": rnd, "wave": wave, "seq": 0, "request_id": rid, "rt_s": rt, "error": None,
-            "report": report, "expected_class": wave, "observed_class": obs, "class_mismatch": obs != wave,
-            "cpu_part": cpu, "latency_ms": lat, "answers": answers or {"q": {"type": "noul", "noul": 0.5}},
-            **({"lkai": lkai} if lkai else {})}
+    return {
+        "arm": arm,
+        "round": rnd,
+        "wave": wave,
+        "seq": 0,
+        "request_id": rid,
+        "rt_s": rt,
+        "error": None,
+        "report": report,
+        "expected_class": wave,
+        "observed_class": obs,
+        "class_mismatch": obs != wave,
+        "cpu_part": cpu,
+        "latency_ms": lat,
+        "answers": answers or {"q": {"type": "noul", "noul": 0.5}},
+        **({"lkai": lkai} if lkai else {}),
+    }
 
 
 def _run_dir(tmp_path, rows):
     cond = {
-        "region": "us-east-2", "rounds": 2, "concurrency": 2, "warm_per_arm_per_round": 2, "arms": ["inst", "rep"],
-        "probe": "r1", "requests_file": "requests.json", "started": "t0", "finished": "t1",
-        "requests": {"requests": [{"id": "r1"}, {"id": "r2"}]}, "client": {},
+        "region": "us-east-2",
+        "rounds": 2,
+        "concurrency": 2,
+        "warm_per_arm_per_round": 2,
+        "arms": ["inst", "rep"],
+        "probe": "r1",
+        "requests_file": "requests.json",
+        "started": "t0",
+        "finished": "t1",
+        "requests": {"requests": [{"id": "r1"}, {"id": "r2"}]},
+        "client": {},
         "runtime_version_arn": "arn:aws:lambda:us-east-2::runtime:abc",
-        "functions": {a: {"FunctionName": f"lkai-p1-{a}", "Runtime": "python3.12", "Architectures": ["arm64"],
-                          "MemorySize": 10240, "EphemeralStorage": {"Size": 512}, "Timeout": 900,
-                          "SnapStart": {"ApplyOn": "PublishedVersions"}, "Handler": "lkai_entry.handler",
-                          "environment": {"LKAI_PHASES": "1" if a == "inst" else "0"}} for a in ("inst", "rep")},
-        "build_manifest": {"repo_commit": "abc", "repo_dirty": False,
-                           "model": {"id": "m", "gguf_bytes": 2 * 2**30, "gguf_sha256": "g"},
-                           "llama_cpp": {"commit": "f74e"}, "function_zip": {"sha256": "z"},
-                           "images": {}, "toolchain": [], "assets_sha256": {}},
-        "rounds_meta": [{"t_versions_deleted": 100.0,
-                         "published": {"inst": {"t_publish": 0.0}, "rep": {"t_publish": 0.0}}}],
+        "functions": {
+            a: {
+                "FunctionName": f"lkai-p1-{a}",
+                "Runtime": "python3.12",
+                "Architectures": ["arm64"],
+                "MemorySize": 10240,
+                "EphemeralStorage": {"Size": 512},
+                "Timeout": 900,
+                "SnapStart": {"ApplyOn": "PublishedVersions"},
+                "Handler": "lkai_entry.handler",
+                "environment": {"LKAI_PHASES": "1" if a == "inst" else "0"},
+            }
+            for a in ("inst", "rep")
+        },
+        "build_manifest": {
+            "repo_commit": "abc",
+            "repo_dirty": False,
+            "model": {"id": "m", "gguf_bytes": 2 * 2**30, "gguf_sha256": "g"},
+            "llama_cpp": {"commit": "f74e"},
+            "function_zip": {"sha256": "z"},
+            "images": {},
+            "toolchain": [],
+            "assets_sha256": {},
+        },
+        "rounds_meta": [
+            {
+                "t_versions_deleted": 100.0,
+                "published": {"inst": {"t_publish": 0.0}, "rep": {"t_publish": 0.0}},
+            }
+        ],
     }
     (tmp_path / "conditions.json").write_text(json.dumps(cond))
     (tmp_path / "invocations.jsonl").write_text("".join(json.dumps(r) + "\n" for r in rows))
     (tmp_path / "logs").mkdir()
-    snap = {"kind": "before_snapshot", "wall_ns": 1, "init": {"weight_download": 3.0, "model_ready": 6.0}}
+    snap = {
+        "kind": "before_snapshot",
+        "wall_ns": 1,
+        "init": {"weight_download": 3.0, "model_ready": 6.0},
+    }
     with gzip.open(tmp_path / "logs" / "lkai-p1-inst.jsonl.gz", "wt") as f:
-        f.write(json.dumps({"timestamp": 0, "logStreamName": "s", "message": "LKAI " + json.dumps(snap)}) + "\n")
+        f.write(
+            json.dumps(
+                {"timestamp": 0, "logStreamName": "s", "message": "LKAI " + json.dumps(snap)}
+            )
+            + "\n"
+        )
     return str(tmp_path)
 
 
@@ -273,20 +357,58 @@ def test_summarize_end_to_end(tmp_path):
     for rnd in range(2):
         for arm in ("inst", "rep"):
             for i in range(2):
-                lk = {"inv": {"handler_s": 31.0, "wait_load_s": 30.0}, "init": init,
-                      "counters": {"weight_mib_s": 80.0}} if arm == "inst" else None
-                rows.append(_row(arm, rnd, "cold", rt=40.0 + i,
-                                 report={"Init Duration": 9000.0 + rnd * 100, "Duration": 31000.0,
-                                         "Billed Duration": 40001.0, "Max Memory Used": 5000},
-                                 lkai=lk))
-                rows.append(_row(arm, rnd, "restore", rt=6.0,
-                                 report={"Restore Duration": 400.0, "Billed Restore Duration": 300,
-                                         "Duration": 900.0 + (20 if arm == "inst" else 0),
-                                         "Billed Duration": 901.0, "Max Memory Used": 4100},
-                                 lkai={"inv": {"handler_s": 0.9, "wait_load_s": 0.0, "restore_to_invoke_s": 0.05}}
-                                 if arm == "inst" else None))
+                lk = (
+                    {
+                        "inv": {"handler_s": 31.0, "wait_load_s": 30.0},
+                        "init": init,
+                        "counters": {"weight_mib_s": 80.0},
+                    }
+                    if arm == "inst"
+                    else None
+                )
+                rows.append(
+                    _row(
+                        arm,
+                        rnd,
+                        "cold",
+                        rt=40.0 + i,
+                        report={
+                            "Init Duration": 9000.0 + rnd * 100,
+                            "Duration": 31000.0,
+                            "Billed Duration": 40001.0,
+                            "Max Memory Used": 5000,
+                        },
+                        lkai=lk,
+                    )
+                )
+                rows.append(
+                    _row(
+                        arm,
+                        rnd,
+                        "restore",
+                        rt=6.0,
+                        report={
+                            "Restore Duration": 400.0,
+                            "Billed Restore Duration": 300,
+                            "Duration": 900.0 + (20 if arm == "inst" else 0),
+                            "Billed Duration": 901.0,
+                            "Max Memory Used": 4100,
+                        },
+                        lkai={
+                            "inv": {
+                                "handler_s": 0.9,
+                                "wait_load_s": 0.0,
+                                "restore_to_invoke_s": 0.05,
+                            }
+                        }
+                        if arm == "inst"
+                        else None,
+                    )
+                )
                 rows.append(_row(arm, rnd, "warm", lat=500.0, rid=f"r{i + 1}"))
-    bad = _row("inst", 1, "restore", report={"Duration": 900.0})  # expected restore, REPORT says warm
+    bad = _row(
+        "inst", 1, "restore", report={"Duration": 900.0}
+    )  # expected restore, REPORT says warm
     rows.append(bad)
     res = summarize.summarize(_run_dir(tmp_path, rows), None, None, {})
     assert res["schema"] == "lkai-result/1"
@@ -298,19 +420,37 @@ def test_summarize_end_to_end(tmp_path):
     assert inst["cold"]["first_request_total"]["p50"] == 40.0
     assert inst["restore"]["snapshot_init"]["weight_download"]["p50"] == 3.0
     assert set(inst["warm"]["steady_state_by_request"]) == {"r1", "r2"}
-    assert res["phases"]["rep"]["cold"].get("weight_download") is None  # REPORT-only arm has no phase records
+    assert (
+        res["phases"]["rep"]["cold"].get("weight_download") is None
+    )  # REPORT-only arm has no phase records
     ov = res["instrumentation_overhead"]["restore"]["report_duration"]
     assert ov["delta_p50_s"] == 0.02
     assert res["variance"]["inst"]["cold"]["per_round_median_s"] == [40.0, 40.1]
     c = res["cost"]
     assert c["cold_starts"] == 8 and c["restores"] == 8  # the mismatch row has no Restore Duration
     assert c["s3_get_requests_per_download"] == 32
-    assert c["snapstart_cache_usd"] == round(2 * 3 * 3600 * 10 * summarize.PRICES["snapstart_cache_gb_s"], 4)
+    assert c["snapstart_cache_usd"] == round(
+        2 * 3 * 3600 * 10 * summarize.PRICES["snapstart_cache_gb_s"], 4
+    )
 
 
 def test_reference_and_compare():
-    a = {"q": {"type": "choice", "choice": "x", "probabilities": {"x": 0.7, "y": 0.3}, "confidence": 0.4}}
-    b = {"q": {"type": "choice", "choice": "y", "probabilities": {"x": 0.45, "y": 0.55}, "confidence": 0.1}}
+    a = {
+        "q": {
+            "type": "choice",
+            "choice": "x",
+            "probabilities": {"x": 0.7, "y": 0.3},
+            "confidence": 0.4,
+        }
+    }
+    b = {
+        "q": {
+            "type": "choice",
+            "choice": "y",
+            "probabilities": {"x": 0.45, "y": 0.55},
+            "confidence": 0.1,
+        }
+    }
     rows = [_row("inst", 0, "warm", answers=a), _row("inst", 0, "warm", answers=a, cpu="0xd0c")]
     ref = summarize.reference(rows)
     assert set(ref["r1"]) == {"0xd40", "0xd0c"}

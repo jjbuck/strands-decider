@@ -14,7 +14,9 @@ set -euo pipefail
 export HF_HOME=/hf PIP_ROOT_USER_ACTION=ignore PIP_DISABLE_PIP_VERSION_CHECK=1
 python -m venv /venv && . /venv/bin/activate
 pip install -q --extra-index-url https://download.pytorch.org/whl/cpu "torch==2.11.0"
-pip install -q "/repo" sentencepiece "protobuf>=4.21,<5"
+# /repo is read-only and setuptools writes egg-info beside the sources: install from a copy of what the wheel needs.
+rm -rf /tmp/pkg && mkdir -p /tmp/pkg && cp -a /repo/pyproject.toml /repo/README.md /repo/LICENSE /repo/src /tmp/pkg/
+SETUPTOOLS_SCM_PRETEND_VERSION=0.0.0 pip install -q /tmp/pkg sentencepiece "protobuf>=4.21,<5"
 pip install -q /llama/gguf-py
 pip freeze > /work/weights-pip-freeze.txt
 
