@@ -1,0 +1,75 @@
+{
+ "schema": "lkai-requests/1",
+ "note": "Fixed request set for the lambda-kleidiai baseline. Every condition sends these exact bodies; 'probe' is the first request of every new execution environment (cold and restore), so first-inference latency is comparable across arms and rounds. Warm invocations cycle through all ids in order.",
+ "probe": "ticket-route-1q",
+ "requests": [
+  {
+   "id": "ticket-route-1q",
+   "request": {
+    "state": {"ticket": "Refund issued but invoice still shows the old total."},
+    "questions": {"q": {"type": "choice", "instructions": "Route this ticket.",
+                        "criteria": {"billing": "payment or invoice", "technical": "product defect", "account": "login"}}}
+   }
+  },
+  {
+   "id": "payouts-3q",
+   "request": {
+    "state": "Help! My payouts have been failing for 3 days!",
+    "questions": {
+     "is_urgent": {"type": "noul", "instructions": "Does this convey urgency?"},
+     "team": {"type": "choice", "instructions": "Which team should handle this?",
+              "criteria": {"billing": "", "sales": "", "retail": ""}},
+     "frustration": {"type": "score", "instructions": "How frustrated is the writer?",
+                     "criteria": ["calm", "frustrated", "depressed"]}
+    }
+   }
+  },
+  {
+   "id": "cracked-screen-2q",
+   "request": {
+    "state": "Order 1182 arrived with a cracked screen. The customer wants a refund today.",
+    "questions": {
+     "q": {"type": "choice", "instructions": "Route the ticket.",
+           "criteria": {"refunds": "money back", "shipping": "delivery problems", "tech": "device faults"}},
+     "u": {"type": "noul", "instructions": "Is the customer upset?"}
+    }
+   }
+  },
+  {
+   "id": "agent-action-guard-2q",
+   "request": {
+    "state": {
+     "user_goal": "Clean up last quarter's test fixtures in the staging bucket.",
+     "proposed_tool_call": {"name": "s3_delete_prefix", "arguments": {"bucket": "acme-prod-invoices", "prefix": "2026/"}},
+     "recent_messages": [
+      "user: the staging bucket is acme-staging-fixtures, only touch that one",
+      "assistant: Understood, I will list acme-staging-fixtures first.",
+      "tool(s3_list): acme-staging-fixtures/2026/Q3/ has 412 objects"
+     ]
+    },
+    "questions": {
+     "safe": {"type": "noul", "instructions": "Is the proposed tool call consistent with the user's instructions?"},
+     "action": {"type": "choice", "instructions": "What should the agent do next?",
+                "criteria": {"proceed": "run the tool call as proposed", "revise": "fix the arguments and retry",
+                             "ask": "ask the user before doing anything"}}
+    }
+   }
+  },
+  {
+   "id": "incident-review-4q",
+   "request": {
+    "state": "Incident 4471 timeline. 09:02 deploy of checkout-api build 8812 starts in us-east-2. 09:06 p99 latency on /cart rises from 180 ms to 2.4 s; error rate 0.2% to 6%. 09:07 on-call paged by the latency alarm. 09:11 on-call sees connection-pool exhaustion against the orders database and suspects the new build's retry change, which retries reads three times with no jitter. 09:14 rollback to build 8807 started. 09:19 rollback complete in two of three cells; the third cell is still on 8812 because its deployment was paused by a separate change freeze. 09:23 p99 back to 210 ms in the rolled-back cells; the third cell keeps failing about 9% of requests. 09:31 the freeze owner approves the rollback for the third cell. 09:38 all cells healthy. Customer impact: about 36 minutes of degraded checkout in one region, an estimated 2,100 failed carts. The retry change had passed load tests, which ran against a database with three times the production connection limit. No runbook step covered a cell stuck behind a freeze.",
+    "questions": {
+     "root_cause": {"type": "choice", "instructions": "What is the most direct root cause?",
+                    "criteria": {"retries": "retry change without jitter exhausted the connection pool",
+                                 "freeze": "the change freeze", "alarm": "slow alarming",
+                                 "capacity": "database undersized for normal load"}},
+     "severity": {"type": "score", "instructions": "How severe was the customer impact?",
+                  "criteria": ["negligible", "minor", "moderate", "major", "critical"]},
+     "test_gap": {"type": "noul", "instructions": "Did a test environment difference hide the problem?"},
+     "runbook": {"type": "noul", "instructions": "Should the runbook gain a step for cells blocked by a freeze?"}
+    }
+   }
+  }
+ ]
+}

@@ -6,6 +6,7 @@
 #include <stdint.h>
 #include <stdlib.h>
 #include <string.h>
+#include <time.h>
 
 typedef struct {
     struct llama_model * model;
@@ -19,6 +20,26 @@ static void quiet(enum ggml_log_level level, const char * text, void * ud) {
     (void) level; (void) text; (void) ud;
 }
 
+// Phase timers of the last dec_load_seq, CLOCK_MONOTONIC nanoseconds (baseline/phases.py reads them): backend load
+// (dlopen of the libggml-cpu variants), llama_model_load_from_file (mmap of the GGUF and KleidiAI's weight repack),
+// llama_init_from_model (context, KV cache and compute buffers), and the whole call. Four clock reads per load.
+enum { DEC_PH_BACKEND, DEC_PH_MODEL, DEC_PH_CONTEXT, DEC_PH_TOTAL, DEC_PH_N };
+static int64_t dec_phase_ns[DEC_PH_N];
+
+static int64_t dec_now_ns(void) {
+    struct timespec t;
+    clock_gettime(CLOCK_MONOTONIC, &t);
+    return (int64_t) t.tv_sec * 1000000000 + t.tv_nsec;
+}
+
+// Copies up to n phase durations into out; returns how many the shim records.
+int dec_load_phases_ns(int64_t * out, int n) {
+    for (int i = 0; i < n && i < DEC_PH_N; i++) {
+        out[i] = dec_phase_ns[i];
+    }
+    return DEC_PH_N;
+}
+
 void * dec_load_seq(const char * path, int n_threads, int n_ctx, int use_mmap, int verbose, int n_seq);
 
 void * dec_load(const char * path, int n_threads, int n_ctx, int use_mmap, int verbose) {
@@ -29,6 +50,8 @@ void * dec_load(const char * path, int n_threads, int n_ctx, int use_mmap, int v
 // so the state's cells are shared by every question rather than copied; each Gated DeltaNet layer keeps one recurrent
 // state per sequence. n_ctx must hold the state plus all question tokens of one fork.
 void * dec_load_seq(const char * path, int n_threads, int n_ctx, int use_mmap, int verbose, int n_seq) {
+    const int64_t t0 = dec_now_ns();
+    memset(dec_phase_ns, 0, sizeof(dec_phase_ns));
     if (!verbose) {
         llama_log_set(quiet, NULL);
     }
@@ -42,6 +65,8 @@ void * dec_load_seq(const char * path, int n_threads, int n_ctx, int use_mmap, i
         ggml_backend_load_all();
     }
     llama_backend_init();
+    const int64_t t1 = dec_now_ns();
+    dec_phase_ns[DEC_PH_BACKEND] = t1 - t0;
     struct llama_model_params mp = llama_model_default_params();
     mp.n_gpu_layers = 0;
     mp.load_mode = use_mmap ? LLAMA_LOAD_MODE_MMAP : LLAMA_LOAD_MODE_NONE;
@@ -49,6 +74,8 @@ void * dec_load_seq(const char * path, int n_threads, int n_ctx, int use_mmap, i
     if (!model) {
         return NULL;
     }
+    const int64_t t2 = dec_now_ns();
+    dec_phase_ns[DEC_PH_MODEL] = t2 - t1;
     struct llama_context_params cp = llama_context_default_params();
     cp.n_ctx = n_ctx;
     cp.n_batch = n_ctx;   // a whole 4k-window prompt in one ubatch: one large GEMM per weight
@@ -81,6 +108,9 @@ void * dec_load_seq(const char * path, int n_threads, int n_ctx, int use_mmap, i
         llama_model_free(model);
         return NULL;
     }
+    const int64_t t3 = dec_now_ns();
+    dec_phase_ns[DEC_PH_CONTEXT] = t3 - t2;
+    dec_phase_ns[DEC_PH_TOTAL] = t3 - t0;
     dec_t * d = calloc(1, sizeof(dec_t));
     d->model = model;
     d->ctx = ctx;
