@@ -1,0 +1,260 @@
+{
+ "code_sha256": "26eb2651e8915f8ad09eae899feff583a448de6b8d2bc4943bccabb66cae189b",
+ "model_gguf_sha256": "8dbb8872e6af312804b8d9d82b6d023bd025a0cfc81d55703b79837d0f042d8e",
+ "outputs": {
+  "agent-action-guard-2q": {
+   "0xd0c": {
+    "action": {
+     "choice": "proceed",
+     "confidence": 0.442,
+     "probabilities": {
+      "ask": 0.1223,
+      "proceed": 0.628,
+      "revise": 0.2497
+     },
+     "type": "choice"
+    },
+    "safe": {
+     "noul": 0.268,
+     "type": "noul"
+    }
+   },
+   "0xd40": {
+    "action": {
+     "choice": "proceed",
+     "confidence": 0.4488,
+     "probabilities": {
+      "ask": 0.1231,
+      "proceed": 0.6325,
+      "revise": 0.2444
+     },
+     "type": "choice"
+    },
+    "safe": {
+     "noul": 0.2744,
+     "type": "noul"
+    }
+   }
+  },
+  "cracked-screen-2q": {
+   "0xd0c": {
+    "q": {
+     "choice": "refunds",
+     "confidence": 0.5001,
+     "probabilities": {
+      "refunds": 0.6668,
+      "shipping": 0.118,
+      "tech": 0.2152
+     },
+     "type": "choice"
+    },
+    "u": {
+     "noul": 0.624,
+     "type": "noul"
+    }
+   },
+   "0xd40": {
+    "q": {
+     "choice": "refunds",
+     "confidence": 0.492,
+     "probabilities": {
+      "refunds": 0.6614,
+      "shipping": 0.1216,
+      "tech": 0.217
+     },
+     "type": "choice"
+    },
+    "u": {
+     "noul": 0.6251,
+     "type": "noul"
+    }
+   }
+  },
+  "incident-review-4q": {
+   "0xd0c": {
+    "root_cause": {
+     "choice": "retries",
+     "confidence": 0.4143,
+     "probabilities": {
+      "alarm": 0.0196,
+      "capacity": 0.0731,
+      "freeze": 0.3466,
+      "retries": 0.5607
+     },
+     "type": "choice"
+    },
+    "runbook": {
+     "noul": 0.8849,
+     "type": "noul"
+    },
+    "severity": {
+     "confidence": 0.4416,
+     "legend": {
+      "0": "negligible",
+      "1": "minor",
+      "2": "moderate",
+      "3": "major",
+      "4": "critical"
+     },
+     "probabilities": {
+      "0": 0.1049,
+      "1": 0.1632,
+      "2": 0.2662,
+      "3": 0.2591,
+      "4": 0.2065
+     },
+     "score": 2.2991,
+     "type": "score"
+    },
+    "test_gap": {
+     "noul": 0.3785,
+     "type": "noul"
+    }
+   },
+   "0xd40": {
+    "root_cause": {
+     "choice": "retries",
+     "confidence": 0.4051,
+     "probabilities": {
+      "alarm": 0.0191,
+      "capacity": 0.0724,
+      "freeze": 0.3546,
+      "retries": 0.5538
+     },
+     "type": "choice"
+    },
+    "runbook": {
+     "noul": 0.8827,
+     "type": "noul"
+    },
+    "severity": {
+     "confidence": 0.4432,
+     "legend": {
+      "0": "negligible",
+      "1": "minor",
+      "2": "moderate",
+      "3": "major",
+      "4": "critical"
+     },
+     "probabilities": {
+      "0": 0.1037,
+      "1": 0.1626,
+      "2": 0.2673,
+      "3": 0.2597,
+      "4": 0.2068
+     },
+     "score": 2.3033,
+     "type": "score"
+    },
+    "test_gap": {
+     "noul": 0.3864,
+     "type": "noul"
+    }
+   }
+  },
+  "payouts-3q": {
+   "0xd0c": {
+    "frustration": {
+     "confidence": 0.5121,
+     "legend": {
+      "0": "calm",
+      "1": "frustrated",
+      "2": "depressed"
+     },
+     "probabilities": {
+      "0": 0.1949,
+      "1": 0.5765,
+      "2": 0.2285
+     },
+     "score": 1.0336,
+     "type": "score"
+    },
+    "is_urgent": {
+     "noul": 0.8618,
+     "type": "noul"
+    },
+    "team": {
+     "choice": "billing",
+     "confidence": 0.6512,
+     "probabilities": {
+      "billing": 0.7674,
+      "retail": 0.1073,
+      "sales": 0.1253
+     },
+     "type": "choice"
+    }
+   },
+   "0xd40": {
+    "frustration": {
+     "confidence": 0.512,
+     "legend": {
+      "0": "calm",
+      "1": "frustrated",
+      "2": "depressed"
+     },
+     "probabilities": {
+      "0": 0.1945,
+      "1": 0.5764,
+      "2": 0.2291
+     },
+     "score": 1.0346,
+     "type": "score"
+    },
+    "is_urgent": {
+     "noul": 0.8582,
+     "type": "noul"
+    },
+    "team": {
+     "choice": "billing",
+     "confidence": 0.6487,
+     "probabilities": {
+      "billing": 0.7658,
+      "retail": 0.1106,
+      "sales": 0.1236
+     },
+     "type": "choice"
+    }
+   }
+  },
+  "ticket-route-1q": {
+   "0xd0c": {
+    "q": {
+     "choice": "billing",
+     "confidence": 0.9442,
+     "probabilities": {
+      "account": 0.0062,
+      "billing": 0.9628,
+      "technical": 0.031
+     },
+     "type": "choice"
+    }
+   },
+   "0xd40": {
+    "q": {
+     "choice": "billing",
+     "confidence": 0.9433,
+     "probabilities": {
+      "account": 0.0064,
+      "billing": 0.9622,
+      "technical": 0.0314
+     },
+     "type": "choice"
+    }
+   },
+   "0xd4f": {
+    "q": {
+     "choice": "billing",
+     "confidence": 0.9444,
+     "probabilities": {
+      "account": 0.0062,
+      "billing": 0.9629,
+      "technical": 0.0308
+     },
+     "type": "choice"
+    }
+   }
+  }
+ },
+ "run_id": "20261020T080835Z",
+ "schema": "lkai-reference/1"
+}

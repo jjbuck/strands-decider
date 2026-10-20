@@ -329,7 +329,10 @@ def _run_dir(tmp_path, rows):
         "rounds_meta": [
             {
                 "t_versions_deleted": 100.0,
-                "published": {"inst": {"t_publish": 0.0}, "rep": {"t_publish": 0.0}},
+                "published": {
+                    "inst": {"t_publish": 0.0, "version": "3"},
+                    "rep": {"t_publish": 0.0, "version": "3"},
+                },
             }
         ],
     }
@@ -342,12 +345,12 @@ def _run_dir(tmp_path, rows):
         "init": {"weight_download": 3.0, "model_ready": 6.0},
     }
     with gzip.open(tmp_path / "logs" / "lkai-p1-inst.jsonl.gz", "wt") as f:
-        f.write(
-            json.dumps(
-                {"timestamp": 0, "logStreamName": "s", "message": "LKAI " + json.dumps(snap)}
-            )
-            + "\n"
-        )
+        for stream, wall in (
+            ("2026/10/20/[3]abc", 1),
+            ("2026/10/20/[2]old", 2),
+        ):  # [2]: not this run's
+            msg = "LKAI " + json.dumps(snap | {"wall_ns": wall})
+            f.write(json.dumps({"timestamp": 0, "logStreamName": stream, "message": msg}) + "\n")
     return str(tmp_path)
 
 
@@ -419,6 +422,8 @@ def test_summarize_end_to_end(tmp_path):
     assert inst["cold"]["weight_download"]["p50"] == 25.0
     assert inst["cold"]["first_request_total"]["p50"] == 40.0
     assert inst["restore"]["snapshot_init"]["weight_download"]["p50"] == 3.0
+    assert inst["restore"]["snapshot_inits_per_version"] == {"3": 1}
+    assert res["cost"]["snapshot_inits"] == 2  # one observed on inst, the same assumed for rep
     assert set(inst["warm"]["steady_state_by_request"]) == {"r1", "r2"}
     assert (
         res["phases"]["rep"]["cold"].get("weight_download") is None

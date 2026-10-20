@@ -109,14 +109,56 @@ every experiment, are compared against it on the same request and CPU part (`res
 asks each experiment to publish. P2's dashboard ingests it. Raw evidence sits beside it: `invocations.jsonl` (one
 row per invocation, with the log tail), `logs/` (CloudWatch events for the run's window) and `conditions.json`.
 
+## Baseline results: run `20261020T080835Z`
+
+The run used commit `4412b31`, us-east-2, 5 rounds × 2 arms × (10 cold + 10 restore + 10 warm passes of 10). That
+is 1,200 invocations, with 0 errors and 0 class mismatches. Every answer was bit-identical to the reference for its
+request and CPU part. The table shows the instrumented arm, p50 / p90 / p99 in seconds. Full distributions,
+histograms and the REPORT-only arm are in `results/20261020T080835Z/results.json`.
+
+| Class | Phase | p50 / p90 / p99 | n |
+|---|---|---|---|
+| cold | first request (Init Duration + Duration) | 35.99 / 36.41 / 48.90 | 50 |
+| cold | REPORT Init Duration (the load runs in a thread, after init) | 0.80 / 0.82 / 1.04 | 50 |
+| cold | weight download (79 MiB/s p50) | 25.04 / 25.19 / 25.27 | 50 |
+| cold | model load / mmap (`llama_model_load_from_file`) | 8.37 / 8.67 / 19.86 | 50 |
+| cold | imports, backend load, context init, assets | 0.72, 0.03, 0.32, 0.93 | 50 |
+| cold | warm-up inference (first inference) | 0.25 / 0.26 / 0.42 | 50 |
+| cold | first request inference (probe) | 0.24 / 0.25 / 0.44 | 50 |
+| restore | first request (Restore Duration + Duration) | 3.95 / 4.20 / 7.50 | 50 |
+| restore | REPORT Restore Duration | 3.27 / 3.50 / 6.72 | 50 |
+| restore | after-restore hook to first invoke | 0.011 / 0.020 / 0.025 | 50 |
+| restore | first request inference (probe) | 0.67 / 0.70 / 1.02 | 50 |
+| warm | steady-state inference, all five requests | 0.66 / 1.74 / 1.82 | 500 |
+| warm | max memory used | 5,170 MB of 10,240 | 500 |
+
+- **CPU mix.** The cold waves drew Graviton3 (0xd40) 84 times, Graviton2 (0xd0c) 11 times and Graviton4 (0xd4f)
+  5 times across both arms. The restore waves were Graviton3 99 times out of 100. The probe forward took 0.24 s on
+  Graviton3 and 0.44 s on Graviton2. Compare experiments per CPU part (`engine_by_cpu_part`).
+- **Warm latency by request** (p50): ticket-route-1q 0.24 s, cracked-screen-2q 0.46 s, payouts-3q 0.65 s,
+  agent-action-guard-2q 0.85 s, incident-review-4q 1.74 s. The warm p90 and p99 reflect this mix of requests.
+- **A restored environment's first forward is 2.8 times a cold one's** on the same request and CPU part (0.67 s
+  against 0.24 s). Page faults on memory restored from the snapshot are a likely cause, but this run did not test
+  that; P3's profiling can. Lambda bills that forward as Duration, not Restore Duration.
+- **Snapshot init.** Publishing ran two snapshot inits per version (10 observed on the instrumented arm). Each
+  downloaded the weights in 24.6 s (p50).
+- **Run-to-run variance** is the coefficient of variation of the per-round medians, instrumented arm: cold 0.35%,
+  restore 2.6%, warm 5.4%. The REPORT-only arm: 0.23%, 3.1% and 2.4%.
+- **Instrumentation overhead** is instrumented minus REPORT-only on Lambda's numbers, Graviton3 only (the one CPU
+  part both arms drew in every class), at p50. Cold first request: +0.17 s (+0.46%). Restore Duration: −0.019 s.
+  Restore first request: −0.004 s. Warm Duration: +0.008 s (+1.2%). Each of these is within that class's
+  run-to-run spread.
+- **Cost** of the run, computed from the REPORT lines and list prices: $2.38. SnapStart cache was $1.63 (10
+  versions × the 3-hour minimum), duration $0.61 and restores $0.14. The run moved 249 GB from S3 to Lambda in 120
+  weight downloads (each one HEAD and 31 ranged GETs), for $0.0015 in requests and no transfer charge.
+
 ## Security and cost
 
 - The bucket blocks public access and denies non-TLS requests, and objects use SSE-S3.
 - The execution role may `GetObject` the one GGUF key and write its own two log groups. Nothing else.
 - Both functions are reachable only by direct `Invoke` with IAM credentials. They have no Function URL.
-- Committed results never include account IDs or bucket names: `deploy.py` keeps those in `build/deployment.json`,
-  which is git-ignored with `build/`.
-- At us-east-2 prices, one default run (5 rounds × 2 arms × (10 cold + 10 restore + 100 warm)) costs about $8.
-  Most of that is the 3-hour SnapStart cache minimum on 10 versions and about 100 cold starts that each download
-  2 GB. `results.json` → `cost` gives the computed figure for the run. `deploy.py teardown --all` removes
-  everything.
+- Committed results never include account IDs or bucket names. `run.sh` writes raw output to `build/runs/`
+  (git-ignored with `build/`, as is `build/deployment.json`) and commits only the copy that `redact.py` makes.
+- At us-east-2 prices, one default run (5 rounds × 2 arms × (10 cold + 10 restore + 100 warm)) cost $2.38.
+  Most of that is the 3-hour SnapStart cache minimum on 10 versions. `results.json` → `cost` gives the computed
+  figure for each run. `deploy.py teardown --all` removes everything.

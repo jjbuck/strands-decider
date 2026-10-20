@@ -270,6 +270,7 @@ def main() -> None:
     }
     json.dump(cond, open(os.path.join(a.out, "conditions.json"), "w"), indent=1)
 
+    last_end = 0.0
     for rnd in range(a.rounds):
         order = arms if rnd % 2 == 0 else arms[::-1]
         tag = f"r{rnd}-{time.time():.3f}"
@@ -308,9 +309,12 @@ def main() -> None:
             b.delete_version(arm, pubs[arm]["version"])
         meta["t_versions_deleted"] = time.time()
         time.sleep(a.log_lag)
-        meta["log_events"] = b.save_logs(
-            t0 - 600, time.time()
-        )  # the snapshot's init ran inside publish
+        # Each round's window starts where the last one ended, so no event is saved twice. The snapshot init runs
+        # inside publish_version, after t0, so the round's own window holds it.
+        t_end = time.time()
+        meta["log_window"] = [max(t0, last_end), t_end]
+        meta["log_events"] = b.save_logs(max(t0, last_end), t_end)
+        last_end = t_end
         cond["rounds_meta"].append(meta)
         json.dump(cond, open(os.path.join(a.out, "conditions.json"), "w"), indent=1)
     cond["finished"] = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())

@@ -95,22 +95,31 @@ def load_run(run: str) -> tuple[dict, list[dict]]:
     return cond, rows
 
 
-def snapshot_inits(run: str) -> dict[str, list[dict]]:
+def snapshot_inits(run: str, versions: dict[str, set[str]] | None = None) -> dict[str, list[dict]]:
     """before_snapshot records from the saved CloudWatch logs: the init phases of each published version's
-    snapshot (the init that ran inside publish_version, which no invocation's log tail shows)."""
+    snapshot (the init that ran inside publish_version, which no invocation's log tail shows).
+
+    Lambda's log stream names carry the version (`2026/10/20/[7]...`); with `versions` ({function: {"3", ...}}) only
+    the versions this run published count. Lambda may run more than one snapshot init per version (one per CPU
+    generation it prepares), so each record carries its version and the count per version is reported."""
     out: dict[str, list[dict]] = defaultdict(list)
     d = os.path.join(run, "logs")
     if not os.path.isdir(d):
         return out
     for f in sorted(os.listdir(d)):
+        fn = f.removesuffix(".jsonl.gz")
         seen = set()
         with gzip.open(os.path.join(d, f), "rt") as fh:
             for line in fh:
                 e = json.loads(line)
+                stream = e.get("logStreamName", "")
+                ver = stream.split("[", 1)[1].split("]", 1)[0] if "[" in stream else None
+                if versions is not None and ver not in versions.get(fn, set()):
+                    continue
                 for rec in phases.parse_lkai(e["message"]):
                     if rec.get("kind") == "before_snapshot" and rec.get("wall_ns") not in seen:
                         seen.add(rec.get("wall_ns"))
-                        out[f.removesuffix(".jsonl.gz")].append(rec)
+                        out[fn].append(rec | {"version": ver})
     return out
 
 
@@ -180,10 +189,14 @@ def arm_phases(rows: list[dict], snaps: list[dict]) -> dict:
                 ]
             )
             if snaps:  # the snapshot's own init, measured inside publish_version
+                per_ver: dict[str, int] = defaultdict(int)
+                for s in snaps:
+                    per_ver[str(s.get("version"))] += 1
                 d["snapshot_init"] = {
                     ph: dist([s["init"][ph] for s in snaps if ph in s.get("init", {})])
                     for ph in INIT_PHASES
                 }
+                d["snapshot_inits_per_version"] = dict(sorted(per_ver.items()))
         else:
             d["steady_state_inference"] = d.pop("engine_evaluate")
             per_req = defaultdict(list)
@@ -326,7 +339,16 @@ def by_cpu(rows: list[dict], f) -> dict:
     return {k: dist(v) for k, v in sorted(per.items())}
 
 
-def costs(cond: dict, rows: list[dict]) -> dict:
+def _snap_inits_estimate(cond: dict, snaps: dict[str, list[dict]]) -> int | None:
+    """Snapshot inits across both arms: observed on the instrumented arm, the same per version assumed for the
+    REPORT-only arm (which records none). None when no record was found."""
+    inst = cond["functions"].get("inst", {}).get("FunctionName")
+    if not inst or not snaps.get(inst):
+        return None
+    return len(snaps[inst]) * len(cond["arms"])
+
+
+def costs(cond: dict, rows: list[dict], snap_inits: int | None = None) -> dict:
     mem_gb = cond["functions"][cond["arms"][0]]["MemorySize"] / 1024
     billed_s = sum(r["report"].get("Billed Duration", 0) for r in rows) / 1000
     billed_restore_s = sum(r["report"].get("Billed Restore Duration", 0) for r in rows) / 1000
@@ -341,9 +363,10 @@ def costs(cond: dict, rows: list[dict]) -> dict:
         for p in m.get("published", {}).values()
         if "t_versions_deleted" in m
     )
-    snap_inits = (
-        versions  # each published version runs one init (with a weight download) for its snapshot
-    )
+    # Each snapshot init downloads the weights. The instrumented arm's before_snapshot records count them; the
+    # REPORT-only arm emits none, so it is assumed to run as many per version as the instrumented arm.
+    if snap_inits is None:
+        snap_inits = versions
     p = PRICES
     c = {
         "invocations": len(rows),
@@ -358,6 +381,7 @@ def costs(cond: dict, rows: list[dict]) -> dict:
         "snapstart_cache_usd": round(cache_s * mem_gb * p["snapstart_cache_gb_s"], 4),
         "snapstart_cache_note": "3-hour minimum per version applied",
         "weight_downloads": colds + snap_inits,
+        "snapshot_inits": snap_inits,
         "s3_get_requests_per_download": parts,
         "s3_head_requests_per_download": 1,
         "s3_request_usd": round(
@@ -440,7 +464,11 @@ def compare(rows: list[dict], ref: dict) -> dict:
 
 def summarize(run: str, ref_path: str | None, baseline_commit: str | None, meta: dict) -> dict:
     cond, rows = load_run(run)
-    snaps = snapshot_inits(run)
+    versions = defaultdict(set)
+    for m in cond.get("rounds_meta", []):
+        for arm, pub in m.get("published", {}).items():
+            versions[cond["functions"][arm]["FunctionName"]].add(str(pub["version"]))
+    snaps = snapshot_inits(run, versions)
     arms = {}
     for arm in cond["arms"]:
         fn = cond["functions"][arm]["FunctionName"]
@@ -533,7 +561,7 @@ def summarize(run: str, ref_path: str | None, baseline_commit: str | None, meta:
         "variance": {a: round_medians(by(rows, arm=a)) for a in cond["arms"]},
         "instrumentation_overhead": overhead(rows),
         "errors": {"count": len(errs), "rows": errs},
-        "cost": costs(cond, rows),
+        "cost": costs(cond, rows, _snap_inits_estimate(cond, snaps)),
         "correctness": None,
         "profiling_artifacts": [],
         "artifacts": {
@@ -546,7 +574,7 @@ def summarize(run: str, ref_path: str | None, baseline_commit: str | None, meta:
     }
     if ref_path:
         res["correctness"] = compare(rows, json.load(open(ref_path))["outputs"]) | {
-            "reference": ref_path
+            "reference": os.path.relpath(ref_path, HERE)
         }
     return res
 
