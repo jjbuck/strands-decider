@@ -278,7 +278,7 @@ def main() -> None:
             )
         with ThreadPoolExecutor(len(order)) as ex:
             pubs = dict(
-                zip(order, ex.map(lambda arm, tag=tag: b.publish(arm, tag), order), strict=True)
+                zip(order, ex.map(lambda arm, tag=tag: b.publish(arm, tag), order))  # noqa: B905 (client may be 3.9)
             )
         meta["published"] = pubs
         for arm in order:
