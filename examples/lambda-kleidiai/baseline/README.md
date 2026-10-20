@@ -80,7 +80,8 @@ Each round runs these steps for both arms. The arm order alternates between roun
 
 1. Set a new `COLD_TAG` on `$LATEST`. A configuration change retires every `$LATEST` environment.
 2. **cold**: `CONCURRENCY` simultaneous invokes of `$LATEST`. Each needs a new on-demand environment.
-3. Publish a version from that configuration and wait until its snapshot is ready.
+3. Publish a version from that configuration and wait until its state is `Active` and
+   `SnapStart.OptimizationStatus` is `On`.
 4. **restore**: `CONCURRENCY` simultaneous invokes of that version. Each restores a new environment.
 5. **warm**: `WARM` passes per arm on that version. A pass is `CONCURRENCY` simultaneous invokes of one request,
    so it reuses every environment the restore wave created, on whatever Graviton generations it drew. The arms

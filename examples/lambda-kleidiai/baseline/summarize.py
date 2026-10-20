@@ -189,14 +189,10 @@ def arm_phases(rows: list[dict], snaps: list[dict]) -> dict:
                 ]
             )
             if snaps:  # the snapshot's own init, measured inside publish_version
-                per_ver: dict[str, int] = defaultdict(int)
-                for s in snaps:
-                    per_ver[str(s.get("version"))] += 1
                 d["snapshot_init"] = {
                     ph: dist([s["init"][ph] for s in snaps if ph in s.get("init", {})])
                     for ph in INIT_PHASES
                 }
-                d["snapshot_inits_per_version"] = dict(sorted(per_ver.items()))
         else:
             d["steady_state_inference"] = d.pop("engine_evaluate")
             per_req = defaultdict(list)
@@ -418,6 +414,13 @@ def _flat(ans: dict) -> dict[str, float | str]:
     return flat
 
 
+def _paths(v: object, prefix: str = "") -> set[str]:
+    """Every leaf key path in an answer object, so an unknown field is part of its shape."""
+    if isinstance(v, dict):
+        return set().union(*(_paths(x, f"{prefix}.{k}") for k, x in v.items())) or {prefix}
+    return {prefix}
+
+
 def reference(rows: list[dict]) -> dict:
     """One answer set per (request, cpu_part): within a Graviton generation outputs repeat exactly (README)."""
     ref: dict = {}
@@ -428,8 +431,12 @@ def reference(rows: list[dict]) -> dict:
 
 
 def compare(rows: list[dict], ref: dict) -> dict:
-    """Max |delta| of every numeric field and choice agreement vs the reference, same CPU part only."""
-    worst, flips, n, missing, exact = 0.0, 0, 0, 0, 0
+    """Compare complete answer payloads vs the reference for the same request and CPU part.
+
+    Numeric deltas are still reported for diagnosis, but bit-identical means the whole answer object matches.
+    Missing or extra fields therefore cannot be silently certified as equal.
+    """
+    worst, flips, n, missing, exact, shape_mismatches = 0.0, 0, 0, 0, 0, 0
     for rid, items in answers_by_request(rows).items():
         for it in items:
             base = ref.get(rid, {}).get(it["cpu_part"] or "?")
@@ -437,28 +444,27 @@ def compare(rows: list[dict], ref: dict) -> dict:
                 missing += 1
                 continue
             n += 1
-            a, b = _flat(it["answers"]), _flat(base)
-            same = True
-            for k, v in b.items():
-                w = a.get(k)
-                if isinstance(v, str):
-                    if w != v:
+            current = it["answers"]
+            a, b = _flat(current), _flat(base)
+            same = current == base
+            if _paths(current) != _paths(base):
+                shape_mismatches += 1
+            for k in set(a) | set(b):
+                v, w = b.get(k), a.get(k)
+                if isinstance(v, str) or isinstance(w, str):
+                    if v != w and k.endswith(".choice"):
                         flips += 1
-                        same = False
-                elif w is None:
-                    same = False
-                else:
-                    d = abs(float(w) - float(v))
-                    worst = max(worst, d)
-                    same &= d == 0
+                elif v is not None and w is not None:
+                    worst = max(worst, abs(float(w) - float(v)))
             exact += same
     return {
         "compared": n,
         "bit_identical": exact,
         "choice_flips": flips,
         "max_abs_delta": worst,
+        "answer_shape_mismatches": shape_mismatches,
         "no_reference_for_cpu_part": missing,
-        "method": "same request id and same CPU part as the reference",
+        "method": "complete answer object, same request id and same CPU part as the reference",
     }
 
 
@@ -470,9 +476,16 @@ def summarize(run: str, ref_path: str | None, baseline_commit: str | None, meta:
             versions[cond["functions"][arm]["FunctionName"]].add(str(pub["version"]))
     snaps = snapshot_inits(run, versions)
     arms = {}
+    # Counts, not distributions, so they sit under cost: lkai-result/1 allows only distributions under phases.
+    snaps_per_version: dict[str, dict[str, int]] = {}
     for arm in cond["arms"]:
         fn = cond["functions"][arm]["FunctionName"]
         arms[arm] = arm_phases(by(rows, arm=arm), snaps.get(fn, []))
+        per_ver: dict[str, int] = defaultdict(int)
+        for s in snaps.get(fn, []):
+            per_ver[str(s.get("version"))] += 1
+        if per_ver:
+            snaps_per_version[arm] = dict(sorted(per_ver.items()))
     errs = [
         {
             "arm": r["arm"],
@@ -504,6 +517,7 @@ def summarize(run: str, ref_path: str | None, baseline_commit: str | None, meta:
         "schema": "lkai-result/1",
         "experiment_id": meta.get("experiment_id", "P1-baseline"),
         "run_id": os.path.basename(os.path.normpath(run)),
+        "status": meta.get("status", "baseline"),
         "hypothesis": meta.get(
             "hypothesis", "Baseline: no change. Pins the reference all experiments compare against."
         ),
@@ -561,7 +575,8 @@ def summarize(run: str, ref_path: str | None, baseline_commit: str | None, meta:
         "variance": {a: round_medians(by(rows, arm=a)) for a in cond["arms"]},
         "instrumentation_overhead": overhead(rows),
         "errors": {"count": len(errs), "rows": errs},
-        "cost": costs(cond, rows, _snap_inits_estimate(cond, snaps)),
+        "cost": costs(cond, rows, _snap_inits_estimate(cond, snaps))
+        | {"snapshot_inits_per_version": snaps_per_version},
         "correctness": None,
         "profiling_artifacts": [],
         "artifacts": {

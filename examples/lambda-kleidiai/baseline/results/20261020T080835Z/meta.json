@@ -1,0 +1,11 @@
+{
+ "experiment_id": "P1-baseline",
+ "status": "baseline",
+ "hypothesis": "None: the pinned reference. Every experiment changes one variable against this deployment and request set.",
+ "changed_variable": null,
+ "conclusion": "Baseline pinned. Cold start is dominated by the weight download (p50 25.0 s of 36.0 s, 79 MiB/s from one environment) and mmap/model load (8.4 s). SnapStart restore p50 3.3 s plus a 0.67 s first request on Graviton3. Warm engine p50 0.62 s on Graviton3, 1.07 s on Graviton2. Run-to-run CV of per-round medians: cold 0.4%, restore 2.6%, warm 5.4% (instrumented arm). Instrumentation overhead within matched CPU parts is below the run-to-run spread on every class. 1,200 invocations, 0 errors, 0 class mismatches, answers bit-identical per CPU part.",
+ "reproduce": [
+  "git fetch https://github.com/jsamuel1/strands-decider feat/lambda-kleidiai-baseline && git checkout <commit of this file>",
+  "AWS_PROFILE=<profile> examples/lambda-kleidiai/baseline/run.sh <run-id>   # arm64 Linux host with Docker"
+ ]
+}

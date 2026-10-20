@@ -2,6 +2,7 @@
  "schema": "lkai-result/1",
  "experiment_id": "P1-baseline",
  "run_id": "20261020T080835Z",
+ "status": "baseline",
  "hypothesis": "None: the pinned reference. Every experiment changes one variable against this deployment and request set.",
  "changed_variable": null,
  "commits": {
@@ -1958,13 +1959,6 @@
        ]
       }
      }
-    },
-    "snapshot_inits_per_version": {
-     "3": 2,
-     "4": 2,
-     "5": 2,
-     "6": 2,
-     "7": 2
     },
     "engine_by_cpu_part": {
      "0xd0c": {
@@ -4249,15 +4243,25 @@
    "s3_standard_gb_month": 0.023,
    "source": "aws.amazon.com/lambda/pricing, aws.amazon.com/s3/pricing (us-east-2)"
   },
-  "total_usd": 2.3806
+  "total_usd": 2.3806,
+  "snapshot_inits_per_version": {
+   "inst": {
+    "3": 2,
+    "4": 2,
+    "5": 2,
+    "6": 2,
+    "7": 2
+   }
+  }
  },
  "correctness": {
   "compared": 1200,
   "bit_identical": 1200,
   "choice_flips": 0,
   "max_abs_delta": 0.0,
+  "answer_shape_mismatches": 0,
   "no_reference_for_cpu_part": 0,
-  "method": "same request id and same CPU part as the reference",
+  "method": "complete answer object, same request id and same CPU part as the reference",
   "reference": "reference/outputs.json"
  },
  "profiling_artifacts": [],

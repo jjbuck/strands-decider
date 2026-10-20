@@ -17,6 +17,17 @@ PY=${PYTHON:-python3}
 
 "$HERE/build.sh"
 "$PY" "$HERE/deploy.py" up --region "$REGION" --prefix "${PREFIX:-lkai-p1}"
+# Published versions incur SnapStart cache charges even if a later benchmark or summary step fails.
+# Arm cleanup immediately after deploy; explicit TEARDOWN=none is the only opt-out.
+cleanup_versions() {
+  case "${TEARDOWN:-versions}" in
+    versions) "$PY" "$HERE/deploy.py" teardown --region "$REGION" ;;
+    all) "$PY" "$HERE/deploy.py" teardown --all --region "$REGION" ;;
+    none) ;;
+    *) echo "TEARDOWN must be versions, all, or none" >&2; return 2 ;;
+  esac
+}
+trap cleanup_versions EXIT
 "$PY" "$HERE/bench.py" --region "$REGION" --rounds "${ROUNDS:-5}" --concurrency "${CONCURRENCY:-10}" \
   --warm "${WARM:-10}" --out "$RAW"
 REF=$HERE/reference/outputs.json
@@ -31,8 +42,9 @@ ACCOUNT=$(aws sts get-caller-identity --query Account --output text)
 "$PY" "$HERE/redact.py" "$RAW" "$HERE/results/$RUN_ID" --bucket "$BUCKET" --account "$ACCOUNT"
 [ -f "$REF" ] || "$PY" "$HERE/redact.py" "$HERE/build/outputs.json" "$REF" --bucket "$BUCKET" --account "$ACCOUNT"
 cp "$HERE/build/manifest.json" "$HERE/results/$RUN_ID/build-manifest.json"
-case "${TEARDOWN:-versions}" in
-  versions) "$PY" "$HERE/deploy.py" teardown --region "$REGION" ;;
-  all) "$PY" "$HERE/deploy.py" teardown --all --region "$REGION" ;;
-esac
+# P2's validator (examples/lambda-kleidiai/results/, PR #2) checks the file against lkai-result/1 once it has landed.
+P2=$HERE/../results/publish_result.py
+[ ! -f "$P2" ] || "$PY" "$P2" --validate-only "$HERE/results/$RUN_ID/results.json"
+cleanup_versions
+trap - EXIT
 echo "RUN_DONE $HERE/results/$RUN_ID/results.json"

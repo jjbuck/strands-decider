@@ -1,5 +1,6 @@
 {
  "experiment_id": "P1-baseline",
+ "status": "baseline",
  "hypothesis": "None: the pinned reference. Every experiment changes one variable against this deployment and request set.",
  "changed_variable": null,
  "conclusion": null,

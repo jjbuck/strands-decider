@@ -10,11 +10,13 @@ from __future__ import annotations
 
 import gzip
 import importlib
+import importlib.util
 import json
 import os
 import sys
 import types
 from concurrent.futures import Future
+from pathlib import Path
 
 import pytest
 
@@ -23,6 +25,31 @@ sys.path.insert(0, os.path.abspath(BASE))
 
 import phases  # noqa: E402
 import summarize  # noqa: E402
+
+
+@pytest.fixture(autouse=True)
+def _aws_sdk_stand_ins(monkeypatch):
+    """deploy.py and bench.py import boto3/botocore at module level; the test env need not have them. The tests
+    replace every client they touch, so empty stand-ins suffice when the SDK is absent."""
+    if importlib.util.find_spec("boto3") and importlib.util.find_spec("botocore"):
+        return
+    boto3 = types.ModuleType("boto3")
+    boto3.Session = lambda **kw: None
+    boto3.__version__ = "stand-in"
+    botocore = types.ModuleType("botocore")
+    exc = types.ModuleType("botocore.exceptions")
+    exc.ClientError = type("ClientError", (Exception,), {})
+    cfg = types.ModuleType("botocore.config")
+    cfg.Config = lambda **kw: None
+    for name, mod in {
+        "boto3": boto3,
+        "botocore": botocore,
+        "botocore.exceptions": exc,
+        "botocore.config": cfg,
+    }.items():
+        monkeypatch.setitem(sys.modules, name, mod)
+    for m in ("deploy", "bench"):
+        monkeypatch.delitem(sys.modules, m, raising=False)
 
 
 def test_parse_report_reads_lambda_fields():
@@ -91,7 +118,132 @@ def test_enabled_flag():
     assert not phases.enabled({"LKAI_PHASES": "0"})
 
 
+def test_wait_updated_waits_for_snapstart_optimization(monkeypatch):
+    import deploy
+
+    responses = [
+        {
+            "State": "Active",
+            "LastUpdateStatus": "Successful",
+            "SnapStart": {"ApplyOn": "PublishedVersions", "OptimizationStatus": "Off"},
+        },
+        {
+            "State": "Active",
+            "LastUpdateStatus": "Successful",
+            "SnapStart": {"ApplyOn": "PublishedVersions", "OptimizationStatus": "On"},
+        },
+    ]
+
+    class Lambda:
+        def get_function_configuration(self, **kwargs):
+            assert kwargs == {"FunctionName": "fn", "Qualifier": "7"}
+            return responses.pop(0)
+
+    sleeps = []
+    monkeypatch.setattr(deploy.time, "sleep", sleeps.append)
+    got = deploy.wait_updated(Lambda(), "fn", "7")
+    assert got["SnapStart"]["OptimizationStatus"] == "On"
+    assert sleeps == [3]
+    assert responses == []
+
+
+def test_run_script_arms_cleanup_trap_before_benchmark():
+    script = (Path(BASE) / "run.sh").read_text()
+    deploy = script.index('"$PY" "$HERE/deploy.py" up')
+    trap = script.index("trap cleanup_versions EXIT")
+    bench = script.index('"$PY" "$HERE/bench.py"')
+    assert deploy < trap < bench
+    assert "TEARDOWN must be versions, all, or none" in script
+
+
+def test_bench_deletes_published_versions_if_later_publish_fails(tmp_path, monkeypatch):
+    import bench
+
+    class FakeLambda:
+        def get_function_configuration(self, FunctionName):
+            return {
+                "FunctionName": FunctionName,
+                "Runtime": "python3.12",
+                "Architectures": ["arm64"],
+                "MemorySize": 10240,
+                "Timeout": 900,
+                "EphemeralStorage": {"Size": 512},
+                "SnapStart": {"ApplyOn": "PublishedVersions"},
+                "Handler": "lkai_entry.handler",
+                "CodeSha256": "eg==",
+                "CodeSize": 1,
+                "Environment": {"Variables": {}},
+            }
+
+        def get_runtime_management_config(self, FunctionName):
+            return {}
+
+    deleted = []
+
+    class FakeBench:
+        def __init__(self, *args, **kwargs):
+            self.lam = FakeLambda()
+            self.order = ["probe"]
+
+        def set_cold_tag(self, arm, tag):
+            pass
+
+        def wave(self, *args, **kwargs):
+            return [{"error": None, "rt_s": 1.0}]
+
+        def publish(self, arm, tag):
+            if arm == "rep":
+                raise RuntimeError("publish failed")
+            return {"version": "7", "publish_s": 1.0}
+
+        def delete_version(self, arm, version):
+            deleted.append((arm, version))
+
+    state = {
+        "region": "us-east-2",
+        "functions": {a: {"name": a} for a in ("inst", "rep")},
+        "manifest": {"function_zip": {"sha256": "7a"}},
+    }
+    monkeypatch.setattr(bench.deploy, "load_state", lambda build: state)
+    monkeypatch.setattr(bench.deploy, "b64_to_hex", lambda value: "7a")
+    monkeypatch.setattr(bench.boto3, "Session", lambda **kwargs: object())
+    monkeypatch.setattr(bench, "Bench", FakeBench)
+    monkeypatch.setattr(
+        sys,
+        "argv",
+        ["bench.py", "--out", str(tmp_path), "--rounds", "1", "--concurrency", "1"],
+    )
+    with pytest.raises(RuntimeError, match="publish failed"):
+        bench.main()
+    assert deleted == [("inst", "7")]
+
+
 # ------------------------------------------------------------------ entry point against stand-ins
+
+
+def test_publish_deletes_version_if_snapshot_wait_fails(monkeypatch):
+    import bench
+
+    deleted = []
+
+    class Lam:
+        def publish_version(self, FunctionName, Description):
+            return {"Version": "9"}
+
+        def delete_function(self, FunctionName, Qualifier):
+            deleted.append((FunctionName, Qualifier))
+
+    b = bench.Bench.__new__(bench.Bench)
+    b.lam, b.st = Lam(), {"functions": {"inst": {"name": "fn"}}}
+
+    def fail(*args):
+        raise SystemExit("fn:9: unexpected SnapStart optimization status 'Failed'")
+
+    monkeypatch.setattr(bench.deploy, "wait_updated", fail)
+    with pytest.raises(SystemExit):
+        b.publish("inst", "t")
+    assert deleted == [("fn", "9")]
+
 
 ANSWER = {"q": {"type": "noul", "noul": 0.25}}
 
@@ -422,7 +574,9 @@ def test_summarize_end_to_end(tmp_path):
     assert inst["cold"]["weight_download"]["p50"] == 25.0
     assert inst["cold"]["first_request_total"]["p50"] == 40.0
     assert inst["restore"]["snapshot_init"]["weight_download"]["p50"] == 3.0
-    assert inst["restore"]["snapshot_inits_per_version"] == {"3": 1}
+    assert "snapshot_inits_per_version" not in inst["restore"]  # counts, not distributions
+    assert res["cost"]["snapshot_inits_per_version"] == {"inst": {"3": 1}}
+    assert res["status"] == "baseline" and res["changed_variable"] is None
     assert res["cost"]["snapshot_inits"] == 2  # one observed on inst, the same assumed for rep
     assert set(inst["warm"]["steady_state_by_request"]) == {"r1", "r2"}
     assert (
@@ -477,5 +631,13 @@ def test_reference_and_compare():
     diff = summarize.compare([_row("inst", 0, "warm", answers=b)], ref)
     assert diff["choice_flips"] == 1 and diff["bit_identical"] == 0
     assert diff["max_abs_delta"] == pytest.approx(0.3)
+    extra = {**a, "q": {**a["q"], "unexpected": 1}}
+    extra_result = summarize.compare([_row("inst", 0, "warm", answers=extra)], ref)
+    assert extra_result["bit_identical"] == 0
+    assert extra_result["answer_shape_mismatches"] == 1
+    missing_field = {"q": {"type": "choice", "choice": "x"}}
+    missing_result = summarize.compare([_row("inst", 0, "warm", answers=missing_field)], ref)
+    assert missing_result["bit_identical"] == 0
+    assert missing_result["answer_shape_mismatches"] == 1
     other = summarize.compare([_row("inst", 0, "warm", answers=a, cpu="0xd4f")], ref)
     assert other["no_reference_for_cpu_part"] == 1 and other["compared"] == 0

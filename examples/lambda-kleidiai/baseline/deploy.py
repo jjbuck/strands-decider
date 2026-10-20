@@ -52,6 +52,7 @@ def save_state(build: str, st: dict) -> None:
 
 
 def wait_updated(lam, name: str, qualifier: str | None = None) -> dict:
+    """Wait until a function/configuration is usable and a published version's snapshot is ready."""
     q = {"Qualifier": qualifier} if qualifier else {}
     while True:
         c = lam.get_function_configuration(FunctionName=name, **q)
@@ -62,6 +63,13 @@ def wait_updated(lam, name: str, qualifier: str | None = None) -> dict:
             sys.exit(
                 f"{name}:{qualifier}: {c['State']} {c.get('StateReason')} {c.get('LastUpdateStatusReason')}"
             )
+        if qualifier and c.get("SnapStart", {}).get("ApplyOn") == "PublishedVersions":
+            status = c["SnapStart"].get("OptimizationStatus")
+            if status == "Off":
+                time.sleep(3)
+                continue
+            if status != "On":
+                sys.exit(f"{name}:{qualifier}: unexpected SnapStart optimization status {status!r}")
         return c
 
 

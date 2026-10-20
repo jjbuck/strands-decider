@@ -10,6 +10,7 @@ Percentiles are nearest-rank, so with fewer than 100 samples `p99` equals `max`.
 | Key | Brief field | Contents |
 |---|---|---|
 | `experiment_id`, `run_id` | | `P1-baseline` for the baseline; the run directory name |
+| `status` | outcome | `baseline` for P1; experiments use P2's `improved`, `no-change`, `regressed`, `inconclusive` or `failed`. From `meta.json` |
 | `hypothesis` | hypothesis | from `meta.json` |
 | `changed_variable` | the single changed variable | `null` for the baseline |
 | `commits.experiment`, `commits.baseline` | baseline and experiment SHAs | the commit `build.sh` built from (with `repo_dirty_at_build`), and `--baseline-commit` |
@@ -22,9 +23,14 @@ Percentiles are nearest-rank, so with fewer than 100 samples `p99` equals `max`.
 | `variance.<arm>.<class>` | run-to-run variance | per-round medians of the class's headline number, with their median, range, stdev and CV |
 | `instrumentation_overhead` | | instrumented minus REPORT-only, within each CPU part both arms ran on, pooled |
 | `errors` | errors | count and rows (arm, round, wave, error, detail) |
-| `cost` | cost and resource observations | invocations, cold starts, restores, versions, billed duration and billed restore duration, Lambda duration and request cost, SnapStart cache (3-hour minimum per version) and restore cost, S3 GET/HEAD count and cost per download, GB moved, storage per month, and the price table used. `report_max_memory_mb` sits under `phases` |
-| `correctness` | correctness vs baseline outputs | `compared`, `bit_identical`, `choice_flips`, `max_abs_delta`, and rows with no reference for that CPU part, against `reference/outputs.json` |
+| `cost` | cost and resource observations | invocations, cold starts, restores, versions, billed duration and billed restore duration, Lambda duration and request cost, SnapStart cache (3-hour minimum per version) and restore cost, S3 GET/HEAD count and cost per download, GB moved, storage per month, `snapshot_inits_per_version.<arm>` (observed `before_snapshot` records per published version), and the price table used. `report_max_memory_mb` sits under `phases` |
+| `correctness` | correctness vs baseline outputs | `compared`, `bit_identical` (complete answer-object equality), `choice_flips`, `max_abs_delta`, `answer_shape_mismatches`, and rows with no reference for that CPU part, against `reference/outputs.json` |
 | `profiling_artifacts` | profiling artifact links | empty for P1 (P3 adds profilers) |
 | `artifacts` | | relative paths of the raw evidence: `invocations.jsonl`, `logs/`, `conditions.json` |
 | `reproduce` | exact reproducible commands | from `meta.json` |
 | `conclusion` | conclusion | from `meta.json`. A failed or null result is still a result: it keeps its errors and is published |
+
+`results/<run-id>/meta.json` is the meta that run was summarized with, so `summarize.py results/<run-id> --reference
+reference/outputs.json --meta results/<run-id>/meta.json --baseline-commit <sha>` regenerates its `results.json` from the
+committed evidence. When P2's `examples/lambda-kleidiai/results/publish_result.py` is present, `run.sh` validates the new
+file with `--validate-only`; publish it to the store and dashboard with that script (see its README).

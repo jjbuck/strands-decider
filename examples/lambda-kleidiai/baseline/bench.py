@@ -156,7 +156,12 @@ class Bench:
         name = self.st["functions"][arm]["name"]
         t = time.time()
         v = self.lam.publish_version(FunctionName=name, Description=f"COLD_TAG {tag}")["Version"]
-        c = deploy.wait_updated(self.lam, name, v)
+        # wait_updated can sys.exit, and the caller never learns v, so delete the version here.
+        try:
+            c = deploy.wait_updated(self.lam, name, v)
+        except BaseException:
+            self.delete_version(arm, v)
+            raise
         return {
             "arm": arm,
             "version": v,
@@ -276,38 +281,50 @@ def main() -> None:
         tag = f"r{rnd}-{time.time():.3f}"
         t0 = time.time()
         meta = {"round": rnd, "order": order, "cold_tag": tag, "t0": t0}
-        with ThreadPoolExecutor(len(order)) as ex:
-            list(ex.map(lambda arm, tag=tag: b.set_cold_tag(arm, tag), order))
-        for arm in order:
-            recs = b.wave(arm, "$LATEST", rnd, "cold")
-            print(
-                f"r{rnd} {arm} cold: ok {sum(not r['error'] for r in recs)}/{len(recs)} "
-                f"rt median {sorted(r['rt_s'] for r in recs)[len(recs) // 2]:.2f}s",
-                flush=True,
-            )
-        with ThreadPoolExecutor(len(order)) as ex:
-            pubs = dict(
-                zip(order, ex.map(lambda arm, tag=tag: b.publish(arm, tag), order))  # noqa: B905 (client may be 3.9)
-            )
-        meta["published"] = pubs
-        for arm in order:
-            recs = b.wave(arm, pubs[arm]["version"], rnd, "restore")
-            print(
-                f"r{rnd} {arm} restore (v{pubs[arm]['version']}, publish {pubs[arm]['publish_s']}s): ok "
-                f"{sum(not r['error'] for r in recs)}/{len(recs)} "
-                f"rt median {sorted(r['rt_s'] for r in recs)[len(recs) // 2]:.2f}s",
-                flush=True,
-            )
-        for i in range(a.warm):
-            # One pass = `concurrency` simultaneous invokes per arm, so they land on every environment the restore
-            # wave created (and so on every Graviton generation it drew), not on one reused environment.
-            rid = b.order[i % len(b.order)]
-            for arm in order if i % 2 == 0 else order[::-1]:
-                b.wave(arm, pubs[arm]["version"], rnd, "warm", rid=rid, seq0=i * a.concurrency)
-        print(f"r{rnd} warm: {a.warm} passes x {a.concurrency} per arm", flush=True)
-        for arm in order:
-            b.delete_version(arm, pubs[arm]["version"])
-        meta["t_versions_deleted"] = time.time()
+        published: dict[str, dict] = {}
+        try:
+            with ThreadPoolExecutor(len(order)) as ex:
+                list(ex.map(lambda arm, tag=tag: b.set_cold_tag(arm, tag), order))
+            for arm in order:
+                recs = b.wave(arm, "$LATEST", rnd, "cold")
+                print(
+                    f"r{rnd} {arm} cold: ok {sum(not r['error'] for r in recs)}/{len(recs)} "
+                    f"rt median {sorted(r['rt_s'] for r in recs)[len(recs) // 2]:.2f}s",
+                    flush=True,
+                )
+            # Publish sequentially so each created version is recorded before another operation can fail.
+            # The outer run.sh trap is the final cleanup guard; this finally also makes bench.py safe standalone.
+            for arm in order:
+                published[arm] = b.publish(arm, tag)
+            meta["published"] = published
+            for arm in order:
+                recs = b.wave(arm, published[arm]["version"], rnd, "restore")
+                print(
+                    f"r{rnd} {arm} restore (v{published[arm]['version']}, "
+                    f"publish {published[arm]['publish_s']}s): ok "
+                    f"{sum(not r['error'] for r in recs)}/{len(recs)} "
+                    f"rt median {sorted(r['rt_s'] for r in recs)[len(recs) // 2]:.2f}s",
+                    flush=True,
+                )
+            for i in range(a.warm):
+                # One pass = `concurrency` simultaneous invokes per arm, so they land on every environment the
+                # restore wave created (and so on every Graviton generation it drew), not on one reused environment.
+                rid = b.order[i % len(b.order)]
+                for arm in order if i % 2 == 0 else order[::-1]:
+                    b.wave(
+                        arm,
+                        published[arm]["version"],
+                        rnd,
+                        "warm",
+                        rid=rid,
+                        seq0=i * a.concurrency,
+                    )
+            print(f"r{rnd} warm: {a.warm} passes x {a.concurrency} per arm", flush=True)
+        finally:
+            for arm, pub in published.items():
+                b.delete_version(arm, pub["version"])
+            if published:
+                meta["t_versions_deleted"] = time.time()
         time.sleep(a.log_lag)
         # Each round's window starts where the last one ended, so no event is saved twice. The snapshot init runs
         # inside publish_version, after t0, so the round's own window holds it.
