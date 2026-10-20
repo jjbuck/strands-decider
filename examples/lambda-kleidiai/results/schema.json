@@ -13,6 +13,8 @@
     "changed_variable",
     "commits",
     "errors",
+    "artifacts",
+    "profiling_artifacts",
     "reproduce",
     "conclusion"
   ],
@@ -34,13 +36,12 @@
     },
     "hypothesis": {"type": "string", "minLength": 1},
     "changed_variable": {
-      "description": "null only for the baseline. A name, or {name, baseline, experiment}.",
+      "description": "null only for the baseline. Experiments use {name, baseline, experiment}.",
       "anyOf": [
         {"type": "null"},
-        {"type": "string", "minLength": 1},
         {
           "type": "object",
-          "required": ["name"],
+          "required": ["name", "baseline", "experiment"],
           "properties": {"name": {"type": "string", "minLength": 1}}
         }
       ]
@@ -56,7 +57,7 @@
     },
     "deployment": {
       "type": "object",
-      "required": ["region", "runtime", "architecture", "memory_mb"],
+      "required": ["region", "az", "runtime", "runtime_version_arn", "architecture", "memory_mb"],
       "properties": {
         "region": {"type": "string", "minLength": 1},
         "runtime": {"type": "string", "minLength": 1},
@@ -70,7 +71,7 @@
     },
     "model": {
       "type": "object",
-      "required": ["id", "format"],
+      "required": ["id", "revision", "format"],
       "properties": {
         "id": {"type": "string", "minLength": 1},
         "revision": {"type": ["string", "null"]},
@@ -155,6 +156,7 @@
     "artifacts": {
       "description": "name -> run-relative path (a file, or a directory ending in /). publish uploads them under the run's own prefix.",
       "type": "object",
+      "minProperties": 1,
       "additionalProperties": {"type": "string", "minLength": 1}
     },
     "reproduce": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
@@ -169,14 +171,19 @@
       "if": {"properties": {"status": {"enum": ["improved", "no-change", "regressed", "inconclusive", "baseline"]}}},
       "then": {
         "required": ["deployment", "model", "conditions", "classification", "phases", "cost", "correctness", "profiling_artifacts", "artifacts"],
-        "properties": {"phases": {"minProperties": 1}}
+        "properties": {
+          "phases": {"minProperties": 1},
+          "cost": {
+            "required": ["billed_duration_s", "total_usd", "s3_request_usd", "s3_gb_transferred"]
+          }
+        }
       }
     },
     {
       "if": {"properties": {"status": {"enum": ["improved", "no-change", "regressed", "inconclusive", "failed"]}}},
       "then": {
         "properties": {
-          "changed_variable": {"anyOf": [{"type": "string", "minLength": 1}, {"type": "object"}]},
+          "changed_variable": {"type": "object"},
           "conclusion": {"type": "string", "minLength": 1}
         }
       }
@@ -189,7 +196,7 @@
   "$defs": {
     "dist": {
       "type": "object",
-      "required": ["n", "p50", "p90", "p99", "min", "max"],
+      "required": ["unit", "n", "p50", "p90", "p99", "min", "max", "histogram"],
       "properties": {
         "unit": {"type": "string"},
         "n": {"type": "integer", "minimum": 1},

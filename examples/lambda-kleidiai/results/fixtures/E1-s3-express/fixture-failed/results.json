@@ -19,6 +19,7 @@
    "rep"
   ],
   "concurrency": 10,
+  "finished": "2026-10-20T00:30:00Z",
   "request_ids": [
    "probe",
    "r1",
@@ -73,6 +74,7 @@
   "revision": "216d1ccb"
  },
  "phases": {},
+ "profiling_artifacts": [],
  "reproduce": [
   "FIXTURE: no command; synthetic data from results/fixtures/make_fixtures.py"
  ],

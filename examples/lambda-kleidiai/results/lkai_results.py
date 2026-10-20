@@ -35,6 +35,14 @@ ID_RE = re.compile(r"^[A-Za-z0-9][A-Za-z0-9._-]*$")
 ACCOUNT_RE = re.compile(r"arn:aws[a-z-]*:[a-z0-9-]*:[a-z0-9-]*:\d{12}:|\b\d{12}\b")
 STATUSES = ("baseline", "improved", "no-change", "regressed", "inconclusive", "failed")
 CLASSES = ("cold", "restore", "warm")
+REQUIRED_PHASES = {
+    "weight_download",
+    "model_load_mmap",
+    "model_ready",
+    "first_request_inference",
+    "steady_state_inference",
+    "report_restore_duration",
+}
 # The overview's headline phase per start class, and the brief's phases in display order.
 HEADLINE = {
     "cold": "first_request_total",
@@ -214,6 +222,17 @@ def _strings(v: Any, path: str = "$") -> Iterator[tuple[str, str]]:
             yield from _strings(x, f"{path}[{i}]")
 
 
+def _numbers(v: Any, path: str = "$") -> Iterator[tuple[str, int | float]]:
+    if isinstance(v, (int, float)) and not isinstance(v, bool):
+        yield path, v
+    elif isinstance(v, dict):
+        for k, x in v.items():
+            yield from _numbers(x, f"{path}.{k}")
+    elif isinstance(v, list):
+        for i, x in enumerate(v):
+            yield from _numbers(x, f"{path}[{i}]")
+
+
 def safe_relpath(p: str) -> bool:
     n = os.path.normpath(p)
     return bool(p) and not os.path.isabs(p) and n != ".." and not n.startswith("../")
@@ -225,7 +244,13 @@ def validate(res: Any, schema: dict | None = None) -> list[str]:
     errs = _schema_errors(res, schema, schema, "$")
     if errs or not isinstance(res, dict):
         return errs
+    for path, n in _numbers(res):
+        if isinstance(n, float) and not math.isfinite(n):
+            errs.append(f"{path}: number must be finite")
     for path, d in _walk_dists(res.get("phases", {})):
+        if not all(math.isfinite(d[k]) for k in ("p50", "p90", "p99", "min", "max")):
+            errs.append(f"{path}: distribution values must be finite")
+            continue
         if not d["min"] <= d["p50"] <= d["p90"] <= d["p99"] <= d["max"]:
             errs.append(f"{path}: percentiles out of order (min<=p50<=p90<=p99<=max)")
         h = d.get("histogram")
@@ -241,6 +266,39 @@ def validate(res: Any, schema: dict | None = None) -> list[str]:
         errs.append("$.errors: count is less than the number of rows")
     if res["status"] == "baseline" and res["changed_variable"] is not None:
         errs.append("$.changed_variable: a baseline changes nothing (null)")
+    if res["status"] != "failed":
+        phases = res.get("phases") or {}
+        classes = {
+            cls
+            for arm in phases.values()
+            for cls in arm
+            if cls in CLASSES
+        }
+        for cls in CLASSES:
+            if cls not in classes:
+                errs.append(f"$.phases: missing {cls!r} start class")
+        phase_names = {
+            name
+            for arm in phases.values()
+            for cls in arm.values()
+            for name, value in cls.items()
+            if is_dist(value)
+            or (isinstance(value, dict) and any(is_dist(x) for x in value.values()))
+        }
+        for name in sorted(REQUIRED_PHASES - phase_names):
+            errs.append(f"$.phases: missing required phase {name!r}")
+        conditions = res.get("conditions") or {}
+        if not conditions.get("request_ids"):
+            errs.append("$.conditions.request_ids: needs at least one fixed request id")
+        if not conditions.get("started") or not conditions.get("finished"):
+            errs.append("$.conditions: started and finished timestamps are required")
+        if not any(
+            is_dist(v) and v.get("unit") == "MB"
+            for arm in phases.values()
+            for cls in arm.values()
+            for v in cls.values()
+        ):
+            errs.append("$.phases: report_max_memory_mb distribution is required")
     for name, p in (res.get("artifacts") or {}).items():
         if not safe_relpath(p):
             errs.append(f"$.artifacts.{name}: {p!r} must be relative to the run directory")
@@ -398,15 +456,21 @@ def _ctype(path: str) -> str:
 
 
 def _artifact_files(run_dir: str, rel: str) -> list[str]:
+    root = os.path.realpath(run_dir)
     p = os.path.join(run_dir, rel)
+    resolved = os.path.realpath(p)
+    if os.path.commonpath((root, resolved)) != root:
+        raise ValueError(f"artifact {rel!r} resolves outside the run directory {run_dir}")
+
+    def checked(path: str) -> str:
+        if os.path.commonpath((root, os.path.realpath(path))) != root:
+            raise ValueError(f"artifact {path!r} resolves outside the run directory {run_dir}")
+        return os.path.relpath(path, run_dir).replace(os.sep, "/")
+
     if os.path.isdir(p):
-        return sorted(
-            os.path.relpath(os.path.join(d, f), run_dir).replace(os.sep, "/")
-            for d, _, fs in os.walk(p)
-            for f in fs
-        )
+        return sorted(checked(os.path.join(d, f)) for d, _, fs in os.walk(p) for f in fs)
     if os.path.isfile(p):
-        return [os.path.normpath(rel).replace(os.sep, "/")]
+        return [checked(p)]
     return []
 
 
@@ -428,18 +492,22 @@ def publish_run(
 ) -> PublishReport:
     """Upload one run's artifacts and result.json under runs/<experiment_id>/<run_id>/ and nowhere else.
 
-    Idempotent: an object already holding the same bytes is skipped, so re-running publish is safe. A run whose
-    result.json already exists with different content is refused unless `replace` (run ids are meant to be
-    unique; overwriting someone else's measurements by accident is the failure this prevents)."""
+    Idempotent: an object already holding the same bytes is skipped, so re-running publish is safe. Validation
+    requires every listed raw artifact to exist before any object is uploaded. A run whose result.json already
+    exists with different content is refused unless `replace` (run ids are meant to be unique; overwriting
+    someone else's measurements by accident is the failure this prevents)."""
     check(res)
     prefix = run_prefix(res["experiment_id"], res["run_id"])
     rep = PublishReport(run_key=f"{prefix}/result.json")
     res = json.loads(json.dumps(res))  # never mutate the caller's copy
     rels: list[str] = []
+    listed = list((res.get("artifacts") or {}).values()) + [
+        a["path"] for a in res.get("profiling_artifacts") or [] if "path" in a
+    ]
+    if listed and not run_dir:
+        raise ValueError("run_dir is required to publish listed artifacts")
     if run_dir:
-        for rel in list((res.get("artifacts") or {}).values()) + [
-            a["path"] for a in res.get("profiling_artifacts") or [] if "path" in a
-        ]:
+        for rel in listed:
             files = _artifact_files(run_dir, rel)
             (rels.extend(files) if files else rep.missing.append(rel))
         for x in extra:
@@ -447,33 +515,41 @@ def publish_run(
             if not safe_relpath(rel):
                 raise ValueError(f"{x} is outside the run directory {run_dir}")
             rels.extend(_artifact_files(run_dir, rel) or [rel])
+    if rep.missing:
+        raise FileNotFoundError(
+            "required artifact(s) missing: " + ", ".join(sorted(rep.missing))
+        )
+    artifact_data = {}
     links = {}
     for rel in sorted(set(rels)):
         key = f"{prefix}/artifacts/{rel}"
         with open(os.path.join(run_dir or ".", rel), "rb") as f:
             data = f.read()
-        old = store.get(key)
-        if old is not None and _sha(old) == _sha(data):
-            rep.unchanged.append(key)
-        else:
-            store.put(key, data, _ctype(rel))
-            rep.uploaded.append(key)
+        artifact_data[key] = data
         links[rel] = {"uri": store.uri(key), "link": store.link(key), "sha256": _sha(data)}
     res["published"] = {
         "result": store.uri(rep.run_key),
         "result_link": store.link(rep.run_key),
         "artifacts": links,
-        "missing_artifacts": rep.missing,
+        "missing_artifacts": [],
     }
-    body = (json.dumps(res, indent=1, sort_keys=True) + "\n").encode()
-    old = store.get(rep.run_key)
-    if old is not None and _sha(old) == _sha(body):
-        rep.unchanged.append(rep.run_key)
-    elif old is not None and not replace:
+    body = (json.dumps(res, indent=1, sort_keys=True, allow_nan=False) + "\n").encode()
+    old_result = store.get(rep.run_key)
+    if old_result is not None and _sha(old_result) != _sha(body) and not replace:
         raise PublishConflict(
             f"{store.uri(rep.run_key)} already exists with different content; "
             "use a new run_id, or --replace if you mean to correct this run"
         )
+
+    for key, data in artifact_data.items():
+        old = store.get(key)
+        if old is not None and _sha(old) == _sha(data):
+            rep.unchanged.append(key)
+        else:
+            store.put(key, data, _ctype(key))
+            rep.uploaded.append(key)
+    if old_result is not None and _sha(old_result) == _sha(body):
+        rep.unchanged.append(rep.run_key)
     else:
         store.put(rep.run_key, body, "application/json")
         rep.uploaded.append(rep.run_key)
@@ -555,7 +631,9 @@ def run_key(r: dict) -> str:
 
 
 def anchor(r: dict) -> str:
-    return "run-" + re.sub(r"[^A-Za-z0-9_-]", "-", run_key(r))
+    key = run_key(r)
+    slug = re.sub(r"[^A-Za-z0-9_-]", "-", key)
+    return f"run-{slug}-{hashlib.sha256(key.encode()).hexdigest()[:8]}"
 
 
 def primary_arm(r: dict) -> str | None:

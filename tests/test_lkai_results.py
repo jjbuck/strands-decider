@@ -103,6 +103,41 @@ def test_p1_summarize_output_shape_validates():
     assert lr.validate(r) == []
 
 
+def test_schema_requires_complete_measurement_contract():
+    base = real(load("fixture-improved"))
+    cases = [
+        (lambda r: r["changed_variable"].pop("baseline"), "matches no allowed shape"),
+        (lambda r: r["deployment"].pop("az"), "missing 'az'"),
+        (lambda r: r["model"].pop("revision"), "missing 'revision'"),
+        (lambda r: r["conditions"].pop("request_ids"), "fixed request id"),
+        (lambda r: r["conditions"].pop("finished"), "started and finished"),
+        (lambda r: r["phases"]["inst"].pop("warm"), "missing 'warm' start class"),
+        (
+            lambda r: r["phases"]["inst"]["cold"].pop("model_ready"),
+            "missing required phase 'model_ready'",
+        ),
+        (
+            lambda r: [c.pop("report_max_memory_mb", None) for c in r["phases"]["inst"].values()],
+            "report_max_memory_mb distribution is required",
+        ),
+        (lambda r: r["cost"].pop("s3_request_usd"), "missing 's3_request_usd'"),
+        (lambda r: r.update(artifacts={}), "needs at least 1"),
+    ]
+    for mutate, expected in cases:
+        r = copy.deepcopy(base)
+        mutate(r)
+        assert any(expected in p for p in lr.validate(r)), (expected, lr.validate(r))
+
+
+def test_validator_rejects_non_finite_metrics():
+    r = real(load("fixture-improved"))
+    r["phases"]["inst"]["cold"]["weight_download"]["p50"] = float("nan")
+    r["cost"]["total_usd"] = float("inf")
+    problems = lr.validate(r)
+    assert any("p50: number must be finite" in p for p in problems)
+    assert any("total_usd: number must be finite" in p for p in problems)
+
+
 @pytest.mark.parametrize(
     ("mutate", "expect"),
     [
@@ -110,7 +145,7 @@ def test_p1_summarize_output_shape_validates():
         (lambda r: r.update(status="great"), "not one of"),
         (lambda r: r["commits"].update(experiment="not-a-sha"), "does not match"),
         (lambda r: r.update(reproduce=[]), "at least 1"),
-        (lambda r: r.update(changed_variable=None), "matches no allowed shape"),
+        (lambda r: r.update(changed_variable=None), "expected object"),
         (lambda r: r.update(conclusion=None), "expected string"),
         (lambda r: r.update(correctness=None), "expected object"),
         (lambda r: r["errors"].update(count=-1), "< 0"),
@@ -146,7 +181,7 @@ def test_distribution_semantics_are_checked():
 
 def test_baseline_must_not_claim_a_changed_variable():
     r = real(load("fixture-baseline"))
-    r["changed_variable"] = "threads"
+    r["changed_variable"] = {"name": "threads", "baseline": 1, "experiment": 2}
     assert any("baseline changes nothing" in p for p in lr.validate(r))
 
 
@@ -200,12 +235,12 @@ def test_publish_writes_only_its_own_prefix_and_is_idempotent(tmp_path):
 def test_publish_refuses_to_overwrite_a_different_run(tmp_path):
     store = lr.LocalStore(str(tmp_path))
     r = real(load("fixture-improved"), "run-1")
-    lr.publish_run(r, None, store)
+    lr.publish_run(r, fixture_dir("fixture-improved"), store)
     r2 = copy.deepcopy(r)
     r2["conclusion"] = "a different result under the same run id"
     with pytest.raises(lr.PublishConflict):
-        lr.publish_run(r2, None, store)
-    lr.publish_run(r2, None, store, replace=True)
+        lr.publish_run(r2, fixture_dir("fixture-improved"), store)
+    lr.publish_run(r2, fixture_dir("fixture-improved"), store, replace=True)
     assert (
         "different result"
         in json.loads(store.get("runs/E3-parallel-range-get/run-1/result.json"))["conclusion"]
@@ -224,14 +259,49 @@ def test_publish_rejects_invalid_and_unsafe_input(tmp_path):
     assert store.list("") == []
 
 
-def test_publish_records_missing_artifacts_instead_of_failing(tmp_path):
+def test_publish_refuses_missing_artifacts_without_writes(tmp_path):
     store = lr.LocalStore(str(tmp_path / "s"))
     r = real(load("fixture-improved"))
     r["artifacts"]["logs"] = "logs/"
-    rep = lr.publish_run(r, fixture_dir("fixture-improved"), store)
-    assert rep.missing == ["logs/"]
-    site = lr.render_site(lr.load_runs(store))
-    assert "Listed but missing at publish time" in site["dashboard.html"]
+    with pytest.raises(FileNotFoundError, match="required artifact"):
+        lr.publish_run(r, fixture_dir("fixture-improved"), store)
+    assert store.list("") == []
+
+
+def test_publish_refuses_result_conflict_before_artifact_writes(tmp_path):
+    store = lr.LocalStore(str(tmp_path / "s"))
+    r = real(load("fixture-improved"), "same-run")
+    lr.publish_run(r, fixture_dir("fixture-improved"), store)
+    r["conclusion"] = "different result"
+    run_dir = fixture_dir("fixture-improved")
+    target = os.path.join(run_dir, "new-profile.txt")
+    try:
+        with open(target, "w", encoding="utf-8") as f:
+            f.write("must not upload")
+        with pytest.raises(lr.PublishConflict):
+            lr.publish_run(r, run_dir, store, extra=[target])
+    finally:
+        os.unlink(target)
+    assert not any(k.endswith("new-profile.txt") for k in store.list(""))
+
+
+def test_publish_rejects_artifact_symlink_escape(tmp_path):
+    run_dir = tmp_path / "run"
+    run_dir.mkdir()
+    outside = tmp_path / "secret"
+    outside.write_text("outside")
+    (run_dir / "escape").symlink_to(outside)
+    r = real(load("fixture-improved"))
+    r["artifacts"] = {"logs": "escape"}
+    with pytest.raises(ValueError, match="resolves outside"):
+        lr.publish_run(r, str(run_dir), lr.LocalStore(str(tmp_path / "store")))
+
+
+def test_publish_requires_run_dir_for_listed_artifacts(tmp_path):
+    with pytest.raises(ValueError, match="run_dir is required"):
+        lr.publish_run(
+            real(load("fixture-improved")), None, lr.LocalStore(str(tmp_path / "store"))
+        )
 
 
 def test_concurrent_publishers_never_collide(tmp_path):
@@ -249,7 +319,7 @@ def test_concurrent_publishers_never_collide(tmp_path):
 
     def go(r):
         try:
-            lr.publish_run(r, None, store)
+            lr.publish_run(r, fixture_dir("fixture-improved"), store)
             lr.regenerate(store)
         except BaseException as e:  # surfaced below: a thread's exception must fail the test
             errors.append(e)
@@ -262,7 +332,7 @@ def test_concurrent_publishers_never_collide(tmp_path):
     assert errors == []
     lr.regenerate(store)
     keys = store.list("")
-    assert {k for k in keys if k.startswith("runs/")} == {
+    assert {k for k in keys if k.endswith("/result.json")} == {
         f"runs/E{i}/run-{i}/result.json" for i in range(8)
     }
     page = store.get("site/dashboard.html").decode()
@@ -291,6 +361,7 @@ def test_publish_command_exit_codes(tmp_path):
     assert publish_result.main([str(p), "--validate-only"]) == 2
     good = tmp_path / "good" / "results.json"
     good.parent.mkdir()
+    (good.parent / "invocations.jsonl").write_text("{}\n")
     r = real(load("fixture-improved"), "x")
     good.write_text(json.dumps(r))
     store = str(tmp_path / "s")
@@ -383,10 +454,20 @@ def test_detail_pages_link_back_and_to_the_baseline():
     assert 'href="E3-parallel-range-get/fixture-improved.html"' in site["index.html"]
 
 
+def test_detail_anchors_do_not_collide_after_slugging():
+    first = real(load("fixture-baseline"), "a.b")
+    second = real(load("fixture-improved"), "a-b")
+    second["experiment_id"] = first["experiment_id"]
+    assert lr.anchor(first) != lr.anchor(second)
+    page = lr.render_site([first, second])["dashboard.html"]
+    assert f'id="{lr.anchor(first)}"' in page
+    assert f'id="{lr.anchor(second)}"' in page
+
+
 def test_regenerate_is_deterministic(tmp_path):
     store = lr.LocalStore(str(tmp_path))
     for r in all_fixtures():
-        lr.publish_run(r, None, store)
+        lr.publish_run(r, fixture_dir(r["run_id"]), store)
     lr.regenerate(store)
     first = {k: store.get(k) for k in store.list("site/")}
     lr.regenerate(store)

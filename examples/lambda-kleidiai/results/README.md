@@ -48,6 +48,10 @@ its own harness can build the file with `lkai_results.dist()`, which computes th
 The publisher needs `boto3` for an `s3://` store (it is the only dependency, and only that store imports it). On a
 human-review card each Artifactory call asks the operator for approval; the gate prints the exact question.
 
+A missing listed artifact is a publication refusal (exit 3): result JSON is never written until every listed raw
+artifact and profile is readable. Symlinks that resolve outside the run directory are refused. This prevents a run
+from claiming stable raw-artifact links when upload was incomplete.
+
 Pass `--validate-only` to check a file without uploading anything. Pass `--store <dir>` for a local dry run with the
 same layout.
 
@@ -69,25 +73,32 @@ Everything the initiative brief asks each experiment to publish. `schema.json` i
 | Brief item | Field |
 |---|---|
 | outcome | `status`: `baseline`, `improved`, `no-change`, `regressed`, `inconclusive` or `failed` |
-| hypothesis, single changed variable | `hypothesis`, `changed_variable` (`null` only for the baseline; otherwise a name or `{name, baseline, experiment}`) |
+| hypothesis, single changed variable | `hypothesis`, `changed_variable` (`null` only for the baseline; otherwise `{name, baseline, experiment}`) |
 | baseline and experiment commits | `commits.baseline`, `commits.experiment`, `commits.repo_dirty_at_build` |
 | deployment, runtime, architecture, region/AZ | `deployment.{region, az, runtime, runtime_version_arn, architecture, memory_mb, snapstart, functions}` |
 | model identity and format | `model.{id, revision, format, gguf_bytes, gguf_sha256}` |
-| invocation conditions and sample count | `conditions.{rounds, concurrency, warm_per_arm_per_round, request_ids, ...}`; each distribution's `n` |
+| invocation conditions and sample count | `conditions.{rounds, concurrency, warm_per_arm_per_round, request_ids, started, finished, ...}`; each distribution's `n` |
 | cold/warm/restore | `classification` and `phases.<arm>.<cold\|restore\|warm>` |
 | per-phase distributions | `phases.<arm>.<class>.<phase>` = `{unit, n, p50, p90, p99, min, max, mean, stdev, histogram{edges, counts}}`. Phases include `weight_download`, `model_load_mmap` (deserialize/mmap), `context_init` and `model_ready` (model init), `first_request_inference`, `steady_state_inference`, `report_restore_duration` and `snapshot_init` |
 | run-to-run variance | `variance` |
 | errors | `errors.{count, rows}` |
-| cost and resources | `cost.{billed_duration_s, s3_request_usd, s3_gb_transferred, total_usd, ...}`; `report_max_memory_mb` |
+| cost and resources | `cost.{billed_duration_s, s3_request_usd, s3_gb_transferred, total_usd, ...}`; a `report_max_memory_mb` distribution |
 | correctness vs baseline | `correctness.{compared, bit_identical, choice_flips, max_abs_delta}` (`null` = not compared) |
 | profiling artifacts | `profiling_artifacts[] = {name, tool, path \| url}` |
 | raw logs | `artifacts{name: run-relative path}`; after publishing, `published.artifacts` holds each object's URI and SHA-256 |
 | conclusion | `conclusion`. It is required for every experiment, including failures and null results |
 | reproducible commands | `reproduce[]` |
 
-The schema relaxes requirements for a `failed` run: it needs a hypothesis, the changed variable, commits, errors, a
-conclusion and the reproduce commands, but no latency. Every other status needs the full set. Account IDs are
-rejected anywhere in the file (`deployment.functions` holds names, not ARNs).
+The validator also requires every non-failed run to carry cold, restore and warm classes; the six requested phase
+families (`weight_download`, `model_load_mmap`, `model_ready`, first and steady-state inference, and restore);
+fixed request IDs and started/finished timestamps; cost totals; max-memory distribution; at least one raw artifact;
+and complete baseline/experiment values for the single changed variable. A run that cannot measure one required
+phase records that phase as `null` instead of silently omitting it.
+
+The schema relaxes latency and deployment requirements for a `failed` run, but it still requires at least one raw
+artifact, a hypothesis, the changed variable, commits, errors, a conclusion and the reproduce commands. Every other
+status needs the full set. Account IDs are rejected anywhere in the file (`deployment.functions` holds names, not
+ARNs).
 
 ## How results are shown
 

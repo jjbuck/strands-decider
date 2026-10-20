@@ -93,8 +93,8 @@ def main(argv: list[str] | None = None) -> int:
             rep = lr.publish_run(
                 res, os.path.dirname(os.path.abspath(a.result)), store, a.extra, a.replace
             )
-        except lr.PublishConflict as e:
-            print(f"CONFLICT {e}", file=sys.stderr)
+        except (lr.PublishConflict, FileNotFoundError, ValueError) as e:
+            print(f"REFUSED {e}", file=sys.stderr)
             return 3
         print(f"result  {rep.result_uri}")
         print(f"uploaded {len(rep.uploaded)}, unchanged {len(rep.unchanged)}")

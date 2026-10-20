@@ -37,6 +37,7 @@ def classes(rng: random.Random, dl: float, warm: float) -> dict:
         "first_request_total": lr.dist(sample(rng, dl + 2.9, 0.35, cold_n)),
         "report_max_memory_mb": lr.dist(sample(rng, 4300, 40, cold_n), unit="MB"),
     }
+    cold["model_ready"] = cold["report_init_duration"]
     restore = {
         "n": rest_n,
         "report_restore_duration": lr.dist(sample(rng, 3.9, 0.4, rest_n)),
@@ -88,6 +89,7 @@ def common(experiment_id: str, run_id: str, status: str) -> dict:
             "arms": ["inst", "rep"],
             "request_ids": ["probe", "r1", "r2", "r3", "r4"],
             "started": "2026-10-20T00:00:00Z",
+            "finished": "2026-10-20T00:30:00Z",
             "weight_fetch": "HEAD + parallel 64 MiB ranged GETs (32 threads) into a memfd",
         },
         "classification": {
@@ -176,8 +178,7 @@ def main() -> None:
         "phases": {},
         "cost": {"billed_duration_s": 18000.0, "total_usd": 3.01},
     }
-    for k in ("classification", "profiling_artifacts"):
-        r.pop(k)
+    r.pop("classification")
     runs.append(r)
 
     for r in runs:
