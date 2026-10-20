@@ -22,6 +22,7 @@ cmake -B build-q $COMMON -DLLAMA_BUILD_TOOLS=ON -DGGML_NATIVE=OFF -DGGML_CPU_ARM
   -DGGML_BACKEND_DL=OFF >/dev/null
 cmake --build build-q -j "$(nproc)" --target llama-quantize >/dev/null
 mkdir -p /out/bin /out/quant-lib && cp -P build-q/bin/llama-quantize /out/bin/ && cp -P build-q/bin/lib*.so* /out/quant-lib/
+cp -L /usr/lib64/libgomp.so.1 /usr/lib64/libstdc++.so.6 /usr/lib64/libgcc_s.so.1 /out/quant-lib/  # gcc not in the run image
 
 P=/pkg
 rm -rf $P && mkdir -p $P/lib $P/assets $P/strands_decider
