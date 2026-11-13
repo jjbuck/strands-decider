@@ -13,8 +13,9 @@
 - `render.json`: 208 edge cases (JSON states, special-token strings, empty and null instructions, letter-named and
   255 options, one-option choices, non-string score levels, NaN and Infinity values, a lone surrogate) with what `strands_decider.core` renders for each under
   both templates: the ids' sha256, their count, the state length S, the code count, or the refusal. The core was at
-  `24382ce155648da732e840e6e0e3a0e155b9340f` when the fixture was made. Each row also says whether the core the
-  released models were trained with (`50e986452427a6396eaa8871184cc74b4807b553`) rendered it the same; all do except
+  `24382ce155648da732e840e6e0e3a0e155b9340f` when the fixture was made, and renders every row the same at
+  `d8595df7d9bc991f5125b8301b783f6a76b3b901`, where the request became pydantic models. Each row also says whether
+  the core the released models were trained with (`50e986452427a6396eaa8871184cc74b4807b553`) rendered it the same; all do except
   the rows whose state holds NaN or Infinity, which the newer core refuses and that core rendered, and the lone
   surrogate, which both refuse with different errors. The rendering test needs Gemma 4's `tokenizer.json` (set
   `STRANDS_DECIDER_GEMMA4_TOKENIZER`); its sha256 is `cc8d3a0c...` for every size.
