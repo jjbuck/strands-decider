@@ -1,11 +1,14 @@
 # Hardware notes (24 GiB)
 
+These measurements were made with v1's trainer, which trained the same pointer model at micro-batch 8 and gradient
+accumulation 4. The pointer configs of `training/train.py` take the same 32 rows a step in microbatches of 4.
+
 Measured on an RTX 3090 with Qwen3-1.7B (v7's torso), `max_length` 1024, 40 optimizer
 steps each; the Qwen3.5 figures follow in their own subsection.
 
 These numbers still hold at the current 4096 default. The collator pads to the longest
-sequence in each batch, not to `max_length`, and the corpus is short — median 204
-tokens, p99 634, longest 1811 — so only ~0.15% of examples are affected by the cap at
+sequence in each batch, not to `max_length`, and the corpus is short (median 204
+tokens, p99 634, longest 1811), so only ~0.15% of examples are affected by the cap at
 all and no batch grows. Raising `max_length` is an inference-side change in practice;
 it costs p95 latency, not training time.
 
@@ -18,8 +21,8 @@ it costs p95 latency, not training time.
 
 Two results worth internalising before you tune anything:
 
-**Leave gradient checkpointing on.** Turning it off asks for 36 GiB, and on Windows
-that does not fail cleanly — WDDM silently spills the excess to host memory over
+**Gradient checkpointing stays on** (the trainer has no switch for it). Off, it asked for 36 GiB, and on Windows
+that does not fail cleanly: WDDM silently spills the excess to host memory over
 PCIe, and the run gets *6× slower* while still appearing to work. The loss curve is
 identical either way (1.4087 at step 40 in both), so this is purely a memory/speed
 trade and checkpointing wins it outright on this card.
@@ -48,14 +51,11 @@ minutes. On Windows' fallback kernels the same labelling spilled past the 24 GiB
 slowed to a crawl: the labeller writes each row as it goes and resumes, and its default
 batch budget is 4,000 tokens for that reason.
 
-## Length-grouped batching
+## Batching by length
 
-The collator pads each micro-batch to its longest row, so one long document among
-short ones makes all eight rows pay for it. `group_by_length: true` (on in both
-configs, off in code so every saved `train_config.json` still reproduces its run)
-shuffles the corpus, sorts within megabatches of 400 rows, slices those into
-micro-batches and shuffles the batches — the standard scheme, as in HuggingFace's
-option of the same name. Measured in tokens:
+The trainer cuts each step's rows into microbatches of similar length, under a cap on padded tokens as well as rows
+(`token_budget`, training/batching.py), which does the work v1's `group_by_length` did. Measured with v1's
+length-grouped sampler, which sorted within megabatches of 400 rows, in tokens:
 
 | corpus | padding, ungrouped | grouped | padded tokens saved |
 | --- | --- | --- | --- |
@@ -63,16 +63,8 @@ option of the same name. Measured in tokens:
 | v10 (v7 + 20k long documents) | 57.9% | 15.8% | 2.00x |
 | v14 (v7 + 12.9k multi-step rows) | 74.6%* | 6.1%* | |
 
-\* measured in prompt characters, the unit the sampler sorts by; token padding runs
-higher, especially grouped.
-
-At these lengths the linear layers dominate, so expect wall clock to follow the last
-column roughly; it has not been timed on a full run. It is not strictly free: batches
-become length-homogeneous, and length correlates with task. Sorting only within
-megabatches keeps long documents spread across the whole epoch rather than bunched
-into consecutive steps — which would be a different training distribution — and
-`tests/test_sampling.py` enforces that. The longest batch runs first, so an
-out-of-memory failure shows at step 1 rather than hours in.
+\* measured in prompt characters, the unit that sampler sorted by; token padding runs
+higher, especially grouped. `python -m training.train --plan-only` prints the trainer's own padding estimate.
 
 ## Larger torsos
 
@@ -85,13 +77,13 @@ Measured for Qwen3-4B, projected beyond it from those two points. Weights are ex
 | 1.7B | 3.2 GiB | 2.6 GiB | **5.8 GiB** (measured) | 9.6 ex/s | 1.2 h |
 | 4B | 7.5 GiB | 2.8 GiB | **10.3 GiB** (measured) | 5.1 ex/s | 2.2 h |
 | 8B | 15.3 GiB | ~3.0 GiB | ~18.3 GiB | ~3.0 ex/s | ~3.8 h |
-| 14B | 27.5 GiB | ~3.2 GiB | ~30.7 GiB — **does not fit** | — | — |
+| 14B | 27.5 GiB | ~3.2 GiB | ~30.7 GiB, **does not fit** | n/a | n/a |
 
 14B is a hard wall, not a tight squeeze: its weights alone exceed the ~23 GiB usable,
 so no batch size or sequence length recovers it. Going beyond 8B needs 4-bit QLoRA
-(14B weights drop to ~7.5 GiB) — but 4-bit degrades exactly the probability
+(14B weights drop to ~7.5 GiB), but 4-bit degrades exactly the probability
 calibration the confidence scores depend on, so measure ECE before trusting it.
 
-Throughput scales as params^-0.75, not linearly — larger torsos are cheaper than a
+Throughput scales as params^-0.75, not linearly: larger torsos are cheaper than a
 naive FLOP count suggests.
 
