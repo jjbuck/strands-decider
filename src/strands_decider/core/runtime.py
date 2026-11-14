@@ -1,4 +1,5 @@
-"""What a runtime provides, and the glue around it (docs/spec.md, The runtime interface).
+"""What a runtime provides, and the glue around it (docs/architecture.md, The core's runtime
+interface).
 
 A runtime runs the decoder. This core does the rest: it renders the request, hands the
 runtime one state and its questions as token ids, with the state's images and where their
@@ -17,10 +18,15 @@ import numpy as np
 from .config import IMAGE, DecisionConfig
 from .prompt import RenderedImage, render
 from .readout import STAGES, Readout, check_rendered, check_stage, read
-from .request import RequestJSON, has_images, parse_request
+from .request import parse_request
 
 if TYPE_CHECKING:
+    from pydantic import BaseModel
     from tokenizers import Tokenizer
+
+# What a backend without an image path raises when `forward` is given images: v1's text-only
+# engine's message (hidden_engine.HiddenStateEngine).
+NO_VISION = "this engine has no vision tower; images are not supported"
 
 
 class Backend(Protocol):
@@ -30,12 +36,12 @@ class Backend(Protocol):
         "hidden"         the final-norm hidden state at the last token, [hidden]
         "raw_logits"     z = W h, the readout applied: [255], or the question's [k]
         "capped_logits"  tanh(z / c) * c, the soft-cap applied, not the temperature
-        "final_logits"   tanh(z / c) * c / T, both applied (as strands-decider-vllm returns them)
+        "final_logits"   tanh(z / c) * c / T, both applied, as in strands-decider-vllm's model
         "probabilities"  the codes' probabilities: the question's k, or all 255
 
     Every backend takes images: `forward` gets the state's images, which are empty for a
     request without them. A backend that has no image path (no vision encoder loaded)
-    raises ValueError(`request.NO_VISION`) when it is given images.
+    raises ValueError(NO_VISION) when it is given images.
     """
 
     outputs: str
@@ -76,7 +82,7 @@ def attention_mask(state_len: int, total_len: int) -> np.ndarray:
 
 
 def evaluate(
-    request: RequestJSON,
+    request: dict[str, Any] | BaseModel,
     tokenizer: Tokenizer,
     readout: Readout | None,
     config: DecisionConfig,
@@ -104,15 +110,15 @@ def evaluate(
         )
     check_stage(stage, readout, config)
     # The request's own checks, then the refusal of images by a checkpoint without them,
-    # then the images, each in turn.
-    parse_request(request, images=False)
-    if has_images(request) and IMAGE not in config.inputs:
+    # then the images, each in turn (in `render`).
+    req = parse_request(request)
+    if req.images and IMAGE not in config.inputs:
         raise ValueError(
             "this checkpoint does not take images: its decision_config.json inputs are "
             + json.dumps(list(config.inputs))
         )
     rendered = render(
-        request, tokenizer, config.prompt, max_length=max_length or config.max_length_validated
+        req, tokenizer, config.prompt, max_length=max_length or config.max_length_validated
     )
     check_rendered(config, rendered)
     state = list(rendered.state_ids)

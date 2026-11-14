@@ -1,7 +1,7 @@
 """The Strands Decider core: the decision interface without torch.
 
 docs/spec.md defines the interface; this package implements its torch-free half with
-`tokenizers`, numpy and the standard library:
+`tokenizers`, numpy, pydantic and the standard library, and Pillow for images:
 
     render(request, tokenizer, variant)    -> RenderedRequest: ids, S, codes per question,
                                               and each image's span, N and sha256
@@ -16,11 +16,11 @@ docs/spec.md defines the interface; this package implements its torch-free half 
 
 A runtime supplies the decoder (`Backend`, whose `forward` takes the state's images), and for
 images the vision encoder and the pixel preprocessing; `evaluate` joins the pieces. Images are
-checked and counted from their file headers (`decode_image`, `soft_tokens`), never decoded
-here; `resize_image`, the spec's resize for a runtime's decoded pixels, is the one part that
-needs Pillow, which it imports when called. `agreement` measures a runtime's
-probabilities against the reference's (docs/spec.md, Golden vectors and conformance). v1's
-engines are untouched: the core sits beside them.
+checked and counted from their file headers, which Pillow reads (`decode_image`,
+`soft_tokens`), never decoded here; `resize_image` is the spec's resize for a runtime's
+decoded pixels. Pillow is imported only for an image, so the core imports without it.
+`agreement` measures a runtime's probabilities against the reference's (docs/spec.md,
+section 10). v1's engines are untouched: the core sits beside them.
 """
 
 from __future__ import annotations
@@ -37,17 +37,17 @@ from .conformance import (
 )
 from .images import (
     IMAGE_FORMATS,
+    MAX_IMAGE_BYTES,
     MAX_IMAGE_PIXELS,
     MAX_IMAGES,
     EncodedImage,
     check_decoded_size,
     check_image_processor,
     decode_image,
-    image_size,
+    decode_images,
     resize_image,
     resized_size,
     soft_tokens,
-    spec_resize,
 )
 from .prompt import (
     CHAT,
@@ -79,8 +79,8 @@ from .readout import (
     round_to_bf16,
     softcap,
 )
-from .request import NO_VISION, RequestJSON, parse_request
-from .runtime import Backend, attention_mask, evaluate
+from .request import Request, parse_request
+from .runtime import NO_VISION, Backend, attention_mask, evaluate
 from .tokenizer import CODE_TOKEN_IDS, CONTROL_TOKEN_IDS, check_tokenizer, load_tokenizer
 
 __all__ = [
@@ -98,6 +98,7 @@ __all__ = [
     "INTERFACE",
     "MAX_CODES",
     "MAX_IMAGES",
+    "MAX_IMAGE_BYTES",
     "MAX_IMAGE_PIXELS",
     "NO_VISION",
     "PLAIN",
@@ -115,7 +116,7 @@ __all__ = [
     "RenderedImage",
     "RenderedQuestion",
     "RenderedRequest",
-    "RequestJSON",
+    "Request",
     "agreement",
     "agreement_with_goldens",
     "answer",
@@ -126,8 +127,8 @@ __all__ = [
     "code_probabilities",
     "codes_for",
     "decode_image",
+    "decode_images",
     "evaluate",
-    "image_size",
     "load_safetensors",
     "load_tokenizer",
     "parse_request",
@@ -145,5 +146,4 @@ __all__ = [
     "round_to_bf16",
     "soft_tokens",
     "softcap",
-    "spec_resize",
 ]

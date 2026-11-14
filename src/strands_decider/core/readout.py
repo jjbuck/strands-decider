@@ -1,4 +1,4 @@
-"""From the hidden state at a question's last token to its answer (docs/spec.md, The readout).
+"""From the hidden state at a question's last token to its answer (docs/spec.md, section 7).
 
     z = bf16(W bf16(h))        W: readout.safetensors `weight` in bf16; a bf16 GEMM
     z = tanh(z / c) * c        float32; c: decision_config.json `final_logit_softcapping`
@@ -42,7 +42,7 @@ MODEL_CONFIG_FILE = "config.json"
 HIDDEN = "hidden"  # h, the final-norm hidden state at the last token: nothing applied
 RAW_LOGITS = "raw_logits"  # z = W h: the readout applied, not the soft-cap or the temperature
 CAPPED_LOGITS = "capped_logits"  # tanh(z / c) * c: the soft-cap applied, not the temperature
-FINAL_LOGITS = "final_logits"  # tanh(z / c) * c / T: both (as strands-decider-vllm returns them)
+FINAL_LOGITS = "final_logits"  # tanh(z / c) * c / T: both, as in strands-decider-vllm's model
 PROBABILITIES = "probabilities"  # softmax of the final logits, over the k codes or all 255
 STAGES = (HIDDEN, RAW_LOGITS, CAPPED_LOGITS, FINAL_LOGITS, PROBABILITIES)
 

@@ -1,4 +1,4 @@
-"""`decision_config.json` (docs/spec.md, The decision_config.json schema): strict, with
+"""`decision_config.json` (docs/spec.md, section 8): strict, with
 an `interface` discriminator, the inputs a checkpoint takes, and a required provenance in
 public formats: a Hub id, a commit, a model name and an https URL. Keeping private paths out
 of a released checkpoint is the release export's job, not the loader's. Torch-free; the
@@ -241,7 +241,7 @@ def test_bad_values_are_errors(field, value, match):
 
 @pytest.mark.parametrize("field", ["prompt", "attention_mode", "pooling", "inputs", "interface"])
 def test_a_huge_integer_anywhere_is_a_plain_valueerror(field):
-    """A value too large to print (Python 3.11 refuses int-to-str past 4,300 digits) is
+    """A value too large to print (Python refuses int-to-str past 4,300 digits) is
     described by its size, so the error is the schema's, not the interpreter's."""
     value = [10**5000] if field == "inputs" else 10**5000
     with pytest.raises(ValueError) as e:
